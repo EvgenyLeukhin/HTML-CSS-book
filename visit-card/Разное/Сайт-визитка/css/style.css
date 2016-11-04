@@ -1,0 +1,54 @@
+body {
+    background: url(../img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.layout-center {			            /*ЦЕНТРОВЩИК*/		
+    outline: 2px dashed orange;
+    max-width: 1100px;                      
+	margin: 0 auto;
+}
+
+.clearfix:after {	                    /*РАСПОРКА*/
+	content:"";
+	display:table;
+	clear:both;
+}
+
+ section {
+     border: 5px solid red;
+     display: table;
+     width: 100%;
+     }
+
+
+main {
+    display: table-cell;
+    border: 5px solid white;
+    min-height: 400px;
+    vertical-align: middle;
+    }
+
+div {
+    outline: 2px dotted #CCC; 
+    min-height: 10px;
+}
+
+header {
+    background-color: #1f1f1f;
+    min-height: 20px;
+}
+
+footer {
+    background-color: #1f1f1f;
+    min-height: 20px;
+    position: absolute;                 /*ПРИЖИМАЕМ ФУТЕР ПОЗИЦИОНИРОВАНИЕМ*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

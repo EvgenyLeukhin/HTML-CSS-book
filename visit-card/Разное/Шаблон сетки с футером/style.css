@@ -1,0 +1,51 @@
+html, body
+{
+    height: 100%;   
+    margin: 0; 
+    padding: 0;
+}
+
+body
+{
+    background-color: deepskyblue;
+    outline: 3px dotted pink;
+}
+
+.wrapper {
+    min-height: 100%; /* минимальная высота блока 100%,т.е. меньшей высоты данный блок никогда не будет */
+    height: auto !important; /* автоматическая высота для браузера IE */
+    height: 100%; /* высота блока = 100% */
+    position: relative; /* Положение элемента устанавливается относительно его исходного места на html-странице */
+    width:100%; /* ширина блока = 100%, растягиваем ширину на всю страницу*/
+    margin:0 auto; /* выравнивание блока по центру */
+    overflow-x:hidden; /* если блок не вмещается по ширине, то указываем не создавать полосу прокрутки по ширине */
+}
+
+.layout-center {
+    max-width: 900px;
+    margin: 0 auto;
+    outline: 3px dotted lawngreen;
+}
+
+header {
+    min-height: 20px;
+    background-color: deeppink;
+    outline: 3px solid black;
+}
+
+main {
+    background-color: chocolate;
+    outline: 5px dotted brown;
+    max-width: 900px;
+    margin: 35px auto;
+    min-height: 500px; /*потом убрать*/
+}
+
+footer {
+    min-height: 20px;
+    background-color: orchid;
+    outline: 3px solid fuchsia;
+    width: 100%;                        /*закрепляем футер внизу, но от main он НЕ ОТТАЛКИВАЕТСЯ*/
+    position: absolute;
+    bottom: 0px;
+}
