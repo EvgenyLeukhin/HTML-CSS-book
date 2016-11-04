@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;   
+    margin: 0; 
+    padding: 0;
+	color: #F2F2F2;
+	font-family: ‘Enriqueta’, arial, serif;
+}
+
+body {
+    background: url(img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.wrapper {
+    min-height: 100%; /* минимальная высота блока 100%,т.е. меньшей высоты данный блок никогда не будет */
+    height: auto !important; /* автоматическая высота для браузера IE */
+    height: 100%; /* высота блока = 100% */
+    position: relative; /* Положение элемента устанавливается относительно его исходного места на html-странице */
+    width:100%; /* ширина блока = 100%, растягиваем ширину на всю страницу*/
+    margin:0 auto; /* выравнивание блока по центру */
+    overflow-x:hidden; /* если блок не вмещается по ширине, то указываем не создавать полосу прокрутки по ширине */
+}
+
+.layout-center {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.clearfix:after{	
+	content:"";
+	display:table;
+	clear:both;
+}
+
+header {
+    min-height: 20px;
+}
+
+header .header-text {
+	float: right;
+	padding-right: 5px;
+}
+
+main {
+    background-image: url(img/main-bg.jpg);
+    max-width: 1000px;
+    margin: 35px auto;
+    min-height: 500px; /*потом убрать*/
+	background-size: cover;
+	border: 1px solid black;
+	box-shadow: 5px 5px 3px black;
+}
+
+footer {
+    min-height: 20px;
+    background-image: linear-gradient(#496194,#3d4658);
+    width: 100%;                        /*закрепляем футер внизу, но от main он НЕ ОТТАЛКИВАЕТСЯ*/
+    position: absolute;
+    bottom: 0px;
+}
+
+footer .design {
+	float: left;
+	margin-right: 2px;
+	padding-left: 5px;
+}
+
+footer .url {
+	float: right;
+	padding-right: 5px;
+	padding-top: 10px;
+}
+
