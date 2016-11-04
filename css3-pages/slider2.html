@@ -1,0 +1,339 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Слайдер с прокруткой</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    
+    <style>
+.gray {
+    font-weight: bold; 
+    background-color: darkorange;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: monospace;
+} 
+.slider-count {
+    width: 450px;
+    margin: 40px auto;   
+    background: white;
+    box-shadow: 0 0 3px #ccc;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;    
+    background: #f5f5f5;
+    margin-bottom: 60px;
+}
+section h1 {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+}
+.slider {
+    position: relative;
+}
+.slider input[type=radio] {
+    display: none;
+}
+.slider-inner {
+    overflow: hidden;
+}
+.slider-slides {
+    width: 300%;
+    transition: transform .8s ease;
+}
+.slider-slides img {
+    float: left;
+    width: 450px;
+    height: 320px;    
+}
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    z-index: 100;
+    text-align: center;
+}
+.slider-controls label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background: #ccc;
+    cursor: pointer;   
+    border: 4px solid white;
+    border-radius: 50%;    
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);     
+    transition: background-color .2s;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] { 
+    background-color: #666;
+}
+#btn-1:checked ~ .slider-inner .slider-slides { 
+    transform: translate(0);
+}
+#btn-2:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-450px);
+}
+#btn-3:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-900px);
+}
+.left-column {
+    float: left;
+    width: 47%;
+    outline: 3px solid #ccc;
+    font-size: 0.8em;
+}
+.right-column {
+    float: right;
+    width: 47%;
+    font-size: 0.8em;
+    outline: 3px solid #ccc;
+}
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				        </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+			        <a class="active" href="#">Слайдер</a>
+				        <ul class="sub-menu sub-menu3">
+					        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+					        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				        </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	
+	</div>
+	
+	<div class="content clearfix">
+	
+	    <h2>Мой справочник |  CSS3 | Слайдер с прокруткой</h2>
+	    
+        <section class="slider-count">
+            <h1>Арт-галерея</h1>
+            <div class="slider">
+                <input type="radio" id="btn-1" name="toggle" checked>
+                <input type="radio" id="btn-2" name="toggle">
+                <input type="radio" id="btn-3" name="toggle">
+                <div class="slider-controls">
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+                </div>                    
+                <div class="slider-inner">
+                    <div class="slider-slides">
+                        <img src="../pict/slider-1.png">
+                        <img src="../pict/slider-2.png">
+                        <img src="../pict/slider-3.png">
+                    </div>                        
+                </div>
+            </div>
+        </section>
+        
+        <section class="clearfix">
+            <div class="left-column">
+                <h3>HTML:</h3>
+                <code><pre>
+<span class="gray">&lt;!--ОСНОВНОЙ КОНТЕЙНЕР--&gt;</span>
+&lt;section class="<span class="red">slider-count</span>">
+    <span class="gray">&lt;!--ЗАГОЛОВОК СЛАЙДЕРА--&gt;</span>
+    &lt;h1><span style="color: #000;">Арт-галерея</span>&lt;/h1>
+    <span class="gray">&lt;!--КОНТЕЙНЕР СЛАЙДЕРА--&gt;</span>
+    &lt;div class="<span class="red">slider</span>">
+        <span class="gray">&lt;!--ИНПУТЫ--&gt;</span>
+        &lt;input type="radio" id="<span class="red">btn-1</span>" name="toggle" <span class="red">checked</span>>
+        &lt;input type="radio" id="<span class="red">btn-2</span>" name="toggle">
+        &lt;input type="radio" id="<span class="red">btn-3</span>" name="toggle">
+        <span class="gray">&lt;!--БЛОК УПРАВЛЕНИЯ--&gt;</span>
+        &lt;div class="<span class="red">slider-controls</span>">
+            <span class="gray">&lt;!--ЛЕЙБЛЫ--&gt;</span>
+            &lt;label for="<span class="red">btn-1</span>">&lt;/label>
+            &lt;label for="<span class="red">btn-2</span>">&lt;/label>
+            &lt;label for="<span class="red">btn-3</span>">&lt;/label>
+        &lt;/div>                    
+        <span class="gray">&lt;!--КОНТЕЙНЕР ДЛЯ СЛАЙДОВ--&gt;</span>
+        &lt;div class="<span class="red">slider-inner</span>">
+            <span class="gray">&lt;!--КОНТЕЙНЕР ЛЕНТЫ СЛАЙДОВ--&gt;</span>
+            &lt;div class="<span class="red">slider-slides</span>">
+                <span class="gray">&lt;!--СЛАЙДЫ--&gt;</span>
+                &lt;img src="../pict/slider-1.png">
+                &lt;img src="../pict/slider-2.png">
+                &lt;img src="../pict/slider-3.png">
+            &lt;/div>                        
+        &lt;/div>
+        
+    &lt;/div>
+    
+&lt;/section></pre></code>
+                
+            </div>
+
+            <div class="right-column">
+                <h3>CSS:</h3> 
+<code><pre><span class="gray">/*Задаём ширину КОНТЕЙНЕРУ, центруем, стилизуем*/</span>
+<span class="red">.slider-count</span> {
+    width: 450px;
+    margin: 40px auto;   
+    background: white;
+    box-shadow: 0 0 3px #ccc;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;    
+    background: #f5f5f5;
+    margin-bottom: 60px;
+}
+<span class="gray">/*Стилизуем ЗАГОЛОВОК*/</span>
+<span class="red">.slider-count h1</span> {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+}
+<span class="gray">/*Задаём КОНТЕЙНЕРУ СЛАЙДЕРА отн. <br>позиционирование*/</span>
+<span class="red">.slider</span> {
+    position: relative;
+}
+<span class="gray">/*Скрываем сисемные РАДИО-кнопки*/</span>
+<span class="red">.slider input[type=radio]</span> {
+    display: none;
+}
+<span class="gray">/*Скрываем переполнение КОНТЕЙНЕРА СЛАЙДОВ*/</span>
+<span class="red">.slider-inner</span> {
+    overflow: hidden;
+}
+<span class="gray">/*Задаём ширину КОНТЕЙНЕРУ ЛЕНТЫ СЛАЙДОВ равную<br>ширине ленты слайдов и задаём плавный переход */</span>
+<span class="red">.slider-slides</span> {
+    width: 300%;
+    transition: transform .8s ease;
+}
+<span class="gray">/*Флотим СЛАЙДЫ в одну ленту и задаём размеры*/</span>
+<span class="red">.slider-slides img</span> {
+    float: left;
+    width: 450px;
+    height: 320px;    
+}
+<span class="gray">/*Позиционируем БЛОК УПРАВЛЕНИЯ куда нужно*/</span>
+<span class="red">.slider-controls</span> {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    z-index: 100;
+    text-align: center;
+}
+<span class="gray">/*Стилизуем ЛЕЙБЛЫ, делаем плавный переход*/</span>
+<span class="red">.slider-controls label</span> {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background: #ccc;
+    cursor: pointer;   
+    border: 4px solid white;
+    border-radius: 50%;    
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);     
+    transition: background-color .2s;
+}
+<span class="gray">/*Активное состояние ЛЕЙБЛОВ*/</span>
+<span class="red">#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"]</span> { 
+    background-color: #666;
+}
+<span class="gray">/*Связываем 1-й слайд с ЛЕЙБЛОМ <br>и делаем трансормацию*/</span>
+<span class="red">#btn-1:checked ~ .slider-inner .slider-slides</span> { 
+    transform: translate(0);
+}
+<span class="gray">/*Связываем 2-й слайд с ЛЕЙБЛОМ <br>и делаем трансормацию*/</span>
+<span class="red">#btn-2:checked ~ .slider-inner .slider-slides</span> { 
+    transform: translate(-450px);
+}
+<span class="gray">/*Связываем 3-й слайд с ЛЕЙБЛОМ <br>и делаем трансормацию*/</span>
+<span class="red">#btn-3:checked ~ .slider-inner .slider-slides</span> { 
+    transform: translate(-900px);
+}</pre></code>
+            </div>
+        </section>
+         
+        
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

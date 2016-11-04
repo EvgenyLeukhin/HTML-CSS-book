@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | БЭМ</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                    <a href="#">Слайдер</a>
+				    <ul class="sub-menu sub-menu3">
+				        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				    </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a class="active" href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | БЭМ</h2>
+	
+	<table class="css3-table">
+        <tr>
+            <th class="css3-table-title" colspan="3">Селекторы по БЭМ</th>
+        </tr>
+        
+        <tr>
+            <td class="col1">
+                <b>Блок</b> — независимый элемент страницы с собственным смыслом. <br>
+                <b>Элемент</b> — составная часть блока, имеющая смысл только внутри блока. <br>
+                <b>Модификатор</b> — модификация внешнего вида или поведения блока (или элемента). 
+            </td>
+            <td class="col2">
+                   <h3 style="color: #000;"><u>НАЗВАНИЕ для css-селекторов:</u></h3>
+                <code><b>.block</b></code> <span class="gray">//БЛОК</span> <br>
+                <code><b>.block__element</b></code> <span class="gray">//ЭЛЕМЕНТ внутри блока</span> <br>
+                <code><b>.block--modif</b></code> <span class="gray">//МОДИФИКАТОР блока</span>
+            </td>
+            <td class="col3" style="width: 400px;">
+                <h3>Основные принципы БЭМ:</h3>
+                <ol>
+                    <li>Минимум тегов без классов</li>
+                    <li>Каскадность свести к минимуму</li>
+                    <li>Блок независим от окружения (может быть размещён в любой части страницы и не сломается при этом).</li>
+                    <li>У разных блоков не должно быть общих классов (и в CSS — не группируем общие правила, а копируем их).</li>
+                    <li>У одного блока (элемента) может быть несколько модификаторов.</li>
+                    <li>Осторожно используем дочерний селектор ( >), последовательность ( +), псевдоклассы ( :nth-child).</li>
+                </ol>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col1"><b>БЛОК</b></td>
+            <td class="col2">
+                <code><b>.block</b></code> <span class="gray">//БЛОК</span>
+            </td>
+            <td class="col3">
+                <ol>
+                    <li>Имя класса должно отвечать на вопрос «Зачем нужен этот блок?» (а не описывать его внешний вид).
+                    <li>Сложные блоки собираем из простых. Только если нужный блок нельзя собрать из уже готовых (или получить
+                    модификацией готовых), создаём новый блок.
+                    <li>Блок независим от окружения (может быть размещён в любой части страницы и не сломается при этом).
+                    <li>У разных блоков не должно быть общих классов (и в CSS — не группируем общие правила, а копируем их).
+                    Примеры: «шапка» сайта, кнопка, главная навигация, пагинация, запись в блоге, блок товара в списке товаров.
+                    <li>Блоки внутри блоков - обычное дело, селектор у нового блока может не описывать вложенность</li>
+                </ol>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col1"><b>ЭЛЕМЕНТ</b></td>
+            <td class="col2">
+                <code><b>.block__element</b></code> <span class="gray">//ЭЛЕМЕНТ</span>
+            </td>
+            <td class="col3">
+                <ol>
+                    <li>Это часть блока, которая вне этого блока не имеет смысла и не может быть использована.
+                    <li>CSS-класс элемента формируется так: класс-блока__класс-элемента
+                    <li> Могут отсутствовать (часть элементов не являются обязательными, в блоке может не быть элементов).
+                    <li>Примеры: пункты основной навигации, заголовочная часть записи в блоге, ссылка пагинации.
+                    Нет, тольно внутри родителя — это элемент.
+                    <li>Частая ошибка: в имени элемента пишут два сегмента __. Не надо так.
+                    <li>В БЭМ плоская структура Блок → Элемент, максимально независимая от разметки.
+                </ol>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col1"><b>МОДИФИКАТОР</b></td>
+            <td class="col2">
+                <code><b>.block--modif</b></code> <span class="gray">//МОДИФИКАТОР</span>
+            </td>
+            <td class="col3">
+                <ol>
+                    <li>Дополнительный класс, изменяющий внешний вид блока (или элемента, если добавлен к элементу).
+                    <li>CSS-класс модификатора формируется так: класс-блока--название-модификатора
+                    <li>Даёт возможность блокам выглядеть по-разному на разных страницах или в разных частях страницы.
+                    <li>Классы-модификаторы не используются без тех классов, которые они модифицируют.
+                    <li>&lt;div class="header--big"&gt; — неправильно. <br>&lt;div class="header header--big"&gt; — правильно.
+                    <li>У одного блока (элемента) может быть несколько модификаторов.
+                    <li>Можно модифицировать элементы от модификатора блока (это делает код неочевидным!).
+                    <li>Избегайте модифицировать вложенные блоки от модификатора блока-родителя.
+                </ol>
+            </td>
+        </tr>
+        
+    </table>
+	
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

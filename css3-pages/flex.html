@@ -1,0 +1,749 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Флекс</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+        .flex-sample {
+            width: 42px;
+            border: 4px solid #f1e301;
+            background-color: maroon;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 18px;
+        }
+        .col3 {min-width: 400px;}
+        .col3-sample1 {
+            display: flex;
+            height: 100px;
+        }
+        .col3-sample2-1 {
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+        }
+        .col3-sample2-2 {
+            display: flex;
+            flex-direction: row-reverse;
+            height: 100px;
+        }
+        .col3-sample2-3 {
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+        }
+        .col3-sample2-4 {
+            display: flex;
+            flex-direction: column-reverse;
+            height: 200px;
+        }
+        .col3-sample3-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        .col3-sample3-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .col3-sample3-3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .col3-sample3-4 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .col3-sample3-5 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .col3-sample3-2-1 {
+            display: flex;  
+            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
+            align-content: srtetch;
+        }  
+        .col3-sample3-2-2 {
+            display: flex;  
+            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
+            align-content: flex-start;
+        }
+        .col3-sample3-2-3 {
+            display: flex;  
+            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
+            align-content: center;
+        }
+        .col3-sample3-2-4 {
+            display: flex;  
+            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
+            align-content: flex-end;
+        }
+        .col3-sample3-2-5 {
+            display: flex;  
+            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
+            align-content: space-around;
+        }
+        .col3-sample3-2-6 {
+            display: flex;  
+            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
+            align-content: space-between;
+        }
+        .col3-sample4-1 {
+            display: flex;
+            align-items: stretch;
+        }
+        .col3-sample4-2 {
+            display: flex;
+            align-items: flex-start;
+        }
+        .col3-sample4-3 {
+            display: flex;
+            align-items: center;
+        }
+        .col3-sample4-4 {
+            display: flex;
+            align-items: flex-end;
+        }
+        .col3-sample4-5 {
+            display: flex;
+            align-items: baseline;
+        }
+        .flex-sample1 {height: 50px;}
+        .flex-sample2 {height: 75px;}
+        .flex-sample3 {height: 100px;}
+        .col3-sample5  {           
+            display: flex;  
+            justify-content: center;
+            flex-direction: row;
+            height: 400px;
+        }
+        .col3-sample5 .flex-sample1 {
+            height: 50px;
+            align-self: flex-start;
+        }
+        .col3-sample5 .flex-sample2 {
+            height: 75px;
+            align-self: center;
+        }
+        .col3-sample5 .flex-sample3 {
+            height: 100px;
+            align-self: flex-end;
+        }
+        .col3-sample6-1 {
+            display: flex;  
+            height: 100px;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .col3-sample6-2 {
+            display: flex;  
+            height: 100px;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .col3-sample6-3 {
+            display: flex;  
+            height: 100px;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+        }
+        .col3-sample7-1 {
+            display: flex;
+            height: 100px;
+        }
+        .flex-sample1order {order: 7;}
+        .flex-sample2order {order: 8;}
+        .flex-sample3order {order: 9;}
+        .flex-sample4order {order: 10;}
+        .flex-sample5order {order: 1;}
+        .flex-sample6order {order: 2;}
+        .flex-sample7order {order: 3;}
+        .flex-sample8order {order: 4;}
+        .flex-sample9order {order: 5;}
+       .flex-sample10order {order: 6;}
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                    <a href="#">Слайдер</a>
+                    <ul class="sub-menu sub-menu3">
+                        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+                        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+                    </ul>
+		        </li>
+                <li>
+                    <a class="active" href="#">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | flex</h2>
+	
+        <table class="css3-table">
+            <tr>
+                <th class="css3-table-title" colspan="3">display: flex;</th>
+            </tr>
+            <tr>
+                <td class="col1" rowspan="2">
+                    <b>Флекс-контейнер</b><br>
+                    Внутри контейнера образуются <b>флекс-элементы</b>, и если не задавать фикс. ВЫСОТУ, 
+                    то будет растягиваться по высоте контейнера, становяться в одну строку, равномерно распределяясь
+                </td>
+                <td class="col2" rowspan="2">
+                   <h3 style="color: #000"><u>Для контейнера:</u></h3>
+                    <code><pre>
+&lt;div class="<span class="red">sample-count</span>"&gt;
+    &lt;div class="<span class="red">sample</span>"&gt;&lt;/div&gt;
+    &lt;div class="<span class="red">sample</span>"&gt;&lt;/div&gt;
+    &lt;div class="<span class="red">sample</span>"&gt;&lt;/div&gt;
+&lt;/div&gt;<hr>
+<span class="red">.sample</span> {
+    width: 42px;
+    border: 4px solid #f1e301;
+    background-color: maroon;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+<span class="red">.sample-count</span> {
+    <b>display: <mark>flex</mark>;</b>
+    height: 100px;
+}</pre>
+</code>
+                </td>
+                <td class="col3"><code>display: block;</code>
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample1">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">flex-direction:</th>
+            </tr>
+            <tr>
+                <td class="col1" rowspan="4">Направление <b>ГЛАВНОЙ ОСИ</b></td>
+                <td class="col2" rowspan="4">
+                    <code>
+                        <pre><span class="red">.sample-count</span> {           
+    <b>display: flex;</b>  
+    height: 100px;
+    <span class="gray">/*Строчный (по ум*)*/</span>
+    <b>flex-direction: <mark>row;</mark></b>
+    <span class="gray">/*Строчный-реверсивный*/</span>
+    <b>flex-direction: <mark>row-reverse;</mark></b>
+    <span class="gray">/*Колоночный*/</span>
+    <b>flex-direction: <mark>column;</mark></b>
+    <span class="gray">/*Колоночный-реверсивный*/</span>
+    <b>flex-direction: <mark>column-reverse;</mark></b>   
+}</pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample2-1">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample2-2">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample2-3">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+                <td class="col3 col3-sample2-4">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">justify-content:</th>
+            </tr>
+            <tr>
+                <td class="col1" rowspan="6">
+                    <b>РАСПРЕДЕНИЕ</b> флекс-элементов<br>
+                    Зависимость от направления главной оси
+                </td>
+                <td class="col2" rowspan="6">
+                    <code>
+                        <pre><span class="red">.sample-count</span> {           
+    <b>display: flex;</b>  
+    height: 100px;
+    <b>flex-direction: row;</b>
+    <b>justify-content: <mark>flex-start;</mark> (по ум*)</b>
+    <b>justify-content: <mark>center;</mark></b>
+    <b>justify-content: <mark>flex-end;</mark></b>
+    <b>justify-content: <mark>space-around;</mark></b>
+    <b>justify-content: <mark>space-beetwen;</mark></b>
+}
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-1">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-2">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-3">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-4">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-5">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">align-content:</th>
+            </tr>
+            <tr>
+                <td class="col1" rowspan="6">
+                    <b>ВЫРАВНИВАНИЕ</b> флекс-элементов вдоль поперечной оси<br>
+                    Работает, когда флексов <mark>НЕСКОЛЬКО РЯДОВ</mark>, указано свойство <mark><b>flex-wrap</b></mark>
+                    и не задана высота каждого флекса
+                </td>
+                <td class="col2" rowspan="6">
+                    <code>
+                        <pre><span class="red">.sample-count</span> {           
+    <b>display: flex;</b>  
+    height: 100px;
+    <b>flex-direction: row;</b>
+    <b>flex-wrap: wrap;</b>
+    <b>align-content: <mark>srtetch;</mark> (по ум*)</b>
+    <b>align-content: <mark>flex-start;</mark></b>
+    <b>align-content: <mark>center;</mark></b>
+    <b>align-content: <mark>flex-end;</mark></b>
+    <b>align-content: <mark>space-around;</mark></b>
+    <b>align-content: <mark>space-beetwen;</mark></b>
+}
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-2-1">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                     <div class="flex-sample">4</div>
+                     <div class="flex-sample">5</div>
+                     <div class="flex-sample">6</div>
+                     <div class="flex-sample">7</div>
+                     <div class="flex-sample">8</div>
+                     <div class="flex-sample">9</div>
+                     <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-2-2">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                     <div class="flex-sample">4</div>
+                     <div class="flex-sample">5</div>
+                     <div class="flex-sample">6</div>
+                     <div class="flex-sample">7</div>
+                     <div class="flex-sample">8</div>
+                     <div class="flex-sample">9</div>
+                     <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-2-3">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                     <div class="flex-sample">4</div>
+                     <div class="flex-sample">5</div>
+                     <div class="flex-sample">6</div>
+                     <div class="flex-sample">7</div>
+                     <div class="flex-sample">8</div>
+                     <div class="flex-sample">9</div>
+                     <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-2-4">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                     <div class="flex-sample">4</div>
+                     <div class="flex-sample">5</div>
+                     <div class="flex-sample">6</div>
+                     <div class="flex-sample">7</div>
+                     <div class="flex-sample">8</div>
+                     <div class="flex-sample">9</div>
+                     <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample3-2-5">
+                     <div class="flex-sample">1</div>
+                     <div class="flex-sample">2</div>
+                     <div class="flex-sample">3</div>
+                     <div class="flex-sample">4</div>
+                     <div class="flex-sample">5</div>
+                     <div class="flex-sample">6</div>
+                     <div class="flex-sample">7</div>
+                     <div class="flex-sample">8</div>
+                     <div class="flex-sample">9</div>
+                     <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">align-items:</th>
+            </tr>
+            <tr>
+                <td class="col1" rowspan="6">
+                    <b>ВЫРАВНИВАНИЕ флекс-элементов по ПОПЕРЕЧНОЙ ЛИНИИ</b>,<br>
+                    наподобие ВЕРТИКАЛЬНОГО ВЫРАВНИВАНИЯ, если элементы разной высоты<br>
+                    <b>srtech, flex-start, baseline</b> могут дублировать друг друга<br>
+                    Работает только с <mark>ОДНИМ РЯДОМ</mark> флексов
+                </td>
+                
+                <td class="col2" rowspan="6">
+                    <code>
+                        <pre><span class="red">.sample1</span> {height: 50px;}
+<span class="red">.sample2</span> {height: 75px;}
+<span class="red">.sample3</span> {height: 100px;}   
+  
+<span class="red">.sample-count</span> {           
+    <b>display: flex;</b>  
+    height: 100px;
+    <b>flex-direction: row;</b>
+    <b>justify-content: flex-start;</b>
+    <b>align-items: <mark>srtech</mark>; (по ум*)</b>
+    <b>align-items: <mark>flex-start</mark>;</b>
+    <b>align-items: <mark>center</mark>;</b>
+    <b>align-items: <mark>flex-end</mark>;</b>
+    <b>align-items: <mark>baseline</mark>;</b>
+}</pre></code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample4-1">
+                     <div class="flex-sample flex-sample1">1</div>
+                     <div class="flex-sample flex-sample2">2</div>
+                     <div class="flex-sample flex-sample3">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample4-2">
+                     <div class="flex-sample flex-sample1">1</div>
+                     <div class="flex-sample flex-sample2">2</div>
+                     <div class="flex-sample flex-sample3">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample4-3">
+                     <div class="flex-sample flex-sample1">1</div>
+                     <div class="flex-sample flex-sample2">2</div>
+                     <div class="flex-sample flex-sample3">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample4-4">
+                     <div class="flex-sample flex-sample1">1</div>
+                     <div class="flex-sample flex-sample2">2</div>
+                     <div class="flex-sample flex-sample3">3</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample4-5">
+                     <div class="flex-sample flex-sample1">1</div>
+                     <div class="flex-sample flex-sample2">2</div>
+                     <div class="flex-sample flex-sample3">3</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">align-self:</th>
+            </tr>
+            <tr>
+                <td class="col1" rowspan="2">
+                    <b>ВЫРАВНИВАНИЕ</b> отдельного флекс-элемента
+                </td>
+                
+                <td class="col2" rowspan="2">
+                    <code>
+                        <pre><span class="red">.sample1</span> {
+    height: 50px;
+    <b>align-self: <mark>flex-start</mark>;</b>
+}
+<span class="red">.sample2</span> {
+    height: 75px;
+    <b>align-self: <mark>center</mark>;</b>
+}
+<span class="red">.sample3</span> {
+    height: 100px; 
+    <b>align-self: <mark>flex-end</mark>;</b>
+}   
+<span class="red">.sample-count</span> {           
+    <b>display: flex;</b>  
+    height: 100px;
+    <b>justify-content: <mark>center</mark>;</b>
+    <b>flex-direction: row;</b>
+}</pre></code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample5">
+                    <div class="flex-sample flex-sample1">1</div>
+                    <div class="flex-sample flex-sample2">2</div>
+                    <div class="flex-sample flex-sample3">3</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">flex-wrap:</th>
+            </tr>
+            
+            <tr>
+                <td class="col1" rowspan="3">
+                    <b>ПЕРЕНОС </b>флекс-элементов, если они не помещаются в контейнер<br>
+                    Если элементы не помещаются, то у них будет уменьшаться ширина
+                </td>
+                
+                <td class="col2" rowspan="3">
+                    <code>
+                        <pre><span class="red">.flex-sample</span> {
+    ...
+    <mark>width: 42px</mark>;
+}
+<span class="red">.sample-count</span> {           
+    <b>display: flex;</b>  
+    height: 100px;
+    <b>justify-content: flex-start;</b>
+    <b>flex-direction: row;</b>
+    <b>flex-wrap: <mark>nowrap</mark>;</b>
+    <b>flex-wrap: <mark>wrap</mark>;</b>
+    <b>flex-wrap: <mark>wrap-reverse</mark>;</b>
+}</pre></code>                 
+                </td>
+                
+                <td class="col3 col3-sample6-1">
+                    <div class="flex-sample">1</div>
+                    <div class="flex-sample">2</div>
+                    <div class="flex-sample">3</div>
+                    <div class="flex-sample">4</div>
+                    <div class="flex-sample">5</div>
+                    <div class="flex-sample">6</div>
+                    <div class="flex-sample">7</div>
+                    <div class="flex-sample">8</div>
+                    <div class="flex-sample">9</div>
+                    <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample6-2">
+                    <div class="flex-sample">1</div>
+                    <div class="flex-sample">2</div>
+                    <div class="flex-sample">3</div>
+                    <div class="flex-sample">4</div>
+                    <div class="flex-sample">5</div>
+                    <div class="flex-sample">6</div>
+                    <div class="flex-sample">7</div>
+                    <div class="flex-sample">8</div>
+                    <div class="flex-sample">9</div>
+                    <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col3 col3-sample6-3">
+                    <div class="flex-sample">1</div>
+                    <div class="flex-sample">2</div>
+                    <div class="flex-sample">3</div>
+                    <div class="flex-sample">4</div>
+                    <div class="flex-sample">5</div>
+                    <div class="flex-sample">6</div>
+                    <div class="flex-sample">7</div>
+                    <div class="flex-sample">8</div>
+                    <div class="flex-sample">9</div>
+                    <div class="flex-sample">10</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">order:</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>ПОРЯДКОВЫЙ НОМЕР</b> флекс-элементов<br>
+                    Можно изменять порядок элементов
+                </td>
+                
+                <td class="col2">
+                    <code>
+                        <pre><span class="red">.sample1</span> {<b>order:</b> 7;}
+<span class="red">.sample2</span> {<b>order:</b> 8;}
+<span class="red">.sample3</span> {<b>order:</b> 9;}
+<span class="red">.sample4</span> {<b>order:</b> 10;}
+<span class="red">.sample5</span> {<b>order:</b> 1;}
+<span class="red">.sample6</span> {<b>order:</b> 2;}
+<span class="red">.sample7</span> {<b>order:</b> 3;}
+<span class="red">.sample8</span> {<b>order:</b> 4;}
+<span class="red">.sample9</span> {<b>order:</b> 5;}
+<span class="red">.sample10</span> {<b>order:</b> 6;}</pre>
+                    </code>                 
+                </td>
+                
+                <td class="col3 col3-sample7-1">
+                    <div class="flex-sample flex-sample1order">1</div>
+                    <div class="flex-sample flex-sample2order">2</div>
+                    <div class="flex-sample flex-sample3order">3</div>
+                    <div class="flex-sample flex-sample4order">4</div>
+                    <div class="flex-sample flex-sample5order">5</div>
+                    <div class="flex-sample flex-sample6order">6</div>
+                    <div class="flex-sample flex-sample7order">7</div>
+                    <div class="flex-sample flex-sample8order">8</div>
+                    <div class="flex-sample flex-sample9order">9</div>
+                    <div class="flex-sample flex-sample10order">10</div>
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+            
+        </table>
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,786 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | JavaScript | Git</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <link rel="stylesheet" type="text/css" href="../css/git.css">
+    <style>
+        .git-list code {line-height: 1em;}
+        .intensive-version {list-style-position: inside !important;}
+        .intensive-version > li {color: #000;}
+    </style>
+</head>
+
+<body>
+<div class="_header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a class="active" href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+            <li>
+                <a href="#">Основы</a>
+                <ul class="sub-menu sub-menu8">
+                    <li><a href="js-lang.html">Язык JS</a></li>
+                    <li><a href="load.html">Загрузка</a></li>
+			        <li><a href="types.html">Типы данных</a></li>
+			        <li><a href="var.html">Переменные</a></li>
+			        <li><a href="operators.html">Операторы</a></li>
+			        
+			        <li><a href="algorythm.html">Алгоритмы</a></li>
+			        <li><a href="if-else.html">if - else, switch-case</a></li>
+			        <li><a href="cycle.html">Циклы</a></li>
+                    <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+			<li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS & HTML</a>
+                <ul class="sub-menu sub-menu6">
+                    <li><a href="complete.html">Вывод данных</a></li>
+			        <li><a href="dom.html">DOM</a></li>
+			        <li><a href="html-methods.html">Методы</a></li>
+			        <li><a href="actions.html">События</a></li>
+			        <li><a href="modal-window.html">Мод. окно</a></li>
+			        <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+			
+			<li>
+			    <a href="#">jQuery</a>
+			    <ul class="sub-menu sub-menu7">
+			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
+			        <li><a href="jquery-func.html">jQuery-функции</a></li>
+                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
+                </ul>
+			 </li>
+			 <li><a href="ajax.html">Ajax</a></li>
+			 <li><a href="canvas.html">Canvas</a></li>
+			 <li><a class="active" href="git.html">Git</a></li>
+			 <li><a href="console.html">Консоль</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | JavaScript | Git</h2>
+	
+	<table class="css3-table">
+           
+            <tr>
+                <th class="css3-table-title" colspan="3">Настройка</th>
+            </tr>
+            <tr>
+                <td class="col1" colspan="3">
+                    1. Скачиваем git для вашей ОС на <a href="http://git.scm.com/downloads" target="_blank">оф. сайте</a> и устанавливаем  
+                </td>
+            </tr>
+            <tr>
+               <td class="col1" colspan="3">
+                   2. Регистрируемся на <a href="http://github.com" target="_blank">GitHub</a>  
+                </td>
+            </tr>
+            <tr>
+               <td class="col1">
+                    3. Входим на GitHub(<b>Sing in</b>) под своей учётной записью
+                </td>
+                <td class="col2" colspan="2"><code>
+                    <b>Логин:</b> &nbsp;<i>EvgenyLeukhin@yandex.ru</i><br>
+                    <b>Пароль:</b> <i>EvgenyLeukhin@yandex.ru</i><br>
+                </code></td>
+            </tr>
+            <tr>
+               <td class="col1">
+                    4. Создаём новый репозиторий
+                </td>
+                <td class="col2" colspan="2"><code>
+                    + New repository(public)
+                </code></td>
+            </tr>
+            <tr>
+               <td class="col1">
+                    5. Подтверждаем свой аккаунт в консоли
+                </td>
+                <td class="col2" colspan="2"><code>
+                    <b>git config –global user.name</b> <span class="gray">“Evgeny Leukhin”</span> <br>
+                    <b>git config –global user.email</b> <span class="gray">“EvgenyLeukhin@yandex.ru”</span> 
+                </code></td>
+            </tr>
+        
+            <tr>
+                <th class="css3-table-title" colspan="3">Создать репозиторий</th>
+            </tr>
+            <tr>
+                <td class="col1">
+Лучше создавать на GitHub
+                </td>
+                <td class="col2"><code>
+<b>git init </b> <span class="gray">имя репозитория</span><br><br>
+<span class="gray">Посмотреть настройки:</span><br>
+<b>git config --list</b>
+               </code></td>
+                <td class="col3">
+Не обязательно создавать репозиторий через консоль, можно и в акунте GitHub
+                </td>
+            </tr>
+
+            <tr>
+                <th class="css3-table-title" colspan="3">Клонирование репозитория</th>
+            </tr>
+            <tr>
+                <td class="col1">
+Клонируем репозиторий себе на локальный диск
+                </td>
+                <td class="col2"><code>
+<b>git clone</b> <span class="gray">http://адрес репозитория</span>
+               </code></td>
+                <td class="col3">
+1. Открываем консоль и встаём в ту директорию, куда хотим склонировать репозиторий <br>
+2. Копируем абсолютный адрес нашего репозитория с GitHub <br>
+3. Пишем команду <b>git clone</b> + адрес
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Файлы и папки</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                Создание папок и файлов
+                </td>
+                <td class="col2">
+<code><b>mkdir</b></code> <span class="gray">название</span>              - Создать папку<br>
+<code><b>touch</b></code> <span class="gray">имя файла имя файла </span>  - Создать файлы<br>
+<code><b>git add</b></code> <span class="gray">имя файла имя файла </span>- Добавить файлы<br>
+<code><b><mark>git add .</mark></b></code>                   - Добавить новые файлы<br>
+<code><b>git rm</b></code> <span class="gray">имя файла имя файла </span> - Удалить файлы<br>
+<code><b>git rm -f</b></code> <span class="gray">имя файла</span>         - Принудительное удаление
+               </td>
+                <td class="col3">
+После создания файлов, их нужно добавлять в локальный репозиторий командой <b>git add</b>, ТАКЖЕ ЭТА КОМАНДА СОХРАНЯЕТ ИЗМЕНЕНИЯ В ФАЙЛАХ
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Статус файлов в локальном репозитории</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">Статус файлов</td>
+                <td class="col2"><code><b>git status</b></code>
+                </td>
+                <td class="col3">
+                    <b>up to date, nothing to commit</b> - изменений не было<br>
+                    <b>modified</b> - файл изменён<br>
+                    <b>deleted</b> - файл удалён<br>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Посмотреть изменения файлов</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">Посмотреть изменения файлов</td>
+                <td class="col2"><code><b>git diff</b></code>
+                </td>
+                <td class="col3">
+                    Будут показаны все измененя в файлах
+                </td>
+            </tr>
+
+            <tr>
+                <th class="css3-table-title" colspan="3">Сохранение изменений</th>
+            </tr>
+            
+            <tr>
+                <td class="col1"><b>git commit</b><br>
+                Сохранение изменений в репозиторий(локальный) с комментарием в кавычках, команда commit
+                <td class="col2">
+<code><b>git commit -m</b></code> <span class="gray">"Комментарий"</span> - Коммит файла
+(<b>-m</b> - message) <br>
+
+<code><b>git revert HEAD</b></code>  - Отмена последнего коммита<br>
+<code><b>git reset --hard</b></code>  - Отмена последних изменений</td>
+                <td class="col3">
+                    Можно коммитить отдельные файлы, написав название файла через пробел, перед коммитами 
+                    необходимо добавлять изменения в файлах с помощью команды <br><b>git add .</b>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Сохранение изменений во внешний репозиторий</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>git push</b> <br>
+                    Отправлять все коммиты в удалённый репозиторий
+                </td>
+                <td class="col2"><code><b>git push origin master</b>
+               </code></td>
+                <td class="col3">
+                    <b>master</b> - название ветки<br>
+                    <b>origin</b> - GitHub
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Сохранение изменений из внешнего репозитория в локальный</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>git pull</b> <br>
+                    Сохранять все коммиты из удалённого репозитория
+                </td>
+                <td class="col2"><code><b>git pull</b> <span class="gray">http://адрес репозитория???</span>
+               </code></td>
+                <td class="col3">Cохранять все изменения себе на локальный репозиторий с удалённого, если какие-либо участники вносили изменения,
+                то они будут видны
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Консольные команды</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    Консольные команды
+                </td>
+                <td class="col2">
+                    <code>
+                        <b>cls</b> - <span class="gray">очистить экран (Crtl + L)</span><br>
+                        <b>ls</b> - <span class="gray">аналог DIR</span><br>
+                        <b>ls -hF -1 --sort=extension </b> - <span class="gray">... в один столбец</span><br>
+                        <b>cp</b> - <span class="gray"> аналог copy</span><br>
+                        <b>mv</b> - <span class="gray"> аналог move</span><br>
+                        <b>del</b> - <span class="gray">удалить</span><br>
+                        <b>rm</b> - <span class="gray">удалить</span><br>
+                        <b>move</b> - <span class="gray">переместить</span><br>
+                        <b>rename</b> - <span class="gray">переименовать</span><br>
+                        <b>copy</b> - <span class="gray">копировать</span><br>
+                        <b>xcopy</b> - <span class="gray">копировать файлы в папке</span><br>
+                        <b>color</b> - <span class="gray">цвет</span><br>
+                        <b>tree</b> - <span class="gray">дерево</span><br>
+                        <b>dir</b> - <span class="gray">директория</span><br>
+                        <b>rmdir</b> - <span class="gray">удалить директорию</span><br>
+                        <b>mkdir</b> - <span class="gray">создать директорию</span><br>
+                        <b>touch</b> - <span class="gray">создать файлы</span><br>
+                        <b>ipconfig</b> - <span class="gray">сеть</span><br>
+                        <b>help</b> - <span class="gray">помощь</span><br>
+                        <b>echo</b> - <span class="gray">редактирование</span><br>
+                        <b><mark>git clean -f -d</mark></b> - <span class="gray">УДАЛИТЬ ЛИШНИЕ ФАЙЛЫ</span>
+                   </code>
+                </td>
+                <td class="col3">
+                    Их достаточно много<br>
+                    <code></code>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Работа с ветками</th>
+            </tr>
+            <tr>
+                <td class="col1">Ветки</td>
+                <td class="col2">
+                   <span style="color: #000;">Создать и ВСТАТЬ в новую ветку another:</span><br>
+                   <code>
+                       <b>git checkout -b another</b>
+                   </code>
+                   <hr> 
+                   <span style="color: #000;">Редактирование файла в новой ветке:</span><br>
+                   <code>
+                       <b>echo</b> '<span class="gray">Привет из другой ветки</span>' Readme.txt
+                   </code>
+                   <hr> 
+                   <span style="color: #000;">Узнать текущую ветку:</span><br>
+                   <code>
+                       <b>git branch</b>
+                   </code>
+                   <hr> 
+                   <span style="color: #000;">Переключаться между ветками:</span><br>
+                   <code>
+                       <b>git checkout master</b><br>
+                       <b>git checkout another</b>
+                   </code>
+                   <hr> 
+                   <span style="color: #000;">Пушить в новую ветку another:</span><br>
+                   <code>
+                       <b>git push origin another</b>
+                   </code>
+                   <hr> 
+                   <span style="color: #000;">Подключить ветку к локальному репозиторию 
+                   (если эту ветку создали Вы, то подключать её НЕ НУЖНО):</span><br>
+                   <code>
+                       <b>git checkout origin/another -b another</b>
+                   </code>
+                   <hr> 
+                    <span style="color: #000;"><b>Слияние веток:</b></span><br>
+                   <span style="color: #000;">1. Встаём в одну из веток</span><br>
+                   <code><b>git checkout master</b></code><br>
+                   <span style="color: #000;">2. Производим слияние с другой веткой <br>(лучше присоединять к master)</span><br>
+                   <code><b>git merge another</b></code><br>
+                   <hr>
+                   <span style="color: #000;">Могут произойти <b>КОНФЛИКТЫ</b>, если при слиянии веток были 
+                   изменены файлы с одинаковыми названиями в одинаковых местах. В этом случае придётся открыть файлы и исправить вручную,
+                   появяться символы HEAD >>>, а потом коммитить эти безконфликтные файлы</span><br>
+                </td>
+                <td class="col3">
+                   <code>another</code> - название новой ветки
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">ИСТОРИЯ</th>
+            </tr>
+            <tr>
+                <td class="col1"></td>
+                <td class="col2">
+                    <span style="color: #000;">Посмотреть историю коммитов</span><br>
+                       <code><b>git log</b></code>
+                    <hr>
+                    <span style="color: #000;">История-график (по веткам)</span><br>
+                       <code><b>git --graph --oneline</b></code>
+                </td>
+                <td class="col3"></td>
+            </tr>
+            <tr>
+                <td class="col1">Алиасы, команды для создания ИСТОРИИ</td>
+                <td class="col2">
+                    <span style="color: #000;">Команды для настройки ИСТОРИИ</span><br>
+                       <code><b>git config --global alias.co checkout<br>
+git config --global alias.ci commit<br>
+git config --global alias.st status<br>
+git config --global alias.br branch<br>
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"<br>
+git config --global alias.type 'cat-file -t'<br>
+git config --global alias.dump 'cat-file -p'</b></code>
+                    <hr>
+<code><b>git hist</b></code>
+                </td>
+                <td class="col3">Будут видны все коммиты</td>
+            </tr>
+            <tr>
+                <td class="col1">Откатывать ВЕРСИИ</td>
+                <td class="col2">
+                       <code><b>git checkout <span class="gray">код истории</span></b></code>
+                    <hr>
+                        <span style="color: #000;">Вернуться к последней версии</span><br>
+                        <code><b>git checkout master</b></code>
+                </td>
+                <td class="col3">Будут видны все коммиты</td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Режим работы на интенсиве</th>
+            </tr>
+            <tr>
+                <td class="col1">Будет применяться СОГЛАСОВАНИЕ</td>
+                <td class="col2">
+                    <h3><mark>СЦЕНАРИЙ работы на интенсиве:</mark></h3><br>
+                    <ol class="intensive-version">
+                        <li>Наставник создаёт репозиторий на GitHub <b>(master)</b>. Сюда он будет принимать наши задания. РЕПОЗИТОРИЙ-ЧИСТОВИК - <span class="red"><b>1-й репозиторий</b></span>;</li><hr>
+                        
+                        <li>А мы создаём <b>(fork)</b> этого репозитория (копия будет в нашем аккаунте),
+                        что-то вроде удалённого ЧЕРНОВИКА-РЕПОЗИТОРИЯ - <span class="red"><b>2-й репозиторий</b></span>;</li><hr>
+                        
+                        <li>Клонируем <b>форкнутый</b> репозиторий из своего акаунта к себе на хард-диск <b>(локальный репозиторий)</b> для возможности
+                        редактирования файлов - <span class="red"><b>3-й репозиторий</b></span><br> <br>
+                            <code style="color: darkgreen; background: #eee;">git clone <b>git@github.com:nico/web-design.git</b></code></li><hr>
+                        
+                        <li>Создаём новые ветки для каждого задания в <b>форке</b> (название ветки <b>module1-task1</b>) <br><br>    
+                        <code style="color: darkgreen; background: #eee;">git branch <b>module1-task1</b> <span class="gray">//создайм ветку</span><br>
+                            git checkout <b>module1-task1</b> <span class="gray">//встаём в неё</span>
+                        </code>
+                        </li><hr>
+                        
+                        <li>Редактируем и добавляем файлы - Коммитим - Пушим в новую созданную ветку в <b>форк</b><br> <br>
+                        <code style="color: darkgreen; background: #eee;">
+                        git add . <br>
+                        git commit -m <b>"Message"</b><br>
+                        git push origin <b>module1-task1</b>
+                        </code></li><hr>
+                        
+                        <li>После того, как сделали задание - Делаем "<b>Pull request</b>" на GitHub - предложение с комментарием для внесения изменений в <b>(master)</b>,
+                        "<b>Pull request</b>" будет отображен в <b>(master)</b>, здесь и можно будет чатиться с наставником</li><hr>
+                        
+                        <li>Заходим в свой интерфейс участника на html-academy и наживаем кнопку <b>"Привязать пулреквест"</b></li><hr>
+                        
+                        <li><b>"Всё выполнил - можно проверять"</b></li><hr>
+                        
+                        <li>Если наставник принял пулреквест, то в форке встаём в ветку master, проверяем связь с мастером
+                        <b>(git remote -v)</b>, если связи НЕТ, то добавляем <b>(git remote add <u>upstream</u> 
+                        git@github.com:nicothin/test.git)</b><br><br>
+                        <code style="color: darkgreen; background: #eee;">
+                        git checkout master<br><br>
+                        git remote -v <span class="gray">//связь форка с другими репозиториями</span> <br><br>
+                        git remote add <b>upstream git@github.com:nico/test.git "Message"</b> <span class="gray">//устанавливаем связь, если её нет</span> <br>
+                        </code>
+                        </li><hr>
+                        
+                        <li><b>git fetch upstream</b> - получение изменений с мастера</li><br>
+                        <code style="color: darkgreen; background: #eee;">git fetch <b>upstream</b> <span class="gray">//забрать инфу с мастера, что-то вроде клонорования всего мастер-репозитория в форк(ТОЛЬКО НЕ ПОНЯТНО КУДА???) с названием <b>upstream</b></span></code> <hr>
+                        
+                        <li><b>git merge upstream/master master</b> - слияние главной ветки мастер-репозитория и с мастер-веткой форка в локале</li><br>
+                          <code style="color: darkgreen; background: #eee;">git merge <b>upstream/master master</b> <span class="gray">//слияние главной ветки мастер-репозитория с мастер-веткой форка</span></code> <hr>
+                        
+                        <li><b>git push</b> - пушим изменения из локального репозитория в форк на GitHub, все будут сохранены в форке</li><br>
+                        <code style="color: darkgreen; background: #eee;">git push origin master</code>
+                    </ol>
+                </td>
+                <td class="col3">В этой ветке будут находиться все учебные файлы задания. Редактируем их, коммитим, пушим в свой репозиторий
+                    
+                </td>
+            </tr>
+            
+            
+        </table>
+        
+        <h3>Обычный порядок действий при работе с Git</h3>
+        <ol class="git-list">
+            <li>Создаём репозиторий на GitHub или копируем адрес существующего;</li>
+            <li>Клонируем себе на жёсткий диск командой <code>git clone <span class="gray">http://адрес репозитория</span></code>;</li>
+            <li>Изменяем, добавляем, редактируем;</li>
+            <li>Перед всеми коммитами проверяем статус и используем команду <code>git add .</code> ;</li>
+            <li>Коммитим файлы <code>git commit -m <span class="gray">"Комментарий"</span></code>;</li>
+            <li>Пункты 3, 4, 5 могут повторяться несколько раз;</li>
+            <li>Пушим файлы в удалённый репозиторий командой <code>git push origin master</code> ;</li>
+            <li>Пулим файлы с удалённого репозитория командой <code>git pull <span class="gray">http://адрес репозитория</span></code></li>
+        </ol>
+        <p><b>fork</b> на GitHub - скопировать какой-либо репозиторий в свой аккаунт, после чего его можно 
+        склонировать на локальный диск</p>
+        <p><b>Pull request</b> на GitHub - запрос на внесение изменений в исходный репозиторий после редактирования копии, 
+        с которого Вы форкнули (это целый интерфейс, в котором можно общаться с разработчиками)</p>
+        
+        <article class="text-container breadcrumbs-offset yobject-marked" role="main" lang="ru"><h1>Глоссарий терминов для Git и&nbsp;GitHub</h1><p><strong><yobject id="2bafcf23ab91b8449d2962573f3224ee10oCglydXczMzU5NDQYAiIiO00" data-yobjectid="0oCglydXczMzU5NDQYAiIiO00" data-yobjectbegin="1" data-yobjectlength="3" data-hashcode="2bafcf23ab91b8449d2962573f3224ee" data-reqid="FFA07674-3C92-4EE7-8A1D-EEA70BE82B4D/ca009e0fdebda15a0fb63bee3d4fbdbc">Git</yobject> или Гит</strong>&nbsp;— система контроля и&nbsp;управления версиями файлов.</p><p><strong><yobject id="2bafcf23ab91b8449d2962573f3224ee620oCgpydXcxNTg4MjQzGALUQd86" data-yobjectid="0oCgpydXcxNTg4MjQzGALUQd86" data-yobjectbegin="62" data-yobjectlength="6" data-hashcode="2bafcf23ab91b8449d2962573f3224ee" data-reqid="FFA07674-3C92-4EE7-8A1D-EEA70BE82B4D/ca009e0fdebda15a0fb63bee3d4fbdbc">GitHub</yobject> или Гитхаб</strong>&nbsp;— веб-сервис для размещения <yobject id="2bafcf23ab91b8449d2962573f3224ee1080oCglydXcxNzMyODkYArTBDaU" data-yobjectid="0oCglydXcxNzMyODkYArTBDaU" data-yobjectbegin="108" data-yobjectlength="12" data-hashcode="2bafcf23ab91b8449d2962573f3224ee" data-reqid="FFA07674-3C92-4EE7-8A1D-EEA70BE82B4D/ca009e0fdebda15a0fb63bee3d4fbdbc">репозиториев</yobject> и&nbsp;совместной разработки проектов.</p><p><strong>Репозиторий Git</strong>&nbsp;— каталог файловой системы, в&nbsp;котором находятся: файлы конфигурации, файлы журналов операций, выполняемых над репозиторием, индекс расположения файлов и&nbsp;хранилище, содержащее сами контролируемые файлы.</p><p><strong>Локальный репозиторий</strong>&nbsp;— репозиторий, расположенный на&nbsp;локальном компьютере разработчика в&nbsp;каталоге. Именно в&nbsp;нём происходит разработка и&nbsp;фиксация изменений, которые отправляются на&nbsp;удалённый репозиторий.</p><p><strong>Удалённый репозиторий</strong>&nbsp;— репозиторий, находящийся на&nbsp;удалённом сервере. Это общий <yobject id="2bafcf23ab91b8449d2962573f3224ee6580oCglydXcxNzMyODkYArTBDaU" data-yobjectid="0oCglydXcxNzMyODkYArTBDaU" data-yobjectbegin="658" data-yobjectlength="11" data-hashcode="2bafcf23ab91b8449d2962573f3224ee" data-reqid="FFA07674-3C92-4EE7-8A1D-EEA70BE82B4D/ca009e0fdebda15a0fb63bee3d4fbdbc">репозиторий</yobject>, в&nbsp;который приходят все изменения и&nbsp;из&nbsp;которого забираются все обновления.</p><p><strong>Форк (Fork)</strong>&nbsp;— копия репозитория. Его также можно рассматривать как внешнюю ветку для текущего репозитория. Копия вашего открытого репозитория на&nbsp;<yobject id="2bafcf23ab91b8449d2962573f3224ee8900oCgpydXcxNTg4MjQzGALUQd86" data-yobjectid="0oCgpydXcxNTg4MjQzGALUQd86" data-yobjectbegin="890" data-yobjectlength="7" data-hashcode="2bafcf23ab91b8449d2962573f3224ee" data-reqid="FFA07674-3C92-4EE7-8A1D-EEA70BE82B4D/ca009e0fdebda15a0fb63bee3d4fbdbc">Гитхабе</yobject> может быть сделана любым пользователем, после чего он&nbsp;может прислать изменения в&nbsp;ваш репозиторий через пулреквест.</p><p><strong>Обновиться из&nbsp;апстрима</strong>&nbsp;— обновить свою локальную версию форка до&nbsp;последней версии основного репозитория, от&nbsp;которого сделан форк.</p><p><strong>Обновиться из&nbsp;ориджина</strong>&nbsp;— обновить свою локальную версию репозитория до&nbsp;последней удалённой версии этого репозитория.</p><p><strong>Клонирование (Clone)</strong>&nbsp;— скачивание репозитория с&nbsp;удалённого сервера на&nbsp;локальный компьютер в&nbsp;определённый каталог для дальнейшей работы с&nbsp;этим каталогом как с&nbsp;репозиторием.</p><p><strong>Ветка (Branch)</strong>&nbsp;— это параллельная версия репозитория. Она включена в&nbsp;этот репозиторий, но&nbsp;не&nbsp;влияет на&nbsp;главную версию, тем самым позволяя свободно работать в&nbsp;параллельной. Когда вы&nbsp;внесли нужные изменения, то&nbsp;вы&nbsp;можете объединить их&nbsp;с&nbsp;главной версией.</p><p><strong>Мастер (Master)</strong>&nbsp;— главная или основная ветка репозитория.</p><p><strong>Коммит (Commit)</strong>&nbsp;— фиксация изменений или запись изменений в&nbsp;репозиторий. Коммит происходит на&nbsp;локальной машине.</p><p><strong>Пул (Pull)</strong>&nbsp;— получение последних изменений с&nbsp;удалённого сервера репозитория.</p><p><strong>Пуш (Push)</strong>&nbsp;— отправка всех неотправленных коммитов на&nbsp;удалённый сервер репозитория.</p><p><strong>Пулреквест (Pull Request)</strong>&nbsp;— запрос на&nbsp;слияние форка репозитория с&nbsp;основным репозиторием. Пулреквест может быть принят или отклонён вами, как владельцем репозитория.</p><p><strong>Мёрдж (Merge)</strong>&nbsp;— слияние изменений из&nbsp;какой-либо ветки репозитория с&nbsp;любой веткой этого&nbsp;же репозитория. Чаще всего слияние изменений из&nbsp;ветки репозитория с&nbsp;основной веткой репозитория.</p><p><strong>Кодревью</strong>&nbsp;— процесс проверки кода на&nbsp;соответствие определённым требованиям, задачам и&nbsp;внешнему виду.</p><footer><p class="text-small"><time datetime="2016-04-13">13&nbsp;апреля 2016</time>, <a href="/blog/tags/статьи">статьи</a>, Сергей Попов.</p><div class="social-likes social-likes_visible"><div data-service="vkontakte" data-title="Глоссарий терминов для Git и&nbsp;GitHub" class="social-likes__widget social-likes__widget_vkontakte" tabindex="0" role="button">
+	
+			</div></div></footer></article>
+       
+       <article class="markdown-body entry-content yobject-marked" itemprop="text"><h1><a id="user-content-Шпаргалка-по-консольным-командам-git" class="anchor" href="#Шпаргалка-по-консольным-командам-git" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Шпаргалка по консольным командам Git</h1>
+
+<h2><a id="user-content-Общее" class="anchor" href="#Общее" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Общее</h2>
+
+<p><yobject id="982df7f0a571aa05f7e5b2826ed5adfe50oCglydXczMzU5NDQYAiIiO00" data-yobjectid="0oCglydXczMzU5NDQYAiIiO00" data-yobjectbegin="5" data-yobjectlength="3" data-hashcode="982df7f0a571aa05f7e5b2826ed5adfe" data-reqid="C136F933-67A0-4B2E-9D29-5D8FB7B7B828/37a35695f72ac74de236989620d942dd">Git</yobject> — <yobject id="982df7f0a571aa05f7e5b2826ed5adfe110oCghydXc3NjUxNhgCp_FjFQ" data-yobjectid="0oCghydXc3NjUxNhgCp_FjFQ" data-yobjectbegin="11" data-yobjectlength="23" data-hashcode="982df7f0a571aa05f7e5b2826ed5adfe" data-reqid="C136F933-67A0-4B2E-9D29-5D8FB7B7B828/37a35695f72ac74de236989620d942dd">система контроля версий</yobject> (файлов). Что-то вроде возможности сохраняться в компьютерных играх (в Git эквивалент игрового сохранения — коммит).</p>
+
+<p>Любой файл в папке существующего <yobject id="982df7f0a571aa05f7e5b2826ed5adfe1870oCglydXcxNzMyODkYArTBDaU" data-yobjectid="0oCglydXcxNzMyODkYArTBDaU" data-yobjectbegin="187" data-yobjectlength="11" data-hashcode="982df7f0a571aa05f7e5b2826ed5adfe" data-reqid="C136F933-67A0-4B2E-9D29-5D8FB7B7B828/37a35695f72ac74de236989620d942dd">репозитория</yobject> может находиться или не находиться под версионным контролем (отслеживаемые и неотслеживаемые).</p>
+
+<p>Неотслеживаемые файлы можно в любой момент сделать отслеживаемыми и наоборот.</p>
+
+<p>Отслеживаемые файлы могут быть в 3-х состояниях: неизменённые, изменённые, готовые к коммиту. Сразу после клонирования репозитория все файлы — отслеживаемые неизменённые.</p>
+
+<p>После редактирования отслеживаемого файла он становится изменённым. Изменения файла (или нескольких) можно индексировать (подготовить к коммиту) и закоммитить. После коммита такие файлы становятся отслеживаемыми неизменёнными.</p>
+
+<p>Проверить состояние <yobject id="982df7f0a571aa05f7e5b2826ed5adfe7980oCglydXcxNzMyODkYArTBDaU" data-yobjectid="0oCglydXcxNzMyODkYArTBDaU" data-yobjectbegin="798" data-yobjectlength="11" data-hashcode="982df7f0a571aa05f7e5b2826ed5adfe" data-reqid="C136F933-67A0-4B2E-9D29-5D8FB7B7B828/37a35695f72ac74de236989620d942dd">репозитория</yobject> можно командой <code>git status</code>. Она покажет ветку, изменённые файлы (если есть) с пометкой «modified», неотслеживаемые файлы в списке «Untracked files».</p>
+
+<h3><a id="user-content-Указание-неотслеживаемых-файлов" class="anchor" href="#Указание-неотслеживаемых-файлов" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Указание неотслеживаемых файлов</h3>
+
+<p>Файлы и папки, которые не нужно включать в репозиторий, указываются в файле <code>.gitignore</code>. Обычно это устанавливаемые зависимости в папку <code>node_modules</code>, компоненты в папке <code>bower_components</code>, готовая сборка в папке <code>build</code> или <code>dist</code> и подобные, создаваемые при установке или запуске. Каждый файл или папка указываются с новой строки, <a href="http://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D1%8C-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B2-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9#%D0%98%D0%B3%D0%BD%D0%BE%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2">возможно использование шаблонов</a>.</p>
+
+<p>Для прочих файлов, которые не имеют непосредственного отношения к репозиторию (временные, личные или тестовые папки и файлы и т.п.), игнорирование можно указывать в файле <code>.git/info/exclude</code>. ВНИМАНИЕ: этот файл хранится только локально и не попадает в индексацию, его не будет в удалённом репозитории.</p>
+
+<h3><a id="user-content-Консоль" class="anchor" href="#Консоль" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Консоль</h3>
+
+<p><a href="http://nicothin.pro/page/console-windows">Как использовать консоль в Windows</a> (на OSX и Linux сразу есть хорошая консоль (терминал)). <a href="http://nicothin.pro/page/kak-komfortno-rabotat-s-github-v-konsoli-windows">Как комфортно работать с GitHub в консоли Windows</a>.</p>
+
+<h3><a id="user-content-Длинный-вывод-в-консоли-vim" class="anchor" href="#Длинный-вывод-в-консоли-vim" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Длинный вывод в консоли: Vim</h3>
+
+<p>Вызов некоторых консольных команд приводит к необходимости очень длинного вывода в консоль (пример: вывод истории всех изменений в файле командой <code>git log -p fileName.txt</code>). При этом прямо в консоли запускается редактор <a href="https://ru.wikipedia.org/wiki/Vim">Vim</a>. Он работает в нескольких режимах, из которых Вас заинтересуют режим вставки (редактирование текста) и нормальный (командный) режим. Чтобы попасть из <yobject id="982df7f0a571aa05f7e5b2826ed5adfe20480oCghydXcyMDMxNBgCOKDPAA" data-yobjectid="0oCghydXcyMDMxNBgCOKDPAA" data-yobjectbegin="2048" data-yobjectlength="3" data-hashcode="982df7f0a571aa05f7e5b2826ed5adfe" data-reqid="C136F933-67A0-4B2E-9D29-5D8FB7B7B828/37a35695f72ac74de236989620d942dd">Vim</yobject> обратно в консоль, нужно в командном режиме ввести <kbd>:q</kbd>. Переход в командный режим из любого другого: <kbd>Esc</kbd>. </p>
+
+<p>Если нужно что-то написать, нажмите <kbd>i</kbd> — это переход в режим вставки текста. Если нужно сохранить изменения, перейдите в командный режим и наберите <kbd>:w</kbd>. </p>
+
+<p><a href="/nicothin/web-development/blob/master/git/vim.md">Чуть-чуть больше команд</a>.</p>
+
+<h2><a id="user-content-Консольные-команды" class="anchor" href="#Консольные-команды" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Консольные команды</h2>
+
+<h3><a id="user-content-Создать-новый-репозиторий" class="anchor" href="#Создать-новый-репозиторий" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Создать новый репозиторий</h3>
+
+<div class="highlight highlight-source-shell"><pre>git init <span class="pl-c"># создать новый проект в текущей папке</span>
+git init folder-name <span class="pl-c"># создать новый проект в указанной папке</span></pre></div>
+
+<h3><a id="user-content-Клонирование-репозитория" class="anchor" href="#Клонирование-репозитория" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Клонирование репозитория</h3>
+
+<div class="highlight highlight-source-shell"><pre><mark>git clone</mark> git@github.com:nicothin/web-design.git <span class="pl-c"># клонировать удаленный репозиторий в одноименную папку</span>
+git clone git@github.com:nicothin/web-design.git foldername <span class="pl-c"># клонировать удаленный репозиторий в папку «foldername»</span>
+git clone git@github.com:nicothin/web-design.git <span class="pl-c1">.</span> <span class="pl-c"># клонировать репозиторий в текущую папку</span></pre></div>
+
+<h3><a id="user-content-Добавление-файлов-к-отслеживанию-индексация-отслеживаемых" class="anchor" href="#Добавление-файлов-к-отслеживанию-индексация-отслеживаемых" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Добавление файлов к отслеживанию, индексация отслеживаемых</h3>
+
+<div class="highlight highlight-source-shell"><pre>git add text.txt <span class="pl-c"># добавить к отслеживанию этот существующий файл</span>
+<mark>git add <span class="pl-c1">.</span></mark> <span class="pl-c"># добавить к отслеживанию все новые файлы из текущей папки и её подпапок, индексировать отслеживаемые файлы</span>
+git add -i <span class="pl-c"># запуск оболочки интерактивного индексирования для добавления в индекс только выбранных файлов (см. [git-scm.com](http://git-scm.com/book/ru/v1/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-Git-%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5-%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5))</span>
+git add -p <span class="pl-c"># поочередный просмотр файлов с показом изменений и задаваемым вопросом об отслеживании/индексировании (удобно для добавления в коммит только каких-то конкретных файлов)</span></pre></div>
+
+<h3><a id="user-content-Убирание-файла-папки-из-отслеживания" class="anchor" href="#Убирание-файла-папки-из-отслеживания" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Убирание файла, папки из отслеживания</h3>
+
+<div class="highlight highlight-source-shell"><pre>git rm --cached readme.txt <span class="pl-c"># удалить файл из отслеживаемых (файл останется на месте)</span>
+git rm --cached -r folder <span class="pl-c"># удалить папку из отслеживаемых (папка останется на месте)</span></pre></div>
+
+<h3><a id="user-content-Отмена-индексации" class="anchor" href="#Отмена-индексации" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Отмена индексации</h3>
+
+<div class="highlight highlight-source-shell"><pre>git reset HEAD <span class="pl-c"># убрать из индекса все индексированные файлы</span>
+git reset HEAD text.txt <span class="pl-c"># убрать из индекса указанный файл</span></pre></div>
+
+<h3><a id="user-content-Просмотр-изменений" class="anchor" href="#Просмотр-изменений" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Просмотр изменений</h3>
+
+<div class="highlight highlight-source-shell"><pre><mark>git diff</mark> <span class="pl-c"># посмотреть непроиндексированные изменения (если есть, иначе ничего не выведет)</span>
+git diff --staged <span class="pl-c"># посмотреть проиндексированные изменения (если есть, иначе ничего не выведет)</span></pre></div>
+
+<h3><a id="user-content-Отмена-изменений" class="anchor" href="#Отмена-изменений" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Отмена изменений</h3>
+
+<div class="highlight highlight-source-shell"><pre>git checkout -- text.txt <span class="pl-c"># ОПАСНО: отменить все изменения, внесенные в файл со времени предыдущего коммита</span>
+git checkout text.txt <span class="pl-c"># ОПАСНО: отменить изменения в непроиндексированном файле</span></pre></div>
+
+<h3><a id="user-content-Коммиты" class="anchor" href="#Коммиты" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Коммиты</h3>
+
+<div class="highlight highlight-source-shell"><pre><mark>git commit -m</mark> <span class="pl-s"><span class="pl-pds">"</span>Name of commit<span class="pl-pds">"</span></span> <span class="pl-c"># закоммитить отслеживаемые индексированные файлы (указано название коммита)</span>
+git commit -m -a <span class="pl-s"><span class="pl-pds">"</span>Name of commit<span class="pl-pds">"</span></span> <span class="pl-c"># закоммитить отслеживаемые индексированные файлы (указано название коммита, не требует git add, не добавит в коммит неотслеживаемые файлы)</span>
+git commit <span class="pl-c"># закоммитить отслеживаемые индексированные файлы (откроется редактор для введения названия коммита)</span>
+git commit --amend <span class="pl-c"># изменить последний коммит (Insert — режим ввода, : — командный режим; в командном режиме: :wq — сохранить и выйти)</span>
+git commit --amend -m <span class="pl-s"><span class="pl-pds">"</span>Новое название<span class="pl-pds">"</span></span> <span class="pl-c"># переименовать последний коммит (только если ещё не был отправлен в удалённый репозиторий)</span></pre></div>
+
+<h3><a id="user-content-Отмена-коммитов" class="anchor" href="#Отмена-коммитов" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Отмена коммитов</h3>
+
+<div class="highlight highlight-source-shell"><pre>git revert HEAD --no-edit <span class="pl-c"># создать новый коммит, отменяющий изменения последнего коммита без запуска редактора сообщения</span>
+git revert b9533bb --no-edit <span class="pl-c"># создать новый коммит, отменяющий изменения указанного (b9533bb) коммита без запуска редактора сообщения (указаны первые 7 символов хеша коммита)</span>
+git reset --hard 75e2d51 <span class="pl-c"># вернуть репозиторий в состояние коммита с указанным хешем</span></pre></div>
+
+<h3><a id="user-content-Временно-переключиться-на-другой-коммит" class="anchor" href="#Временно-переключиться-на-другой-коммит" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Временно переключиться на другой коммит</h3>
+
+<div class="highlight highlight-source-shell"><pre><mark>git checkout b9533bb</mark> <span class="pl-c"># временно переключиться на коммит с указанным хешем</span>
+<mark>git checkout master</mark> <span class="pl-c"># вернуться к последнему коммиту в указанной ветке</span></pre></div>
+
+<h3><a id="user-content-Переключиться-на-другой-коммит-и-продолжить-работу-с-него" class="anchor" href="#Переключиться-на-другой-коммит-и-продолжить-работу-с-него" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Переключиться на другой коммит и продолжить работу с него</h3>
+
+<p>Потребуется создание новой ветки, начинающейся с указанного коммита.</p>
+
+<div class="highlight highlight-source-shell"><pre>git checkout -b new-branch 5589877 <span class="pl-c"># создать ветку new-branch, начинающуюся с коммита 5589877</span></pre></div>
+
+<h3><a id="user-content-Удаление-файла-просто-удалить-отслеживаемый-файл-из-папки-недостаточно-нужно-сделать-его-неотслеживаемым-и-отправить-коммит" class="anchor" href="#Удаление-файла-просто-удалить-отслеживаемый-файл-из-папки-недостаточно-нужно-сделать-его-неотслеживаемым-и-отправить-коммит" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Удаление файла (просто удалить отслеживаемый файл из папки недостаточно, нужно сделать его неотслеживаемым и отправить коммит)</h3>
+
+<div class="highlight highlight-source-shell"><pre>git rm text.txt <span class="pl-c"># удалить из отслеживаемых неиндексированный файл (файл будет удален из папки)</span>
+git rm -f text.txt <span class="pl-c"># удалить из отслеживаемых индексированный файл (файл будет удален из папки)</span>
+git rm -r log/ <span class="pl-c"># удалить из отслеживаемых всё содержимое папки log/ (папка будет удалена)</span>
+git rm ind<span class="pl-k">*</span> <span class="pl-c"># удалить из отслеживаемых все файлы с именем, начинающимся на «ind» в текущей папке (файлы будут удалены из папки)</span>
+git rm --cached readme.txt <span class="pl-c"># удалить из отслеживаемых индексированный файл (файл останется на месте)</span></pre></div>
+
+<h3><a id="user-content-Перемещениепереименование-файлов-git-не-отслеживает-перемещенияпереименование-но-пытается-его-угадать" class="anchor" href="#Перемещениепереименование-файлов-git-не-отслеживает-перемещенияпереименование-но-пытается-его-угадать" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Перемещение/переименование файлов (Git не отслеживает перемещения/переименование, но пытается его угадать)</h3>
+
+<div class="highlight highlight-source-shell"><pre>git mv text.txt test_new.txt <span class="pl-c"># переименовать файл «text.txt» в «test_new.txt»</span>
+git mv readme_new.md folder/ <span class="pl-c"># переместить файл readme_new.md в папку folder/ (должна существовать)</span></pre></div>
+
+<h3><a id="user-content-История-изменений" class="anchor" href="#История-изменений" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>История изменений</h3>
+
+<div class="highlight highlight-source-shell"><pre>git log -p index.html <span class="pl-c"># показать историю изменений файла index.html (выход из длинного лога: Q)</span>
+git log -p -5 index.html <span class="pl-c"># показать историю изменений файла index.html (последние 5 коммитов, выход из длинного лога: Q)</span>
+git log -2 <span class="pl-c"># показать последние 2 коммита</span>
+git log -2 --stat <span class="pl-c"># показать последние 2 коммита и статистику внесенных ими изменений</span>
+git log -p -22 <span class="pl-c"># показать последние 22 коммита и внесенную ими разницу на уровне строк (выход из длинного лога: Q)</span>
+git log --pretty=format:<span class="pl-s"><span class="pl-pds">"</span>%h - %an, %ar : %s<span class="pl-pds">"</span></span> -4 <span class="pl-c"># показать последние 4 коммита с форматированием выводимых данных</span>
+git log --graph -10 <span class="pl-c"># показать последние 10 коммитов с ASCII-представлением ветвления</span>
+git log --since=2.weeks <span class="pl-c"># показать коммиты за последние 2 недели</span>
+git log --pretty=format:<span class="pl-s"><span class="pl-pds">"</span>%h %ad | %s%d [%an]<span class="pl-pds">"</span></span> --graph --date=short <span class="pl-c"># мой формат вывода, висящий на алиасе оболочки</span>
+git log master..branch_99 <span class="pl-c"># показать коммиты из ветки branch_99, которые не влиты в master</span>
+git log branch_99..master <span class="pl-c"># показать коммиты из ветки master, которые не влиты в branch_99</span>
+git show 60d6582 <span class="pl-c"># показать изменения из коммита с указанным хешем</span>
+git show HEAD^ <span class="pl-c"># показать данные о предыдущем коммите</span></pre></div>
+
+<h3><a id="user-content-Ветки" class="anchor" href="#Ветки" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ветки</h3>
+
+<div class="highlight highlight-source-shell"><pre><mark>git branch</mark> <span class="pl-c"># показать список веток</span>
+git branch -v <span class="pl-c"># показать список веток и последний коммит в каждой</span>
+<mark>git branch new_branch</mark> <span class="pl-c"># создать новую ветку с указанным именем</span>
+<mark>git checkout new_branch</mark> <span class="pl-c"># перейти в указанную ветку</span>
+git checkout -b new_branch <span class="pl-c"># создать новую ветку с указанным именем и перейти в неё</span>
+<mark>git merge hotfix</mark> <span class="pl-c"># влить в ветку, в которой находимся, данные из ветки hotfix</span>
+git branch -d hotfix <span class="pl-c"># удалить ветку hotfix (если её изменения уже влиты в главную ветку)</span>
+git branch --merged <span class="pl-c"># показать ветки, уже слитые с активной (их можно удалять)</span>
+git branch --no-merged <span class="pl-c"># показать ветки, не слитые с активной</span>
+git branch -a <span class="pl-c"># показать все имеющиеся ветки (в т.ч. на удаленных репозиториях)</span></pre></div>
+
+<h3><a id="user-content-Удалённые-репозитории" class="anchor" href="#Удалённые-репозитории" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Удалённые репозитории</h3>
+
+<div class="highlight highlight-source-shell"><pre><mark>git remote -v</mark> <span class="pl-c"># показать список удалённых репозиториев, связанных с этим</span>
+git remote remove origin <span class="pl-c"># убрать привязку удалённого репозитория с сокр. именем origin</span>
+git remote add origin git@github.com:nicothin/test.git <span class="pl-c"># добавить удалённый репозиторий (с сокр. именем origin) с указанным URL</span>
+git remote rm origin <span class="pl-c"># удалить привязку удалённого репозитория</span>
+git remote show origin <span class="pl-c"># получить данные об удалённом репозитории с сокращенным именем origin</span>
+git fetch origin <span class="pl-c"># скачать все ветки с удаленного репозитория (с сокр. именем origin), но не сливать со своими ветками</span>
+git fetch origin master <span class="pl-c"># то же, но скачивается только указанная ветка</span>
+git checkout origin/github_branch <span class="pl-c"># посмотреть ветку, скачанную с удалённого репозитория (локальной редактируемой копии не создаётся! если нужно редактировать, придётся влить)</span>
+git checkout --track origin/github_branch <span class="pl-c"># создать локальную ветку github_branch (данные взять из удалённого репозитория с сокр. именем origin, ветка github_branch) и переключиться на неё</span>
+<mark>git push origin master</mark> <span class="pl-c"># отправить в удалённый репозиторий (с сокр. именем origin) данные своей ветки master</span>
+git pull origin <span class="pl-c"># влить изменения с удалённого репозитория (все ветки)</span>
+<mark>git pull origin master</mark> <span class="pl-c"># влить изменения с удалённого репозитория (только указанная ветка)</span></pre></div>
+
+<h3><a id="user-content-Разное" class="anchor" href="#Разное" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Разное</h3>
+
+<div class="highlight highlight-source-shell"><pre>git clean -f <span class="pl-c"># удалить из репозитория все неотслеживаемые файлы</span></pre></div>
+
+<h2><a id="user-content-Примеры" class="anchor" href="#Примеры" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Примеры</h2>
+
+<p>Собираем коллекцию простых и сложных примеров работы</p>
+
+<h3><a id="user-content-Начало-работы" class="anchor" href="#Начало-работы" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Начало работы</h3>
+
+<p>Создание нового репозитория, первый коммит, привязка удалённого репозитория с gthub.com, отправка изменений в удалённый репозиторий.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+git init <span class="pl-c"># инициируем гит в этой папке</span>
+touch readme.md <span class="pl-c"># создаем файл readme.md</span>
+git add readme.md <span class="pl-c"># делаем этот файл отслеживаемым</span>
+git commit -m <span class="pl-s"><span class="pl-pds">"</span>Первый коммит<span class="pl-pds">"</span></span> <span class="pl-c"># создаем первый коммит с вменяемым названием</span>
+git remote add origin git@github.com:nicothin/test.git <span class="pl-c"># добавляем предварительно созданный пустой удаленный репозиторий</span>
+git push origin master <span class="pl-c"># отправляем данные из локального репозитория в удаленный (в ветку master)</span></pre></div>
+
+<h3><a id="user-content-Обычный-рабочий-процесс" class="anchor" href="#Обычный-рабочий-процесс" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Обычный рабочий процесс</h3>
+
+<p>Создание нового репозитория на github.com, клонирование к себе, работа, периодическая «синхронизация с github.com».</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+<span class="pl-c"># создаём на github.com репозиторий, копируем его URL клонирования (SSH)</span>
+<span class="pl-c"># в консоли попадаем в свою папку для всех проектов</span>
+git clone АДРЕС_РЕПОЗИТОРИЯ ПАПКА_ПРОЕКТА <span class="pl-c"># клонируем удалённый репозиторий к себе на компьютер (если не указать ПАПУ_ПРОЕКТА, будет создана папка, совпадающая по имени с названием репозитория)</span>
+<span class="pl-c1">cd</span> ПАПКА_ПРОЕКТА <span class="pl-c"># переходим в папку проекта (указана команда для git bash)</span>
+<span class="pl-c"># редактируем файлы, добавляем файлы и/или папки (если удаляем файлы — см. секцию про удаление файлов)</span>
+git add <span class="pl-c1">.</span> <span class="pl-c"># делаем все новые файлы в этой папке отслеживаемыми и готовыми к коммиту</span>
+git commit -m <span class="pl-s"><span class="pl-pds">"</span>НАЗВАНИЕ_КОММИТА<span class="pl-pds">"</span></span> <span class="pl-c"># создаем коммит с вменяемым названием</span>
+git push origin master <span class="pl-c"># отправляем данные из локального репозитория в удаленный (в ветку master)</span>
+<span class="pl-c"># снова вносим какие-то изменения (если удаляем файлы — см. секцию про удаление файлов)</span>
+<span class="pl-c"># возвращаемся к шагу с git add . и проходим цикл заново</span></pre></div>
+
+<p>Не обязательно после каждого коммита отправлять изменения в удаленный репозиторий, можно сделать это один раз в конце работы.</p>
+
+<h3><a id="user-content-Внесение-изменений-в-коммит" class="anchor" href="#Внесение-изменений-в-коммит" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Внесение изменений в коммит</h3>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+subl inc/header.html <span class="pl-c"># редактируем и сохраняем разметку «шапки»</span>
+git add inc/header.html <span class="pl-c"># индексируем измененный файл</span>
+git commit -m <span class="pl-s"><span class="pl-pds">"</span>Убрал телефон из шапки<span class="pl-pds">"</span></span> <span class="pl-c"># делаем коммит</span>
+<span class="pl-c"># ВНИМАНИЕ: коммит пока не был отправлен в удалённый репозиторий</span>
+<span class="pl-c"># сознаём, что нужно было еще что-то сделать в этом коммите</span>
+<span class="pl-c"># вносим изменения</span>
+git add inc/header.html <span class="pl-c"># индексируем измененный файл (можно git add .)</span>
+git commit --amend -m <span class="pl-s"><span class="pl-pds">"</span>«Шапка»: выполнена задача №34 (вставить-вынуть)<span class="pl-pds">"</span></span> <span class="pl-c"># заново делаем коммит</span></pre></div>
+
+<h3><a id="user-content-Работа-с-ветками" class="anchor" href="#Работа-с-ветками" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Работа с ветками</h3>
+
+<p>Есть master (публичная версия сайта), хотим масштабно что-то поменять (переверстать «шапку»), но по ходу работ возникает необходимость подправить критичный баг (неправильно указан контакт в «подвале»).</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+git checkout -b new_page_header <span class="pl-c"># создадим новую ветку для задачи изменения «шапки» и перейдём в неё</span>
+subl inc/header.html <span class="pl-c"># редактируем и сохраняем разметку «шапки»</span>
+git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Новая шапка: смена логотипа<span class="pl-pds">"</span></span> <span class="pl-c"># делаем первый коммит (работа еще не завершена)</span>
+<span class="pl-c"># тут выясняется, что есть баг с контактом в «подвале»</span>
+git checkout master <span class="pl-c"># возвращаемся к ветке master</span>
+git checkout -b footer_hotfix <span class="pl-c"># создаём ветку (основанную на master) для решения проблемы</span>
+subl inc/footer.html <span class="pl-c"># устраняем баг и сохраняем разметку «подвала»</span>
+git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Исправление контакта в подвале<span class="pl-pds">"</span></span> <span class="pl-c"># делаем коммит</span>
+git checkout master <span class="pl-c"># переключаемся в ветку master</span>
+git merge footer_hotfix <span class="pl-c"># вливаем в master изменения из ветки footer_hotfix</span>
+git branch -d footer_hotfix <span class="pl-c"># удаляем ветку footer_hotfix</span>
+git checkout new_page_header <span class="pl-c"># переключаемся в ветку new_page_header для продолжения работ над «шапкой»</span>
+subl inc/header.html <span class="pl-c"># редактируем и сохраняем разметку «шапки»</span>
+git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Новая шапка: смена навигации<span class="pl-pds">"</span></span> <span class="pl-c"># делаем коммит (работа над «шапкой» завершена)</span>
+git checkout master <span class="pl-c"># переключаемся в ветку master</span>
+git merge new_page_header <span class="pl-c"># вливаем в master изменения из ветки new_page_header</span>
+git branch -d new_page_header <span class="pl-c"># удаляем ветку new_page_header</span></pre></div>
+
+<h3><a id="user-content-Работа-с-ветками-конфликт-слияния" class="anchor" href="#Работа-с-ветками-конфликт-слияния" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Работа с ветками, конфликт слияния</h3>
+
+<p>Есть master (публичная версия сайта), в двух параллельных ветках (branch_1 и branch_2) было отредактировано одно и то же место одного и того же файла, первую ветку (branch_1) влили в master, попытка влить вторую вызывает конфликт.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+git checkout master <span class="pl-c"># переключаемся на ветку master</span>
+git checkout -b branch_1 <span class="pl-c"># создаём ветку branch_1, основанную на ветке master</span>
+subl <span class="pl-c1">.</span> <span class="pl-c"># редактируем и сохраняем файлы</span>
+git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Правка 1<span class="pl-pds">"</span></span> <span class="pl-c"># коммитим (теперь имеем 1 коммит в ветке branch_1)</span>
+git checkout master <span class="pl-c"># возвращаемся к ветке master</span>
+git checkout -b branch_2 <span class="pl-c"># создаём ветку branch_2, основанную на ветке master</span>
+subl <span class="pl-c1">.</span> <span class="pl-c"># редактируем и сохраняем файлы</span>
+git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Правка 2<span class="pl-pds">"</span></span> <span class="pl-c"># коммитим (теперь имеем 1 коммит в ветке branch_2)</span>
+git checkout master <span class="pl-c"># возвращаемся к ветке master</span>
+git merge branch_1 <span class="pl-c"># вливаем изменения из ветки branch_1 в текущую ветку (master), удача (автослияние)</span>
+git merge branch_2 <span class="pl-c">#  вливаем изменения из ветки branch_2 в текущую ветку (master), КОНФЛИКТ автослияния</span>
+<span class="pl-c"># Automatic merge failed; fix conflicts and then commit the result.</span>
+subl <span class="pl-c1">.</span> <span class="pl-c"># выбираем в конфликтных файлах те участки, которые нужно оставить, сохраняем</span>
+git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Устранение конфликта<span class="pl-pds">"</span></span> <span class="pl-c"># коммитим результат устранения конфликта</span></pre></div>
+
+<h3><a id="user-content-Синхронизация-репозитория-форка-с-мастер-репозиторием" class="anchor" href="#Синхронизация-репозитория-форка-с-мастер-репозиторием" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Синхронизация репозитория-форка с мастер-репозиторием</h3>
+
+<p>Есть некий репозиторий на github.com, он него нами был сделан форк, добавлены какие-то изменения. Оригинальный (мастер-) репозиторий был как-то обновлён. Задача: стянуть с мастер-репозитория изменения (которые там внесены уже после того, как мы его форкнули).</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+git remote add upstream git@github.com:address.git <span class="pl-c"># добавляем удаленный репозиторий: сокр. имя — upstream, URL мастер-репозитория</span>
+git fetch upstream <span class="pl-c"># качаем все ветки мастер-репозитория, но пока не сливаем со своими</span>
+git checkout master <span class="pl-c"># переключаемся на ветку master своего репозитория</span>
+git merge upstream/master <span class="pl-c"># вливаем ветку master удалённого репозитория upstream в свою ветку master</span></pre></div>
+
+<h3><a id="user-content-Ошибка-в-работе-закоммитили-в-мастер-но-поняли-что-нужно-было-коммитить-в-новую-ветку-ВАЖНО-это-сработает-только-если-коммит-еще-не-отправлен-в-удалённый-репозиторий" class="anchor" href="#Ошибка-в-работе-закоммитили-в-мастер-но-поняли-что-нужно-было-коммитить-в-новую-ветку-ВАЖНО-это-сработает-только-если-коммит-еще-не-отправлен-в-удалённый-репозиторий" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ошибка в работе: закоммитили в мастер, но поняли, что нужно было коммитить в новую ветку (ВАЖНО: это сработает только если коммит еще не отправлен в удалённый репозиторий)</h3>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+<span class="pl-c"># сделали изменения, проиндексировали их, закоммитили в master, но ЕЩЁ НЕ ОТПРАВИЛИ (не делали git push)</span>
+git checkout -b new-branch <span class="pl-c"># создаём новую вертку из master</span>
+git checkout master <span class="pl-c"># переключаемся на master</span>
+git reset HEAD~ --hard <span class="pl-c"># жОско сбрасываем состояние master</span>
+git checkout new-branch <span class="pl-c"># переключаемся обратно на новую ветку</span></pre></div>
+
+<h3><a id="user-content-При-любом-действии-с-github-или-другим-удалённым-сервисом-запрашивается-логинпароль" class="anchor" href="#При-любом-действии-с-github-или-другим-удалённым-сервисом-запрашивается-логинпароль" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>При любом действии с github (или другим удалённым сервисом) запрашивается логин/пароль</h3>
+
+<p>Речь именно о запросе пароля, а не ключевой фразы.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># указана последовательность действий:</span>
+git remote -v <span class="pl-c"># показать список удалённых репозиториев с адресами (у проблемного будет адрес по https), предположим, это origin</span>
+git remote add origin git@github.com:address.git <span class="pl-c"># добавляем удаленный репозиторий, сокр. имя — origin</span>
+<span class="pl-c"># если возникает ошибка добавления с сообщением о том, что origin «уже задан», то: </span>
+git remote rm origin <span class="pl-c"># удаляем привязанный удалённый репозиторий</span>
+git remote add origin git@github.com:address.git <span class="pl-c"># добавляем удаленный репозиторий, сокр. имя — origin</span></pre></div>
+</article>
+        
+        
+        
+        
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

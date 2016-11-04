@@ -1,0 +1,228 @@
+
+.user-block {float: right;}
+.user-block a {
+    display: block;
+    padding: 25px 0px;
+    padding-left: 45px;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    background-image: url(../img/ico-enter.png);
+    background-repeat: no-repeat;
+    background-position: 10px 28px;
+    opacity: .5;
+} 
+.user-block a:hover {
+    background-color: #111;
+    opacity: 1;
+}
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    height: 43px;
+    margin: 0;
+    margin-top: 13px;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+}
+input[type="submit"]:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+}
+.main-footer {
+    background-image: url(../img/texture2.jpg);
+    height: 190px;
+    text-align: center
+}
+.main-footer .contacts {
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 56px;
+}
+.main-footer .social {
+    display: inline-block;
+    margin-top: 43px;
+    position: relative;
+    right: 51px;
+}
+.main-footer .design {
+    float: right;
+}
+.social .social-link {
+    display: block;
+    float: left;
+    height: 43px;
+    width: 43px;
+    background-color: #000;
+    margin-top: -10px;
+    margin-right: 6px;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+} 
+.social .social-link:last-child {margin-right: 0;}
+.social-link.vk {
+   background-position: 15px 10px; 
+}
+.social-link.fb {
+   background-position: -43px 10px; 
+}
+.social-link.ins {
+   background-position: -112px 10px; 
+}
+.social .social-link:hover {
+    background-image: url(../img/sprite2.png);
+    background-color: #fff;
+}
+.main-footer .design {
+    margin-top: 43px;
+}
+.design .design-link {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    margin-top: -10px;
+    width: 140px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+/*модальное окно перед </body>*/
+.modal-window {
+    position: absolute;
+    content: "";
+    display: none;     /*JS onClick*/
+    width: 300px;
+    height: 315px;
+    padding: 50px 80px;
+    padding-bottom: 60px;
+    background: #fff url(../img/texture1.jpg);
+    color: #000;
+    top: 120px;
+    left: 50%;
+    margin-left: -230px;
+    font-size: 14px;
+    line-height: 24px;
+    border: 3px solid black;
+}
+.modal-window-show {
+    display: block;     /*JS onClick*/
+}
+
+.modal-window h2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 42px;
+    margin-top: -6px;
+    margin-bottom: 17px;
+}
+.pw-lost {
+    margin-bottom: 28px;
+    color: inherit;
+    text-decoration: none;
+}
+.modal-window form {padding-top: 27px;}
+.modal-window input[type="text"], .modal-window input[type="password"] {
+    display: block;
+    padding: 10px;
+    padding-right: 42px;
+    margin-bottom: 9px;
+    width: 245px;
+    border: 2px solid #000;
+    outline: none;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+        -ms-box-shadow: none;
+         -o-box-shadow: none;
+            box-shadow: none;
+}
+input[type="text"].icon-login {
+    background: #fff url(../img/icon-login.png) no-repeat
+    right;
+}
+input[type="password"].icon-pw {
+    background: #fff url(../img/icon-pw.png) no-repeat
+    96%;
+}
+.modal-window fieldset {
+    border: none;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+.pw-lost2 {
+    display: block;
+    float: right;
+    color: inherit;
+    text-decoration-color: #7d7c7a;
+}
+.modal-window input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-weight: inherit;
+    color: #fff;
+    width: 100%;
+    border: none;
+}
+.modal-window input[type="submit"]:hover {
+    color: #000;
+}
+.modal-window .close {
+    position: absolute;
+    top: 60px;
+    right: -70px;
+    height: 21px;
+    width: 21px;
+    background: #000 url(../img/icon-close.png) no-repeat;
+    cursor: pointer;
+}
+/*Стилизация checkbox*/
+/*    1. Убираем системный чекбокс    */
+.modal-window input[type="checkbox"] {
+    display: none;
+}
+/*    2. Стилизуем лейбл    */
+.modal-window input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 32px;
+}
+/*    3. Лейбл при наведении    */
+.modal-window input[type="checkbox"] + label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*    4. Рамочка для кастомного чекбокса на поз. псевдоэлементе    */
+.modal-window input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000;
+    left: -2px;
+}
+/*    5. Чекбокс появляется, если лейбл отмечен    */
+.modal-window input[type="checkbox"]:checked + label::before {
+    background: url(../img/icon-checkbox.png) no-repeat 50%;
+}
+
+/*Если лейбл в макете будет стоять в другом месте не рядом с инпутом, то можно связать лейбл с полем
+через селектор ~ и атрибут for у лейбла, который связывает элементы на любом уровне, и в таком случае 
+селекторы бы выглфдели так:
+    1 .modal-window input[type="checkbox"] {...}
+    2 .modal-window input[type="checkbox"] ~ label[for="remember-me-id"] {...}
+    3 .modal-window input[type="checkbox"] ~ label[for="remember-me-id"]:hover {...}
+    4 .modal-window input[type="checkbox"] ~ label[for="remember-me-id"]::before {...}
+    5 .modal-window input[type="checkbox"]:checked + label[for="remember-me-id"]::before {...}
+*/
+

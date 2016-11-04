@@ -1,0 +1,441 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | JS | Массивы</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a class="active" href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+            <li>
+                <a href="#">Основы</a>
+                <ul class="sub-menu sub-menu8">
+                    <li><a href="js-lang.html">Язык JS</a></li>
+                    <li><a href="load.html">Загрузка</a></li>
+			        <li><a href="types.html">Типы данных</a></li>
+			        <li><a href="var.html">Переменные</a></li>
+			        <li><a href="operators.html">Операторы</a></li>
+			        
+			        <li><a href="algorythm.html">Алгоритмы</a></li>
+			        <li><a href="if-else.html">if - else, switch-case</a></li>
+			        <li><a href="cycle.html">Циклы</a></li>
+                    <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a class="active" href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+			<li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS & HTML</a>
+                <ul class="sub-menu sub-menu6">
+                    <li><a href="complete.html">Вывод данных</a></li>
+			        <li><a href="dom.html">DOM</a></li>
+			        <li><a href="html-methods.html">Методы</a></li>
+			        <li><a href="actions.html">События</a></li>
+			        <li><a href="modal-window.html">Мод. окно</a></li>
+			        <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+			
+			<li>
+			    <a href="#">jQuery</a>
+			    <ul class="sub-menu sub-menu7">
+			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
+			        <li><a href="jquery-func.html">jQuery-функции</a></li>
+                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
+                </ul>
+			 </li>
+			 <li><a href="ajax.html">Ajax</a></li>
+			 <li><a href="canvas.html">Canvas</a></li>
+			<li><a href="git.html">Git</a></li>
+			<li><a href="console.html">Консоль</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | JavaScript | Массивы</h2>
+    
+    <table class="discription-table" border-spacing: 5px;>
+        <tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Вызов массива</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Когда большое количество данных, вместо большого количества переменных удобнее создавать массивы
+			</td>
+			<td style="width: 500px;">
+				<code>
+				var array = [0, 1, 2, 3];<br>
+				<span class="gray">//создали массив с 4-мя значениями</span>
+				<hr>
+				<span class="gray">//форма записи строчного массива</span><br>
+				var array = [<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">'Mersedes',<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;'BMW',<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;'Audi',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;'Porshe'</span><br>
+				]<br>
+				alert(array);<span class="gray">//покажет все элементы в массиве</span><br>
+				
+				var arr = [];<span class="gray">//пустой массив</span>
+				
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Массив вызывается также как и переменные, ключевым словом <code>var</code>. Значения массива записываются в [ ] через запятую. Массивы по типу объекты, поэтому синтаксис в добавлении\удалении элементов через точку.
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			 Также можно создавать массивы с помощью функции <code>new Array</code>
+			</td>
+			<td style="width: 500px;">
+				<code>
+                    var myArr = <span class="red">new Array</span>(1,2,3);<br>
+				console.log(myArr); <span class="gray">//[1, 2, 3]</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			 Проверка на массив
+			</td>
+			<td style="width: 500px;">
+				<code>
+                var <span class="red">a</span> = [ ];<br>
+                Array.isArray(<span class="red">a</span>); <span class="gray">// true</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Индексы значений массива</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     У каждого элемента массива есть свой индекс, индексируются элементы с 0
+			</td>
+			<td style="width: 400px;">
+				<code>
+				var array = [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'Mersedes', <span class="gray">//0-й индекс</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;'BMW', &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">//1-й индекс</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;'Audi', &nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">//2-й индекс</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;'Porshe' &nbsp;&nbsp;&nbsp;<span class="gray">//3-й индекс</span><br>
+				]
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Можно изменять значения в массиве по индексу:<br>
+                <code>
+                    array[0] = 'Bugatti';<br>
+                    array[1] = 'Alfa Romeo';<br>
+                    array[2] = 'Lamborghini';<br>
+                    array[3] = 'Ferrari';<br>
+                </code>
+                или добалять новые:<br>
+                <code>
+                    array[4] = 'Maserati';
+                </code><br>
+                Индексы не обязательно могут идти друг за другом, могут быть незаполненные ([0], [1], [3], [10])
+			</td>
+		</tr>
+		
+        <tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">length</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Можно узнать о количестве элементов в массиве
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    console.log(array<span class="red">.length,</span>);	<span class="gray">//4</span>
+				</code>
+				<hr>
+				<code>
+                    console.log(array[array<span class="red">.length-1</span>]);  <span class="gray">//покажет значение последнего элемента в массиве</span>
+				</code>
+				<hr>
+				<code>
+				    array[array.length] = 'Fiat';  <span class="gray">//аналог aray[4] = 'Fiat'; добавит новый элемент в конец массива</span>
+                    
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                <code>length</code> всегда содержит число элементов в массиве<br>
+                С помощью <code>length</code> можно добавлять новый элемент в массив, т.к. общее число элементов в массиве всегда равно по индексу следующему новому элементу массива.<hr>
+                На самом деле свойство <code>length</code> показывает не число элементов в массиве, а индекс последнего элемента + 1
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">push</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Добавляет элементы в КОНЕЦ массива
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    array<span class="red">.push</span>('De Tomaso', 'IVECO', 'Lancia');
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Добавяться 3 новых элемента в КОНЕЦ массива <code>array</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">unshift</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Добавляет элементы в НАЧАЛО массива
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    array<span class="red">.unshift</span>('De Tomaso', 'IVECO', 'Lancia');
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Добавяться 3 новых элемента в НАЧАЛО массива <code>array</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">pop</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Удаляет элементы с КОНЦА массива
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    array<span class="red">.pop()</span>;
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Удаляет последний элемент из массива <code>array</code><br>
+                Можно присваивать значение переменной удалёный элемент массива
+                <code>var removeItem = array<span class="red">.pop()</span>;</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">shift</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Удаляет элементы с НАЧАЛА массива
+			</td>
+			<td style="width: 400px;">
+				<code>
+                  array<span class="red">.shift()</span>;
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Удаляет ПЕРВЫЙ элемент из массива <code>array</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">join</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Объединяет все элементы массива в одну строку
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    array<span class="red">.join()</span>;
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Можно вставлять в ('*') любые разделяющие символы
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">sort</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Cортирует элементы массива
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    array<span class="red">.sort()</span>;
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">reverse</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Меняет порядок элемента массива на реверсивный
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    array<span class="red">.reverse()</span>;
+				</code>
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">concat</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Объединяет массивы
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    var myArr1 = [1, 2, 3, 4];<br>
+                    var myArr2 = [5, 6, 7, 8];<br>
+                    console.log(myArr1<span class="red">.concat(myArr2)</span>);<br>
+                    <span class="gray">// [1, 2, 3, 4, 5, 6, 7, 8]</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Метод склеит два массива в один, сохраняя порядок, не меняет исходный массив
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">slice</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Вытаскивает элементы из массива
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    var myArr = [1, 2, 3, 4];<br>
+                    console.log(myArr<span class="red">.slice(-2)</span>);<br>
+                    <span class="gray">// [3, 4]</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+               Вытащит 2 последних элемента из массива, не меняет исходный массив
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">splice</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			     Удаляет и заменяет элементы в массив, возвращает удалённые элементы
+			</td>
+			<td style="width: 400px;">
+				<code>
+                    var myArr = [1, 2, 3, 4];<br>
+                    console.log(myArr<span class="red">.splice(1, 1, 123)</span>);<br>
+                    <span class="gray">// [2]</span><br>
+                    console.log(myArr);<br>
+                    <span class="gray">// [1, 123, 3, 4]</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+               1 аргумент - индекс элементов, с которых нужно начать удаление,<br> 2 - сколько элементов нужно удалить,<br> 3 и последующие - элементы, которые нужно вставить на место удалённых
+			</td>
+		</tr>
+   
+    </table>
+    
+    <table class="discription-table" border-spacing: 5px;>
+        <tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Многомерные массивы</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Многомерные массивы - массивы, вложенные друг в друга
+			</td>
+			<td style="width: 500px;">
+				<code>
+                        var arr1 = [1, 2, 3],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;arr2 = [4, 5, 6],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;arr3 = [7, 8, 9];<br>
+                        var bigArr = [arr1, arr2, arr3];<br>
+                        <span class="gray">// создали двумерный массив bigArr</span>
+            
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+
+			</td>
+		</tr>
+   
+   		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Просмотр значений в многомерном массиве
+			</td>
+			<td style="width: 500px;">
+				<code>
+                    console.log(bigArr[2] [0]); <span class="gray">// 7</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Указываем несколько индексов друг за другом, в данном случае первый элемент третьего массива
+			</td>
+		</tr>
+    </table>
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

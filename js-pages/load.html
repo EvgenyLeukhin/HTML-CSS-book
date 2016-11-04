@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | JS | Загрузка</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a class="active" href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+            <li>
+                <a class="active" href="#">Основы</a>
+                <ul class="sub-menu sub-menu8">
+                    <li><a href="js-lang.html">Язык JS</a></li>
+                    <li><a href="load.html">Загрузка</a></li>
+			        <li><a href="types.html">Типы данных</a></li>
+			        <li><a href="var.html">Переменные</a></li>
+			        <li><a href="operators.html">Операторы</a></li>
+			        
+			        <li><a href="algorythm.html">Алгоритмы</a></li>
+			        <li><a href="if-else.html">if - else, switch-case</a></li>
+			        <li><a href="cycle.html">Циклы</a></li>
+                    <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+			<li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS & HTML</a>
+                <ul class="sub-menu sub-menu6">
+                    <li><a href="complete.html">Вывод данных</a></li>
+			        <li><a href="dom.html">DOM</a></li>
+			        <li><a href="html-methods.html">Методы</a></li>
+			        <li><a href="actions.html">События</a></li>
+			        <li><a href="modal-window.html">Мод. окно</a></li>
+			        <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+			
+			<li>
+			    <a href="#">jQuery</a>
+			    <ul class="sub-menu sub-menu7">
+			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
+			        <li><a href="jquery-func.html">jQuery-функции</a></li>
+                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
+                </ul>
+			 </li>
+			 <li><a href="ajax.html">Ajax</a></li>
+			 <li><a href="canvas.html">Canvas</a></li>
+			 <li><a href="git.html">Git</a></li>
+			 <li><a href="console.html">Консоль</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	    <h2>Мой справочник | JavaScript | Загрузка</h2>
+        
+        <table class="discription-table" border-spacing: 5px;>
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">&lt;script&gt;</th>
+            </tr>
+            <tr>
+                <td style="color: black; font-weight: bold; width: 300px;">
+                    Загрузка скриптов
+                </td>
+                <td style="width: 400px;">
+                    <code><pre>
+<span class="gray">/*код внутри тега &lt;script&gt;*/</span>
+&lt;script&gt;
+    ...
+&lt;/script&gt;<hr>
+<span class="gray">//внешний файл</span>
+&lt;script <span class="red">src="main.js"</span>&gt;&lt;/script&gt;    
+<span class="gray">//Если записан код внутри тега &lt;script&gt; 
+с атрибутом src, то код будет проигнорирован</span></pre></code>
+                </td>
+                <td style="width: 300px; color: #555;">
+                    Скрипты-библиотеки нужно подключать внутри &lt;head&gt;, а остальные перед 
+                    &lt;/body&gt;, чтобы скрипты начали работать только после полной загрузки страницы
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">async, defer</th>
+            </tr>
+            <tr>
+                <td rowspan="2" style="color: black; font-weight: bold; width: 300px;">
+                  async (Асинхроная загрузка)
+                </td>
+                <td style="width: 400px;">
+                    <code><pre>
+&lt;script <span class="red">async="true"</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;</pre></code>
+                </td>
+                <td style="width: 300px; color: #555;">
+Скрипт не дожидается загрузки страницы, загружается параллельно с ней и выполняется после загрузки.
+Загрузка скрипта никак не будет влиять на отрисовку страницы, html-код блокироваться не будет.
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400px;">
+                    <code><pre>
+&lt;script <span class="red">async="true"</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;
+&lt;script <span class="red">async="true"</span> src="<span class="gray">forms.js</span>"&gt;&lt;/script&gt;              
+&lt;script <span class="red">async="true"</span> src="<span class="gray">gallery.js</span>"&gt;&lt;/script&gt;</pre></code>
+                </td>
+                <td style="width: 300px; color: #555;">
+Если скриптов с <span class="red">async</span> несколько, то порядок их загрузки может не совпать с порядком 
+коде (какой скрипт быстрее загрузится - тот и будет выполнен первым)
+                </td>
+            </tr>
+            
+            <tr>
+                <td  rowspan="2" style="color: black; font-weight: bold; width: 300px;">
+                  defer (После загрузки страницы)
+                </td>
+                <td style="width: 400px;">
+                    <code><pre>
+&lt;script <span class="red">defer</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;</pre></code>
+                </td>
+                <td style="width: 300px; color: #555;">
+ Скрипт выполнется при условии полной загрузки страницы, даже если стоит в коде посередине
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 400px;">
+                    <code><pre>
+&lt;script <span class="red">defer</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;
+&lt;script <span class="red">defer</span> src="<span class="gray">forms.js</span>"&gt;&lt;/script&gt;              
+&lt;script <span class="red">defer</span> src="<span class="gray">gallery.js</span>"&gt;&lt;/script&gt;</pre></code>
+                </td>
+                <td style="width: 300px; color: #555;">
+Если скриптов с <span class="red">defer</span> несколько, то порядок их выполнения БУДЕТ СОВПАДАТЬ с порядком 
+в коде (пока не выполнился первый, второй будет ждать, даже если загрузился раньше)
+                </td>
+            </tr>
+            
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">&lt;noscript&gt;</th>
+            </tr>
+            <tr>
+                <td style="color: black; font-weight: bold; width: 300px;">
+<p style="text-align: justify; line-height: 1.3em;">Этот тег применяют на случай, когда язык JS по каким-либо причинам не работает на странице и основные скрипты
+не работают. Чаще всего внутрь этого тега помещают <code style="line-height: inherit;">&lt;link&gt;</code> со стилями скрывающими интерактивность,
+чтобы у посетителей без JS не отображались на странице неработающие кнопки, галлереи и т.д.</p></td>
+                
+                <td style="width: 400px;">
+                    <code><pre>
+&lt;noscript>
+    &lt;link rel="stylesheet" 
+          type="text/css" 
+          href="css/<span class="red">noscript.css</span>"> 
+&lt;/noscript></pre></code>  
+                </td>
+                <td style="width: 300px; color: #555;">
+                    Если теги <code>&lt;script></code> не работают, то запускается код внутри <code>&lt;noscript></code>
+                    и стили переопределяются. Для любого сайта нужно это прорабатывать (Прогрессивное улучшение).
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="color: black; font-weight: bold; width: 300px;">
+                    Можно обойтись и без тегов <code>&lt;noscript></code> написав js-код, который будет менять класс 
+                    у тега <code>&lt;html></code>
+                </td>
+                
+                <td style="width: 400px;">
+                    <code><pre>&lt;html class="<span class="red">no-js</span>"><hr>
+var html = document.documentElement;
+html.ClassName = html.ClassName.replace("<span class="red">no-js</span>","<span class="red">js</span>");</pre></code>  
+                </td>
+                <td style="width: 300px; color: #555;">
+                    Этот код будет менять класс у тега <code>&lt;html></code>, если JS работает, если JS не работает,
+                    то вся интеративность будет скрыта в классе <span class="red">.no-script</span><br>
+<code><pre><span class="red">.no-js</span> button {display: none;}
+<span class="red">.js</span> button {display: block;}</pre></code>
+                </td>
+            </tr>
+        </table>
+        
+        
+        
+        
+        
+        
+        
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

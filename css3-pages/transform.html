@@ -1,0 +1,431 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Трансформации</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+        .sample {transition-duration: 1s;}
+        .col-sample1:hover .sample1 {transform: translateX(100px);}
+        .col-sample2:hover .sample2 {transform: translateY(50px);}
+        .col-sample3:hover .sample3 {transform: translate(100px, 50px);}
+        .col-sample4:hover .sample4 {transform: scaleX(2);}
+        .col-sample5:hover .sample5 {transform: scaleY(2);}
+        .col-sample5-2:hover .sample5-2 {transform: scale(2);}
+        .col-sample5-3:hover .sample5-3 {transform: scaleX(-1);}
+        .col-sample5-4:hover .sample5-4 {transform: scaleY(-1);}
+        .col-sample5-5:hover .sample5-5 {transform: scale(-1);}
+        .col-sample6:hover .sample6 {transform: rotate(45deg);}
+        .col-sample7:hover .sample7 {transform: rotate(-45deg);}
+        .col-sample8:hover .sample8 {transform: skewX(45deg);}
+        .col-sample9:hover .sample9 {transform: skewY(45deg);}
+        .col-sample10:hover .sample10 {transform: skew(45deg, 45deg);}
+        .col-sample11:hover .sample11 {transform: rotate(135deg) scale(1.5);}
+        .col-sample12:hover .sample12 {
+            transform: scale(0.2);
+            transform-origin: 0% 0%;
+        }
+        .col-sample13:hover .sample13 {
+            transform: scale(0.2);
+            transform-origin: 100% 100%;
+        }
+        .col-sample14:hover .sample14 {
+            transform: scale(0.2);
+            transform-origin: 0% 100%;
+        }
+        .col-sample15:hover .sample15 {
+            transform: scale(0.2);
+            transform-origin: 50% 50%;
+        }
+        .col-sample16:hover .sample16 {
+            transform: scale(0.2);
+            transform-origin: right center;
+        }
+        .col-sample17:hover .sample17 {
+            transform: rotate(360deg);    
+            transform-origin: right bottom;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+                        </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a class="active" href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                    <a href="#">Слайдер</a>
+				    <ul class="sub-menu sub-menu3">
+				        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				    </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Трансформации</h2>
+	
+    <table class="css3-table">
+        <tr>
+            <th class="css3-table-title" colspan="3">transform</th>
+        </tr>
+        <tr>
+            <td class="col1">
+        <b>Трансформация</b><br>
+        
+            </td>
+            <td class="col2"><code><pre>
+Синтаксис:
+<b>transform:</b> вид_трансформации(значение);        
+            </pre></code></td>
+            <td class="col3">Примеры будут работать при <b>НАВЕДЕНИИ КУРСОРА</b> мыши на ячейку таблицы</td>
+        </tr>
+        <tr>
+            <th class="css3-table-title" colspan="3">transition-duration</th>
+        </tr>
+        <tr>
+            <td class="col1">
+                <b><mark>ДЛИТЕЛЬНОСТЬ трансформации</mark></b>
+            </td>
+            <td class="col2"><code><pre>
+<b>transition-duration: </b> 1s;         
+            </pre></code></td>
+            <td class="col3 col-sample1">
+                 Длительность трансформации 1 секунда. Будет во всех примерах
+            </td>
+        </tr>
+        
+        <tr>
+            <th class="css3-table-title" colspan="3">translateX, translateY, translate</th>
+        </tr>
+        <tr>
+            <td class="col1" rowspan="3">
+                <b><mark>ПЕРЕМЕЩЕНИЕ</mark></b>
+            </td>
+            <td class="col2"><code><pre>
+<b>transform:</b> translateX(100px);         
+            </pre></code></td>
+            <td class="col3 col-sample1">
+                 Перемещение по оси X на 100px: <br>
+                 <div class="sample sample1">Text</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col2"><code><pre>        
+<b>transform:</b> translateY(50px);      
+            </pre></code></td>
+            <td class="col3 col-sample2">
+                 Перемещение по оси Y на 50px: <br>
+                 <div class="sample sample2">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> translate(100px, 50px);   
+            </pre></code></td>
+            <td class="col3 col-sample3">
+                 Перемещение по оси X на 100px, по Y на 50px: <br>
+                 <div class="sample sample3">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <th class="css3-table-title" colspan="3">scaleX, scaleY, scale</th>
+        </tr>
+        <tr>
+            <td class="col1" rowspan="6">
+                <b><mark>ИЗМЕНЕНИЕ РАЗМЕРА</mark></b>
+            </td>
+            <td class="col2"><code><pre>  
+<b>transform:</b> scaleX(2);   
+            </pre></code></td>
+            <td class="col3 col-sample4">
+                 Уменьшение в 2 раза по oX<br>
+                 <div class="sample sample4">Text</div>
+            </td>
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> scaleY(2);   
+            </pre></code></td>
+            <td class="col3 col-sample5">
+                 Увлеличение в 2 раза по oY<br>
+                 <div class="sample sample5">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> scale(2);   
+            </pre></code></td>
+            <td class="col3 col-sample5-2">
+                 Увлеличение в 2 раза<br>
+                 <div class="sample sample5-2">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> scaleX(-1);   
+            </pre></code></td>
+            <td class="col3 col-sample5-3">
+                 Получается перевёрнутый вид по oX<br>
+                 <div class="sample sample5-3">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> scaleY(-1);   
+            </pre></code></td>
+            <td class="col3 col-sample5-4">
+                 Получается перевёрнутый вид по oY<br>
+                 <div class="sample sample5-4">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> scale(-1);   
+            </pre></code></td>
+            <td class="col3 col-sample5-5">
+                 Получается перевёрнутый вид<br>
+                 <div class="sample sample5-5">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <th class="css3-table-title" colspan="3">rotate</th>
+        </tr>
+            
+        <tr>
+            <td class="col1" rowspan="2">
+                <b><mark>ПОВОРОТ</mark></b>
+            </td>
+            <td class="col2"><code><pre>  
+<b>transform:</b> rotate(45deg);   
+            </pre></code></td>
+            <td class="col3 col-sample6">
+                 Поворот на 45 градусов по часовой<br>
+                 <div class="sample sample6">Text</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> rotate(-45deg);   
+            </pre></code></td>
+            <td class="col3 col-sample7">
+                 Поворот на 45 градусов против часовой<br>
+                 <div class="sample sample7">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <th class="css3-table-title" colspan="3">skewX, skewY, skew</th>
+        </tr>
+            
+        <tr>
+            <td class="col1" rowspan="3">
+                <b><mark>УГЛОВОЕ ИСКАЖЕНИЕ</mark></b>
+            </td>
+            <td class="col2"><code><pre>  
+<b>transform:</b> skewX(45deg);   
+            </pre></code></td>
+            <td class="col3 col-sample8">
+                 На 45 градусов по оси x<br>
+                 <div class="sample sample8">Text</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> skewY(45deg);   
+            </pre></code></td>
+            <td class="col3 col-sample9">
+                 На 45 градусов по оси y<br>
+                 <div class="sample sample9">Text</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="col2"><code><pre>  
+<b>transform:</b> skew(45deg, 45deg);   
+            </pre></code></td>
+            <td class="col3 col-sample10">
+                 На 45 градусов по оси x и y, при этом объект исчезает<br>
+                 <div class="sample sample10">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <th class="css3-table-title" colspan="3">Множественная трансформация</th>
+        </tr>
+        <tr>
+            <td class="col1">
+                <b>Множественная трансформация</b>, записываются через пробел
+            </td>
+            <td class="col2"><code><pre>  
+<b>transform:</b> rotate(135deg) scale(1.5);   
+            </pre></code></td>
+            <td class="col3 col-sample11">
+                 <div class="sample sample11">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <th class="css3-table-title" colspan="3">transform-origin</th>
+        </tr>
+        
+        
+        
+        <tr>
+            <td class="col1" rowspan="6">
+                <b>Положение элемента после трансформации</b>, задаёт, где будет располагаться объект 
+                после трансформации относительно своего исходного положения, также это выбор оси 
+                вращения для <b>rotate</b>
+            </td>
+            <td class="col2"><code><pre>  
+transform: scale(0.2);    
+transform-origin: <span class="red">0% 0%</span>;
+            </pre></code></td>
+            <td class="col3 col-sample12">
+                Аналог: top left;
+                 <div class="sample sample12">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+transform: scale(0.2);    
+transform-origin: <span class="red">100% 100%</span>;
+            </pre></code></td>
+            <td class="col3 col-sample13">
+                Аналог: right bottom;
+                 <div class="sample sample13">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+transform: scale(0.2);    
+transform-origin: <span class="red">0% 100%</span>;
+            </pre></code></td>
+            <td class="col3 col-sample14">
+                Аналог: left bottom;
+                 <div class="sample sample14">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+transform: scale(0.2);    
+transform-origin: <span class="red">50% 50%</span>;
+            </pre></code></td>
+            <td class="col3 col-sample15">
+                Задано по ум*, аналог: center center;
+                 <div class="sample sample15">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+transform: scale(0.2);    
+transform-origin: <span class="red">right center</span>;
+            </pre></code></td>
+            <td class="col3 col-sample16">
+                 <div class="sample sample16">Text</div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="col2"><code><pre>  
+transform: rotate(360deg);    
+transform-origin: <span class="red">right bottom</span>;
+            </pre></code></td>
+            <td class="col3 col-sample17">
+                 Выбор оси вращения
+                 <div class="sample sample17">Text</div>
+            </td>
+        </tr>
+        
+    </table>
+	
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

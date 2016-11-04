@@ -1,0 +1,191 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | HTML | Изображения</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>figure {border: 3px solid maroon; text-align: center; width: 50%;}</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a class="active" href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+		<li><a href="../html-pages/head.html">Внутри head</a></li>
+		<li><a href="../html-pages/conts.html">Контейнеры</a></li>
+		<li><a href="../html-pages/headers.html">Заголовки</a></li>
+		<li><a href="../html-pages/lists.html">Списки</a></li>
+		<li><a href="../html-pages/tables.html">Таблицы</a></li>
+		<li><a href="../html-pages/text.html">Текст</a></li>
+		<li><a href="../html-pages/links.html">Ссылки</a></li>
+		<li><a href="../html-pages/images.html" class="active">Изображения</a></li>
+		<li><a href="../html-pages/forms.html">Формы</a></li>
+		<li><a href="../html-pages/simbols.html">Символы</a></li>
+		<li><a href="../html-pages/svg.html">Графика</a></li>
+		<li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+		<li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+		<li><a href="../html-pages/blank.html">Заготовка</a></li>
+	<ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | HTML | Изображения</h2>
+	
+	<table class="discription-table">
+		<caption>Ссылки</caption>
+		<tr>
+			<th>Теги</th>
+			<th>Описание</th>
+			<th>Атрибуты</th>
+			<th>Описание</th>
+		</tr>
+		<tr>
+			<td rowspan="8">&lt;img&gt;</td>
+			<td rowspan="8">Изображение</td>
+			<td>src</td>
+			<td>путь к расположению файла, URL-адрес</td>
+		</tr>
+		<tr>
+			<td>width</td>
+			<td>Ширина отображения в px</td>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td>Высота отображения в px</td>
+		</tr>
+		<tr>
+			<td>alt</td>
+			<td>Альтернативный текст, на случай отсутствия файла</td>
+		</tr>
+		<tr>
+			<td>border</td>
+			<td>Рамка<br>
+			<span class="red">border="5"</span></td>
+		</tr>
+		<tr>
+			<td>sizes</td>
+			<td>Задаёт размеры изображения для разных макетов страницы<br>
+			<span class="red">sizes="(max-width: 600px) 300px, (min-width: 600px) 600px"</span></td>
+		</tr>
+		<tr>
+			<td>srcset</td>
+			<td>Путь к графическим файлам с учётом размера изображения и устройств<br>
+			<span class="red">srcset="image/mushroom_retina.jpg 2x"</span></td>
+		</tr>
+		<tr>
+			<td>align</td>
+			<td>выравнивание<br>
+		</tr>
+		<tr>
+			<td>&lt;picture&gt;</td>
+			<td>
+				Представляет собой контейнер для хранения нескольких элементов &lt;source>, которые поддерживают элемент &lt;img&gt;. 
+				Это позволяет указывать разные изображения с учётом размера экрана, плотности пикселей, формата изображения и 
+				других параметров
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>&lt;source srcset="..."&gt;</td>
+			<td>Путь к SVG-файлу</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>&lt;figure&gt;</td>
+			<td>Контейнер для изображений</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>&lt;figcaption&gt;</td>
+			<td>Подпись для изображения</td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+	</table>
+	<br>
+	<h3>Изображение с относительным источником</h3>
+	<code>
+		&lt;img <span class="red">src="../pict/kitty2.jpg" width="250" alt="Картинка" border="2"</span>&gt;
+	</code>
+	<br>
+	<img src="../pict/kitty2.jpg" width="250" alt="Картинка" border="2"><br>
+	<br><hr>
+	<code>
+		&lt;img <span class="red">src="http://www.playing-field.ru/img/2015/051907/3602026" width="200" alt="Картинка"</span>&gt;
+	</code>
+	<br>
+	<h3>Изображение с абсолютным источником</h3>
+	<img src="http://www.playing-field.ru/img/2015/051907/3602026" width="200" alt="Картинка"><hr>
+	
+	<h3>Вставка векторного изображения с помощью <span class="red">&lt;picture&gt;</span></h3>
+	<code>
+		&lt;picture&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;source <span class="red">srcset="../pict/shoes.svg"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="red">src="../pict/shoes.png" alt="img" height="200"</span>&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">&lt;!--Будет грузиться ../pict/shoes.png, если браузер не поддерживает SVG-формат, <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;height="200" будет работать и для SVG-файла--&gt;</span><br>
+		&lt;/picture&gt;</br>
+	</code>
+	<br>
+	<picture>
+   		<source srcset="../pict/shoes.svg">
+   		<img src="../pict/shoes.png" alt="img" height="200">
+  	</picture> 
+	<hr>
+	<h3>Вставка изображения в контейнере <span class="red">&lt;figure&gt;</span></h3>
+	<code>
+		&lt;figure&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;img <span class="red">src="../pict/guitar.png" width="250" alt="Гитара" border="2"</span>&gt;&lt;/p&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;figurecaption&gt;<span class="gray">Гитара</span>&lt;/figurecaption&gt;<br>
+		&lt;/figure&gt;
+	</code>
+	<figure>
+		<p><img src="../pict/guitar.png" width="250" alt="Гитара"></p>
+		<figurecaption>Гитара</figurecaption>
+	</figure>
+
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

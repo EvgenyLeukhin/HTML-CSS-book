@@ -1,0 +1,344 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | HTML | Текст</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a class="active" href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+        <li><a href="../php-page.html">PHP</a></li>
+        <li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+		<li><a href="../html-pages/head.html">Внутри head</a></li>
+		<li><a href="../html-pages/conts.html">Контейнеры</a></li>
+		<li><a href="../html-pages/headers.html">Заголовки</a></li>
+		<li><a href="../html-pages/lists.html">Списки</a></li>
+		<li><a href="../html-pages/tables.html">Таблицы</a></li>
+		<li><a href="../html-pages/text.html" class="active">Текст</a></li>
+		<li><a href="../html-pages/links.html">Ссылки</a></li>
+		<li><a href="../html-pages/images.html">Изображения</a></li>
+		<li><a href="../html-pages/forms.html">Формы</a></li>
+		<li><a href="../html-pages/simbols.html">Символы</a></li>
+		<li><a href="../html-pages/svg.html">Графика</a></li>
+		<li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+		<li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+		<li><a href="../html-pages/blank.html">Заготовка</a></li>
+	<ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | HTML | Текст</h2>
+	
+	<table class="discription" style="margin-top: -370px;">
+        
+        <tr>        
+            <td colspan="4"><h3>Форматирование текста</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    <span class="gray">Some text</span>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td>Some text</td>
+            <td>Без форматирования,<br>все пробелы считаются за один</td>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;p&gt;<span class="gray">Some&nbsp;text...</span>&lt;/p&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><p>Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text </p></td>
+            <td><span class="red">&lt;p&gt;</span> - параграф, абзац<br>(с верт. отступами)</td><br>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    &lt;b&gt;<span class="gray">Some text</span>&lt;/b&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><b>Some text</b></td>
+            <td><span class="red">&lt;b&gt;</span> - полужирное начертание(bold)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;i&gt;<span class="gray">Some text</span>&lt;/i&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><i>Some text</i></td>
+            <td><span class="red">&lt;i&gt;</span> - курсив(italic)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;u&gt;<span class="gray">Some text</span>&lt;/u&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><u>Some text</u></td>
+            <td><span class="red">&lt;u&gt;</span> - подчёркнутый(underline)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;mark&gt;<span class="gray">Some text</span>&lt;/mark&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><mark>Some text</mark></td>
+            <td><span class="red">&lt;mark&gt;</span> - выделение маркером</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;s&gt;<span class="gray">Some text</span>&lt;/s&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><s>Some text</s></td>
+            <td><span class="red">&lt;s&gt;</span> - зачёркнутый(strike)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;small&gt;<span class="gray">Some text</span>&lt;/small&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><small>Some text</small></td>
+            <td><span class="red">&lt;small&gt;</span> - уменьшенный</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;big&gt;<span class="gray">Some text</span>&lt;/big&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><big>Some text</big></td>
+            <td><span class="red">&lt;big&gt;</span> - увеличенный (УСТАРЕЛ!)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    <span class="gray">Some text</span>&lt;sub&gt;<span class="gray">Some text</span>&lt;/sub&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td>Some text<sub>Some text</sub></td>
+            <td><span class="red">&lt;sub&gt;</span> - нижний индекс</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    <span class="gray">Some text</span>&lt;sup&gt;<span class="gray">Some text</span>&lt;/sup&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td>Some text<sup>Some text</sup></td>
+            <td><span class="red">&lt;sup&gt;</span> - верхний индекс</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;blockquote&gt;<span class="gray">Some&nbsp;text</span>&lt;/blockquote&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><blockquote>Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
+				<blockquote></td>
+            <td><span class="red">&lt;blockquote&gt;</span> - длинная цитата с отступами</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;q&gt;<span class="gray">Some&nbsp;text</span>&lt;/q&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><q>Some text</q></td>
+            <td><span class="red">&lt;q&gt;</span> - короткая цитата в кавычках</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;cite&gt;<span class="gray">Some&nbsp;text</span>&lt;/cite&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><cite>Some text</cite></td>
+            <td><span class="red">&lt;cite&gt;</span> - источник цитаты курсивом<br> <b>ПОИСКОВИКИ ОТСЛЕЖИВАЮТ!</b></td>
+        </tr>
+		
+		<tr>
+            <td>
+                <code>
+                    <span class="gray">Some text</span>&lt;br&gt;<span class="gray">Some text</span><br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td>Some text<br>Some text</td>
+            <td><span class="red">&lt;br&gt;</span> - перенос строки</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    <span class="gray">Some text</span>&lt;hr&gt;<span class="gray">Some text</span><br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td>Some text<hr>Some text</td>
+            <td><span class="red">&lt;hr&gt;</span> - разделитель</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;pre&gt;<span class="gray">S o m e&nbsp;&nbsp;&nbsp;&nbsp;t e x t</span>&lt;/pre&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><pre>S o m e     t  e  x  t</pre></td>
+            <td><span class="red">&lt;pre&gt;</span> - текст отобразиться так, как написано в коде(со всеми пробелами)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;strong&gt;<span class="gray">Some text</span>&lt;/strong&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><strong>Some text</strong></td>
+            <td><span class="red">&lt;strong&gt;</span> - показывает важность выделенного текста(лог. разметка), его значимость (для поисковиков)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;em&gt;<span class="gray">Some text</span>&lt;/em&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><em>Some text</em></td>
+            <td><span class="red">&lt;em&gt;</span> - показывает важность выделенного текста(лог. разметка), его значимость (для поисковиков)</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;adress&gt;<span class="gray">Some text</span>&lt;/adress&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><address>Some text</address></td>
+            <td><span class="red">&lt;address&gt;</span> - показывает информацию об авторе или компании, если элемент применяется на сайте компании. 
+			Информация может включать почтовый адрес, емейл, город, телефон, схему проезда, что-то ещё.</td><br>
+        </tr>
+		<tr>
+            <td>
+                <code>
+                    &lt;code&gt;<span class="gray">Some text</span>&lt;/code&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><code>Some text</code></td>
+            <td><span class="red">&lt;code&gt;</span> - для отображения кода</td><br>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    &lt;details&gt;<span class="gray">Some text</span>&lt;/details&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><details>Свёрнутый текст</details></td>
+            <td>
+                <span class="red">&lt;details&gt;</span> - сворачивает текст, отображая его при нажатии<br>
+                <span class="gray">Атрибут <span class="red">open</span> - разворачивает при загрузке</span><br>
+                <span class="gray">IE и MF не поддерживают!</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    &lt;time&gt;<span class="gray">1961-04-12</span>&lt;/time&gt; <span class="gray">или</span><br>
+                    &lt;time <span class="red">datetime="&lt;1961-04-12&gt;"</span>&gt;&lt;/time&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><details>1961-04-12</details></td>
+            <td>
+                <span class="red">&lt;time&gt;</span> - сворачивает текст, отображая его при нажатии<br>
+                <span class="red">datetime="&lt;1961-04-12&gt;"</span> - для серверных программ (не отображается)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    &lt;kbd&gt;<span class="gray">Ctrl + C</span>&lt;/kbd&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><kbd>Ctrl + C</kbd></td>
+            <td><span class="red">&lt;kdb&gt;</span> - для комбинаций клавиш в тексте</td><br>
+        </tr>
+        <tr>
+            <td>
+                <code>
+                    &lt;abbr&gt;<span class="gray">USSR</span>&lt;/abbr&gt;<br>
+                </code>
+            </td>    
+            <td></td><!--пустая ячейка для отступа-->
+            <td><abbr>USSR</abbr></td>
+            <td><span class="red">&lt;abbr&gt;</span> - для аббривеатур</td><br>
+        </tr>
+	</table>
+	
+	
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

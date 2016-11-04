@@ -1,0 +1,260 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Декор</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    
+<style>    
+/*    Стилизация checkbox   */
+/*    1. Убираем системный чекбокс    */
+.modal-window input[type="checkbox"] {
+    display: none;
+}
+/*    2. Стилизуем лейбл    */
+.modal-window input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 32px;
+}
+/*    3. Лейбл при наведении    */
+.modal-window input[type="checkbox"] + label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*    4. Рамочка для кастомного чекбокса на поз. псевдоэлементе    */
+.modal-window input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000;
+    left: -2px;
+}
+/*    5. Чекбокс появляется, если лейбл отмечен    */
+.modal-window input[type="checkbox"]:checked + label::before {
+    background: url(../img/icon-checkbox.png) no-repeat 50%;
+} 
+    /*    Стилизация radio   */
+/*    1. Убираем системный радио    */
+.modal-window input[type="radio"] {
+    display: none;
+}
+    /*    2. Стилизуем лейбл    */
+.modal-window input[type="radio"] + label {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 35px;
+    margin-right: 10px;
+}
+    /*    3. Лейбл при наведении    */
+.modal-window input[type="radio"] + label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+    /*    4. Рамочка для кастомного радио на поз. псевдоэлементе    */
+.modal-window input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    left: -2px;
+}
+    /*    5. Радио появляется, если лейбл отмечен    */
+.modal-window input[type="radio"]:checked + label::before {
+    background: url(../img/icon-checkbox.png) no-repeat 50%;
+} 
+    
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+        <ul class="vert-menu">
+                <li>
+                <a href="#">Градиент</a>
+				<ul class="sub-menu sub-menu4">
+				    <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				    <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				</ul>
+		    </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+			        <a href="#">Слайдер</a>
+				        <ul class="sub-menu sub-menu3">
+					        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+					        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				        </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a class="active" href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+        </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Декор</h2>
+	
+        <h3>Стилизация чекбоксов и радио-кнопок</h3>
+       <div class="left-column" style="float: left;">
+        <code><pre>
+&lt;<span class="gray">!--1. Связываем чекбокс с лейблом через id--</span>&gt;
+&lt;div class="<span class="red">modal-window</span>"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="remember-me" id="remember-me-id"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="remember-me-id"&gt;<span class="gray">Запомни меня</span>&lt;/label&gt;
+&lt;/div&gt;
+<hr><span class="gray">/*    2. Скрываем системный чекбокс    */</span>
+<span class="red">.modal-window input[type="checkbox"]</span> {
+    display: none;
+}
+<span class="gray">/*    3. Готовим поле для псевдоэлемента лейбла    */</span>
+<span class="red">.modal-window input[type="checkbox"] + label</span> {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 32px;
+}
+<span class="gray">/*    4. Лейбл при наведении    */</span>
+<span class="red">.modal-window input[type="checkbox"] + label:hover</span> {
+    text-decoration: underline;
+    cursor: pointer;
+}
+<span class="gray">/*    5. Стилизуем лейбл под чекбокс на поз. псевдоэлементе    */</span>
+<span class="red">.modal-window input[type="checkbox"] + label::before</span> {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000;
+    left: -2px;
+}
+<span class="gray">/*    6. Крестик появляется, если лейбл отмечен    */</span>
+<span class="red">.modal-window input[type="checkbox"]:checked + label::before</span> {
+    background: url(../img/icon-checkbox.png) no-repeat 50%;
+} 
+        </pre></code>
+        </div>
+        <div class="right-column" style="float: right;">
+           <h3>До стилизации</h3>
+            <div class="modal_window">
+                <input type="checkbox" name="remember_me" id="remember_me-id">
+                <label for="remember_me-id">Запомни меня</label>
+            </div>
+            <hr>
+            <h3>После стилизации</h3>
+            <div class="modal-window">
+                <input type="checkbox" name="remember-me" id="remember-me-id">
+                <label for="remember-me-id">Запомни меня</label>
+            </div>
+            
+            <h3 style="margin-top: 50px;">До стилизации</h3>
+            <div class="modal_window">
+                <input type="radio" name="radio1" id="radio_id1">
+                <label for="radio_id1">Кнопка 1</label>
+                <input type="radio" name="radio1" id="radio_id2">
+                <label for="radio_id2">Кнопка 2</label>
+            </div>
+            <hr>
+            <h3>После стилизации</h3>
+            <div class="modal-window">
+                <input type="radio" name="radio2" id="radio-id">
+                <label for="radio-id">Кнопка 1</label>
+                <input type="radio" name="radio2" id="radio-id2">
+                <label for="radio-id2">Кнопка 2</label>
+            </div>
+            
+            <p>Этот метод имеет один недостаток - в старых браузерах не поддерживается псевдо-класс
+            <code>:checked</code>, поэтому стилизация там невозможна, но <code>dispay: none;</code> поддерживается, в результате 
+            на сайте пропадут все чекбоксы и радиобаттоны. Имеет смысл сделать так, чтобы в старых
+            браузерах они отобразились в стандартном виде, для этого нужно сделать следущее:
+            </p>
+
+        <div class="left-column" style="float: left;">
+            <code>
+            &lt;<span class="gray">!--1. Скрываем чекбоксы с умом, с использованием псевдо-классов :enabled и :disabled. 
+            Эти псевдо-классы также не поддерживаются старыми браузерами, поэтому в старых браузерах они скрываться НЕ будут--</span>&gt;<br>
+            <span class="red">input[type="checkbox"]:enabled, input[type="checkbox"]:disabled</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: none;<br>
+            } 
+            </code>
+        </div>
+        
+        <p>Также можно обойтись без псевдо-элементов слилизовать с помощью span (Базовый интенсив, 8 урок, 51:40)</p>
+    
+        </div>
+        <div style="clear: both;"></div>
+	
+	
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

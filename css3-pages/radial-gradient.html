@@ -1,0 +1,362 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Радиальный градиент</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+        body {
+            background-image:
+        -webkit-linear-gradient(top left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -webkit-linear-gradient(top right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -webkit-linear-gradient(bottom left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -webkit-linear-gradient(bottom right, rgba(101,109,120, 0.1) 25%, transparent 25%);
+            background-image:
+        -o-linear-gradient(top left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -o-linear-gradient(top right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -o-linear-gradient(bottom left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -o-linear-gradient(bottom right, rgba(101,109,120, 0.1) 25%, transparent 25%);
+            background-image:
+        linear-gradient(to bottom right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        linear-gradient(to bottom left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        linear-gradient(to top right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        linear-gradient(to top left, rgba(101,109,120, 0.1) 25%, transparent 25%);;
+            background-position:
+                0px 0px,
+                0px 0px,
+                0px 0px,
+                0px 0px;
+            background-size: 100px 100px;
+            background-repeat: repeat;
+            background-color: rgba(255,255,224, 0.1);	
+            /* background-attachment: fixed; */
+        }
+        
+        .sample {
+            border: none;
+            background-color: none;
+            width: auto;
+        }
+        .sample1 {background-image: radial-gradient(darkgreen, yellow);}
+        
+        .sample4-1 {
+            background-image: radial-gradient(
+                                              black, 
+                                              brown, 
+                                              blue, 
+                                              green, 
+                                              red, 
+                                              yellow, 
+                                              white
+                             );
+        }
+        
+        .sample5-1 {background-image: radial-gradient(green, yellow);}
+        .sample5-2 {background-image: radial-gradient(green 0%, yellow 100%);}
+        .sample5-3 {background-image: radial-gradient(green 30%, yellow 70%);}
+        
+        
+        
+        .sample6-1 {
+            background-image: radial-gradient(
+                                black 0%, black 15%, 
+                                brown 15%, brown 30%,
+                                blue 30%, blue 45%,
+                                green 45%, green 60%,
+                                red 60%, red 75%,
+                                yellow 75%, yellow 90%,
+                                white 90%, white 100%
+                               );
+        }
+        .sample7-1 {
+            background-image: radial-gradient(
+                                      black 0px, black 15px, 
+                                      brown 15px, brown 30px,
+                                      blue 30px, blue 45px,
+                                      green 45px, green 60px,
+                                      red 60px, red 75px,
+                                      yellow 75px, yellow 90px,
+                                      white 90px, white 100px
+                               );
+        }
+        .sample8-1 {
+            background-image: repeating-radial-gradient(
+                                        black 0px, black 15px, 
+                                        brown 15px, brown 30px,
+                                        blue 30px, blue 45px,
+                                        green 45px, green 60px,
+                                        red 60px, red 75px,
+                                        yellow 75px, yellow 90px,
+                                        white 90px, white 100px
+                               );
+        }
+        .sample1-1 { background-image: -moz-radial-gradient(30% 30%, circle, darkgreen 10%, yellow 30%); }
+        .sample1-2 { background-image: -moz-radial-gradient(30% 30%, circle closest-side, darkgreen, yellow); }
+        .sample1-3 { background-image: -moz-radial-gradient(30% 30%, circle closest-corner, darkgreen, yellow); }
+        .sample1-4 { background-image: -moz-radial-gradient(30% 30%, circle farthest-side, darkgreen, yellow); }
+        .sample1-5 { background-image: -moz-radial-gradient(30% 30%, circle farthest-corner, darkgreen, yellow); }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	        <ul class="vert-menu">
+                <li>
+                    <a class="active" href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+                        </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                    <a href="#">Слайдер</a>
+				    <ul class="sub-menu sub-menu3">
+				        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				        <li><a href="../css-pages/slider2.html">Слайдер с прокруткой</a></li>
+				    </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Радиальный градиент</h2>
+	
+	   <table class="css3-table">
+            <tr>
+                <th class="css3-table-title" colspan="3">radial-gradient()</th>
+            </tr>
+            <tr>
+                <td class="col1">
+        <b>Радиальный градиент</b><br>
+        Синтаксис: background-image: radial-gradient(цвет, цвет);<br>
+        Радиальный градиент начинается в центре элемента, считается по ширине и высоте
+                </td>
+                <td class="col2"><code>
+                <b>background-image:</b> <span class="red"><br>
+                radial-gradient</span>(darkgreen, yellow);   
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample1"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Формы радиального градиента</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <b>Формы радиального градиента</b><br><br>
+                    <b>|ellipse|</b> - эллипс (по ум*);<br>
+                    <b>|circle|</b> - круг;<br>
+                    <b>|30% 40%|</b> - координаты центра;<br>
+                    <b>|closest-side|</b> - предписывает браузеру создать градиент, распространяющийся 
+                    из центра только до ближайшей к центру стороне элемента;<br>
+                    <b>|closest-corner|</b> - приводит к вычислению ширины градиента из его центра до ближайшего угла элемента;<br>
+                    <b>|farthest-side|</b> - приводит к вычислению радиуса окружности от ее середины до самой дальней стороны элемента;<br>
+                    <b>|farthest-corner|</b> - приводит к вычислению радиуса окружности от ее центра до самого дальнего угла элемента;<br>
+                    
+                </td>
+                <td class="col2"><code>
+                   -moz-<span class="red">radial-gradient</span>(30% 40%, <b>circle</b>, darkgreen 10%, yellow 30%);<br><br>
+                   -moz-<span class="red">radial-gradient</span>(30% 40%, <b>circle closest-side</b>, darkgreen, yellow);<br><br>
+                   -moz-<span class="red">radial-gradient</span>(30% 40%, <b>circle closest-corner</b>, darkgreen, yellow);<br><br>
+                   -moz-<span class="red">radial-gradient</span>(30% 40%, <b>circle farthest-side</b>, darkgreen, yellow);<br><br>
+                   -moz-<span class="red">radial-gradient</span>(30% 40%, <b>circle farthest-corner</b>, darkgreen, yellow);
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample1-1"></div>
+                    <div class="sample sample1-2"></div>
+                    <div class="sample sample1-3"></div>
+                    <div class="sample sample1-4"></div>
+                    <div class="sample sample1-5"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Многоцветный градиент</b><br>
+                    Цвета перечисляются через запятую
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">radial-gradient</span>(
+        black, 
+        brown, 
+        blue, 
+        green, 
+        red, 
+        yellow, 
+        white
+);</pre>
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample4-1"></div>
+                    По умолчанию все цвета равномерно распределяются по ширине, но этим можно управлять с помощью пропорций цвета
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                <b>Пропорции цветов</b><br>,
+                    % после цвета
+        
+                </td>
+                <td class="col2"><code>
+                <b>background-image:</b> <br>
+                <span class="red">radial-gradient</span>(green, yellow); <hr>
+                <span class="red">radial-gradient</span>(green 0%, yellow 100%); <hr>
+                <span class="red">radial-gradient</span>(green 30%, yellow 70%); 
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample5-1">1</div>
+                    По умолчанию пропорции распределены равномерно, если будут два цвета, то 
+                    у первого будет 0%, у второго 100%, чтобы получился неразрывный градиент<hr>
+                    <div class="sample sample5-2">2</div>
+                    Подтверждение верхнего примера<hr>
+                    <div class="sample sample5-3">3</div>
+                    Здесь на шаге 0-30% ширины займёт зелёный цвет без искажений, а на 70-100%
+                    жёлтый, градиент будет на шаге 30-70%.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Колорстопы</b>
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">radial-gradient</span>(
+        black 0%, black 15%, 
+        brown 15%, brown 30%,
+        blue 30%, blue 45%,
+        green 45%, green 60%,
+        red 60%, red 75%,
+        yellow 75%, yellow 90%,
+        white 90%, white 100%
+);</pre>
+               </code></td>
+                <td class="col3" style="background-color: pink;">
+                    <div class="sample sample6-1"></div>
+                    Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,
+                    то самого градиента не будет, будут только эти цвета в чистом виде 
+                </td>
+            </tr>
+            
+                        <tr>
+                <td class="col1">
+                    <b>Колорстопы в px</b>
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">radial-gradient</span>(
+        black 0px, black 15px, 
+        brown 15px, brown 30px,
+        blue 30px, blue 45px,
+        green 45px, green 60px,
+        red 60px, red 75px,
+        yellow 75px, yellow 90px,
+        white 90px, white 100px
+);</pre>
+               </code></td>
+                <td class="col3" style="background-color: pink;">
+                    <div class="sample sample7-1"></div>
+                    Можно записывать в пикселях, при этом будет фиксированное значение цвета и не будет зависимости 
+                    от ширины блока, когда стоят. <br> Цвет, который был указан последним занимает всё остальное свободное пространство
+                </td>
+            </tr>
+            
+             <tr>
+                <th class="css3-table-title" colspan="3">repeating-radial-gradient()</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <b>Повторяющийся радиальный градиент</b><br>
+                </td>
+                <td class="col2"><code><pre> 
+<span class="red">repeating-radial-gradient</span>(
+        black 0px, black 15px, 
+        brown 15px, brown 30px,
+        blue 30px, blue 45px,
+        green 45px, green 60px,
+        red 60px, red 75px,
+        yellow 75px, yellow 90px,
+        white 90px, white 100px
+);</pre>  
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample8-1"></div>
+                    При повторении градиента обычно задают пиксели для колор-стопов и одинаковые крайние 
+                    цвета, чтобы не было резких переходов
+                 </td>
+            </tr>
+            
+            
+        </table>
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Bootstrap</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                <a href="#">Градиент</a>
+				<ul class="sub-menu sub-menu4">
+				    <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				    <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				</ul>
+		    </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+			            <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+			        <a href="#">Слайдер</a>
+				        <ul class="sub-menu sub-menu3">
+					        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+					        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				        </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a class="active" href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Bootstrap</h2>
+  Ссылки:
+  <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>&nbsp;&nbsp;
+  <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>
+  	
+	<table class="css3-table">
+	  <tr>
+      <th class="css3-table-title" colspan="3">1. Подключение Bootstrap</th>
+    </tr>
+    <tr>
+      <td class="col1">
+<b>HTML-код</b>
+      </td>
+      <td class="col2" style="width: 600px;">
+        <code style="font-size: 15px;"><pre>
+<!DOCTYPE html>
+&lt;html lang="ru">
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></mark>
+    <span class="gray">&lt;!-- The above 3 meta tags *must* come first in the head; any other head 4
+    content must come *after* these tags --></span>
+    &lt;title>Bootstrap 101 Template&lt;/title>
+    <span class="gray">&lt;!-- Bootstrap --></span>
+    <mark>&lt;link href="css/bootstrap.min.css" rel="stylesheet"></mark>
+    <span class="gray">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    &lt;!--[if lt IE 9]>
+      &lt;script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">&lt;/script>
+      &lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">&lt;/script>
+    &lt;![endif]--></span>
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Hello, world!&lt;/h1>
+    
+    <span class="gray">&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --></span>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/<mark>jquery.min.js</mark>">&lt;/script>
+    <span class="gray">&lt;&lt;!-- Include all compiled plugins (below), or include individual files as needed --></span>
+    <mark>&lt;script src="js/bootstrap.min.js">&lt;/script></mark>
+  &lt;/body>
+&lt;/html>
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+
+      </td>
+    </tr>
+  </table><br>
+  <table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">2. Сетки на Bootstrap</th>
+    </tr>
+    <tr>
+      <td class="col1">
+        <b>КОНТЕЙНЕРЫ</b> 
+      </td>
+      <td class="col2" style="width: 800px;">
+        <code>
+          &lt;div class="<span class="red">container</span>"&gt;<br>
+          &nbsp;&nbsp;&lt;div class="<span class="red">row</span>"&gt; <span class="gray">&lt;!--<mark>Имеет 12 колонок</mark>--></span><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-lg-6 col-md-5 col-sm-4 col-xs-3</span>"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-lg-6 col-md-7 col-sm-8 col-xs-9</span>"&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;/div&gt;
+        </code><br>
+        <span style="color: #000">Внутри колонок могут быть еще вложенные дивы с классом <b>row</b></span>
+      </td>
+      <td class="col3" style="width: 400px;">
+        <i><u>В Bootstrap 12-колоночный тип сеток</u></i><br>
+        <span class="red">.container</span> - Общий контейнер<br>
+        <span class="red">.container-fluid</span> - Общий контейнер (Резиновый, 100%)<br>
+        <span class="red">.row</span> - Подконтейнер-строка<br>
+        <span class="red">.col</span> - Подконтейнер-колонка<br>
+      </td>
+    </tr>
+</table>
+<img src="../img/bootstrap.png" alt="bootstrap">
+  <table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">3. Классы колонок</th>
+    </tr>
+    <tr>
+      <td class="col1">
+        <b>Виды классов</b> 
+      </td>
+      <td class="col2" style="width: 800px;">
+        <code>
+&lt;div class="<span class="red">col-lg-6 <mark>col-lg-offset-2</mark></span>"&gt;<br>
+&lt;div class="<span class="red">col-lg-4 <mark>hidden-sm</mark></span>"&gt;<br>
+&lt;div class="<span class="red">col-md-4 hidden-sm <mark>visible-lg</mark></span>"&gt;
+        </code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        <span class="red">col-lg-offset-2</span> - Отступ на 2 колонки от левого края при данной ширине дисплея, по ум* 0 <br>
+        <span class="red">hidden-sm</span> - Колонка станет невидимой при данной ширине дисплея<br>
+        <span class="red">visible-lg</span> - Колонка станет видимой при данной ширине дисплея
+      </td>
+    </tr>
+  </table><br>
+  
+  <table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">4. Навигация</th>
+    </tr>
+    <tr>
+      <td class="col1">
+        <b>Меню</b> 
+      </td>
+      <td class="col2" style="width: 800px;">
+        <code><pre>
+<span class="gray">&lt;!--КОНТЕЙНЕРЫ--></span>
+&lt;div class="<span class="red">container</span>"> 
+  &lt;div class="<span class="red">row</span>">
+    <span class="gray">&lt;!--БЛОК НАВИГАЦИИ (inverse или default)--></span>
+    &lt;div class="<span class="red"><mark>navbar navbar-inverse</mark></span>">
+      <span class="gray">&lt;!--КОНТЕЙНЕР--></span>
+      &lt;div class="<span class="red">container</span>">
+        <span class="gray">&lt;!--ЗАГОЛОВОК НАВИГАЦИИ--></span>
+        &lt;div class="<span class="red">navbar-header</span>">
+          <span class="gray">&lt;!--ССЫЛКА НА КОМПАНИЮ--></span>
+          &lt;a href="#" class="<span class="red">navbar-brand</span>">Компания&lt;/a>
+          <span class="gray">&lt;!--КНОПКА ВЫП. МЕНЮ--></span>
+          &lt;button 
+            class="<span class="red">navbar-toggle</span>"
+            type="button" 
+            data-toggle="<span class="red"><mark>collapse</mark></span>"
+            data-target="<span class="red"><mark>#responsive-menu</mark></span>"
+          >
+            &lt;span class="<span class="red">sr-only</span>">Открыть навигацию&lt;/span>
+            &lt;span class="<span class="red">icon-bar</span>">&lt;/span>
+            &lt;span class="<span class="red">icon-bar</span>">&lt;/span>
+            &lt;span class="<span class="red">icon-bar</span>">&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        <span class="gray">&lt;!--ПУНКТЫ МЕНЮ--></span>
+        &lt;div class="<span class="red"><mark>collapse</mark> navbar-collapse</span>" id="<span class="red"><mark>responsive-menu</mark></span>">
+          &lt;ul class="<span class="red">nav navbar-nav</span>">
+            &lt;li>&lt;a href="#"><span class="gray">Пункт1</span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#"><span class="gray">Пункт2</span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#"><span class="gray">Пункт3</span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#"><span class="gray">Пункт4</span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#"><span class="gray">Пункт5</span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#"><span class="gray">Пункт6</span>&lt;/a>&lt;/li>
+            &lt;li>
+              &lt;a href="#"><span class="gray">Пункт7</span>
+                &lt;b class="<span class="red">caret</span>">&lt;/b>
+              &lt;/a>
+            &lt;/li>
+          &lt;/ul>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        <span class="red">navbar</span> - Блок навигации<br>
+        <span class="red">navbar-default</span> - Блок навигации по ум* (серая)<br>
+        <span class="red">navbar-inverse</span> - Блок навигации по ум* (чёрная)<br>
+        <span class="red">navbar-header</span> - Блок заголовка навинации<br>
+        <span class="red">navbar-collapse</span> - Блок меню<br>
+        <span class="red">navbar-fixed-top</span> - Блок меню зафикс. и растянутый<br>
+        <span class="red">navbar-fixed-bottom</span> - Блок меню зафикс. и растянутый снизу<br>
+        <span class="red">navbar-static-top</span> - Блок меню зафикс. и растянутый снизу<br>
+        <span class="red">navbar-static-bottom</span> - Блок меню зафикс. и растянутый снизу<br>
+        <span class="red">caret</span> - Выпадающее подменю <br>
+      </td>
+    </tr>
+</table>
+	
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | HTML | Основная разметка</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+		kbd {
+			border: 1px solid black;
+			border-radius: 7%;
+			font-size: 1.5em;
+		}
+		.kbd-list li {margin-top: 10px;}
+	</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a class="active" href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="base.html" class="active">Основная<br> разметка</a></li>
+		<li><a href="head.html">Внутри head</a></li>
+		<li><a href="conts.html">Контейнеры</a></li>
+		<li><a href="headers.html">Заголовки</a></li>
+		<li><a href="lists.html">Списки</a></li>
+		<li><a href="tables.html">Таблицы</a></li>
+		<li><a href="text.html">Текст</a></li>
+		<li><a href="links.html">Ссылки</a></li>
+		<li><a href="images.html">Изображения</a></li>
+		<li><a href="forms.html">Формы</a></li>
+		<li><a href="simbols.html">Символы</a></li>
+		<li><a href="svg.html">Графика</a></li>
+		<li><a href="media.html">Аудио-Видео</a></li>
+		<li><a href="frame.html">Фреймы и flash</a></li>
+		<li><a href="blank.html">Заготовка</a></li>
+	<ul>
+	
+	</div>
+	<div class="content clearfix">
+	<h2>Мой справочник | HTML | Основная разметка</h2>
+	<code>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+<span class="gray">&nbsp;&nbsp;&nbsp;&nbsp;...Техническая часть страницы...</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+<span class="gray">&nbsp;&nbsp;&nbsp;&nbsp;...Видимый контент страницы...</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;<br><br>
+&lt;!--<span class="gray">Комментарии в html-коде</span>--&gt;</code><br>
+<h3>DOCTYPE для HTML 4.01</h3>
+<code>
+&lt;!DOCTYPE HTML PUBLIC "<span class="gray">-//W3C//DTD HTML 4.01 Transitional//EN</span>" "<span class="gray">http://www.w3.org/TR/html4/loose.dtd</span>"&gt;	
+</code>
+
+
+
+<table class="discription-table">
+<caption>Основные теги разметки</caption>
+	<tr>
+		<th>Теги</th>
+		<th>Описание</th>
+		<th>Атрибуты</th>
+		<th>Описание</th>
+	</tr>
+	<tr>
+		<td>&lt;!DOCTYPE html&gt;</td>
+		<td>Строка декларации версии HTML5</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>&lt;html&gt;</td>
+		<td>Является контейнером для <b>html - документов</b>, который заключает в себе все содержимое веб-страницы, включая теги &lt;head&gt; и &lt;body&gt;</td>
+		<td>lang="ru"<br>
+			title="Страница"</td>
+		<td>-язык текста (русский) на сайте;<br>
+			-всплывающее окно у курсора при загрузке;</td>
+	</tr>
+	<tr>
+		<td>&lt;head&gt;</td>
+		<td>Этот раздел предназначен для заголовка страницы и технической информации, подключения внешних файлов</td>
+		<td>Не используются</td>
+		<td>В следующем разделе. <a href="../html-pages/head.html">Вот он</a></td>
+	</tr>
+	<tr>
+		<td>&lt;body&gt;</td>
+		<td>Отображаемого в окне браузера. Информацию, которую следует выводить в документе, следует располагать именно внутри контейнера 
+		&lt;body&gt;. К такой информации относится текст, изображения, теги, скрипты JavaScript и т. д.</td>
+		<td>class="class-name" и ещё...</td>
+		<td>Для тега body можно задавать различные классы для различных страниц</td>
+	</tr>
+</table>
+
+	<h3><b><u>Stileguide</u> от MDO</b><i>(Bootstrap)</i> - стиль форматирования</h3>
+	
+	<h4>Порядок атрибутов в html-разметке:</h4>
+	<ol>
+		<li><span class="red">class</span></li>
+		<li><span class="red">id, name</span></li>
+		<li><span class="red">src, href, for, type</span></li>
+		<li><span class="red">title, alt</span></li>
+	</ol>
+	<code>&lt;input <span class="red">class="btn" id="submit-id" type="submit"</span>&gt;</code><br>
+	<code>&lt;a <span class="red">class="main-link" href="http://ya.ru" title="Yandex"</span>&gt;</code><br>
+
+	<section style="float: left; padding: 5px; margin-right: 30px;">
+		<h4>Порядок свойств CSS:</h4>
+		<ol>
+			<li>
+				<u>Позиционирование</u>
+				<ul>
+					<li>position:</li>
+					<li>top:</li>
+					<li>right:</li>
+					<li>bottom:</li>
+					<li>left:</li>
+					<li>z-index:</li>
+				</ul>
+			</li>
+			<li>
+				<u>Отображение</u>
+				<ul>
+					<li>display:</li>
+					<li>float:</li>
+					<li>height:</li>
+					<li>width:</li>
+				</ul>
+			</li>
+			<li>
+				<u>Типографика</u>
+				<ul>
+					<li>font:</li>
+					<li>line-height:</li>
+					<li>color:</li>
+					<li>text-align:</li>
+				</ul>
+			</li>
+			<li>
+				<u>Декорирование</u>
+				<ul>
+					<li>background:</li>
+					<li>border:</li>
+					<li>opacity:</li>
+					<li>и другие</li>
+				</ul>
+			</li>
+		</ol>
+	</section>
+	
+	<section style="float: left; padding: 5px;">
+		<h4>Вендерные префиксы</h4>
+		<code>
+			<span class="red">.main-content</span> {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<span class="red"><b>-webkit-box-shadow:</b></span> 0 1px 2px rgba(50, 50, 50, 0.15);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red"><b>-moz-box-shadow:</b></span> 0 1px 2px rgba(50, 50, 50, 0.15);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red"><b>-ms-box-shadow:</b></span> 0 1px 2px rgba(50, 50, 50, 0.15);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red"><b>-o-box-shadow:</b></span> 0 1px 2px rgba(50, 50, 50, 0.15);<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red"><b>box-shadow:</b></span> 0 1px 2px rgba(50, 50, 50, 0.15);<br>
+		</code>
+		<ul>
+			<li><span class="red">-webkit-</span> Chrome, Safari, Yandex</li>
+			<li><span class="red">-moz-</span> Mozilla Firefox</li>
+			<li><span class="red">-ms-</span> Internet Explorer 8</li>
+			<li><span class="red">-o-</span> Opera</li>
+		</ul>
+		<span class="gray">Последним всегда указывается свойство БЕЗ префиксов</span>
+	</section>
+
+	<table class="discription-table" style="clear: both;">
+		<caption>Типовые названия классов (строго с буквы!)</caption>
+		<tr>
+			<th>Название</th>
+			<th>Описание</th>
+		</tr>
+		<tr style="text-align: center;">
+			<td colspan="2">
+				<mark>Основные разделы</mark>
+			</td>
+		</tr>
+		<tr>
+			<td>main-header</td>
+			<td>Гл. хэдер</td>
+		</tr>
+		<tr>
+			<td>main-footer</td>
+			<td>Гл. футер</td>
+		</tr>
+		<tr>
+			<td>main-content</td>
+			<td>Гл. контент</td>
+		</tr>
+		<tr>
+			<td>main-menu</td>
+			<td>Гл. меню</td>
+		</tr>
+		<tr>
+			<td>main-navigation</td>
+			<td>Гл. навигация</td>
+		</tr>
+		<tr>
+			<td>sidebar</td>
+			<td>Боковое меню</td>
+		</tr>
+		<tr>
+			<td>logo</td>
+			<td>Логотип</td>
+		</tr>
+		<tr>
+			<td>features</td>
+			<td>Фичи, преимущества</td>
+		</tr>
+		<tr>
+			<td>gallery</td>
+			<td>Галерея</td>
+		</tr>
+		<tr>
+			<td>promo</td>
+			<td>Рекламные фразы</td>
+		</tr>
+		<tr>
+			<td>reviews</td>
+			<td>Отзывы</td>
+		</tr>
+		<tr>
+			<td>breadcrumbs</td>
+			<td>Хлебные крошки</td>
+		</tr>
+		<tr>
+			<td>custom</td>
+			<td>Особый</td>
+		</tr>
+		<tr>
+			<td>catalog</td>
+			<td>Каталог</td>
+		</tr>
+		<tr>
+			<td>contacs</td>
+			<td>Контакты</td>
+		</tr>
+		<tr>
+			<td>copyright</td>
+			<td>Копирайт</td>
+		</tr>
+		<tr>
+			<td>social</td>
+			<td>Соц. сети</td>
+		</tr>
+		<tr>
+			<td>slider</td>
+			<td>Слайдер</td>
+		</tr>
+		<tr>
+			<td>active</td>
+			<td>Активное состояние</td>
+		</tr>
+		<tr>
+			<td>user-block</td>
+			<td>Блок пользователя</td>
+		</tr>
+		<tr style="text-align: center;">
+			<td colspan="2">
+				<mark>Сетка</mark>
+			</td>
+		</tr>
+		<tr>
+			<td>layout-</td>
+			<td>Префикс для классов сетки</td>
+		</tr>
+		<tr>
+			<td>container</td>
+			<td>Контейнер</td>
+		</tr>
+		<tr>
+			<td>column</td>
+			<td>Колонка</td>
+		</tr>
+		<tr>
+			<td>layout-positioner</td>
+			<td>Контейнер-центровщик</td>
+		</tr>
+		<tr>
+			<td>wrapper</td>
+			<td>Обёртка</td>
+		</tr>
+		<tr>
+			<td>clearfix</td>
+			<td>Распорка</td>
+		</tr>
+		
+		<tr style="text-align: center;">
+			<td colspan="2">
+				<mark>Контент-боксы</mark>
+			</td>
+		</tr>
+		<tr>
+			<td>title</td>
+			<td>Заголовок</td>
+		</tr>
+		<tr>
+			<td>description</td>
+			<td>Описание</td>
+		</tr>
+		<tr>
+			<td>annotation</td>
+			<td>Аннотация</td>
+		</tr>
+		<tr>
+			<td>price</td>
+			<td>Цена</td>
+		</tr>
+		<tr>
+			<td>item</td>
+			<td>Часть, пункт</td>
+		</tr>
+		<tr>
+			<td>btn</td>
+			<td>Кнопка</td>
+		</tr>
+	</table>
+
+	<span class="gray">
+		При присвоении классав html-коде, класс должен отвечать на вопрос не как это выгдядит, а "Что это? (функционал)"<br>
+		css-код: "Как это выглядит?"
+	</span>
+
+	<h3>Критерии хорошей вёрстки:</h3>
+	<ol>
+		<li>Валидность кода без грубых ошибок;<code></code></li>
+		<li>Нет лишних элементов;<code></code></li>
+		<li>Все <code>&lt;script&gt;</code> подключены перед <code>&lt;/body&gt;</code>;</li>
+		<li>У тегов <code>&lt;img&gt;</code> прописан атрибут <span class="red">alt</span> и указан размер;</li>
+		<li>Названия полей форм привязаны к полям через <code>&lt;label&gt;</code>;</li>
+		<li>Для стилизации не использованы <code>#id</code>;</li>
+		<li>Нет вложенности селекторов больше двух;<code></code></li>
+		<li>Отсутствует транслитерация в названии классов <i>(shapka, korzina и т.д.)</i>;<code></code></li>
+		<li>Использовать единый стиль при написании кода;<code></code></li>
+		<li>Кроссбраузерность (сайт отображается одинаково во всех новых браузерах,
+		более-менее выглядит в IE8);<code></code></li>
+		<li>Функционал сайта остаётся рабочим, а контент читаемым, если отключились скрипты 
+		(для элементов сайта, работающих на скриптах);<code></code></li>
+	</ol>
+
+	<h3>Этапы вёрстки (метод прогрессивного джипега):</h3>
+	<ol>
+		<li>HTML-разметка;</li>
+		<li>Подготовка графики (импорт из Фотошопа);</li>
+		<li>Сетки (блоки по сеткам);</li>
+		<li>Стилизация элементов;</li>
+		<li>Оформление контента (текст);</li>
+		<li>Оптимизация;</li>
+	</ol>
+
+	<h3>Обновление страницы в браузере:</h3>
+	<kbd>F5</kbd>
+
+	<h3>Перезаргузка страницы (без кеширования) в браузере:</h3>
+	<ul class="kbd-list">
+		<li><kbd>Ctrl</kbd> + <kbd>F5</kbd> (Google Chrome и IE)</li>
+		<li><kbd>Ctrl</kbd> + <kbd>R</kbd> (Safari, Google Chrome)</li>
+		<li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> (Mozilla Firefox)</li> 
+    </ul>
+    
+    
+<h3><mark>2 подхода к вёрстке сайтов:</mark></h3>
+<ol>
+    <li><b>Graceful Degradation</b>(Великая деградация). Вёрстка под самые современные браузеры </li>
+    <li><b>Progressive Enhacement</b>(Прогрессивное улучшение). Вёрстка под новые, но с поддрежкой старых, сайт будет более-менее читабилен в старых браузерах, а в новых выглядит красиво со всеми
+    поддерживаемыми дизайнерскими изысками. Предпочтилельный метод</li>
+</ol>
+
+
+	</div></div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

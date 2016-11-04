@@ -1,0 +1,250 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Таблицы на CSS3 | Адаптивная сетка на таблице</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+        .animation-cont {
+            width: 1150px;
+            height: 450px;
+        }
+        @keyframes stretching {
+            0% {
+                width: 1150px;
+                height: 450px;
+               }
+            50% {
+                width: 575px;
+                height: 360px;
+                }
+            100% {
+                width: 1150px;
+                height: 450px;
+               }
+            } 
+        .layout-cont {
+            width: 1150px;
+            height: 450px;
+            border: 3px solid black;
+            margin: 20px auto;
+            animation-name: stretching;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+        }
+        .table-layout {
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+        .table-layout header {
+            display: table-row;
+            height: 1px;
+            background: rgba(186, 252, 8, 0.8);
+            border: 1px solid black;
+        }
+/*Так как у таблицы height: 100%, ряды таблицы займут всё свободное пространство и футер прижмётся ко дну*/        
+        .table-layout footer {
+            display: table-row;
+            height: 1px;
+            background: rgba(81, 104, 230, 0.8);
+            border: 1px solid black;
+        }
+        .table-layout main {
+            display: table;
+            width: 100%;
+            height: 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+/*Так как у main h и w 100%, ячейки займут всё свободное пространство, даже если им не задавать размеров*/  
+        main .left-column, main .center-column, main .right-column {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        main .left-column, main .right-column {width: 100px;}
+        
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	    <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a class="active" href="#">Таблицы на CSS3</a>
+                        <ul class="sub-menu sub-menu5">
+                            <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                    <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                    <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+				        </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+			        <a href="#">Слайдер</a>
+				        <ul class="sub-menu sub-menu3">
+					        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+					        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				        </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+        </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Таблицы на CSS3 | Адаптивная сетка на таблице</h2>
+	
+	<h3>"Holy Grail" <i>(сетка называется "Святой Грааль")</i></h3>
+	
+	<section class="animation-cont">
+        <article class="layout-cont">
+            <div class="table-layout">
+                <header>HEADER</header>
+
+                <main>
+                    <div class="left-column">Excepturi odit suscipit veniam? Natus et reprehenderit magni expedita, dicta, animi mollitia molestiae sed quae vitae asperiores accusamus!</div>
+                    <div class="center-column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quasi in repellendus, blanditiis iste quod asperiores facere quam. Nostrum fuga architecto saepe facere eos, odit sequi rerum ad nihil error assumenda fugiat molestiae, iste obcaecati modi aperiam laboriosam! Odio voluptatem repellendus odit dignissimos, quo, vero cumque voluptatum velit minus iure ipsum quod corporis obcaecati saepe perferendis facere itaque tenetur omnis.</div>
+                    <div class="right-column">Repellendus vel excepturi nesciunt delectus quibusdam, rem aspernatur, voluptates vero molestiae cum veritatis ipsum.</div>
+                </main>
+
+                <footer>FOOTER</footer>
+            </div>
+
+        </article>
+	</section>
+	
+	<section style="float: left; font-size: 10px;">
+        <h2 style="font-size: 21px;">HTML:</h2>
+        <code><pre>
+&lt;div class="<span class="red">table-layout</span>">
+    &lt;header><span class="gray">HEADER</span>&lt;/header>
+    &lt;main>
+        &lt;div class="<span class="red">left-column</span>"><span class="gray">Exce...</span>&lt;/div>
+        &lt;div class="<span class="red">center-column</span>"><span class="gray">Lorem</span>&lt;/div>
+        &lt;div class="<span class="red">right-column</span>"><span class="gray">Rep...</span>&lt;/div>
+    &lt;/main>
+    &lt;footer><span class="gray">FOOTER</span>&lt;/footer>
+&lt;/div>
+        </pre></code>
+    </section>
+    
+    <section style="float: right; font-size: 11px;">
+    <h2 style="font-size: 21px;">CSS:</h2>
+<code><pre>
+<span class="gray">1.Задаём контейнеру табличный вид
+и 100%-ную ширину и высоту</span>
+<span class="red">.table-layout</span> {
+    <mark>display: table;</mark>
+    width: 100%;
+    height: 100%;
+}
+<span class="gray">2.Хэдер и футер - строки таблицы
+с высотой 1 пиксель - прижмутся к краям контейнера</span>
+<span class="red">.table-layout header</span> {
+    <mark>display: table-row</mark>;
+    height: 1px;
+    background: rgba(186, 252, 8, 0.8);
+    border: 1px solid black;
+}
+<span class="red">.table-layout footer</span> {
+    <mark>display: table-row</mark>;
+    height: 1px;
+    background: rgba(81, 104, 230, 0.8);
+    border: 1px solid black;
+}
+<span class="gray">3.Контентную часть аналогично делаем таблицей
+со 100%-ной шириной и высотой</span>
+<span class="red">.table-layout main</span> {
+    <mark>display: table</mark>;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+<span class="gray">4.Колонки контента делаем ячейками таблицы - 
+равномерно распределяться по ширине контейнера</span>
+<span class="red">main .left-column, 
+main .center-column, 
+main .right-column</span> {
+    <mark>display: table-cell</mark>;
+    border: 1px solid black;
+    padding: 10px;
+}
+<span class="gray">5.Задаём крайним колонкам фиксированную ширину, 
+при этом центральная колонка будет АДАПТИВНОЙ</span>
+<span class="red">main .left-column, 
+main .right-column</span> {
+    width: 100px;
+}
+</pre></code>
+    </section>
+	
+	
+	
+	
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+Mask+++
+CSS-slider+++
+Flexbox
+jQuery
+Bootstrap - CSS-פנוילגמנך
+LESS, SASS, Styles - ןנוןנמצוססמנû
+CoffeeScript - JS-sugar
+CMS - PHP-פנוילגמנך
+Gulp - אגעמל. סבמנשטך
+PHP, mySQL or Pyton
+
+

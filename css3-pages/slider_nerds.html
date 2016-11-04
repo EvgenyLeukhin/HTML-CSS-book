@@ -1,0 +1,257 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Слайдер nёrds</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <link rel="stylesheet" type="text/css" href="../css/slider_styles.css">
+    <style>
+ code {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    color: darkgreen;
+    font-family: 'Courier', 'Monaco', monospace;
+}
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				        </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+			        <a class="active" href="#">Слайдер</a>
+				        <ul class="sub-menu sub-menu3">
+					        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+					        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				        </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Слайдер nёrds</h2>
+	
+          <div class="slider">
+           <!--1. Переключатель слайдов связывает с label-->
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+
+          <div class="slider-controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+            
+    
+            <div class="slide1 clearfix">
+                <div class="left-column clearfix">
+                    <h2 class="slider-title">Долго, дорого,<br>
+                        скрупулезно.</h2>
+                    <p class="slider-text">Математически выверенный дизайн<br>
+                       для вашего сайта или мобильного приложения.</p>
+                    <a class="slider-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+
+                <div class="right-column clearfix">
+                    <picture>
+                        <img src="../img/slide1.png" alt="slide1" width="338" height="231">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="slide2 clearfix">
+                <div class="left-column clearfix">
+                    <h2 class="slider-title">Любите ли вы математику,
+                    как любим ее мы?</h2>
+                    <p class="slider-text">Нашим дизайнерам мы удаляем нейроны, ответственные<br>
+                    за креатив, чтобы дать им возможность все просчитать</p>
+                    <a class="slider-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+
+                <div class="right-column clearfix">
+                    <picture>
+                        <img src="../img/slide2.png" alt="slide2" width="249" height="230">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="slide3 clearfix">
+                <div class="left-column clearfix">
+                    <h2 class="slider-title">Только наркотики,
+                    только хардкор!</h2>
+                    <p class="slider-text">Все дизайнерские решения в нашей компании принимаются<br>
+                    только под воздействием качественных галлюциногенов</p>
+                    <a class="slider-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                </div>
+
+                <div class="right-column clearfix">
+                    <picture>
+                        <img src="../img/slide3.png" alt="slide3" width="333" height="319">
+                    </picture>
+                </div>
+            </div>
+
+          </div>
+         
+         
+          <h2>HTML-код</h2>
+          <code>
+&lt;div class="slider"><br>
+&lt;<span class="red">!--1. Создаём радио-кнопки, которые будут выполнять функцию переключения слайдов, в последствие их спрячем, так как эту функцию возьмут на себя лейблы --</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="slider" id="slide1" checked&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="slider" id="slide2"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="slider" id="slide3"&gt;<br>
+<br>
+&lt;<span class="red">!--2. Создаём контейнер для переключения слайдов из лейблов, связываем лейблы с радио-кнопками через id, теперь лейблы будут себя вести как радио-кнопки и их можно застилизовать как угодно--</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="slider-controls"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="slide1"&gt;&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="slide2"&gt;&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="slide3"&gt;&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br>
+<br>
+&lt;<span class="red">!--3. Верстаем слайды--</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="slide1 clearfix"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="left-column clearfix"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="slider-title"><span class="gray">Долго, дорого,&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;скрупулезно.</span>&lt;/h2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="slider-text"&gt;<span class="gray">Математически выверенный дизайн&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;для вашего сайта или мобильного приложения.</span>&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="slider-button" href="#"&gt;<span class="gray">УЗНАТЬ БОЛЬШЕ</span>&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="right-column clearfix"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/slide1.png" alt="slide1" width="338" height="231"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="slide2 clearfix"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="slide3 clearfix"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;
+ </code>
+    <h2>CSS-код</h2>
+<code><pre>
+...
+<span class="red">/*4. Прячем все слайды*/</span>
+.slide1, .slide2, .slide3 {
+    display: none;
+}
+<span class="red">/*5. Переключатель из лейблов позиционируем куда нужно*/</span>
+.slider-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    text-align: center;
+} 
+<span class="red">/*6. Прячем формы*/</span>
+input[type="radio"] {
+    display: none;
+}
+<span class="red">/*7. Стилизуем переключатели*/</span>
+.slider-controls label {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    background-color: #fff;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+<span class="red">/*8. Выделяем лейбл при состоянии checked*/</span>
+#slide1:checked ~ .slider-controls label[for="slide1"],
+#slide2:checked ~ .slider-controls label[for="slide2"],
+#slide3:checked ~ .slider-controls label[for="slide3"] {
+    background-color: #000;
+}
+<span class="red">/*9. Самый важный пункт! Связываем РАДИО-КНОПКИ со СЛАЙДАМИ*/</span>
+#slide1:checked ~ .slide1 {display: block;}
+#slide2:checked ~ .slide2 {display: block;}
+#slide3:checked ~ .slide3 {display: block;}
+<span class="red">/* 10. Задаём по ум* checked слайду №1 ~ */</span>
+</pre></code>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

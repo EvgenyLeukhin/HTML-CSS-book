@@ -1,0 +1,124 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(../fonts/Roboto/Roboto_Light_cyrillic-ext.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(../fonts/Roboto/Roboto_Light_cyrillic.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(../fonts/Roboto/Roboto_Medium_cyrillic-ext.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(../fonts/Roboto/Roboto_Medium_cyrillic.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+.layout {
+    width: 880px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+.slider {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    width: 880px;
+    height: 352px;
+    position: relative;
+    background-color: #eee;
+}
+.slider-title {
+    margin-top: 75px;
+    font-size: 33px;
+    line-height: 33px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.slider-text {
+    font-size: 16px;
+    line-height: 22px;
+    color: #5d6367;
+}
+.slider-button {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 3px;
+    width: 240px;
+    background-color: #fb565a;
+    color: #fff;
+}
+.slide1, .slide2, .slide3 {
+    display: none;
+}
+.slide1 img {
+    margin-top: 53px;
+}
+.slide2 img {
+    margin-top: 56px;
+    float: right;
+}
+.slide3 img {
+    float: right;
+    position: relative;
+    top: 35px;
+}
+.left-column {
+    float: left;
+    width: 470px;
+}
+.right-column {
+    float: right;
+    width: 340px;
+}
+/* 2. Переключатель слайдов, позиционируем куда нужно */
+.slider-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    text-align: center;
+} 
+/* 3. Прячем формы, стилизуем лейблы под переключатели */
+input[type="radio"] {
+    display: none;
+}
+.slider-controls label {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    background-color: #fff;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+/* 4. Выделяем лейбл при щелчке*/
+#slide1:checked ~ .slider-controls label[for="slide1"],
+#slide2:checked ~ .slider-controls label[for="slide2"],
+#slide3:checked ~ .slider-controls label[for="slide3"] {
+    background-color: #000;
+}
+/* 4. Связываем радио со слайдами ~ */
+#slide1:checked ~ .slide1 {display: block;}
+#slide2:checked ~ .slide2 {display: block;}
+#slide3:checked ~ .slide3 {display: block;}
+/* 5. Задаём по ум* checked слайду №1 ~ */

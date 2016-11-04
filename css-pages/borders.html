@@ -1,0 +1,505 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS | Рамки и границы</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+		code {
+			font-size: 1.4em;
+}
+		.discription-table td:nth-child(3) {
+			width: 300px;
+}
+		.border-box	{	
+			height: 300px;
+			width: 300px;
+			margin-left: 20px;
+			border-image-source: url(../pict/css_border-image-2.png);   
+			border-image-width: 50px; 						   			
+			border-image-slice: 40%;						  		    
+			border-image-repeat: round;
+}	
+
+	</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+		<li><a href="../css-pages/values.html">Величины</a></li>
+		<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+		<li><a href="../css-pages/borders.html" class="active">Рамки и границы</a></li>
+		<li><a href="../css-pages/color.html">Цвет</a></li>
+		<li><a href="../css-pages/bg.html">Фон</a></li>
+		<li><a href="../css-pages/text.html">Текст</a></li>
+		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+		<li><a href="../css-pages/display.html">Отображение</a></li>
+		<li><a href="../css-pages/position.html">Позиционирование</a></li>
+		<li>
+			<a href="#">Меню</a>
+				<ul class="sub-menu sub-menu1">
+					<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+					<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+				</ul>
+		</li>
+		<li>
+			<a href="#">Блочная вёрстка</a>
+				<ul class="sub-menu sub-menu2">
+					<li><a href="../css-pages/float.html">float</a></li>
+					<li><a href="../css-pages/centered.html">Центровщик</a></li>
+					<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+					<li><a href="../css-pages/footer.html">Футер</a></li>
+					<li><a href="../css-pages/layout.html">Сетка</a></li>
+					<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+					<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+				</ul>	
+		</li>
+		<li><a href="../css-pages/decoration.html">Декор</a></li>
+	</ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | CSS | Рамки и границы</h2>
+	
+	<table class="discription-table" style="border-collapse: separate; border-spacing: 5px;">
+			<caption>border</caption>
+			<tr>
+				<th>Свойство</th>
+				<th>Описание</th>
+				<th colspan="2">Примеры</th>
+			</tr>
+			<tr>
+				<td>border-width</td>
+				<td>
+					<b>Толщина границы</b><br>
+					<span class="gray">Увеличивает размер</span>
+				</td>
+				<td><code>border-width: 3px;</code></td>
+				<td style="border-width: 3px;"></td>
+			</tr>
+			<tr>
+				<td rowspan="8">border-style</td>
+				<td rowspan="8">
+					<br><br><br><br><br><b>Стиль границы</b><br><br>
+					<span class="gray">Объёмные при:<br>
+						<code>
+							<small>&nbsp;&nbsp;border-width: 8px;<br>
+								   &nbsp;&nbsp;border-color: crimson;</small>
+						</code>
+					</span>
+					</td>
+				<td><code>border-style: <b><span class="red">solid;</span></b></code></td>
+				<td>Сплошная</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">dotted;</span></b></code></td>
+				<td style="border-style: dotted;">Точками</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">dashed;</span></b></code></td>
+				<td style="border-style: dashed;">Пунктир</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">double;</span></b></code></td>
+				<td style="border-style: double; border-width: 4px;">Двойная(width: 4px;)</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">groove;</span></b></code></td>
+				<td style="border-style: groove; border-width: 8px; border-color: crimson;">Объёмная-groove</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">ridge;</span></b></code></td>
+				<td style="border-style: ridge; border-width: 8px; border-color: crimson;">Объёмная-ridge</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">inset;</span></b></code></td>
+				<td style="border-style: inset; border-width: 8px; border-color: crimson;">Объёмная-inset</td>
+			</tr>
+			<tr>
+				<td><code>border-style: <b><span class="red">outset;</span></b></code></td>
+				<td style="border-style: outset; border-width: 8px; border-color: crimson;">Объёмная-outset</td>
+			</tr>
+			<tr>
+				<td>border-color</td>
+				<td><b>Цвет границы</b></td>
+				<td><code>border-color: red;</code></td>
+				<td style="border-color: red; border-width: 3px;"></td>
+			</tr>
+			<tr style="text-align: center;">
+				<td>border:&nbsp;2px&nbsp;solid&nbsp;green;</td>
+				<td colspan="3">Сокращенная форма записи (2px - width, solid - style, green - color)</td>
+			</tr>
+			<tr>
+				<td>
+					border: none; <span class="gray">или</span><br>
+					border-color: transparent;
+				</td>
+				<td colspan="3" style="border: none;">Убрать границу</td>
+			</tr>
+			<tr>
+				<td rowspan="3">border-top</td>
+				<td rowspan="3"><b>Верхняя граница</b></td>
+				<td><code>border-top-width:</code></td>
+				<td>Толщина верхней границы</td>
+			</tr>
+			<tr>
+				<td><code>border-top-style:</td>
+				<td>Стиль верхней границы</td>
+			</tr>
+			<tr>
+				<td><code>border-top-color:</code></td>
+				<td>Цвет верхней границы</td>
+			</tr>
+			<tr>
+				<td rowspan="3">border-right</td>
+				<td rowspan="3"><b>Правая граница</b></td>
+				<td><code>border-right-width:</code></td>
+				<td>Толщина правой границы</td>
+			</tr>
+			<tr>
+				<td><code>border-right-style:</code></td>
+				<td>Стиль правой границы</td>
+			</tr>
+			<tr>
+				<td><code>border-right-color:</code></td>
+				<td>Цвет правой границы</td>
+			</tr>
+			<tr>
+				<td rowspan="3">border-bottom</td>
+				<td rowspan="3"><b>Нижняя граница</b></td>
+				<td><code>border-bottom-width:</code></td>
+				<td>Толщина нижней границы</td>
+			</tr>
+			<tr>
+				<td><code>border-bottom-style:</code></td>
+				<td>Стиль нижней границы</td>
+			</tr>
+			<tr>
+				<td><code>border-bottom-color:</code></td>
+				<td>Цвет нижней границы</td>
+			</tr>
+			<tr>
+				<td rowspan="3">border-left</td>
+				<td rowspan="3"><b>Левая граница</b></td>
+				<td><code>border-left-width:</code></td>
+				<td>Толщина левой границы</td>
+			</tr>
+			<tr>
+				<td><code>border-left-style:</code></td>
+				<td>Стиль левой границы</td>
+			</tr>
+			<tr>
+				<td><code>border-left-color:</code></td>
+				<td>Цвет левой границы</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td style="color: black;" colspan="4">border-radius</td>
+			</tr>
+			<tr>
+				<td rowspan="5">border-radius</td>
+				<td rowspan="5">
+					<b><br><br><br><br><br><br><br><br><br>Радиус скругления границ</b><br>
+					<code>
+						<small>   	
+								&nbsp;&nbsp;display: block;<br>
+								&nbsp;&nbsp;height: 100px;<br>
+								&nbsp;&nbsp;width: 100px;<br> 
+								&nbsp;&nbsp;border: 3px solid blue;<br> 
+							    &nbsp;&nbsp;margin: 0 auto;
+						</small>
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<code>border-radius: 15px;</code><br>
+					<span class="gray">Все углы на 15px</span>
+				</td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-radius: 15px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<code>border-radius: 50%;</code><br>
+					<span class="gray">Все углы на 50% от ширины, получается круг</span>
+				</td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-radius: 50%;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><code>border-radius: 40px 10px;</code><br>
+				<span class="gray">40px - ЛВ и ПН, 10px - ПВ и ЛН</span>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-radius: 40px 10px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<code>border-radius:<br> 10px 20px 30px 40px;</code><br>
+					<span class="gray">10px - ЛВ, 20px - ПВ, 30px - ПН, 40px - ЛН</span>
+				</td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-radius: 10px 20px 30px 40px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>border-top-left-radius</td>
+				<td>Радиус скругления верхней левой границы</td>
+				<td><code>border-top-left-radius: 30px;</code></td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-top-left-radius: 30px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>border-top-right-radius</td>
+				<td>Радиус скругления верхней правой границы</td>
+				<td><code>border-top-right-radius: 30px;</code></td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-top-right-radius: 30px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>border-bottom-left-radius</td>
+				<td>Радиус скругления нижней левой границы</td>
+				<td><code>border-bottom-left-radius: 30px;</code></td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-bottom-left-radius: 30px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>border-bottom-right-radius</td>
+				<td>Радиус скругления нижней правой границы</td>
+				<td><code>border-bottom-right-radius: 30px;</code></td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-bottom-right-radius: 30px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>border-radius: _px / _px</td>
+				<td>Горизонтальные и вертикальные радиусы</td>
+				<td>
+					<code>border-radius: 30px / 15px;</code><br>
+					<span class="gray">Горизонтальные радиусы: 30px, вертикальные 15px</span>
+				</td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-radius: 30px / 15px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>border-radius: _px / _px</td>
+				<td>Горизонтальные и вертикальные радиусы</td>
+				<td>
+					<code>border-radius: 10px 20px 30px 40px / 25px 35px 45px 55px;</code><br>
+				</td>
+				<td>
+					<div style="height: 100px; 
+								width: 100px; 
+								border: 3px solid blue; 
+							    margin: 0 auto; 
+								border-radius: 10px 20px 30px 40px / 25px 35px 45px 55px">
+					</div>
+				</td>
+			</tr>
+			<tr style="text-align: center;">
+				<td style="color: black;" colspan="4">border-image</td>
+			</tr>
+			<tr>
+				<td>border-image-source</td>
+				<td>Путь в изображению рамки</td>
+				<td><code>border-image-source: url(../css_border-image-2.png);</code></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>border-image-slice</td>
+				<td>Нарезка изображения рамки</td>
+				<td><code>border-image-slice: 30%;</code></td>
+				<td><code>border-image-slice: 10 20 30 40 fill;</code></td>
+			</tr>
+			<tr>
+				<td>border-image-repeat</td>
+				<td>Повтор изображения рамки</td>
+				<td><code>border-image-repeat: <br>repeat-повторение с обрезанием<br>round-повторение без обрезания<br>stretch-растягивание</code></td>
+				<td><code>border-image-repeat: repeat round;</code></td>
+			</tr>
+			<tr>
+				<td>border-image-width</td>
+				<td>Ширина изображения рамки</td>
+				<td><code>border-image-width: 50px;</code></td>
+				<td><code>border-image-width: 50px 10px 20px 5px;</code></td>
+			</tr>
+			<tr>
+				<td>border-image-outset</td>
+				<td>Отодвигает рамку за пределы элемента</td>
+				<td><code>border-image-outset: 10px;</code></td>
+				<td><code>border-image-outset: 10px 20px 30px 40px;</code></td>
+			</tr>
+			<tr>
+				<td colspan="3">border-image: url(../css_border-image-2.png) 30% repeat;</td>
+				<td>Сокращенная запись</td>
+			</tr>
+	</table>
+	
+	<div class="border-box"></div><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="border-box"&gt;&lt;/div&gt;</code><br>
+	
+			<code><span class="red">.border-box </span>{<br>
+			&nbsp;&nbsp;height: 300px;<br>
+			&nbsp;&nbsp;width: 300px;<br>
+			&nbsp;&nbsp;border-image-source: url(../pict/css_border-image-2.png);<br>   
+			&nbsp;&nbsp;border-image-width: 50px;<br> 						   			
+			&nbsp;&nbsp;border-image-slice: 40%;<br>						  		    
+			&nbsp;&nbsp;border-image-repeat: round;<br>
+			}
+			</code>
+			<span class="gray">или</span><br>
+			<code><span class="red">.border-box </span>{<br>
+			&nbsp;&nbsp;height: 300px;<br>
+			&nbsp;&nbsp;width: 300px;<br>
+			&nbsp;&nbsp;border-image: url(../pict/css_border-image-2.png) 40% round;<br>  
+			&nbsp;&nbsp;border-image-width: 50px;<br>  
+			}
+			</code>
+	
+		<table class="discription-table" style="border-collapse: separate; border-spacing: 5px;">
+			<caption>outline</caption>
+			<tr>
+				<th>Свойство</th>
+				<th>Описание</th>
+				<th colspan="2">Примеры</th>
+			</tr>
+			<tr>
+				<td>outline</td>
+					
+				<td><br><br>Внешняя рамка<br>
+					<span class="gray">
+						Выпадает из потока<br>
+						Не увеличивает размеры<br>
+						Нельзя задавать свойства для сторон
+					</span>
+				</td>
+				</td>
+				<td style="outline: 20px solid rgba(255, 10, 10, 0.5)">
+					<code>outline: 20px solid red;</code>
+				</td>
+			</tr>
+			<tr>
+				<td>outline-width</td>
+				<td>Толщина внешней рамки</td>
+				<td>
+					<code>
+						outline-width: 2px;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>outline-style</td>
+				<td>Стиль внешней рамки</td>
+				<td>
+					<code>
+						outline-style: solid;
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>outline-color</td>
+				<td>Цвет внешней рамки</td>
+				<td>
+					<code>
+						outline-color: red;
+					</code>
+				</td>
+			</tr>
+		</table>
+		
+		
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

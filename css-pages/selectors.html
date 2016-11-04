@@ -1,0 +1,1115 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS | Селекторы</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+code {
+	font-size: 1.4em;
+}
+.discription-table td:nth-child(3) {
+	width: 300px;
+}
+.some-link:hover {
+	color: red;
+	cursor: pointer;
+}
+.some-link2:active {
+    outline: 2px solid red;
+} 
+.some-link3:link {
+    color: violet;
+}
+.some-link4:visited {
+    color: darkviolet;
+}
+input[type="text"]:focus {border: 4px solid pink;}
+
+input[type="password"] {border: 4px dotted red;} 
+
+option:disabled {text-decoration: line-through;}
+option:enabled {text-decoration: underline;} 
+#text-form:focus {border: 1px solid pink;}
+#text-form:read-only {background-color: yellowgreen;}
+input[type="checkbox"]:checked {border-color: red;}
+#first-name-id:valid {color: green; font-weight: bold; width: 100px;}
+#first-name-id:invalid {color: red; font-weight: bold; width: 100px;}
+.selection::-moz-selection {color: red; background-color: red;}
+	</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../css-pages/selectors.html" class="active">Селекторы</a></li>
+		<li><a href="../css-pages/values.html">Величины</a></li>
+		<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+		<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+		<li><a href="../css-pages/color.html">Цвет</a></li>
+		<li><a href="../css-pages/bg.html">Фон</a></li>
+		<li><a href="../css-pages/text.html">Текст</a></li>
+		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+		<li><a href="../css-pages/display.html">Отображение</a></li>
+		<li><a href="../css-pages/position.html">Позиционирование</a></li>
+		<li>
+			<a href="#">Меню</a>
+				<ul class="sub-menu sub-menu1">
+					<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+					<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+				</ul>
+		</li>
+		<li>
+			<a href="#">Блочная вёрстка</a>
+				<ul class="sub-menu sub-menu2">
+					<li><a href="../css-pages/float.html">float</a></li>
+					<li><a href="../css-pages/centered.html">Центровщик</a></li>
+					<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+					<li><a href="../css-pages/footer.html">Футер</a></li>
+					<li><a href="../css-pages/layout.html">Сетка</a></li>
+					<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+					<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+				</ul>
+			
+		</li>
+		<li><a href="../css-pages/decoration.html">Декор</a></li>
+	</ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | CSS | Селекторы</h2>
+	
+	<table class="discription-table">
+			<caption><mark>Приоритетность (Варианты стилизации)</mark></caption>
+			<tr>
+				<th>Тип</th>
+				<th>Описание</th>
+				<th colspan="2">Примеры</th>
+			</tr>
+			<tr>
+				<td>1. Инлайновые стили</td>
+				<td>Самые приоритетные</td>
+				<td>
+					<code>
+						<span class="gray">
+							&lt;p <span class="red">style="color: red;"</span>&gt;...&lt;/p&gt;
+						</span>
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>2. Внутри тега <code>&lt;style&gt;</code></td>
+				<td>2 место</td>
+				<td>
+					<code>
+					<span class="gray">&lt;style&gt;</span><br>
+					&nbsp;&nbsp;p {color: red;}<br>
+					<span class="gray">&lt;/style&gt;</span>
+					</code>
+				</td>
+			</tr> 
+			<tr>
+				<td>3. Через id</td>
+				<td>3 место</td>
+				<td>
+					<code>
+						<span class="gray">&lt;p <span class="red">id="name"</span>&gt;<span class="red">...</span>&lt;/p&gt;</span><hr>
+						&nbsp;&nbsp;#name {color: red;}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>4. Через классы</td>
+				<td>4 место</td>
+				<td>
+					<code>
+						<span class="gray">&lt;p <span class="red">class="name"</span>&gt;...</span>&lt;/p&gt;<hr>
+						&nbsp;&nbsp;.name {color: red;}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>5. Cелекторы тегов</td>
+				<td>5 место</td>
+				<td>
+					<code>
+						<span class="gray">&lt;p&gt;<span class="red">123</span>&lt;/p&gt;</span><hr>
+						&nbsp;&nbsp;p {color: red;}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>6. Порядок в коде</td>
+				<td>
+					<br><br>
+					6 место<br>
+					<span class="gray">При равной специфичности играет роль порядок в коде, чем ниже, тем приоритетнее</span>
+				</td>
+				<td>
+					<code>
+						<span class="gray">&lt;p&gt;<span class="red" style="color: orange;">123</span>&lt;/p&gt;</span><hr>
+						&nbsp;&nbsp;p {color: red;}<br>
+						&nbsp;&nbsp;p {color: orange;}
+					</code>
+				</td>
+			</tr>
+	</table>
+
+	<table class="discription-table">
+			<caption><mark>Вычисление cпецифичности</mark></caption>
+			<tr>
+				<th>Комбинации</th>
+				<th><span class="red">a</span> (инлайн стили)</th>
+				<th><span class="red">b</span> (id)</th>
+				<th><span class="red">c</span> (class)</th>
+				<th><span class="red">d</span> (теги)</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td>div</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td><b>000(1)</b></td>
+			</tr>
+			<tr>
+				<td>ul .class</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td><b>00(11)</b></td>
+			</tr>
+			<tr>
+				<td>#catalog .class</td>
+				<td>0</td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td><b>0(110)</b></td>
+			</tr>
+			<tr>
+				<td>&lt;span<span class="red"> style="color:red;"</span>&gt;</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td><b>(1000)</b></td>
+			</tr>
+	</table>
+
+	<h3><b>Наследуемые</b> свойства (родитель-потомок):</h3>
+		<ul>
+			<li>line-height;</li>
+			<li>color;</li>
+			<li>font-size, font-family, font-style, font-weight;</li>	
+			<li>text-transform, text-align, text-indent;</li>	
+			<li>letter-spacing, white-space, word-spacing, direction;</li>
+			<li>list-style, visibilyty, cursor, border-collapse;</li>
+			<li>Принудительное наследование (для свойств, кот. не наследуются): <span class="red">inherit;</span></li>
+			<li>Принудительное присвоение (для свойств, у кот. низкий приоритет): <span class="red">!important;</span> (использовать НЕ РЕКОМЕНДУЕТСЯ)</li>
+		</ul>
+	
+	<h3><b>Ненаследуемые</b> свойства (родитель-потомок):</h3>
+		<ul>
+			<li>background;</li>
+			<li>position;</li>
+			<li>height, width;</li>
+			<li>margin, padding;</li>
+		</ul>
+	<a href="https://www.w3.org/TR/CSS21/propidx.html">
+		Полный список (значение <span class="red">yes</span> или <span class="red">no</span> в колонке <b>Inherited?</b>)
+	</a>
+
+	<table class="discription-table">
+			<!--**************************-->
+			<caption><mark>Виды селекторов</mark></caption>
+
+			<tr>
+				<th>Тип</th>
+				<th>Описание</th>
+				<th colspan="2">Примеры</th>
+			</tr>
+			<tr>
+				<td>p <span class="gray">(название тега)</span></td>
+				<td><b>ТЕГОВЫЙ селектор</b></td>
+				<td>
+					<code>
+						<span class="red">p</span> {color: red;}
+					</code>
+				</td>
+				<td>У всех параграфов текст станет красным</td>
+			</tr>
+			<tr>
+				<td>.name <span class="gray">(с точкой)</span></td>
+				<td><b>КЛАССОВЫЙ селектор</b></td>
+				<td>
+					<code>
+						&lt;p <span class="red">class="name"</span>&gt;<span class="red">...</span>&lt;/p&gt;<hr>
+						<span class="red">.name</span> {color: red;}
+					</code>
+				</td>
+				<td>У <u>ВСЕХ ТЕГОВ</u> c классом <span class="red">name</span> текст станет красным</td>
+			</tr>
+			<tr>
+				<td>#name <span class="gray">(с "#")</span></td>
+				<td><b>id-селектор</b></td>
+				<td>
+					<code>
+						&lt;p <span class="red">id="name"</span>&gt;<span class="red">...</span>&lt;/p&gt;<hr>
+						<span class="red">#name</span> {color: red;}
+					</code>
+				</td>
+				<td>У <u>ВСЕХ ТЕГОВ</u> c id <span class="red">name</span> текст станет красным</td>
+			</tr>
+			<tr>
+				<td>p a <span class="gray">(через пробел)</span></td>
+				<td>
+					<br>
+					<b>ВЛОЖЕННЫЙ селектор</b><br>
+					<span class="gray">КАСКАД, ПРОСТРОНСТВО ИМЁН</span>
+				</td>
+				<td>
+					<code>
+						&lt;p&gt; ... &lt;i&gt;<span class="red">&lt;a&gt;</span>&lt;/i&gt; ... &lt;/p&gt;<hr>
+						<span class="red">p a</span> {color: red;}
+					</code>
+				</td>
+				<td>Все ссылки внутри параграфов станут красными, даже если они вложены в другие теги</td>
+			</tr>
+			<tr>
+				<td>p + a <span class="gray">(через "+")</span></td>
+				<td><b>СОСЕДНИЙ селектор</b></td>
+				<td>
+					<code>
+						&lt;p&gt; ... &lt;/p&gt;<br>
+						<span class="red">&lt;a&gt;</span><hr>
+						<span class="red">p + a</span> {color: red;}
+					</code>
+				</td>
+				<td>Все ссылки после параграфов станут красными</td>
+			</tr>
+			<tr>
+				<td>p > a <span class="gray">(через ">")</span></td>
+				<td><b>ДОЧЕРНИЙ селектор</b></td>
+				<td>
+					<code>
+						&lt;p&gt; ... <span class="red">&lt;a&gt;</span> ... &lt;/p&gt;<hr>
+						&lt;p&gt; ... &lt;i&gt;&lt;a&gt;&lt;/i&gt; ... &lt;/p&gt; <span class="gray">так не сработает!</span><hr>
+						<span class="red">p > a</span> {color: red;}
+					</code>
+				</td>
+				<td>
+					Все ссылки после параграфов станут красными, только если они являются ДОЧЕРНИМИ,<br>
+					в отличие от ВЛОЖЕННЫХ селекторов
+				</td>
+			</tr>
+			<tr>
+				<td>
+					.class1.class2<br>
+					<span class="gray">(без пробела)</span>
+				</td>
+
+				<td><b>ОБЪЕДИНЁННЫЙ селектор</b></td>
+				<td>
+					<code>
+						&lt;div class="<span class="red">class1 class2</span>"&gt;&lt;/div&gt;<hr>
+						<span class="red">.class1.class2</span> {color: red;}
+					</code>
+				</td>
+				<td>
+					Сработает для тегов, имеющих одновременно и <span class="red">class1</span> и <span class="red">class2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					.class1, .class2, class3<br>
+					<span class="gray">(через запятую)</span>
+				</td>
+
+				<td><b>ГРУППОВОЙ селектор</b></td>
+				<td>
+					<code>
+						&lt;div class="<span class="red">class1</span>"&gt;&lt;/div&gt;<br>
+						&lt;div class="<span class="red">class2</span>"&gt;&lt;/div&gt;<br>
+						&lt;div class="<span class="red">class3</span>"&gt;&lt;/div&gt;
+						<hr>
+						<span class="red">.class1, .class2, .class3</span> {color: red;}
+					</code>
+				</td>
+				<td>
+					Сработает для всех перечисленных классов <span class="red">class1</span>, 
+					<span class="red">class2</span>, <span class="red">class3</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					* {color: red;}<br>
+					<span class="gray">(через *)</span>
+				</td>
+
+				<td><b>ОБЩИЙ селектор</b></td>
+				<td>
+					<code>
+						<span class="red">*</span> {color: red;}
+					</code>
+				</td>
+				<td>
+					Сработает для всех тегов и классов 
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					.class1 * {color: red;}<br>
+				</td>
+
+				<td><b>ОБЩИЙ селектор для потомков класса</b></td>
+				<td>
+					<code>
+						<span class="red">.class1 *</span> {color: red;}
+					</code>
+				</td>
+				<td>
+					Сработает для всех тегов и классов внутри класса <span class="red">class1</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					.class1 *:псевдо-класс{color: red;}<br>
+				</td>
+
+				<td>Сочетания * с псевдо-классами</td>
+				<td>
+					<code>
+						<span class="red">.left-column *:first-child *</span> {margin:0;}
+					</code>
+				</td>
+				<td>
+					Сработает для всех дочерних первых элементов класса <span class="red">left-column</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="4" style="text-align: center;">
+					<b style="color: black;"><mark>ИЗБИРАТЕЛЬНЫЕ селекторы</mark></b>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					input[type="password"]<br>
+					<span class="gray">(через [...] скобки)</span>
+				</td>
+				<td><b>Селектор АТРИБУТОВ</b></td>
+				<td>
+					<code>
+						&lt;label for="password-id"&gt;<span class="gray">Поле ввода пароля: </span>&lt;/label&gt;<br>
+						&lt;input type="password" name="password" id="password-id"&gt;
+						<hr>
+						<span class="red">input[type="password"]</span>  {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;border: 4px dotted red;<br>
+						}
+						</code>
+					</td>
+				<td>
+					<label for="password-id">Поле ввода пароля: </label>
+					<input type="password" name="password" id="password-id"><br><br>
+					<span class="gray">Выберет все инпуты с типом <span class="red">password</span></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					div[class^="column-"]<br>
+					<span class="gray">(через "^")</span>
+				</td>
+				<td><b>Селектор по началу названия атрибута</b></td>
+				<td>
+					<code>
+				&lt;div class=<span class="red">"column-1"</span>&gt; &lt;/div&gt;<br>
+				&lt;div class=<span class="red">"column-right"</span>&gt; &lt;/div&gt;
+					</code>	
+				</td>
+				<td>
+					Выберет все теги div, у которых название класса начинается с подстроки <span class="red">"column-"</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					a[href$=".pdf"]<br>
+					<span class="gray">(через "$")</span>
+				</td>
+				<td><b>Селектор по концу названия атрибута</b></td>
+				<td>
+					<code>
+				&lt;a href=<span class="red">"doc1.pdf"</span>&gt; &lt;/a&gt;<br>
+				&lt;a href=<span class="red">"doc2.pdf"</span>&gt; &lt;/a&gt;
+					</code>	
+				</td>
+				<td>
+					Выберет все ссылки, адреса кот. заканчиваются на <span class="red">".pdf"</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					div[class*="column"]<br>
+					<span class="gray">(через "*")</span>
+				</td>
+				<td><b>Селектор фразы атрибута</b></td>
+				<td>
+					<code>
+				&lt;div class=<span class="red">"column-1"</span>&gt; &lt;/div&gt;<br>
+				&lt;div class=<span class="red">"right-column"</span>&gt; &lt;/div&gt;<br>
+				&lt;div class=<span class="red">"column2"</span>&gt; &lt;/div&gt;<br>
+				&lt;div class=<span class="red">"_column"</span>&gt; &lt;/div&gt;
+					</code>	
+				</td>
+				<td>
+					Выберет все теги div, у которых в названии класса есть слово <span class="red">"column"</span> в любом месте
+				</td>
+			</tr>
+			<tr>
+				<td>
+					div[class~="column"]<br>
+					<span class="gray">(через "~")</span>
+				</td>
+				<td><b>Селектор по части названия атрибута</b></td>
+				<td>
+					<code>
+				&lt;div class=<span class="red">"column"</span>&gt; &lt;/div&gt;<br>
+				&lt;div class=<span class="red">"right column"</span>&gt; &lt;/div&gt;
+					</code>	
+				</td>
+				<td>
+					Выберет все теги div, у которых один из классов <span class="red">"column"</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					div[class|="column"]<br>
+					<span class="gray">(через "|")</span>
+				</td>
+				<td><b>Селектор совпадению атрибута</b></td>
+				<td>
+					<code>
+				&lt;div class=<span class="red">"column"</span>&gt; &lt;/div&gt;<br>
+				&lt;div class=<span class="red">"column-right"</span>&gt; &lt;/div&gt;
+					</code>	
+				</td>
+				<td>
+					Выберет все теги div, у которых название одного из классов <span class="red">"column"</span> или начинается с  <span class="red">"column-"</span>
+				</td>
+			</tr>
+	</table>
+	
+	<table class="discription-table">
+			<caption><mark>Псевдоклассы (через ":")</mark></caption>
+			<tr>
+				<th>Тип</th>
+				<th>Описание</th>
+				<th colspan="2">Примеры</th>
+			</tr>
+			<tr>
+				<td>::before</td>
+				<td><b>Добавляет контент ДО ...</b></td>
+				<td>
+					<code>
+						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
+						<span class="red">span::before </span>{<br> 
+						&nbsp;&nbsp;content:'before';<br>
+						&nbsp;&nbsp;color: red;<br>
+						}
+					</code>
+				</td>
+				<td><span class="red">before</span>Some text</td>
+			</tr>
+			<tr>
+				<td>::after</td>
+				<td><b>Добавляет контент ПОСЛЕ ...</b></td>
+				<td>
+					<code>
+						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
+						<span class="red">span::after </span>{<br> 
+						&nbsp;&nbsp;content:'after';<br>
+						&nbsp;&nbsp;color: red;<br>
+						}
+					</code>
+				</td>
+				<td>Some text<span class="red">after</span></td>
+			</tr>
+			<tr>
+				<td>::selection</td>
+				<td><b>ВЫДЕЛЯЮЩИЙ селектор</b><br>(работает не везде, выручают префиксы)</td>
+				<td>
+					<code>
+						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
+						<span class="red">span::selection </span>{<br> 
+						&nbsp;&nbsp;background-color: red;<br>
+						&nbsp;&nbsp;color: red;<br>
+						}<br>
+						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
+						<span class="red">span::-moz-selection </span>{<br> 
+						&nbsp;&nbsp;background-color: red;<br>
+						&nbsp;&nbsp;color: red;<br>
+						}
+					</code>
+				</td>
+				<td class="selection">Some text</td>
+			</tr>
+			<tr>
+				<td>:first-child</td>
+				<td><b>Первый потомок</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:first-child</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>Первый элемент списка станет красным</td>
+			</tr>
+			<tr>
+				<td>:last-child</td>
+				<td><b>Последний потомок</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:last-child</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>Последний элемент списка станет красным</td>
+			</tr>
+			<tr>
+				<td>:nth-child(...)</td>
+				<td><b>Номер потомка</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:nth-child(3)</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td><br><br><br>
+					Третий элемент списка станет красным<hr>
+					<span class="red">(odd)</span> - нечётные;<br>
+					<span class="red">(even)</span> - чётные;<br>
+					<span class="red">(2n)</span> - каждый 2-ой;<br>
+					<span class="red">(1n + 6)</span> - все элементы, начиная с 6-ого;<br>
+					<span class="red">(2n + 6)</span> - каждый 2-й, начиная с 6-ого;<br>
+					<span class="red">(3n + 9)</span> - каждый 3-й, начиная с 9-ого;<br>
+				</td>
+			</tr>
+			<tr>
+				<td>:not(...)</td>
+				<td><b>ОТРИЦАЮЩИЙ селектор</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:not(:last-child)</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Все элементы кроме последнего станут красными<br>
+					<mark>Нельзя сочетать в селекторе несколько :not</mark>
+				</td>
+			</tr>
+			<tr>
+				<td>:empty</td>
+				<td><b>"ПУСТОЙ" селектор</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:empty</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>Все пустые элементы списка станут красными</td>
+			</tr>
+			<tr>
+				<td>::first-line</td>
+				<td><b>Cелектор ПЕРВОЙ ЛИНИИ</b></td>
+				<td>
+					<code>
+						&lt;p&gt;<br>
+						<span class="red">Some text Some text Some text </span><br>
+						Some text Some text Some text <br>
+						Some text Some text Some text <br>
+						&lt;/p&gt;<hr>
+						<span class="red">p::first-line</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>Первая строка параграфа станет красной</td>
+			</tr>
+			<tr>
+				<td>::first-letter</td>
+				<td><b>Cелектор ПЕРВОЙ БУКВЫ</b></td>
+				<td>
+					<code>
+						&lt;span&gt;<span class="red">S</span>ome text &lt;/span&gt;<hr>
+						<span class="red">span::first-letter</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Первая буква спана станет красной.<br>
+					Если стоят точки или символы перед первой буквой, то они вместе с буквой станут тоже красными
+				</td>
+			</tr>
+			<tr>
+				<td>:only-child</td>
+				<td><b>Cелектор ЕДИНСТВЕННОГО ДОЧЕРНЕГО ЭЛЕМЕНТА</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;&lt;/li&gt;</span><br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:only-child</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет все элементы списка, если они являются единственными дочерними элементами
+				</td>
+			</tr>
+			<tr>
+				<td>:nth-last-child(...)</td>
+				<td><b>Cелектор ДОЧЕРНЕГО ЭЛЕМЕНТА ПО НОМЕРУ С КОНЦА</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
+						&nbsp;&nbsp;<span class="red">&lt;li&gt;5&lt;/li&gt;</span><br>
+						&nbsp;&nbsp;&lt;li&gt;6&lt;/li&gt;<br>
+						&lt;/ul&gt;<hr>
+						<span class="red">ul li:nth-last-child(2)</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет дочерний элемент списка второй с конца
+				</td>
+			</tr>
+			<tr>
+				<td>:first-of-type</td>
+				<td><b>Cелектор ПЕРВОГО ТИПА</b></td>
+				<td>
+					<code>
+						<span class="red">&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
+						&lt;/ul&gt;</span><br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						<hr>
+						<span class="red">ul:first-of-type</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет первый список в коде
+				</td>
+			</tr>
+			<tr>
+				<td>:last-of-type</td>
+				<td><b>Cелектор ПОСЛЕДНЕГО ТИПА</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						<span class="red">&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
+						&lt;/ul&gt;</span>
+						<hr>
+						<span class="red">ul:last-of-type</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет последний список в коде
+				</td>
+			</tr>
+			<tr>
+				<td>:nth-of-type(...)</td>
+				<td><b>Cелектор n-ОГО ТИПА</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						<span class="red">&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
+						&lt;/ul&gt;</span><br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
+						&lt;/ul&gt;
+						<hr>
+						<span class="red">ul:nth-of-type(3)</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет 3-й список в коде
+				</td>
+			</tr>
+			<tr>
+				<td>:nth-last-of-type(...)</td>
+				<td><b>Cелектор n-ОГО ТИПА С КОНЦА</b></td>
+				<td>
+					<code>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
+						&lt;/ul&gt;<br>
+						<span class="red">&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
+						&lt;/ul&gt;</span><br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
+						&lt;/ul&gt;
+						<hr>
+						<span class="red">ul:nth-last-of-type(2)</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет 2-й список в коде с конца
+				</td>
+			</tr>
+			<tr>
+				<td>:only-of-type</td>
+				<td><b>Cелектор ЕДИНСТВЕННОГО ТИПА</b></td>
+				<td>
+					<code>
+						<span class="red">&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
+						&lt;/ul&gt;</span><hr>
+						<span class="red">ul:only-of-type</span><br> 
+						&nbsp;&nbsp;{color: red;}
+					</code>
+				</td>
+				<td>
+					Выберет список, если он является единственным в своём родителе
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align: center;">
+					<b style="color: black;"><mark>для ССЫЛОК</mark></b>
+				</td>
+			</tr>
+			<tr>
+				<td>:link</td>
+				<td><br><br><br><br><br><b>Выбирает непосещенные ссылки</b><br>
+					<small class="gray">
+						Порядок в коде:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;:link<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;:visited<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;:hover<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;:active
+					</small>
+				</td>
+				<td>
+					<code>
+						&lt;a class="some-link"&gt;<br>
+						<span class="gray">Some link</span><br>
+						&lt;/a&gt;</span>
+						<hr>
+						<span class="red">.some-link:link</span>  {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;color: violet;<br>
+						}
+						</code>
+					</td>
+				<td>
+					<a class="some-link3" href="#">Some link</a>
+				</td>
+			</tr>
+			<tr>
+				<td>:visited</td>
+				<td><b>Выбирает посещенные ссылки</b></td>
+				<td>
+					<code>
+						&lt;a class="some-link"&gt;<br>
+						<span class="gray">Some link</span><br>
+						&lt;/a&gt;</span>
+						<hr>
+						<span class="red">.some-link:visited</span>  {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;color: darkviolet;<br>
+						}
+						</code>
+					</td>
+				<td>
+					<a class="some-link4" href="#">Some link</a>
+				</td>
+			</tr>
+			<tr>
+				<td>:hover</td>
+				<td><b>Работает при наведении курсора</b></td>
+				<td>
+					<code>
+						&lt;a class="some-link"&gt;<br>
+						<span class="gray">Some link</span><br>
+						&lt;/a&gt;</span>
+						<hr>
+						<span class="red">.some-link:hover</span>  {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer;<br>
+						}
+						</code>
+					</td>
+				<td>
+					<a class="some-link">Some link</a>
+				</td>
+			</tr>
+			<tr>
+				<td>:active</td>
+				<td><b>Работает при нажатии кнопки мыши</b></td>
+				<td>
+					<code>
+						&lt;a class="some-link2"&gt;<br>
+						<span class="gray">Some link</span><br>
+						&lt;/a&gt;</span>
+						<hr>
+						<span class="red">.some-link2:active</span>  {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;outline: 2px solid red;<br>
+						}
+						</code>
+					</td>
+				<td>
+					<a class="some-link2">Some link</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align: center;">
+					<b style="color: black;"><mark>для ФОРМ</mark></b>
+				</td>
+			</tr>
+			<tr>
+				<td><br><br><br><br>
+					:focus<br>
+					<span class="gray">Работает не только с формами, может работать с ссылками, каторые также "табируются"</span>
+				</td>
+				<td><b>Работает для элемента, находящегося в фокусе (курсор в текстовом поле)</b></td>
+				<td>
+					<code>
+						&lt;label for="text-id"&gt;<span class="gray">Текстовое поле: </span>&lt;/label&gt;<br>
+						&lt;input type="text" name="text" id="text-id"&gt;<hr>
+						<span class="red">input:focus</span> {border: 4px solid pink;}
+					</code>
+				</td>
+				<td>
+					<label for="text-id">Текстовое поле: </label>
+					<input type="text" name="text" id="text-id">
+				</td>
+			</tr>
+			<tr>
+				<td>:enabled</td>
+				<td><b>Работает для форм и элементов форм, у кот. НЕ СТОИТ атрибут <span class="red">disabled</span></b></td>
+				<td>
+					<code><small>
+						&lt;label for="year-id"&gt;Год рождения:&lt;/label&gt;<br>
+    					&lt;select name="year" id="year-id"&gt;<br>
+      						&nbsp;&nbsp;&lt;option <span class="red">disabled</span>&gt; <span class="gray">2001 </span>&lt;/option&gt;<br>
+     						&nbsp;&nbsp;&lt;option <span class="red">disabled</span>&gt; <span class="gray">2002 </span>&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option <span class="red">disabled</span>&gt; <span class="gray">2003 </span>&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt; <span class="gray">2004 </span>&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt; <span class="gray">2005 </span>&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt; <span class="gray">2006 </span>&lt;/option&gt;<br>
+							&nbsp;&nbsp;&lt;option&gt; <span class="gray">2007 </span>&lt;/option&gt;<br>
+      						&nbsp;&nbsp;&lt;option&gt; <span class="gray">2008 </span>&lt;/option&gt;<br>
+   						 &lt;/select&gt;</small>
+						<hr>
+						<span class="red">option:disabled</span> {text-decoration: line-through;}
+					</code>
+				</td>
+				<td rowspan="1">
+					    <label for="year-id">Год рождения:</label>
+						<select name="year" id="year-id">
+							<option disabled> 2001 </option>
+							<option disabled> 2002 </option>
+							<option disabled> 2003 </option>
+							<option> 2004 </option>
+							<option> 2005 </option>
+							<option> 2006 </option>
+							<option> 2007 </option>
+							<option> 2008 </option>
+						</select> 
+				</td>
+			</tr>
+			<tr>
+				<td>:read-only</td>
+				<td><b>Работает для форм и элементов форм, у кот. стоит атрибут <span class="red">read-only</span></b></td>
+				<td>
+					<code>
+						Аналог: <span class="red">input[readonly]</span>
+					</code>
+				</td>
+				<td rowspan="2">Работает не во всех браузерах</td>
+			</tr>
+			<tr>
+				<td>:read-write</td>
+				<td><b>Работает для форм и элементов форм, кот. доступных для редактирования</b></td>
+				<td>
+					<code>
+						Аналог: <span class="red">input:not([readonly])</span>
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>:required</td>
+				<td><b>Выбирает формы С атрибутом обязательного заполнения</b></td>
+				<td>
+					<code>
+						Аналог: <span class="red">input[required]</span>
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>:optional</td>
+				<td><b>Выбирает формы БЕЗ атрибута обязательного заполнения, обратный :required</b></td>
+				<td>
+					<code>
+						Аналог: <span class="red">input:not([required])</span>
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>:checked</td>
+				<td><b>Выбирает формы c атрибутом <span class="red">checked</span></b></td>
+				<td>
+					<code>
+						Аналог: <span class="red">input[checked]<br></span>
+					</code>
+				</td>
+				<td>Работает с инпутами <span class="red">radio</span> и <span class="red">checkbox</span></td>
+			</tr>
+			<tr>
+				<td>:valid</td>
+				<td><b>Выбирает элементы с <span class="red">КОРРЕКТНЫМ</span> введённым значением</b></td>
+				<td>
+					<code><small>
+						&lt;label for="first-name-id"&gt;<span class="gray">Введите код:</span> &lt;/label&gt;
+						&lt;input type="text" name="first-name" id="first-name-id" <span class="red">pattern="[0-9]{3}\s[0-9]{3}"</span> placeholder="XXX_XXX"&gt;</small>
+						<hr>
+						<span class="red">#first-name-id:valid</span> {color: green; font-weight: bold;}
+					</code>
+				</td>
+				<td rowspan="2">
+					<label for="first-name-id">Введите код: </label>
+					<input type="text" name="first-name" id="first-name-id" pattern="[0-9]{3}\s[0-9]{3}" placeholder="XXX_XXX"><br><br>	
+					Корректность ввдённых данных должна быть указана в атрибуте <span class="red">pattern</span></td>
+			</tr>
+			<tr>
+				<td>:invalid</td>
+				<td><b>Выбирает элементы с <span class="red">НЕКОРРЕКТНЫМ</span> введённым значением</b></td>
+				<td>
+					<code>
+						<span class="red">#first-name-id:invalid</span> {color: red; font-weight: bold;}
+					</code>
+				</td>
+			</tr>
+			<tr>
+				<td>:in-range</td>
+				<td><b>Выбирает элементы, значение кот. <span class="red">ПОПАДАЕТ</span> в указанный диапозон</b></td>
+				<td>
+					<code>
+						
+					</code>
+				</td>
+				<td rowspan="2">Работает с <span class="red">type="mumber" min="..." max="..."</span></td>
+			</tr>
+			<tr>
+				<td>:out-of-range</td>
+				<td><b>Выбирает элементы, значение кот. <span class="red">НЕ ПОПАДАЕТ</span> в указанный диапозон</b></td>
+				<td>
+					<code>
+						
+					</code>
+				</td>
+			</tr>
+			
+	</table>
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

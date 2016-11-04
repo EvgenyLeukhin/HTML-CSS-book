@@ -1,0 +1,328 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | JS | Операторы</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a class="active" href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+            <li>
+                <a class="active" href="#">Основы</a>
+                <ul class="sub-menu sub-menu8">
+                    <li><a href="js-lang.html">Язык JS</a></li>
+                    <li><a href="load.html">Загрузка</a></li>
+			        <li><a href="types.html">Типы данных</a></li>
+			        <li><a href="var.html">Переменные</a></li>
+			        <li><a href="operators.html">Операторы</a></li>
+			       
+			        <li><a href="algorythm.html">Алгоритмы</a></li>
+			        <li><a href="if-else.html">if - else, switch-case</a></li>
+			        <li><a href="cycle.html">Циклы</a></li>
+                    <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+			<li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS & HTML</a>
+                <ul class="sub-menu sub-menu6">
+                    <li><a href="complete.html">Вывод данных</a></li>
+			        <li><a href="dom.html">DOM</a></li>
+			        <li><a href="html-methods.html">Методы</a></li>
+			        <li><a href="actions.html">События</a></li>
+			        <li><a href="modal-window.html">Мод. окно</a></li>
+			        <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+			
+			<li>
+			    <a href="#">jQuery</a>
+			    <ul class="sub-menu sub-menu7">
+			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
+			        <li><a href="jquery-func.html">jQuery-функции</a></li>
+                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
+                </ul>
+			 </li>
+			 <li><a href="ajax.html">Ajax</a></li>
+			 <li><a href="canvas.html">Canvas</a></li>
+			 <li><a href="git.html">Git</a></li>
+			 <li><a href="console.html">Консоль</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | JavaScript | Операторы</h2>
+
+	<table class="discription-table" border-spacing: 5px;>
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Сложение (+)</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Сложение переменных (конкатенация)
+			</td>
+			<td style="width: 400px;">
+			    <h3>Цифровое сложение</h3>
+				<code>
+					var a = 1;<br>
+					var b = 2;<br>
+					var c = a + b;<br>
+                    console.log(c);
+                    <span class="gray">//3</span>   
+				</code><hr>
+				<h3>Строковое сложение</h3>
+				<code>
+					var a = 'John ';<br>
+					var b = 'Smith';<br>
+					var c = a + b;<br>
+                    console.log(c);
+                    <span class="gray">//John Smith</span>   
+				</code><hr>
+				<h3>Смешанное сложение</h3>
+				<code>
+					var a = 1;<br>
+					var b = 'Smith';<br>
+					var c = a + b;<br>
+                    console.log(c);
+                    <span class="gray">//1Smith</span>   
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Если при сложении различных переменных хотя бы одно будет 'строкой', то интерпретатор присваивает остальным тоже строчный тип
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Вычитание (-)</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Вычитание переменных
+			</td>
+			<td style="width: 400px;">
+				<code>
+					var a = 1;<br>
+					var b = 2;<br>
+					var c = a - b;<br>
+                    console.log(c);
+                    <span class="gray">//-1</span>   
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+			
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Умножение (*)</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Умножение переменных
+			</td>
+			<td style="width: 400px;">
+				<code>
+					var a = 1;<br>
+					var b = 2;<br>
+					var c = a*b;<br>
+                    console.log(c);
+                    <span class="gray">//2</span>   
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+			Если стоит бинарный оператор умножения, то интерпретатор будет пытаться преобразовать операнды в числовой тип<br>
+			<code>console.log('2'*'3'); <span class="gray">//6</span></code>
+			</td>
+		</tr>
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Деление (/)</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Деление переменных
+			</td>
+			<td style="width: 400px;">
+				<code>
+					var a = 1;<br>
+					var b = 2;<br>
+					var c = a/b;<br>
+                    console.log(c);
+                    <span class="gray">//0.5</span>   
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+			Если стоит бинарный оператор деления, то интерпретатор будет пытаться преобразовать операнды в числовой тип
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Приоритет</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Приоритет у умножения и деления, но если поставить (), то приоритет изменится
+			</td>
+			<td style="width: 400px;">
+				<code>
+				    var a, b, c, d;<br>
+                    a = 1;<br>
+                    b = 2;<br>
+                    c = 3;<br>
+                    d = 4;<br>
+                    e = a + b * c / d;<br>
+                    f = (a + b)* c / d;<br>
+                    console.log(e);    <span class="gray">//2.5</span><br>
+                    console.log(f);    <span class="gray">//2.25</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+			
+			</td>
+		</tr>
+		
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Другие операторы</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Некоторые распространённые операторы
+			</td>
+			<td style="width: 400px;">
+                <h3>Унарные операторы</h3>
+			    <code>++</code> Увеличивает на 1 (ИНКРИМЕНТ)<br>
+			    <code>++a</code> Префиксный инкримент, увеличивает сразу на 1<br>
+			    <code>a++</code> Посткрисный инкримент, увеличивает на 1, но возвращает старое значение<br>
+				<code>--</code> Уменьшает на 1 (ДИКРИМЕНТ)<br>
+                <code>&lt;&lt;</code> Возведение в квадрат <span class="gray">// 2 &lt;&lt; 8</span><br>
+                <code>a = (10%3);</code> <span class="gray">//1</span> Остаток от деления<br>
+                <code>a += 10;</code> <i>Аналог:</i> <code>a = a + 10;</code><br>
+				<code>a -= 10;</code> <i>Аналог:</i> <code>a = a - 10;</code><br>
+				<code>a *= 10;</code> <i>Аналог:</i> <code>a = a * 10;</code><br>
+				<code>a /= 10;</code> <i>Аналог:</i> <code>a = a / 10;</code><br>
+				<code>%</code> Вычисление остатка от деления <code>if (a%2 == 2)</code> (если при делении a на 2 остаток 0, любые чётные числа) <br>
+				<code>=</code> Присваивание
+                <h3>Операторы СРАВНЕНИЯ</h3>
+				<code>==</code> Нестрогое равенство (10 == '10' true), лучше НЕ использовать<br>
+                <code>===</code> Строгое равно (с равенствами типов 10 === '10' false), <mark>на практике лучше всегда пользоваться строгим равенством</mark><br>
+                <code>!=</code> Не равно<br>
+                <code>!==</code> Строго не равно<br>
+                <code>></code> Больше<br>
+                <code>&lt;</code> Меньше<br>
+				<code>>=</code> Больше или равно<br>
+				<code>&lt;=</code> Меньше или равно<br>
+				<h3>Логические операторы (возвращают значения, не бул)</h3>
+				<code>&&</code> И <br>
+				<code>||</code> ИЛИ <br>
+                <code>a && b</code> Если a true, то b не проверяется<br>
+                <code>a || b</code> Если a false, то b не проверяется<br>
+                <code>'1' || '2' || '3'</code> //1<br>
+                <code>'1' && '2' && '3'</code> //3<br>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                Операторы <code>+= </code> и другие, добавляют к переменной то, что располагается справа от знака =<hr>
+                Операторы <code>></code> Больше и <code>&lt;</code> Меньше так же работают со СТРОКОВЫМ ТИПОМ ДАННЫХ, больше будет, то слово, чья буква дальше по алфавиту, причём строчные буквы стоят дальше заглавных, поэтому больше ('a' > 'A')<hr>
+                Логический оператор <code>||</code> проверяет на истинность левый операнд, если он тру, то остальные не проверяет, а сразу возвращает значение этого правдивого операнда, если левый ложь, тогда проверяет правый<br>
+                Логический оператор <code>&&</code> также начинает проверять левый операнд, если он ложный, то другое не проверяется, а сразу возвращает ложь первого<br>
+                ИЛИ вспотыкается на правде, И - на лжи<br>
+                Операторы вида ++ применяются ТОЛЬКО К ПЕРЕМЕННЫМ, нельзя записывать <s>++5</s>
+			</td>
+		</tr>
+		
+	</table>
+        
+
+        <table class="discription-table" border-spacing: 5px;>
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Побитовые операторы</th>
+            </tr>
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    
+                </td>
+                <td style="width: 400px;">
+                    <h3>Побитовое И</h3> 
+                    <code> 1 & 2;</code> 
+                    <h3>Побитовое ИЛИ</h3> 
+                    <code> 1 | 2;<br/> 
+                    <span class="gray">// 0 меняются на 1 в бинарном коде (001 | 010 = 011)</span></code> 
+                    <h3>Побитовое НЕ</h3> 
+                    <code> 1 ~ 2;</code> 
+                    <h3>Побитовые сдвиги вправо-влево</h3>
+                    Вправо: деление на 2; влево: умножение на 2 (1 ед.)<br/>
+                    <code>  a = 32 >> 1; <span class="gray">//16</span><br/>   
+                            a = 64 &lt;&lt; 1; <span class="gray">//128</span>
+                    </code> 
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+                    Побитовые операции работают быстрее, чем остальные
+                </td>
+            </tr>
+        </table>
+        
+                <code><pre>
+a = 0;  <span class="gray"> // 00000000000000000000000000000000</span>
+a = 1;  <span class="gray"> // 00000000000000000000000000000001</span>
+a = 2;  <span class="gray"> // 00000000000000000000000000000010</span>
+a = 3;  <span class="gray"> // 00000000000000000000000000000011</span>
+a = 255; <span class="gray">// 00000000000000000000000011111111</span>
+        </pre></code>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	<div class="sectionblock"><div class="section"><div class="contentTableWrapper"><table responsive="true"><tbody><tr responsive="true"><th><p><span id="mt3" class="sentence" data-guid="67daf92c833c41c95db874e18fcb2786" data-source="Description" xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">
+  <sentencetext xmlns="http://www.w3.org/1999/xhtml">Описание</sentencetext>
+</sentencetext></span></p></th><th><p><span id="mt4" class="sentence" data-guid="49515de55d98a8ebd6e5f58ed7bd6d55" data-source="Language Element" xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Элемент языка</sentencetext></span></p></th></tr><tr><td data-th="Описание"><p><span id="mt5" class="sentence" data-guid="31424e17bbfb5d711c39fe59dcc520c9" data-source="Adds the value of an expression to the value of a variable and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Прибавляет значение выражения к значению переменной и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/w2xk8y0c(v=vs.94).aspx">Оператор присваивания сложения (+=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt7" class="sentence" data-guid="8f318660b36369eea0f6531af640db12" data-source="Sums two numbers or concatenates two strings." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет сложение двух чисел или объединяет две строки.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/wwfws59w(v=vs.94).aspx">Оператор сложения (+)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt9" class="sentence" data-guid="e74c22945fef6c4f628229041d963c60" data-source="Assigns a value to a variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Присваивает значение переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/1w2h1k9x(v=vs.94).aspx">Оператор присваивания (=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt11" class="sentence" data-guid="9f235507e1c223e6bd6e6a152fa2c012" data-source="Performs a bitwise AND on the value of a variable and the value of an expression and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Осуществляет операцию побитового И для значения переменной и значения выражения, а затем присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/a9h8y72a(v=vs.94).aspx">Оператор присваивания побитового И (&amp;=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt13" class="sentence" data-guid="f292fd386ba145dd2220f36f460249da" data-source="Performs a bitwise AND on two expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет побитовую операцию И для двух выражений.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/dazfy1f3(v=vs.94).aspx">Оператор побитового И (&amp;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt15" class="sentence" data-guid="24cbb2aac888d8cc8a61a0ac91e6969e" data-source="Shifts the bits of an expression to the left. " xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сдвигает биты выражения влево. </sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/t7f48wx9(v=vs.94).aspx">Оператор побитового сдвига влево (&lt;&lt;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt17" class="sentence" data-guid="45e86b3a071ed092e5d600ea813fe0ec" data-source="Performs a bitwise NOT (negation) on an expression." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет операцию побитового НЕ (отрицания) для выражения.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/zf9s465t(v=vs.94).aspx">Оператор побитового НЕ (~)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt19" class="sentence" data-guid="ea224a8631ae01620f6ce32f25380c3d" data-source="Performs a bitwise OR on the value of a variable and the value of an expression and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет операцию побитового ИЛИ для значения переменной и значения выражения, а затем присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/81bads72(v=vs.94).aspx">Оператор присваивания побитового ИЛИ (|=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt21" class="sentence" data-guid="e52dc3617578e8aab460200367f89981" data-source="Performs a bitwise OR on two expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет операцию побитового ИЛИ для двух выражений.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/066h456z(v=vs.94).aspx">Оператор побитового ИЛИ (|)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt23" class="sentence" data-guid="9156ca9af9b1fc94452b2a35359dc4b2" data-source="Shifts the bits of an expression to the right, maintaining sign. " xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сдвигает биты выражения вправо, сохраняя знак. </sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/5s9e947e(v=vs.94).aspx">Оператор побитового сдвига вправо (&gt;&gt;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt25" class="sentence" data-guid="72eb4ef3909259108ebefdd3dc35253b" data-source="Performs a bitwise exclusive OR on a variable and an expression and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет операцию побитового исключающего ИЛИ для значения переменной и значения выражения, а затем присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/06f6ta51(v=vs.94).aspx">Оператор присваивания побитового исключающего ИЛИ (^=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt27" class="sentence" data-guid="798834fd8ce02727103e50ad072f4cb7" data-source="Performs a bitwise exclusive OR on two expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет операцию побитового исключающего ИЛИ для двух выражений.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ece515h6(v=vs.94).aspx">Оператор побитового исключающего ИЛИ (^)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt29" class="sentence" data-guid="c691d0e98f73120aab2d589d373ca54b" data-source="Causes two expressions to be executed sequentially." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Приводит к последовательному выполнению двух выражений.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/9b37css7(v=vs.94).aspx">Оператор "запятая" (,)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt31" class="sentence" data-guid="51a49a8991631b07c21509fe2c0e7f2d" data-source="Returns a Boolean value indicating the result of the comparison." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Возвращает логическое значение, показывающее результат сравнения.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Операторы сравнения</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt33" class="sentence" data-guid="57d4e410821de12f79aa234574cc447e" data-source="List of compound assignment operators." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Список составных операторов присваивания.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/what800t(v=vs.94).aspx">Составные операторы присваивания</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt35" class="sentence" data-guid="f2c6ba2a32c4d2d748a651ca674bfcfc" data-source="Executes one of two expressions depending on a condition." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет одно из двух выражений в зависимости от условия.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/be21c7hw(v=vs.94).aspx">Условный (троичный) оператор (?:)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt37" class="sentence" data-guid="270026e60ca239064be5540334a8a1da" data-source="Decrements a variable by one." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Уменьшает переменную на единицу.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/26k41698(v=vs.94).aspx">Оператор уменьшения (--)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt39" class="sentence" data-guid="37dad3b2147d20e20a7d0b0eee64e080" data-source="Deletes a property from an object, or removes an element from an array." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Удаляет свойство из объекта или элемент из массива.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/2b2z052x(v=vs.94).aspx">Оператор delete</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt41" class="sentence" data-guid="029de92fcf533436227eea8b77608f93" data-source="Divides the value of a variable by the value of an expression and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Делит значение переменной на значение выражения и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/cfyydsaa(v=vs.94).aspx">Оператор присваивания деления (/=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt43" class="sentence" data-guid="a37928f11f8b5c309eba3fe5ed36fd98" data-source="Divides two numbers and returns a numeric result." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет деление двух чисел и возвращает числовой результат.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/w8z179xh(v=vs.94).aspx">Оператор деления (/)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt45" class="sentence" data-guid="92debd06892be3d6e45fbd10efd49e10" data-source="Tests for the existence of a property in an object." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Проверяет существование свойства в объекте.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/9k25hbz2(v=vs.94).aspx">Оператор in</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt47" class="sentence" data-guid="95529d45d283965b23f2979634b32662" data-source="Compares two expressions to determine if they are equal." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, равны ли они.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор равенства (==)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt49" class="sentence" data-guid="37ed6f3e7e5e4944e88ffd83fbc0531c" data-source="Compares two expressions to determine if one is greater than the other." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, верно ли, что одно значение больше другого.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор "больше чем" (&gt;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt51" class="sentence" data-guid="ff6049272f63c920510fdf0eeb3e85df" data-source="Compares two expressions to determine if one is greater than or equal to the other." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, верно ли, что одно значение больше другого или равно ему.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор "больше чем или равно" (&gt;=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt53" class="sentence" data-guid="d1a15938a845ff94e854466ce0e04f01" data-source="Compares two expressions to determine if they are equal in value and of the same data type." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, имеют ли они равные значения и один и тот же тип данных.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор тождества (===)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt55" class="sentence" data-guid="83d16b6b122dc8f3ec51919c1674e38a" data-source="Increments a variable by one." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Увеличивает переменную на единицу.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/26k41698(v=vs.94).aspx">Оператор инкремента (++)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt57" class="sentence" data-guid="30451f97851fc5709f9af21c48822078" data-source="Compares two expressions to determine if they are unequal." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, верно ли, что они не равны.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор неравенства (!=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt59" class="sentence" data-guid="3aa1130d16a7011417ca1e6e048e50e4" data-source="Returns a Boolean value that indicates whether or not an object is an instance of a particular class." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Возвращает логическое значение, указывающее, является ли объект экземпляром определенного класса.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/zh0zb36z(v=vs.94).aspx">Оператор instanceof</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt61" class="sentence" data-guid="ffdab4cfb575e3d76ae9e0708bb6db73" data-source="Left shifts the value of a variable by the number of bits specified in the value of an expression and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сдвигает значение переменной влево на количество битов, указанное в значении выражения, и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/2027xe5w(v=vs.94).aspx">Оператор присваивания сдвига влево (&lt;&lt;=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt63" class="sentence" data-guid="6281038c50b4cebd935f60fca4312c44" data-source="Compares two expressions to determine if one is less than the other." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, верно ли, что одно значение меньше другого.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор "меньше чем" (&lt;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt65" class="sentence" data-guid="80c59d5b1afbc8a864ed5535ec66f0b4" data-source="Compares two expressions to determine if one is less than or equal to the other." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, верно ли, что одно значение меньше другого или равно ему.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор "меньше чем или равно" (&lt;=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt67" class="sentence" data-guid="82aa2b2128aaf8769daa217336473d2b" data-source="Performs a logical conjunction on two expressions. " xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет логическое объединение двух выражений. </sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/719e8e30(v=vs.94).aspx">Оператор логического И (&amp;&amp;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt69" class="sentence" data-guid="7b7932f570a945460b13f4d54ad93370" data-source="Performs logical negation on an expression." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет логическое отрицание выражения.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/zz722703(v=vs.94).aspx">Оператор логического НЕ (!)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt71" class="sentence" data-guid="858a40c683e19ed9ffb258df8ee4b409" data-source="Performs a logical disjunction on two expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет логическое разделение двух выражений.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/xxxekd04(v=vs.94).aspx">Оператор логического ИЛИ (||)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt73" class="sentence" data-guid="4d694d411b3e4d45241e2f2accfcdb54" data-source="Divides the value of a variable by the value of an expression, and assigns the remainder to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Делит значение переменной на значение выражения и присваивает остаток переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ff3sz136(v=vs.94).aspx">Оператор присваивания модуля (%=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt75" class="sentence" data-guid="733395faf653f01cd0797276a83a0007" data-source="Divides two numbers and returns the remainder." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет деление двух чисел и возвращает остаток.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/9f59bza0(v=vs.94).aspx">Оператор модуля (%)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt77" class="sentence" data-guid="2d851ac32426f629e808d5b695018b2c" data-source="Multiplies the value of a variable by the value of an expression and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Умножает значение переменной на значение выражения и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/yhecb1ct(v=vs.94).aspx">Оператор присваивания умножения (*=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt79" class="sentence" data-guid="f5bc3fa53b5e9182de9f8a9d186cfee9" data-source="Multiplies two numbers." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет умножение двух чисел.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/s0f51f9b(v=vs.94).aspx">Оператор умножения (*)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt81" class="sentence" data-guid="e5d1f7e81578935515b408a0982c3d33" data-source="Creates a new object. " xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Создает новый объект. </sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ec3z6dcc(v=vs.94).aspx">Оператор new</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt83" class="sentence" data-guid="8cdb8b25092defe491fc78ccaf064c1c" data-source="Compares two expressions to determine that they are not equal in value or of the same data type." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сравнивает два выражения и определяет, верно ли, что они не имеют равные значения или один и тот же тип данных.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/ky6fyhws(v=vs.94).aspx">Оператор нетождества (!==)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt85" class="sentence" data-guid="8f979385616339bc9ddfc7610a1cd2f5" data-source="Right shifts the value of a variable by the number of bits specified in the value of an expression, maintaining the sign, and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сдвигает значение переменной вправо на количество битов, указанное в значении выражения, с сохранением знака и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/7fd7s4a7(v=vs.94).aspx">Оператор присваивания сдвига вправо (&gt;&gt;=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt87" class="sentence" data-guid="75b64a7dd8c6eccb867d917726a2806c" data-source="Allows an array to be initialized from multiple elements of an array literal, or allows an expression to be expanded to multiple arguments (in function calls)." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Позволяет инициализировать массив из нескольких элементов литерала массива или расширить выражение до нескольких аргументов (в вызовах функций).</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/dn919259(v=vs.94).aspx">Оператор Spread</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt89" class="sentence" data-guid="0ff66ceaa3b4461bcd0439d5b0fe7178" data-source="Subtracts the value of an expression from the value of a variable and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Вычитает значение выражения из значения переменной и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/dtx39exz(v=vs.94).aspx">Оператор присваивания вычитания (-=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt91" class="sentence" data-guid="f7bf4959194cde7352eba151b586f7da" data-source="Performs subtraction of two expressions." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Выполняет вычитание двух выражений.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/9ty8kw3w(v=vs.94).aspx">Оператор вычитания (-)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt93" class="sentence" data-guid="b4ca058987015ea1de20818c38ac2597" data-source="Returns a string that identifies the data type of an expression." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Возвращает строку, которая идентифицирует тип данных выражения.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/259s7zc1(v=vs.94).aspx">Оператор typeof</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt95" class="sentence" data-guid="0ab6420fc9ee4cebe3c129477782433a" data-source="Indicates the negative value of a numeric expression." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Обозначает отрицательное значение числового выражения.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/9ty8kw3w(v=vs.94).aspx">Оператор унарного отрицания (-)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt97" class="sentence" data-guid="22984e515d61c7f54b52797eea9f8e4a" data-source="Right shifts the value of a variable by the number of bits specified in the value of an expression, without maintaining sign, and assigns the result to the variable." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сдвигает значение переменной вправо на количество битов, указанное в значении выражения, без сохранения знака и присваивает результат переменной.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/2ked96yw(v=vs.94).aspx">Оператор присваивания сдвига вправо без знака (&gt;&gt;&gt;=)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt99" class="sentence" data-guid="8c104577dfe3d1dd4be08313b5bf9a24" data-source="Performs an unsigned right shift of the bits in an expression. " xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Сдвигает биты выражения вправо без учета знака. </sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/342xfs5s(v=vs.94).aspx">Оператор сдвига вправо без знака (&gt;&gt;&gt;)</a></p></td></tr><tr><td data-th="Описание"><p><span id="mt101" class="sentence" data-guid="85a0d3996bd06a6dd9d221413472c659" data-source="Prevents an expression from returning a value." xml:space="preserve"><sentencetext xmlns="http://www.w3.org/1999/xhtml">Запрещает выражению возвращать значение.</sentencetext></span></p></td><td data-th="Элемент языка"><p><a href="https://msdn.microsoft.com/ru-ru/library/e17c7cbe(v=vs.94).aspx">Оператор void</a></p></td></tr></tbody></table></div></div></div>
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

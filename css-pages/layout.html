@@ -1,0 +1,429 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS | Блочная вёрстка | Сетка</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+<style>
+	.discription {
+		position: relative;
+		font-family: Verdana, serif;
+		font-size: 1.5em;
+		color: blue;
+		padding: 10px;
+		padding-left: 30px;
+		border-left: 30px solid blue;
+		font-style: italic;
+		z-index: -100;
+	}
+	.discription::after {
+		position: absolute;
+		content:"";
+		top: 0%;
+		left: 0px;
+		height: 0px;
+		width: 0px;
+		border-width: 26px;
+		border-style: solid;
+		border-color: transparent;
+		border-left-color: blue;
+	}
+._main-header, ._main-footer {
+    min-height: 50px;
+    background-color: pink;
+    border: 3px dotted black;
+	padding: 5px;
+	margin: 5px;
+}
+._sidebar {
+    float: left;
+	margin-left: 5px;
+    width: 150px;
+    min-height: 350px;
+    background-color: lightyellow;
+    border: 3px dotted black;
+	padding: 5px;
+}
+._main-content {
+    min-height: 350px;
+	margin: 5px;
+    margin-left: 175px;
+    background-color: lightgreen;
+    border: 3px dotted black;
+	padding: 5px;
+}
+/*ТРЁХКОЛОНОЧНАЯ СЕТКА*/
+.__main-header, .__main-footer {
+			min-height: 90px;
+			padding: 10px;
+			background-color: lightblue;
+}
+.__main-content {
+		min-height: 380px;
+		padding: 10px;
+		background-color: lightyellow;
+}
+.__layout-positioner {
+		margin: 10px auto;
+		padding: 10px;
+		width: 1000px;
+		outline: 3px dashed orange;
+}
+.__layout-column {
+		min-height: 50px;
+		width: 290px;
+		border: 5px dashed deeppink;
+}
+.__layout-column1 {
+		float: left;
+		margin-right: 50px;
+}
+.__layout-column2 {
+		float: left;
+		margin-right: 50px;
+}
+.__layout-column3 {
+		float: right;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+			<li><a href="../css-pages/values.html">Величины</a></li>
+			<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+			<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+			<li><a href="../css-pages/color.html">Цвет</a></li>
+			<li><a href="../css-pages/bg.html">Фон</a></li>
+			<li><a href="../css-pages/text.html">Текст</a></li>
+			<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+			<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+			<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+			<li><a href="../css-pages/display.html">Отображение</a></li>
+			<li><a href="../css-pages/position.html">Позиционирование</a></li>
+			<li>
+				<a href="#">Меню</a>
+					<ul class="sub-menu sub-menu1">
+						<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+						<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+					</ul>
+			</li>
+			<li>
+				<a  class="active" href="#">Блочная вёрстка</a>
+					<ul class="sub-menu sub-menu2">
+						<li><a href="../css-pages/float.html">float</a></li>
+						<li><a href="../css-pages/centered.html">Центровщик</a></li>
+						<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+						<li><a href="../css-pages/footer.html">Футер</a></li>
+						<li><a href="../css-pages/layout.html">Сетка</a></li>
+						<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+						<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+					</ul>
+			</li>
+			<li><a href="../css-pages/decoration.html">Декор</a></li>
+		</ul>
+	</div>
+
+	<div class="content clearfix">
+	<h2>Мой справочник | CSS | Блочная вёрстка | Сетка</h2>
+	
+	<h3>ДВУХКОЛОНОЧНАЯ СЕТКА с адаптивностью в контентном блоке</h3>
+	<p class="discription">Адаптивный <span class="red">header, footer</span> и <span class="red">main-content</span></p>
+	
+	<div class="directory-item clearfix">
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+			<code>
+				&lt;header <span class="red">class="main-header"</span>&gt;<span class="gray">HEADER</span>&lt;/header&gt;<br>
+				&lt;div <span class="red">class="content-container clearfix"</span>&lt;/div&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;aside <span class="red">class="sidebar"</span>&gt;<span class="gray">SIDEBAR</span>&lt;/aside&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="main-content"</span>&gt;<span class="gray">MAIN-CONTENT</span>&lt;/div&gt;<br>
+				&lt;/div&gt;<br>
+				&lt;footer <span class="red">class="main-footer"</span>&gt;<span class="gray">FOOTER</span>&lt;/footer&gt;<br>
+			</code>
+		</div>
+		<div class="css">
+			<h4 class="small-header">CSS:</h4>	
+			<code>
+	<span class="red">.header, .footer</span> {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;min-height: 50px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;background-color: pink;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;border: 3px dotted black;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;margin: 5px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;padding: 5px;<br>
+	}<br>
+	<span class="red">.clearfix::after</span> {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;content: "";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;display: table;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;clear: both;<br>
+	}<br>
+	<span class="red">.aside</span> {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;float: left;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;width: 150px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;min-height: 350px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;margin-left: 5px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;padding: 5px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightyellow;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;border: 3px dotted black;<br>
+	}<br>
+	<span class="red">.main-content</span> {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;min-height: 350px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;margin: 5px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;margin-left: 150px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;padding: 5px;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgreen;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;border: 3px dotted black;<br>
+	}<br>
+			</code>
+		</div>
+	<p class="discription" style="clear: both;"><span class="red">sidebar</span> зафлоачен влево и с фиксированной шириной, а <span class="red">main-content</span> 
+	с <code>margin-left</code> на ширину <span class="red">sidebar</span></p>
+	
+
+		<div class="display">
+			<header class="_main-header">HEADER</header>
+			<div class="_content-container clearfix"</div>
+    			<aside class="_sidebar">SIDEBAR</aside>
+    			<div class="_main-content">MAIN-CONTENT</div>
+			</div>
+			<footer class="_main-footer">FOOTER</footer> 
+		</div>
+
+	</div>
+
+
+<br><br><br><br>
+
+	<h3>ТРЁХКОЛОНОЧНАЯ СЕТКА с фиксированной шириной</h3>
+	
+	<div class="directory-item clearfix">
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+<code>
+	&lt;header class="<span class="red">main-header</span>"&gt;<br>
+	&nbsp;&nbsp;&lt;div class="<span class="red">layout-positioner clearfix</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column1</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №1...</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column3</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №3...</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&lt;/div&gt;<br>
+	&lt;/header&gt;<br>
+<br>
+	&lt;section class="<span class="red">main-content</span>"&gt;<br>
+	&nbsp;&nbsp;&lt;div class="<span class="red">layout-positioner clearfix</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column1</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №1...</span></span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column2</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №2...</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column3</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №3...</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&lt;/div&gt;<br>
+	&lt;/section&gt;<br>
+<br>
+	&lt;footer class="<span class="red">main-footer</span>"&gt;<br>
+	&nbsp;&nbsp;&lt;div class="<span class="red">layout-positioner clearfix</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column1</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №1...</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">layout-column layout-column3</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...КОЛОНКА №3...</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&lt;/div&gt;<br>
+	&lt;/footer&gt;
+</code>
+		</div>
+
+
+		<div class="css">
+			<h4 class="small-header">CSS:</h4>	
+			<code>
+				<pre>
+<span class="red">.main-header, .main-footer</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;min-height: 90px;
+&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;
+&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;
+}
+<span class="red">.main-content</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;min-height: 380px;
+&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;
+&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightyellow;
+}
+<span class="red">.clearfix</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;content: "";
+&nbsp;&nbsp;&nbsp;&nbsp;display: table;
+&nbsp;&nbsp;&nbsp;&nbsp;clear: both;
+}
+<span class="red">.layout-positioner</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;margin: 10px auto;
+&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;
+&nbsp;&nbsp;&nbsp;&nbsp;width: 1000px;
+&nbsp;&nbsp;&nbsp;&nbsp;outline: 3px dashed orange;
+}
+<span class="red">.layout-column</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;min-height: 50px;
+&nbsp;&nbsp;&nbsp;&nbsp;width: 290px;
+&nbsp;&nbsp;&nbsp;&nbsp;border: 5px dashed deeppink;
+}
+<span class="red">.layout-column1</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;float: left;
+&nbsp;&nbsp;&nbsp;&nbsp;margin-right: 50px;
+}
+<span class="red">.layout-column2</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;float: left;
+&nbsp;&nbsp;&nbsp;&nbsp;margin-right: 50px;
+}
+<span class="red">.layout-column3</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;float: right;
+}
+				</pre>
+			</code>
+		</div>
+
+		<div class="display">
+				<header class="__main-header">
+		<div class="__layout-positioner clearfix">
+				<div class="__layout-column __layout-column1">
+					КОЛОНКА №1
+				</div>
+				<div class="__layout-column __layout-column3">
+					КОЛОНКА №3
+				</div>
+		</div>
+	</header>
+
+	<section class="__main-content">
+		<div class="__layout-positioner clearfix">
+			<div class="__layout-column __layout-column1">
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1
+			</div>
+			<div class="__layout-column __layout-column2">
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2<br>
+				КОЛОНКА №2
+			</div>
+			<div class="__layout-column __layout-column3">
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+			</div>
+
+
+		</div>
+	</section>
+
+	<footer class="__main-footer">
+		<div class="__layout-positioner clearfix">
+			<div class="__layout-column __layout-column1">
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1<br>
+				КОЛОНКА №1
+			</div>
+			<div class="__layout-column __layout-column3">
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3<br>
+				КОЛОНКА №3
+			</div>
+		</div>
+	</footer>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	
+	
+	</div>
+	
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

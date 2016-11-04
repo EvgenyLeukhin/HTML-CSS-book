@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS | Цвет</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+		<li><a href="../css-pages/values.html">Величины</a></li>
+		<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+		<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+		<li><a href="../css-pages/color.html" class="active">Цвет</a></li>
+		<li><a href="../css-pages/bg.html">Фон</a></li>
+		<li><a href="../css-pages/text.html">Текст</a></li>
+		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+		<li><a href="../css-pages/display.html">Отображение</a></li>
+		<li><a href="../css-pages/position.html">Позиционирование</a></li>
+		<li>
+			<a href="#">Меню</a>
+				<ul class="sub-menu sub-menu1">
+					<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+					<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+				</ul>
+		</li>
+		<li>
+			<a href="#">Блочная вёрстка</a>
+				<ul class="sub-menu sub-menu2">
+					<li><a href="../css-pages/float.html">float</a></li>
+					<li><a href="../css-pages/centered.html">Центровщик</a></li>
+					<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+					<li><a href="../css-pages/footer.html">Футер</a></li>
+					<li><a href="../css-pages/layout.html">Сетка</a></li>
+					<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+					<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+				</ul>
+		</li>
+		<li><a href="../css-pages/decoration.html">Декор</a></li>
+	</ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | CSS | Цвет</h2>
+	
+	<div class="left-column" style="float: left; width: 35%;">
+	
+		<h3><u>Название цвета словом</u></h3>
+		<span style="font-size: 1.5em; font-weight: bold; color: maroon;">color: maroon;</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: deeppink;">color: deeppink;</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: lightblue;">color: lightblue;</span><br>
+		
+		<h3><u>16-тиричный формат (0-9, a-f)</u></h3>
+		<span style="font-size: 1.5em; font-weight: bold; color: #1198f5;">color: #1198f5;</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: #62f808;">color: #62f808;</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: #0af5c6;">color: #0af5c6;</span><br>
+		
+		<h3><u>RGB-формат (3 канала)</u></h3>
+		<span style="font-size: 1.5em; font-weight: bold; color: rgb(56, 140, 123);">color: rgb(56, 140, 123);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: rgb(30%, 40%, 50%);">color: rgb(30%, 40%, 50%);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: rgb(145, 16, 100);">color: rgb(145, 16, 100);</span><br>
+		
+		<h3><u>RGBA-формат (+ альфа-канал)</u></h3>
+		<span style="font-size: 1.5em; font-weight: bold; color: rgba(56, 140, 123, 0.85);">color: rgba(56, 140, 123, 0.85);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: rgba(50%, 40%, 100%, 0.55);">color:&nbsp;rgba(50%,&nbsp;40%,&nbsp;100%,&nbsp;0.55);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: rgba(145, 16, 100, 0.35);">color: rgba(145, 16, 100, 0.35);</span><br>
+		
+		<h3><u>HSL-формат<br><small>(1 - поворот по цветовому колесу,<br>2 - насыщенность,<br>3 - яркость)</small></u></h3>
+		<span style="font-size: 1.5em; font-weight: bold; color: hsl(0, 50%, 50%);">color: hsl(0, 50%, 50%);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: hsl(0, 75%, 75%);">color: hsl(0, 75%, 75%);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: hsl(0, 100%, 50%);">color: hsl(0, 100%, 50%);</span><br>
+
+		<h3><u>HSLA-формат (+ альфа-канал)</u></h3>
+		<span style="font-size: 1.5em; font-weight: bold; color: hsla(0, 100%, 50%, 0.5);">color: hsl(0, 100%, 50%, 0.5);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: hsla(0, 100%, 50%, 0.75);">color: hsl(0, 100%, 50%, 0.75);</span><br>
+		<span style="font-size: 1.5em; font-weight: bold; color: hsla(0, 100%, 50%, 1.0);">color: hsl(0, 100%, 50%, 1.0);</span><br>
+		
+		<h3><u>Прозрачный цвет</u></h3>
+		<span style="font-size: 1.5em; font-weight: bold;">color: transparent;</span>
+		<h3><u>Сокращенная 16-ая запись</u></h3>
+		<span class="gray" style="font-size: 1.5em; font-weight: bold;">color: #ff0000; = color: #f00;</span>
+
+	</div>
+	
+	<div class="right-column" style="float: right; width: 35%; margin-right: 50px;">
+	
+		<h3><u>Opacity - прозрачность</u></h3>
+		<code>
+			&nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;opacity: 1;
+		</code>
+		<div style="height: 100px; width: 150px; border: 1px solid black; background-color: red;"></div>
+		<code>
+			&nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.75;
+		</code>
+		<div style="height: 100px; width: 150px; border: 1px solid black; background-color: red; opacity:0.75;"></div>
+		<code>
+			&nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.5;
+		</code>
+		<div style="height: 100px; width: 150px; border: 1px solid black; background-color: red; opacity:0.5;"></div>
+		<code>
+			&nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.25;
+		</code>
+		<div style="height: 100px; width: 150px; border: 1px solid black; background-color: red; opacity:0.25;"></div>
+
+	</div>
+
+	<div style="clear: both;">
+		<h3><u>Запись цвета для кроссбраузерности:</u></h3>
+		<code>color: rgb(255,100,50); <span class="gray">/* Для IE8 */</span><br>
+			  color: rgba(255,100,50,.5); <span class="gray">/* Для более современных браузеров */</span>
+		</code>
+		<p>Чтобы перестраховаться на случай неподдержки полупрозрачности или rgb-формата: <br>
+	        <code>
+	        background: #f5f5f5;<br>
+	        background: rgba(245, 245, 245, 0.9);
+	        </code>
+	    </p>
+		<h3><u>Чтобы IE понимал прозрачность:</u></h3>
+		<code>
+&lt;!--[if IE]&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style type="text/css"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.color-block { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:transparent;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50990000,endColorstr=#50990000); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zoom: 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+&lt;![endif]--&gt;
+		</code>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

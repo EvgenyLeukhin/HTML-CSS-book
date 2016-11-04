@@ -1,0 +1,204 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | JS | Консоль</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+		code {font-size: 1.5em;}
+	</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a class="active" href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+            <li>
+                <a href="#">Основы</a>
+                <ul class="sub-menu sub-menu8">
+                    <li><a href="js-lang.html">Язык JS</a></li>
+                    <li><a href="load.html">Загрузка</a></li>
+			        <li><a href="types.html">Типы данных</a></li>
+			        <li><a href="var.html">Переменные</a></li>
+			        <li><a href="operators.html">Операторы</a></li>
+			        
+			        <li><a href="algorythm.html">Алгоритмы</a></li>
+			        <li><a href="if-else.html">if - else, switch-case</a></li>
+			        <li><a href="cycle.html">Циклы</a></li>
+                    <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+			<li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS & HTML</a>
+                <ul class="sub-menu sub-menu6">
+                    <li><a href="complete.html">Вывод данных</a></li>
+			        <li><a href="dom.html">DOM</a></li>
+			        <li><a href="html-methods.html">Методы</a></li>
+			        <li><a href="actions.html">События</a></li>
+			        <li><a href="modal-window.html">Мод. окно</a></li>
+			        <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+			
+			<li>
+			    <a href="#">jQuery</a>
+			    <ul class="sub-menu sub-menu7">
+			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
+			        <li><a href="jquery-func.html">jQuery-функции</a></li>
+                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
+                </ul>
+			 </li>
+			 <li><a href="ajax.html">Ajax</a></li>
+			 <li>
+			     <a href="canvas.html">Canvas</a>
+			     <ul class="sub-menu sub-menu9">
+               <a href="canvas.html">Настройка</a> 
+			         <a href="canvas-figures.html">Фигуры</a>
+			         <a href="canvas-text.html">Текст</a>
+			         <a href="canvas-animation.html">Циклы</a>
+           </ul>
+			 </li>
+			 <li><a href="git.html">Git</a></li>
+			 <li><a class="active" href="console.html">Консоль</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | JavaScript | Консоль</h2>
+    <table class="discription-table" border-spacing: 5px>
+		  <tr>
+			  <th colspan="5" style="font-size: 2em; color: darkcyan;">Настройки консоли</th>
+		  </tr>
+		  <tr>
+			  <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+          1. Установка <a href="https://nodejs.org/en/" target="_blank"><b>node.js</b></a>
+			  </td>
+			
+			  <td rowspan="1" style="width: 600px; color: #555;">
+          <code>
+            <b>node</b> <span style="color: #000">- переключение в режим Node.js-консоли</span><br>
+            <b>.exit</b> <span style="color: #000">или</span> <kbd>Ctrl + C</kbd> <span style="color: #000">- выход</span><br>
+            <b>node script.js</b> <span style="color: #000">- выполниться script.js в консоли</span>
+          </code>
+			  </td>
+			  <td rowspan="1" style="width: 200px; color: #555;">
+          Консоль с интерпретатором JavaScript-кода
+			  </td>
+		  </tr>
+		
+		  <tr>
+			  <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+          2. Установка <a href="https://www.npmjs.com/" target="_blank"><b>npm</b></a>
+			  </td>
+			
+			  <td rowspan="1" style="width: 600px; color: #555;">
+          После установки <b>node.js</b>, <b>npm</b> уже установлен, но для каждого проекта нужен свой набор моделей. Встаём в папку с новым проектом и набираем:<br>
+          <code>npm install</code><hr>
+          Структура node-модулей (после установки npm): <br>
+          <code>
+          node-modules/ - <span style="color: #000"><i>модули</i></span><br>
+          src/ - <span style="color: #000"><i>файлы проекта</i></span><br>
+          test/<br>
+          index.js/ - <span style="color: #000"><i>указывает на путь js-файлов проекта, копирует весь js-код в себя</i></span><br> 
+          Makefile<br>
+          npm-debug.log<br>
+          <mark><b>package.json</b></mark> - <span style="color: #000"><i>файл настроек</i></span><br>
+          Readme.md - <span style="color: #000"><i>информация о проекте</i></span><hr>
+          <h3 style="color: #000;">npm на практике</h3>
+          npm run \название скрипта\- <span style="color: #000"><i>запуск скриптов в файле package</i></span><br>
+          npm run test - <span style="color: #000"><i>запуск теста</i></span><br>
+          npm run eslint index.js - <span style="color: #000"><i>запуск ESLint</i></span><br>
+          
+          </code>
+			  </td>
+			  <td rowspan="1" style="width: 200px; color: #555;">
+          Пакетный менеджер для <b>node.js</b><br>
+          Установщик различных модулей, приложений, библиотек<br>
+          <u>package.json</u> - главный файл с настойками (с ключами)
+			  </td>
+		  </tr>
+		  
+		  		  <tr>
+			  <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+          3. Установка <a href="http://eslint.org/" target="_blank"><b>ESLint</b></a>
+			  </td>
+			
+			  <td rowspan="1" style="width: 600px; color: #555;">
+          <h3 style="color: #000;">Глобальная установка:</h3>
+          <code>
+            npm install -g eslint <br>
+            npm install -g --save-dev eslint-config-airbnb <br>
+            npm install -g --save-dev eslint-plugin-import
+          </code><br>
+          <span class="gray">
+           Заменить на
+            //.eslintrc <br>
+            <code>
+              "extends": "airbnb/base"
+            </code>
+          </span>
+          <h3 style="color: #000;">ESLint на практике</h3>
+          <code>
+            eslint <i>file or folder</i><br>
+            eslint <i>file or folder</i> --fix <span class="gray"> //Исправит пробелы</span>
+            
+          </code>
+			  </td>
+			  <td rowspan="1" style="width: 200px; color: #555;">
+          Теоритически при команде <code>npm install</code> этот пакет уже должен поставить в папку 
+          <b>node-modules/</b>, но можно его поставить как локально в проект, так и глобально<br>
+          Файл настроек <code><b><mark>.eslintrc</mark></b></code>
+          
+          
+          
+          
+			  </td>
+		  </tr>
+  </table>
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

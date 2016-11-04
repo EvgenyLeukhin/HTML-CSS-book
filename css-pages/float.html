@@ -1,0 +1,235 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS | Блочная вёрстка| float</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+<style>
+	.directory-item .display {
+		clear: both;
+		min-height: 50px;
+		padding: 5px;
+		border: 1px solid black;
+	}
+	.box-not-floated {
+		height: 75px;
+		width: 75px;
+		background-color: lightyellow;
+		border: 1px solid orange;
+	}
+	.box {
+		height: 50px;
+		width: 50px;
+		background-color: maroon;
+		border: 1px solid cyan;
+		color: white;
+	}
+	.box-left {float: left;}
+	.box-right {float: right;}
+	.discription {
+		position: relative;
+		font-family: Verdana, serif;
+		font-size: 1.5em;
+		color: blue;
+		padding: 10px;
+		padding-left: 30px;
+		border-left: 30px solid blue;
+		font-style: italic;
+		z-index: -100;
+	}
+	.discription::after {
+		position: absolute;
+		content:"";
+		top: 0%;
+		left: 0px;
+		height: 0px;
+		width: 0px;
+		border-width: 26px;
+		border-style: solid;
+		border-color: transparent;
+		border-left-color: blue;
+	}
+	.clear {clear: both;}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+			<li><a href="../css-pages/values.html">Величины</a></li>
+			<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+			<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+			<li><a href="../css-pages/color.html">Цвет</a></li>
+			<li><a href="../css-pages/bg.html">Фон</a></li>
+			<li><a href="../css-pages/text.html">Текст</a></li>
+			<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+			<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+			<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+			<li><a href="../css-pages/display.html">Отображение</a></li>
+			<li><a href="../css-pages/position.html">Позиционирование</a></li>
+			<li>
+				<a href="#">Меню</a>
+					<ul class="sub-menu sub-menu1">
+						<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+						<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+					</ul>
+			</li>
+			<li>
+				<a class="active" href="#">Блочная вёрстка</a>
+					<ul class="sub-menu sub-menu2">
+						<li><a href="../css-pages/float.html">float</a></li>
+					    <li><a href="../css-pages/centered.html">Центровщик</a></li>
+					    <li><a href="../css-pages/clearfix.html">Распорки</a></li>
+					    <li><a href="../css-pages/footer.html">Футер</a></li>
+					    <li><a href="../css-pages/layout.html">Сетка</a></li>
+					    <li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+					    <li><a href="../css-pages/content-box.html">Адаптивность</a></li>
+					</ul>
+			</li>
+			<li><a href="../css-pages/decoration.html">Декор</a></li>
+		</ul>
+	</div>
+
+	<div class="content clearfix">
+	<h2>Мой справочник | CSS | Блочная вёрстка | float</h2>
+	
+	<div class="directory-item clearfix">
+		<p class="discription">float применяют для управления ПОТОКОМ документа и создания СЕТОК</p>
+		<p style="font-size: 1.3em;">
+		    <mark>ЕСЛИ в стилях есть <code>float</code>, то ВСЕГДА УКАЗЫВАЙТЕ значение ШИРИНЫ!!!</mark>
+		</p>
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+			<code>
+				&lt;div <span class="red">class="container"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box  box-left"</span>&gt;<span class="gray">1</span>&lt;/div&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box  box-right"</span>&gt;<span class="gray">2</span>&lt;/div&gt;<br>
+				&lt;/div&gt;
+			</code>
+		</div>
+		<div class="css">
+			<h4 class="small-header">CSS:</h4>	
+			<code>
+	<span class="red">.box-not-floated</span> {<br>
+		height: 75px;<br>
+		width: 75px;<br>
+		background-color: lightyellow;<br>
+		border: 1px solid orange;<br>
+	}<br>
+	<span class="red">.box</span> {<br>
+		height: 50px;<br>
+		width: 50px;<br>
+		background-color: maroon;<br>
+		border: 1px solid cyan;<br>
+		color: white;<br>
+	}<br>
+	<span class="red">.box-left</span> {float: left;}<br>
+	<span class="red">.box-right</span> {float: right;}
+			</code>
+		</div>
+		<div class="display">
+			<div class="container">
+    			<div class="box box-left">1</div>
+    			<div class="box box-right">2</div>
+			</div> 
+		</div>
+		<p class="discription">float используется для выравнивания блоков по сторонам (1 - слева, 2 - справа)</p>
+	</div>
+	<div class="directory-item clearfix">
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+			<code>
+				&lt;div <span class="red">class="container"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box-not-floated"</span>&gt;<span class="gray">1</span>&lt;/div&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box box-left"</span>&gt;<span class="gray">2</span>&lt;/div&gt;<br>
+				&lt;/div&gt;
+			</code>
+		</div>
+
+		<div class="display">
+			<div class="container">
+    			<div class="box box-left">2</div>	
+				<div class="box-not-floated">1</div>		
+			</div> 
+		</div>
+		<p class="discription">float-ы выпадают из потока и блочные элементы их НЕ ВИДЯТ, а текст обтекает их со свободной стороны</p>
+	</div>
+<br>
+	<div class="directory-item clearfix">
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+			<code>
+				&lt;div <span class="red">class="container"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box box-left"</span>&gt;<span class="gray">1</span>&lt;/div&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box box-right"</span>&gt;<span class="gray">2</span>&lt;/div&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="box-not-floated clear"</span>&gt;<span class="gray">2</span>&lt;/div&gt;<br>
+				&lt;/div&gt;
+			</code>
+		</div>
+
+		<div class="css">
+			<h4 class="small-header">CSS:</h4>	
+			<code>
+				<span class="red">.clear</span> {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clear: both;<br>
+				}
+			</code>
+		</div>
+		
+		<div class="display">
+			<div class="container">
+    			<div class="box box-left">1</div>
+    			<div class="box box-right">2</div>
+				<div class="box-not-floated clear">3</div>
+			</div> 
+		</div>
+		<p class="discription">Чтобы другие блочные элементы "видели" флоатнутые, их либо нужно тоже зафлоатить или применить свойство 
+		<span class="red">clear</span> со значениями <span class="red">left, rigth</span> или <span class="red">both</span>. 
+		Оно запрещает обтекание и переносит элемент на новую строку. <br><span class="red">clear: none;</span> разрешает обтекание.
+		</p>
+	</div>
+
+	
+
+
+
+
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

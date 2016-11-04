@@ -1,0 +1,324 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS | Горизонтальное меню</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+.main-menu { /*Убираем отступы, маркеры*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #E5E5E5;
+    background: none;
+}
+.main-menu li {
+    display: inline-block; /*ЗАДАЁМ СТР-БЛ.ВИД ЭЛ. СПИСКА для горизонтнального расположения*/
+    margin-right: -4px;    /*Расстояние между элементами списка*/
+    white-space: nowrap;   /*ЧТОБЫ НЕ ПЕРЕНОСИЛОСЬ ВТОРОЕ СЛОВО на новую строку*/
+}
+
+.main-menu a {  /*Cылки делаем блочными, благодаря чему управляем размерами и оформляем*/
+    color: #0088CC;
+    display: block;
+    padding: 8px 10px;
+    background-color: #F5F5F5;
+    border-left: 1px solid #E5E5E5;
+    margin-left: -1px;
+	text-decoration: none;
+}	   
+
+.main-menu a:hover {
+    background: #EEEEEE;
+}  
+/*****************ПОДМЕНЮ*****************/
+/*ОФОРМЛЯЕМ МЕНЮ, УБИРАЕМ ОТСТУПЫ, МАРКЕРЫ*/
+.main-menu2 { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #E5E5E5;
+}
+/*ДЕЛАЕМ ЭЛ. СПИСКА СТРОЧНЫМИ, ТОЛЬКО 1-ГО УРОВНЯ, Т.К. ПОДМЕНЮ БУДЕТ ВЕРТИКАЛЬНОЕ*/
+.main-menu2 > li { 
+    display: inline-block;
+    margin: 0px;
+    position: relative; /*ЗАВАДАЁМ ОТН. ПОЗИЦИОНИРОВАНИЕ ЭЛЕМЕНТАМ СПИСКА МЕНЮ*/
+}
+/*ССЫЛКИ-БЛОЧНЫЕ, ОФОРМЛЯЕМ ИХ*/
+.main-menu2 a { 
+    display: block;
+    text-decoration: none;
+    margin-right: -5px;
+    padding: 8px 10px;
+    color: #0088CC;
+    border-right: 1px solid #E5E5E5;
+}
+/*ССЫЛКИ ПРИ НАВЕДЕНИИ*/
+.main-menu2 a:hover { 
+    background: #f5f5f5;
+}
+/*ОФОРМЛЯЕМ ПОДМЕНЮ*/
+.main-menu2 .sub-menu { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #FCF8E3;
+    position: absolute;/*ЗАВАДАЁМ АБС. ПОЗ-НИЕ ВСЕМУ ПОДМЕНЮ, ЗАДАЁМ ШИРИНУ, КООРДИНАТЫ*/
+    width: 150px;
+    left: 1px;
+    display: none;/*ПРЯЧЕМ ПОДМЕНЮ*/
+}
+/*ОФРМЛЯЕМ ССЫЛКИ ПОДМЕНЮ*/
+.main-menu2 .sub-menu a { 
+	border: 1px solid #E5E5E5;
+	margin: -1px;
+}
+/*ПОКАЗЫВАЕМ ПОДМЕНЮ при наведении*/
+.main-menu2 > li:hover .sub-menu { 
+	display: block;
+}
+
+
+
+
+	</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+		<li><a href="../css-pages/values.html">Величины</a></li>
+		<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+		<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+		<li><a href="../css-pages/color.html">Цвет</a></li>
+		<li><a href="../css-pages/bg.html">Фон</a></li>
+		<li><a href="../css-pages/text.html">Текст</a></li>
+		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+		<li><a href="../css-pages/display.html">Отображение</a></li>
+		<li><a href="../css-pages/position.html">Позиционирование</a></li>
+		<li>
+			<a class="active" href="#">Меню</a>
+				<ul class="sub-menu sub-menu1">
+					<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+					<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+				</ul>
+		</li>
+		<li>
+			<a href="#">Блочная вёрстка</a>
+				<ul class="sub-menu sub-menu2">
+					<li><a href="../css-pages/float.html">float</a></li>
+					<li><a href="../css-pages/centered.html">Центровщик</a></li>
+					<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+					<li><a href="../css-pages/footer.html">Футер</a></li>
+					<li><a href="../css-pages/layout.html">Сетка</a></li>
+					<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+					<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+				</ul>
+			
+		</li>
+		<li><a href="../css-pages/decoration.html">Декор</a></li>
+	</ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | CSS | Горизонтальное меню</h2>
+	
+	<div class="directory-item clearfix">
+		<h2><mark>Горизонтальное меню</mark></h2>
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+			<code>
+   	&lt;ul class="<span class="red">main-menu</span>"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#"&gt;<span class="gray">О компании</span>&lt;/a&gt;&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#"&gt;<span class="gray">Услуги</span>&lt;/a&gt;&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#"&gt;<span class="gray">Сотрудники</span>&lt;/a&gt;&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#"&gt;<span class="gray">Контакты</span>&lt;/a&gt;&lt;/li&gt;<br>
+    &lt;/ul&gt;
+			</code>
+		</div>
+
+		<div class="css" style="clear: left; float: left; margin-top: 15px;">
+			<h4 class="small-header">CSS:</h4>
+			<code>
+				<pre>
+<span class="gray">/*Убираем отступы, маркеры*/</span>
+<span class="red">.main-menu</span> { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #E5E5E5;
+    background: none;
+}
+<span class="red">.main-menu li</span> {
+    display: inline-block; <span class="gray">/*ЗАДАЁМ СТР-БЛ.ВИД ЭЛ. СПИСКА для горизонтнального расположения*/</span>
+    margin-right: -4px;    <span class="gray">/*Расстояние между элементами списка*/</span>
+    white-space: nowrap;   <span class="gray">/*ЧТОБЫ НЕ ПЕРЕНОСИЛОСЬ ВТОРОЕ СЛОВО на новую строку*/</span>
+}
+<span class="gray">/*Cсылки делаем блочными, благодаря чему управляем размерами и оформляем*/</span>
+<span class="red">.main-menu a</span> {  
+    color: #0088CC;
+    display: block;
+    padding: 8px 10px;
+    background-color: #F5F5F5;
+    border-left: 1px solid #E5E5E5;
+    margin-left: -1px;
+    text-decoration: none;
+}	   
+<span class="gray">/*Cсылки при наведении*/</span>
+<span class="red">.main-menu a:hover</span> {
+    background: #EEEEEE;
+}  
+				</pre>
+			</code>
+		</div>
+	
+	<h3 style="clear: both;">Результат</h3>
+
+	<ul class="main-menu">
+		<li><a href="#">О компании</a></li>
+		<li><a href="#">Услуги</a></li>
+		<li><a href="#">Сотрудники</a></li>
+		<li><a href="#">Контакты</a></li>
+	</ul>
+
+	<div class="directory-item clearfix">
+		<h2><mark>Горизонтальное меню c выпадающим под-меню</mark></h2>
+		<p>Создаём вложенный список в месте выпадающего меню</p>
+				<div class="html">
+					<h4 class="small-header">HTML:</h4>
+						<code>
+							&lt;ul class="<span class="red">main-menu2</span>"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#company"&gt;<span class="gray">О компании</span>&lt;/a&gt;&lt/li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#services"&gt;<span class="gray">Услуги</span>&lt;/a&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="<span class="red">sub-menu</span>"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#1"><span class="gray">Разработка</span>&lt;/a&gt;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#2"><span class="gray">Продвижение</span>&lt;/a&gt;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#3"><span class="gray">Контекст</span>&lt;/a&gt;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#team"&gt;<span class="gray">Сотрудники</span>&lt;/a&gt;&lt;/li&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#team"&gt;<span class="gray">Контакты</span>&lt;/a&gt;&lt;/li&gt;<br>
+							&lt;/ul&gt;
+						</code>
+				</div>
+
+		<div class="css" style="clear: left; float: left; margin-top: 15px;">
+			<h4 class="small-header">CSS:</h4>
+			<code>
+				<pre>
+<span class="gray">/*ОФОРМЛЯЕМ МЕНЮ, УБИРАЕМ ОТСТУПЫ, МАРКЕРЫ*/</span>
+<span class="red">.main-menu2</span> { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #E5E5E5;
+}
+<span class="gray">/*ДЕЛАЕМ ЭЛ. СПИСКА СТРОЧНЫМИ, ТОЛЬКО 1-ГО УРОВНЯ, Т.К. ПОДМЕНЮ БУДЕТ ВЕРТИКАЛЬНОЕ*/</span>
+<span class="red">.main-menu2 > li</span> { 
+    display: inline-block;
+    margin: 0px;
+    position: relative; <span class="gray">/*ЗАВАДАЁМ ОТН. ПОЗИЦИОНИРОВАНИЕ ЭЛЕМЕНТАМ СПИСКА МЕНЮ*/</span>
+}
+<span class="gray">/*ССЫЛКИ-БЛОЧНЫЕ, ОФОРМЛЯЕМ ИХ*/</span>
+<span class="red">.main-menu2 a</span> { 
+    display: block;
+    text-decoration: none;
+    margin-right: -5px;
+    padding: 8px 10px;
+    color: #0088CC;
+    border-right: 1px solid #E5E5E5;
+}
+<span class="gray">/*ССЫЛКИ ПРИ НАВЕДЕНИИ*/</span>
+<span class="red">.main-menu2 a:hover</span> { 
+    background: #f5f5f5;
+}
+<span class="gray">/*ОФОРМЛЯЕМ ПОДМЕНЮ*/</span>
+<span class="red">.main-menu2 .sub-menu</span> { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #FCF8E3;
+    position: absolute;<span class="gray">/*ЗАВАДАЁМ АБС. ПОЗ-НИЕ ВСЕМУ ПОДМЕНЮ, ЗАДАЁМ ШИРИНУ, КООРДИНАТЫ*/</span>
+    width: 150px;
+    left: 1px;
+    display: none;<span class="gray">/*ПРЯЧЕМ ПОДМЕНЮ*/</span>
+}
+<span class="gray">/*ОФРМЛЯЕМ ССЫЛКИ ПОДМЕНЮ*/</span>
+<span class="red">.main-menu2 .sub-menu a</span> { 
+    border: 1px solid #E5E5E5;
+    margin: -1px;
+}
+<span class="gray">/*ПОКАЗЫВАЕМ ПОДМЕНЮ при наведении*/</span>
+<span class="red">.main-menu2 > li:hover .sub-menu</span> { 
+    display: block;
+}
+  
+				</pre>
+			</code>
+		</div>
+	
+	<h3 style="clear: both;">Результат</h3>
+
+	<ul class="main-menu2">
+    	<li><a href="#company">О компании</a></li>
+   		<li>
+        	<a href="#services">Услуги</a>
+            	<ul class="sub-menu">
+                	<li><a href="#1">Разработка</a></li>
+                	<li><a href="#2">Продвижение</a></li>
+                	<li><a href="#3">Контекст</a></li>
+            	</ul>
+    	</li>
+    	<li><a href="#team">Сотрудники</a></li>
+		<li><a href="#team">Контакты</a></li>
+	</ul> 
+	<div style="clear: both; height: 100px;"></div>
+
+
+</div>	
+	</div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

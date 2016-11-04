@@ -1,0 +1,480 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Фото-фильтры</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+        .col3 > img {float: left;}
+        .filter0-1 {
+            -webkit-filter: drop-shadow(10px 10px 1px deeppink); 
+               -moz-filter: drop-shadow(10px 10px 1px deeppink); 
+                    filter: drop-shadow(10px 10px 1px deeppink); 
+        }
+        .filter0-2 {
+            -webkit-filter: drop-shadow(15px -10px 5px deeppink); 
+               -moz-filter: drop-shadow(15px -10px 5px deeppink); 
+                    filter: drop-shadow(15px -10px 5px deeppink); 
+        }
+        .text {
+            font-family: 'Monaco', sans-serif;
+            font-size: 35px;
+            line-height: 55px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+        }
+        .text-filter1 {
+            -webkit-filter: drop-shadow(5px -3px 0px black); 
+               -moz-filter: drop-shadow(5px -3px 0px black); 
+                    filter: drop-shadow(5px -3px 0px black); 
+        }
+        .text-filter2 {
+            -webkit-filter: drop-shadow(10px 10px 1px deeppink); 
+               -moz-filter: drop-shadow(10px 10px 1px deeppink); 
+                    filter: drop-shadow(10px 10px 1px deeppink); 
+        }
+        .text-filter3 {
+            -webkit-filter: drop-shadow(3px 3px 0px black)
+                            drop-shadow(7px 7px 0px red)
+                            drop-shadow(11px 11px 0px deeppink);
+               -moz-filter: drop-shadow(3px 3px 0px black)
+                            drop-shadow(7px 7px 0px red)
+                            drop-shadow(11px 11px 0px deeppink);
+                    filter: drop-shadow(3px 3px 0px black)
+                            drop-shadow(7px 7px 0px red)
+                            drop-shadow(11px 11px 0px deeppink);
+        }
+        .filter1-1 {
+            -webkit-filter: brightness(50%);
+            -moz-filter: brightness(50%);
+            filter: brightness(50%);
+        }
+        .filter1-2 {
+            -webkit-filter: brightness(170%);
+            -moz-filter: brightness(170%);
+            filter: brightness(170%);
+        }
+        .filter2-1 {
+            -webkit-filter: contrast(0.5);
+            -moz-filter: contrast(0.5);
+            filter: contrast(0.5);
+        }
+        .filter2-2 {
+            -webkit-filter: contrast(5);
+            -moz-filter: contrast(5);
+            filter: contrast(5);
+        }
+        .filter3-1 {
+            -webkit-filter: grayscale(0.5);
+            -moz-filter: grayscale(0.5);
+            filter: grayscale(0.5);
+        }
+        .filter3-2 {
+            -webkit-filter: grayscale(1);
+            -moz-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+        .filter4-1 {
+            -webkit-filter: sepia(0.5);
+            -moz-filter: sepia(0.5);
+            filter: sepia(0.5);
+        }
+        .filter4-2 {
+            -webkit-filter: sepia(1);
+            -moz-filter: sepia(1);
+            filter: sepia(1);
+        }
+        .filter5-1 {
+            -webkit-filter: invert(0.3);
+            -moz-filter: invert(0.3);
+            filter: invert(0.3);
+        }
+        .filter5-2 {
+            -webkit-filter: invert(1);
+            -moz-filter: invert(1);
+            filter: invert(1);
+        }
+        .filter6-1 {
+            -webkit-filter: saturate(0);
+            -moz-filter: saturate(0);
+            filter: saturate(0);
+        }
+        .filter6-2 {
+            -webkit-filter: saturate(10);
+            -moz-filter: saturate(10);
+            filter: saturate(10);
+        }
+        .filter7-1 {
+            -webkit-filter: hue-rotate(180deg);
+               -moz-filter: hue-rotate(180deg);
+                    filter: hue-rotate(180deg);
+        }
+        .filter7-2 {
+            -webkit-filter: hue-rotate(270deg);
+               -moz-filter: hue-rotate(270deg);
+                    filter: hue-rotate(270deg);
+        }
+        .filter8-1 {
+            -webkit-filter: blur(5px);
+               -moz-filter: blur(5px);
+                    filter: blur(5px);
+        }
+        .filter8-2 {
+            -webkit-filter: blur(15px);
+               -moz-filter: blur(15px);
+                    filter: blur(15px);
+        }
+        .filter9-1 {
+            -webkit-filter: opacity(0.5);
+               -moz-filter: opacity(0.5);
+                    filter: opacity(0.5);
+        }
+        .filter9-2 {
+            -webkit-filter: opacity(0.3);
+               -moz-filter: opacity(0.3);
+                    filter: opacity(0.3);
+        }
+        .filter10-1 {
+            -webkit-filter: opacity(0.9) blur(2px) contrast(3) sepia(0.2);
+               -moz-filter: opacity(0.9) blur(2px) contrast(3) sepia(0.2);
+                    filter: opacity(0.9) blur(2px) contrast(3) sepia(0.2);
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	        <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a class="active" href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+			        <a href="#">Слайдер</a>
+				        <ul class="sub-menu sub-menu3">
+					        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+					        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				        </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li><a href="../css3-pages/less.html">LESS</a></li>
+                <li><a href="../css3-pages/sass.html">SASS</a></li>
+            </ul>
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Фото-фильтры</h2>
+	
+	<table class="css3-table">
+            <tr>
+                <th class="css3-table-title" colspan="3">drop-shadow();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Отбразываемая тень</b> от изображения<br>
+                    4 параметра: смещение по oX, смещение по oY, размытие, цвет
+                </td>
+                <td class="col2"><code>
+                    filter: drop-shadow(10px 10px 1px deeppink); <br>
+                    filter: drop-shadow(10px 10px 1px deeppink);
+               </code></td>
+                <td class="col3" style="background-color: pink;">
+                    <img class="no-filter" src="../img/certificate-flat.png" width="100">
+                    <img class="filter0-1" src="../img/certificate-flat.png" width="100">
+                    <img class="filter0-2" src="../img/certificate-flat.png" width="100">
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Отбразываемая тень</b> от текста
+                </td>
+                <td class="col2"><code>
+                    filter: drop-shadow(5px -3px 0px black); <br>
+                    filter: drop-shadow(15px -10px 5px deeppink);
+               </code></td>
+                <td class="col3" style="background-color: pink; text-align: center;">
+                    <span class="text">Some text</span><br>
+                    <span class="text text-filter1">Some text</span><br>
+                    <span class="text text-filter2">Some text</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Множественная тень</b>
+                </td>
+                <td class="col2"><code>
+                    filter: drop-shadow(5px -3px 0px black) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop-shadow(-5px 3px 0px red)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop-shadow(0px -15px 0px deeppink);
+               </code></td>
+                <td class="col3" style="background-color: pink; text-align: center;">
+                    <span class="text text-filter3">Some text</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">brightness();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Яркость</b> (100% по ум*)
+                </td>
+                <td class="col2"><code>
+                    filter: brightness(50%); <br>
+                    filter: brightness(170%);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter1-1" src="../img/windows_flag.png">
+                    <img class="filter1-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">contrast();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Контраст</b> (1 по ум*)
+                </td>
+                <td class="col2"><code>
+                    filter: contrast(0.5); <br>
+                    filter: contrast(5);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter2-1" src="../img/windows_flag.png">
+                    <img class="filter2-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">grayscale();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Обесцвечивание</b> (0 по ум*, 1 - полное обесцвечивание)
+                </td>
+                <td class="col2"><code>
+                    filter: grayscale(0.5); <br>
+                    filter: grayscale(1);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter3-1" src="../img/windows_flag.png">
+                    <img class="filter3-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">sepia();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Сепия</b> (0 - 1)
+                </td>
+                <td class="col2"><code>
+                    filter: sepia(0.5); <br>
+                    filter: sepia(1);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter4-1" src="../img/windows_flag.png">
+                    <img class="filter4-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">invert();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Инверсия цвета</b> (0 - 1)
+                </td>
+                <td class="col2"><code>
+                    filter: invert(0.3); <br>
+                    filter: invert(1);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter5-1" src="../img/windows_flag.png">
+                    <img class="filter5-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">saturate();</th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Насыщенность цвета</b> (0 - 1) <br>
+                    seturate(0) аналог grayscale(1)
+                </td>
+                <td class="col2"><code>
+                    filter: saturate(0); <br>
+                    filter: saturate(10);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter6-1" src="../img/windows_flag.png">
+                    <img class="filter6-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">
+                    hue-rotate();
+                </th>
+            </tr>
+            
+            <tr>
+                <td class="col1">
+                    <b>Поворот по цветовому кругу</b> (0-360deg)
+                    <img src="../pict/hue-rotate.png" alt="hue-rotate" width="150" align="left">
+                </td>
+                <td class="col2"><code>
+                    filter: hue-rotate(180deg); <br>
+                    filter: saturate(270deg);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter7-1" src="../img/windows_flag.png">
+                    <img class="filter7-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">blur();</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <b>Размытие</b> в px
+                </td>
+                <td class="col2"><code>
+                    filter: blur(5px); <br>
+                    filter: blur(15px);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter8-1" src="../img/windows_flag.png">
+                    <img class="filter8-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">opacity();</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <b>Прозрачность</b> (0 - 1) <br>
+                    1 - по ум*
+                </td>
+                <td class="col2"><code>
+                    filter: opacity(0.5); <br>
+                    filter: opacity(0.3);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter9-1" src="../img/windows_flag.png">
+                    <img class="filter9-2" src="../img/windows_flag.png">
+                </td>
+            </tr>
+            
+            <tr>
+                <th class="css3-table-title" colspan="3">Множественный фильтр</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                    Перечисляются друг за другом через пробел
+                </td>
+                <td class="col2"><code>
+                    filter: opacity(0.9) blur(2px) contrast(3) 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sepia(0.2);
+               </code></td>
+                <td class="col3">
+                    <img class="no-filter" src="../img/windows_flag.png">
+                    <img class="filter10-1" src="../img/windows_flag.png">
+                </td>
+            </tr>
+    </table>
+	
+	
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | HTML | Фреймы и flash</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a class="active" href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu">
+		<li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+		<li><a href="../html-pages/head.html">Внутри head</a></li>
+		<li><a href="../html-pages/conts.html">Контейнеры</a></li>
+		<li><a href="../html-pages/headers.html">Заголовки</a></li>
+		<li><a href="../html-pages/lists.html">Списки</a></li>
+		<li><a href="../html-pages/tables.html">Таблицы</a></li>
+		<li><a href="../html-pages/text.html">Текст</a></li>
+		<li><a href="../html-pages/links.html">Ссылки</a></li>
+		<li><a href="../html-pages/images.html">Изображения</a></li>
+		<li><a href="../html-pages/forms.html">Формы</a></li>
+		<li><a href="../html-pages/simbols.html">Символы</a></li>
+		<li><a href="../html-pages/svg.html">Графика</a></li>
+		<li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+		<li><a href="../html-pages/frame.html" class="active">Фреймы и flash</a></li>
+		<li><a href="../html-pages/blank.html">Заготовка</a></li>
+	<ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник | HTML | Фреймы и flash</h2>
+	
+	<table class="discription-table">
+		<caption>Фреймы</caption>
+		<tr>
+			<th>Теги</th>
+			<th>Описание</th>
+			<th>Атрибуты</th>
+			<th>Описание</th>
+		</tr>
+		<tr>
+			<td rowspan="4">&lt;iframe&gt;</td>
+			<td rowspan="4">Фрейм</td>
+			<td>allowfullscreen</td>
+			<td>Разрешает для фрейма полноэкранный режим</td>
+		</tr>
+		<tr>
+			<td>height и width</td>
+			<td>Размеры фрейма</td>
+		</tr>
+		<tr>
+			<td>src="http://..."</td>
+			<td>Путь к файлу, содержимое которого будет загружаться во фрейм</td>
+		</tr>
+		<tr>
+			<td>frameborder</td>
+			<td>Устанавливает рамку вокруг фрейма<br> "yes|no  в HTML4 или 0,1,2,..."</td>
+		</tr>
+		
+	</table>
+	
+	<h3>Фрейм с YouTube</h3>
+	<ol>
+	    <li>Открываем <a href="https://www.youtube.com/" style="color: red;" target="_blank" title="Видеохостинг YouTube">YouTube</a></li>
+	    <li>Поделиться</li>
+	    <li>HTML-код - Скопировать</li>
+	    <li>Вставить iframe</li>
+	</ol>
+	<!--На ютубе Поделиться - HTML-код скопировать и вставить iframe-->
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/oPPSWNLc-UM" frameborder="0" allowfullscreen></iframe><br>
+	<code>
+		&lt;iframe <span class="red"><br>width="560" height="315" src="<span class="gray">https://www.youtube.com/embed/oPPSWNLc-UM</span>" frameborder="0" allowfullscreen</span>&gt;<br>&lt;/iframe&gt;<br><br>
+    </code>
+
+	<h3>Фрейм с ВК</h3>
+	<ol>
+	    <li>Открываем видео-ролик</li>
+	    <li>Ещё - экспортировать</li>
+	    <li>Копируем код для вставки</li>
+	    <li>Вставляем iframe</li>
+	</ol>
+	<iframe src="//vk.com/video_ext.php?oid=-45960892&id=456241455&hash=c1d467c387dde1bf&hd=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	
+	<h3>Яндекс-карты</h3>
+	<ol>
+	    <li>Открываем <a href="https://yandex.ru/maps/">Яндекс - карты</a></li>
+	    <li>Кликаем по аватару - Мои карты</li>
+	    <li>Конструктор карт - Создать новую карту</li>
+	    <li>Ищем интересующий фрагмент - Сохранить и продолжить</li>
+	    <li>Получить код карты</li>
+	</ol>
+	<div style="height: 400px; width: 800px;">
+	    <script 
+    		type="text/javascript" 
+    		charset="utf-8" 
+    		async 
+    		src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=BnE3KW19t8C5Zhpuyu990TpgDXde6Lk0&amp;
+    		width=800&amp;
+    		height=400&amp;
+    		lang=ru_RU&amp;
+    		sourceType=constructor&amp;
+    		scroll=true">
+    	</script>
+	</div>
+	
+	<h3>Google-карты</h3>
+	<ol>
+	    <li>Открываем <a href="https://www.google.ru/maps/">Google - карты</a></li>
+	    <li>Нажимаем на три полоски в лев. верх. углу</li>
+	    <li>Ссылка-код - Код</li>
+	    <li>Ищем интересующий фрагмент - Сохранить и продолжить</li>
+	    <li>Получить код карты</li>
+	</ol>
+	
+	<iframe 
+	    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1618.4697557875895!2d73.36416859959596!3d54.99305561472392!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1474702619365" 
+	    width="800" 
+	    height="400" 
+	    frameborder="0" 
+	    style="border:0" 
+	    allowfullscreen>
+    </iframe>
+	
+
+	<h3>Flash (swf-файлы)</h3>
+	<table class="discription-table">
+		<caption>Flash</caption>
+		<tr>
+			<th>Теги</th>
+			<th>Описание</th>
+			<th>Атрибуты</th>
+			<th>Описание</th>
+		</tr>
+		<tr>
+			<td rowspan="5">&lt;embed&gt;</td>
+			<td rowspan="5">Элемент используется для загрузки и отображения объектов (например, видеофайлов, флэш-роликов, некоторых звуковых файлов и т. д.), которые исходно браузер не понимает. Как правило, такие объекты требуют подключения к браузеру специального модуля, который называется плагин, или запуска вспомогательной программы.</td>
+			<td>type="application/x-shockwave-flash"</td>
+			<td>MIME-Тип флеш-файла</td>
+		</tr>
+		<tr>
+			<td>height и width</td>
+			<td>Размеры фрейма</td>
+		</tr>
+		<tr>
+			<td>src="http://..."</td>
+			<td>Путь к файлу, содержимое которого будет загружаться</td>
+		</tr>
+		<tr>
+			<td>pluginspage</td>
+			<td>Адрес страницы в Интернете, откуда можно скачать и установить плагин к браузеру</td>
+		</tr>
+		<tr>
+			<td>border</td>
+			<td>Устанавливает рамку<br> "yes|no  в HTML4 или 0,1,2,..."</td>
+		</tr>
+	</table>
+	<br>
+	<code>
+		&lt;embed <span class="red">src=<span class="gray">"../pict/masianya_dj.swf"</span> width="700" height="800"<br>
+           	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="application/x-shockwave-flash"<br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pluginspage=<span class="gray">"http://www.macromedia.com/go/getflashplayer"</span> border="1"</span>&gt;<br>
+	</code>
+	<embed src="../pict/masianya_dj.swf" width="400" height="300"
+           type="application/x-shockwave-flash"
+           pluginspage="http://www.macromedia.com/go/getflashplayer" border="1">
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
