@@ -7,6 +7,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+      <style>
+        .flex-sample {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f1e301;
+            background-color: maroon;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 18px;
+        }
+        .col3 {min-width: 400px;}
+        .col3-flex-sample {
+          display: flex;
+          flex-direction: row;
+        }
+        .flex-sample1 {
+          width: 50px;
+          height: 50px;
+        } 
+        .flex-sample1-1 {
+          margin-left: auto;
+        }
+        .flex-sample2-2 {
+          margin-right: auto;
+        }
+        .flex-sample3-1 {
+          margin-left: auto;
+        }
+        .flex-sample3-3 {
+          margin-right: auto;
+        }
+        .col3-flex-sample1 {
+          flex-direction: column;
+          height: 150px;
+        }
+        .flex-sample1-4 {
+          flex-basis: 100px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          color: #fff;
+          font-size: 18px;
+          border: 4px solid #f1e301;
+          background-color: maroon;
+        }
+        .flex-cont-basis {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          border: 1px solid #000;
+          width: 100%;
+          height: 200px;
+        }
+        .flex-cont-basis2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: 1px solid #000;
+          width: 100%;
+          height: 200px;
+        }
+        .flex-sample-basis {
+          width: 50px;
+          height: 50px;
+          flex-basis: 100%;
+          color: #fff;
+          font-size: 25px;
+          background-color: maroon;
+          border: 3px solid yellow;
+          margin: 10px;
+        } 
+        .flex-sample5-1 {
+          flex-grow: 1;
+        }
+        .flex-sample5-2 {
+          flex-grow: 1;
+        }
+        .flex-sample5-3 {
+          flex-grow: 3;
+        }
+        .flex-sample6-1 {
+          width: 250px;
+          flex-shrink: 0;
+        }
+        .flex-sample6-2 {
+          width: 250px;
+          flex-shrink: 1;
+        }
+        .flex-sample6-3 {
+          flex-shrink: 3;
+        }
+        .col-sample7 {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .sample7 {
+          min-height: 20px;
+          background-color: maroon;
+          border: 3px solid yellow;
+          margin-bottom: 5px;
+          color: #fff;
+          flex-basis: 100%;
+        }
+        .card {
+          margin-bottom: 20px;
+          line-height: 1.3;
+        }
+        .card-title-note {
+          font-size: 14px;
+          color: maroon;
+        }
+        .card-title {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0;
+            align-items: flex-end;
+        }
+        
+        .card-title span {
+            background-color: #c8dcff;
+            border: 1px solid #999999;
+        }
+        .card-title-main {
+            flex-grow: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -78,6 +204,345 @@
 	<div class="content clearfix">
 	
 	<h2>Мой справочник |  CSS3 | flex и block</h2>
+	
+  <table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">flex и block</th>
+    </tr>
+    <tr>
+      <td class="col1">
+        Ширина, высота, внутренние отступы и рамки для флекс-контейнеров и флекс-элементов работают как обычно: общий размер элементов складывается из этих компонентов. Это поведение так же можно менять с помощью свойства box-sizing. <br><br>
+        Есть и несколько важных отличий: <br>
+1. Флекс-элементы, в отличие от блочных элементов, не растягиваются на всю ширину контейнера по умолчанию;<br>
+2. На флекс-элементы не действует свойство <b>float</b>.
+      </td>
+      <td class="col2">
+        <code>
+<span class="red">.flex-sample</span> {<br>
+&nbsp;&nbsp;width: 100px;<br>
+&nbsp;&nbsp;height: 100px;<br>
+}
+        </code>
+      </td>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample">1</div>
+        <div class="flex-sample">2</div>
+        <div class="flex-sample">3</div>
+      </td>
+    </tr>
+      <tr>
+      <td class="col1" rowspan="3">
+        <b>margin</b> и флекс-элементы<br>
+1. внешние отступы не схлопываются, ни по горизонтали, ни по вертикали;<br>
+2. внешние отступы не выпадают, ни из флекс-контейнера, ни из флекс-элементов;<br>
+3. значение auto получило премию журнала Форбс в номинации «Самое влиятельное значение CSS-свойства внутри флекс-контейнера». <br>
+При значении auto свойство <b>justify-content, align-items и align-self</b> ломается
+      </td>
+      <td class="col2" rowspan="3">
+<code>
+<span class="red">.flex-sample1</span> {<br>
+&nbsp;&nbsp;margin-left: auto;<br>
+}<hr>
+<span class="red">.flex-sample3</span> {<br>
+&nbsp;&nbsp;margin-right: auto;<br>
+}<hr>
+<span class="red">.flex-sample3</span> {<br>
+&nbsp;&nbsp;margin-left: auto;<br>
+&nbsp;&nbsp;margin-right: auto;<br>
+}
+</code>
+      </td>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample1-1">1</div>
+        <div class="flex-sample flex-sample1-2">2</div>
+        <div class="flex-sample flex-sample1-3">3</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample2-1">1</div>
+        <div class="flex-sample flex-sample2-2">2</div>
+        <div class="flex-sample flex-sample2-3">3</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample3-1">1</div>
+        <div class="flex-sample flex-sample3-2">2</div>
+        <div class="flex-sample flex-sample3-3">3</div>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">flex-basis</th>
+    </tr>
+    <tr>
+      <td rowspan="2" class="col1">
+        Размер элемента вдоль <b>ГЛАВНОЙ ОСИ</b><br><br>
+        В первом примере базис переопределяет ширину, во втором - высоту
+      </td>
+      <td rowspan="2" class="col2">
+        <code>
+<span class="red">.flex-cont</span> {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;<mark><b>flex-direction: row;</b></mark><br>
+&nbsp;&nbsp;align-items: center;<br>
+&nbsp;&nbsp;border: 1px solid #000;<br>
+&nbsp;&nbsp;width: 100%;<br>
+&nbsp;&nbsp;height: 500px;<br>
+}<br>
+<span class="red">.flex-cont2</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-direction: column;</b></mark><br>
+&nbsp;&nbsp;...<br>
+}<br>
+<span class="red">.flex-sample</span> {<br>
+&nbsp;&nbsp;width: 50px;<br>
+&nbsp;&nbsp;height: 50px;<br>
+&nbsp;&nbsp;<mark><b>flex-basis: 100%;</b></mark><br>
+&nbsp;&nbsp;color: #fff;<br>
+&nbsp;&nbsp;font-size: 25px;<br>
+&nbsp;&nbsp;background-color: maroon;<br>
+&nbsp;&nbsp;border: 3px solid yellow;<br>
+&nbsp;&nbsp;margin: 10px;<br>
+}
+        </code>
+      </td>
+      <td class="flex-cont-basis">
+        <div class="flex-sample-basis">1</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="flex-cont-basis2">
+        <div class="flex-sample-basis">2</div>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">flex-grow</th>
+    </tr>
+    <tr>
+      <td class="col1" rowspan="4">
+        Если внутри флекс-контейнера по главной оси остаётся свободное место, то мы можем попросить флекс-элемент, чтобы он увеличился и занял это место. Это делается с помощью свойства <b>flex-grow</b>, которое можно назвать «коэффициентом флекс-жадности» флекс-элемента. <br>
+        Свойство <b>flex-grow</b> принимает неотрицательные числовые значения, его значение по умолчанию — 0. Если значение flex-grow равно нулю, то флекс-элемент «не претендует» на оставшееся свободное место во флекс-контейнере и не будет увеличиваться, чтобы занять это место. Если значение flex-grow больше нуля, то флекс-элемент будет увеличиваться, «захватывая» оставшееся свободное место. Получается, что базовый размер — это исходный размер флекс-элементов до применения flex-grow. <hr>
+        <mark><b>flex-grow: 1;</b></mark> растягивает флекс-элемент на всю ширину, очень убобно при адаптивности и переносах элементах на новые строки
+      </td>
+      <td class="col2" rowspan="4">
+        <code>
+<span class="red">.flex-sample1</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-grow: 1;</b></mark><br>
+}<hr>
+<span class="red">.flex-sample2</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-grow: 1;</b></mark><br>
+}<hr>
+<span class="red">.flex-sample1, .flex-sample2</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-grow: 1;</b></mark><br>
+} <hr>
+<span class="red">.flex-sample1</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-grow: 1;</b></mark><br>
+}<br>
+<span class="red">.flex-sample2</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-grow: 3;</b></mark><br>
+}
+        </code>
+      </td>
+      <td class="col3 col3-flex-sample" rowspan="4">
+        <div class="flex-sample flex-sample5-1">1</div>
+        <div class="flex-sample">2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample">1</div>
+        <div class="flex-sample flex-sample5-2">2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample5-1">1</div>
+        <div class="flex-sample flex-sample5-2">2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample5-1">1</div>
+        <div class="flex-sample flex-sample5-3">2</div>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">flex-shrink</th>
+    </tr>
+    <tr>
+      <td class="col1" rowspan="5">
+Если сумма базовых размеров флекс-элементов больше, чем размер флекс-контейнера, то возникает отрицательное пространство.
+<br>
+Механизм перераспределения работает не только для свободного места, но и для отрицательного пространства. Флекс-элементы умеют распределять отрицательное пространство между собой и сжиматься.
+<br>
+За уменьшение флекс-элементов отвечает свойство <b>flex-shrink</b>, которое можно назвать «коффициентом сжатия».
+<br>
+Свойство flex-shrink принимает неотрицательные числовые значения, его значение по умолчанию — 1.
+<br>
+Если значение flex-shrink больше нуля, то флекс-элемент будет уменьшаться, «впитывая» часть отрицательного пространства, если оно существует.
+<br>
+Если значение flex-shrink равно нулю, то флекс-элемент уменьшаться не будет.
+<br>
+Флекс-элементы стараются быть максимально «гибкими» и не выпадать из своего контейнера, поэтому у flex-shrink значение по умолчанию равно 1. Но если задавать нулевые значения для коэффициента сжатия, то выпадения элементов добиться можно. <hr>
+<mark><b>flex-shrink: 0;</b></mark> не сужает флекс-элемент, если внутри него задан текст при малой ширине, будет адаптация под этот текст      </td>
+      <td class="col2" rowspan="5">
+        <code>
+<span class="red">.flex-sample1,<br> .flex-sample2</span> {<br>
+... <br> 
+&nbsp;&nbsp;<mark><b>flex-shrink: 0;</b></mark><br>
+}<hr>
+<span class="red">.flex-sample2</span> {<br>     
+... <br> 
+&nbsp;&nbsp;<mark><b>flex-shrink: 1;</b></mark><br>
+}<hr>
+<span class="red">.flex-sample1,<br> .flex-sample2</span> {<br>
+... <br> 
+&nbsp;&nbsp;<mark><b>flex-shrink: 1;</b></mark><br>
+}<hr>
+<span class="red">.flex-sample1,<br> .flex-sample2</span> {<br>
+... <br> 
+&nbsp;&nbsp;<mark><b>flex-shrink: 3;</b></mark><br>
+}<hr>
+        </code>
+      </td>
+      <td>
+        <p>Это свойство наподобие <b>flex-grow</b>, только действует оно не на расширение размера элемента, а его сжатие, это актуально когда флекс-элементы "вылазят" из флекс контейнеров</p>
+      </td>
+    </tr>
+    <tr>    
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample6-1">1</div>
+        <div class="flex-sample flex-sample6-1">2</div>
+      </td>
+    </tr>
+    <tr>    
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample6-1">1</div>
+        <div class="flex-sample flex-sample6-2">2</div>
+      </td>
+    </tr>
+    <tr>    
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample6-2">1</div>
+        <div class="flex-sample flex-sample6-2">2</div>
+      </td>
+    </tr>
+    <tr>    
+      <td class="col3 col3-flex-sample">
+        <div class="flex-sample flex-sample6-3">1</div>
+        <div class="flex-sample flex-sample6-3">2</div>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Общая запись</th>
+    </tr>
+    <tr>
+      <td class="col1">Общая запись</td>
+      <td class="col2">
+        <code>
+<span class="red">.flex-item</span> {<br>
+&nbsp;&nbsp;<mark><b>flex: 1 2 300px;</b></mark><br>
+}<br>
+<span class="red">.flex-item</span> {<br>
+&nbsp;&nbsp;flex-grow: 1;<br>
+&nbsp;&nbsp;flex-shrink: 2;<br>
+&nbsp;&nbsp;flex-basis: 300px;<br>
+}
+        </code>
+      </td>
+      <td class="col3">
+        <code><pre>
+flex: initial; -&gt; flex: 0 1 auto;
+flex: auto;    -&gt; flex: 1 1 auto;
+flex: none;    -&gt; flex: 0 0 auto;
+flex: 1 0;     -&gt; flex: 1 0 0%;
+flex: 1;       -&gt; flex: 1 1 0%;</pre></code>
+        <p>В некоторых браузерах неполные или особенные значения свойства flex интерпретируются с ошибками. Поэтому лучше задавать все три компоненты в значении этого свойства.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">flex-элементы столбом</th>
+    </tr>
+    <tr>
+      <td class="col1">
+        Будет всегда расположение столбом
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.flex-cont</span> {
+    display: flex;
+    flex-wrap: wrap;
+}
+<span class="red">.flex-sample</span> {
+    min-height: 20px;
+    flex-basis: 100%;
+}</pre></code>
+      </td>
+      <td class="col3 col-sample7">
+        <div class="sample7">1</div>
+        <div class="sample7">2</div>
+        <div class="sample7">3</div>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Заголовок с описанием</th>
+    </tr>
+    <tr>
+      <td class="col1">
+
+      </td>
+      <td class="col2">
+        <code>
+&lt;h1 class="<span class="red">card-title</span>"&gt;<br>
+&nbsp;&nbsp;&lt;span class="<span class="red">card-main</span>"&gt;<span class="gray">Кекс против флекса</span>
+&lt;/span&gt;<br>
+&nbsp;&nbsp;&lt;span class="<span class="red">card-note</span>"&gt;<span class="gray">история взросления</span>
+&lt;/span&gt;<br>
+&lt;/h1&gt;</code><hr>
+     <code><pre>
+<span class="red">card</span> {
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+<span class="red">.card-title-note</span> {
+  font-size: 14px;
+  color: maroon;
+}
+<span class="red">.card-title</span> {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    align-items: flex-end;
+}
+
+<span class="red">.card-title span</span> {
+    background-color: #c8dcff;
+    border: 1px solid #999999;
+}
+<span class="red">.card-title-main</span> {
+    flex-grow: 1;
+}
+     </pre></code>
+      </td>
+      <td class="col3 col-sample8">
+            <h3 class="card-title">
+                <span class="card-title-main">Кекс против флекса</span>
+                <span class="card-title-note">история взросления</span>
+            </h3>
+            <h3 class="card-title">
+                <span class="card-title-main">Кекс против флекса флекса флекса флекса</span>
+                <span class="card-title-note">история взросления</span>
+            </h3>
+      </td>
+    </tr>
+    
+  </table>
 	
 
         
