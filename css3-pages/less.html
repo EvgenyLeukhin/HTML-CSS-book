@@ -79,6 +79,440 @@
 	
 	<h2>Мой справочник |  CSS3 | LESS</h2>
 	
+	<table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">Переменные</th>
+    </tr>
+        
+    <tr>
+      <td class="col1" style="width: 200px;">
+         <b>Переменные (@)</b><br>
+         
+      </td>
+      <td class="col2">
+        <code><pre>
+<mark><b>@navy: #1d365d;</b></mark>
+<span class="red">.sample</span> {
+  background-color: <mark><b>@navy;</b></mark>
+} <hr>
+<span class="red">.rule-1</span> {
+  @align: right;
+  text-align: @align; 
+<span class="gray">// text-align задаётся значение right</span>
+}
+<span class="red">.rule-2</span> {
+  text-align: @align; 
+<span class="gray">// в этом месте произойдёт ошибка</span>
+} <hr>
+@align: left;
+
+<span class="red">.rule-1</span> {
+  @align: right;
+  text-align: @align; 
+  <span class="gray">// text-align задаётся значение right</span>
+}
+<span class="red">.rule-2</span> {
+  text-align: @align; 
+  <span class="gray">// text-align задаётся значение left</span>
+}
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Переменные можно объявлять как «снаружи» правил, так и «внутри». В случае «внутреннего» объявления переменная будет доступна только внутри правила, в котором она объявлена
+      </td>
+    </tr>
+    
+    <tr>
+      <th class="css3-table-title" colspan="3">Цветовые функции</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Цветовые функции</b> <br>
+        С помощью LESS-функции spin можно повернуть цветовое колесо на определённый угол относительно заданного цвета и получить новый цвет. Функция принимает два параметра. <hr>
+        60 град от базового цвета - <b>error</b><br>
+        -60 град от базового цвета - <b>info</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<mark><b>spin(цвет, угол_поворота);</b></mark>
+
+color: spin(red, 90); 
+<span class="gray">// цвет поверн. от красного на 90° по чаc.</span>
+
+border-color: spin(#f0f, -45); 
+<span class="gray">// цвет на 45° от #f0f против чаc.</span>
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        
+        Цвет можно задавать в любом цветовом формате. Значение угла может быть как положительным, так и отрицательным. При положительном угле функция повернёт колесо по часовой стрелке, при отрицательном — против. <br>
+        Противоположный цвет на колесе называется комплементарным. Он находится под углом 180° к заданному цвету. Комплементарные цвета используют для создания контраста. <br>
+        <img src="../pict/color-circle.png" alt="color-circle" width="184" height="172"> 
+      </td>
+    </tr>
+    
+    <tr>
+      <th class="css3-table-title" colspan="3">Вложенность</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Вложенность правил</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.super-class-name</span> {
+    color: #ffffff;
+}
+<span class="red">.super-class-name a</span> {
+    text-decoration: none;
+}
+<span class="red">.super-class-name a span</span> {
+    font-size: 1em;
+} <hr><span class="gray">Можно заменить на:</span>
+<span class="red">.super-class-name</span> {
+    color: #ffffff;
+    <span class="red">a</span> {
+        text-decoration: none;
+        <span class="red">span</span> {
+            font-size: 1em;
+        }
+    }
+}</pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Вложенные правила просто пишутся внутри других правил. Из цепочек вложенных правил LESS сам составляет итоговые селекторы.
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Управление селекторами (&)</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.super-button-red</span> {
+    color: red;
+}
+<span class="red">.super-button-blue</span> {
+    color: blue;
+} <hr><span class="gray">Можно заменить на:</span>
+<span class="red">.super-button</span> {
+    <mark><b>&-red</b></mark>  { color: red; }
+    <mark><b>&-blue</b></mark> { color: blue; }
+}
+        
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        <code><pre>
+<span class="red">.btn</span> {
+    &-hover,
+    &:hover {
+        color: red;
+    }
+} <hr><span class="gray">Преобразуется в:</span>
+<span class="red">.btn-hover,
+.btn:hover</span> {
+    color: red;
+}
+
+        </pre></code>
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Мат. операции</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Мат. операции</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+padding-top: 10px + 20; <span class="gray">    // = 30px</span>
+padding-bottom: 100px - 50; <span class="gray">// = 50px</span>
+font-size: 2em * 2; <span class="gray">        // = 4em</span>
+left: 50% / 2; <span class="gray">             // = 25%</span>
+<hr>rgb(10, 10, 10) <span class="red">+ 10</span>;
+
+<span class="gray">// то же самое, что</span>
+rgb(<span class="red">20, 20, 20</span>)
+              
+     </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Над любыми численными значениями в LESS-коде можно произвести математические операции сложения, вычитания, умножения или деления
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Цветовые функции</th>
+    </tr>
+      <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Цветовые функции</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="gray">// светлее red на 50%</span>
+color: <b>lighten</b>(red, 50%); 
+
+<span class="gray">// темнее blue на 25%</span>
+color: <b>darken</b>(blue, 25%); 
+
+<span class="gray">// green насыщеннее на 20%</span>
+color: <b>saturate</b>(green, 20%); 
+
+<span class="gray">// blue бледнее на 50%</span>
+color: <b>desaturate</b>(blue, 50%); 
+
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Примеси</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <p>Ещё одна интересная возможность LESS — <b>примеси</b>. Мы можем «примешивать» содержимое одного CSS-правила в другое. Для этого нужно написать имя «примешиваемого» правила внутри другого правила. Рассмотрим пример:</p>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="gray">/* объявление примеси */</span>
+<span class="red">.white</span> { color: white; } 
+<span class="gray">/* применение примеси */</span>
+<span class="red">.text</span> { .white; }      
+  
+<span class="gray">/* объявление невыводимой примеси */</span>
+<span class="red">.white()</span> { color: white; } 
+<span class="gray">/* применение примеси */</span>
+<span class="red">.text</span> { .white; }      
+       
+<span class="gray">/* Эти выражения дают один 
+и тот же результат: */</span>
+<span class="red">.mixin();
+.mixin;</span>    
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        <p>Как мы видим, в правиле, где была «вызвана» примесь .white, появилось её содержимое.
+        Чтобы не выводить саму примесь в CSS, нужно после объявления примеси поставить скобки</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Несколько примесей</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.big()</span> {
+    width: 500px;
+}
+<span class="red">.white()</span> {
+    color: white;
+}
+<span class="red">.block</span> {
+    .big();
+    .white();
+}
+<span class="gray">/* Результат: */</span>
+<span class="red">.block</span> {
+    width: 500px;
+    color: white;
+}</pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        К одному правилу можно применить несколько примесей одновременно. В таком случае примеси просто «вызываются» по очереди.
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Примесь с параметром</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.margin(@value)</span> {
+    margin-top: @value;
+    margin-bottom: @value;
+}
+<span class="red">.block</span> {
+    .margin(10px);
+}
+<span class="gray">/* Результат: */</span>
+<span class="red">.block</span> {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}</pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Параметры позволяют сделать примеси более универсальными.
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Примесь с параметром и значенем</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="gray">/*Примесь с параметром и значением по ум.*/</span>
+<span class="red">.big(@size: 500px)</span> {
+    width: @size;
+}
+<span class="gray">/*Передаётся значение параметра по ум.*/</span>
+<span class="red">.block</span> {
+  .big();
+  <span class="gray">/* width: 500px;*/</span>
+}
+<span class="gray">/*Передаётся другое значение*/</span>
+<span class="red">.block</span> {
+  .big(<mark>100px</mark>);
+  <span class="gray">/* width: <mark>100px</mark>;*/</span>
+}</pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Параметризованные примеси можно сделать ещё универсальнее. Параметру примеси можно задать значение по умолчанию. Оно указывается через двоеточие после названия параметра. Если в примесь при применении параметр не передаётся, то используется значение по умолчанию. Рассмотрим пример, в котором значение параметра по умолчанию указано, но не задействуется, так как в примесь передаётся явный параметр.
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Примеси с несколькими параметрами</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.offset(@padding; @margin)</span> {
+    padding: @padding;
+    margin: @margin;
+}
+<span class="red">.block</span> {
+    .offset(5px; 10px);
+}
+<span class="gray">/* Результат: */</span>
+<span class="red">.block</span> {
+    padding: 5px;
+    margin: 10px;
+}
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        В примесь можно передавать несколько параметров. Параметры перечисляются через запятую , или через точку с запятой ;. Рекомендуется использовать точку с запятой.
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Примеси - шаблоны</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="gray">/* Обычная примесь */</span>
+<span class="red">.set-font-size(@size)</span> {
+    font-size: @size;
+}
+<span class="gray">/* Примесь-шаблон (smaller - 
+название шаблона) */</span>
+<span class="red">.set-font-size(<mark>smaller</mark>; @size)</span> {
+    font-size: @size / 2;
+}
+<span class="red">.set-font-size(<mark>bigger</mark>; @size)</span> {
+    font-size: @size * 2;
+}
+<span class="red">.text</span>   {.set-font-size(100px); }
+<span class="red">.s-text</span> {.set-font-size(smaller; 100px);}
+<span class="red">.x-text</span> {.set-font-size(bigger; 100px);}
+
+<span class="gray">/* Результат: */</span>
+<span class="red">.text</span>   { font-size: 100px; } 
+<span class="red">.s-text</span> { font-size: <b>50px</b>; }
+<span class="red">.x-text</span> { font-size: <b>200px</b>; }
+     </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Можно вызывать эту примесь с названием шаблона и без него и, в зависимости от этого, получать соответствующие результаты.Таким образом можно для схожих действий не создавать несколько примесей с разными названиями. Лучше делать шаблоны одной примеси и просто вызывать её с дополнительным параметром. Давайте попробуем создать шаблон примеси и применить её для окраски монстров. <br><br>
+        У примесей может быть несколько шаблонов, с разными названиями
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Универсальный шаблон</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.font-size(bigger; @size)</span>  {
+    font-size: @size * 2;
+}
+<span class="red">.font-size(smaller; @size)</span> {
+    font-size: @size / 2;
+}
+<span class="gray"><mark>/* Универсальный шаблон: */</mark></span>
+<span class="red">.font-size(@_; @size)</span> {
+    color: #000;
+    width: auto;
+    min-height: 100px;
+} 
+<hr>
+<span class="red">.content-bigger</span> {
+    .font-size(bigger, 20px);
+}
+<span class="red">.content-smaller</span> {
+    .font-size(smaller, 20px);
+}
+<hr>
+<span class="gray">/* Результат: */</span>
+<span class="red">.content-bigger</span> {
+    font-size: 40px;
+    color: #000;
+    width: auto;
+    min-height: 100px;
+}
+<span class="red">.content-smaller</span> {
+    font-size: 10px;
+    color: #000;
+    width: auto;
+    min-height: 100px;
+}
+         </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Если нужно задать общие свойства для нескольких шаблонов одной и той же примеси, можно создать универсальный шаблон. <br>
+        В качестве имени в универсальный шаблон передаётся специальная переменная @_, за ней следуют параметры. Важно, чтобы универсальный шаблон принимал те же параметры, что и все остальные шаблоны.
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Условия</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Примеси с условием</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.mixin(@variable) when (@variable = 1)</span> {
+    <span class="gray">// сделать что-то</span>
+}
+<span class="gray">/*Такая примесь применится, если «вызвать» её 
+с параметром 1. В противном случае примесь не 
+применится.*/</span>
+<span class="red">.mixin(@color) when (lightness(@color) &gt; 50%)</span> {
+//сделать что-то, когда цвет светлее серого
+}
+<span class="red">.mixin(@color) when (lightness(@color) = 100%)</span> {
+//сделать что-то, когда цвет полностью белый
+}
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        В примесях можно использовать полноценные условия, которые могут изменять поведение примеси в зависимости от значений входных параметров.
+        Чтобы создать условие, нужно после названия примеси поставить ключевое слово <b>when</b>, за которым в скобках написать условную конструкцию. <br>
+В условной конструкции допускаются следующие операторы: <b>&gt;, &gt;=, =, =&lt;, &lt;</b>. Также допустимо использовать встроенные функции LESS, которые возвращают конкретные значения.
+
+К примеру, в LESS есть встроенная функция lightness, которая принимает в качестве параметра значение цвета и возвращает степень его светлоты. Чёрный цвет обладает 0% светлоты, а белый — 100%. Вот пример её использования:
+      </td>
+    </tr>
+    
+    
+    
+    
+    
+  </table>
 	
 	
 	
