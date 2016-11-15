@@ -161,8 +161,15 @@ section h1 {
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
                 <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
                 <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
-                <li><a href="../css3-pages/less.html">LESS</a></li>
-                <li><a href="../css3-pages/sass.html">SASS</a></li>
+                <li>
+                  <a href="#">LESS</a>
+                  <ul class="sub-menu sub-menu-less">
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
+                </li>
             </ul>
 	
 	</div>
@@ -197,36 +204,36 @@ section h1 {
                 <h3>HTML:</h3>
                 <code><pre>
 <span class="gray">&lt;!--ОСНОВНОЙ КОНТЕЙНЕР--&gt;</span>
-&lt;section class="<span class="red">slider-count</span>">
+&lt;section class="<span class="red">slider-count</span>"&gt;
     <span class="gray">&lt;!--ЗАГОЛОВОК СЛАЙДЕРА--&gt;</span>
-    &lt;h1><span style="color: #000;">Арт-галерея</span>&lt;/h1>
+    &lt;h1&gt;<span style="color: #000;">Арт-галерея</span>&lt;/h1&gt;
     <span class="gray">&lt;!--КОНТЕЙНЕР СЛАЙДЕРА--&gt;</span>
-    &lt;div class="<span class="red">slider</span>">
+    &lt;div class="<span class="red">slider</span>"&gt;
         <span class="gray">&lt;!--ИНПУТЫ--&gt;</span>
-        &lt;input type="radio" id="<span class="red">btn-1</span>" name="toggle" <span class="red">checked</span>>
-        &lt;input type="radio" id="<span class="red">btn-2</span>" name="toggle">
-        &lt;input type="radio" id="<span class="red">btn-3</span>" name="toggle">
+        &lt;input type="radio" id="<span class="red">btn-1</span>" name="toggle" <span class="red">checked</span>&gt;
+        &lt;input type="radio" id="<span class="red">btn-2</span>" name="toggle"&gt;
+        &lt;input type="radio" id="<span class="red">btn-3</span>" name="toggle"&gt;
         <span class="gray">&lt;!--БЛОК УПРАВЛЕНИЯ--&gt;</span>
-        &lt;div class="<span class="red">slider-controls</span>">
+        &lt;div class="<span class="red">slider-controls</span>"&gt;
             <span class="gray">&lt;!--ЛЕЙБЛЫ--&gt;</span>
-            &lt;label for="<span class="red">btn-1</span>">&lt;/label>
-            &lt;label for="<span class="red">btn-2</span>">&lt;/label>
-            &lt;label for="<span class="red">btn-3</span>">&lt;/label>
-        &lt;/div>                    
+            &lt;label for="<span class="red">btn-1</span>"&gt;&lt;/label&gt;
+            &lt;label for="<span class="red">btn-2</span>"&gt;&lt;/label&gt;
+            &lt;label for="<span class="red">btn-3</span>"&gt;&lt;/label&gt;
+        &lt;/div&gt;                    
         <span class="gray">&lt;!--КОНТЕЙНЕР ДЛЯ СЛАЙДОВ--&gt;</span>
-        &lt;div class="<span class="red">slider-inner</span>">
+        &lt;div class="<span class="red">slider-inner</span>"&gt;
             <span class="gray">&lt;!--КОНТЕЙНЕР ЛЕНТЫ СЛАЙДОВ--&gt;</span>
-            &lt;div class="<span class="red">slider-slides</span>">
+            &lt;div class="<span class="red">slider-slides</span>"&gt;
                 <span class="gray">&lt;!--СЛАЙДЫ--&gt;</span>
-                &lt;img src="../pict/slider-1.png">
-                &lt;img src="../pict/slider-2.png">
-                &lt;img src="../pict/slider-3.png">
-            &lt;/div>                        
-        &lt;/div>
+                &lt;img src="../pict/slider-1.png"&gt;
+                &lt;img src="../pict/slider-2.png"&gt;
+                &lt;img src="../pict/slider-3.png"&gt;
+            &lt;/div&gt;                        
+        &lt;/div&gt;
         
-    &lt;/div>
+    &lt;/div&gt;
     
-&lt;/section></pre></code>
+&lt;/section&gt;</pre></code>
                 
             </div>
 
