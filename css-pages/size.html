@@ -220,7 +220,7 @@
 		</table>
 	
 	<figure style="text-align: center;">
-		<img src="../pict/size.png" height="200" alt="size-img"">
+		<img src="../pict/size.png" height="200" alt="size-img">
 	</figure>
 
 	<h3>Схлопывание маргинов</h3>
@@ -248,14 +248,15 @@
 		</code>
 	</section>
 
-	<p style="clear:left;"><b><mark>Как это лечится?</mark></b><br>
+	<p style="clear: left;">
+	  <b><mark>Как это лечится?</mark></b><br>
 		Можно задать родителю:
 		<ul>
 			<li>padding-top: 1px;</li>
 			<li>border-top: 1px solid transparent;</li>
 			<li>Текст внутри родителя, также можно прозрачный</li>
 		</ul>
-	</p>
+  </p>
 
 	<section style="float: left; width: 40%; border: 1px solid black;">
 		<div style="outline: 1px solid black; background-color: orange; height: 200px; border: 1px solid transparent;">
@@ -335,10 +336,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;-webkit-box-sizing: border-box;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;
 }
+<span class="gray">Но првильнно так:</span>
+                  <span class="red">html</span> { box-sizing: border-box; }
+<span class="red">*, *::before, *::after</span> { box-sizing: inherit; }
+
 	</code></pre>
 
 	
-	<h3>reset.css (Сброс всех отступов по ум*)</h3>
+	<h3>reset.css (Сброс всех отступов по ум*) - <span class="gray">Лучше не использовать</span></h3>
 	<code>
 		<pre style="border: 1px solid black; padding: 5px;">
 <span class="gray">/* http://meyerweb.com/eric/tools/css/reset/
