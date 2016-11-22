@@ -23,6 +23,7 @@
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../javascript+-page.html">JS+</a></li>
 		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
 	</ul>
 	</div>
 </div>
@@ -71,14 +72,17 @@
                 <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
                 <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
                 <li>
-                  <a class="active" href="#">LESS</a>
+                  <a href="#">LESS\SASS</a>
                   <ul class="sub-menu sub-menu-less">
-                        <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
-                        <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
-                        <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
-                        <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
-                    </ul>
+                    <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
                 </li>
+                <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+                <li><a href="../css3-pages/gulp.html">Gulp</a></li>
             </ul>
 	
 	</div>
@@ -93,8 +97,8 @@
         
     <tr>
       <td class="col1" style="width: 200px;">
-         <b>Переменные (@)</b><br>
-         
+         <b>(@)</b> у LESS<br>
+         <b>($)</b> у SASS
       </td>
       <td class="col2">
         <code><pre>
@@ -158,12 +162,13 @@
 }</pre></code>
       </td>
       <td class="col3" style="width: 400px;">
-        Вложенные правила просто пишутся внутри других правил. Из цепочек вложенных правил LESS сам составляет итоговые селекторы.
+        Вложенные правила просто пишутся внутри других правил. Из цепочек вложенных правил LESS\SASS сам составляет итоговые селекторы.
       </td>
     </tr>
     <tr>
       <td class="col1" style="width: 200px;">
-        <b>Управление селекторами (&)</b>
+        <b>Управление селекторами (&)</b><br><br>
+        <span style="color: #000;">Одинаково для LESS и SASS</span>
       </td>
       <td class="col2">
         <code><pre>
@@ -209,15 +214,18 @@ padding-top: 10px + 20; <span class="gray">    // = 30px</span>
 padding-bottom: 100px - 50; <span class="gray">// = 50px</span>
 font-size: 2em * 2; <span class="gray">        // = 4em</span>
 left: 50% / 2; <span class="gray">             // = 25%</span>
-<hr>rgb(10, 10, 10) <span class="red">+ 10</span>;
-
+rgb(10, 10, 10) <span class="red">+ 10</span>;
+<hr>
 <span class="gray">// то же самое, что</span>
 rgb(<span class="red">20, 20, 20</span>)
-              
+<hr>
+<b>ceil</b>((16px + 2cm) / 2) - <span class="gray">округ. в большую ст.</span>
+<b>floor</b>((16px + 2cm) / 2) - <span class="gray">округ. в меньшую ст.</span>
+<b>round</b>((16px + 2cm) / 2) - <span class="gray">округ. в ближ. ст.</span>
      </pre></code>
       </td>
       <td class="col3" style="width: 400px;">
-        Над любыми численными значениями в LESS-коде можно произвести математические операции сложения, вычитания, умножения или деления
+        Над любыми численными значениями в LESS\SASS-коде можно произвести математические операции сложения, вычитания, умножения или деления
       </td>
     </tr>
     
@@ -272,7 +280,6 @@ rgb(<span class="red">20, 20, 20</span>)
     </tr>
     
   </table>
-	
 	
 	
 	

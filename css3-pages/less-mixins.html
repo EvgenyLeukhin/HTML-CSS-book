@@ -23,6 +23,7 @@
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../javascript+-page.html">JS+</a></li>
 		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
 	</ul>
 	</div>
 </div>
@@ -71,14 +72,17 @@
                 <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
                 <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
                 <li>
-                  <a class="active" href="#">LESS</a>
+                  <a href="#">LESS\SASS</a>
                   <ul class="sub-menu sub-menu-less">
-                        <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
-                        <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
-                        <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
-                        <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
-                    </ul>
+                    <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
                 </li>
+                <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+                <li><a href="../css3-pages/gulp.html">Gulp</a></li>
             </ul>
 	
 	</div>
@@ -93,7 +97,7 @@
     </tr>
     <tr>
       <td class="col1" style="width: 200px;">
-        <p>Ещё одна интересная возможность LESS — <b>примеси</b>. Мы можем «примешивать» содержимое одного CSS-правила в другое. Для этого нужно написать имя «примешиваемого» правила внутри другого правила. Рассмотрим пример:</p>
+        <p>Ещё одна интересная возможность LESS\SASS — <b>примеси</b>. Мы можем «примешивать» содержимое одного CSS-правила в другое. Для этого нужно написать имя «примешиваемого» правила внутри другого правила. Рассмотрим пример:</p> 
       </td>
       <td class="col2">
         <code><pre>
@@ -110,12 +114,21 @@
 <span class="gray">/* Эти выражения дают один 
 и тот же результат: */</span>
 <span class="red">.mixin();
-.mixin;</span>    
-        </pre></code>
+.mixin;</span><hr>
+<span class="gray">/* <b>В SASS:</b> */</span>   
+<span class="gray">//объявление примеси:</span>
+<span class="red">@mixin</span> <mark>some_name</mark> { ... } 
+
+<span class="gray">//применение примеси:</span>
+<span class="red">.selector</span> { 
+   <span class="red">@include</span> <mark>some_name</mark>;
+   ...
+}</pre></code>
       </td>
       <td class="col3" style="width: 400px;">
         <p>Как мы видим, в правиле, где была «вызвана» примесь .white, появилось её содержимое.
         Чтобы не выводить саму примесь в CSS, нужно после объявления примеси поставить скобки</p>
+        <mark>Если примеси никуда не вложены, то сами по себе они НЕ КОМПИЛИРУЮТСЯ</mark>
       </td>
     </tr>
     <tr>
@@ -295,6 +308,8 @@
         В качестве имени в универсальный шаблон передаётся специальная переменная @_, за ней следуют параметры. Важно, чтобы универсальный шаблон принимал те же параметры, что и все остальные шаблоны.
       </td>
     </tr>
+
+
 
   </table>
 	

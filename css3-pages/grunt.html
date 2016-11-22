@@ -1,0 +1,398 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой справочник | CSS3 | Grunt</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+      code {
+        font-weight: bold !important;    
+      }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                <a href="#">Слайдер</a>
+				<ul class="sub-menu sub-menu3">
+				    <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				    <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				</ul>
+		    </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li>
+                  <a href="#">LESS\SASS</a>
+                  <ul class="sub-menu sub-menu-less">
+                    <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
+                </li>
+                <li><a class="active" href="../css3-pages/grunt.html">Grunt</a></li>
+                <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой справочник |  CSS3 | Grunt</h2>
+	
+	<table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">Установка</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+      Grunt
+      </td>
+      <td class="col2" style="width: 700px;">
+<span style="color: #000;">
+1. Устанавливаем <a href="https://nodejs.org/en/">node.js</a> для вашей ОС,<br>
+проверяем:</span> <code>node -v </code>
+<br><br>
+<span style="color: #000;">Также вместе с node должен установиться пакетный менеджер <b>npm</b>,
+проверяем:</span> <code>npm -v </code>
+<hr>
+<span style="color: #000;">
+2. Устанавливаем <b>grunt cli</b> (command line interface), обязательно нужны ПРАВА АДМИНИСТРАТОРА<br>
+В MAC OS и Linux пишем:</span> <br>
+<code>sudo npm install grunt-cli -g</code><br><br>
+<span style="color: #000;">
+В Windows запускаем консоль с правами админа и пишем:</span> <br>
+<code>npm install grunt-cli -g</code>
+<hr>
+<span style="color: #000;">
+3. Устанавливаем <b>grunt</b>: </span> <code>npm install grunt</code>
+<br>   
+<span style="color: #000;">
+проверяем:</span> <code>grunt --version </code>
+
+      </td>
+      <td class="col3">
+      <a href="http://gruntjs.com/" target="_blank">Официальный сайт Grunt</a>
+      <br><br>
+      Все установки нужно производить в директории с проектом
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">Настройки проекта <b>package.json</b></td>
+      <td class="col2" style="width: 700px;">
+        <code>npm init</code>
+      </td>
+      <td class="col3">Будет создан файл <b>package.json</b> с информацией о проекте</td>
+    </tr>
+    
+    <tr>
+      <th class="css3-table-title" colspan="3">Плагины</th>
+    </tr>
+    <tr> 
+      <td class="col1" style="width: 200px;">Компилятор less-кода в css</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-less
+
+<span class="gray">// Запуск плагина:</span>
+<mark>grunt less</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+<pre>
+<span class="red">less:</span> {
+  style: {
+    files: {
+      'css/style.css': 'sass/style.less'
+    }
+  }
+},</pre></td>
+    </tr>
+    <tr> 
+      <td class="col1" style="width: 200px;">Компилятор sass-кода в css</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-sass
+
+<span class="gray">// Запуск плагина:</span>
+<mark>grunt sass</mark></pre></code>
+      </td>
+      <td class="col3"><pre>
+<span class="red">sass:</span> {
+  style: {
+    files: {
+      'css/style.css': 'sass/style.scss'
+    }
+  }
+},
+      </pre></td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">Компилятор coffee-кода в js</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-coffee
+
+<span class="gray">// Запуск плагина:</span>
+<mark>grunt coffee</mark>
+</pre></code>
+      </td>
+      <td class="col3">
+<pre>
+<mark>coffee:</mark> {
+  <span class="gray">// Выкл. обёртку при компиляции</span>
+  <span class="red">options:</span> {bare: true},
+  <span class="gray">// Компиляция</span>
+  <span class="red">scripts:</span> {
+    expand: true,
+    flatten: true,
+    cwd: 'coffee/', <span class="gray">// Исходная папка</span>
+    src: ['*.coffee'],<span class="gray">//Разреш. файлов</span>
+    dest: 'js/',<span class="gray">//Куда сохр. скомп. файлы</span>
+    ext: '.js'<span class="gray"> // Фомат сохранения файлов</span>
+  }
+},
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">Мнгновенное сохранение изменений</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-watch
+
+npm i -save-dev grunt-newer
+
+<span class="gray">// Запуск плагина:</span>
+<mark>grunt watch</mark> 
+     </pre></code>
+      </td>
+      <td class="col3">
+<pre>
+<mark>watch:</mark> {
+  <span class="gray">// Перезагрузка страницы</span>
+  <span class="red">options:</span> {liveReload: true},
+  <span class="gray">// Компиляция</span>
+  <span class="red">scripts:</span> {
+<span class="gray">//Форматы и пути к файлам для наблюдения</span>
+    files: ['coffee/*.coffee'],
+<span class="gray">//Какую задачу запускать при изменении</span>
+    task: ['newer:coffee']
+    <span class="gray">//или task: ['process']</span>
+  }
+},
+<span class="gray">//newer компил. только изменёный файл</span>
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">Конкатинатор</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-concat
+
+<span class="gray">// Запуск плагина:</span>
+<mark>grunt concat</mark>    
+</pre></code>
+      </td>
+      <td class="col3">Склеевает все файлы в один
+<pre>
+<mark>concat:</mark> {
+<span class="gray">// Форматы и пути к файлам для конкат.</span>
+  <span class="red">dist:</span> {
+<span class="gray">// Где и какие файлы</span>
+    src: ['js/*.js'],
+<span class="gray">// Куда складывать</span>
+    dest: [dist/js/all.js]
+  }
+},
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">Минификатор js-кода</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-uglify
+
+<span class="gray">// Запуск плагина:</span>
+<mark>grunt uglify</mark>     
+</pre></code>
+     
+      </td>
+      <td class="col3">
+<pre>
+<mark>uglify:</mark> {
+<span class="gray">// Форматы и пути к файлам для конкат.</span>
+  <span class="red">dist:</span> {
+<span class="gray">//Комментарий перед мин. кодом</span>
+    <span class="red">options:</span> {banner: ''},
+<span class="gray">//Какой файл минифицировать и куда сохр.</span>
+    <span class="red">files:</span> {
+'dist/js/all.min.js': ['dist/js/all.js']
+    }
+  }
+},
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">Минификатор css-кода</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+npm i -save-dev grunt-contrib-cssmin</pre></code>
+      </td>
+      <td class="col3"><pre>
+<span class="red">cssmin:</span> {
+  target: {
+    files: [{
+      expand: true,
+      cwd: 'release/css',
+      src: ['*.css', '!*.min.css'],
+      dest: 'release/css',
+      ext: '.min.css'
+    }]
+  }
+}
+      </pre></td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Настройка</th>
+    </tr>
+
+    <tr>
+      <td class="col1" style="width: 200px;">
+      Настройки <b>Gruntfile.js</b>
+      </td>
+      <td class="col2" style="width: 700px;">
+<span style="color: #000">
+// 1. Присваиваем module.exports анонимную функцию, так пишутся все модули к <b>node.js</b>
+</span>
+<code><pre>
+module.exports = function(grunt) {
+  ... <span class="gray">Все настройки ЗДЕСЬ!</span>
+};</pre></code><hr>
+<span style="color: #000">
+// 2. Прописываем основной конфиг <b>initConfig</b> и загружаем все нужные плагины <b>loadNpmTasks</b>
+</span>
+<code><pre>
+module.exports = function(grunt) {
+  grunt.<mark>initConfig</mark>({
+    ... <span class="gray">Здесь настройки ПЛАГИНОВ!</span>
+  });
+  
+  grunt.<mark>loadNpmTasks</mark>('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-newer');
+  ...
+  <span class="gray">//Автоматизация:</span>
+  
+  <span class="gray">//Можно составлять свои задачи:</span>
+  grunt.<mark>registerTask</mark>('custom', function() {
+    ...doSomething...
+  }); 
+  grunt.<mark>registerTask</mark>('process', [
+    'newer:coffee', 
+    'concat', 
+    'uglify',
+    <span class="red">'custom'</span>
+    ]
+  );
+  grunt.<mark>registerTask</mark>('default', [
+    'coffee', 
+    'concat', 
+    'uglify', 
+    'watch'
+    ]
+  );
+};</pre></code><hr>
+<span style="color: #000">
+// 4. Запускаем автоматизацию:</span> <code>grunt</code><br>
+<span style="color: #000">// будут работать дефолтные настройки</span>
+     
+      </td>
+      <td class="col3">
+         В нём будут содержаться <b>таски(задачи)</b> и конфиги для всех <b>плагинов</b><br><br>
+        <a href="http://gruntjs.com/sample-gruntfile" target="_blank">Sample Gruntfile.js</a>
+      </td>
+    </tr>
+    
+    
+  </table>
+  
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
