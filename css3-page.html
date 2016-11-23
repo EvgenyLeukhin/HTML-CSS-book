@@ -1,142 +1,428 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой справочник | CSS3</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
-	<style>
-			.index-links-cont {float: left; padding: 10px; margin-top: -10px;}
-			.index-links-cont ul {
-				list-style-image: url(img/cup.png); 
-				padding-left: 50px;
-				margin-top: 10px;
-				}
-			.index-links-cont li {line-height: 30px;}
-			.index-links-cont a {vertical-align: top;}
-	</style>		
+<head>
+  <title>
+    Мой справочник | CSS3
+  </title>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <link href="css/layout.css" rel="stylesheet" type="text/css">
+  <style>
+    .index-links-cont {
+      float: left;
+      padding: 10px;
+      margin-top: -10px;
+    }
+    
+    .index-links-cont ul {
+      list-style-image: url(img/cup.png);
+      padding-left: 50px;
+      margin-top: 10px;
+    }
+    
+    .index-links-cont li {
+      line-height: 30px;
+    }
+    
+    .index-links-cont a {
+      vertical-align: top;
+    }
+  </style>
 </head>
 
 <body>
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-	<ul class="header-menu">
-		<li><a href="index.html">Главная</a></li>
-		<li><a href="design-page.html">WEB-DESIGN</a></li>
-		<li><a href="html-page.html">HTML</a></li>
-		<li><a href="css-page.html">CSS</a></li>
-        <li><a class="active" href="css3-page.html">CSS3</a></li>
-		<li><a href="javascript-page.html">JS</a></li>
-		<li><a href="javascript+-page.html">JS+</a></li>
-		<li><a href="php-page.html">PHP</a></li>
-		<li><a href="cms.html">CMS</a></li>
-	</ul>
-	</div>
-</div>
-
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-        <ul class="vert-menu">
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title">
+        <strong>
+            <a href="index.html">
+              Справочник HTML/CSS/JavaScript
+            </a>
+          </strong>
+      </div>
+      <div class="header-logo">
+      </div>
+      <ul class="header-menu">
+        <li>
+          <a href="index.html">
+              Главная
+            </a>
+        </li>
+        <li>
+          <a href="design-page.html">
+              WEB-DESIGN
+            </a>
+        </li>
+        <li>
+          <a href="html-page.html">
+              HTML
+            </a>
+        </li>
+        <li>
+          <a href="css-page.html">
+              CSS
+            </a>
+        </li>
+        <li>
+          <a class="active" href="css3-page.html">
+              CSS3
+            </a>
+        </li>
+        <li>
+          <a href="javascript-page.html">
+              JS
+            </a>
+        </li>
+        <li>
+          <a href="javascript+-page.html">
+              JS+
+            </a>
+        </li>
+        <li>
+          <a href="php-page.html">
+              PHP
+            </a>
+        </li>
+        <li>
+          <a href="cms.html">
+              CMS
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">
+              Градиент
+            </a>
+          <ul class="sub-menu sub-menu4">
             <li>
-                    <a href="#">Градиент</a>
-				        <ul class="sub-menu sub-menu4">
-				            <li><a href="css3-pages/linear-gradient.html">Линейный</a></li>
-				            <li><a href="css3-pages/radial-gradient.html">Радиальный</a></li>
-                        </ul>
-		    </li>
-		    <li><a href="css3-pages/shadow.html">Тени</a></li>
-		    <li><a href="css3-pages/filter.html">Фото-фильтры</a></li>
-            <li>
-                    <a href="#">Таблицы на CSS3</a>
-                    <ul class="sub-menu sub-menu5">
-			            <li><a href="css3-pages/table-css.html">CSS-таблица</a></li>
-		                <li><a href="css3-pages/table-inline.html">INLINE-таблица</a></li>
-		                <li><a href="css3-pages/table-layout.html">Адаптивная сетка</a></li>
-                    </ul>
-                </li>
-            <li><a href="css3-pages/animation.html">Анимации</a></li>
-            <li><a href="css3-pages/transform.html">Трансформации</a></li>
-            <li><a href="css3-pages/transition.html">Плавные переходы</a></li>
-            <li><a href="css3-pages/centered.html">Центровка</a></li>
-            <li><a href="css3-pages/mask.html">Маска</a></li>
-            <li>
-			        <a href="#">Слайдер</a>
-				        <ul class="sub-menu sub-menu3">
-					        <li><a href="css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
-					        <li><a href="css3-pages/slider2.html">Слайдер с прокруткой</a></li>
-				        </ul>
-		        </li>
-            <li>
-                <a href="#">Флекс</a>
-                <ul class="sub-menu sub-menu8">
-                    <li><a href="css3-pages/flex.html">flex</a></li>
-                    <li><a href="css3-pages/flex&block.html">flex и block</a></li>
-                </ul>
+              <a href="css3-pages/linear-gradient.html">
+                  Линейный
+                </a>
             </li>
-            <li><a href="css3-pages/decoration_css3.html">Декор</a></li>
-            <li><a href="css3-pages/bem.html">БЭМ</a></li>
-            <li><a href="css3-pages/css3-adaptive.html">Адаптивность</a></li>
-            <li><a href="css3-pages/bootstrap.html">Bootstrap</a></li>
             <li>
-              <a href="#">LESS/SASS</a>
-              <ul class="sub-menu sub-menu-less">
-                <li><a href="css3-pages/less-preproc.html">Общее</a></li>
-                <li><a href="css3-pages/less-vars.html">Переменные</a></li>
-                <li><a href="css3-pages/less-color-func.html">Цветовые функции</a></li>
-                <li><a href="css3-pages/less-mixins.html">Примеси</a></li>
-                <li><a href="css3-pages/less-when.html">Услоия и циклы</a></li>
-              </ul>
+              <a href="css3-pages/radial-gradient.html">
+                  Радиальный
+                </a>
             </li>
-            <li><a href="css3-pages/grunt.html">Grunt</a></li>
-            <li><a href="css3-pages/gulp.html">Gulp</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="css3-pages/shadow.html">
+              Тени
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/filter.html">
+              Фото-фильтры
+            </a>
+        </li>
+        <li>
+          <a href="#">
+              Таблицы на CSS3
+            </a>
+          <ul class="sub-menu sub-menu5">
+            <li>
+              <a href="css3-pages/table-css.html">
+                  CSS-таблица
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/table-inline.html">
+                  INLINE-таблица
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/table-layout.html">
+                  Адаптивная сетка
+                </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="css3-pages/animation.html">
+              Анимации
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/transform.html">
+              Трансформации
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/transition.html">
+              Плавные переходы
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/centered.html">
+              Центровка
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/mask.html">
+              Маска
+            </a>
+        </li>
+        <li>
+          <a href="#">
+              Слайдер
+            </a>
+          <ul class="sub-menu sub-menu3">
+            <li>
+              <a href="css3-pages/slider_nerds.html">
+                  Слайдер nёrds
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/slider2.html">
+                  Слайдер с прокруткой
+                </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+              Флекс
+            </a>
+          <ul class="sub-menu sub-menu8">
+            <li>
+              <a href="css3-pages/flex.html">
+                  flex
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/flex&block.html">
+                  flex и block
+                </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="css3-pages/decoration_css3.html">
+              Декор
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/bem.html">
+              БЭМ
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/css3-adaptive.html">
+              Адаптивность
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/bootstrap.html">
+              Bootstrap
+            </a>
+        </li>
+        <li>
+          <a href="#">
+              LESS/SASS
+            </a>
+          <ul class="sub-menu sub-menu-less">
+            <li>
+              <a href="css3-pages/less-preproc.html">
+                  Общее
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/less-vars.html">
+                  Переменные
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/less-color-func.html">
+                  Цветовые функции
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/less-mixins.html">
+                  Примеси
+                </a>
+            </li>
+            <li>
+              <a href="css3-pages/less-when.html">
+                  Услоия и циклы
+                </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="css3-pages/grunt.html">
+              Grunt
+            </a>
+        </li>
+        <li>
+          <a href="css3-pages/gulp.html">
+              Gulp
+            </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content clearfix">
+      <h2>
+          Мой справочник | CSS3
+        </h2>
+      <h1>
+          Cascading Style Sheets 3
+        </h1>
+      <img alt="css" src="img/css.png" style="float: left;" width="100">
+      <div class="index-links-cont">
+        <ul>
+          <li>
+            <a href="https://bootstrap.com" target="_blank">
+                  Bootstrap
+                </a>
+          </li>
+          <li>
+            <a href="http://bootstrap-3.ru/index.php" target="_blank">
+                  Bootstrap 3
+                </a>
+          </li>
+          <li>
+            <a href="http://emmet.io" target="_blank">
+                  Emmet
+                </a>
+          </li>
+          <li>
+            <a href="https://css-tricks.com/" target="_blank">
+                  CSS-tricks
+                </a>
+          </li>
         </ul>
-	</div>
-	<div class="content clearfix">
-	
-	<h2>Мой справочник | CSS3</h2>
-
-	<h1>Cascading Style Sheets 3</h1> 
-	<img src="img/css.png" alt="css" width="100" style="float: left;">
-
-	<div class="index-links-cont">
-			<ul>
-				<li><a href="https://bootstrap.com" target="_blank">Bootstrap</a></li>
-				<li><a href="http://bootstrap-3.ru/index.php" target="_blank">Bootstrap 3</a></li>
-				<li><a href="http://emmet.io" target="_blank">Emmet</a></li>
-				<li><a href="https://css-tricks.com/" target="_blank">CSS-tricks</a></li>
-			</ul>		
-	</div>
-
-	<p class="description_"><b>CSS3</b> (<a href="/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Английский язык">англ.</a>&nbsp;<i><span lang="en" xml:lang="en">Cascading Style Sheets 3</span></i> — <b>каскадные таблицы стилей третьего поколения</b>) — активно разрабатываемая спецификация <a href="/wiki/%D0%9A%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D1%8B%D0%B5_%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B_%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9" class="mw-redirect" title="Каскадные таблицы стилей">CSS</a>. Представляет собой <a href="/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Формальный язык">формальный язык</a>, реализованный с помощью <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8" title="Язык разметки">языка разметки</a>. Самая масштабная редакция по сравнению с CSS1, CSS2 и CSS2.1. Главной особенностью CSS3 является возможность создавать анимированные элементы без использования <a href="/wiki/JavaScript" title="JavaScript">JS</a>, поддержка линейных и радиальных градиентов, теней, сглаживания и многое другое.</p>
-
-	<p class="description_">Преимущественно используется как средство описания и оформления внешнего вида <a href="/wiki/%D0%92%D0%B5%D0%B1-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Веб-страница">веб-страниц</a>, написанных с помощью <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8" title="Язык разметки">языков разметки</a> <a href="/wiki/HTML" title="HTML">HTML</a> и <a href="/wiki/XHTML" title="XHTML">XHTML</a>, но может также применяться к любым <a href="/wiki/XML" title="XML">XML-документам</a>, например, к <a href="/wiki/SVG" title="SVG">SVG</a> или <a href="/wiki/XUL" title="XUL">XUL</a>.</p>
-
-	<p class="description_">Преимущественно используется как средство описания и оформления внешнего вида <a href="/wiki/%D0%92%D0%B5%D0%B1-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Веб-страница">веб-страниц</a>, написанных с помощью <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8" title="Язык разметки">языков разметки</a> <a href="/wiki/HTML" title="HTML">HTML</a> и <a href="/wiki/XHTML" title="XHTML">XHTML</a>, но может также применяться к любым <a href="/wiki/XML" title="XML">XML-документам</a>, например, к <a href="/wiki/SVG" title="SVG">SVG</a> или <a href="/wiki/XUL" title="XUL">XUL</a>.</p>
-
-	<p class="description_">Разрабатываемая версия (список всех модулей)<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup>.</p>
-
-	<p class="description_">В отличие от предыдущих версий спецификация разбита на модули, разработка и развитие которых идёт независимо.</p>
-
-	<p class="description_">CSS3 основан на CSS2.1, дополняет существующие свойства и значения и добавляет новые.</p>
-
-	<p class="description_">Нововведения, начиная с малых, вроде закругленных углов блоков, заканчивая трансформацией (<a href="/wiki/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_(%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F)" class="mw-redirect" title="Мультипликация (технология)">анимацией</a>) и, возможно, введением <a href="/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Переменная (программирование)">переменных</a><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup>.</p>
-
-
-
-	</div>
-</div>
-
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2016 Все права защищены</p>
-	</div>
-</div>
-
+      </div>
+      <p class="description_">
+        <b>
+              CSS3
+            </b> (
+        <a href="/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Английский язык">
+              англ.
+            </a>
+        <i>
+              <span lang="en" xml:lang="en">
+                Cascading Style Sheets 3
+              </span>
+            </i> —
+        <b>
+              каскадные таблицы стилей третьего поколения
+            </b> ) — активно разрабатываемая спецификация
+        <a class="mw-redirect" href="/wiki/%D0%9A%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D1%8B%D0%B5_%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B_%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9" title="Каскадные таблицы стилей">
+              CSS
+            </a> . Представляет собой
+        <a href="/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA" title="Формальный язык">
+              формальный язык
+            </a> , реализованный с помощью
+        <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8" title="Язык разметки">
+              языка разметки
+            </a> . Самая масштабная редакция по сравнению с CSS1, CSS2 и CSS2.1. Главной особенностью CSS3 является возможность создавать анимированные элементы без использования
+        <a href="/wiki/JavaScript" title="JavaScript">
+              JS
+            </a> , поддержка линейных и радиальных градиентов, теней, сглаживания и многое другое.
+      </p>
+      <p class="description_">
+        Преимущественно используется как средство описания и оформления внешнего вида
+        <a href="/wiki/%D0%92%D0%B5%D0%B1-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Веб-страница">
+              веб-страниц
+            </a> , написанных с помощью
+        <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8" title="Язык разметки">
+              языков разметки
+            </a>
+        <a href="/wiki/HTML" title="HTML">
+              HTML
+            </a> и
+        <a href="/wiki/XHTML" title="XHTML">
+              XHTML
+            </a> , но может также применяться к любым
+        <a href="/wiki/XML" title="XML">
+              XML-документам
+            </a> , например, к
+        <a href="/wiki/SVG" title="SVG">
+              SVG
+            </a> или
+        <a href="/wiki/XUL" title="XUL">
+              XUL
+            </a> .
+      </p>
+      <p class="description_">
+        Преимущественно используется как средство описания и оформления внешнего вида
+        <a href="/wiki/%D0%92%D0%B5%D0%B1-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Веб-страница">
+              веб-страниц
+            </a> , написанных с помощью
+        <a href="/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%82%D0%BA%D0%B8" title="Язык разметки">
+              языков разметки
+            </a>
+        <a href="/wiki/HTML" title="HTML">
+              HTML
+            </a> и
+        <a href="/wiki/XHTML" title="XHTML">
+              XHTML
+            </a> , но может также применяться к любым
+        <a href="/wiki/XML" title="XML">
+              XML-документам
+            </a> , например, к
+        <a href="/wiki/SVG" title="SVG">
+              SVG
+            </a> или
+        <a href="/wiki/XUL" title="XUL">
+              XUL
+            </a> .
+      </p>
+      <p class="description_">
+        Разрабатываемая версия (список всех модулей)
+        <sup class="reference" id="cite_ref-5">
+              <a href="#cite_note-5">
+                [5]
+              </a>
+            </sup> .
+      </p>
+      <p class="description_">
+        В отличие от предыдущих версий спецификация разбита на модули, разработка и развитие которых идёт независимо.
+      </p>
+      <p class="description_">
+        CSS3 основан на CSS2.1, дополняет существующие свойства и значения и добавляет новые.
+      </p>
+      <p class="description_">
+        Нововведения, начиная с малых, вроде закругленных углов блоков, заканчивая трансформацией (
+        <a class="mw-redirect" href="/wiki/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_(%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F)" title="Мультипликация (технология)">
+              анимацией
+            </a> ) и, возможно, введением
+        <a href="/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Переменная (программирование)">
+              переменных
+            </a>
+        <sup class="reference" id="cite_ref-6">
+              <a href="#cite_note-6">
+                [6]
+              </a>
+            </sup>
+        <sup class="reference" id="cite_ref-7">
+              <a href="#cite_note-7">
+                [7]
+              </a>
+            </sup> .
+      </p>
+      </img>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">
+        Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+        </br>
+      </p>
+      <p class="footer-copyright">
+        © 2016 Все права защищены
+      </p>
+    </div>
+  </div>
 </body>
+
 </html>

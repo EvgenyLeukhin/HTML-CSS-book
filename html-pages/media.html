@@ -1,183 +1,201 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой справочник | HTML | Аудио-видео</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+<head>
+  <title>Мой справочник | HTML | Аудио-видео</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
 <body>
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-	<ul class="header-menu">
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a class="active" href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a class="active" href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
         <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a href="../javascript-page.html">JS</a></li>
-		<li><a href="../javascript+-page.html">JS+</a></li>
-		<li><a href="../php-page.html">PHP</a></li>
-		<li><a href="../cms.html">CMS</a></li>
-	</ul>
-	</div>
-</div>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../javascript+-page.html">JS+</a></li>
+        <li><a href="../php-page.html">PHP</a></li>
+        <li><a href="../cms.html">CMS</a></li>
+      </ul>
+    </div>
+  </div>
 
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-	<ul class="vert-menu">
-		<li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
-		<li><a href="../html-pages/head.html">Внутри head</a></li>
-		<li><a href="../html-pages/conts.html">Контейнеры</a></li>
-		<li><a href="../html-pages/headers.html">Заголовки</a></li>
-		<li><a href="../html-pages/lists.html">Списки</a></li>
-		<li><a href="../html-pages/tables.html">Таблицы</a></li>
-		<li><a href="../html-pages/text.html">Текст</a></li>
-		<li><a href="../html-pages/links.html">Ссылки</a></li>
-		<li><a href="../html-pages/images.html">Изображения</a></li>
-		<li><a href="../html-pages/forms.html">Формы</a></li>
-		<li><a href="../html-pages/simbols.html">Символы</a></li>
-		<li><a href="../html-pages/svg.html">Графика</a></li>
-		<li><a href="../html-pages/media.html" class="active">Аудио-Видео</a></li>
-		<li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
-		<li><a href="../html-pages/blank.html">Заготовка</a></li>
-		<li><a href="jade.html">Jade</a></li>
-    </ul>
-	
-	</div>
-	<div class="content clearfix">
-	
-	<h2>Мой справочник | HTML | Аудио-видео</h2>
-	
-	<table class="discription-table">
-		<caption>Аудио-видео</caption>
-		<tr>
-			<td rowspan="4">&lt;audio&gt;</td>
-			<td rowspan="4">Аудио</td>
-			<td>controls</td>
-			<td>Панель управления(плейер)</td>
-		</tr>
-		<tr>
-			<td>preload</td>
-			<td>
-				Предзагрузка<br>
-				<span class="red">none</span> - ничего;<br>
-				<span class="red">metadata</span> - служебная информация;<br>
-				<span class="red">auto</span> - загрузка всего файла
-			</td>
-		</tr>
-		<tr>
-			<td>src="...mp3 или ...ogg"</td>
-			<td>Источник аудио</td>
-		</tr>
-		<tr>
-			<td>autoplay</td>
-			<td>Автоматическое воспроизведение при загрузке страницы</td>
-		</tr>
-		
-		<tr>
-			<td rowspan="6">&lt;video&gt;</td>
-			<td rowspan="6">Видео</td>
-			<td>controls</td>
-			<td>Панель управления(плейер)</td>
-		</tr>
-		<tr>
-			<td>preload</td>
-			<td>
-				Предзагрузка<br>
-				<span class="red">none</span> - ничего;<br>
-				<span class="red">metadata</span> - служебная информация;<br>
-				<span class="red">auto</span> - загрузка всего файла
-			</td>
-		</tr>
-		<tr>
-			<td>src="...mpeg4, ...ogg, ...webm"</td>
-			<td>Источник видео</td>
-		</tr>
-		<tr>
-			<td>autoplay</td>
-			<td>Автоматическое воспроизведение при загрузке страницы</td>
-		</tr>
-		<tr>
-			<td>height и width</td>
-			<td>Высота и ширина окна воспроизведения</td>
-		</tr>
-		<tr>
-			<td>poster="img/file.jpg"</td>
-			<td>Постер к видеофайлу до начала воспроизведения</td>
-		</tr>
-		
-		<tr>
-			<td rowspan="2">&lt;source&gt;</td>
-			<td rowspan="2">Источник медиа-файлов,<br> аналог src="...";<br>У тегов audio и video<br> может быть несколько source</td>
-			<td>src="..."</td>
-			<td>Источник файла</td>
-		</tr>
-		<tr>
-			<td>
-			    type="video/mp4"<br>
-			    type="audio/mpeg"
-			 </td>
-			<td>Тип файла</td>
-		</tr>
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+        <li><a href="../html-pages/head.html">Внутри head</a></li>
+        <li><a href="../html-pages/conts.html">Контейнеры</a></li>
+        <li><a href="../html-pages/headers.html">Заголовки</a></li>
+        <li><a href="../html-pages/lists.html">Списки</a></li>
+        <li><a href="../html-pages/tables.html">Таблицы</a></li>
+        <li><a href="../html-pages/text.html">Текст</a></li>
+        <li><a href="../html-pages/links.html">Ссылки</a></li>
+        <li><a href="../html-pages/images.html">Изображения</a></li>
+        <li><a href="../html-pages/forms.html">Формы</a></li>
+        <li><a href="../html-pages/simbols.html">Символы</a></li>
+        <li><a href="../html-pages/svg.html">Графика</a></li>
+        <li><a href="../html-pages/media.html" class="active">Аудио-Видео</a></li>
+        <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+        <li><a href="../html-pages/blank.html">Заготовка</a></li>
+        <li><a href="brackets.html">Brackets</a></li>
+        <li><a href="sublime.html">Sublime Text</a></li>
+        <li><a href="vscode.html">VS Code</a></li>
+        <li><a href="pug.html">Pug</a></li>
+      </ul>
 
-		<tr>
-			<td>&lt;track&gt;</td>
-			<td>Субтитры к видео</td>
-			<td>
-				kind="subtitles"<br>
-				src="video/jane.ru.vtt"<br>
-				srclang="ru"<br>
-				label="Русский"<br>
-				default
-			</td>
-			<td>VVT-файл субтитров</td>
-		</tr>
-	  </table>
-	  
-    <h3>Аудио-файл</h3>
-	<p>
-		<code>
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой справочник | HTML | Аудио-видео</h2>
+
+      <table class="discription-table">
+        <caption>Аудио-видео</caption>
+        <tr>
+          <td rowspan="4">&lt;audio&gt;</td>
+          <td rowspan="4">Аудио</td>
+          <td>controls</td>
+          <td>Панель управления(плейер)</td>
+        </tr>
+        <tr>
+          <td>preload</td>
+          <td>
+            Предзагрузка
+            <br>
+            <span class="red">none</span> - ничего;
+            <br>
+            <span class="red">metadata</span> - служебная информация;
+            <br>
+            <span class="red">auto</span> - загрузка всего файла
+          </td>
+        </tr>
+        <tr>
+          <td>src="...mp3 или ...ogg"</td>
+          <td>Источник аудио</td>
+        </tr>
+        <tr>
+          <td>autoplay</td>
+          <td>Автоматическое воспроизведение при загрузке страницы</td>
+        </tr>
+
+        <tr>
+          <td rowspan="6">&lt;video&gt;</td>
+          <td rowspan="6">Видео</td>
+          <td>controls</td>
+          <td>Панель управления(плейер)</td>
+        </tr>
+        <tr>
+          <td>preload</td>
+          <td>
+            Предзагрузка
+            <br>
+            <span class="red">none</span> - ничего;
+            <br>
+            <span class="red">metadata</span> - служебная информация;
+            <br>
+            <span class="red">auto</span> - загрузка всего файла
+          </td>
+        </tr>
+        <tr>
+          <td>src="...mpeg4, ...ogg, ...webm"</td>
+          <td>Источник видео</td>
+        </tr>
+        <tr>
+          <td>autoplay</td>
+          <td>Автоматическое воспроизведение при загрузке страницы</td>
+        </tr>
+        <tr>
+          <td>height и width</td>
+          <td>Высота и ширина окна воспроизведения</td>
+        </tr>
+        <tr>
+          <td>poster="img/file.jpg"</td>
+          <td>Постер к видеофайлу до начала воспроизведения</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">&lt;source&gt;</td>
+          <td rowspan="2">Источник медиа-файлов,
+            <br> аналог src="...";
+            <br>У тегов audio и video
+            <br> может быть несколько source</td>
+          <td>src="..."</td>
+          <td>Источник файла</td>
+        </tr>
+        <tr>
+          <td>
+            type="video/mp4"
+            <br> type="audio/mpeg"
+          </td>
+          <td>Тип файла</td>
+        </tr>
+
+        <tr>
+          <td>&lt;track&gt;</td>
+          <td>Субтитры к видео</td>
+          <td>
+            kind="subtitles"
+            <br> src="video/jane.ru.vtt"
+            <br> srclang="ru"
+            <br> label="Русский"
+            <br> default
+          </td>
+          <td>VVT-файл субтитров</td>
+        </tr>
+      </table>
+
+      <h3>Аудио-файл</h3>
+      <p>
+        <code>
 		&lt;audio <span class="red">controls preload="metadata"</span>&gt;<br>			
 		&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red">source src="../files/worm-jim-tarantella.mp3" type="audio/mpeg"</span>&gt;<br>
 		&lt;/audio&gt;
-		</code><br><br>
-		<audio controls preload="metadata">			
-			<source src="../files/worm-jim-tarantella.mp3" type="audio/mpeg">
-		</audio>
-	</p>
-	<br>
-	<h3>Видео-файл с постером</h3>
-	<p>
-		<code>
+		</code>
+        <br>
+        <br>
+        <audio controls preload="metadata">
+          <source src="../files/worm-jim-tarantella.mp3" type="audio/mpeg">
+        </audio>
+      </p>
+      <br>
+      <h3>Видео-файл с постером</h3>
+      <p>
+        <code>
 		&lt;video <span class="red">controls preload="metadata" width="400" height="225" poster="../files/Stephen_Bennett.jpg</span>"&gt;<br>					
 		&nbsp;&nbsp;&nbsp;&nbsp;&lt;source <span class="red">src="../files/The_Eye_of_God_Stephen_Bennett.mp4" type="video/mp4"</span>&gt;<br>
 		&lt;/video&gt;
-		</code><br><br>
-		<video controls preload="metadata" width="400" height="225" poster="../files/Stephen_Bennett.jpg">					
-			<source src="../files/The_Eye_of_God_Stephen_Bennett.mp4" type="video/mp4">						
-		</video>
-	</p>
-	  
-	</div>
-</div>
+		</code>
+        <br>
+        <br>
+        <video controls preload="metadata" width="400" height="225" poster="../files/Stephen_Bennett.jpg">
+          <source src="../files/The_Eye_of_God_Stephen_Bennett.mp4" type="video/mp4">
+        </video>
+      </p>
 
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2016 Все права защищены</p>
-	</div>
-</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 Все права защищены</p>
+    </div>
+  </div>
 
 
 
 
 
 </body>
+
 </html>

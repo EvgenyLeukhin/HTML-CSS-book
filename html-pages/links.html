@@ -1,210 +1,228 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой справочник | HTML | Ссылки</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+<head>
+  <title>Мой справочник | HTML | Ссылки</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
 <body id="body">
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-	<ul class="header-menu">
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a class="active" href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a class="active" href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
         <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a href="../javascript-page.html">JS</a></li>
-		<li><a href="../javascript+-page.html">JS+</a></li>
-		<li><a href="../php-page.html">PHP</a></li>
-		<li><a href="../cms.html">CMS</a></li>
-	</ul>
-	</div>
-</div>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../javascript+-page.html">JS+</a></li>
+        <li><a href="../php-page.html">PHP</a></li>
+        <li><a href="../cms.html">CMS</a></li>
+      </ul>
+    </div>
+  </div>
 
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-	<ul class="vert-menu">
-		<li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
-		<li><a href="../html-pages/head.html">Внутри head</a></li>
-		<li><a href="../html-pages/conts.html">Контейнеры</a></li>
-		<li><a href="../html-pages/headers.html">Заголовки</a></li>
-		<li><a href="../html-pages/lists.html">Списки</a></li>
-		<li><a href="../html-pages/tables.html">Таблицы</a></li>
-		<li><a href="../html-pages/text.html">Текст</a></li>
-		<li><a href="../html-pages/links.html" class="active">Ссылки</a></li>
-		<li><a href="../html-pages/images.html">Изображения</a></li>
-		<li><a href="../html-pages/forms.html">Формы</a></li>
-		<li><a href="../html-pages/simbols.html">Символы</a></li>
-		<li><a href="../html-pages/svg.html">Графика</a></li>
-		<li><a href="../html-pages/media.html">Аудио-Видео</a></li>
-		<li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
-		<li><a href="../html-pages/blank.html">Заготовка</a></li>
-		<li><a href="jade.html">Jade</a></li>
-	</ul>
-	
-	</div>
-	<div class="content clearfix">
-	
-	<h2>Мой справочник | HTML | Ссылки</h2>
-	
-	<table class="discription-table">
-		<caption>Ссылки</caption>
-		<tr>
-			<th>Теги</th>
-			<th>Описание</th>
-			<th>Атрибуты</th>
-			<th>Описание</th>
-		</tr>
-		<tr>
-			<td rowspan="7">&lt;a&gt;</td>
-			<td rowspan="7">Ссылка (строчная)</td>
-			<td>href</td>
-			<td>ссылка на URL-адрес, html-файл или id (ОБЯЗАТЕЛЬНЫЙ АТРИБУТ)</td>
-		</tr>
-		<tr>
-			<td>target</td>
-			<td>
-				открыть ссылку:<br>
-				<span class="red">self</span> - в текущей вкладке(по ум.);<br>
-				<span class="red">blank</span> - в новой вкладке;
-			</td>
-		</tr>
-		<tr>
-			<td><span class="red">download</span></td>
-			<td>предлагает скачать указанный по ссылке файл</td>
-		</tr>
-		<tr>
-			<td><span class="red">hreflang="en"</span></td>
-			<td>идентифицирует язык текста по ссылке</td>
-		</tr>
-		<tr>
-			<td><span class="red">title</span></td>
-			<td>Всплывающая фраза при наведении</td>
-		</tr>
-		<tr>
-			<td>type</td>
-			<td> 
-			Устанавливает MIME-тип документа, на который указывает ссылка. Этот атрибут носит рекомендательный характер и 
-		    может использоваться для стилизации ссылок с заданным типом документа. Атрибут <span class="red">type</span> 
-			должен добавляться только при наличии атрибута <span class="red">href</span><br>
-			<a href="https://webref.ru/html/value/mime" target="blank">MIME-типы</a>
-			</td>
-		</tr>
-		<tr>
-			<td>rel</td>
-			<td>
-Атрибут <span class="red">rel</span> определяет отношения между текущим документом и документом, на который ведёт ссылка, заданная атрибутом href. 
-Несмотря на то, что большинство браузеров не поддерживают атрибут <span class="red">rel</span>, на сайтах часто можно встретить код <span class="red">rel="nofollow"</span>, 
-предназначенный для поисковых систем Google и Яндекс. Ссылки, помеченные таким образом, не передают PageRank и ТИЦ.<br>
-<a href="https://webref.ru/html/a/rel" target="_blank">Атрибуты rel</a>
-			</td>
-		</tr>
-		<tr>
-			<td rowspan="2">&lt;map&gt;</td>
-			<td rowspan="2">Cлужит контейнером для элементов <b>&lt;area&gt;</b>, которые определяют активные области для карт-изображений. Такие области устанавливают невидимые зоны на изображении, являющиеся ссылками на HTML-документы. Цель использования <map> — в связывании элемента <img> с клиентской картой-изображением. Эта связь определяется применением единого идентификатора как в <b>&lt;img&gt;</b>, задаваемого атрибутом usemap, так и в <b>&lt;map&gt;</b>, устанавливаемого атрибутом name.</td>
-			<td>name</td>
-			<td>Имя карты</td>
-		</tr>
-		<tr>
-			<td>ID</td>
-			<td>Идентификатор</td>
-		</tr>
-		<tr>
-			<td rowspan="4">&lt;area&gt;</td>
-			<td rowspan="4"> Каждый элемент <b>&lt;area&gt;</b> определяет активные области изображения, которые являются ссылками. Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой. Элемент <b>&lt;area&gt;</b> задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку. <b>&lt;area&gt;</b> всегда располагается в контейнере <b>&lt;map&gt;</b>, который связывает координаты областей с изображением. Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.</td>
-			<td>href</td>
-			<td>Задаёт адрес документа, на который следует перейти</td>
-		</tr>
-		<tr>
-			<td>coords</td>
-			<td>Координаты активной области <br><i>(coords="38, 122, 76, 132, 116")</i></td>
-		</tr>
-		<tr>
-			<td>shape</td>
-			<td>
-				<u>Форма области:</u><br>
-				<b>circle</b> - Область в виде окружности,<br>
-				<b>default</b> - Указывает всю область,<br> 
-				<b>poly</b> - Область в виде полигона (многоугольника),<br>
-			 	<b>rect</b> - Прямоугольная область)
-			</td>
-		</tr>
-		<tr>
-			<td>target</td>
-			<td>
-				Имя окна или фрейма, куда браузер будет загружать документ<br>
-				<i>(_blank, self)</i>
-			</td>
-		</tr>
-	
-	
-	
-	</table>
-	
-	<h3>Ссылка на сайт(абсолютная http)</h3>
-	<p>
-		<code>
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+        <li><a href="../html-pages/head.html">Внутри head</a></li>
+        <li><a href="../html-pages/conts.html">Контейнеры</a></li>
+        <li><a href="../html-pages/headers.html">Заголовки</a></li>
+        <li><a href="../html-pages/lists.html">Списки</a></li>
+        <li><a href="../html-pages/tables.html">Таблицы</a></li>
+        <li><a href="../html-pages/text.html">Текст</a></li>
+        <li><a href="../html-pages/links.html" class="active">Ссылки</a></li>
+        <li><a href="../html-pages/images.html">Изображения</a></li>
+        <li><a href="../html-pages/forms.html">Формы</a></li>
+        <li><a href="../html-pages/simbols.html">Символы</a></li>
+        <li><a href="../html-pages/svg.html">Графика</a></li>
+        <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+        <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+        <li><a href="../html-pages/blank.html">Заготовка</a></li>
+        <li><a href="brackets.html">Brackets</a></li>
+        <li><a href="sublime.html">Sublime Text</a></li>
+        <li><a href="vscode.html">VS Code</a></li>
+        <li><a href="pug.html">Pug</a></li>
+      </ul>
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой справочник | HTML | Ссылки</h2>
+
+      <table class="discription-table">
+        <caption>Ссылки</caption>
+        <tr>
+          <th>Теги</th>
+          <th>Описание</th>
+          <th>Атрибуты</th>
+          <th>Описание</th>
+        </tr>
+        <tr>
+          <td rowspan="7">&lt;a&gt;</td>
+          <td rowspan="7">Ссылка (строчная)</td>
+          <td>href</td>
+          <td>ссылка на URL-адрес, html-файл или id (ОБЯЗАТЕЛЬНЫЙ АТРИБУТ)</td>
+        </tr>
+        <tr>
+          <td>target</td>
+          <td>
+            открыть ссылку:
+            <br>
+            <span class="red">self</span> - в текущей вкладке(по ум.);
+            <br>
+            <span class="red">blank</span> - в новой вкладке;
+          </td>
+        </tr>
+        <tr>
+          <td><span class="red">download</span></td>
+          <td>предлагает скачать указанный по ссылке файл</td>
+        </tr>
+        <tr>
+          <td><span class="red">hreflang="en"</span></td>
+          <td>идентифицирует язык текста по ссылке</td>
+        </tr>
+        <tr>
+          <td><span class="red">title</span></td>
+          <td>Всплывающая фраза при наведении</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>
+            Устанавливает MIME-тип документа, на который указывает ссылка. Этот атрибут носит рекомендательный характер и может использоваться для стилизации ссылок с заданным типом документа. Атрибут <span class="red">type</span> должен добавляться только при наличии атрибута <span class="red">href</span>
+            <br>
+            <a href="https://webref.ru/html/value/mime" target="blank">MIME-типы</a>
+          </td>
+        </tr>
+        <tr>
+          <td>rel</td>
+          <td>
+            Атрибут <span class="red">rel</span> определяет отношения между текущим документом и документом, на который ведёт ссылка, заданная атрибутом href. Несмотря на то, что большинство браузеров не поддерживают атрибут <span class="red">rel</span>, на сайтах часто можно встретить код <span class="red">rel="nofollow"</span>, предназначенный для поисковых систем Google и Яндекс. Ссылки, помеченные таким образом, не передают PageRank и ТИЦ.
+            <br>
+            <a href="https://webref.ru/html/a/rel" target="_blank">Атрибуты rel</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">&lt;map&gt;</td>
+          <td rowspan="2">Cлужит контейнером для элементов <b>&lt;area&gt;</b>, которые определяют активные области для карт-изображений. Такие области устанавливают невидимые зоны на изображении, являющиеся ссылками на HTML-документы. Цель использования
+            <map> — в связывании элемента <img> с клиентской картой-изображением. Эта связь определяется применением единого идентификатора как в <b>&lt;img&gt;</b>, задаваемого атрибутом usemap, так и в <b>&lt;map&gt;</b>, устанавливаемого атрибутом name.</td>
+          <td>name</td>
+          <td>Имя карты</td>
+        </tr>
+        <tr>
+          <td>ID</td>
+          <td>Идентификатор</td>
+        </tr>
+        <tr>
+          <td rowspan="4">&lt;area&gt;</td>
+          <td rowspan="4"> Каждый элемент <b>&lt;area&gt;</b> определяет активные области изображения, которые являются ссылками. Рисунок с привязанными к нему активными областями называется в совокупности картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из областей служит ссылкой. Элемент <b>&lt;area&gt;</b> задаёт форму области, её размеры, устанавливает адрес документа, на который следует сделать ссылку. <b>&lt;area&gt;</b> всегда располагается в контейнере <b>&lt;map&gt;</b>, который связывает координаты областей с изображением. Несколько областей могут перекрывать друг друга, сверху будет та, которая в коде HTML располагается выше.</td>
+          <td>href</td>
+          <td>Задаёт адрес документа, на который следует перейти</td>
+        </tr>
+        <tr>
+          <td>coords</td>
+          <td>Координаты активной области
+            <br><i>(coords="38, 122, 76, 132, 116")</i></td>
+        </tr>
+        <tr>
+          <td>shape</td>
+          <td>
+            <u>Форма области:</u>
+            <br>
+            <b>circle</b> - Область в виде окружности,
+            <br>
+            <b>default</b> - Указывает всю область,
+            <br>
+            <b>poly</b> - Область в виде полигона (многоугольника),
+            <br>
+            <b>rect</b> - Прямоугольная область)
+          </td>
+        </tr>
+        <tr>
+          <td>target</td>
+          <td>
+            Имя окна или фрейма, куда браузер будет загружать документ
+            <br>
+            <i>(_blank, self)</i>
+          </td>
+        </tr>
+
+
+
+      </table>
+
+      <h3>Ссылка на сайт(абсолютная http)</h3>
+      <p>
+        <code>
 		&lt;a <span class="red">href="http://ya.ru" hreflang="ru" target="self" rel="nofollow"</span>&gt;<span class="gray">Ссылка на сайт Яндекс</span>&lt;/a&gt;
-		</code><br>
-		<a href="http://ya.ru" hreflang="ru" target="_self" rel="nofollow">Ссылка на сайт Яндекс</a>
-	</p><br>
-	
-	<h3>Ссылка на сайт(относительная локальная)</h3>
-	<p>
-		<code>
-		&lt;a <span class="red">href="../index.html" hreflang="ru" target="self" rel="nofollow"</span>&gt;<span class="gray">На главную</span>&lt;/a&gt;
-		</code><br>
-		<a href="../index.html" hreflang="ru" target="self" rel="nofollow">На главную</a>
-	</p><br>
-	
-	<h3>Ссылка на скачивание</h3>
-	<p>
-		<code>
-		&lt;a <span class="red">href="../files/html.png" title=<span class="gray">"Нажмите, чтобы скачать"</span> download</span>&gt;<span class="gray">Скачать файл</span>&lt;/a&gt;
-		</code><br>
-		<a href="../files/html.png" title="Нажмите, чтобы скачать" download>Скачать файл</a>
-	</p><hr>
-	
-	<h3>Изображение-ссылка</h3>
-	<p>
-		<code>
-		&lt;a <span class="red">href="../index.html"</span>&gt;&lt;img <span class="red">src="../files/html.png" alt="picture" width="100"</span>&gt;&lt;/a&gt;
-		</code><br>
-		<a href="../index.html" target="blank"><img src="../files/html.png" alt="picture" width="100"></a>
-	</p>
+		</code>
+        <br>
+        <a href="http://ya.ru" hreflang="ru" target="_self" rel="nofollow">Ссылка на сайт Яндекс</a>
+      </p>
+      <br>
 
-	<h3>Карта для изображения-ссылки</h3>
-	<p>
-		<code>
+      <h3>Ссылка на сайт(относительная локальная)</h3>
+      <p>
+        <code>
+		&lt;a <span class="red">href="../index.html" hreflang="ru" target="self" rel="nofollow"</span>&gt;<span class="gray">На главную</span>&lt;/a&gt;
+		</code>
+        <br>
+        <a href="../index.html" hreflang="ru" target="self" rel="nofollow">На главную</a>
+      </p>
+      <br>
+
+      <h3>Ссылка на скачивание</h3>
+      <p>
+        <code>
+		&lt;a <span class="red">href="../files/html.png" title=<span class="gray">"Нажмите, чтобы скачать"</span> download</span>&gt;<span class="gray">Скачать файл</span>&lt;/a&gt;
+		</code>
+        <br>
+        <a href="../files/html.png" title="Нажмите, чтобы скачать" download>Скачать файл</a>
+      </p>
+      <hr>
+
+      <h3>Изображение-ссылка</h3>
+      <p>
+        <code>
+		&lt;a <span class="red">href="../index.html"</span>&gt;&lt;img <span class="red">src="../files/html.png" alt="picture" width="100"</span>&gt;&lt;/a&gt;
+		</code>
+        <br>
+        <a href="../index.html" target="blank"><img src="../files/html.png" alt="picture" width="100"></a>
+      </p>
+
+      <h3>Карта для изображения-ссылки</h3>
+      <p>
+        <code>
 		&lt;<span class="red">map</span> id="FaceMap" name="FaceMap"&gt;<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red">area</span> href="<span class="gray">https://yandex.ru/images</span>" shape="circle"<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;coords="119, 70, 20"<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;alt="Smiling Mouth" target="_blank"&gt;<br>
 		&lt;/<span class="red">map</span>&gt;<br>
 		&lt;<span class="red">img</span> src="<span class="gray">..pict/smile.jpg</span>" usemap="#FaceMap" alt="Smiling"&gt;<br>
-		</code><br>
-		<map id="FaceMap" name="FaceMap">
-			<area href="https://yandex.ru/images" shape="circle"
-			coords="119, 70, 20"
-			alt="Smiling Mouth" target="_blank">
-		</map>
-		<img src="../pict/smile.jpg" usemap="#FaceMap" alt="Smiling"><br>
-		<i>Наведите на глаз</i><br>
-		<a href="http://imagemap-generator.dariodomi.de" target="_blank" rel="nofollow">Генератор карты - imagemap-generator.dariodomi.de</a>
+		</code>
+        <br>
+        <map id="FaceMap" name="FaceMap">
+          <area href="https://yandex.ru/images" shape="circle" coords="119, 70, 20" alt="Smiling Mouth" target="_blank">
+        </map>
+        <img src="../pict/smile.jpg" usemap="#FaceMap" alt="Smiling">
+        <br>
+        <i>Наведите на глаз</i>
+        <br>
+        <a href="http://imagemap-generator.dariodomi.de" target="_blank" rel="nofollow">Генератор карты - imagemap-generator.dariodomi.de</a>
 
 
-		 
-	</p>
-<hr>
-	<h3>Якорные ссылки</h3>
-	
-	<code>
+
+      </p>
+      <hr>
+      <h3>Якорные ссылки</h3>
+
+      <code>
 	&lt;ul&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="red">href="#chapter1"</span>&gt;<span class="gray">Глава1</span>&lt;/a&gt;&lt;/li&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="red">href="#chapter2"</span>&gt;<span class="gray">Глава2</span>&lt;/a&gt;&lt;/li&gt;<br>
@@ -219,80 +237,58 @@
 	&lt;p&gt;<span class="gray">Some text...</span>&lt;/p&gt;<br><br>
 	&lt;a <span class="red">href="#body"</span>&gt;<span class="gray">Наверх</span>&lt;/a&gt;<br><br>
 	</code>
-	
-	<ul>
-		<li><a href="#chapter1">Глава1</a></li>
-		<li><a href="#chapter2">Глава2</a></li>
-		<li><a href="#chapter3">Глава3</a></li>
-	</ul>
-	
-	<h2 id="chapter1">Глава1</h2>
-	<p>
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text	
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-	</p>
-	
-	<h2 id="chapter2">Глава2</h2>
-	<p>
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-	</p>
 
-	<h2 id="chapter3">Глава3</h2>
-	<p>
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text 
-		Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
-	</p>
-	
-	<a href="#body">Наверх</a>
+      <ul>
+        <li><a href="#chapter1">Глава1</a></li>
+        <li><a href="#chapter2">Глава2</a></li>
+        <li><a href="#chapter3">Глава3</a></li>
+      </ul>
 
-	<h3>Почтовые ссылки (mailto:)</h3>
-	<code>
+      <h2 id="chapter1">Глава1</h2>
+      <p>
+        Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
+      </p>
+
+      <h2 id="chapter2">Глава2</h2>
+      <p>
+        Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
+      </p>
+
+      <h2 id="chapter3">Глава3</h2>
+      <p>
+        Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
+      </p>
+
+      <a href="#body">Наверх</a>
+
+      <h3>Почтовые ссылки (mailto:)</h3>
+      <code>
 		&lt;<span class="red">a</span> href="mailto:me@myplace.com"&gt;<span class="gray">Email Me</span>&lt;/a&gt;<br>
 		&lt;<span class="red">a</span> href="mailto:me@myplace.com?subject=Automatic%20Email&amp;body=I%20love%20your%20site."&gt;<span class="gray">Email Me</span>&lt;/a&gt;
 	</code>
-	<ul>
-		<li><b>mailto:me@myplace.com</b> - почтовая ссылка (me@myplace.com);</li>
-		<li><b>?subject=Automatic%20Email</b> - тема письма (Automatic)</li>
-		<li><b>%20</b> - пробел</li>
-		<li><b>&amp;body=I%20love%20your%20site.</b> - текст письма (I love your site.)</li>
-	</ul>
-	</div>
-</div>
+      <ul>
+        <li><b>mailto:me@myplace.com</b> - почтовая ссылка (me@myplace.com);</li>
+        <li><b>?subject=Automatic%20Email</b> - тема письма (Automatic)</li>
+        <li><b>%20</b> - пробел</li>
+        <li><b>&amp;body=I%20love%20your%20site.</b> - текст письма (I love your site.)</li>
+      </ul>
+    </div>
+  </div>
 
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2016 Все права защищены</p>
-	</div>
-</div>
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 Все права защищены</p>
+    </div>
+  </div>
 
 
 
 
 
 </body>
+
 </html>

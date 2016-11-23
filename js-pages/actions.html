@@ -1,147 +1,165 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой справочник | JS | События</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <script>
-       "use strict";
-        function btnClick(button) {
-            alert('ВЫ НАЖАЛИ НА КНОПКУ ' + button.name);
-        }
-        
-        var counter = 0;
-        function counterFunc(element) {
-            counter++;
-            element.innerHTML = 'На этот текст наведено указателем мыши ' + counter + ' раз';
-        } 
-    </script>
+<head>
+  <title>Мой справочник | JS | События</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <script>
+    "use strict";
+
+    function btnClick(button) {
+      alert('ВЫ НАЖАЛИ НА КНОПКУ ' + button.name);
+    }
+
+    var counter = 0;
+
+    function counterFunc(element) {
+      counter++;
+      element.innerHTML = 'На этот текст наведено указателем мыши ' + counter + ' раз';
+    }
+  </script>
 </head>
 
-<body onload="alert('Страница загружена');"> 
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-		<ul class="header-menu">
-            
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
+<body onload="alert('Страница загружена');">
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
         <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a class="active" href="../javascript-page.html">JS</a></li>
-		<li><a href="../javascript+-page.html">JS+</a></li>
-		<li><a href="../php-page.html">PHP</a></li>
-		<li><a href="../cms.html">CMS</a></li>
-	</ul>
-	</div>
-</div>
+        <li><a class="active" href="../javascript-page.html">JS</a></li>
+        <li><a href="../javascript+-page.html">JS+</a></li>
+        <li><a href="../php-page.html">PHP</a></li>
+        <li><a href="../cms.html">CMS</a></li>
+      </ul>
+    </div>
+  </div>
 
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-		<ul class="vert-menu">
-            <li>
-                <a href="#">Основы</a>
-                <ul class="sub-menu sub-menu9">
-                    <li><a href="js-lang.html">Язык JS</a></li>
-                    <li><a href="load.html">Загрузка</a></li>
-			        <li><a href="types.html">Типы данных</a></li>
-			        <li><a href="var.html">Переменные</a></li>
-			        <li><a href="operators.html">Операторы</a></li>
-			        
-			        <li><a href="algorythm.html">Алгоритмы</a></li>
-			        <li><a href="if-else.html">if - else, switch-case</a></li>
-			        <li><a href="cycle.html">Циклы</a></li>
-                    <li><a href="math.html">Math</a></li>
-                </ul>
-            </li>
-            <li><a href="array.html">Массивы</a></li>
-            <li><a href="function.html">Функции</a></li>
-			<li><a href="object.html">Объекты</a></li>
-            <li>
-                <a class="active" href="#">JS & HTML</a>
-                <ul class="sub-menu sub-menu6">
-                    <li><a href="complete.html">Вывод данных</a></li>
-			        <li><a href="dom.html">DOM</a></li>
-			        <li><a href="html-methods.html">Методы</a></li>
-			        <li><a href="actions.html">События</a></li>
-			        <li><a href="modal-window.html">Мод. окно</a></li>
-			        <li><a href="forms.html">Формы</a></li>
-                </ul>
-            </li>
-			
-			<li>
-			    <a href="#">jQuery</a>
-			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
-			        <li><a href="jquery-func.html">jQuery-функции</a></li>
-                    <li><a href="jquery-actions.html">jQuery-события</a></li>
-			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                </ul>
-			 </li>
-			 <li><a href="ajax.html">Ajax</a></li>
-			 <li><a href="canvas.html">Canvas</a></li>
-			<li><a href="git.html">Git</a></li>
-			<li><a href="console.html">Консоль</a></li>
-		</ul>
-	
-	
-	</div>
-	<div class="content clearfix">
-	
-	<h2>Мой справочник | JavaScript | События</h2>
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">Основы</a>
+          <ul class="sub-menu sub-menu9">
+            <li><a href="js-lang.html">Язык JS</a></li>
+            <li><a href="load.html">Загрузка</a></li>
+            <li><a href="types.html">Типы данных</a></li>
+            <li><a href="var.html">Переменные</a></li>
+            <li><a href="operators.html">Операторы</a></li>
 
-<table class="discription-table" border-spacing: 5px;>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">addEventListener();</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    <mark>ПОИСК СОБЫТИЙ</mark>
-		</td>
-        <td style="width: 600px;">
-			<code>
+            <li><a href="algorythm.html">Алгоритмы</a></li>
+            <li><a href="if-else.html">if - else, switch-case</a></li>
+            <li><a href="cycle.html">Циклы</a></li>
+            <li><a href="math.html">Math</a></li>
+          </ul>
+        </li>
+        <li><a href="array.html">Массивы</a></li>
+        <li><a href="function.html">Функции</a></li>
+        <li><a href="object.html">Объекты</a></li>
+        <li>
+          <a class="active" href="#">JS & HTML</a>
+          <ul class="sub-menu sub-menu6">
+            <li><a href="complete.html">Вывод данных</a></li>
+            <li><a href="dom.html">DOM</a></li>
+            <li><a href="html-methods.html">Методы</a></li>
+            <li><a href="actions.html">События</a></li>
+            <li><a href="modal-window.html">Мод. окно</a></li>
+            <li><a href="forms.html">Формы</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">jQuery</a>
+          <ul class="sub-menu sub-menu7">
+            <li><a href="jquery-html.html">jQuery и HTML</a></li>
+            <li><a href="jquery-func.html">jQuery-функции</a></li>
+            <li><a href="jquery-actions.html">jQuery-события</a></li>
+            <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+            <li><a href="jquery-forms.html">jQuery-формы</a></li>
+          </ul>
+        </li>
+        <li><a href="ajax.html">Ajax</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+        <li><a href="git.html">Git</a></li>
+        <li><a href="console.html">Консоль</a></li>
+      </ul>
+
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой справочник | JavaScript | События</h2>
+
+      <table class="discription-table" style="border-spacing: 5px;">
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">addEventListener();</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            <mark>ПОИСК СОБЫТИЙ</mark>
+          </td>
+          <td style="width: 600px;">
+            <code>
 			    var <span class="red">link</span> = document.querySelector('<span class="gray">.user-block</span>');<br>
 				<span class="red">link</span>.<mark>addEventListener</mark>('click', function(){<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;console.log('<span class="gray">Нажатие на user-block</span>');<br>
            });
             </code>
-				<hr>
-            <code><span class="red">link</span></code> - название переменной<br>
-	        <code>addEventListener</code> - метод<br>
-	        <code>'click'</code> - какое событие мы отслеживаем (клик мышью)<br>
-	        <code>function(){}</code> - функция, которая будет выполняться по клику
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
+            <hr>
+            <code><span class="red">link</span></code> - название переменной
+            <br>
+            <code>addEventListener</code> - метод
+            <br>
+            <code>'click'</code> - какое событие мы отслеживаем (клик мышью)
+            <br>
+            <code>function(){}</code> - функция, которая будет выполняться по клику
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
             <h3><u>СОБЫТИЯ:</u></h3>
-            <code>click</code> - клик<br>
-            <code>dblclick</code> - двойной клик<br>
-		    <code>keydown</code> - клавиша НАЖАТА<br>
-	 	    <code>keyup</code> - клавиша отжата<br>
-		    <code>keypress</code> - клавиша зажата<br>
-		    <code>mouseover</code> - наведения курсора мыши <br>
-		    <code>mouseout</code> - отвод курсора мыши<br>
-		    <code>reset</code> - сброс формы<br>
-		    <code>submit</code> - отправка формы<br>
-		    <code>focus</code> - фокусировка на поле<br>
-		    <code>focusin</code> - <br>
-		    <code>focusout</code> -<br>
-		    <code>change</code> - <br>
-		    <code>blur</code> - анти-фокусировка
-        </td>
-    </tr>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">event.preventDefault();</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Сброс событий, которые стоят по ум*, например, переход по клику на ссылку
-		</td>
-        <td style="width: 600px;">
+            <code>click</code> - клик
+            <br>
+            <code>dblclick</code> - двойной клик
+            <br>
+            <code>keydown</code> - клавиша НАЖАТА
+            <br>
+            <code>keyup</code> - клавиша отжата
+            <br>
+            <code>keypress</code> - клавиша зажата
+            <br>
+            <code>mouseover</code> - наведения курсора мыши
+            <br>
+            <code>mouseout</code> - отвод курсора мыши
+            <br>
+            <code>reset</code> - сброс формы
+            <br>
+            <code>submit</code> - отправка формы
+            <br>
+            <code>focus</code> - фокусировка на поле
+            <br>
+            <code>focusin</code> -
+            <br>
+            <code>focusout</code> -
+            <br>
+            <code>change</code> -
+            <br>
+            <code>blur</code> - анти-фокусировка
+          </td>
+        </tr>
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">event.preventDefault();</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Сброс событий, которые стоят по ум*, например, переход по клику на ссылку
+          </td>
+          <td style="width: 600px;">
             <code><pre><b>
 var <span class="red">userBlock</span> = document.querySelector(".user-block a");
 <span class="red">userBlock</span>.addEventListener("click", function(<mark>event</mark>){
@@ -149,19 +167,19 @@ var <span class="red">userBlock</span> = document.querySelector(".user-block a")
     alert("<span class="gray">Появилось модальное окно</span>");
 }); 
             </b></pre></code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-Нужно указать параметр вызываемой функции <u>event</u>
-        </td>
-    </tr>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">onclick</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Событие на нажатие
-		</td>
-        <td style="width: 600px;">
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            Нужно указать параметр вызываемой функции <u>event</u>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">onclick</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Событие на нажатие
+          </td>
+          <td style="width: 600px;">
             <code>
                 &lt;button name="btn" <mark>onclick</mark>="<span class="red">btnClick</span>(this)"&gt;<br>
                 <span class="gray">Click Me</span>&lt;/button&gt;<hr>
@@ -170,51 +188,51 @@ var <span class="red">userBlock</span> = document.querySelector(".user-block a")
                 <br>
                 }
             </code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
             <button name="btn" onclick="btnClick(this)">Click Me</button>
-        </td>
-    </tr>
-    
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">onload</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Событие на загрузку
-		</td>
-        <td style="width: 600px;">
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">onload</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Событие на загрузку
+          </td>
+          <td style="width: 600px;">
             <code>
                 &lt;body <mark>onload</mark>="alert('<span class="gray">Страница загружена</span>');"&gt;
             </code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
             Нажмите на <kbd>F5</kbd>
-        </td>
-    </tr>
-    
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">onmouseover</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Событие на наведение указателем мыши
-		</td>
-        <td style="width: 600px;">
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">onmouseover</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Событие на наведение указателем мыши
+          </td>
+          <td style="width: 600px;">
             <code>
                 &lt;span <mark>onmouseover</mark>="alert('<span class="gray">Вы навели указатель мыши на этот текст</span>');"&gt;<span class="gray">Some text</span>
                 &lt;/span&gt;
             </code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
             <span style="border: 3px solid red; color: #000;" onmouseover="alert('Вы навели указатель мыши на этот текст');">Some text</span>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Счётчик событий 
-		</td>
-        <td style="width: 600px;">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Счётчик событий
+          </td>
+          <td style="width: 600px;">
             <code>
                 &lt;span <mark>onmouseover</mark>="<span class="red">counterFunc(this)</span>"&gt;&lt;/span&gt;<hr>
                 var counter = 0; <span class="gray">//глоб. перем.</span><br>
@@ -223,20 +241,20 @@ var <span class="red">userBlock</span> = document.querySelector(".user-block a")
                 &nbsp;&nbsp;&nbsp;&nbsp;element.innerHTML = '<span class="gray">На этот текст наведено указателем мыши '</span> + counter + <span class="gray">' раз'</span>;<br>
                 }
             </code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
             <span style="color: #000;" onmouseover="counterFunc(this);">На этот текст наведено указателем мыши 0 раз</span>
-        </td>
-    </tr>
-    
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">keydown</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Закрытие клавишей Ecs при условии открытого мод. окна
-		</td>
-        <td style="width: 600px;">
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">keydown</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Закрытие клавишей Ecs при условии открытого мод. окна
+          </td>
+          <td style="width: 600px;">
             <code><pre>
 <mark>window</mark>.addEventListener('<mark>keydown</mark>', function(event) {
     if (event.<mark>keyCode</mark> == 27) {
@@ -245,27 +263,29 @@ var <span class="red">userBlock</span> = document.querySelector(".user-block a")
         }
     }                      
 });</pre></code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-            <mark>keyCode</mark><br>
-            keycod.es
-        </td>
-    </tr>
-</table>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            <mark>keyCode</mark>
+            <br> keycod.es
+          </td>
+        </tr>
+      </table>
 
 
-	
-	</div>
-</div>
 
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2016 Все права защищены</p>
-	</div>
-</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 Все права защищены</p>
+    </div>
+  </div>
 
 </body>
+
 </html>

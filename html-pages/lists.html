@@ -1,91 +1,97 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой справочник | HTML | Списки</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+<head>
+  <title>Мой справочник | HTML | Списки</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
 <body>
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-	<ul class="header-menu">
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a class="active" href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a class="active" href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
         <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a href="../javascript-page.html">JS</a></li>
-		<li><a href="../javascript+-page.html">JS+</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../javascript+-page.html">JS+</a></li>
         <li><a href="../php-page.html">PHP</a></li>
         <li><a href="../cms.html">CMS</a></li>
-	</ul>
-	</div>
-</div>
+      </ul>
+    </div>
+  </div>
 
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-	<ul class="vert-menu">
-		<li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
-		<li><a href="../html-pages/head.html">Внутри head</a></li>
-		<li><a href="../html-pages/conts.html">Контейнеры</a></li>
-		<li><a href="../html-pages/headers.html">Заголовки</a></li>
-		<li><a href="../html-pages/lists.html" class="active">Списки</a></li>
-		<li><a href="../html-pages/tables.html">Таблицы</a></li>
-		<li><a href="../html-pages/text.html">Текст</a></li>
-		<li><a href="../html-pages/links.html">Ссылки</a></li>
-		<li><a href="../html-pages/images.html">Изображения</a></li>
-		<li><a href="../html-pages/forms.html">Формы</a></li>
-		<li><a href="../html-pages/simbols.html">Символы</a></li>
-		<li><a href="../html-pages/svg.html">Графика</a></li>
-		<li><a href="../html-pages/media.html">Аудио-Видео</a></li>
-		<li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
-		<li><a href="../html-pages/blank.html">Заготовка</a></li>
-		<li><a href="jade.html">Jade</a></li>
-	</ul>
-	
-	</div>
-	<div class="content clearfix">
-	
-	<h2>Мой справочник | HTML | Списки</h2>
-    
-    <table class="discription">
-        
-        <tr>        
-            <td colspan="4"><h3>Ненумерованный список</h3></td>
-        </tr>
-        
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+        <li><a href="../html-pages/head.html">Внутри head</a></li>
+        <li><a href="../html-pages/conts.html">Контейнеры</a></li>
+        <li><a href="../html-pages/headers.html">Заголовки</a></li>
+        <li><a href="../html-pages/lists.html" class="active">Списки</a></li>
+        <li><a href="../html-pages/tables.html">Таблицы</a></li>
+        <li><a href="../html-pages/text.html">Текст</a></li>
+        <li><a href="../html-pages/links.html">Ссылки</a></li>
+        <li><a href="../html-pages/images.html">Изображения</a></li>
+        <li><a href="../html-pages/forms.html">Формы</a></li>
+        <li><a href="../html-pages/simbols.html">Символы</a></li>
+        <li><a href="../html-pages/svg.html">Графика</a></li>
+        <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+        <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+        <li><a href="../html-pages/blank.html">Заготовка</a></li>
+        <li><a href="brackets.html">Brackets</a></li>
+        <li><a href="sublime.html">Sublime Text</a></li>
+        <li><a href="vscode.html">VS Code</a></li>
+        <li><a href="pug.html">Pug</a></li>
+      </ul>
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой справочник | HTML | Списки</h2>
+
+      <table class="discription">
+
         <tr>
-            <td>
-                <code>
+          <td colspan="4">
+            <h3>Ненумерованный список</h3></td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>
                     &lt;ul&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №1</span>&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №2</span>&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №3</span>&lt;/li&gt;<br>
                     &lt;/ul&gt;<br>
                 </code>
-            </td>    
-            <td></td><!--пустая ячейка для отступа-->
-            <td>
-                <ul>
-                    <li>Пункт №1</li>
-                    <li>Пункт №2</li>
-                    <li>Пункт №3</li>
-                </ul>
-            </td>
-            <td>&lt;ul&gt; - ненумер. список<br>
-                &lt;li&gt; - элемент<br>
-				
-            </td>
+          </td>
+          <td></td>
+          <!--пустая ячейка для отступа-->
+          <td>
+            <ul>
+              <li>Пункт №1</li>
+              <li>Пункт №2</li>
+              <li>Пункт №3</li>
+            </ul>
+          </td>
+          <td>&lt;ul&gt; - ненумер. список
+            <br> &lt;li&gt; - элемент
+            <br>
+
+          </td>
         </tr>
-        
+
         <tr>
-            <td>
-                <code>
+          <td>
+            <code>
                     &lt;ul <span class="red">type="square"</span>&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="red">type="circle"</span>&gt;<span class="gray">Пункт №1</span>&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №2</span>&lt;/li&gt;<br>
@@ -94,38 +100,49 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="red">type="disc"</span>&gt;<span class="gray">Пункт №5</span>&lt;/li&gt;<br>
                     &lt;/ul&gt;<br>
                 </code>
-            </td>    
-            <td></td><!--пустая ячейка для отступа-->
-            <td>
-                <ul type="square">
-                    <li type="circle">Пункт №1</li>
-                    <li>Пункт №2</li>
-                    <li>Пункт №3</li>
-                    <li>Пункт №4</li>
-                    <li type="disc">Пункт №5</li>
-                </ul>
-            </td>
-            <td><u><b>маркеры:</b></u><br>
-                <span class="red">type="disc"</span> - по ум.<br>
-                <span class="red">type="square"</span> - квадрат<br>
-                <span class="red">type="circle"</span> - круг<br><br>
-				<b>CSS (маркеры):</b><br> 
-				<span class="red">list-style: square outside url(...);<br>
+          </td>
+          <td></td>
+          <!--пустая ячейка для отступа-->
+          <td>
+            <ul type="square">
+              <li type="circle">Пункт №1</li>
+              <li>Пункт №2</li>
+              <li>Пункт №3</li>
+              <li>Пункт №4</li>
+              <li type="disc">Пункт №5</li>
+            </ul>
+          </td>
+          <td><u><b>маркеры:</b></u>
+            <br>
+            <span class="red">type="disc"</span> - по ум.
+            <br>
+            <span class="red">type="square"</span> - квадрат
+            <br>
+            <span class="red">type="circle"</span> - круг
+            <br>
+            <br>
+            <b>CSS (маркеры):</b>
+            <br>
+            <span class="red">list-style: square outside url(...);<br>
 								  list-style-type: <br>
                                   list-style-type: <mark>upper-alpha</mark>;<br>
 								  list-style-position: inside*, outside<br>
-								  list-style-image: url(...);</span><br>
-                <span class="red">list-style: none;</span> - без маркеров<br><br>
-            </td>
+								  list-style-image: url(...);</span>
+            <br>
+            <span class="red">list-style: none;</span> - без маркеров
+            <br>
+            <br>
+          </td>
         </tr>
-        
-        <tr>        
-            <td colspan="4"><h3>Многоуровневый список</h3></td>
-        </tr>
-        
+
         <tr>
-            <td>
-                <code>
+          <td colspan="4">
+            <h3>Многоуровневый список</h3></td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>
                     &lt;ul&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №1</span><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
@@ -140,58 +157,64 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №3</span>&lt;/li&gt;<br>
                     &lt;/ul&gt;<br>
                 </code>
-            </td>    
-            <td></td><!--пустая ячейка для отступа-->
-            <td>
+          </td>
+          <td></td>
+          <!--пустая ячейка для отступа-->
+          <td>
+            <ul>
+              <li>Пункт №1
                 <ul>
-                    <li>Пункт №1
-                        <ul>
-                            <li>Пункт №1.1</li>
-                            <li>Пункт №1.2
-                                <ul>
-                                    <li>Пункт №1.2.1</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Пункт №2</li>
-                    <li>Пункт №3</li>
+                  <li>Пункт №1.1</li>
+                  <li>Пункт №1.2
+                    <ul>
+                      <li>Пункт №1.2.1</li>
+                    </ul>
+                  </li>
                 </ul>
-            </td>
-            <td>У вложенных списков по ум.<br> меняются маркеры</td>
+              </li>
+              <li>Пункт №2</li>
+              <li>Пункт №3</li>
+            </ul>
+          </td>
+          <td>У вложенных списков по ум.
+            <br> меняются маркеры</td>
         </tr>
-        
-        <tr>        
-            <td colspan="4"><h3>Нумерованный список</h3></td>
-        </tr>
-        
+
         <tr>
-            <td>
-                <code>
+          <td colspan="4">
+            <h3>Нумерованный список</h3></td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>
                     &lt;ol&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №1</span>&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №2</span>&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт №3</span>&lt;/li&gt;<br>
                     &lt;/ol&gt;<br>
                 </code>
-            </td>    
-            <td></td><!--пустая ячейка для отступа-->
-            <td>
-                <ol>
-                    <li>Пункт №1</li>
-                    <li>Пункт №2</li>
-                    <li>Пункт №3</li>
-                </ol>
-            </td>
-            <td>&lt;ol&gt; - нумер. список<br>
-                &lt;li&gt; - элемент списка<br><br>
-				
-            </td>
+          </td>
+          <td></td>
+          <!--пустая ячейка для отступа-->
+          <td>
+            <ol>
+              <li>Пункт №1</li>
+              <li>Пункт №2</li>
+              <li>Пункт №3</li>
+            </ol>
+          </td>
+          <td>&lt;ol&gt; - нумер. список
+            <br> &lt;li&gt; - элемент списка
+            <br>
+            <br>
+
+          </td>
         </tr>
-        
+
         <tr>
-            <td>
-                <code>
+          <td>
+            <code>
                     &lt;ol <span class="red">start="8"  type="I"</span>&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт</span>&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт</span>&lt;/li&gt;<br>
@@ -201,35 +224,44 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span class="gray">Пункт</span>&lt;/li&gt;<br>
                     &lt;/ol&gt;<br>
                 </code>
-            </td>    
-            <td></td><!--пустая ячейка для отступа-->
-            <td>
-                <ol start="8" type="I">
-                    <li>Пункт</li>
-                    <li>Пункт</li>
-                    <li>Пункт</li>
-                    <li>Пункт</li>
-                    <li>Пункт</li>
-                    <li>Пункт</li>
-                </ol>
-            </td>
-            <td>
-                <span class="red">start="8"</span> - начать с ...<br><br>
-                <span class="red">type="number"</span> - цифры (по ум.)<br>
-                <span class="red">type="i"</span> - мал. римские<br>
-                <span class="red">type="I"</span> - бол. римские<br>
-                <span class="red">type="a"</span> - мал. буквы<br>
-                <span class="red">type="A"</span> - бол. буквы<br>
-            </td>
+          </td>
+          <td></td>
+          <!--пустая ячейка для отступа-->
+          <td>
+            <ol start="8" type="I">
+              <li>Пункт</li>
+              <li>Пункт</li>
+              <li>Пункт</li>
+              <li>Пункт</li>
+              <li>Пункт</li>
+              <li>Пункт</li>
+            </ol>
+          </td>
+          <td>
+            <span class="red">start="8"</span> - начать с ...
+            <br>
+            <br>
+            <span class="red">type="number"</span> - цифры (по ум.)
+            <br>
+            <span class="red">type="i"</span> - мал. римские
+            <br>
+            <span class="red">type="I"</span> - бол. римские
+            <br>
+            <span class="red">type="a"</span> - мал. буквы
+            <br>
+            <span class="red">type="A"</span> - бол. буквы
+            <br>
+          </td>
         </tr>
-        
-        <tr>        
-            <td colspan="4"><h3>Список определений</h3></td>
-        </tr>
-        
+
         <tr>
-            <td>
-                <code>
+          <td colspan="4">
+            <h3>Список определений</h3></td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>
                     &lt;dl&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;<span class="gray">Термин №1</span>&lt;/dt&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;<span class="gray">Определение №1</span>&lt;/dd&gt;<br>
@@ -239,29 +271,31 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;<span class="gray">Определение №3</span>&lt;/dd&gt;<br>
                     &lt;/dl&gt;<br>
                 </code>
-            </td>    
-            <td></td><!--пустая ячейка для отступа-->
-            <td>
-                <dl>
-                    <dt>Термин №1</dt>
-                    <dd>Определение №1</dd>
-                    <dt>Термин №2</dt>
-                    <dd>Определение №2</dd>
-                    <dt>Термин №3</dt>
-                    <dd>Определение №3</dd>
-                </dl>
-            </td>
-            <td>
-                 &lt;dl&gt; - список опр.<br>
-                 &lt;dt&gt; - термин<br>
-                &lt;dd&gt; - определение<br>
-            </td>
+          </td>
+          <td></td>
+          <!--пустая ячейка для отступа-->
+          <td>
+            <dl>
+              <dt>Термин №1</dt>
+              <dd>Определение №1</dd>
+              <dt>Термин №2</dt>
+              <dd>Определение №2</dd>
+              <dt>Термин №3</dt>
+              <dd>Определение №3</dd>
+            </dl>
+          </td>
+          <td>
+            &lt;dl&gt; - список опр.
+            <br> &lt;dt&gt; - термин
+            <br> &lt;dd&gt; - определение
+            <br>
+          </td>
         </tr>
 
-</table> 
+      </table>
 
-<h3>Редактирование маркеров <i>(маркеры станут красными)</i></h3>
-<code>
+      <h3>Редактирование маркеров <i>(маркеры станут красными)</i></h3>
+      <code>
 <span class="red">ul li</span> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: none;<br>
 }<br>
@@ -270,8 +304,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
 }
 </code>
-<hr>
-<code>
+      <hr>
+      <code>
 <span class="red">ol li</span> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: none;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;counter-increment: item;<br>
@@ -284,23 +318,25 @@
 
 
 
-<span class="gray">СПИСКИ часто используют для создания МЕНЮ</span>
-    
-	</div>
-</div>
+      <span class="gray">СПИСКИ часто используют для создания МЕНЮ</span>
 
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2016 Все права защищены</p>
-	</div>
-</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 Все права защищены</p>
+    </div>
+  </div>
 
 
 
 
 
 </body>
+
 </html>
