@@ -91,58 +91,7 @@
 	<h2>Мой Справочник |  CSS3 | LESS\SASS</h2>
 	
 	<table class="css3-table">
-    <tr>
-      <th class="css3-table-title" colspan="3">Автоматизаторы-сборщики</th>
-    </tr> 
-    <tr>
-      <td class="col1" style="width: 200px;">
-        Grunt
-      </td>
-      <td class="col2">
-        <code><pre>
-<span class="gray">Нужны права администратора</span>
 
-<span class="gray">Установка <b>comand line interface</b></span>
-<b>npm install grunt-cli -g</b>
-
-<span class="gray">Установка <b>grunt</b></span>
-<b>npm install grunt</b>
-
-<span class="gray">Установка плагина для преобр. less в css:</span>
-<b>npm i -save-dev grunt-contrib-less</b>
-
-<span class="gray">Установка плагина</span>
-<b>npm i -save-dev grunt-autoprefixer</b>
-
-<span class="gray">Установка package.json (файл-информация):</span>
-<b>npm init</b>
-
-Рабочий <a href="../css3-pages/Gruntfile.js" download>Gruntfile.js</a></pre></code>
-      </td>
-      <td class="col3" style="width: 400px;" rowspan="2">
-      Служит для преобразования препроцессорного кода (less-код, sass-код) в css-код
-       <h3>Установка:</h3>
-        <ol>
-          <li>Установить <b>node.js</b></li>
-          <li>Установить автоматизатор <b>Grunt</b> или <b>Gulp</b> (они работают на node.js), это своего рода библиотеки</li>
-        </ol>
-        <code>npm run build</code><br>
-        <code>npm start</code>
-      </td>
-    </tr>
-    <tr>
-      <td class="col1" style="width: 200px;">
-        Gulp
-      </td>
-      <td class="col2">
-        <code><pre>
-<span class="gray">Установка <b>Gulp:</b></span>
-<b>npm i -g gulp</b><br>
-<span class="gray">Установка плагина для преобр. less в css:</span>
-<b>npm i -save-dev gulp-less</b>
-        </pre></code>
-      </td>
-    </tr>
     <tr>
       <td class="col1" style="width: 200px;">
         <a href="https://wearekiss.com/simpless" title="SimpLESS">SimpLESS</a>
@@ -153,81 +102,6 @@
         Приложение под Windows. Не требует консольных команд, всё очень просто и понятно
       </td>
     </tr>
-     
-    <tr>
-      <th class="css3-table-title" colspan="3">Grunt - настойка конфигурации</th>
-    </tr> 
-    <tr>
-      <td class="col1" style="width: 200px;">
-        <b>Grunt</b>
-      </td>
-      <td class="col2">
-<span style="color: #000">1. Создаём файл-конфигурацию в директории проекта <b>Gruntfile.js</b> и в нём пишем js-код:</span>
-        <code><pre>
-module.exports = function(grunt) {
-  gruntloadNpmTasks('grunt-contrib-less'); 
-  grunt.initConfig({
-    less: {
-      style: {
-        files: {
-          'css/<b>style.css</b>': 'less/<b>style.less</b>'
-        } 
-      }
-    }
-  });
-         
-};
-
-<span style="color: #000">2. В консоли встаём в директорию с проектом,
-пишем команду: </span>
-<b>grunt less</b>
-
-<span style="color: #000">После этого у нас создался <b>style.css</b> 
-путём преобразования файла <b>style.less</b></span>
-       
-<span style="color: #000">3. Для синхронизации изменений команда: </span>
-<b>grunt watch</b>     
-        </pre></code>
-      </td>
-      <td class="col3" style="width: 400px;">
-2-я строка подключает установленный выше плагин.<br>
-files указывает на пути файлов для преобразования
-      </td>
-    </tr>
-    
-    <tr>
-      <th class="css3-table-title" colspan="3">Gulp - настойка конфигурации</th>
-    </tr> 
-    <tr>
-      <td class="col1" style="width: 200px;">
-        <b>Gulp</b>
-      </td>
-      <td class="col2">
-<span style="color: #000">
-  1. Создаём файл-конфигурацию в директории проекта <b>gulpfile.js</b> и в нём пишем js-код:</span>
-        <code><pre>
-var gulp = require('gulp');
-var less = require('gulp-less');
-
-gulp.task('less', function() {
-  gulp.src(less/style.less)
-    .pipe.(less())
-    .pipe(gulp.dest('css'));
-});
-
-<span style="color: #000">2. В консоли встаём в директорию с проектом,
-пишем команду: </span>
-<b>gulp less</b>
-
-<span style="color: #000">После этого у нас создался <b>style.css</b> 
-путём преобразования файла <b>style.less</b></span>
-        </pre></code>
-      </td>
-      <td class="col3" style="width: 400px;">
-Подключаем плагины, сохраняем их в переменные, указываем src less-файла, сохраняем в папку css, по автомату будет назван style.css, берёт имя у style.less
-      </td>
-    </tr>
-     
      
     <tr>
       <th class="css3-table-title" colspan="3">Подключение файлов</th>

@@ -1,0 +1,416 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой Справочник | CSS3 | Gulp</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+      code {
+        font-weight: bold !important;    
+      }
+      .gulp-link {
+        color: inherit;
+        text-decoration: none;
+      }
+      .gulp-link:hover {
+        color: #0000ff;
+      }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+    <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../javascript+-page.html">JS+</a></li>
+		<li><a href="../php-page.html">PHP</a></li>
+		<li><a href="../cms.html">CMS</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                <a href="#">Слайдер</a>
+				<ul class="sub-menu sub-menu3">
+				    <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				    <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				</ul>
+		    </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+                <li><a href="../css3-pages/css3-adaptive.html">Адаптивность</a></li>
+                <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+                <li>
+                  <a href="#">LESS\SASS</a>
+                  <ul class="sub-menu sub-menu-less">
+                    <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
+                </li>
+                <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+                <li><a class="active" href="../css3-pages/gulp.html">Gulp</a></li>
+            </ul>
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой Справочник |  CSS3 | Gulp</h2>
+	
+	<table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">Установка</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+      Gulp
+      </td>
+      <td class="col2" style="width: 700px;">
+<span style="color: #000;">
+1. Устанавливаем <a href="https://nodejs.org/en/">node.js</a> для вашей ОС,<br>
+проверяем:</span> <code>node -v </code>
+<br><br>
+<span style="color: #000;">Также вместе с node должен установиться пакетный менеджер <b>npm</b>,
+проверяем:</span> <code>npm -v </code>
+<hr>
+<span style="color: #000;">
+2. Устанавливаем <b>gulp</b>: </span> <code>npm i -g gulp</code> (глобально)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>npm i gulp --save-dev</code> (локально)<br>
+<span style="color: #000;">
+Проверяем:</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <code>gulp --version </code>
+      </td>
+      <td class="col3" style="width: 410px;">
+        <a href="http://gulpjs.com/" target="_blank">Официальный сайт Gulp</a>
+      <br><br>
+      Все установки нужно производить в директории с проектом
+      </td>
+    </tr>   
+    <tr>
+      <td class="col1" style="width: 200px;">Настройки проекта <b>package.json</b></td>
+      <td class="col2" style="width: 700px;">
+        <code>npm init</code>
+      </td>
+      <td class="col3">Будет создан файл <b>package.json</b> с информацией о проекте</td>
+    </tr> 
+    <tr>
+      <th class="css3-table-title" colspan="3">Плагины</th>
+    </tr>
+    <tr> 
+      <td class="col1" style="width: 200px;">Компилятор less-кода в css</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://github.com/plus3network/gulp-less"
+   target="_blank">npm i -save-dev gulp-less</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp less</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+       <span class="gray" style="font-size: 1em;">
+       // Подключение плагина:
+       </span><br>
+        <code style="font-size: 1em;">
+        var less = require('<span class="red">gulp-less</span>');
+        </code>
+      </td>
+    </tr>
+    <tr> 
+      <td class="col1" style="width: 200px;">Компилятор sass-кода в css</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-sass/"
+   target="_blank">npm i -save-dev gulp-sass</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp sass</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var sass = require('<span class="red">gulp-sass</span>');
+        </code>
+      </td>
+    </tr>
+    <tr> 
+      <td class="col1" style="width: 200px;">Компилятор coffee-кода в js</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-coffee/"
+   target="_blank">npm i -save-dev gulp-coffee</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp coffee</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var coffee = require('<span class="red">gulp-coffee</span>');
+        </code>
+      </td>
+    </tr>
+    
+    <tr> 
+      <td class="col1" style="width: 200px;">Мнгновенное сохранение изменений</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-watch/"
+   target="_blank">npm install --save-dev gulp-watch</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp watch</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var watch = require('<span class="red">gulp-watch</span>');
+        </code>
+      </td>
+    </tr>
+    
+    <tr> 
+      <td class="col1" style="width: 200px;">Конкатинатор</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-concat/"
+   target="_blank">npm install --save-dev gulp-concat</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp concat</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var concat = require('<span class="red">gulp-concat</span>');
+        </code>
+      </td>
+    </tr>
+    
+     <tr> 
+      <td class="col1" style="width: 200px;">Минификатор css</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-cssmin/"
+   target="_blank">npm install --save-dev gulp-minify-css</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp minify-css</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var minifyCss = require('<span class="red">gulp-minify-css</span>');
+        </code>
+      </td>
+    </tr>
+    
+    <tr> 
+      <td class="col1" style="width: 200px;">Минификатор js</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-uglify/"
+   target="_blank">npm install --save-dev gulp-uglify</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp uglify</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var uglify = require('<span class="red">gulp-uglify</span>');
+        </code>
+      </td>
+    </tr>
+    
+    <tr> 
+      <td class="col1" style="width: 200px;">Сжатие картинок</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-imagemin/"
+   target="_blank">npm install --save-dev gulp-imagemin</a>
+
+<span class="gray">// Запуск плагина:</span>
+<mark>gulp imagemin</mark>  
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var imagemin = require('<span class="red">gulp-imagemin</span>');
+        </code>
+      </td>
+    </tr>
+    <tr> 
+      <td class="col1" style="width: 200px;">Синхронизатор</td>
+      <td class="col2" style="width: 700px;">
+        <code><pre>
+<a class="gulp-link" 
+   href="https://www.npmjs.com/package/gulp-imagemin/"
+   target="_blank">npm install --save-dev browser-sync</a>
+ 
+     </pre></code>
+      </td>
+      <td class="col3">
+        <span class="gray" style="font-size: 1em;">
+        // Подключение плагина:
+        </span><br>
+        <code style="font-size: 1em;">
+        var browserSync = require('<span class="red">browser-sync</span>');
+        </code>
+      </td>
+    </tr>
+
+    
+    <tr>
+      <th class="css3-table-title" colspan="3">Настройка</th>
+    </tr> 
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>gulpfile.js</b>
+      </td>
+      <td class="col2">
+<span style="color: #000">
+  1. Создаём файл-конфигурацию в директории проекта <b>gulpfile.js</b> и в нём пишем js-код:</span>
+        <code><pre>
+<span class="gray">//2. Подключение плагинов:</span>
+var <span class="red">gulp</span>        = require('<span class="red">gulp</span>');
+var <span class="red">less</span>        = require('<span class="red">gulp-less</span>');
+var <span class="red">browserSync</span> = require('<span class="red">browser-sync</span>');
+
+<span class="gray">//3. Настройка плагина less:</span>
+gulp.<mark>task</mark>('<span class="red">less</span>', function() { <span class="gray">//консольная команда</span>
+  gulp.<mark>src</mark>('less/**/*.less') <span class="gray">    //директория источника</span>
+  <span class="gray">// * - любое название файла
+  // ** - любая вложенность
+  // ['...', '...'] - перечисление
+  // *.+(scss|sass|less) - перечисление форматов файлов
+  // ! - кроме файла</span>
+  .pipe.(<mark>less</mark>()) <span class="gray">              //обработка</span>
+  .pipe(gulp.<mark>dest</mark>('css')); <span class="gray">    //директория назначения</span>
+});
+
+<span class="gray">//4. Настройка плагина watch:</span>
+gulp.<mark>task</mark>('<span class="red">watch</span>', function() { 
+  gulp.<mark>watch</mark>('less/**/*.less', ['less']) <span class="gray">// какие таски будем
+  // выполнять ['less'] при изменении файлов <b>less</b></span>
+  .pipe(gulp.<mark>dest</mark>('css')); 
+});
+
+<span class="gray">//5. Настройка плагина browser-sync:</span>
+gulp.task('<span class="red">browser-sync</span>', function() {
+  browserSync()
+});
+
+
+
+
+
+
+
+<span style="color: #000">6. В консоли встаём в директорию с проектом,
+пишем команду: </span>
+<b>gulp less</b>
+
+<span style="color: #000">После этого у нас создался <b>style.css</b> 
+путём преобразования файла <b>style.less</b></span>
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+Подключаем плагины, сохраняем их в переменные, указываем src less-файла, сохраняем в папку css, по автомату будет назван style.css, берёт имя у style.less
+      </td>
+    </tr>
+  </table>
+  
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+		
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

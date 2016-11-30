@@ -1,0 +1,23 @@
+{
+  "name": "it-book",
+  "version": "1.0.0",
+  "description": "My IT-book",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyLeukhin/IT-book.git"
+  },
+  "keywords": [
+    "it-book",
+    "html-css-js"
+  ],
+  "author": "Evgeny Leukhin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvgenyLeukhin/IT-book/issues"
+  },
+  "homepage": "https://github.com/EvgenyLeukhin/IT-book#readme"
+}

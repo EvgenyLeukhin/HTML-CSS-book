@@ -1,13 +1,13 @@
 Mask+++
 CSS-slider+++
-Flexbox
+Flexbox+++
 jQuery
 Bootstrap - CSS-פנוילגמנך
-LESS, SASS, Styles - ןנוןנמצוססמנû
+LESS, SASS, Styles - ןנוןנמצוססמנû+++
 CoffeeScript - JS-sugar
-CMS - PHP-פנוילגמנך
-Gulp - אגעמל. סבמנשטך
-PHP, mySQL or Pyton
+CMS Wordpress- PHP-פנוילגמנך
+Grunt\Gulp - אגעמל. סבמנשטך+++
+PHP\SQL or Pyton
 
 Cousera on github:
 https://github.com/jhu-ep-coursera/fullstack-course4/tree/master/examples 
