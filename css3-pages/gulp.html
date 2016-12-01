@@ -362,24 +362,25 @@ gulp.<mark>task</mark>('<span class="red">less</span>', function() { <span class
   // ! - кроме файла</span>
   .pipe.(<mark>less</mark>()) <span class="gray">              //обработка</span>
   .pipe(gulp.<mark>dest</mark>('css')); <span class="gray">    //директория назначения</span>
+  .pipe(browserSync.reload({stream: true}))
 });
 
 <span class="gray">//4. Настройка плагина watch:</span>
 gulp.<mark>task</mark>('<span class="red">watch</span>', function() { 
-  gulp.<mark>watch</mark>('less/**/*.less', ['less']) <span class="gray">// какие таски будем
+  gulp.<mark>watch</mark>('less/**/*.less', ['browser-sync', 'less']) <span class="gray">// какие таски будем
   // выполнять ['less'] при изменении файлов <b>less</b></span>
   .pipe(gulp.<mark>dest</mark>('css')); 
 });
 
 <span class="gray">//5. Настройка плагина browser-sync:</span>
 gulp.task('<span class="red">browser-sync</span>', function() {
-  browserSync()
+  browserSync({
+    server: {
+      baseDir: 'app'
+    },
+    notify: false
+  });
 });
-
-
-
-
-
 
 
 <span style="color: #000">6. В консоли встаём в директорию с проектом,

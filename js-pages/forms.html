@@ -1,134 +1,149 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой Справочник | JS | Формы</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/style_barbershop.css">
-    <style>
-        .modal-window-btn {
-            padding: 10px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            border: 1px solid #000;
-            background: darkcyan;
-            opacity: .7;
-        }
-        .modal-window-btn:hover {
-            opacity: 1;
-        }
-        .code {margin-top: 450px;}
-        .html {float: left;}
-        .js {clear: left;}
-        #code {font-size: 18px;}
-    </style>
+<head>
+  <title>Мой Справочник | JS | Формы</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_barbershop.css">
+  <style>
+    .modal-window-btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      border: 1px solid #000;
+      background: darkcyan;
+      opacity: .7;
+    }
+    
+    .modal-window-btn:hover {
+      opacity: 1;
+    }
+    
+    .code {
+      margin-top: 450px;
+    }
+    
+    .html {
+      float: left;
+    }
+    
+    .js {
+      clear: left;
+    }
+    
+    #codeID {
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body>
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-		<ul class="header-menu">
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
         <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a class="active" href="../javascript-page.html">JS</a></li>
-		<li><a href="../javascript+-page.html">JS+</a></li>
-		<li><a href="../php-page.html">PHP</a></li>
-		<li><a href="../cms.html">CMS</a></li>
-	</ul>
-	</div>
-</div>
+        <li><a class="active" href="../javascript-page.html">JS</a></li>
+        <li><a href="../javascript+-page.html">JS+</a></li>
+        <li><a href="../php-page.html">PHP</a></li>
+        <li><a href="../cms.html">CMS</a></li>
+      </ul>
+    </div>
+  </div>
 
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-		<ul class="vert-menu">
-            <li>
-                <a href="#">Основы</a>
-                <ul class="sub-menu sub-menu9">
-                    <li><a href="js-lang.html">Язык JS</a></li>
-                    <li><a href="load.html">Загрузка</a></li>
-			        <li><a href="types.html">Типы данных</a></li>
-			        <li><a href="var.html">Переменные</a></li>
-			        <li><a href="operators.html">Операторы</a></li>
-			        
-			        <li><a href="algorythm.html">Алгоритмы</a></li>
-			        <li><a href="if-else.html">if - else, switch-case</a></li>
-			        <li><a href="cycle.html">Циклы</a></li>
-                    <li><a href="math.html">Math</a></li>
-                </ul>
-            </li>
-            <li><a href="array.html">Массивы</a></li>
-            <li><a href="function.html">Функции</a></li>
-			<li><a href="object.html">Объекты</a></li>
-            <li>
-                <a class="active" href="#">JS & HTML</a>
-                <ul class="sub-menu sub-menu6">
-                    <li><a href="complete.html">Вывод данных</a></li>
-			        <li><a href="dom.html">DOM</a></li>
-			        <li><a href="html-methods.html">Методы</a></li>
-			        <li><a href="actions.html">События</a></li>
-			        <li><a href="modal-window.html">Мод. окно</a></li>
-			        <li><a href="forms.html">Формы</a></li>
-                </ul>
-            </li>
-			
-			<li>
-			    <a href="#">jQuery</a>
-			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
-			        <li><a href="jquery-func.html">jQuery-функции</a></li>
-                    <li><a href="jquery-actions.html">jQuery-события</a></li>
-			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                </ul>
-			 </li>
-			 <li><a href="ajax.html">Ajax</a></li>
-			 <li><a href="canvas.html">Canvas</a></li>
-			 <li><a href="git.html">Git</a></li>
-			 <li><a href="console.html">Консоль</a></li>
-		</ul>
-	
-	
-	</div>
-	<div class="content clearfix">
-	
-	    <h2>Мой Справочник | JavaScript | Формы</h2>
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">Основы</a>
+          <ul class="sub-menu sub-menu9">
+            <li><a href="js-lang.html">Язык JS</a></li>
+            <li><a href="load.html">Загрузка</a></li>
+            <li><a href="types.html">Типы данных</a></li>
+            <li><a href="var.html">Переменные</a></li>
+            <li><a href="operators.html">Операторы</a></li>
 
-       <a href="#" class="modal-window-btn">Модальное окно</a>
-       
-	   <div class="modal-window">
+            <li><a href="algorythm.html">Алгоритмы</a></li>
+            <li><a href="if-else.html">if - else, switch-case</a></li>
+            <li><a href="cycle.html">Циклы</a></li>
+            <li><a href="math.html">Math</a></li>
+          </ul>
+        </li>
+        <li><a href="array.html">Массивы</a></li>
+        <li><a href="function.html">Функции</a></li>
+        <li><a href="object.html">Объекты</a></li>
+        <li>
+          <a class="active" href="#">JS & HTML</a>
+          <ul class="sub-menu sub-menu6">
+            <li><a href="complete.html">Вывод данных</a></li>
+            <li><a href="dom.html">DOM</a></li>
+            <li><a href="html-methods.html">Методы</a></li>
+            <li><a href="actions.html">События</a></li>
+            <li><a href="modal-window.html">Мод. окно</a></li>
+            <li><a href="forms.html">Формы</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">jQuery</a>
+          <ul class="sub-menu sub-menu7">
+            <li><a href="jquery-html.html">jQuery и HTML</a></li>
+            <li><a href="jquery-func.html">jQuery-функции</a></li>
+            <li><a href="jquery-actions.html">jQuery-события</a></li>
+            <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+            <li><a href="jquery-forms.html">jQuery-формы</a></li>
+          </ul>
+        </li>
+        <li><a href="ajax.html">Ajax</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+        <li><a href="git.html">Git</a></li>
+        <li><a href="console.html">Консоль</a></li>
+        <li><a href="project.html">Новый проект</a></li>
+      </ul>
+
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | JavaScript | Формы</h2>
+
+      <a href="#" class="modal-window-btn">Модальное окно</a>
+
+      <div class="modal-window">
         <div class="modal-window-close"></div>
         <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
-        <span>ВВЕДИТЕ ПОЖАЛУЙСТА СВОЙ ЛОГИН И ПАРОЛЬ</span><br>
+        <span>ВВЕДИТЕ ПОЖАЛУЙСТА СВОЙ ЛОГИН И ПАРОЛЬ</span>
+        <br>
         <a class="pw-lost" href="#">ЕСЛИ ВЫ ЗАБЫЛИ ПАРОЛЬ</a>
         <form method="post" action="page.php">
-            <input class="icon-login" type="text" name="login" placeholder="ЛОГИН">
-            <input class="icon-pw" type="password" name="pw" placeholder="ПАРОЛЬ">
-            <fieldset>
-                <input type="checkbox" name="remember-me" id="remember-me-id">
-                <label for="remember-me-id">ЗАПОМНИТЕ МЕНЯ</label>
-                <a class="pw-lost2" href="#">Я ЗАБЫЛ ПАРОЛЬ</a>
-            </fieldset>
-            <input type="submit" value="ВОЙТИ">
-            <div class="close"></div>
+          <input class="icon-login" type="text" name="login" placeholder="ЛОГИН">
+          <input class="icon-pw" type="password" name="pw" placeholder="ПАРОЛЬ">
+          <fieldset>
+            <input type="checkbox" name="remember-me" id="remember-me-id">
+            <label for="remember-me-id">ЗАПОМНИТЕ МЕНЯ</label>
+            <a class="pw-lost2" href="#">Я ЗАБЫЛ ПАРОЛЬ</a>
+          </fieldset>
+          <input type="submit" value="ВОЙТИ">
+          <div class="close"></div>
         </form>
-        </div>
-        
-    
-    <div class="code">
+      </div>
+
+
+      <div class="code">
         <h2>Фокусировка, сохранение логина, валидация</h2>
-           <div class="html">
-            <code id="code"><pre>
+        <div class="html">
+          <code id="code"><pre>
 <span class="red">.modal-window-show</span> {display: block;}
 &lt;a class="<span class="red">modal-window-btn</span>"&gt;<span class="gray">Модальное окно</span>&lt;/a&gt;
     ...
@@ -139,11 +154,11 @@
 &lt;/div&gt;
                 
              </pre></code>
-            </div>
-           
-            <div class="js">
-<h3>JS-код:</h3>
-<code id="code"><pre>
+        </div>
+
+        <div class="js">
+          <h3>JS-код:</h3>
+          <code id="codeID"><pre>
 var <span class="red">modalWindowBtn</span> = document.querySelector("<span class="red">.modal-window-btn</span>");
 var <span class="red">modalWindow</span> = document.querySelector("<span class="red">.modal-window</span>");
 var <span class="red">modalWindowClose</span> = document.querySelector("<span class="red">.close</span>");
@@ -176,51 +191,51 @@ var <span class="red">storageLogin</span> = localStorage.getItem('login'); <span
     
 </pre></code>
 
-            </div>
-    
-	   </div>
-</div></div>
+        </div>
 
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2016 Все права защищены</p>
-	</div>
-</div></div>
+      </div>
+    </div>
+  </div>
 
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
 
+      <p class="footer-copyright">© 2016 Все права защищены</p>
+    </div>
+  </div>
 
-
-<script>
+  <script>
     var modalWindowBtn = document.querySelector(".modal-window-btn");
     var modalWindow = document.querySelector(".modal-window");
     var modalWindowClose = document.querySelector(".close");
     var login = modalWindow.querySelector("input[name=login]");
     var password = modalWindow.querySelector("input[name=pw]");
     var form = modalWindow.querySelector("form");
-    
-    modalWindowBtn.addEventListener('click', function(event){
-        event.preventDefault();
-        modalWindow.classList.add("modal-window-show");
-        login.focus(); //Фокусировка на логине
-    }); 
-    modalWindowClose.addEventListener('click', function(){
-        modalWindow.classList.remove("modal-window-show");
-    }); 
-    form.addEventListener('submit', function(event){
-        if (!(login.value && password.value)) {
-            event.preventDefault();
-            alert('Введите логин и пароль');
-        } else {
-        localStorage.setItem('login', login.value);
-        }
+
+    modalWindowBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      modalWindow.classList.add("modal-window-show");
+      login.focus(); //Фокусировка на логине
     });
-</script>
+    modalWindowClose.addEventListener('click', function () {
+      modalWindow.classList.remove("modal-window-show");
+    });
+    form.addEventListener('submit', function (event) {
+      if (!(login.value && password.value)) {
+        event.preventDefault();
+        alert('Введите логин и пароль');
+      } else {
+        localStorage.setItem('login', login.value);
+      }
+    });
+  </script>
 
 
 
 
 </body>
+
 </html>
