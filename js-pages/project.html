@@ -99,14 +99,44 @@
         <tr>
           <th colspan="5" style="font-size: 2em; color: darkcyan;">Структура проекта</th>
         </tr>
-
+        
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            1. Создаём директории проекта
+            1. Привязка к GitHub-репозиторию
           </td>
 
           <td rowspan="1" style="width: 600px; color: #555;">
-            <pre><code><span class="red">app/</span> <span class="gray">           директория рабочих файлов (можно еще src/ или build/)</span>
+           1. Создаём репозиторий на GitHub <br>
+           2. Клонируем его себе на хард-диск <code>git clone <span class="gray">+ адрес на github</span></code><br>
+           3. Создаём <b>Readme.md</b>, информационный файл о проекте<br>
+           4. Создаём <b>.gitignore</b>
+            <code>npm init</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">
+            Будет создан <b>package.json</b>
+          </td>
+        </tr>
+        
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            2. Инициализация проекта
+          </td>
+
+          <td rowspan="1" style="width: 600px; color: #555;">
+            <code>npm init</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">
+            Будет создан <b>package.json</b> с зависимомтями
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            3. Создаём директории проекта
+          </td>
+
+          <td rowspan="1" style="width: 600px; color: #555;">
+            <pre><code><span class="red">src/</span> <span class="gray">           директория рабочих файлов (или app/)</span>
 <span class="red">dist/</span> <span class="gray">          директория готовых файлов проекта</span>
 <span class="red">node-modules/</span> <span class="gray">  директория node-приложений</span>
 .bowerrc <span class="gray">       файл настроек библиотек</span>  
@@ -126,11 +156,11 @@ README.md <span class="gray">      файл с информацией о про�
 
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            2. Создаём под-директории проекта
+            4. Создаём под-директории проекта
           </td>
 
           <td rowspan="1" style="width: 600px; color: #555;">
-<pre><code><span class="red"><b>app/</b></span>
+<pre><code><span class="red"><b>src/</b></span>
   <span class="red">../_design     <span class="gray">файлы дизайна</span>
   ../coffee      <span class="gray">файлы coffee</span>       
   ../css         <span class="gray">файлы css</span>
@@ -142,15 +172,45 @@ README.md <span class="gray">      файл с информацией о про�
   ../less        <span class="gray">файлы less</span>
   ../sass        <span class="gray">файлы sass</span>
   ../pict        <span class="gray">изображения для контента</span>
-  ../<b>index.html</b>  <span class="gray">основной html-файл</span>
-    
-  </span>
-</code></pre>
+  ../<b>index.html</b>  <span class="gray">основной html-файл</span></span></code></pre>
           </td>
           <td rowspan="1" style="width: 200px; color: #555;">
 
           </td>
         </tr>
+
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            5. Установка инструментов
+          </td>
+
+          <td rowspan="1" style="width: 600px; color: #000; font-size: 20px;">
+            <ol>
+              <li>Bower, настройка .bowerrc</li>
+              <li>Grunt или gulp + плагины</li>
+              <li>Настройка Gruntfile.js или gulpfile.js</li>
+              <li>Установка node-модулей</li>
+            </ol>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">
+          </td>
+        </tr>
+        
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            6. Установка библиотек
+          </td>
+
+          <td rowspan="1" style="width: 600px; color: #555;">
+            <code>bower i jquery react angular ...</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">
+
+          </td>
+        </tr>
+        
+        
+        
       </table>
 
 
