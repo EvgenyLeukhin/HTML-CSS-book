@@ -3,6 +3,9 @@
 var gulp         = require('gulp'),											// Подгружаем сам gulp
 		less         = require('gulp-less'),								// Подгружаем плагин less
 		sass         = require('gulp-sass'),								// Подгружаем плагин sass
+		postcss      = require('gulp-postcss'),							// Подгружаем плагин postcss 
+		plumber      = require('gulp-plumber'),							// Подгружаем плагин plumber (выполняет с ошибками, не останавливает)
+		mqpacker     = require('css-mqpacker'),							// Подгружаем плагин mqpacker (объединяет медиа-выражения)
 		browserSync  = require('browser-sync'),							// Подгружаем плагин browser-sync
 		concat       = require('gulp-concat'),							// Подгружаем плагин concat
 		concatCss    = require('gulp-concat-css'),					// Подгружаем плагин concat-css
@@ -13,7 +16,9 @@ var gulp         = require('gulp'),											// Подгружаем сам gul
 		imageMin     = require('gulp-imagemin'),						// Подгружаем плагин gulp-imagemin
 		pngquant     = require('imagemin-pngquant'),				// Подгружаем плагин imagemin-pngquant
 		cache        = require('gulp-cache'),								// Подгружаем плагин cache
-		autoprefixer = require('gulp-autoprefixer');				// Подгружаем плагин autoprefixer
+		autoprefixer = require('gulp-autoprefixer'),				// Подгружаем плагин autoprefixer
+		svgmin       = require('gulp-svgmin'),							// Подгружаем плагин svgmin (svg-минификатор)
+		svgstore     = require('gulp-svgstore');						// Подгружаем плагин svgstore (svg-спрайты)
 
 
 // 2. Настойка плагинов:
@@ -23,6 +28,7 @@ var gulp         = require('gulp'),											// Подгружаем сам gul
 
 gulp.task('sass', function() {													// Команда в консоли |gulp sass|
 	return gulp.src('src/sass/style.sass')								// Исходники
+	.pipe(plumber())																			// Работа плагина plumber
 	.pipe(sass())																					// Работа плагина sass
 	.pipe(autoprefixer([																	// Работа плагина autoprefixer 
 		'last 15 versions', 																// последние 15-ать версий браузеров
@@ -31,6 +37,9 @@ gulp.task('sass', function() {													// Команда в консоли |
 		'ie 7' 																							// поддержка IE7
 	], 
 		{ cascade: true }))																	// Формаирование кода
+	.pipe(postcss([
+		mqpacker({sort: true})															// Сортировка медиа-выражений
+	]))
 	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у sass
 	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
 });
@@ -41,7 +50,8 @@ gulp.task('sass', function() {													// Команда в консоли |
 
 gulp.task('less', function() {													// Команда в консоли |gulp less|
 	return gulp.src('src/less/style.less')								// Исходники
-	.pipe(less())																					// Работа плагина
+	.pipe(plumber())																			// Работа плагина plumber
+	.pipe(less())																					// Работа плагина less
 	.pipe(autoprefixer([																	// Работа плагина autoprefixer 
 		'last 15 versions', 																// последние 15-ать версий браузеров
 		'> 1%', 																						// для IE
@@ -49,6 +59,9 @@ gulp.task('less', function() {													// Команда в консоли |
 		'ie 7' 																							// поддержка IE7
 	], 
 		{ cascade: true }))																	// Формаирование кода
+	.pipe(postcss([
+		mqpacker({sort: true})															// Сортировка медиа-выражений
+	]))
 	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у less
 	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
 });
@@ -95,7 +108,7 @@ gulp.task('css-all', ['css-libs'], function() {					// Команда в кон�
 	])
 	.pipe(concatCss('all.min.css'))												// Конкатинируем в готовый файл
 	.pipe(cssnano())																			// Минифицируем
-	.pipe(gulp.dest('src/css/'));													// Директория для готового файла 
+	.pipe(gulp.dest('dist/css/'));													// Директория для готового файла 
 });
 
 
@@ -121,7 +134,7 @@ gulp.task('del', function() {														// Команда в консоли |
 
 
 
-// CLEAR (чистка кэша)
+// CLEAR (чистка кэша) ВРУЧНУЮ
 
 gulp.task('clear', function() {													// Команда в консоли |gulp clear| (пользоваться лучше вручную)
 	return cache.clearAll();
@@ -138,7 +151,21 @@ gulp.task('img', function() {														// Команда в консоли |
 		scgoPlugins: [{removeVievBox: false}],
 		use: [pngquant()]
 	})))
-	.pipe(gulp.dest('src/img_min/'));											// Куда сохранять обработанные
+	.pipe(gulp.dest('src/img-min/'));											// Куда сохранять обработанные
+});
+
+
+
+// SVG-спрайты (символьный svg-спрайт через id)
+
+gulp.task('icons-sprite', function() {														// Команда в консоли |gulp icons-sprite|
+	return gulp.src('src/img/icons/*.svg')													// Все изображения любых форматов
+	.pipe(svgmin())																								// Минифицируем svg
+	.pipe(svgstore({																								// Делаем спрайт
+		inlineSvg: true
+	}))
+	.pipe(gulp.rename('icons-sprite.svg'))																// Переименовываем
+	.pipe(gulp.dest('dist/img/'));																				// Куда сохранять обработанные
 });
 
 
@@ -150,6 +177,10 @@ gulp.task('watch', ['browser-sync', 'less'], function() {					// Команда 
 	gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
 	gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
 });
+
+
+
+// WATCH-SASS (если пользуемся sass) 
 
 gulp.task('watch-sass', ['browser-sync', 'sass'], function() {		// Команда в консоли |gulp watch-sass|, ['browser-sync и sass'] запустится до watch
 	gulp.watch('src/sass/**/*.sass', ['sass']);											// Какие файлы вотчить и какой ['sass'] при этом выполнять
@@ -216,19 +247,24 @@ gulp.task('mytask', function() {												// команда в консоли 
 5. Создаём директории в проекте (src, dist)
 
 6. Устанавливаем плагины: 
-		less         |npm i gulp-less --save-dev|							less2css
-		sass         |npm i gulp-sass --save-dev|							sass2css
-		browser-sync |npm i browser-sync --save-dev|					локальный сервер
-		concat			 |npm i gulp-concat --save-dev| 					конкатинация js-файлов
-		concat-css   |npm i gulp-concat-css --save-dev| 			конкатинация css-файлов
-		uglify			 |npm i gulp-uglifyjs --save-dev|					минификация js-файлов
-		cssnano			 |npm i gulp-cssnano --save-dev|					минификация css-файлов
-		rename			 |npm i gulp-rename --save-dev|						переименование css-файлов
-		imagemin		 |npm i cacheimagemin --save-dev|					сжатие изображений
-		pngquant		 |npm i imagemin-pngquant --save-dev|			сжатие изображений pngquant
-		del					 |npm i del --save-dev|										удаление папок (команда пишется без gulp)
-		cache				 |npm i gulp-cache --save-dev|						кэш
-		autoprefixer |npm i gulp-autoprefixer --save-dev|			autoprefixer
+		less          |npm i gulp-less --save-dev|							less2css
+		sass          |npm i gulp-sass --save-dev|							sass2css
+		plumber       |npm i gulp-plumber --save-dev|					  plumber (если есть ошибки при компиляции css-препроцессора, то компиляция не будет остановлена)
+		postcss       |npm i gulp-postcss --save-dev|					  postcss 
+		browser-sync  |npm i browser-sync --save-dev|					  локальный сервер
+		concat			  |npm i gulp-concat --save-dev| 					  конкатинация js-файлов
+		concat-css    |npm i gulp-concat-css --save-dev| 		 	  конкатинация css-файлов
+		uglify			  |npm i gulp-uglifyjs --save-dev|					минификация js-файлов
+		cssnano			  |npm i gulp-cssnano --save-dev|				  	минификация css-файлов (есть ещё csso)
+		rename			  |npm i gulp-rename --save-dev|						переименование css-файлов
+		imagemin		  |npm i cacheimagemin --save-dev|					сжатие изображений
+		pngquant		  |npm i imagemin-pngquant --save-dev|			сжатие изображений pngquant
+		del					  |npm i del --save-dev|										удаление папок (команда пишется без gulp)
+		cache				  |npm i gulp-cache --save-dev|					   	кэш
+		autoprefixer  |npm i gulp-autoprefixer --save-dev|			autoprefixer
+		css-mqpacker  |npm install css-mqpacker --save-dev|		  mqpacker
+		gulp-svgstore |npm install gulp-svgstore --save-dev|		svg-спрайты
+		gulp-svgmin   |npm install gulp-svgmin --save-dev|			svg-минификатор
 
 7. Создаём файл настроек (gulpfile.js)
 

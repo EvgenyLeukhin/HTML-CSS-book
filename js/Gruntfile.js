@@ -143,6 +143,7 @@ module.exports = function(grunt) {
 		}
 
 
+
 	});
 
 
@@ -161,7 +162,7 @@ module.exports = function(grunt) {
 2.  Устанавливаем Grunt в директорию с проектом:			npm -i grunt grunt-cli -g(или --save-dev);
 3.	Устанавливаем плагины:																						 npm i --save-dev 
 			преобразование less в css																					 grunt-contrib-less
-			минификатор\конкатинатор css																			 grunt-contrib-cssmin
+			минификатор\конкатинатор css																			 grunt-contrib-cssmin (есть ещё css0)
 			вотчинг редактирования																						 grunt-contrib-watch
 			авто-префиксы в css																								 grunt-autoprefixer
 			преобразование sass в css																					 grunt-contrib-sass
@@ -169,7 +170,8 @@ module.exports = function(grunt) {
 			редактировать только измененные файлы (а не все)									 grunt-newer
 			конкатинатор js																										 grunt-contrib-concat
 			минификатор js																										 grunt-contrib-uglify
-
+																																				 grunt-browser-sync
+																																				 grunt-contrib-imagemin
 4.	Создаём в дирктории 																							 Gruntfile.js;
 			
 			grunt-browser-sync — вероятно, самый нужный инструмент
