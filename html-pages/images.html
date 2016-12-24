@@ -106,22 +106,22 @@
         </tr>
         <tr>
           <td>align</td>
-          <td>выравнивание
-            <br>
+          <td>выравнивание</td>
+          <br>
         </tr>
         <tr>
           <td>&lt;picture&gt;</td>
           <td>
-            Представляет собой контейнер для хранения нескольких элементов &lt;source>, которые поддерживают элемент &lt;img&gt;. Это позволяет указывать разные изображения с учётом размера экрана, плотности пикселей, формата изображения и других параметров
+            Представляет собой контейнер для хранения нескольких элементов &lt;source&gt;, которые поддерживают элемент &lt;img&gt;. Это позволяет указывать разные изображения с учётом размера экрана, плотности пикселей, формата изображения и других параметров
           </td>
           <td></td>
-          <td></td>
+          <td>Не стоит стилизовать этот тег, этот тег сугубо для настройки вложенных изображений!</td>
         </tr>
         <tr>
           <td>&lt;source srcset="..."&gt;</td>
           <td>Путь к SVG-файлу</td>
           <td></td>
-          <td></td>
+          <td>Не стоит стилизовать этот тег!!!</td>
         </tr>
         <tr>
           <td>&lt;figure&gt;</td>
@@ -162,7 +162,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="red">src="../pict/shoes.png" alt="img" height="200"</span>&gt;<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">&lt;!--Будет грузиться ../pict/shoes.png, если браузер не поддерживает SVG-формат, <br>
 		&nbsp;&nbsp;&nbsp;&nbsp;height="200" будет работать и для SVG-файла--&gt;</span><br>
-		&lt;/picture&gt;</br>
+		&lt;/picture&gt;<br>
 	</code>
       <br>
       <picture>
@@ -183,7 +183,62 @@
       </figure>
 
 
+      <h2>Адаптивные фоны для ретиновых дисплеев</h2>
+      <p>
+        <span class="gray">// Ретиновые фоны (для блоков задавать фону нужный размер и подгружать изображения больше по ширине в 2-3 раза при ретиновом дисплее<br>
+          Нужно просить у дизайнеров картинки в 2 раза большие по размеру!!!
+         </span>
+        <br>
+        <code>
+&nbsp;&nbsp;<span class="red">.sample</span> { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;width: 200px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;backgroung-repeat: no-repeat;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;backgroung-image: url("<span class="gray">img/<mark>bg200px</mark>.png</span>");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;backgroung-size: 200px auto;<br>
+&nbsp;&nbsp;}  <br>
+&nbsp;&nbsp;<span class="gray">// Если дисплей ретиновый, то:</span><br>
+&nbsp;&nbsp;<span class="red">@media (min-resolution: 1.5dppx) </span> { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">.sample</span> { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backgroung-image: url("<span class="gray">img/<mark>bg400px</mark>.png</span>");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}  <br>   
+&nbsp;&nbsp;}        
+        </code>
+      </p>
+
+
+      <h2>Адаптивные изображения для ретиновых дисплеев</h2>
+      <p>
+        <code>
+        <span class="gray">// Для ретиновых дисплеев будет грузиться файл pict800px.png
+         </span><br>
+&lt;<span class="red">img</span> src="img/pict<mark>400px</mark>.png" width="400" srcset="img/pict<mark>800px</mark>.png <span class="red"><b>2x</b></span>"&gt;<br><br>
+
+<span class="gray">// Можно указывать сразу несколько изображений для двух- и трехслойной ретины</span><br>
+&lt;<span class="red">img</span> src="img/pict<mark>400px</mark>.png" width="400" srcset="img/pict<mark>800px</mark>.png <span class="red"><b>2x</b></span>, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img/pict<mark>1200px</mark>.png <span class="red"><b>3x</b></span>"&gt;<br><br>
+       
+<span class="gray">// Или таким образом (w - ширина физ. пикселей): </span><br>
+&lt;<span class="red">img</span> src="img/pict<mark>400px</mark>.png" width="400" srcset="img/pict<mark>800px</mark>.png <span class="red"><b>800w</b></span>, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img/pict<mark>1200px</mark>.png <span class="red"><b>1200w</b></span>"&gt;
+        </code>
+      </p>
+
+      <h2>Резиновые изображения</h2>
+      <p>
+        <span class="gray">// Картинка будет занимить 100% ширины своего контейнера при уменьшении родителя (будет пропорционально уменьшаться), а при увеличении контейнера останется дефолтное значение ширины. CSS-код можно вставлять для всех картинок, хорошая практика
+         </span>
+        <br>
+        <code>
+&lt;<span class="red">img</span> src="img/pict.png" width="400"&gt; <br>
+<span class="red">img</span> {<br>
+&nbsp;&nbsp;max-width: 100%;<br>
+&nbsp;&nbsp;height: auto;<br>
+}
+
+        </code>
+      </p>
     </div>
+
   </div>
 
   <div class="footer">
