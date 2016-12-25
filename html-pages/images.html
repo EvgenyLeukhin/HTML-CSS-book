@@ -96,7 +96,11 @@
           <td>sizes</td>
           <td>Задаёт размеры изображения для разных макетов страницы
             <br>
-            <span class="red">sizes="(max-width: 600px) 300px, (min-width: 600px) 600px"</span></td>
+            <span class="red">sizes="(max-width: 600px) 300px, (min-width: 600px) 600px"</span><br><br>
+            <span class="gray">// или так: (: это иначе, vw - процент от ширины вьюпорта)</span><br>
+            <span class="red">sizes="(min-width: 600px) 50vw : 100vw"</span>
+            
+          </td>
         </tr>
         <tr>
           <td>srcset</td>
@@ -183,7 +187,7 @@
       </figure>
 
 
-      <h2>Адаптивные фоны для ретиновых дисплеев</h2>
+      <h2>ФОНЫ для ретиновых дисплеев</h2>
       <p>
         <span class="gray">// Ретиновые фоны (для блоков задавать фону нужный размер и подгружать изображения больше по ширине в 2-3 раза при ретиновом дисплее<br>
           Нужно просить у дизайнеров картинки в 2 раза большие по размеру!!!
@@ -206,7 +210,7 @@
       </p>
 
 
-      <h2>Адаптивные изображения для ретиновых дисплеев</h2>
+      <h2>ИЗОБРАЖЕНИЯ для ретиновых дисплеев</h2>
       <p>
         <code>
         <span class="gray">// Для ретиновых дисплеев будет грузиться файл pict800px.png
@@ -234,8 +238,72 @@
 &nbsp;&nbsp;max-width: 100%;<br>
 &nbsp;&nbsp;height: auto;<br>
 }
-
         </code>
+      </p>
+
+      <h2>Адаптивные изображения с помощью тега <u>&lt;picture&gt;</u></h2>
+      <p>
+        <span class="gray">// Будет загружаться изображение относительно ширины вьюпорта
+         </span>
+        <br>
+        <code>
+&lt;picture&gt;<br>
+&nbsp;&nbsp;&lt;sourse <span class="red">media</span>="(min-width: 960px)" <span class="red">srcset</span>="img/<mark>large</mark>.png"&gt;<br>
+&nbsp;&nbsp;&lt;sourse <span class="red">media</span>="(min-width: 640px)" <span class="red">srcset</span>="img/<mark>medium</mark>.png"&gt;<br>
+&nbsp;&nbsp;&lt;<span class="red">img</span> src="img/<mark>small</mark>.png"&gt;<br>
+&lt;/picture&gt;
+        </code>
+      </p>
+      <br>
+      <p>
+        <span class="gray">// Поддержка ретины
+         </span>
+        <br>
+        <code>
+&lt;picture&gt;<br>
+&nbsp;&nbsp;&lt;sourse <span class="red">media</span>="(min-width: 960px)" <span class="red">srcset</span>="img/<mark>large</mark>.png <span class="red"><b>1x</b></span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img/<mark>large</mark>.png <span class="red"><b>2x</b></span>"&gt;<br><br>
+&nbsp;&nbsp;&lt;sourse <span class="red">media</span>="(min-width: 640px)" <span class="red">srcset</span>="img/<mark>medium</mark>.png <span class="red"><b>1x</b></span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img/<mark>large</mark>.png <span class="red"><b>2x</b></span>"&gt;<br><br>
+&nbsp;&nbsp;&lt;<span class="red">img</span> src="img/<mark>small</mark>.png" srcset="img/<mark>small</mark>.png <span class="red"><b>2x</b></span>"&gt;<br>
+&lt;/picture&gt;
+        </code>
+      </p>
+      <br>
+      <p>
+        <span class="gray">// Новые форматы</span>
+        <br>
+        <code>
+&lt;picture&gt;<br>
+&nbsp;&nbsp;&lt;sourse type="<mark>image/webp</mark>" srcset="img/pic.<span class="red"><b>webp</b></span>"&gt;<br>
+&nbsp;&nbsp;&lt;sourse type="<mark>image/vnd.ms-photo</mark>" srcset="img/pic.<span class="red"><b>jpxr</b></span>"&gt;<br>
+&nbsp;&nbsp;&lt;img src="img/pic.<span class="red"><b>jpg</b></span>"&gt;<br>
+&lt;/picture&gt;
+        </code>    
+<br><br>
+<span class="gray">// Примерное отражение всех возможностей (весь код только для одной картинки :)</span><br>    
+<pre>
+&lt;picture&gt;
+  &lt;source type="image/webp"
+          media="(min-width: 960px)"
+          srcset="img/desktop-large.webp 2x,
+                  img/desktop-small.webp 1x"&gt;
+
+  &lt;source media="(min-width: 960px)" 
+          srcset="img/desktop-large.jpg 2x,
+                  img/desktop-small.jpg 1x"&gt;
+             
+  &lt;source type="image/webp" media="(min-width: 640px)"
+                            srcset="img/mobile-large.webp 2x,
+                                    img/mobile-small.webp 1x"&gt;
+  
+  &lt;source media="(min-width: 640px)" 
+          srcset="img/mobile-large.jpg 2x,
+                  img/mobile-small.jpg 1x"&gt;
+                   
+  &lt;img src="img/mobile-small.jpg"&gt;
+&lt;/picture&gt;
+</pre>
       </p>
     </div>
 

@@ -284,6 +284,18 @@
 				<td style=" font-family: Impact; color: black; font-weight: normal;">Some text</td>
 				<td><code>font-<span class="red">family: </span>Impact;</code></td>
 			</tr>
+			<tr>
+				<td>font-variant</td>
+				<td>
+					<b><mark>Все заглавные, но первая буква выше остальных</mark></b>
+				</td>
+				<td style="text-transform: uppercase;">
+				  <span style="font-size: 1.3em;">S</span>OME TEXT
+				</td>
+				<td>
+					<code>font-<span class="red">variant: </span>small-caps;</code>
+				</td>
+			</tr>
 
 			<tr>
 				<td colspan="4">
@@ -767,6 +779,28 @@
 	<a href="http://hellohappy.org/beautiful-web-type/" target="_blank" rel="nofollow">Красивые шрифты</a>
     <p>При вёрстке перестраховываться с надписями путём фиксированной высоты текстовых блоков и line-height</p>
     
+	<p>
+	  <code>
+	    <pre>  
+<span class="gray">/* Текст градиентом */</span>
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+      -ms-background-clip: text;
+       -o-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: -webkit-linear-gradient(to bottom, #f68a12, #ef520c);
+  background-image: -moz-linear-gradient(to bottom, #f68a12, #ef520c);
+  background-image: -ms-linear-gradient(to bottom, #f68a12, #ef520c);
+  background-image: -o-linear-gradient(to bottom, #f68a12, #ef520c);
+  background-image: linear-gradient(to bottom, #f68a12, #ef520c);</pre>
+	  </code>
+	</p>
+	
+	
+	
+	
+	
 	</div>
 </div>
 

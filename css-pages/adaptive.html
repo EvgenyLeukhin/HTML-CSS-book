@@ -116,6 +116,29 @@
         <span class="red">(max-width: 600px)</span> - TABLET;<br>
         <span class="red">(max-width: 350px)</span> - MOBILE;
       </p>
+      
+      <p>Почему пропадает часть бэкграунда при уменьшении экрана?
+Не задана минимальная ширина для резинового блока (1) с фоном.
+Такое возникает, если блок (2), внутри него, больше ширины окна браузера, в этом случае заполняется фоном только видимая часть внешнего блока (1). Т.к. его размер расчитывается от границ окна браузера. <br>
+
+Нужно добавить:
+<code>
+  <pre>.block_1{
+  min-width: 1170px; 
+}</pre>
+</code>
+Значение, естественно, нужно указать ваше.</p>
+ 
+ <h2>Адаптивность с помощью тега &lt;link&gt;</h2>
+ <code>
+ &lt;link href="css/<mark>desktop</mark>.css" rel="stylesheet" media="(<span class="red">min-width:768px</span>)"&gt;<br> 
+   &lt;link href="css/<mark>tablet</mark>.css" rel="stylesheet" media="(<span class="red">min-width:481px</span>) and
+(<span class="red">max-width:767px</span>)"&gt;<br> 
+&lt;link href="css/<mark>mobile</mark>.css" rel="stylesheet" media="(<span class="red">max-width:480px</span>)"&gt;<br>
+
+
+ 
+ </code>
   
     </div>
 

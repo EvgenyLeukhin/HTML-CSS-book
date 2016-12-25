@@ -338,7 +338,9 @@
             <br>
             <span class="gray">Тянется по вертикали:</span>
             <br>
-            <mark>resize: vertical;</mark>
+            <mark>resize: vertical;</mark><br><br>
+            <span class="gray">Убрать растягивание:</span>
+            style="resize: none; border: none;"
           </td>
           <td>
             Кол-во сток
@@ -638,8 +640,29 @@
         <br> Значение RANGE:
         <output name="result" for="range_id">0</output>
       </form>
-
-
+  <br>  
+     <h4>Убирает прозрачность у placeholders</h4>
+      <code><pre>
+<span class="gray">/*placeholder*/</span>
+::-webkit-input-placeholder {
+  color:#fff; 
+  opacity: 1;
+}
+::-moz-placeholder {
+  color:#fff; 
+  opacity: 1;
+}
+<span class="gray">/* Firefox 19+ */</span>
+:-moz-placeholder {
+  color:#fff; 
+  opacity: 1;
+}
+<span class="gray">/* Firefox 18- */</span>
+:-ms-input-placeholder {
+  color:#fff; 
+  opacity: 1;
+}
+      </pre></code>
 
 
 
