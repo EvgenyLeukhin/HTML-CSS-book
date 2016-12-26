@@ -1,13 +1,15 @@
-Mask+++
-CSS-slider+++
-Flexbox+++
-LESS, SASS, Styles - ןנוןנמצוססמנû+++
-Grunt\Gulp - אגעמל. סבמנשטך+++
-Bootstrap - CSS-פנוילגמנך
-jQuery
+Flexbox
+
+Bootstrap
+
+CMS Wordpress
+
+jQuery, Ajax
+
 CoffeeScript - JS-sugar
-PHP\SQL or Pyton
-CMS Wordpress- PHP-פנוילגמנך
+
+React.js
+
 
 
 Cousera on github:
