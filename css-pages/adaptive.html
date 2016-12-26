@@ -108,8 +108,13 @@
       
       <span class="gray">Для срабатывания медиа-запросов на маленьких дисплеей без маштабирования, необходимо вставлять мета-тег <b>viewport</b> в разделе head:</span><br>
       <code>&lt;meta <span class="red"><b>name</b>="viewport" <b>content</b>="width=device-width, initial-scale=1"</span>&gt;</code><br>
-      <code>&lt;meta <span class="red"><b>name</b>="format-detection" <b>content</b>="telephone=no"</span>&gt;</code>
+      <code>&lt;meta <span class="red"><b>name</b>="format-detection" <b>content</b>="telephone=no"</span>&gt;<br>
+      <span class="gray">// Запрет на маштабирование страницы: </span><br>
+        <span class="red"> <b>content</b></span>="minimum-scale=1, maximum-scale=1, user-scalable=0" <br> 
+      </code>
       <br><br>
+
+      
       
       <p style="font-family: Verdana, sans-serif; font-size: 1.5em;">
         <span class="red">(min-width: 1200px)</span> - DESKTOP;<br>
@@ -134,7 +139,7 @@
  &lt;link href="css/<mark>desktop</mark>.css" rel="stylesheet" media="(<span class="red">min-width:768px</span>)"&gt;<br> 
    &lt;link href="css/<mark>tablet</mark>.css" rel="stylesheet" media="(<span class="red">min-width:481px</span>) and
 (<span class="red">max-width:767px</span>)"&gt;<br> 
-&lt;link href="css/<mark>mobile</mark>.css" rel="stylesheet" media="(<span class="red">max-width:480px</span>)"&gt;<br>
+&lt;link href="css/<mark>mobile</mark>.css" rel="stylesheet" media="(<span class="red">max-width:480px</span>)"&gt;<br><br>
 
 
  
