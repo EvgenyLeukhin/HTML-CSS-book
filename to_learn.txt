@@ -12,7 +12,3 @@ React.js
 
 
 
-Cousera on github:
-https://github.com/jhu-ep-coursera/fullstack-course4/tree/master/examples 
-
-
