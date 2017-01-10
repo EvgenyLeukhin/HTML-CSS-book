@@ -168,7 +168,7 @@
         </pre></code>
           </td>
           <td class="col3" style="width: 400px;">
-            Условные комментарии можно в принципе удалить, поддержка IE8 уже почти не испльзуется
+            Условные комментарии можно в принципе удалить, поддержка IE8 уже почти не используется
           </td>
         </tr>
       </table>
@@ -235,28 +235,33 @@
             </p>
             <code>&lt;div class="<span class="red">main-content</span>&nbsp;&nbsp;col-lg-12 ..."&gt;&lt;/div&gt;</code><br><br>
            <pre>
-<code>container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width: размеру breakpoints;</u></b>)</span>
-<code>container-fluid    </code><span class="gray">- ОСНОВНОЙ контейнер резиновый (width: 100%;)</span>
+<code>.container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width: размеру breakpoints;</u></b>)</span>
+<code>.container-fluid    </code><span class="gray">- ОСНОВНОЙ контейнер резиновый (width: 100%;)</span>
 
-<code>row                </code><span class="gray">- СТРОЧНЫЙ подконтейнер, объединяет кол. классы </span>
-<code>row-fluid          </code><span class="gray">- СТРОЧНЫЙ подконтейнер c (padding: 0 15px;)</span>
+<code>.row                </code><span class="gray">- СТРОЧНЫЙ подконтейнер, объединяет кол. классы </span>
+<code>.row-fluid          </code><span class="gray">- СТРОЧНЫЙ подконтейнер c (padding: 0 15px;)</span>
 
-<code>col                </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер</span>
-<code>col-lg-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для lg</span>
-<code>col-md-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для md</span>
-<code>col-sm-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для sm</span>
-<code>col-xs-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для xs</span>
+<code>.col                </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер</span>
+<code>.col-lg-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для lg</span>
+<code>.col-md-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для md</span>
+<code>.col-sm-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для sm</span>
+<code>.col-xs-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для xs</span>
 
-<code>col-lg-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для lg (доп. класс)</span>
-<code>col-md-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для md (доп. класс)</span>
-<code>col-sm-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для sm (доп. класс)</span>
-<code>col-xs-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для xs (доп. класс)</span>
+<code>.col-lg-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для lg (доп. класс)</span>
+<code>.col-md-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для md (доп. класс)</span>
+<code>.col-sm-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для sm (доп. класс)</span>
+<code>.col-xs-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для xs (доп. класс)</span>
 
-<code>col-md-push-*      </code><span class="gray">- Толкать вправо на *-колонок для md (доп. класс)</span>
-<code>col-md-pull-*      </code><span class="gray">- Толкать влево на *-колонок для md (доп. класс)</span>
+<code>.col-md-push-*      </code><span class="gray">- Толкать вправо на *-колонок для md (доп. класс)</span>
+<code>.col-md-pull-*      </code><span class="gray">- Толкать влево на *-колонок для md (доп. класс)</span>
 
-<code>visible-xs         </code><span class="gray">- Будет отображаться при xs</span>
-<code>hidden-xs          </code><span class="gray">- Будет скрыт при xs</span></pre>
+<code>.visible-xs         </code><span class="gray">- Будет отображаться при xs</span>
+<code>.hidden-xs          </code><span class="gray">- Будет скрыт при xs</span>
+
+<code>.pull-left          </code><span class="gray">- float: left;</span>
+<code>.pull-right         </code><span class="gray">- float: right;</span>
+<code>.clearfix           </code><span class="gray">- распорка для контейнера</span>
+<code>.center-block       </code><span class="gray">- margin: 0 auto;</span></pre>
           </td>
           <td class="col3" style="width: 400px;"></td>
         </tr>
@@ -344,21 +349,6 @@
             <br>
           </td>
         </tr>
-        <tr>
-          <td class="col1">Классы </td>
-          <td class="col2">
-           <span class="red">header>nav.navbar.navbar-default>div.container</span> <br><br>
-            <ul>
-              <li><mark>navbar</mark> - <span class="gray">основной класс для навигации</span></li>
-              <li><mark>navbar-default</mark> - <span class="gray">подкласс (серый цвет)</span></li>
-              <li><mark>navbar-inverse</mark> - <span class="gray">подкласс (чёрный цвет)</span></li>
-              <li><mark>container</mark> - <span class="gray">контейнер для содержимого</span></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </td>
-          <td class="col3"></td>
-        </tr>
       </table>
 
       <h2>Пример навигации</h2>
@@ -404,13 +394,92 @@
       
       <table class="css3-table">
         <tr>
-          <th class="css3-table-title" colspan="3">3. Текст</th>
+          <th class="css3-table-title" colspan="3">4. Текст</th>
+        </tr>
+        <tr>
+          <td class="col1"><b>Текст</b></td>
+          <td class="col2" style="width: 800px;">
+            <pre><code>.lead               </code><span class="gray">- увеличение размера шрифта</span>
+            
+<code>.text-left          </code><span class="gray">- выравнивание текста слева</span> 
+<code>.text-center        </code><span class="gray">- выравнивание текста по центру</span> 
+<code>.text-right         </code><span class="gray">- выравнивание текста справа</span> 
+<code>.text-justify       </code><span class="gray">- выравнивание текста по ширине</span> 
+<code>.text-nowrap        </code><span class="gray">- без переноса на новую строку</span> 
+
+<code>.text-lowercase     </code><span class="gray">- все строчные</span> 
+<code>.text-uppercase     </code><span class="gray">- все заглавные</span> 
+<code>.text-capitalize    </code><span class="gray">- все первые буквы заглавные</span> 
+
+<code>.list-unstyled      </code><span class="gray">- список без маркером 1-го уровня (для тегов &lt;ul&gt;)</span> 
+<code>.list-inline        </code><span class="gray">- список строкой (для тегов &lt;ul&gt;)</span> 
+
+<code>.text-muted         </code><span class="text-muted">- текст приглушённый</span> 
+<code>.text-primary       </code><span class="text-primary">- текст основной</span> 
+<code>.text-success       </code><span class="text-success">- текст (успех)</span> 
+<code>.text-info          </code><span class="text-info">- текст (информация)</span> 
+<code>.text-warning       </code><span class="text-warning">- текст (предупреждение)</span> 
+<code>.text-danger        </code><span class="text-danger">- текст (опасность)</span> 
+ 
+<code>.bg-primary         - </code><span class="bg-primary">фон основной</span> 
+<code>.bg-success         - </code><span class="bg-success">фон (успех)</span> 
+<code>.bg-info            - </code><span class="bg-info">фон (информация)</span> 
+<code>.bg-warning         - </code><span class="bg-warning">фон (предупреждение)</span> 
+<code>.bg-danger          - </code><span class="bg-danger">фон (опасность)</span> 
+           </pre>
+          </td>
+          <td class="col3" style="width: 400px;"></td>
         </tr>
       </table>
-      
+      <br>
       <table class="css3-table">
         <tr>
-          <th class="css3-table-title" colspan="3">4. Таблицы</th>
+          <th class="css3-table-title" colspan="3">5. Таблицы</th>
+        </tr>
+        <tr>
+          <td class="col1"><b>Таблицы</b></td>
+          <td class="col2" style="width: 800px;">
+            <pre><span class="red">/* классы для &lt;table&gt; */</span>
+<code>.table               </code><span class="gray">- таблица</span>
+<code>.table-striped       </code><span class="gray">- таблица с "полосатыми" строками</span>
+<code>.table-bordered      </code><span class="gray">- таблица с границами</span>
+<code>.table-hover         </code><span class="gray">- таблица с выделением строк при наведении</span>
+<code>.table-responsive    </code><span class="gray">- таблица будет скролиться по горизонтали</span>
+
+<span class="red">/* классы для &lt;tr&gt;, &lt;td&gt; и &lt;th&gt; */</span>
+<code>.active              </code><span class="gray">- выделяем цветом ячейку или строку</span>          
+<code>.success             </code><span class="gray">- выделяем цветом ячейку или строку</span>          
+<code>.info                </code><span class="gray">- выделяем цветом ячейку или строку</span>          
+<code>.warning             </code><span class="gray">- выделяем цветом ячейку или строку</span>          
+<code>.danger              </code><span class="gray">- выделяем цветом ячейку или строку</span></pre>
+          </td>
+          <td class="col3" style="width: 400px;"></td>
+        </tr>
+      </table>
+      <br>
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">6. Иконки</th>
+        </tr>
+        <tr>
+          <td class="col1">
+            <b>Иконки</b><br>
+            В папке /fonts должен лежать шрифт "Glyphicon"
+          </td>
+          <td class="col2" style="width: 800px;">
+            &lt;span class="<span class="red">glyphicon glyphicon-star</span>"&gt;&lt;/span&gt;<br>
+            &lt;span class="<span class="red">glyphicon glyphicon-heart</span>"&gt;&lt;/span&gt;<br>
+            &lt;span class="<span class="red">glyphicon glyphicon-asterisk</span>"&gt;&lt;/span&gt;<br>
+            &lt;span class="<span class="red">glyphicon glyphicon-fire</span>"&gt;&lt;/span&gt;<br>
+            &lt;span class="<span class="red">glyphicon glyphicon-hourglass</span>"&gt;&lt;/span&gt;<br>
+          </td>
+          <td class="col3" style="width: 400px;">
+            <span class="glyphicon glyphicon-star" style="font-size: 3em;"></span> 	
+            <span class="glyphicon glyphicon-heart" style="font-size: 3em;"></span> 	
+            <span class="glyphicon glyphicon-asterisk" style="font-size: 3em;"></span> 	
+            <span class="glyphicon glyphicon-fire" style="font-size: 3em;"></span> 	
+            <span class="glyphicon glyphicon-hourglass" style="font-size: 3em;"></span> 	
+          </td>
         </tr>
       </table>
 
