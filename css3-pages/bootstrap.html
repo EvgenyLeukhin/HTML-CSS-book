@@ -17,6 +17,15 @@
   <![endif]-->
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+  <style>
+    .vert-menu .sub-menu3, 
+    .vert-menu .sub-menu4, 
+    .vert-menu .sub-menu5, 
+    .vert-menu .sub-menu8,
+    .vert-menu .sub-menu-less {
+      left: 125px;
+    }
+  </style>
 </head>
 
 <body>
@@ -95,8 +104,9 @@
     <div class="content clearfix">
 
       <h2>Мой Справочник |  CSS3 | Bootstrap</h2> Ссылки:
-      <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>&nbsp;&nbsp;
-      <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>
+      <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>&nbsp;|&nbsp;
+      <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>&nbsp;|&nbsp;
+      <a href="https://startbootstrap.com/" target="_blank">Bootstrap-темы</a>
 
       <table class="css3-table">
         <tr>
@@ -135,6 +145,26 @@
     <mark>&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;</mark>
   &lt;/body&gt;
 &lt;/html&gt;
+<hr>
+<span class="gray" style="font-size: 1.5em;">/* Стилизация адаптивности */ </span>
+             
+<span class="gray">/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */</span>
+
+<span class="gray">/* Small devices (tablets, 768px and up) */</span>
+<span class="red">@media (min-width: @screen-sm-min) { ... }</span>
+
+<span class="gray">/* Medium devices (desktops, 992px and up) */</span>
+<span class="red">@media (min-width: @screen-md-min) { ... }</span>
+
+<span class="gray">/* Large devices (large desktops, 1200px and up) */</span>
+<span class="red">@media (min-width: @screen-lg-min) { ... }</span>
+             
+<span class="gray">/* или так: */</span>       
+<span class="red">@media (max-width: @screen-xs-max) { ... }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... }</span>
         </pre></code>
           </td>
           <td class="col3" style="width: 400px;">
@@ -162,23 +192,73 @@
           &nbsp;&nbsp;&lt;/div&gt;<br>
           &lt;/div&gt;
         </code>
-            <br>
-            <span style="color: #000">Внутри колонок могут быть еще вложенные дивы с классом <b>row</b></span>
-            <br>
-            <span style="color: #000">Классы <b>container\container-fluid</b> имеют <code>padding: 15px;</code> по умолчанию</span>
+
           </td>
           <td class="col3" style="width: 400px;">
             <i><u>В Bootstrap 12-колоночный тип сеток</u></i>
             <br>
-            <span class="red">.container</span> - Общий контейнер
-            <br>
-            <span class="red">.container-fluid</span> - Общий контейнер (Резиновый, 100%)
-            <br>
-            <span class="red">.row</span> - Подконтейнер-строка
-            <br>
-            <span class="red">.col</span> - Подконтейнер-колонка
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="col1" style="width: 120px;">
+            <b>ВЛОЖЕННОСТЬ</b>
+          </td>
+          <td class="col2" style="width: 800px;">
+           <span class="text-info">Можно вкладывать <span class="red">.row</span> внутрь <span class="red">.row</span></span>
+           <code><pre>
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-..."&gt;&lt;/div&gt;
+    &lt;div class="col-..."&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-..."&gt;&lt;/div&gt;
+        &lt;div class="col-..."&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </code>
+          </td>
+          <td class="col3" style="width: 400px;">
+            <i><u>Вложенные .row также будут иметь 12-колоночный тип сеток</u></i>
             <br>
           </td>
+        </tr>
+        <tr>
+          <td class="col1" style="width: 120px;"><b>КЛАССЫ</b></td>
+          <td class="col2" style="width: 800px;">
+            <h4><b>КАК РАБОТАТЬ С КЛАССАМИ:</b></h4>
+            <p class="text-info">
+              В html-коде присваиваем класс сеток (<i>.col-lg, .col-md и т.д.</i>), а потом добавляем кастомный класс для стилизации (<i>.page-header, .content-box и т.д.</i>) и стилизуем этот класс. <br><br>
+              <mark>Не трогаем классы бутстрапа и не изменяем <i>bootstrap.css</i> !</mark><br><br>
+            </p>
+            <code>&lt;div class="<span class="red">main-content</span>&nbsp;&nbsp;col-lg-12 ..."&gt;&lt;/div&gt;</code><br><br>
+           <pre>
+<code>container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width: размеру breakpoints;</u></b>)</span>
+<code>container-fluid    </code><span class="gray">- ОСНОВНОЙ контейнер резиновый (width: 100%;)</span>
+
+<code>row                </code><span class="gray">- СТРОЧНЫЙ подконтейнер, объединяет кол. классы </span>
+<code>row-fluid          </code><span class="gray">- СТРОЧНЫЙ подконтейнер c (padding: 0 15px;)</span>
+
+<code>col                </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер</span>
+<code>col-lg-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для lg</span>
+<code>col-md-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для md</span>
+<code>col-sm-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для sm</span>
+<code>col-xs-*           </code><span class="gray">- КОЛОНОЧНЫЙ под-контейнер *-колонок для xs</span>
+
+<code>col-lg-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для lg (доп. класс)</span>
+<code>col-md-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для md (доп. класс)</span>
+<code>col-sm-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для sm (доп. класс)</span>
+<code>col-xs-offset-*    </code><span class="gray">- Отступ от контейнера вправо на *-колонок для xs (доп. класс)</span>
+
+<code>col-md-push-*      </code><span class="gray">- Толкать вправо на *-колонок для md (доп. класс)</span>
+<code>col-md-pull-*      </code><span class="gray">- Толкать влево на *-колонок для md (доп. класс)</span>
+
+<code>visible-xs         </code><span class="gray">- Будет отображаться при xs</span>
+<code>hidden-xs          </code><span class="gray">- Будет скрыт при xs</span></pre>
+          </td>
+          <td class="col3" style="width: 400px;"></td>
         </tr>
       </table>
       <h2>Значения ширины по умолчанию</h2>
@@ -187,33 +267,7 @@
       <br>
       <table class="css3-table">
         <tr>
-          <th class="css3-table-title" colspan="3">3. Классы колонок</th>
-        </tr>
-        <tr>
-          <td class="col1">
-            <b>Виды классов</b>
-          </td>
-          <td class="col2" style="width: 800px;">
-            <code>
-&lt;div class="<span class="red">col-lg-6 <mark>col-lg-offset-2</mark></span>"&gt;<br>
-&lt;div class="<span class="red">col-lg-4 <mark>hidden-sm</mark></span>"&gt;<br>
-&lt;div class="<span class="red">col-md-4 hidden-sm <mark>visible-lg</mark></span>"&gt;
-        </code>
-          </td>
-          <td class="col3" style="width: 400px;">
-            <span class="red">col-lg-offset-2</span> - Отступ на 2 колонки от левого края при данной ширине дисплея, по ум* 0
-            <br>
-            <span class="red">hidden-sm</span> - Колонка станет невидимой при данной ширине дисплея
-            <br>
-            <span class="red">visible-lg</span> - Колонка станет видимой при данной ширине дисплея
-          </td>
-        </tr>
-      </table>
-      <br>
-
-      <table class="css3-table">
-        <tr>
-          <th class="css3-table-title" colspan="3">4. Навигация</th>
+          <th class="css3-table-title" colspan="3">3. Навигация</th>
         </tr>
         <tr>
           <td class="col1">
@@ -290,6 +344,21 @@
             <br>
           </td>
         </tr>
+        <tr>
+          <td class="col1">Классы </td>
+          <td class="col2">
+           <span class="red">header>nav.navbar.navbar-default>div.container</span> <br><br>
+            <ul>
+              <li><mark>navbar</mark> - <span class="gray">основной класс для навигации</span></li>
+              <li><mark>navbar-default</mark> - <span class="gray">подкласс (серый цвет)</span></li>
+              <li><mark>navbar-inverse</mark> - <span class="gray">подкласс (чёрный цвет)</span></li>
+              <li><mark>container</mark> - <span class="gray">контейнер для содержимого</span></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </td>
+          <td class="col3"></td>
+        </tr>
       </table>
 
       <h2>Пример навигации</h2>
@@ -332,7 +401,18 @@
           </div>
         </div>
       </div>
-
+      
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">3. Текст</th>
+        </tr>
+      </table>
+      
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">4. Таблицы</th>
+        </tr>
+      </table>
 
 
     </div>
