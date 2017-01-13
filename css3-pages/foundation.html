@@ -2,9 +2,12 @@
 <html lang="ru">
 
 <head> 
-    <title>Мой Справочник | CSS3 | LESS\SASS</title>
+    <title>Мой Справочник | CSS3 | Foundation</title>
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
 </head>
@@ -19,7 +22,7 @@
 		<li><a href="../design-page.html">WEB-DESIGN</a></li>
 		<li><a href="../html-page.html">HTML</a></li>
 		<li><a href="../css-page.html">CSS</a></li>
-        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+    <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		
 		
@@ -54,12 +57,12 @@
                 <li><a href="../css3-pages/centered.html">Центровка</a></li>
                 <li><a href="../css3-pages/mask.html">Маска</a></li>
                 <li>
-                <a href="#">Слайдер</a>
-				<ul class="sub-menu sub-menu3">
-				    <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
-				    <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
-				</ul>
-		    </li>
+                    <a href="#">Слайдер</a>
+				    <ul class="sub-menu sub-menu3">
+				        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				    </ul>
+		        </li>
                 <li>
                     <a href="../css3-pages/flex.html">Флекс</a>
                     <ul class="sub-menu sub-menu8">
@@ -71,7 +74,7 @@
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
                 <li><a href="../css3-pages/css3-adaptive.html">Резиновая вёрстка</a></li>
                 <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
-                <li><a href="../css3-pages/foundation.html">Foundation</a></li>
+                <li><a class="active" href="../css3-pages/foundation.html">Foundation</a></li>
                 <li>
                   <a href="#">LESS\SASS</a>
                   <ul class="sub-menu sub-menu-less">
@@ -84,100 +87,14 @@
                 </li>
                 <li><a href="../css3-pages/grunt.html">Grunt</a></li>
                 <li><a href="../css3-pages/gulp.html">Gulp</a></li>
-            </ul>
+              </ul>
 	
 	</div>
 	<div class="content clearfix">
 	
-	<h2>Мой Справочник |  CSS3 | LESS\SASS</h2>
+	<h2>Мой Справочник |  CSS3 | Foundation</h2>
 	
-	<table class="css3-table">
-
-    <tr>
-      <td class="col1" style="width: 200px;">
-        <a href="https://wearekiss.com/simpless" title="SimpLESS">SimpLESS</a>
-      </td>
-      <td class="col2">
-      </td>
-      <td class="col3" style="width: 400px;">
-        Приложение под Windows. Не требует консольных команд, всё очень просто и понятно
-      </td>
-    </tr>
-     
-    <tr>
-      <th class="css3-table-title" colspan="3">Подключение файлов</th>
-    </tr>
-    <tr>
-      <td class="col1" style="width: 200px;">
-        Подключение(импорт) файлов<br><br>
-        <span style="color: #000">У LESS и SASS одинаково (<b>@</b>)</span>
-      </td>
-      <td class="col2">
-        
-        <code><pre>
-<b>@import</b> "vars";<span class="gray">   // файл с переменными</span>
-<b>@import</b> "mixins";<span class="gray"> // файл с примесями</span>
-
-<span class="gray"> // и далее можно уже писать less-код</span>
-
-<span class="red">.content-box</span> {
-  .width(100px, 50px);
-  color: @base-color;
-  ...       
-}
-        </pre></code>
-      </td>
-      <td class="col3" style="width: 400px;">
-<h4>Расширения файлов:</h4>
-У <b>LESS</b> файлы <b><mark>.less</mark></b><br>
-У <b>SASS</b> файлы <b><mark>.scss</mark></b>
-      </td>
-    </tr>
-    <tr>
-      <th class="css3-table-title" colspan="3">Расширения (лучше не использовать)</th>
-    </tr>
-    <tr>
-      <td class="col1" style="width: 200px;">
-        <b>Расширения</b>
-      </td>
-      <td class="col2">
-        <code><pre>
-<span class="red">.some-class</span> {
-  clear: left
-  float: left;       
-}
-<span class="red">.content-box</span> {
-  color: @base-color;
-  <b>&:extend</b>(.some-class);
-  border: 1px solid red;       
-}<hr><span class="gray"> // Результат:</span>
-<span class="red">.some-class</span>, 
-<span class="red">.content-box</span>, {
-  clear: left
-  float: left;       
-}      
-<span class="red">.content-box</span> {
-  color: #000;
-  border: 1px solid red;       
-}</pre></code>
-      </td>
-      <td class="col3" style="width: 400px;">
-        Стили не дублируются, а наоборот редактируемый селектор добавляется через "," к расширяемому,<br>
-        но лучше особо их <u>НЕ ИСПОЛЬЗОВАТЬ</u>
-      </td>
-    </tr>
-    
-  </table>
-  <br>
-	<img src="../pict/pre-prec-css.png" alt="pre-prec-css code organization" width="787" height="597">
 	
-	<h3>Установка SASS:</h3>
-	<ol>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	</ol>
 	
 	
 	
@@ -195,7 +112,10 @@
 
 
 
-
+  <script src="../js/vendor/jquery.js"></script>
+  <script src="../js/vendor/what-input.js"></script>
+  <script src="../js/vendor/foundation.js"></script>
+  <script src="../js/app.js"></script>
 
 </body>
 </html>

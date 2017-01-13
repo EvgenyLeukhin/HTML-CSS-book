@@ -87,6 +87,7 @@
         <li><a href="../css3-pages/bem.html">БЭМ</a></li>
         <li><a href="../css3-pages/css3-adaptive.html">Резиновая вёрстка</a></li>
         <li><a class="active" href="../css3-pages/bootstrap.html">Bootstrap</a></li>
+        <li><a href="../css3-pages/foundation.html">Foundation</a></li>
         <li>
           <a href="#">LESS\SASS</a>
           <ul class="sub-menu sub-menu-less">
@@ -103,7 +104,7 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник |  CSS3 | Bootstrap</h2> Ссылки:
+      <h2>Мой Справочник |  CSS3 | Bootstrap</h2> Документация:
       <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>&nbsp;|&nbsp;
       <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>&nbsp;|&nbsp;
       <a href="https://startbootstrap.com/" target="_blank">Bootstrap-темы</a>
@@ -391,8 +392,20 @@
     &lt;li&gt;&lt;a href="#"&gt;Link7&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
   
-&lt;/div&gt;<hr>Классы:
-            </pre></code>
+&lt;/div&gt;<hr><code>.collapse            </code><span class="gray">- для контейнера списка ссылок</span>   
+<code>.navbar-collapse     </code><span class="gray">- для контейнера списка ссылок</span>   
+
+<code>.nav                 </code><span class="gray">- для списка ссылок</span>   
+<code>.navbar-nav          </code><span class="gray">- для списка ссылок</span> 
+<code>.navbar-right        </code><span class="gray">- для списка ссылок справа</span> 
+  
+<code>.active              </code><span class="gray">- активная ссылка</span> 
+  
+<code>.dropdown            </code><span class="gray">- элемент списка, с вып. под-меню</span>   
+<code>.dropdown-toggle     </code><span class="gray">- для ссылки внутри &lt;li&gt; с вып. под-меню</span>   
+<code>.caret               </code><span class="gray">- иконка вып. под-меню</span>   
+<code>.dropdown-menu       </code><span class="gray">- список вып. под-меню</span>   
+<code>.divider             </code><span class="gray">- разделитель</span></pre></code>
           </td>
           <td class="col3" style="width: 400px;">
 
@@ -509,7 +522,7 @@
           <td class="col1"><b>Таблицы</b></td>
           <td class="col2" style="width: 800px;">
             <pre>
-.container-fluid>.row>.col-lg-8>table.table.table-bordered.table-striped>caption+tr>th*3^tr*3>td*3
+.container-fluid&gt;.row&gt;.col-lg-8&gt;table.table.table-bordered.table-striped&gt;caption+tr&gt;th*3^tr*3&gt;td*3
 <span class="red">/* классы для &lt;table&gt; */</span>
 <code>.table               </code><span class="gray">- таблица</span>
 <code>.table-striped       </code><span class="gray">- таблица с "полосатыми" строками</span>
@@ -583,14 +596,20 @@
             <b>Изображения</b><br>
           </td>
           <td class="col2" style="width: 800px;">
+&lt;img class="<span class="red">img-responsive</span>" src="..." alt="..."&gt;
+          <pre><code>.img-circle         </code><span class="gray">- круглое изображение</span>
+<code>.img-rounded        </code><span class="gray">- круглые края</span>
+<code>.img-thumbnail      </code><span class="gray">- в рамке</span>
 
+<code>.img-responsive     </code><span class="gray">- адаптивное</span>
+</pre>
           </td>
           <td class="col3" style="width: 400px;">
-
+            <img class="img-responsive img-thumbnail img-rounded img-circle"  src="http://on-desktop.com/wps/Sport_Snowboarding_027714_.jpg" alt="image" width="500">
           </td>
         </tr>
       </table>
-
+  
 
     </div>
   </div>
