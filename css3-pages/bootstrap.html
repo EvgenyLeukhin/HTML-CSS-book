@@ -230,8 +230,8 @@
           <td class="col2" style="width: 800px;">
             <h4><b>КАК РАБОТАТЬ С КЛАССАМИ:</b></h4>
             <p class="text-info">
-              В html-коде присваиваем класс сеток (<i>.col-lg, .col-md и т.д.</i>), а потом добавляем кастомный класс для стилизации (<i>.page-header, .content-box и т.д.</i>) и стилизуем этот класс. <br><br>
-              <mark>Не трогаем классы бутстрапа и не изменяем <i>bootstrap.css</i> !</mark><br><br>
+              В html-коде присваиваем класс сеток (<i>.col-lg, .col-md и т.д.</i>), а потом добавляем кастомный класс для стилизации (<i>.page-header, .content-box и т.д.</i>) и стилизуем этот класс, либо, не добавляя кастомный класс, редактируем класс бутстрапа, но только в <i>style.css</i> <br><br>
+              <mark>Не трогаем классы бутстрапа в <i>bootstrap.css</i> !</mark><br><br>
             </p>
             <code>&lt;div class="<span class="red">main-content</span>&nbsp;&nbsp;col-lg-12 ..."&gt;&lt;/div&gt;</code><br><br>
            <pre>
@@ -276,122 +276,191 @@
         </tr>
         <tr>
           <td class="col1">
-            <b>Меню</b>
+            <b>Основные классы навбара</b><br><br>
+            
+            <span class="red">.navbar</span>
           </td>
           <td class="col2" style="width: 800px;">
-            <code><pre>
-<span class="gray">&lt;!--КОНТЕЙНЕРЫ--&gt;</span>
-&lt;div class="<span class="red">container-fluid</span>"&gt;
-  &lt;div class="<span class="red">row</span>"&gt;
-    <span class="gray">&lt;!--БЛОК НАВИГАЦИИ (inverse или default)--&gt;</span>
-    &lt;div class="<span class="red"><mark>navbar navbar-inverse</mark></span>"&gt;
-      <span class="gray">&lt;!--КОНТЕЙНЕР--&gt;</span>
-      &lt;div class="<span class="red">container</span>"&gt;
-        <span class="gray">&lt;!--ЗАГОЛОВОК НАВИГАЦИИ--&gt;</span>
-        &lt;div class="<span class="red">navbar-header</span>"&gt;
-          <span class="gray">&lt;!--ССЫЛКА НА КОМПАНИЮ--&gt;</span>
-          &lt;a href="#" class="<span class="red">navbar-brand</span>"&gt;Компания&lt;/a&gt;
-          <span class="gray">&lt;!--КНОПКА ВЫП. МЕНЮ--&gt;</span>
-          &lt;button 
-            class="<span class="red">navbar-toggle</span>"
-            type="button" 
-            data-toggle="<span class="red"><mark>collapse</mark></span>"
-            data-target="<span class="red"><mark>#responsive-menu</mark></span>"
-          &gt;
-            &lt;span class="<span class="red">sr-only</span>"&gt;Открыть навигацию&lt;/span&gt;
-            &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
-            &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
-            &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/div&gt;
-        <span class="gray">&lt;!--ПУНКТЫ МЕНЮ--&gt;</span>
-        &lt;div class="<span class="red"><mark>collapse</mark> navbar-collapse</span>" id="<span class="red"><mark>responsive-menu</mark></span>"&gt;
-          &lt;ul class="<span class="red">nav navbar-nav</span>"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;<span class="gray">Пункт1</span>&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;<span class="gray">Пункт2</span>&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;<span class="gray">Пункт3</span>&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;<span class="gray">Пункт4</span>&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;<span class="gray">Пункт5</span>&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;<span class="gray">Пункт6</span>&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="#"&gt;<span class="gray">Пункт7</span>
-                &lt;b class="<span class="red">caret</span>"&gt;&lt;/b&gt;
-              &lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
+            <code><pre>&lt;header&gt;
+  &lt;nav class="<span class="red">navbar navbar-default</span>"&gt;
+    &lt;div class="container"&gt;
+     
+      &lt;div class="<span class="red">navbar-header</span>"&gt;
+        ...
       &lt;/div&gt;
+      
+      &lt;div class="<span class="red">collapse navbar-collapse</span>" id="<mark>bs-example-navbar-collapse-1</mark>"&gt;
+        ...
+      &lt;/div&gt;
+      
     &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-        </pre></code>
+  &lt;/nav&gt;
+&lt;/header&gt;<hr><code>.navbar              </code><span class="gray">- НАВБАР </span>
+<code>.navbar-default      </code><span class="gray">- Основной навбар</span>
+<code>.navbar-inverse      </code><span class="gray">- Чёрный цвет (подкласс)</span>
+<code>.navbar-fixed-top    </code><span class="gray">- Фиксированный сверху (подкласс)</span>
+<code>.navbar-fixed-bottom </code><span class="gray">- Фиксированный снизу (подкласс)</span>
+<code>.navbar-static-top   </code><span class="gray">- Статичный сверху (подкласс)</span>
+
+<code>.pull-left           </code><span class="gray">- Сдвинуть влево</span>
+<code>.pull-right          </code><span class="gray">- Сдвинуть вправо</span>
+            </pre></code>
           </td>
           <td class="col3" style="width: 400px;">
-            <span class="red">navbar</span> - Блок навигации
-            <br>
-            <span class="red">navbar-default</span> - Блок навигации по ум* (серая)
-            <br>
-            <span class="red">navbar-inverse</span> - Блок навигации по ум* (чёрная)
-            <br>
-            <span class="red">navbar-header</span> - Блок заголовка навинации
-            <br>
-            <span class="red">navbar-collapse</span> - Блок меню
-            <br>
-            <span class="red">navbar-fixed-top</span> - Блок меню зафикс. и растянутый
-            <br>
-            <span class="red">navbar-fixed-bottom</span> - Блок меню зафикс. и растянутый снизу
-            <br>
-            <span class="red">navbar-static-top</span> - Блок меню зафикс. и растянутый снизу
-            <br>
-            <span class="red">navbar-static-bottom</span> - Блок меню зафикс. и растянутый снизу
-            <br>
-            <span class="red">caret</span> - Выпадающее подменю
-            <br>
+
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            <b>Логотип и гамбургер</b><br><br>
+            <span class="red">.navbar-header</span>
+          </td>
+          <td class="col2" style="width: 800px;">
+            <code><pre>&lt;div class="<span class="red">navbar-header</span>"&gt;
+  <span class="text-success">&lt;!--ГАМБУРГЕР--&gt;</span>          
+  &lt;button type="button" class="<span class="red">navbar-toggle collapsed</span>" 
+  data-toggle="collapse" data-target="<mark>#bs-example-navbar-collapse-1</mark>" aria-expanded="false"&gt;
+    &lt;span class="<span class="red">sr-only</span>"&gt;Toggle navigation&lt;/span&gt;
+    &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
+    &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
+    &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+	
+  <span class="text-success">&lt;!--ЛОГОТИП--&gt;</span>  
+  &lt;a class="<span class="red">navbar-brand</span>" href="<span class="text-success">index.html</span>"&gt;
+    &lt;img src="<span class="text-success">http://Some-logo.png</span>" alt="logo" width="100" height="100"&gt;
+  &lt;/a&gt;
+&lt;/div&gt;<hr><code>.navbar-header       </code><span class="gray">- Контейнер для лого и гамбургера </span>
+
+<code>.navbar-toggle       </code><span class="gray">- Гамбургер (для тега &lt;butoon&gt;)</span>
+<code>.collapsed           </code><span class="gray">- ???</span>
+<code>.sr-only             </code><span class="gray">- ???</span>
+<code>.icon-bar            </code><span class="gray">- Полоска для гамбургера</span>
+
+<code>.navbar-brand        </code><span class="gray">- Логотип</span>
+
+            </pre></code>
+          </td>
+          <td class="col3" style="width: 400px;">
+#id должен совпадать у <span class="red">button</span> и <span class="red">.navbar-collapse</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            <b>Ссылки и вып. под-меню</b><br><br>
+            <span class="red">.navbar-header</span>
+          </td>
+          <td class="col2" style="width: 800px;">
+            <code><pre>&lt;div class="<span class="red">collapse navbar-collapse</span>" id="<mark>bs-example-navbar-collapse-1</mark>"&gt;
+            
+  <span class="gray">&lt;!-- Ссылки меню СЛЕВА--&gt;</span>
+  &lt;ul class="<span class="red">nav navbar-nav</span>"&gt;
+    <span class="gray">&lt;!-- Активная ссылка --&gt;</span>
+    &lt;li class="<span class="red">active</span>"&gt;
+      &lt;a href="#"&gt;Link1 
+        &lt;span class="sr-only"&gt;(current)&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    <span class="gray">&lt;!-- Остальные ссылки --&gt;</span>
+    &lt;li&gt;&lt;a href="#"&gt;Link2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link3&lt;/a&gt;&lt;/li&gt;
+    
+    <span class="gray">&lt;!-- Выпадающая ссылка --&gt;</span>
+    &lt;li class="<span class="red">dropdown</span>"&gt;
+      &lt;a href="#" class="<span class="red">dropdown-toggle</span>" 
+      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Link4 
+        &lt;span class="<span class="red">caret</span>"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      <span class="gray">&lt;!-- Выпадающее меню этой ссылки--&gt;</span>
+      &lt;ul class="<span class="red">dropdown-menu</span>"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link4-1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link4-2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link4-3&lt;/a&gt;&lt;/li&gt;
+        &lt;li role="<span class="red">separator</span>" class="<span class="red">divider</span>"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link4-4&lt;/a&gt;&lt;/li&gt;
+        &lt;li role="<span class="red">separator</span>" class="<span class="red">divider</span>"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link4-5&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  
+<span class="gray">&lt;!-- Ссылки меню СПРАВА или ИКОНКИ--&gt;</span>
+  &lt;ul class="<span class="red">nav navbar-nav  navbar-right</span>"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link6&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link7&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  
+&lt;/div&gt;<hr>Классы:
+            </pre></code>
+          </td>
+          <td class="col3" style="width: 400px;">
+
           </td>
         </tr>
       </table>
-
-      <h2>Пример навигации</h2>
-      <div class="container-fluid">
-        <div class="row">
-          <!--БЛОК НАВИГАЦИИ (inverse или default)-->
-          <div class="navbar navbar-inverse">
-            <!--КОНТЕЙНЕР-->
-            <div class="container">
-              <!--ЗАГОЛОВОК НАВИГАЦИИ-->
+      <h3>Результат:</h3>
+        <header>
+          <nav class="navbar navbar-default pull-left">
+            <div class="container">    
               <div class="navbar-header">
-                <!--ССЫЛКА НА КОМПАНИЮ-->
-                <a href="#" class="navbar-brand">Компания</a>
-                <!--КНОПКА ВЫП. МЕНЮ-->
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#responsive-menu">
-                  <span class="sr-only">Открыть навигацию</span>
+                <button type="button" class="navbar-toggle collapsed" 
+  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
+	  
+                <a class="navbar-brand" href="index.html">
+                  <img src="https://avatanplus.com/files/resources/original/570bf8709201d15406c277d6.png" alt="logo" width="50" height="50" style="position: relative; top: -15px;">
+                </a>
               </div>
-              <!--ПУНКТЫ МЕНЮ-->
-              <div class="collapse navbar-collapse" id="responsive-menu">
+              
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- Ссылки меню СЛЕВА-->
                 <ul class="nav navbar-nav">
-                  <li><a href="#">Пункт1</a></li>
-                  <li><a href="#">Пункт2</a></li>
-                  <li><a href="#">Пункт3</a></li>
-                  <li><a href="#">Пункт4</a></li>
-                  <li><a href="#">Пункт5</a></li>
-                  <li><a href="#">Пункт6</a></li>
-                  <li>
-                    <a href="#">Пункт7
-                      <b class="caret"></b>
+                  <!-- Активная ссылка -->
+                  <li class="active">
+                    <a href="#">Link1 
+                      <span class="sr-only">(current)</span>
                     </a>
                   </li>
+                  <!-- Остальные ссылки -->
+                  <li><a href="#">Link2</a></li>
+                  <li><a href="#">Link3</a></li>
+                  
+                  <!-- Выпадающая ссылка -->
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" 
+                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Link4 
+                      <span class="caret"></span>
+                    </a>
+                    <!-- Выпадающее меню этой ссылки-->
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Link4-1</a></li>
+                      <li><a href="#">Link4-2</a></li>
+                      <li><a href="#">Link4-3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Link4-4</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Link4-5</a></li>
+                    </ul>
+                  </li>
                 </ul>
-
+  
+              <!-- Ссылки меню СПРАВА или ИКОНКИ-->
+                <ul class="nav navbar-nav  navbar-right">
+                  <li><a href="#">Link5</a></li>
+                  <li><a href="#">Link6</a></li>
+                  <li><a href="#">Link7</a></li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
+          </nav>
+        </header>
+     
+      <br>
       <table class="css3-table">
         <tr>
           <th class="css3-table-title" colspan="3">4. Текст</th>
@@ -439,7 +508,9 @@
         <tr>
           <td class="col1"><b>Таблицы</b></td>
           <td class="col2" style="width: 800px;">
-            <pre><span class="red">/* классы для &lt;table&gt; */</span>
+            <pre>
+.container-fluid>.row>.col-lg-8>table.table.table-bordered.table-striped>caption+tr>th*3^tr*3>td*3
+<span class="red">/* классы для &lt;table&gt; */</span>
 <code>.table               </code><span class="gray">- таблица</span>
 <code>.table-striped       </code><span class="gray">- таблица с "полосатыми" строками</span>
 <code>.table-bordered      </code><span class="gray">- таблица с границами</span>
@@ -453,7 +524,27 @@
 <code>.warning             </code><span class="gray">- выделяем цветом ячейку или строку</span>          
 <code>.danger              </code><span class="gray">- выделяем цветом ячейку или строку</span></pre>
           </td>
-          <td class="col3" style="width: 400px;"></td>
+          <td class="col3" style="width: 400px;">
+           
+            <table class="table table-hover table-bordered table-striped">
+              <caption>Table</caption>
+              <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+              </tr>
+              <tr>
+                <td>Text</td>
+                <td class="success">Text</td>
+                <td>Text</td>
+              </tr>
+              <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+              </tr>
+            </table>
+          </td>
         </tr>
       </table>
       <br>
@@ -464,7 +555,7 @@
         <tr>
           <td class="col1">
             <b>Иконки</b><br>
-            В папке /fonts должен лежать шрифт "Glyphicon"
+            В папке <b>/fonts</b> должен лежать шрифт "Glyphicon"
           </td>
           <td class="col2" style="width: 800px;">
             &lt;span class="<span class="red">glyphicon glyphicon-star</span>"&gt;&lt;/span&gt;<br>
@@ -479,6 +570,23 @@
             <span class="glyphicon glyphicon-asterisk" style="font-size: 3em;"></span> 	
             <span class="glyphicon glyphicon-fire" style="font-size: 3em;"></span> 	
             <span class="glyphicon glyphicon-hourglass" style="font-size: 3em;"></span> 	
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">7. Изображения</th>
+        </tr>
+        <tr>
+          <td class="col1">
+            <b>Изображения</b><br>
+          </td>
+          <td class="col2" style="width: 800px;">
+
+          </td>
+          <td class="col3" style="width: 400px;">
+
           </td>
         </tr>
       </table>
