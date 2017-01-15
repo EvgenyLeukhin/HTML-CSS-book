@@ -25,6 +25,20 @@
     .vert-menu .sub-menu-less {
       left: 125px;
     }
+/* Large(1201 - infinity+): */
+@media only screen and (min-width: 1201px) { .test {color: orange;} }
+    
+/* Large(0 - 1200px): */
+@media only screen and (max-width: 1200px) { .test {color: red;} }
+        
+/* Medium(0 - 992px): */
+@media only screen and (max-width: 992px) { .test {color: yellow;} }
+
+/* Small(0 - 767px): */
+@media only screen and (max-width: 767px) { .test {color: green;} }
+
+/* Extra-small(480px - 0): */
+@media only screen and (max-width: 480px) { .test {color: deeppink;} }
   </style>
 </head>
 
@@ -40,6 +54,7 @@
         <li><a href="../css-page.html">CSS</a></li>
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
         <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../server.html">SERVER</a></li>
       </ul>
     </div>
   </div>
@@ -85,7 +100,7 @@
         </li>
         <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
         <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-        <li><a href="../css3-pages/css3-adaptive.html">Резиновая вёрстка</a></li>
+        
         <li><a class="active" href="../css3-pages/bootstrap.html">Bootstrap</a></li>
         <li><a href="../css3-pages/foundation.html">Foundation</a></li>
         <li>
@@ -147,7 +162,7 @@
   &lt;/body&gt;
 &lt;/html&gt;
 <hr>
-<span class="gray" style="font-size: 1.5em;">/* Стилизация адаптивности */ </span>
+<span class="gray" style="font-size: 1.5em;">/* Адаптивность в Bootstrap */ </span>
              
 <span class="gray">/* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */</span>
@@ -166,7 +181,25 @@
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
 @media (min-width: @screen-lg-min) { ... }</span>
-        </pre></code>
+       
+<span class="gray" style="font-size: 1.5em;">/* Стилизация адаптивности */ </span>
+
+<span class="gray">/* Extra-large(1201 - infinity+): */</span>
+@media only screen and (min-width: <span class="red">1201px</span>) {...} 
+    
+<span class="gray">/* Large(0 - 1200px): */</span>
+@media only screen and (max-width: <span class="red">1200px</span>) {...}
+        
+<span class="gray">/* Medium(0 - 992px): */</span>
+@media only screen and (max-width: <span class="red">992px</span>) {...} 
+
+<span class="gray">/* Small(0 - 767px): */</span>
+@media only screen and (max-width: <span class="red">767px</span>) {...} 
+
+<span class="gray">/* Extra-small(0 - 480px): */</span>
+@media only screen and (max-width: <span class="red">480px</span>) {...}</pre></code>
+         
+<p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, maiores deserunt non quasi enim earum et nam iure, ipsam beatae. Laborum tempora ducimus illo ea. Odit expedita aperiam quas voluptates aliquid omnis ipsum eligendi consectetur deleniti saepe. Molestiae, illo! Ducimus, nisi, consequatur. Illo necessitatibus, quaerat illum eligendi, expedita iusto et.</p>
           </td>
           <td class="col3" style="width: 400px;">
             Условные комментарии можно в принципе удалить, поддержка IE8 уже почти не используется
@@ -220,6 +253,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</pre>
             </code>
+
           </td>
           <td class="col3" style="width: 400px;">
             <i><u>Вложенные .row также будут иметь 12-колоночный тип сеток</u></i>
@@ -236,7 +270,9 @@
             </p>
             <code>&lt;div class="<span class="red">main-content</span>&nbsp;&nbsp;col-lg-12 ..."&gt;&lt;/div&gt;</code><br><br>
            <pre>
-<code>.container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width: размеру breakpoints;</u></b>)</span>
+<code>.container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width</u></b>: размеру breakpoints; 
+                      центрирует содержимое)</span>
+                      
 <code>.container-fluid    </code><span class="gray">- ОСНОВНОЙ контейнер резиновый (width: 100%;)</span>
 
 <code>.row                </code><span class="gray">- СТРОЧНЫЙ подконтейнер, объединяет кол. классы </span>
@@ -610,7 +646,7 @@
         </tr>
       </table>
   
-
+      
     </div>
   </div>
 
