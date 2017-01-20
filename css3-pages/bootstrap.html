@@ -39,6 +39,10 @@
 
 /* Extra-small(480px - 0): */
 @media only screen and (max-width: 480px) { .test {color: deeppink;} }
+    .carousel {
+      max-width: 500px;
+      margin: 10px auto;
+    }
   </style>
 </head>
 
@@ -54,7 +58,7 @@
         <li><a href="../css-page.html">CSS</a></li>
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
         <li><a href="../javascript-page.html">JS</a></li>
-        <li><a href="../server.html">SERVER</a></li>
+        <li><a href="../php.html">PHP</a></li>
       </ul>
     </div>
   </div>
@@ -607,6 +611,7 @@
             В папке <b>/fonts</b> должен лежать шрифт "Glyphicon"
           </td>
           <td class="col2" style="width: 800px;">
+           <span class="gray">&lt;!-- Можно применять тег &lt;span&gt; или &lt;i&gt; --&gt;</span><br><br>
             &lt;span class="<span class="red">glyphicon glyphicon-star</span>"&gt;&lt;/span&gt;<br>
             &lt;span class="<span class="red">glyphicon glyphicon-heart</span>"&gt;&lt;/span&gt;<br>
             &lt;span class="<span class="red">glyphicon glyphicon-asterisk</span>"&gt;&lt;/span&gt;<br>
@@ -645,6 +650,130 @@
           </td>
         </tr>
       </table>
+      <br>
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">8. Слайдер</th>
+        </tr>
+        <tr>
+          <td class="col1">
+            <b>Адаптивный слайдер</b><br>
+          </td>
+          <td class="col2" style="width: 800px;">
+          <code><pre><span class="gray">&lt;!--Контейнер--&gt;</span>
+&lt;div id="<mark>carousel</mark>" class="<span class="red">carousel slide</span>"&gt;
+  
+  <span class="gray">&lt;!--Кружочки-переключатели--&gt;</span>
+  &lt;ol class="<span class="red">carousel-indicators</span>"&gt;
+    &lt;li data-target="<mark>#carousel</mark>" data-slide-to="<span class="red">0</span>" class="<span class="red">active</span>&gt;&lt;/li&gt;
+    &lt;li data-target="<mark>#carousel</mark>" data-slide-to="<span class="red">1</span>"&gt;&lt;/li&gt;
+    &lt;li data-target="<mark>#carousel</mark>" data-slide-to="<span class="red">2</span>"&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  
+  <span class="gray">&lt;!--Контейнер-слайдов--&gt;</span>
+  &lt;div class="<span class="red">carousel-inner</span>"&gt;
+    <span class="gray">&lt;!--Слайд №1--&gt;</span>
+    &lt;div class="<span class="red">item active</span>"&gt;
+      &lt;img src="<span class="text-success">slide1.png</span>" alt="slide1"&gt;
+      <span class="gray">&lt;!--Текст в слайде--&gt;</span>
+      &lt;div class="<span class="red">carousel-caption</span>"&gt;
+        &lt;h2&gt;<span class="text-success">Slide1</span>&lt;/h2&gt;
+        &lt;p&gt;<span class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam adipisci amet cumque.</span>&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="gray">&lt;!--Слайды №2,3,... (без .active)--&gt;</span>
+    &lt;div class="<span class="red">item</span>"&gt;...&lt;/div&gt;
+    &lt;div class="<span class="red">item</span>"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  
+  <span class="gray">&lt;!--Стрелки-переключатели--&gt;</span>
+  <span class="gray">&lt;!--стрелка-влево--&gt;</span>
+  &lt;a class="<span class="red">left carousel-control</span>" href="<mark>#carousel</mark>" data-slide="<span class="red">prev</span>"&gt;
+    &lt;span class="<span class="red">glyphicon glyphicon-chevron-left</span>"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+			
+  <span class="gray">&lt;!--стрелка-вправо--&gt;</span>
+  &lt;a class="<span class="red">right carousel-control</span>" href="<mark>#carousel</mark>" data-slide="<span class="red">next</span>"&gt;
+    &lt;span class="<span class="red">glyphicon glyphicon-chevron-right</span>"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  
+&lt;/div&gt;
+          </pre></code>
+          </td>
+          <td class="col3" style="width: 400px;">
+
+          </td>
+        </tr>
+      </table>
+      
+      <!--СЛАЙДЕР-->
+      <div id="carousel" class="carousel slide">
+        <!--Кружочки-индикаторы-->
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#carousel" data-slide-to="0"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!--Слайды-->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="http://www.voi.ru/images/content/august_2016/SoVMgGFBx0aIuxe1TWad.JPG" alt="slide1">
+            <div class="carousel-caption">
+              <h2>Slide1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam adipisci amet cumque.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="http://www.voi.ru/images/content/august_2016/SoVMgGFBx0aIuxe1TWad.JPG" alt="slide2">
+            <div class="carousel-caption">
+              <h2>Slide2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam adipisci amet cumque.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="http://www.voi.ru/images/content/august_2016/SoVMgGFBx0aIuxe1TWad.JPG" alt="slide3">
+            <div class="carousel-caption">
+              <h2>Slide3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam adipisci amet cumque.</p>
+            </div>
+          </div>
+        </div>
+        <!--Стрелка влево-->
+        <a class="left carousel-control" href="#carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        
+        <!--Стрелка вправо-->
+        <a class="right carousel-control" href="#carousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+		  </div>
+		  
+		  <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">9. Кнопки</th>
+        </tr>
+        <tr>
+          <td class="col1">
+            <b>Кнопки</b><br>
+          </td>
+          <td class="col2" style="width: 800px;">
+&lt;img class="<span class="red">img-responsive</span>" src="..." alt="..."&gt;
+          <pre><code>.img-circle         </code><span class="gray">- круглое изображение</span>
+<code>.img-rounded        </code><span class="gray">- круглые края</span>
+<code>.img-thumbnail      </code><span class="gray">- в рамке</span>
+
+<code>.img-responsive     </code><span class="gray">- адаптивное</span>
+</pre>
+          </td>
+          <td class="col3" style="width: 400px;">
+
+          </td>
+        </tr>
+      </table>
   
       
     </div>
@@ -660,9 +789,9 @@
     </div>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/jquery-3.1.0.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
