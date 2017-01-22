@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой Справочник | PHP | Переменные</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html             ">Главная</a></li>
+		<li><a href="../design-page.html       ">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html         ">HTML</a></li>
+		<li><a href="../css-page.html          ">CSS</a></li>
+    <li><a href="../css3-page.html         ">CSS3</a></li>
+		<li><a href="../javascript-page.html   ">JS</a></li>
+		<li><a class="active" href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="php-lang.html                          ">Язык PHP</a></li>
+			<li><a href="echo.html                              ">Вывод данных</a></li>
+			<li><a class="active" href="vars.html               ">Переменные</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой Справочник | PHP | Переменные</h2>
+
+	<div class="container-fluid">
+		<div class="row">
+				<table class="table table-bordered tale-hover table-condensed">
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">$some_var</th>
+					</tr>
+					<tr>
+						<td><b>Переменные</b></td>
+						<td>
+<pre><code><span class="text-success">$some_var</span>; <span class="gray">                        // объявление переменной</span></code></pre>
+
+						</td>
+						<td style="width: 33.3%;"></td>
+					</tr>
+
+					<tr>
+						<td><b>Типы данных</b></td>
+						<td>
+<pre><code><span class="text-success">$some_var = 5</span>; <span class="gray">                    // число</span></code></pre>
+<pre><code><span class="text-success">$some_var = "<span class="gray">Some string</span>"</span>; <span class="gray">        // строка</span></code></pre>
+<pre><code><span class="text-success">$some_var = true</span>; <span class="gray">                 // лог. тип (булевский)</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							true выводит 1, false пустую строку ("")
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>Числа</b></td>
+						<td>
+<pre><code><span class="text-success">$a = 15</span>;
+<span class="text-success">$b = 5</span>;
+<span class="text-success">$c = $a + $b</span>; <span class="gray">                     // сложение</span>
+<span class="text-success">$c = $a - $b</span>; <span class="gray">                     // вычитание</span>
+<span class="text-success">$c = $a * $b</span>; <span class="gray">                     // умножение</span>
+<span class="text-success">$c = $a / $b</span>; <span class="gray">                     // деление</span>
+<span class="text-success">$c = $a % $b</span>; <span class="gray">                     // остаток от деления</span>
+<span class="text-success">$a += 10</span>; <span class="gray">                         // аналог $a = $a + 10;</span>
+<span class="text-success">$a -= 10</span>; <span class="gray">                         // аналог $a = $a - 10;</span>
+<span class="text-success">$a *= 10</span>; <span class="gray">                         // аналог $a = $a * 10;</span>
+<span class="text-success">$a /= 10</span>; <span class="gray">                         // аналог $a = $a / 10;</span>
+<span class="text-success">$a++</span>; <span class="gray">                             // аналог $a = $a + 1;</span>
+<span class="text-success">$a--</span>; <span class="gray">                             // аналог $a = $a - 1;</span>
+</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Правила названия переменных такие же как в JS. Стиль названия переменных в php <b>snake_case</b>
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>Константы</b></td>
+						<td>
+							<pre><code><span class="text-success">define(<span class="gray">"PI", 3.14</span>)</span>; <span class="gray">          // объявление константы</span>
+<span class="text-success">echo defined<span class="gray">("PI")</span></span>; <span class="gray">          // проверка на наличие константы (возвращает bool)</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Константы принято называть с большой буквы
+						</td>
+					</tr>
+						
+					<tr>
+						<td><b>Строки</b></td>
+						<td>
+<pre><code><span class="text-success">$var1 = "<span class="gray">some_string1</span>"</span>; 
+<span class="text-success">$var2 = "<span class="gray">some_string2</span>"</span>;
+<span class="text-success">$var3 = $var1<span class="red">.</span>$var2</span>; <span class="gray">// сложение строк, через точку</span>
+<span class="text-success">$var3 = $var1<span class="red">." some_text3 ".</span>$var2</span>; <span class="gray">// можно вставлять любой текст</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Если в строковые кавычки вставлять названия переменных, таким образом <b>"text and $some_var"</b>, то переменная <b>$some_var</b> будет парситься, как значение этой переменной, а не как текст. В этом отличие php от js
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>Лог. операторы</b></td>
+						<td><pre><code><span class="text-success">$num1 = 1;
+$num2 = 2;
+$num3 = 3;
+
+$bool = $num2 <span class="red">&gt;</span> $num1;           <span class="gray">// больше</span>
+$bool = $num2 <span class="red">&lt;</span> $num1;           <span class="gray">// меньше</span>
+$bool = $num2 <span class="red">&gt;=</span> $num1;          <span class="gray">// больше или равно</span>
+$bool = $num2 <span class="red">&lt;=</span> $num1;          <span class="gray">// меньше или равно</span>
+$bool = $num2 <span class="red">==</span> $num1;          <span class="gray">// равно</span>
+$bool = $num2 <span class="red">!=</span> $num1;          <span class="gray">// не равно</span>
+$bool = $num2 <span class="red">===</span> $num1;         <span class="gray">// строго равно (по типу)</span>
+
+$bool = $num2 <span class="red">&gt;</span> $num1 <span class="red">||</span> $num2 <span class="red">==</span> $num1;         <span class="gray">// ИЛИ</span>
+$bool = $num2 <span class="red">&gt;</span> $num1 <span class="red">&amp;&amp;</span> $num3 <span class="red">==</span> $num2;         <span class="gray">// И</span>
+$bool = <span class="red">!</span>($num2 <span class="red">&gt;</span> $num1 <span class="red">&amp;&amp;</span> $num3 <span class="red">==</span> $num2);      <span class="gray">// ! переворачивает логику</span>
+</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							<b>$bool</b> будет возвращать true или false
+						</td>
+					</tr>
+
+				</table>
+			</div>
+	</div>
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+													 EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
