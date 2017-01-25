@@ -44,6 +44,15 @@ body {
   margin-top: 5px;
   padding-left: 3px;
 }
+@media screen and (max-width: 690px) {
+  .header .header-title {
+    display: none;
+  }
+  .footer .footer-text {
+    font-size: 0;
+  }
+}
+
 
 .header .header-title a,
 ._header .header-title a {
