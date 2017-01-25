@@ -1,14 +1,15 @@
 Flexbox +++
 
 Bootstrap +
+Foundation
 
+PHP\MySQL
 CMS Wordpress
 
+JS
 jQuery, Ajax
-
 CoffeeScript - JS-sugar
-
-React.js
+React.js, Angular
 
 
 

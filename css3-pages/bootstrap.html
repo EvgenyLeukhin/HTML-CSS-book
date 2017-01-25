@@ -25,24 +25,22 @@
     .vert-menu .sub-menu-less {
       left: 125px;
     }
-/* Large(1201 - infinity+): */
-@media only screen and (min-width: 1201px) { .test {color: orange;} }
     
-/* Large(0 - 1200px): */
-@media only screen and (max-width: 1200px) { .test {color: red;} }
+/* Large(1200px - +infinity): */
+@media (min-width: 1200px) { .test {color: red;} }
         
-/* Medium(0 - 992px): */
-@media only screen and (max-width: 992px) { .test {color: yellow;} }
+/* Medium(992px - 1199px): */
+@media (min-width: 992px) and (max-width: 1199px) { .test {color: yellow;} }
 
-/* Small(0 - 767px): */
-@media only screen and (max-width: 767px) { .test {color: green;} }
+/* Small(768px - 991px): */
+@media (min-width: 768px) and (max-width: 991px) { .test {color: green;} }
 
-/* Extra-small(480px - 0): */
-@media only screen and (max-width: 480px) { .test {color: deeppink;} }
-    .carousel {
-      max-width: 500px;
-      margin: 10px auto;
-    }
+/* Extra-small(0 - 767px): */
+@media (max-width: 767px) { .test {color: deeppink;} }
+  .carousel {
+    max-width: 500px;
+    margin: 10px auto;
+  }
   </style>
 </head>
 
@@ -187,21 +185,18 @@
 @media (min-width: @screen-lg-min) { ... }</span>
        
 <span class="gray" style="font-size: 1.5em;">/* Стилизация адаптивности */ </span>
-
-<span class="gray">/* Extra-large(1201 - infinity+): */</span>
-@media only screen and (min-width: <span class="red">1201px</span>) {...} 
     
-<span class="gray">/* Large(0 - 1200px): */</span>
-@media only screen and (max-width: <span class="red">1200px</span>) {...}
+<span class="gray">/* Large "TV-SET" (<mark>1200px</mark> - +infinity): */</span>
+@media (min-width: <span class="red">1200px</span>) {...}
         
-<span class="gray">/* Medium(0 - 992px): */</span>
-@media only screen and (max-width: <span class="red">992px</span>) {...} 
+<span class="gray">/* Medium "DESKTOP" (<mark>992px</mark> - <mark>1199px</mark>): */</span>
+@media (min-width: <span class="red">992px</span>) and (max-width: <span class="red">1199px</span>) {...} 
 
-<span class="gray">/* Small(0 - 767px): */</span>
-@media only screen and (max-width: <span class="red">767px</span>) {...} 
+<span class="gray">/* Small "TABLET" (<mark>768px</mark> - <mark>991px</mark>): */</span>
+@media (min-width: <span class="red">768px</span>) and (max-width: <span class="red">991px</span>) {...} 
 
-<span class="gray">/* Extra-small(0 - 480px): */</span>
-@media only screen and (max-width: <span class="red">480px</span>) {...}</pre></code>
+<span class="gray">/* Extra-small "MOBILE" (0 - <mark>767px</mark>): */</span>
+@media (max-width: <span class="red">767px</span>) {...}</pre></code>
          
 <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, maiores deserunt non quasi enim earum et nam iure, ipsam beatae. Laborum tempora ducimus illo ea. Odit expedita aperiam quas voluptates aliquid omnis ipsum eligendi consectetur deleniti saepe. Molestiae, illo! Ducimus, nisi, consequatur. Illo necessitatibus, quaerat illum eligendi, expedita iusto et.</p>
           </td>
@@ -358,7 +353,7 @@
           </td>
           <td class="col2" style="width: 800px;">
             <code><pre>&lt;div class="<span class="red">navbar-header</span>"&gt;
-  <span class="text-success">&lt;!--ГАМБУРГЕР--&gt;</span>          
+  <span class="text-success">&lt;!--ГАМБУРГЕР--&gt;</span>         
   &lt;button type="button" class="<span class="red">navbar-toggle collapsed</span>" 
   data-toggle="collapse" data-target="<mark>#bs-example-navbar-collapse-1</mark>" aria-expanded="false"&gt;
     &lt;span class="<span class="red">sr-only</span>"&gt;Toggle navigation&lt;/span&gt;
@@ -389,7 +384,7 @@
         <tr>
           <td class="col1">
             <b>Ссылки и вып. под-меню</b><br><br>
-            <span class="red">.navbar-header</span>
+            <span class="red">.collapse</span>
           </td>
           <td class="col2" style="width: 800px;">
             <code><pre>&lt;div class="<span class="red">collapse navbar-collapse</span>" id="<mark>bs-example-navbar-collapse-1</mark>"&gt;
