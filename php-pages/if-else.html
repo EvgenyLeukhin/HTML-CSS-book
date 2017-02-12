@@ -59,33 +59,53 @@
 
 	<div class="container-fluid">
 		<div class="row">
-				<table class="table table-bordered tale-hover table-condensed">
+				<table class="table table-bordered table-condensed">
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">echo</th>
+						<th class="lead  text-center  bg-primary" colspan="3">Условные операторы</th>
 					</tr>
 					<tr>
-						<td><b>Условные операторы</b></td>
-						<td>
-							<pre><code>echo "<span class="text-success">Hello, World!</span>";</code></pre>
-							<pre><code>echo "<span class="text-success">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>";</code></pre>
-							<pre><code>echo <b class="text-success">$some_var</b>; <span class="gray">// вывод значения переменной</span></code></pre>
-							<pre><code>echo <b class="text-success">PHP_VERSION</b>; <span class="gray">// вывод версии PHP</span></code></pre>
+						<td><b>if else</b></td>
+						<td><pre><code>$name = "Евгений";
+<span class="red"><b>if</b></span> (($name <span class="red"><b>==</b></span> "Евгений") <span class="red"><b>||</b></span> ($name <span class="red"><b>==</b></span> "Evgeny")) {
+  echo "<span class="gray">&lt;h1 style=\"color: lightgreen;\"&gt;Hello, $name!&lt;/h1&gt;</span>";
+} <span class="red"><b>else if</b></span> (($name <span class="red"><b>==</b></span> "Степан") <span class="red"><b>||</b></span> ($name <span class="red"><b>==</b></span> "Stephan")) {
+  echo "<span class="gray">&lt;h1 style=\"color: orange;\"&gt;Hello, $name&lt;/h1&gt;</span>";
+} <span class="red"><b>else</b></span> { echo "<span class="gray">&lt;h1 style=\"color: red;\"&gt;Hello, unknown_name!&lt;/h1&gt;</span>"; }</code></pre>
 						</td>
-						<td style="width: 33.3%;">Кавычки могут быть как одинарными, так и двойными, но когда выводим html-теги, то кавычки должны быть только двойными. Одинарные занимают в 2 раза меньше памяти. <br>Точка с запятой заканчивает инструкцию, как и в любом другом языке
+						<td style="width: 33.3%;">
+							Так же как и в JS
 						</td>
 					</tr>
 
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">require_once</th>
+						<td><b>switch-case</b></td>
+						<td><pre><code><span class="red">switch</span> ($a) {
+  <span class="red">case</span> $a == 0 : echo "<span class="gray">a = 0"</span>; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+  <span class="red">case</span> $a == 1 : echo "<span class="gray">a = 1</span>"; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+  <span class="red">case</span> $a == 2 : echo "<span class="gray">a = 2</span>"; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+  <span class="red">case</span> $a == 3 : echo "<span class="gray">a = 3</span>"; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+
+  <span class="red">default:</span> echo "<span class="gray">значение переменной не входит в case</span>";
+}</code></pre></td>
+						<td style="width: 33.3%;">
+							Так же как и в JS
+						</td>
+					</tr>
+
+
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Тернарный оператор</th>
 					</tr>
 					<tr>
-						<td><b>Вывод фрагментов html-кода</b></td>
+						<td><b>? :</b></td>
 						<td>
-							<pre><code>require_once "<span class="text-success">blocks/block1.php</span>";</code></pre>
+							<pre><code>$a = 13;
+$b = 2;
+$a == $b <span class="red"><b>?</b></span> $string = "<span class="gray">a = b</span>" <span class="red"><b>:</b></span> $string = "<span class="gray">a != b</span>";
+echo $string;</code></pre>
 						</td>
 						<td style="width: 33.3%;">
-							Блок <b>block1.php</b> содержит только html-код (без &lt;?php ?&gt;). <br>
-							Удобно применять при нахождении одинакого html-кода на нескольких страницах (добавлять и редактировать), только расширение файлов должно быть .php
+							Так же как и в JS
 						</td>
 					</tr>
 

@@ -59,35 +59,35 @@
 
 	<div class="container-fluid">
 		<div class="row">
-				<table class="table table-bordered tale-hover table-condensed">
+				<table class="table table-bordered table-condensed">
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">echo</th>
+						<th class="lead  text-center  bg-primary" colspan="3">function</th>
 					</tr>
 					<tr>
-						<td><b>Функции</b></td>
-						<td>
-							<pre><code>echo "<span class="text-success">Hello, World!</span>";</code></pre>
-							<pre><code>echo "<span class="text-success">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>";</code></pre>
-							<pre><code>echo <b class="text-success">$some_var</b>; <span class="gray">// вывод значения переменной</span></code></pre>
-							<pre><code>echo <b class="text-success">PHP_VERSION</b>; <span class="gray">// вывод версии PHP</span></code></pre>
+						<td><b>Объявление <br>функции</b></td>
+						<td><pre><code><span class="red">function</span> <b class="text-success">sum</b>($x, $y) {
+  $sum = $x + $y;
+  <span class="red">return</span> $sum;
+} 
+echo <b class="text-success">sum</b>(5, 25)."<span class="gray">&lt;br&gt;</span>";    <span class="gray">// 30</span>
+echo <b class="text-success">sum</b>(1, 2)."<span class="gray">&lt;br&gt;</span>";     <span class="gray">// 3</span>
+echo <b class="text-success">sum</b>("1", "2")."<span class="gray">&lt;br&gt;</span>"; <span class="gray">// 3</span></code></pre>
 						</td>
-						<td style="width: 33.3%;">Кавычки могут быть как одинарными, так и двойными, но когда выводим html-теги, то кавычки должны быть только двойными. Одинарные занимают в 2 раза меньше памяти. <br>Точка с запятой заканчивает инструкцию, как и в любом другом языке
+						<td style="width: 33.3%;">
+							<span class="red">return</span> возращает что-либо из функции, также как в JS. Также можно вкладывать функции в функции
 						</td>
 					</tr>
 
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">require_once</th>
-					</tr>
-					<tr>
-						<td><b>Вывод фрагментов html-кода</b></td>
-						<td>
-							<pre><code>require_once "<span class="text-success">blocks/block1.php</span>";</code></pre>
+						<td><b>Функции и<br> переменные</b></td>
+						<td><pre><code>$some_var = <span class="text-success">sum</span>(1,2);
+echo $some_var;</code></pre>
 						</td>
 						<td style="width: 33.3%;">
-							Блок <b>block1.php</b> содержит только html-код (без &lt;?php ?&gt;). <br>
-							Удобно применять при нахождении одинакого html-кода на нескольких страницах (добавлять и редактировать), только расширение файлов должно быть .php
+							Результаты выполнения функций можно сохранять в переменные
 						</td>
 					</tr>
+
 
 				</table>
 			</div>
