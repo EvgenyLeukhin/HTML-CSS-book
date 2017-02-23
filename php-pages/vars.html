@@ -46,6 +46,7 @@
 			<li><a href="cicles.html                            ">Циклы</a></li>
 			<li><a href="arrayd.html                            ">Массивы</a></li>
 			<li><a href="functionss.html                        ">Функции</a></li>
+			<li><a href="forms.html                             ">Формы</a></li>
 			<li><a href="sql.html                               ">SQL</a></li>
 			<li><a href="cms.html                               ">CMS</a></li>
 			<li><a href="console.html                           ">Консоль</a></li>
@@ -150,10 +151,48 @@ $bool = $num2 <span class="red">===</span> $num1;         <span class="gray">// 
 $bool = $num2 <span class="red">&gt;</span> $num1 <span class="red">||</span> $num2 <span class="red">==</span> $num1;         <span class="gray">// ИЛИ</span>
 $bool = $num2 <span class="red">&gt;</span> $num1 <span class="red">&amp;&amp;</span> $num3 <span class="red">==</span> $num2;         <span class="gray">// И</span>
 $bool = <span class="red">!</span>($num2 <span class="red">&gt;</span> $num1 <span class="red">&amp;&amp;</span> $num3 <span class="red">==</span> $num2);      <span class="gray">// ! переворачивает логику</span>
-</span></code></pre>
+<span class="red">~</span> <span class="gray">- унарный обратный оператор</span>
+<span class="red">^</span> <span class="gray">- исключающее ИЛИ</span>
+0 <span class="red">^</span> 1 <span class="gray">       // 1</span>
+0 <span class="red">^</span> 0 <span class="gray">       // 0</span>
+1 <span class="red">^</span> 1 <span class="gray">       // 0 (в этом и есть разница от обычного ИЛИ)</span></span></code></pre>
 						</td>
 						<td style="width: 33.3%;">
 							<b>$bool</b> будет возвращать true или false
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>Области видимости <br>переменных</b></td>
+						<td><span class="gray"><mark><u class="lead">global scope</u></mark></span>
+<pre><code>$x1 = 1;
+$y1 = 2;
+$x1 = 10; <span class="gray">// меняем на глобальном уровне</span>
+<span class="red">echo</span> "Before: x1 = $x1, y1 = $y1&lt;hr&gt;"; 	<span class="gray">// 10 2</span>
+</code></pre>
+<span class="gray"><mark><u class="lead">local scope</u></mark></span>
+<code><pre><span class="red">function</span> some_func() {
+  $x1 = 12;  <span class="gray">// $x1 = 12 только внутри этой функции</span>
+  <span class="red">echo</span> $x1.&lt;hr&gt;;
+}
+some_func(); <span class="gray">// 12</span>
+<span class="red">echo</span> $x1; <span class="gray">// 10</span>
+</code></pre>
+<span>Если требуется сделать видимость внутри функции глобальной, то в языке PHP есть для этого специальные ключевые слова:</span>
+<code><pre><span class="red">function</span> some_func() {
+  <span class="red">$GLOBALS</span>["x1"] = 100; <span class="gray">// теперь $x1 стала глобальной</span>
+}</pre></code><span>или так:</span>
+<code><pre><span class="red">function</span> some_func() {
+  <span class="red">global</span> $x1 = 100; <span class="gray">    // теперь $x1 стала глобальной</span>
+}</pre></code>
+<span class="gray"><mark><u class="lead">static scope</u></mark></span>
+<code><pre>
+<span class="red">function</span> some_func() {
+  <span class="red">static</span> $x1 = 100; <span class="gray">    // теперь $x1 стала глобальной внутри функций (статичной)</span>
+}</pre></code></td>
+						<td style="width: 33.3%;"><b>Глобальные переменные</b> можно изменять в любом месте кода (что находится ниже в коде будет итоговым значением переменной). <br><br>
+						<b>Локальные переменные</b> изменяются только внутри функций. <br><br>
+						<b>Статические переменные</b> имеют глобальную область видимости, но только внутри функций
 						</td>
 					</tr>
 

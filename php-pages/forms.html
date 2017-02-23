@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head> 
+    <title>Мой Справочник | PHP | Формы</title>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html             ">Главная</a></li>
+		<li><a href="../design-page.html       ">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html         ">HTML</a></li>
+		<li><a href="../css-page.html          ">CSS</a></li>
+    <li><a href="../css3-page.html         ">CSS3</a></li>
+		<li><a href="../javascript-page.html   ">JS</a></li>
+		<li><a class="active" href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="php-lang.html               ">Язык PHP</a></li>
+			<li><a href="echo.html    ">Вывод данных</a></li>
+			<li><a href="vars.html                   ">Переменные</a></li>
+			<li><a href="if-else.html                ">Условные<br>операторы</a></li>
+			<li><a href="cicles.html                 ">Циклы</a></li>
+			<li><a href="arrayd.html                 ">Массивы</a></li>
+			<li><a href="functionss.html             ">Функции</a></li>
+			<li><a class="active" href="forms.html   ">Формы</a></li>
+			<li><a href="sql.html                    ">SQL</a></li>
+			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="console.html                ">Консоль</a></li>
+		</ul>
+	
+	
+	</div>
+	<div class="content clearfix">
+	
+	<h2>Мой Справочник | PHP | Формы</h2>
+
+	<div class="container-fluid">
+		<div class="row">
+				<table class="table table-bordered table-condensed">
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Формы</th>
+					</tr>
+					<tr>
+						<td><b>Формы</b></td>
+						<td><pre><code>&lt;form action="<span class="red">check.php</span> method="<span class="red">post</span> name="<span class="red">form-name</span>"&gt;
+  &lt;input type="text" placeholder="Ваш номер"&gt;
+  &lt;input type="<span class="red">submit</span>" value="Отправить"&gt;
+&lt;/form&gt;
+						</code></pre>
+							<form action="check.php method="post name="form-name">
+							  <input type="text" placeholder="Ваш номер">
+							  <input type="submit" value="Отправить">
+							</form>
+						</td>
+						<td style="width: 33.3%;">
+							<span class="red">action</span>="<i>путь к php-файлу</i>" - файл обработки формы;<br>
+							<span class="red">name</span> и <span class="red">method</span> - обязательные атрибуты;<br>
+							<span class="red">post</span> - сохраняет данные для отправки в php-файле, который указан в атрибуте action;<br>
+							<span class="red">get</span> - делает запрос к серверу через адресную строку браузера (?text=ключевое слово1 ключевое слово2) <br>
+							<span class="red">submit</span> 
+						</td>
+					</tr>
+
+				</table>
+			</div>
+	</div>
+	
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+													 EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2017 Все права защищены</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

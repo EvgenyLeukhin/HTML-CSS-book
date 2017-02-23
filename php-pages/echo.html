@@ -46,6 +46,7 @@
 			<li><a href="cicles.html                 ">Циклы</a></li>
 			<li><a href="arrayd.html                 ">Массивы</a></li>
 			<li><a href="functionss.html             ">Функции</a></li>
+			<li><a href="forms.html                  ">Формы</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
 			<li><a href="cms.html                    ">CMS</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
@@ -61,10 +62,10 @@
 		<div class="row">
 				<table class="table table-bordered table-condensed">
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">echo</th>
+						<th class="lead  text-center  bg-primary" colspan="3">Вывод данных на экран</th>
 					</tr>
 					<tr>
-						<td><b>Вывод данных</b></td>
+						<td><b>echo</b></td>
 						<td>
 							<pre><code>echo "<span class="text-success">Hello, World!</span>";</code></pre>
 							<pre><code>echo "<span class="text-success">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>";</code></pre>
@@ -76,17 +77,44 @@
 					</tr>
 
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">require_once</th>
+						<td><b>print_r()</b></td>
+						<td>
+							<pre><code>print_r ("<span class="text-success">Hello, World!</span>");</code></pre>
+							<pre><code>print_r ("<span class="text-success">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>");</code></pre>
+							<pre><code>print_r (<b class="text-success">$some_var</b>); <span class="gray">// вывод значения переменной</span></code></pre>
+							<pre><code>print_r (<b class="text-success">PHP_VERSION</b>."&lt;hr&gt;"); <span class="gray">// вывод версии PHP</span></code></pre>
+						</td>
+						<td style="width: 33.3%;"><b>print_r()</b> функция исключительно для разработчиков, для вывода информации на экран, анолог <b>console.log</b> в JavaScript
+					</tr>
+
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Подключение файлов</th>
 					</tr>
 					<tr>
-						<td><b>Вывод фрагментов html-кода</b></td>
+						<td><b>require</b></td>
 						<td>
-							<pre><code>require_once "<span class="text-success">blocks/block1.php</span>";</code></pre>
+							<pre><code>require "<span class="text-success">blocks/block1.php</span>";</code></pre>
+							Если файл <b>blocks/block1.php</b> не загрузился, то интерпретатор выдаст ошибку, и страница НЕ ОТОБРАЗИТСЯ!!!
 						</td>
 						<td style="width: 33.3%;">
 							Блок <b>block1.php</b> содержит только html-код (без &lt;?php ?&gt;). <br>
 							Удобно применять при нахождении одинакого html-кода на нескольких страницах (добавлять и редактировать), только расширение файлов должно быть .php
 						</td>
+					</tr>
+					<tr>
+						<td><b>include</b></td>
+						<td>
+							<pre><code>include "<span class="text-success">blocks/block1.php</span>";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Если файл <b>blocks/block1.php</b> не загрузился, то интерпретатор НЕ выдаст ошибку, и страница отобразится, кроме данного блока</td>
+					</tr>
+					<tr>
+						<td><b>require_once,<br>include_once</b></td>
+						<td>
+							<pre><code>include_once "<span class="text-success">blocks/block1.php</span>";
+require_once "<span class="text-success">blocks/block2.php</span>";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Используются для загрузки на страницу единожды</td>
 					</tr>
 
 				</table>

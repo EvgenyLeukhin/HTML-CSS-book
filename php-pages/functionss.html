@@ -46,6 +46,7 @@
 			<li><a href="cicles.html                 ">Циклы</a></li>
 			<li><a href="arrayd.html                 ">Массивы</a></li>
 			<li><a class="active" href="functionss.html">Функции</a></li>
+			<li><a href="forms.html                  ">Формы</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
 			<li><a href="cms.html                    ">CMS</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
@@ -71,24 +72,30 @@
 } 
 echo <b class="text-success">sum</b>(5, 25)."<span class="gray">&lt;br&gt;</span>";    <span class="gray">// 30</span>
 echo <b class="text-success">sum</b>(1, 2)."<span class="gray">&lt;br&gt;</span>";     <span class="gray">// 3</span>
-echo <b class="text-success">sum</b>("1", "2")."<span class="gray">&lt;br&gt;</span>"; <span class="gray">// 3</span></code></pre>
+echo <b class="text-success">sum</b>("1", "2")."<span class="gray">&lt;br&gt;</span>"; <span class="gray">// 3</span>
+
+<span class="gray">// или через переменные:</span>
+$some_var = <span class="text-success">sum</span>(1,2);
+echo $some_var;<span class="gray">            // 3</span></code></pre>
 						</td>
 						<td style="width: 33.3%;">
-							<span class="red">return</span> возращает что-либо из функции, также как в JS. Также можно вкладывать функции в функции
+							<span class="red">return</span> возращает что-либо из функции, также как в JS. Также можно вкладывать функции в функции. Результаты выполнения функций можно сохранять в переменные
 						</td>
 					</tr>
 
 					<tr>
-						<td><b>Функции и<br> переменные</b></td>
-						<td><pre><code>$some_var = <span class="text-success">sum</span>(1,2);
-echo $some_var;</code></pre>
+						<td><b>Функции в<br> переменных</b></td>
+						<td><pre><code>$sum = <span class="red">function</span>($x, $y) {
+  <span class="red">return</span> $x + $y;
+};
+
+echo $sum(1, 2);<span class="gray">            // 3</span></code></pre>
 						</td>
 						<td style="width: 33.3%;">
-							Результаты выполнения функций можно сохранять в переменные
+							В этом случае название функции будет выполнять переменная
 						</td>
 					</tr>
-
-
+					
 				</table>
 			</div>
 	</div>
