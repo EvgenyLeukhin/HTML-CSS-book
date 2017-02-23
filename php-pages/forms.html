@@ -65,26 +65,145 @@
 						<th class="lead  text-center  bg-primary" colspan="3">Формы</th>
 					</tr>
 					<tr>
-						<td><b>Формы</b></td>
-						<td><pre><code>&lt;form action="<span class="red">check.php</span> method="<span class="red">post</span> name="<span class="red">form-name</span>"&gt;
-  &lt;input type="text" placeholder="Ваш номер"&gt;
-  &lt;input type="<span class="red">submit</span>" value="Отправить"&gt;
-&lt;/form&gt;
-						</code></pre>
-							<form action="check.php method="post name="form-name">
-							  <input type="text" placeholder="Ваш номер">
-							  <input type="submit" value="Отправить">
+						<td><b>Форма</b></td>
+						<td><pre><code>&lt;<mark>form</mark> <span class="red">action</span>="<mark>check.php</mark>" name="test-form" method="<span class="red">post</span>">
+  &lt;table>
+    &lt;caption>Форма&lt;/caption>
+    &lt;tr>
+      &lt;td>&lt;label for="first-name-id">Имя: &lt;/label>&lt;/td>
+      &lt;td>&lt;input type="text" placeholder="Name" name="<mark>first-name</mark>" id="first-name-id">&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>&lt;label for="sername-id">Фамилия: &lt;/label>&lt;/td>
+      &lt;td>&lt;input type="text" placeholder="Sername" name="<mark>sername</mark>" id="sername-id">&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+    &lt;td>&lt;label for="email-id">Email: &lt;/label>&lt;/td>
+      &lt;td>&lt;input type="email" placeholder="Email" name="<mark>email</mark>" id="email-id">&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>&lt;label for="date-id">Дата: &lt;/label>&lt;/td>
+      &lt;td>&lt;input type="date" placeholder="Date" name="<mark>date</mark>" id="date-id">&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>Отправить: &lt;/td>
+      &lt;td>&lt;input type="<span class="red">submit</span>" value="Done" name="<mark>done</mark>">&lt;/td>
+      &lt;/tr>
+  &lt;/table>
+&lt;/<mark>form</mark>></code></pre>
+
+							<form action="check.php" name="test-form" method="post">
+								<table class="table table-bordered">
+									<caption>Форма</caption>
+									<tr>
+										<td><label for="first-name-id">Имя: </label></td>
+										<td><input type="text" placeholder="Name" name="first-name" id="first-name-id"></td>
+									</tr>
+									<tr>
+										<td><label for="sername-id">Фамилия: </label></td>
+										<td><input type="text" placeholder="Sername" name="sername" id="sername-id"></td>
+									</tr>
+									<tr>
+										<td><label for="email-id">Email: </label></td>
+										<td><input type="email" placeholder="Email" name="email" id="email-id"></td>
+									</tr>
+									<tr>
+										<td><label for="date-id">Дата: </label></td>
+										<td><input type="date" placeholder="Date" name="date" id="date-id"></td>
+									</tr>
+									<tr>
+										<td>Отправить: </td>
+										<td><input type="submit" value="Done" name="done"></td>
+									</tr>
+								</table>
 							</form>
+
 						</td>
 						<td style="width: 33.3%;">
-							<span class="red">action</span>="<i>путь к php-файлу</i>" - файл обработки формы;<br>
+							<span class="red">action</span>="<i>путь к php-файлу</i>" - файл обработки формы,
+							если записать <span class="text-success">action=""</span>, то обработка будет осуществляться на этой же странице<br>
 							<span class="red">name</span> и <span class="red">method</span> - обязательные атрибуты;<br>
 							<span class="red">post</span> - сохраняет данные для отправки в php-файле, который указан в атрибуте action;<br>
 							<span class="red">get</span> - делает запрос к серверу через адресную строку браузера (?text=ключевое слово1 ключевое слово2) <br>
-							<span class="red">submit</span> 
+							<span class="red">submit</span> - после нажатия делает переход на файл, указанный в action(check.php)
 						</td>
 					</tr>
+					<tr>
+						<td><b>Глобальные<br> переменные</b></td>
+						<td><pre><code>print_r(<span class="red">$_POST</span>);
+print_r(<span class="red">$_GET</span>);</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+<span class="red">$_POST</span> - хранит все переданные значения в ассоциативном массиве, имена индексов которого совпадают с атрибутами name у полей формы. <br>
+<span class="red">$_GET</span> - хранит все запрашиваемые значения в ассоциативном массиве, имена индексов которого совпадают с атрибутами name у полей формы. <br>
+В них храняться все переданные значения пользователей
+						</td>
+					</tr>
+					<tr>
+						<td><b>Обработка формы (check.php)</b></td>
+						<td><pre><code><span class="gray">// ВЫВОД ДАННЫХ $_POST:</span>
+<span class="red">print_r</span>($_POST);
+<span class="red">echo</span> "&lt;hr&gt;";
 
+<span class="gray">// ВЫВОД ВВЕДЁННЫХ ДАННЫХ:</span>
+<span class="gray">// Имя:</span>
+<span class="red">echo</span> "&lt;b>1. Ваше имя: &lt;/b>";
+<span class="red">echo</span>(&lt;i>".$_POST["<mark>first-name</mark>"]."&lt;/i>&lt;br>");
+
+<span class="gray">// Фамилия:</span>
+<span class="red">echo</span> "&lt;b>2. Ваша фамилия: &lt;/b>";
+<span class="red">echo</span>("&lt;i>".$_POST["<mark>sername</mark>"]."&lt;/i>&lt;br>");
+
+<span class="gray">// E-mail:</span>
+<span class="red">echo</span> "&lt;b>3. Ваш e-mail: &lt;/b>";
+<span class="red">echo</span>("&lt;i>".$_POST["<mark>email</mark>"]."&lt;/i>&lt;br>");
+
+<span class="gray">// Дата:</span>
+<span class="red">echo</span> "&lt;b>4. Дата заполнения: &lt;/b>";
+<span class="red">echo</span>("&lt;i>".$_POST["<mark>date</mark>"]."&lt;/i>&lt;br>");
+
+
+<span class="gray">// ВАЛИДАЦИЯ ФОРМЫ:</span>
+<span class="red">if</span> ($_POST["first-name"] == "") {
+  <span class="red">echo</span> "<span class="gray">&lt;span style=\"color: red;\">Вы не ввели своё &lt;b>имя&lt;/b>! &lt;/span>&lt;br></span>";
+}
+<span class="red">if</span> ($_POST["sername"] == "") {
+  <span class="red">echo</span> "<span class="gray">&lt;span style=\"color: red;\">Вы не ввели свою &lt;b>фамилию&lt;/b>! &lt;/span>&lt;br></span>";
+}
+<span class="red">if</span> ($_POST["email"] == "") {
+  <span class="red">echo</span> "<span class="gray">&lt;span style=\"color: red;\">Вы не ввели ваш &lt;b>email&lt;/b>! &lt;/span>&lt;br></span>";
+}
+<span class="red">if</span> ($_POST["date"] == "") {
+  <span class="red">echo</span> "<span class="gray">&lt;span style=\"color: red;\">Вы не ввели &lt;b>дату заполнения&lt;/b>!&lt;/span> &lt;br></span>";
+}
+<span class="red">if</span> (($_POST["first-name"] == <span class="red">true</span>) <span class="red">&amp;&amp;</span>
+    ($_POST["sername"]    == <span class="red">true</span>) <span class="red">&amp;&amp;</span>
+    ($_POST["email"]      == <span class="red">true</span>) <span class="red">&amp;&amp;</span>
+    ($_POST["sername"]    == <span class="red">true</span>) <span class="red">&amp;&amp;</span>
+    ($_POST["date"]       == <span class="red">true</span>)) {
+  <span class="red">echo</span> "&lt;span style=\"color: green; font-size: 2em;\">&lt;b>Вы полностью заполнили форму!&lt;/b>&lt;/span></span>";
+}</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							После нажатия на &lt;input type="submit"&gt; происходит перенаправление на файл <b>check.php</b>, и вся обработка формы будет выполненна в нём
+						</td>
+					</tr>
+					<tr>
+						<td><b>Обработка формы внутри текущей страницы</b></td>
+						<td><pre><code><span class="gray">// Обработка формы будет выполнена после нажатия на 
+<b>&lt;input[type="submit"] name="<mark>done</mark>"&gt;</b>, так работает функция <b><mark>isset</mark></b></span>
+
+<span class="red">if</span> (<span class="red">isset</span>($_POST["done"])) {
+  <span class="red">echo</span> "<span class="gray">&lt;hr> &lt;h2>Выполнена обработка формы&lt;/h2></span>";
+  <span class="gray">// php-код из <b>check.php</b></span>
+}</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Можно писать php-код на самом "верху" страницы. <br>
+							Значение атрибута action оставить пустым (<span class="red">action=""</span>).
+							Результат выполнения php-кода будет отображён вверху страницы
+						</td>
+					</tr>
 				</table>
 			</div>
 	</div>
