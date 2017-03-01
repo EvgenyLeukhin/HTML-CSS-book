@@ -96,7 +96,7 @@ echo "<span class="gray">&lt;hr&gt;</span>";</code></pre>
 					<td style="width: 33.3%;">count($array) - кол-во элементов массива</td>
 				</tr>
 				<tr>
-					<td><b>Ассоциативные массивы</b></td>
+					<td><b>Ассоциативные<br>массивы</b></td>
 					<td>
 						<pre><code>$arr = <span class="red">array</span>("age" <span class="red">=></span> 12, "name" <span class="red">=></span> "Alex", "schoolBoy" <span class="red">=></span> true);</code></pre>
 					</td>
@@ -122,6 +122,56 @@ for($i = 0; $i < <span class="red">count</span>($list); $i++) {
 					</td>
 					<td style="width: 33.3%;">
 						Массивы в массиве. Помимо двемерных бывают трёхмерные, четырёхмерные, но они используются крайне редко
+					</td>
+				</tr>
+
+				<tr>
+					<td><b>Функции</b></td>
+					<td>
+						<ul style="list-style: none; padding: 0;">
+							<li><b class="lead">count()</b> - количество элементов в массиве
+								<pre><code><span class="red">count</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">sort()</b> - сортировка элементов в массиве
+								<pre><code><span class="red">sort</span>($some_array);
+<span class="red">print_r</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">rsort()</b> - реверсивная сортировка элементов в массиве
+								<pre><code><span class="red">rsort</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">asort()</b> - сортировка в ассоциативных массивах
+								<pre><code><span class="red">asort</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">arsort()</b> - реверсивная сортировка в ассоциативных массивах
+								<pre><code><span class="red">arsort</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">ksort()</b> - сортировка ключей в ассоциативных массивах, по строкам
+								<pre><code><span class="red">ksort</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">krsort()</b> - реверсивная сортировка ключей в ассоциативных массивах
+								<pre><code><span class="red">krsort</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">shuffle()</b> - произвольно перемешать элементы
+								<pre><code><span class="red">shuffle</span>($some_array);</code></pre>
+							</li>
+							<li><b class="lead">in_array()</b> - произвольно перемешать элементы
+								<pre><code><span class="red">in_array</span>(10, $some_array);
+<span class="gray">// есть ли значение 10 в массиве $some_array, вернёт bool</span></code></pre>
+							</li>
+							<li><b class="lead">array_merge()</b> - соединить массивы в один
+								<pre><code><span class="red">array_merge</span>($some_array1, $some_array2);</code></pre>
+							</li>
+							<li><b class="lead">unset()</b> - удалить элемент
+								<pre><code><span class="red">unset</span>($some_array[0]);</code></pre>
+							</li>
+							<li><b class="lead">array_slice()</b> - обрезать массив
+								<pre><code><span class="red">array_slice</span>($some_array, 2, 5);
+<span class="gray">// обрежет 2 элемента с начала, оставит 5 следующих</span></code></pre>
+								<pre><code><span class="red">array_slice</span>($some_array, 2, -1);
+<span class="gray">// обрежет 2 элемента с начала и 1 с конца</span></code></pre>
+							</li>
+					</td>
+					<td style="width: 33.3%;">
 					</td>
 				</tr>
 			</table>
