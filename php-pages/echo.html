@@ -116,6 +116,109 @@ require_once "<span class="text-success">blocks/block2.php</span>";</code></pre>
 						</td>
 						<td style="width: 33.3%;">Используются для загрузки на страницу единожды</td>
 					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Создание файлов</th>
+					</tr>
+					<tr>
+						<td>
+							<b>fopen()</b><br>
+							<b>fwrite()</b><br>
+							<b>fclose()</b>
+						</td>
+						<td>
+							<pre><code>$file = <span class="red">fopen</span>("1.txt", "a+t");                    <span class="gray">// Открываем файл</span>
+<span class="red">fwrite</span>($file, "<span class="gray">Hello from php!<span class="red">\n</span>This is cool!</span>");  <span class="gray">// Записываем в него текст</span>
+<span class="red">fclose</span>($file);                                    <span class="gray">// Закрываем файл</span>
+							</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Будет создан файл 1.txt с текстом "Hello from php!\nThis is cool!"<br>
+							"<span class="red">r</span>" - файл только для чтения, открывает и помещает указатель в начало файла<br>
+							"<span class="red">r+</span>" - ... можно редактировать, заменяя предыдущие символы;<br>
+							"<span class="red">w</span>" - файл только для записи (создаёт файл, если его нет), обрезает файл до нулевой длины (удаляет все символы);<br>
+							"<span class="red">w+</span>" - ... для записи и чтения;<br>
+							"<span class="red">a</span>" - открыывает файл только для записи и помещает указатель в конец файла, не удаляет предшествующие символы;<br>
+							"<span class="red">a+</span>" - ... для записи и чтения;<br>
+							"<span class="red">+t</span>" - добавляет поддержку спецсимволов \n \t;<br>
+							"<span class="red">+b</span>" - убирает поддержку спецсимволов \n \t;<br>
+							Много параметров, <a href="http://www.php.su/fopen" target="_blank">документация</a>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>file_put_contents()</b>
+						</td>
+						<td>
+							<span class="gray">// Упрощенная запись: </span>
+							<pre><code><span class="red">file_put_contents</span>("1.txt", "Some text");</code></pre>
+						</td>
+						<td style="width: 33.3%;"></td>
+					</tr>
+					<tr>
+						<td>
+							<b>file_exist()</b>
+						</td>
+						<td>
+							<pre><code><span class="red">echo file_exist</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Проверка на существование файла</td>
+					</tr>
+					<tr>
+						<td><b>filesize()</b></td>
+						<td>
+							<pre><code><span class="red">echo filesize</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Размер файла</td>
+					</tr>
+					<tr>
+						<td><b>unlink()</b></td>
+						<td>
+							<pre><code><span class="red">unlink</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Удаление файла</td>
+					</tr>
+					<tr>
+						<td><b>rename()</b></td>
+						<td>
+							<pre><code><span class="red">rename</span>("1.txt", "2.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Переименовать файл с сохранением старого</td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Вывод символов из текстового файла</th>
+					</tr>
+					<tr>
+						<td><b>fread</b></td>
+						<td>
+							<pre><code>$file = <span class="red">fopen</span>("1.txt", "r+t");
+while (!<span class="red">feof</span>($file)) {
+  <span class="red">echo fread</span>($file, 1)."<span class="gray">&lt;br&gt;</span>";
+}
+<span class="red">fclose</span>($file);</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Выводится посимвольно
+						</td>
+					</tr>
+					<tr>
+						<td><b>fseek()</b></td>
+						<td>
+							<pre><code><span class="red">fseek</span>($file, 0);</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Переводит курсор у считываемого файла на выбранный символ
+						</td>
+					</tr>
+					<tr>
+						<td><b>file_get_contents()</b></td>
+						<td>
+							<span class="gray">// Упрощенная запись: </span>
+							<pre><code><span class="red">echo file_get_contents</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Выведет текст файла 1.txt на php-страницу
+						</td>
+					</tr>
 
 				</table>
 			</div>

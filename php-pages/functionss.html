@@ -226,7 +226,34 @@ echo <span class="red">str_replace</span>(array("Hello", "Goodbye"), array("Пр
 					</td>
 					<td style="width: 33.3%;"></td>
 				</tr>
-				</table>
+				<tr>
+					<th class="lead  text-center  bg-primary" colspan="3">Дата и время</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<ul style="list-style: none; padding: 0;">
+							<li><b class="lead">time()</b> - кол-во секунд с 01.01.1970
+<pre><code>echo <span class="red">time</span>();</code></pre></li>
+							<li><b class="lead">microtime()</b> - с милисекундами
+<pre><code><span class="gray">// секундомер работы php-скриптов</span>
+$start = <span class="red">microtime</span>(true);
+echo "<span class="gray">Время работы скрипта: </span>".(<span class="red">microtime</span>(true) - $start)." <span class="gray">секунд</span>";</code></pre></li>
+							<li><b class="lead">date()</b> - дата (много вариаций, <a href="http://www.php.su/date" target="_blank">документация</a>)
+<pre><code>echo <span class="red">date</span>("Y-m-d H:i:s");
+
+<span class="gray">// Указать фиксированную дату (час, мин, сек, мес, день, год):</span>
+echo <span class="red">date</span>("Y-m-d H:i:s", <span class="red">mktime</span>(12, 35, 23, 12, 25, 2005));
+<span class="gray">// Указать фиксированную дату в массиве:</span>
+$time = <span class="red">mktime</span>(12, 35, 23, 12, 25, 2005);
+$arr = <span class="red">getdate</span>($time);
+<span class="red">print_r</span>($arr);
+</code></pre></li>
+						</ul>
+					</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	
