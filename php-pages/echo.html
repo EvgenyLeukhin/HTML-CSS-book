@@ -47,6 +47,7 @@
 			<li><a href="arrayd.html                 ">Массивы</a></li>
 			<li><a href="functionss.html             ">Функции</a></li>
 			<li><a href="forms.html                  ">Формы</a></li>
+			<li><a href="post.html                   ">Почта</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
 			<li><a href="cms.html                    ">CMS</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
@@ -184,6 +185,30 @@ require_once "<span class="text-success">blocks/block2.php</span>";</code></pre>
 							<pre><code><span class="red">rename</span>("1.txt", "2.txt");</code></pre>
 						</td>
 						<td style="width: 33.3%;">Переименовать файл с сохранением старого</td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Права доступа к файлам</th>
+					</tr>
+					<tr>
+						<td><b>__FILE__</b></td>
+						<td>
+							<pre><code>echo <span class="red">__FILE__</span>;</code></pre>
+						</td>
+						<td style="width: 33.3%;">Путь к данному открытому php-файлу</td>
+					</tr>
+					<tr>
+						<td><b>fileperms()</b></td>
+						<td>
+							<pre><code>echo <span class="red">fileperms</span>(__FILE__); <span class="gray">// 33206</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">Узнать код прав доступа, необходимо для unix-систем</td>
+					</tr>
+					<tr>
+						<td><b>chmod()</b></td>
+						<td>
+							<pre><code>echo <span class="red">chmod</span>(__FILE__, 0777);</code></pre>
+						</td>
+						<td style="width: 33.3%;">Изменить права доступа</td>
 					</tr>
 					<tr>
 						<th class="lead  text-center  bg-primary" colspan="3">Вывод символов из текстового файла</th>
