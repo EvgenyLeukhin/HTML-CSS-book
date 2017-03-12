@@ -40,7 +40,7 @@
 	<div class="vert-menu-cont">
 		<ul class="vert-menu">
 			<li><a href="php-lang.html               ">Язык PHP</a></li>
-			<li><a href="echo.html    ">Вывод данных</a></li>
+			<li><a href="echo.html                   ">Вывод данных</a></li>
 			<li><a href="vars.html                   ">Переменные</a></li>
 			<li><a href="if-else.html                ">Условные<br>операторы</a></li>
 			<li><a href="cicles.html                 ">Циклы</a></li>
@@ -149,7 +149,7 @@ print_r(<span class="red">$_GET</span>);</code></pre>
 <span class="gray">// ВЫВОД ВВЕДЁННЫХ ДАННЫХ:</span>
 <span class="gray">// Имя:</span>
 <span class="red">echo</span> "&lt;b>1. Ваше имя: &lt;/b>";
-<span class="red">echo</span>(&lt;i>".$_POST["<mark>first-name</mark>"]."&lt;/i>&lt;br>");
+<span class="red">echo</span>("&lt;i>".$_POST["<mark>first-name</mark>"]."&lt;/i>&lt;br>");
 
 <span class="gray">// Фамилия:</span>
 <span class="red">echo</span> "&lt;b>2. Ваша фамилия: &lt;/b>";
@@ -205,6 +205,29 @@ print_r(<span class="red">$_GET</span>);</code></pre>
 							Результат выполнения php-кода будет отображён вверху страницы
 						</td>
 					</tr>
+					<tr>
+						<td><b>Куки</b></td>
+						<td><pre><code><span class="red">setcookie</span>("num", 10, <span class="red">time()</span> + 10);
+$_COOKIE;
+
+<span class="red">session_start</span>();
+$_SESSION;
+<span class="red">session_destroy</span>();</code></pre>
+						</td>
+						<td style="width: 33.3%;"><b>Куки</b> хранятся в браузере, а <b>Сессии</b> на сервере</td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Обработка формы</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td style="width: 33.3%;"></td>
+					</tr>
+
+
+
+
 				</table>
 			</div>
 	</div>
