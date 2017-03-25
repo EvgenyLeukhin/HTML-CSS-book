@@ -132,12 +132,14 @@
 					<tr>
 						<td><b>Глобальные<br> переменные</b></td>
 						<td><pre><code>print_r(<span class="red">$_POST</span>);
-print_r(<span class="red">$_GET</span>);</code></pre>
+print_r(<span class="red">$_GET</span>);
+print_r(<span class="red">$_REQUEST</span>);</code></pre>
 						</td>
 						<td style="width: 33.3%;">
 <span class="red">$_POST</span> - хранит все переданные значения в ассоциативном массиве, имена индексов которого совпадают с атрибутами name у полей формы. <br>
 <span class="red">$_GET</span> - хранит все запрашиваемые значения в ассоциативном массиве, имена индексов которого совпадают с атрибутами name у полей формы. <br>
-В них храняться все переданные значения пользователей
+В них храняться все переданные значения пользователей<br>
+<span class="red">$_REQUEST</span> - хранит все переданные значения и методом get и post
 						</td>
 					</tr>
 					<tr>
@@ -220,8 +222,62 @@ $_SESSION;
 						<th class="lead  text-center  bg-primary" colspan="3">Обработка формы</th>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
+						<td><b>Сохранение данных в полях формы после перезагрузки страницы</b></td>
+						<td>
+<pre><code><span class="gray">// 1. Сохраняем значение полей формы в переменные</span>
+if (<span class="red">isset</span>($_POST["done"])) {
+  $first_name = <span class="red">htmlspecialchars</span>($_POST["fifrst-name"]);
+  ...
+<span class="gray">// 2. Создаём сессию и сохраняем все переменные в сессию</span>
+  <span class="red">$_SESSION</span>["first-name"] = $first_name;
+  ...
+}
+<span class="gray">// 3. Прописываем в поля форм значения массива SESSION</span>
+&lt;input type="text name="first-name" 
+value="<span class="red">&lt;?php echo $_SESSION["first-name"]&gt;</span>"&gt;    <span class="gray">или так:</span>
+value="<span class="red">&lt;?=$_SESSION["first-name"]&gt;</span>"&gt;
+</code></pre>
+						</td>
+						<td style="width: 33.3%;"></td>
+					</tr>
+
+					<tr>
+						<td><b>Появление ошибки при незаполнении форм</b></td>
+						<td>
+<pre><code><span class="gray">// 1. Создаём условие внутри основного</span>
+<span class="red">$error</span> = false;
+if ($first_name == "" || <span class="red">!preg_match("/@/", $first_name)</span>) {
+  <span class="red">$error_first_name</span> = "Вы не корректно указали своё имя";
+  <span class="red">$error</span> = true;
+} 
+<span class="gray">// далее создаём условие для каждого поля</span>
+<span class="gray">// 2. Создаём переменные ошибок</span>
+<span class="red">$error_first_name</span> = "Вы не указали своё имя";
+
+<span class="gray">// 3. Вставляем спаны после полей форм</span>
+&lt;input type="text name="first-name" 
+  value="<span class="red">&lt;?=$_SESSION["first-name"]&gt;</span>"&gt;
+  &lt;span style="color: red;"&gt;&lt;/span&gt;
+
+<span class="gray">// 4. Прописываем в него значение переменной $error</span>
+&lt;span style="color: red;"&gt;<span class="red">&lt;?=$error_first_name&gt;</span>&lt;/span&gt;
+</code></pre>
+						</td>
+						<td style="width: 33.3%;"><b>!preg_match("/@/", $first_name)</b> - проверяет, чтобы поле не содержало спецсимволы или некорректность. <br> 
+						Если <b>$error = true</b>, то сообщение не будем отправлять<br>
+						<b>strlen</b> - также можно указывать в условии, проверка на длину строки
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>Отправка формы</b></td>
+						<td>
+<pre><code><span class="gray">// Создаём еще одно внутреннее условие</span>
+<span class="red">if</span> (!$error) {
+  <span class="gray">пишем код для отправки на почту или в базу данных</span>
+}
+</code></pre>
+						</td>
 						<td style="width: 33.3%;"></td>
 					</tr>
 

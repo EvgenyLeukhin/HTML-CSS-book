@@ -68,7 +68,10 @@
 					<tr>
 						<td><b>Переменные</b></td>
 						<td>
-<pre><code><span class="text-success">$some_var</span>; <span class="gray">                        // объявление переменной</span></code></pre>
+<pre><code><span class="text-success">$some_var</span>; <span class="gray">                        // объявление переменной</span>
+<span class="text-success">$some_var</span> = <span class="red">&amp;</span>$some_another_var; <span class="gray">   // &amp; - жёсткая ссылка (привязка переменных)</span>
+
+</code></pre>
 
 						</td>
 						<td style="width: 33.3%;"></td>
@@ -118,7 +121,9 @@
 <span class="text-success">echo defined<span class="gray">("PI")</span></span>; <span class="gray">          // проверка на наличие константы (возвращает bool)</span></code></pre>
 						</td>
 						<td style="width: 33.3%;">
-							Константы принято называть с большой буквы
+							Константы принято называть с большой буквы.<br>
+							Знак доллара в имени константы не пишется! <br>
+							<b>echo PI;</b> и всё
 						</td>
 					</tr>
 						
@@ -131,7 +136,9 @@
 <span class="text-success">$var3 = $var1<span class="red">." some_text3 ".</span>$var2</span>; <span class="gray">// можно вставлять любой текст</span></code></pre>
 						</td>
 						<td style="width: 33.3%;">
-							Если в строковые кавычки вставлять названия переменных, таким образом <b>"text and $some_var"</b>, то переменная <b>$some_var</b> будет парситься, как значение этой переменной, а не как текст. В этом отличие php от js
+							Если в двойные строковые кавычки вставлять названия переменных, таким образом <b>"text and $some_var"</b>, то переменная <b>$some_var</b> будет парситься, как значение этой переменной, а не как текст (<i>работают спецсимволы</i> <b>\n \t</b>). <br><br>
+							Но если записать в одинарные кавычки, вот так:
+							<b>'text and $some_var'</b>, то $some_var выведется символьно (<i>спецсимволы НЕ работают</i>)
 						</td>
 					</tr>
 
