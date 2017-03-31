@@ -12,6 +12,11 @@
         .git-list code {line-height: 1em;}
         .intensive-version {list-style-position: inside !important;}
         .intensive-version > li {color: #000;}
+        .ferma code {
+          font-size: 1.2em;
+          background-color: #ddd;
+          color: deeppink;
+        }
     </style>
 </head>
 
@@ -56,7 +61,7 @@
             <li><a href="function.html">Функции</a></li>
 			<li><a href="object.html">Объекты</a></li>
             <li>
-                <a href="#">JS & HTML</a>
+                <a href="#">JS &amp; HTML</a>
                 <ul class="sub-menu sub-menu6">
                     <li><a href="complete.html">Вывод данных</a></li>
 			        <li><a href="dom.html">DOM</a></li>
@@ -724,10 +729,18 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 git remote rm origin <span class="pl-c"># удаляем привязанный удалённый репозиторий</span>
 git remote add origin git@github.com:address.git <span class="pl-c"># добавляем удаленный репозиторий, сокр. имя — origin</span></pre></div>
 </article>
-        
-        
-        
-        
+  <ol class="ferma">
+    <li>Перейти в директорию \\FERMA02\git и запустить <b>git bash</b>, все удалённые репозитории храняться здесь;</li>
+    <li>Создать директорию репозитория с окончанием <b>.git</b> (<code>mkdir &lt;name dir&gt;</code>);</li>
+    <li>Встаём в эту директорию <code>cd &lt;name dir&gt;</code> и создаём репозиторий (только для истории) <code>git init --bare</code>;</li>
+    <li>Создаём локальный репозиторий, создаём рабочую директорию у себя на жёстком диске <code>git init</code>;</li>
+    <li>Связываем локальный репозиторий с удалённым, делается в директории локального репозитория <code>git remote add igor //FERMA02/git/dir_name.git</code>;</li>
+    <li>
+      Коммит в локальный репозиторий: <code>git commit -m "comment"</code><br>
+      Сохранение в удалённый репозиторий: <code>git push igor master</code><br>
+      Принять изменения с удалённого репозитория: <code>git pull igor master</code><br>
+    </li>
+  </ol>
 	</div>
 </div>
 
