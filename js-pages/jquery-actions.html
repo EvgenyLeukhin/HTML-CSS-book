@@ -28,47 +28,46 @@
 </div>
 
 <div class="layout-positioner clearfix">
+	
 	<div class="vert-menu-cont">
 		<ul class="vert-menu">
-            <li>
-                <a href="#">Основы</a>
-                <ul class="sub-menu sub-menu9">
-                    <li><a href="js-lang.html">Язык JS</a></li>
-                    <li><a href="load.html">Загрузка</a></li>
-			        <li><a href="types.html">Типы данных</a></li>
-			        <li><a href="var.html">Переменные</a></li>
-			        <li><a href="operators.html">Операторы</a></li>
-			        
-			        <li><a href="algorythm.html">Алгоритмы</a></li>
-			        <li><a href="if-else.html">if - else, switch-case</a></li>
-			        <li><a href="cycle.html">Циклы</a></li>
-                    <li><a href="math.html">Math</a></li>
-                </ul>
-            </li>
-            <li><a href="array.html">Массивы</a></li>
-            <li><a href="function.html">Функции</a></li>
+	    <li>
+	    	<a href="#">Основы</a>
+	        <ul class="sub-menu sub-menu9">
+	          <li><a href="js-lang.html">Язык JS</a></li>
+	          <li><a href="load.html">Загрузка</a></li>
+		        <li><a href="types.html">Типы данных</a></li>
+		        <li><a href="var.html">Переменные</a></li>
+		        <li><a href="operators.html">Операторы</a></li>
+		        <li><a href="algorythm.html">Алгоритмы</a></li>
+		        <li><a href="if-else.html">if - else, switch-case</a></li>
+		        <li><a href="cycle.html">Циклы</a></li>
+	          <li><a href="math.html">Math</a></li>
+	        </ul>
+	    </li>
+      <li><a href="array.html">Массивы</a></li>
+      <li><a href="function.html">Функции</a></li>
 			<li><a href="object.html">Объекты</a></li>
-            <li>
-                <a href="#">JS & HTML</a>
-                <ul class="sub-menu sub-menu6">
-                    <li><a href="complete.html">Вывод данных</a></li>
-			        <li><a href="dom.html">DOM</a></li>
-			        <li><a href="html-methods.html">Методы</a></li>
-			        <li><a href="actions.html">События</a></li>
-			        <li><a href="modal-window.html">Мод. окно</a></li>
-			        <li><a href="forms.html">Формы</a></li>
-                </ul>
-            </li>
-			
-			<li>
-			    <a class="active" href="#">jQuery</a>
-			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">jQuery и HTML</a></li>
-			        <li><a href="jquery-func.html">jQuery-функции</a></li>
-                    <li><a href="jquery-actions.html">jQuery-события</a></li>
-			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                </ul>
+      <li>
+      	<a href="#">JS &amp; HTML</a>
+	        <ul class="sub-menu sub-menu6">
+	          <li><a href="complete.html">Вывод данных</a></li>
+		        <li><a href="dom.html">DOM</a></li>
+		        <li><a href="html-methods.html">Методы</a></li>
+		        <li><a href="actions.html">События</a></li>
+		        <li><a href="modal-window.html">Мод. окно</a></li>
+		        <li><a href="forms.html">Формы</a></li>
+	        </ul>
+			</li>
+      <li>
+	  		<a class="active" href="#">jQuery</a>
+	  			<ul class="sub-menu sub-menu7">
+		        <li><a href="jquery-html.html">jQuery и HTML</a></li>
+		        <li><a href="jquery-func.html">jQuery-функции</a></li>
+	          <li><a href="jquery-actions.html">jQuery-события</a></li>
+	      		<li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+	          <li><a href="jquery-forms.html">jQuery-формы</a></li>
+	        </ul>
 			 </li>
 			 <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
@@ -76,15 +75,37 @@
 			 <li><a href="console.html">Консоль</a></li>
 			 <li><a href="project.html">Новый проект</a></li>
 		</ul>
-	
-	
 	</div>
+
 	<div class="content clearfix">
 	
 	<h2>Мой Справочник | JavaScript | jQuery-события</h2>
 	
-	
-	
+	<table class="discription-table" border-spacing: 5px;>
+		<tr>
+			<th colspan="4" style="font-size: 2em;">События</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 2em;">
+				.onclick();
+			</td>
+			
+			<td style="width: 600px;">
+				<code>
+					$("<span class="gray">.link-js</span>").<span class="red">on</span>("<span class="red">click</span>", function(<span class="red">event</span>) {<br>
+					&nbsp;&nbsp;<span class="red">event</span>.preventDefault(); <br>
+					&nbsp;&nbsp;$(<span class="red">this</span>).text("<span class="gray">Click</span>");<br>
+					});
+				</code>
+			</td>
+
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Событие для клика на объект<br>
+				<span class="red">this</span> - означает обращение к тому же селектору <code>$(<span class="gray">"h1"</span>)</code><br>
+				<span class="gray">// <code>event.preventDefault()</code> - убирает стандартное поведение ссылок</span>
+			</td>
+		</tr>
+	</table>
 	
 	
 	

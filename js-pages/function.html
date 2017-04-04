@@ -18,11 +18,9 @@
 		<li><a href="../design-page.html">WEB-DESIGN</a></li>
 		<li><a href="../html-page.html">HTML</a></li>
 		<li><a href="../css-page.html">CSS</a></li>
-        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
 	</ul>
 	</div>
 </div>
@@ -47,9 +45,9 @@
             </li>
             <li><a href="array.html">Массивы</a></li>
             <li><a class="active" href="function.html">Функции</a></li>
-			<li><a href="object.html">Объекты</a></li>
+						<li><a href="object.html">Объекты</a></li>
             <li>
-                <a href="#">JS & HTML</a>
+                <a href="#">JS &amp; HTML</a>
                 <ul class="sub-menu sub-menu6">
                     <li><a href="complete.html">Вывод данных</a></li>
 			        <li><a href="dom.html">DOM</a></li>
@@ -328,26 +326,50 @@ var func = function() {
 			</td>
 		</tr>
       
-        <tr>
+    <tr>
 			<th colspan="4" style="font-size: 2em; color: darkcyan;">arguments</th>
 		</tr>
       
-          <tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-                 Показывает аргументы функции внутри функции
-			</td>
-			
+    <tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">Показывает аргументы функции внутри функции</td>
 			<td style="width: 400px;">
-              <code>
-                  console.log(arguments);
-              </code>
+				<code>console.log(arguments);</code>
 			</td>
-			
-			<td rowspan="1" style="width: 300px; color: #555;">
-              
-			</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
 		</tr>
-        </table>
+
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">ЗАМЫКАНИЕ</th>
+		</tr>
+		 <tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;"></td>
+			<td style="width: 400px;">
+				<pre><code><span class="red">function</span> myFunc1(a) {
+  var c = a * 2; <span class="gray">// 20</span>
+  var b = <span class="red">function</span> myFunc2() {
+    var d = c - 5; <span class="gray">// 15</span>
+    return d;
+  }
+  return b;
+}
+var e = myFunc1(10); <span class="gray">// </span></code></pre>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Если внутри функции объявить ещё одну функцию, то эта вложенная функция будет "видеть" все переменные родительской функции. Переменные видят друг друга на одном уровне</td>
+		</tr>
+
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Анонимность</th>
+		</tr>
+		 <tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">Объявление анонимной функции</td>
+			<td style="width: 400px;">
+				<pre><code>(function() {
+  // some code
+})<span class="red">()</span>;</code></pre>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Без вторых круглых скобок функция не сработает. <b>Создаётся изолированная область видимости</b>, чтобы код внутри скобок не конфликтовал с другим кодом</td>
+		</tr>
+			</table>
         
         <h3>Пример кода расчёта покупки</h3>
         <code>
