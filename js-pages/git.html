@@ -742,8 +742,11 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 			Принять изменения с удалённого репозитория: <code>git pull igor master</code><br>
 		</li>
 	</ol>
+
 	<hr>
-	<h2>Git на хостинге через ssh-протокол</h2>
+
+	<h2>Копировать и править проекты уже залитые на хостинг</h2>
+
 	<ol class="ferma">
 		<li>
 			Узнать адрес репозитория на хостинге <b>provisov</b><br>
@@ -755,7 +758,7 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 		</li>
 		<li>Добавить локальный домен для данной директории <b>somesite.loc</b></li>
 		<li>
-			Скачать базу данных <b>sql</b> либо с админки хостинга <b>(cPanel - PhpMyAdmin - БД - Экспорт)</b>, либо найти её в склонированном репозитории
+			Скачать базу данных <b>sql</b> либо с админки хостинга (<b>cPanel</b> (https://ru.reserver.ru:2083/) <b>- PhpMyAdmin - БД - Экспорт</b>), либо найти её в склонированном репозитории
 		</li>
 		<li>Подключить данную БД к админке локального сервера <b>(OpenServer - PhpMyAdmin - БД - Создать БД - Импорт)</b></li>
 		<li>
@@ -777,6 +780,33 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 			Нужно встать в нужную директорию на хостинге <code>ssh provisov (cd sites, ls и т.д.)</code><br>
 			и выполнить команду: <code>git merge master --ff-only</code> вливание ветки из локального репозитория в хостинг
 		</li>
+	</ol>
+
+	<hr>
+	
+	<h2>Заливать проекты на хостинг</h2>
+	<ol class="ferma">
+		<li>
+			Заходим в админку хостинга: <b>https://ru.reserver.ru:2083/</b><br>
+			Имя: <b>fermas</b> &nbsp;&nbsp;-&nbsp;&nbsp; Пароль: <b>???????</b> &nbsp;&nbsp;-&nbsp;&nbsp;
+			<b>Поддомены</b> &nbsp;&nbsp;-&nbsp;&nbsp; Поддомен: пишем название (<b>somesite</b>) &nbsp;&nbsp;-&nbsp;&nbsp;	Домен: <b>fermastudio.ru</b> &nbsp;&nbsp;-&nbsp;&nbsp;
+			Корень документа: <b>sites/somesite</b> &nbsp;&nbsp;-&nbsp;&nbsp; Создать
+		</li>
+		<li>
+			Заходим через консоль на хостинг в созданную директорию <code>ssh provisov</code> &nbsp;&nbsp;-&nbsp;&nbsp; <code>cd sites/somesite</code><br>
+			Создаём в ней git-репозиторий <code>git init</code><br>
+			Копируем полный путь <code>pwd</code>
+		</li>
+		<li>
+			Заходим через консоль в корневую локальную директорию с разработкой (git должен там быть установлен) <br>
+			Связываем локальный git-репозиторий с удалённым на хостинге <code>git remote add hosting ssh://...</code> (вставляем скопированный путь) <br>
+			Пушим на хостинг в ветку production <code>git push hosting master:production</code>
+		</li>
+		<li>
+			Заходим через консоль на хостинг и переключаем текущую ветку в <b>production</b> 
+			<code>git checkout production</code>
+		</li>
+		<li>Запускаем в браузере адрес: <code>somesite.fermastudio.ru</code></li>
 	</ol>
 
 
