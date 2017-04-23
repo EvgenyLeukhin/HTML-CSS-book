@@ -333,7 +333,20 @@
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.css()
+					.removeAttr("style")
+			</td>
+			
+			<td style="width: 600px;">
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Удалить атрибут
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.css({ "padding" : 10px })
 			</td>
 			
 			<td style="width: 600px;">
@@ -341,6 +354,19 @@
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
 				Изменить css-свойство
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.height(), .innerHeight()
+			</td>
+			
+			<td style="width: 600px;">
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Высота элемента,<br>Полная высота (с padding)
 			</td>
 		</tr>
 
@@ -396,12 +422,24 @@
 			<td style="width: 600px;"></td>
 			<td rowspan="1" style="width: 300px; color: #555;">Анимации</td>
 		</tr>
+
+		<tr>
+			<th colspan="4" style="font-size: 2em;">События </th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+				.click
+			</td>
+			
+			<td style="width: 600px;"></td>
+			<td rowspan="1" style="width: 300px; color: #555;">Клик</td>
+		</tr>
 	 
 		</table>
 		
 		<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>
 		<pre class="code"><code>$(function() {
-  $("<b>.link-class</b>").on("click", function(event) {
+  $("<b>.link-class</b>").on("click", function(event) { <span>// анонимная функция</span>
     <span>// сброс настроек</span>
     event.preventDefault();
 
@@ -414,9 +452,29 @@
 });</code></pre>
 
 	<hr>
-	<h2>2. Фиксированное меню</h2>
-	
-	
+	<h2>2. Фиксированное меню при скролле</h2>
+	<span class="gray">// Fixed header when scroll</span>
+	<pre class="code"><code>$(function() {
+  var <mark>headerHeight</mark> = $("<b>.page-header</b>").height(); // сохранем значение высоты хэдера в var
+
+  $(document).on("<b>scroll</b>", function() {
+    var <mark>documentScroll</mark> = $(this).scrollTop(); // значение скрола во всём документе. 
+    // Для скрола 0px - верх
+    if(documentScroll > headerHeight) {
+      $("<b>.page-header</b>").addClass("fixed"); // добавляем класс хедеру при скролле
+      $("body").css("paddingTop", headerHeight);  // и padding для body
+    } esle {
+      $("<b>.page-header</b>").removeClass("fixed");
+      $("body")css({
+        "paddingTop": 0 
+      });
+    }
+  });
+});</code></pre>
+
+
+
+
 	</div>
 </div>
 
