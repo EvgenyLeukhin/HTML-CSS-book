@@ -320,28 +320,60 @@
 			</td>
 			
 			<td style="width: 600px;">
+				<code>
+					 &lt;h1 class="<mark>title-big</mark>"><span class="gray">Заголовок</span>&lt;/h1> <br>
+					 $('h1').<span class="red">toggleClass</span>('<span class="gray">title-small</span>');<hr>
+					 &lt;h1 class="<mark>title-small</mark>"><span class="gray">Заголовок</span>&lt;/h1>
+				 </code>
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
 				Переключает класс
 			</td>
 		</tr>
-
-		<tr>
-			<th colspan="4" style="font-size: 2em;">Стилизация </th>
-		</tr>
+		
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.removeAttr("style")
+					.attr()
 			</td>
 			
 			<td style="width: 600px;">
+				<code>
+					&lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
+					 $('h1').<span class="red">attr</span>(<span class="gray">'style', 'color:red;'</span>);<hr>
+					 &lt;h1 <mark>style="color: red;"</mark>><span class="gray">Заголовок</span>&lt;/h1>
+				</code>
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Удалить атрибут
+				Установить аттрибут<br>
+				Можно также получать значение аттрибута сохранив его в переменную
+				<code><small>var&nbsp;attrH1 = $("h1").attr("style");</small></code>
 			</td>
+		</tr>
+
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.removeAttr()
+			</td>
+			
+			<td style="width: 600px;">
+				<code>
+					&lt;h1 class="<mark>title</mark>"><span class="gray">Заголовок</span>&lt;/h1> <br>
+					 $('h1').<span class="red">removeAttr</span>('<span class="gray">class</span>');<hr>
+					 &lt;h1><span class="gray">Заголовок</span>&lt;/h1>
+				</code>
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Удалить аттрибут
+			</td>
+		</tr>
+
+		<tr>
+			<th colspan="4" style="font-size: 2em;">Стилизация </th>
 		</tr>
 
 		<tr>
@@ -372,14 +404,15 @@
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.hide()
+					.hide() <br>
+					.show()
 			</td>
 			
 			<td style="width: 600px;">
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Прячет элемент
+				Скрыть-показать элемент (аналог display: none;)
 			</td>
 		</tr>
 
@@ -438,36 +471,61 @@
 		</table>
 		
 		<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>
-		<pre class="code"><code>$(function() {
-  $("<b>.link-class</b>").on("click", function(event) { <span>// анонимная функция</span>
+		<pre class="code"><code><span>// До одного блока</span>
+$(function() {
+  $("<b>.link-class</b>").on("<b>click</b>", function(event) { <span>// анонимная функция</span>
     <span>// сброс настроек</span>
     event.preventDefault();
 
     <span>// сохраняем расстояние до h1 в переменную</span>
-    var <mark>scrollToH1</mark> = $("<b>h1</b>").offset().top;
+    var <mark>scrollToBlock</mark> = $("<b>.block-class</b>").offset().top;
 
     <span>// скролим тело документа (html и body для кроссбраузерности) на расстояние scrollHight 500млс</span>
-    $("<b>html, body</b>").animate({ scrollTop: <mark>scrollToH1</mark> }, 500);
+    $("<b>html, body</b>").animate({ scrollTop: <mark>scrollToBlock</mark> }, 500);
+  });
+});
+<hr><span>// Если нужны разные скролы по нескольким ссылкам</span>
+$(function() {
+  <span>// вставляем общий селектор для всех ссылок меню</span>
+  $("<b>ul.menu a</b>").on("<b>click</b>", function(event) { 
+    <span>// сброс настроек</span>
+    event.preventDefault();
+
+    <span>// сохраняем id блока, это будет значение атрибута href кликнутой ссылки, 
+    // ссылки должны быть связаны с блоками по id</span>
+    var <mark>currentBlock</mark> = $(this).attr('href');
+
+
+    <span>// делаем выборку элемента по сохранённому id, и вычисляем до него расстояние </span>
+    var <mark>topHeight</mark> = $(<mark>currentBlock</mark>).offset().top;
+
+    <span>// скролим при клике до нужного блока</span>
+    $("<b>html, body</b>").animate({ scrollTop: <mark>topHeight</mark> + 20}, 500);
   });
 });</code></pre>
 
-	<hr>
+
 	<h2>2. Фиксированное меню при скролле</h2>
 	<span class="gray">// Fixed header when scroll</span>
 	<pre class="code"><code>$(function() {
-  var <mark>headerHeight</mark> = $("<b>.page-header</b>").height(); // сохранем значение высоты хэдера в var
+  <span>// сохранем значение высоты хэдера в var</span>
+  var <mark>headerHeight</mark> = $("<b>.page-header</b>").height(); 
 
+  <span>// улавливаем событие скрола</span>
   $(document).on("<b>scroll</b>", function() {
-    var <mark>documentScroll</mark> = $(this).scrollTop(); // значение скрола во всём документе. 
-    // Для скрола 0px - верх
-    if(documentScroll > headerHeight) {
-      $("<b>.page-header</b>").addClass("fixed"); // добавляем класс хедеру при скролле
-      $("body").css("paddingTop", headerHeight);  // и padding для body
+    <span>// текущее значение высоты скрола от верха окна при скроле</span>
+    var <mark>documentScroll</mark> = $(this).scrollTop();
+
+    <span>// Если высота скрола > высоты хэдера</span>
+    if(<mark>documentScroll</mark> > <mark>headerHeight</mark>) {
+      <span>// добавляем класс хедеру</span>
+      $("<b>.page-header</b>").addClass("fixed"); 
+
+      <span>// и padding для body на высоту хэдера (т.к. фикс. хэдер выходит из потока)</span>
+      $("<b>body</b>").css("paddingTop", headerHeight);  
     } esle {
       $("<b>.page-header</b>").removeClass("fixed");
-      $("body")css({
-        "paddingTop": 0 
-      });
+      $("<b>body</b>").css({"paddingTop": 0});
     }
   });
 });</code></pre>
