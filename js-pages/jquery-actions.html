@@ -14,16 +14,14 @@
 	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
 	<div class="header-logo"></div>
 		<ul class="header-menu">
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
-        <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a class="active" href="../javascript-page.html">JS</a></li>
-		<li><a href="../php.html">PHP</a></li>
-		
-		
-	</ul>
+			<li><a href="../index.html">Главная</a></li>
+			<li><a href="../design-page.html">WEB-DESIGN</a></li>
+			<li><a href="../html-page.html">HTML</a></li>
+			<li><a href="../css-page.html">CSS</a></li>
+			<li><a href="../css3-page.html">CSS3</a></li>
+			<li><a class="active" href="../javascript-page.html">JS</a></li>
+			<li><a href="../php.html">PHP</a></li>
+		</ul>
 	</div>
 </div>
 
@@ -86,7 +84,7 @@
 			<th colspan="4" style="font-size: 2em;">События</th>
 		</tr>
 		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 2em;">
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">
 				.onclick();
 			</td>
 			
@@ -104,6 +102,51 @@
 				<span class="red">this</span> - означает обращение к тому же селектору <code>$(<span class="gray">"h1"</span>)</code><br>
 				<span class="gray">// <code>event.preventDefault()</code> - убирает стандартное поведение ссылок</span>
 			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.click()<br> 'click'</td>
+			<td style="width: 600px;">
+				<pre><code>.dbclick <span class="gray">  // Двойной клик</span>
+.mousedown <span class="gray">// Нажим на клик, без отпуска</span>
+.mouseup   <span class="gray">// Отпуск клика</span>
+.mouseover <span class="gray">// Аналог :hover в css</span>
+.mouseout  <span class="gray">// Когда убираете курсор с элемента</span>
+.mousemove <span class="gray">// При перемещении курсора (выполняется всегда)</span>
+.scroll    <span class="gray">// При скроле (Home, End, PgUp, PgDown)</span>
+</code></pre>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Клик и события с мышью</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.keypress()</td>
+			<td style="width: 600px;">
+				<pre><code>.keypress <span class="gray">// Нажатие на клавишу</span>
+.keydown <span class="gray"> // Нажим на клавишу, без отпуска</span>
+.keyup  <span class="gray">  // Отпуск клавиши</span>
+</code></pre>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">События с клавиатурой</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.submit()</td>
+			<td style="width: 600px;">
+				<pre><code>.submit <span class="gray">// отправка формы (нажатие на Enter)</span>
+.reset <span class="gray"> // сброс полей формы</span>
+.change <span class="gray">// изменение значений полей формы, переключение</span>
+.focus <span class="gray"> // фокусировка на поле формы (клавиша Tab)</span>
+.blur <span class="gray">  // противоположное focus, выход из фокуса</span>
+</code></pre>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">События с формами</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.load()</td>
+			<td style="width: 600px;">
+				<pre><code>.load <span class="gray">   // при загрузке страницы</span>
+.unload <span class="gray"> // при переходе на другую страницу</span>
+.resize <span class="gray"> // при изменении размеров окна</span></code></pre>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">События с документом</td>
 		</tr>
 	</table>
 	
