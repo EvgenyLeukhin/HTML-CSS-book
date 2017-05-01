@@ -382,6 +382,7 @@
 			</td>
 			
 			<td style="width: 600px;">
+				<code>$('h1').<span class="red">css</span>(<span class="gray">'border', '1px solid #000'</span>);</code>
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
@@ -456,18 +457,7 @@
 			<td rowspan="1" style="width: 300px; color: #555;">Анимации</td>
 		</tr>
 
-		<tr>
-			<th colspan="4" style="font-size: 2em;">События </th>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-				.click
-			</td>
-			
-			<td style="width: 600px;"></td>
-			<td rowspan="1" style="width: 300px; color: #555;">Клик</td>
-		</tr>
-	 
+		
 		</table>
 		
 		<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>
@@ -509,7 +499,7 @@ $(function() {
 	<span class="gray">// Fixed header when scroll</span>
 	<pre class="code"><code>$(function() {
   <span>// сохранем значение высоты хэдера в var</span>
-  var <mark>headerHeight</mark> = $("<b>.page-header</b>").height(); 
+  var <mark>headerHeight</mark> = $("<b>.page-header</b>").innerHeight(); <span>// или height()</span>
 
   <span>// улавливаем событие скрола</span>
   $(document).on("<b>scroll</b>", function() {
