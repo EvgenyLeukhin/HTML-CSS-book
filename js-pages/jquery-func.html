@@ -79,7 +79,9 @@
 						<li>
 					<a class="active" href="#">jQuery</a>
 					<ul class="sub-menu sub-menu7">
-							<li><a href="jquery-html.html">jQuery и HTML</a></li>
+							<li><a href="jquery-html.html">
+
+JQuery basics</a></li>
 							<li><a href="jquery-func.html">jQuery-функции</a></li>
 										<li><a href="jquery-actions.html">jQuery-события</a></li>
 							<li><a href="jquery-effects.html">jQuery-эффекты</a></li>
@@ -99,9 +101,9 @@
 	
 	<h2>Мой Справочник | JavaScript | jQuery-функции</h2>
 	
-		<table class="discription-table" border-spacing: 5px;>
+	<table class="discription-table" border-spacing: 5px;>
 		<tr>
-			<th colspan="4" style="font-size: 2em;">Функции для изменения html-кода</th>
+			<th colspan="4" style="font-size: 2em;">HTML-манипуляции</th>
 		</tr>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
@@ -111,16 +113,16 @@
 			
 			<td style="width: 600px;">
 								
-								 <code>
-										 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
-											$('h1').<span class="red">html</span>('<span class="gray"&lt;h1&gt;>&lt;u>Новый заголовок&lt;/u></span>');<br>
-								 </code>
-								 <hr>
-								 <code>
-										 &lt;h1><mark>&lt;u><span class="gray">Новый заголовок</span>&lt;/u></mark>&lt;/h1> <br>
-								 </code>
+			 <code>
+					 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
+						$('h1').<span class="red">html</span>('<span class="gray"&lt;h1&gt;>&lt;u>Новый заголовок&lt;/u></span>');<br>
+			 </code>
+			 <hr>
+			 <code>
+					 &lt;h1><mark>&lt;u><span class="gray">Новый заголовок</span>&lt;/u></mark>&lt;/h1> <br>
+			 </code>
 			</td>
-			`
+
 			<td rowspan="1" style="width: 300px; color: #555;">
 					Создаёт вложенные html-теги и меняет содержимое
 			</td>
@@ -150,7 +152,30 @@
 					Меняет содержимое html-тегов, не создаёт вложенных. Даже если написать скобки &lt;, они будут отражены как символ
 			</td>
 		</tr>
-		
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.prepend()
+					<br><small style="color: #bbb;">добавление во внутрь в начало</small>
+			</td>
+			
+			<td style="width: 600px;">
+								
+								 <code>
+										 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
+											$('h1').<span class="red">prepend</span>('<span class="gray">&lt;span&gt;Some text&lt;/span&gt;</span>');<br>
+								 </code>
+								 <hr>
+								 <code>
+										&lt;h1><mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark><span class="gray">Заголовок</span>&lt;/h1>
+								 </code>
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Добавляет html-тег во внутрь выбранного элемента в начало
+			</td>
+		</tr>
+
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
 					.append()
@@ -165,7 +190,7 @@
 								 </code>
 								 <hr>
 								 <code>
-										 &lt;h1><span class="gray">Новый заголовок</span><mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark>&lt;/h1>
+										 &lt;h1><span class="gray">Заголовок</span><mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark>&lt;/h1>
 								 </code>
 			</td>
 			
@@ -174,28 +199,7 @@
 			</td>
 		</tr>
 	 
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.prepend()
-					<br><small style="color: #bbb;">добавление во внутрь в начало</small>
-			</td>
-			
-			<td style="width: 600px;">
-								
-								 <code>
-										 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
-											$('h1').<span class="red">prepend</span>('<span class="gray">&lt;span&gt;Some textк&lt;/span&gt;</span>');<br>
-								 </code>
-								 <hr>
-								 <code>
-										&lt;h1><mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark><span class="gray">Новый заголовок</span>&lt;/h1>
-								 </code>
-			</td>
-			
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Добавляет html-тег во внутрь выбранного элемента в начало
-			</td>
-		</tr>
+
 		
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
@@ -266,72 +270,18 @@
 			</td>
 			
 			<td style="width: 600px;">
-								 <code>
-									 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
-									 $('h1').<span class="red">replaceWith</span>('<span class="gray">&lt;p>New tag&lt;/p></span>');<hr>
-									 <mark>&lt;p><span class="gray">New tag</span>&lt;/p></mark>
-								 </code>
+			 <code>
+				 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
+				 $('h1').<span class="red">replaceWith</span>('<span class="gray">&lt;p>New tag&lt;/p></span>');<hr>
+				 <mark>&lt;p><span class="gray">New tag</span>&lt;/p></mark>
+			 </code>
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
 				Заменяет выбранный html-тег на новый
 			</td>
 		</tr>
-		
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.addClass()
-			</td>
-			
-			<td style="width: 600px;">
-								 <code>
-									 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
-									 $('h1').<span class="red">addClass</span>('<span class="gray">title</span>');<hr>
-									 &lt;h1 <mark>class="title"</mark>><span class="gray">Заголовок</span>&lt;/h1>
-								 </code>
-			</td>
-			
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Добавляет класс выбранному элементу
-			</td>
-		</tr>
-		
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.removeClass()
-			</td>
-			
-			<td style="width: 600px;">
-								 <code>
-									 &lt;h1 class="title"><span class="gray">Заголовок</span>&lt;/h1> <br>
-									 $('h1').<span class="red">removeClass</span>('<span class="gray">title</span>');<hr>
-									 &lt;h1><span class="gray">Заголовок</span>&lt;/h1>
-								 </code>
-			</td>
-			
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Удаляет класс у выбранного элемента
-			</td>
-		</tr>
 
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.toggleClass()
-			</td>
-			
-			<td style="width: 600px;">
-				<code>
-					 &lt;h1 class="<mark>title-big</mark>"><span class="gray">Заголовок</span>&lt;/h1> <br>
-					 $('h1').<span class="red">toggleClass</span>('<span class="gray">title-small</span>');<hr>
-					 &lt;h1 class="<mark>title-small</mark>"><span class="gray">Заголовок</span>&lt;/h1>
-				 </code>
-			</td>
-			
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Переключает класс
-			</td>
-		</tr>
-		
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
@@ -373,16 +323,127 @@
 		</tr>
 
 		<tr>
-			<th colspan="4" style="font-size: 2em;">Стилизация </th>
+			<th colspan="4" style="font-size: 2em;">DOM-манипуляции</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.parent()
+			</td>
+			<td style="width: 600px;">Родитель</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Возвращает массив</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.parents()
+			</td>
+			<td style="width: 600px;">Все родители</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Возвращает массив</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.children()
+			</td>
+			<td style="width: 600px;">Все потомки</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.siblings()</td>
+			<td style="width: 600px;">Все родственники на одном уровне</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.eq()
+			</td>
+			<td style="width: 600px;"><code>
+				$("div").eq(8);<br>
+				$("#nav").children().eq(2);
+			</code></td>
+			<td rowspan="1" style="width: 300px; color: #555;">Выбрать 9-й div во всём документе<br>
+			Выбрать третий дочерний элемент внутри элемента с id="nav"</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.empty()</td>
+			<td style="width: 600px;">Удалить потомков</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.next()<br>.prev()</td>
+			<td style="width: 600px;">Следующий/Предыдущий элемент на одном уровне</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.nextAll()<br>.prevAll()</td>
+			<td style="width: 600px;">Следующие/Предыдущие элементы на одном уровне</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+		</tr>
+
+		<tr>
+			<th colspan="4" style="font-size: 2em;">CSS-манипуляции</th>
 		</tr>
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.css({ "padding" : 10px })
+					.addClass()
 			</td>
 			
 			<td style="width: 600px;">
-				<code>$('h1').<span class="red">css</span>(<span class="gray">'border', '1px solid #000'</span>);</code>
+			 <code>
+				 &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
+				 $('h1').<span class="red">addClass</span>('<span class="gray">title</span>');<hr>
+				 &lt;h1 <mark>class="title"</mark>><span class="gray">Заголовок</span>&lt;/h1>
+			 </code>
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Добавляет класс выбранному элементу
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.removeClass()
+			</td>
+			
+			<td style="width: 600px;">
+			 <code>
+				 &lt;h1 class="title"><span class="gray">Заголовок</span>&lt;/h1> <br>
+				 $('h1').<span class="red">removeClass</span>('<span class="gray">title</span>');<hr>
+				 &lt;h1><span class="gray">Заголовок</span>&lt;/h1>
+			 </code>
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Удаляет класс у выбранного элемента
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.toggleClass()
+			</td>
+			
+			<td style="width: 600px;">
+				<code>
+					 &lt;h1 class="<mark>title-big</mark>"><span class="gray">Заголовок</span>&lt;/h1> <br>
+					 $('h1').<span class="red">toggleClass</span>('<span class="gray">title-small</span>');<hr>
+					 &lt;h1 class="<mark>title-small</mark>"><span class="gray">Заголовок</span>&lt;/h1>
+				 </code>
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Переключает класс
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.css()
+			</td>
+			
+			<td style="width: 600px;">
+				<code>$('h1').<span class="red">css</span>(<span class="gray">'border', '1px solid #000'</span>);</code><pre><code><span class="gray">// передать несколько свойств</span>
+$('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border":"1px solid red"}</span>);</code></pre>
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
@@ -392,14 +453,26 @@
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.height(), .innerHeight()
+				.height()<br>.innerHeight()<br>.outerHeight()
 			</td>
 			
 			<td style="width: 600px;">
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Высота элемента,<br>Полная высота (с padding)
+				Высота элемента,<br>Высота (с padding)<br>Полная высота (с padding и border)
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+				.width()<br>.innerWidth()<br>.outerWidth()
+			</td>
+			
+			<td style="width: 600px;">
+			</td>
+			
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Ширина элемента,<br>Ширина (с padding),<br>Полная ширина (с padding и border)
 			</td>
 		</tr>
 
@@ -417,111 +490,9 @@
 			</td>
 		</tr>
 
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.fadeIn() <br>
-					.fadeOut()
-			</td>
-			
-			<td style="width: 600px;">
-			</td>
-				<code>$("h1").fadeOut(1000)</code>
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Плавное исчезновение\появление элемента, значение в милисекундах
-			</td>
-		</tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-				.offset().top;
-			</td>
-			
-			<td style="width: 600px;">
-				<code>
-					<span class="gray">// Значение отступа в пикселях от верха окна браузера до .some-class сохраняем в переменную someVar</span><br>
-					var <span class="red">someVar</span> = $(".some-class").<span class="red">offset().top</span>;
-				</code>
-			</td>
-				<code>$("h1").fadeOut(1000)</code>
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Вертикальный отступ 
-			</td>
-		</tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-				.animate()
-			</td>
-			
-			<td style="width: 600px;"></td>
-			<td rowspan="1" style="width: 300px; color: #555;">Анимации</td>
-		</tr>
-
-		
-		</table>
-		
-		<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>
-		<pre class="code"><code><span>// До одного блока</span>
-$(function() {
-  $("<b>.link-class</b>").on("<b>click</b>", function(event) { <span>// анонимная функция</span>
-    <span>// сброс настроек</span>
-    event.preventDefault();
-
-    <span>// сохраняем расстояние до h1 в переменную</span>
-    var <mark>scrollToBlock</mark> = $("<b>.block-class</b>").offset().top;
-
-    <span>// скролим тело документа (html и body для кроссбраузерности) на расстояние scrollHight 500млс</span>
-    $("<b>html, body</b>").animate({ scrollTop: <mark>scrollToBlock</mark> }, 500);
-  });
-});
-<hr><span>// Если нужны разные скролы по нескольким ссылкам</span>
-$(function() {
-  <span>// вставляем общий селектор для всех ссылок меню</span>
-  $("<b>ul.menu a</b>").on("<b>click</b>", function(event) { 
-    <span>// сброс настроек</span>
-    event.preventDefault();
-
-    <span>// сохраняем id блока, это будет значение атрибута href кликнутой ссылки, 
-    // ссылки должны быть связаны с блоками по id</span>
-    var <mark>currentBlock</mark> = $(this).attr('href');
 
 
-    <span>// делаем выборку элемента по сохранённому id, и вычисляем до него расстояние </span>
-    var <mark>topHeight</mark> = $(<mark>currentBlock</mark>).offset().top;
-
-    <span>// скролим при клике до нужного блока</span>
-    $("<b>html, body</b>").animate({ scrollTop: <mark>topHeight</mark> + 20}, 500);
-  });
-});</code></pre>
-
-
-	<h2>2. Фиксированное меню при скролле</h2>
-	<span class="gray">// Fixed header when scroll</span>
-	<pre class="code"><code>$(function() {
-  <span>// сохранем значение высоты хэдера в var</span>
-  var <mark>headerHeight</mark> = $("<b>.page-header</b>").innerHeight(); <span>// или height()</span>
-
-  <span>// улавливаем событие скрола</span>
-  $(document).on("<b>scroll</b>", function() {
-    <span>// текущее значение высоты скрола от верха окна при скроле</span>
-    var <mark>documentScroll</mark> = $(this).scrollTop();
-
-    <span>// Если высота скрола > высоты хэдера</span>
-    if(<mark>documentScroll</mark> > <mark>headerHeight</mark>) {
-      <span>// добавляем класс хедеру</span>
-      $("<b>.page-header</b>").addClass("fixed"); 
-
-      <span>// и padding для body на высоту хэдера (т.к. фикс. хэдер выходит из потока)</span>
-      $("<b>body</b>").css("paddingTop", headerHeight);  
-    } esle {
-      $("<b>.page-header</b>").removeClass("fixed");
-      $("<b>body</b>").css({"paddingTop": 0});
-    }
-  });
-});</code></pre>
-
-
-
+	</table>
 
 	</div>
 </div>
