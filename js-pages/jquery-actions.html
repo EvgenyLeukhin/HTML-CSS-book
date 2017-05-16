@@ -88,17 +88,47 @@ JQuery basics</a></li>
 		<tr>
 
 		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">
+				Click
+			</td>
+			
+			<td style="width: 600px;">
+				<code>$('p').<span class="red">click</span>(function() {<br>
+&nbsp;&nbsp;$(<span class="red">this</span>).slideUp();<br>
+});</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Метод для события клик</td>
+
+		</tr>
+
+		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.on()</td>
 			<td style="width: 600px;">
+				<code>
+					$("<span class="gray">.link-js</span>").<span class="red">on</span>("<span class="red">click</span>", function(<span class="red">event</span>) {<br>
+					&nbsp;&nbsp;<span class="red">event</span>.preventDefault(); <br>
+					&nbsp;&nbsp;$(<span class="red">this</span>).text("<span class="gray">Click</span>");<br>
+					});<br><br>
+
+					<span class="gray">// с методом on() можно навешивать сразу несколько событий через пробел</span><br>
+					$(<span class="red">this</span>).<span class="red">on</span>('<mark>click mouseover mouseout</mark>', function(e) { ...
+				</code>
 			</td>
-			<td rowspan="1" style="width: 300px; color: #555;"></td>
+			<td rowspan="1" style="width: 300px; color: #555;">с методом on() можно навешивать сразу несколько событий через пробел</td>
+			
 		</tr>
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.off()</td>
 			<td style="width: 600px;">
+				<code><span class="gray">// событие клика будет отслеживаться только 1 раз</span>
+					$('p').<span class="red">click</span>(function() {<br>
+					&nbsp;&nbsp;$(<span class="red">this</span>).after('<span class="gray">&lt;p&gt;Some text&lt;/p&gt;</span>');<br>
+					&nbsp;&nbsp;$(<span class="red">this</span>).off();<br>
+					});
+				</code>
 			</td>
-			<td rowspan="1" style="width: 300px; color: #555;"></td>
+			<td rowspan="1" style="width: 300px; color: #555;">Убирает элементы для отслеживания на события, которые были заданы ранее</td>
 		</tr>
 
 		<tr>
@@ -108,26 +138,6 @@ JQuery basics</a></li>
 			<td rowspan="1" style="width: 300px; color: #555;"></td>
 		</tr>
 
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">
-				Click
-			</td>
-			
-			<td style="width: 600px;">
-				<code>
-					$("<span class="gray">.link-js</span>").<span class="red">on</span>("<span class="red">click</span>", function(<span class="red">event</span>) {<br>
-					&nbsp;&nbsp;<span class="red">event</span>.preventDefault(); <br>
-					&nbsp;&nbsp;$(<span class="red">this</span>).text("<span class="gray">Click</span>");<br>
-					});
-				</code>
-			</td>
-
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Событие для клика на объект<br>
-				<span class="red">this</span> - означает обращение к тому же селектору <code>$(<span class="gray">"h1"</span>)</code><br>
-				<span class="gray">// <code>event.preventDefault()</code> - убирает стандартное поведение ссылок</span>
-			</td>
-		</tr>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Mouse actions</td>
 			<td style="width: 600px;">
