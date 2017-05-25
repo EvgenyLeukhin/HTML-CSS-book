@@ -755,11 +755,12 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 			Склонировать себе на локальный сервер (disk:/OpenServer/domains)<br>
 			<code>git clone ssh://provisov/sites/...</code>
 		</li>
-		<li>Добавить локальный домен для данной директории <b>somesite.loc</b></li>
+		<li>Добавить локальный домен для данной директории <code>somesite.loc =&gt; some_dir/<mark>frontend/web</mark></code></li>
 		<li>
 			Скачать базу данных <b>sql</b> либо с админки хостинга (<b>cPanel</b> (https://ru.reserver.ru:2083/) <b>- PhpMyAdmin - БД - Экспорт</b>), либо найти её в склонированном репозитории<br>
 			<mark>Или скачать сайт полностью</mark> <b>(Дисп. файлов</b> - <b>sites</b> - <b>ПКМ</b> - <b>Compress</b> - <b>Перезагрузка)</b> (не забыть удалить архив на хостинге после копирования) <br>
 			после этого поменять настройки в <code>web/index.php <b>(env -> dev)</b> и <b>(false -> true)</code></b><br>
+			Также посмотреть файлы <mark>dbconn.php</mark> и <mark>.settings.php</mark>, если они есть, то поменять настройки (database('some_name'), login('root'), password(''), host('localhost')) <br>
 			Удалить БД в PhpMyAdmin <b>Операции - Удалить БД</b> (если потребуется)
 		</li>
 		<li>Подключить данную БД к админке локального сервера <b>(OpenServer - PhpMyAdmin - БД - Создать БД - Импорт)</b></li>
@@ -792,10 +793,11 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 	<hr>
 	
 	<h2>Заливать проекты на хостинг</h2>
+	<h2>Provisov</h2>
 	<ol class="ferma">
 		<li>
 			Заходим в админку хостинга: <b>https://ru.reserver.ru:2083/</b><br>
-			Имя: <b>fermas</b> &nbsp;&nbsp;-&nbsp;&nbsp; Пароль: <b>???????</b> &nbsp;&nbsp;-&nbsp;&nbsp;
+			Имя: <b>fermas</b> &nbsp;&nbsp;-&nbsp;&nbsp; Пароль: <b>v7JXFVGgYE</b> &nbsp;&nbsp;-&nbsp;&nbsp;
 			<b>Поддомены</b> &nbsp;&nbsp;-&nbsp;&nbsp; Поддомен: пишем название (<b>somesite</b>) &nbsp;&nbsp;-&nbsp;&nbsp;	Домен: <b>fermastudio.ru</b> &nbsp;&nbsp;-&nbsp;&nbsp;
 			Корень документа: <b>sites/somesite</b> &nbsp;&nbsp;-&nbsp;&nbsp; Создать
 		</li>
@@ -814,6 +816,15 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 			<code>git checkout production</code>
 		</li>
 		<li>Запускаем в браузере адрес: <code>somesite.fermastudio.ru</code></li>
+	</ol>
+
+	<h2>Webtime</h2>
+	<ol class="ferma">
+		<li>
+			Заходим в админку хостинга: <b>https://cp.timeweb.ru/login.php</b><br>
+			Имя: <b>mikluho</b> &nbsp;&nbsp;-&nbsp;&nbsp; Пароль: <b>acw4t578y289a4</b> &nbsp;&nbsp;-&nbsp;&nbsp;
+		</li>
+		<li>Остальное всё также</li>
 	</ol>
 
 	<h2>Ветки</h2>
