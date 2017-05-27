@@ -30,15 +30,13 @@
 		<li><a href="../design-page.html">WEB-DESIGN</a></li>
 		<li><a href="../html-page.html">HTML</a></li>
 		<li><a href="../css-page.html">CSS</a></li>
-				<li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
 		
 	</ul>
 	</div>
 </div>
-
 <div class="layout-positioner clearfix">
 	<div class="vert-menu-cont">
 		<ul class="vert-menu">
@@ -83,7 +81,7 @@ JQuery basics</a></li>
 						</li>
 						<li><a href="ajax.html">Ajax</a></li>
 						<li><a href="canvas.html">Canvas</a></li>
-						<li><a class="active" href="git.html">Git</a></li>
+						<li><a class="active" href="git.html">Git + SSH</a></li>
 						<li><a href="console.html">Консоль</a></li>
 						<li><a href="project.html">Новый проект</a></li>
 					</ul>
@@ -91,12 +89,164 @@ JQuery basics</a></li>
 	</div>
 	<div class="content clearfix">
 	
-	<h2>Мой Справочник | JavaScript | Git</h2>
+	<h2>Мой Справочник | JavaScript | Git + SSH</h2>
 	
 	<table class="css3-table">
-					 
+		<tr>
+			<th class="css3-table-title" colspan="3">Git - Real use</th>
+		</tr>
+		<tr>
+			<td><code>git config --list</code></td>
+			<td>Показывает список конфигураций</td>
+			<td><h3>Настройка</h3></td>
+		</tr>
+		<tr>
+			<td><code>git config --global user.name "Username"</code></td>
+			<td>Установить глобальное имя пользователя</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git config --global user.email "user@email.com"</code></td>
+			<td>Установить глобально адрес почты пользователя</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git init</code></td>
+			<td>Создание гит-репозитория (инициализация)</td>
+			<td><h3>Создание репозитория</h3></td>
+		</tr>
+		<tr>
+			<td><code>git init --bare</code></td>
+			<td>Создание гит-репозитория, будет храниться только история, не будет файлов проекта</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git remote add <i>rep_name rep_adress</i></code></td>
+			<td>Привязать локальный репозиторий к удалённому</td>
+			<td><h3>Привязка репозитория</h3></td>
+		</tr>
+		<tr>
+			<td><code>git remote rm <i>rep_name</i></code></td>
+			<td>Отвязать локальный репозиторий от удалённого</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git remote -v</code></td>
+			<td>Показать все привязанные репозитории</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git clone <i>rep_adress</i></code></td>
+			<td>Cклонировать репозиторий с адресои <i>rep_adress</i></td>
+			<td><h3>Клонирование репозитория</h3></td>
+		</tr>
+		<tr>
+			<td><code>git status</code></td>
+			<td>Статус файлов на изменение</td>
+			<td><h3>Статус</h3></td>
+		</tr>
+		<tr>
+			<td><code>git add <i>filename1 filename2</i></code></td>
+			<td>Добавить изменнённые файлы к отслеживаемым на отправку изменений перед коммитом</td>
+			<td><h3>Отслеживание файлов</h3></td>
+		</tr>
+		<tr>
+			<td><code>git add .</code></td>
+			<td>Добавить все изменнённые файлы к отслеживаемым на отправку изменений перед коммитом</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git rm --cached <i>filename1 filename2</i></code></td>
+			<td>Убрать из отслеживаемых, если случайно добавили не те файлы перед комитом</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git commit -m "massage"</code></td>
+			<td>Коммит файлов - сохранение изменений в историю с комментарием</td>
+			<td><h3>Сохранение версий</h3></td>
+		</tr>
+		<tr>
+			<td><code>git push <i>rep_name branc_name</i></code></td>
+			<td>Отравление истории изменений файлов (или самих изменнённых файлов) в удалённый репозиторий <i>rep_name</i> в ветку <i>branc_name</i></td>
+			<td><h3>Отправка изменений</h3>Эту команду нельзя сделать, если версия на уд. реп. отличается от версии на лок. реп. (Необходимо отправить все изменения в лок. реп.)</td>
+		</tr>
+		<tr>
+			<td><code>git&nbsp;push&nbsp;<i>rep_name&nbsp;local_branc_name:server_branc_name</i></code></td>
+			<td>... из указанной ветки лок. реп. в указанную ветку уд. реп.</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git push -u <i>rep_name branc_name</i></code></td>
+			<td>... с сохранением ветки лок. реп. и уд. реп. для команды <code>push</code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git push</code></td>
+			<td>Если делалась до этого команда <code>git push -u <i>rep_name branc_name</i></code>, то можно писать команду сокращенно</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git pull <i>rep_name branc_name</i></code></td>
+			<td>Принять все изменения с уд. реп. с указанной ветки и влить в одноименную ветку на лок. реп. (Уравнять версии)</td>
+			<td><h3>Получение изменений</h3></td>
+		</tr>
+		<tr>
+			<td><code>git branch</code></td>
+			<td>Узнать ветки, текущую ветку</td>
+			<td><h3>Ветки</h3></td>
+		</tr>
+		<tr>
+			<td><code>git branch <i>branch_name</i></code></td>
+			<td>Создать новую ветку</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git branch -d <i>branch_name</i></code></td>
+			<td>Удалить указанную ветку</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git checkout <i>branch_name</i></code></td>
+			<td>Переключиться в указанную ветку</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git merge <i>branch_name</i></code></td>
+			<td>Влить указанную ветку в текущую, ветка будет влита в основную, но не удалена, нужно удалять вручную</td>
+			<td><h3>Слияние веток</h3></td>
+		</tr>
+		<tr>
+			<td><code>git merge <i>branch_name</i> --ff-only</code></td>
+			<td>... принудительно</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git hist</code></td>
+			<td>История коммитов</td>
+			<td><h3>Версии</h3></td>
+		</tr>
+		<tr>
+			<td><code>git checkout <i>commit_hash</i></code></td>
+			<td>Временный переход на указанный коммит</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git checkout <i>branch_name</i></code></td>
+			<td>Переход в последний коммит в указанный ветке</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="css3-table-title" colspan="3">SSH</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+
 						<tr>
-								<th class="css3-table-title" colspan="3">Настройка</th>
+							<th class="css3-table-title" colspan="3">Настройка</th>
 						</tr>
 						<tr>
 								<td class="col1" colspan="3">
