@@ -52,15 +52,174 @@
 
       <h2>Мой Справочник | HTML | Графика SVG</h2>
 
+       <table class="discription-table">
+        <caption>svg-html</caption>
+        <tr>
+          <th>Теги</th>
+          <th>Описание</th>
+          <th>Атрибуты</th>
+          <th>Описание</th>
+        </tr>
+        <tr>
+          <td>&lt;svg&gt;</td>
+          <td>контейнер для svg-тегов</td>
+          <td>width, height</td>
+          <td>Размеры контейнера</td>
+        </tr>
+        <tr>
+          <td>&lt;circle&gt;</td>
+          <td>круг</td>
+          <td>
+            cx="50%"<br>
+            cy="50%"<br>
+            r="50"<br>
+            fill="red"
+          </td>
+          <td>
+            x-координата<br>
+            y-координата<br>
+            размер радиуса<br>
+            заливка
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;rect&gt;</td>
+          <td>прямоугольник</td>
+          <td>
+            height="100px" <br>
+            width="150px" <br>
+            x=25% <br>
+            y="30" <br>
+            rx="15" ry="10" <br>
+            fill="green"
+          </td>
+          <td>
+            высота <br>
+            ширина <br>
+            x-координата (левого верхнего угла)<br>
+            y-координата (левого верхнего угла)<br>
+            радиусы скругления углов<br>
+            заливка
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;polygon&gt;</td>
+          <td>многоугольник</td>
+          <td>
+            points="x1,y1 ..." <br>
+            fill="maroon"
+          </td>
+          <td>
+            координаты точек<br>
+            заливка
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;ellipse&gt;</td>
+          <td>эллипс</td>
+          <td>
+            rx="80" <br>
+            ry="20" <br>
+            cx="" cy="" <br>
+            fill="lightgray"</td>
+          <td>
+            x-радиус <br>
+            y-радиус <br>
+            координаты центра <br>
+            заливка
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;line&gt;</td>
+          <td>линия</td>
+          <td>
+            x1="50" y1="50"  <br>
+            x2="250 " y2="100"  <br>
+            stroke="deeppink"  <br>
+            stroke-width="6"
+          </td>
+          <td>
+            координаты начала <br>
+            координаты конца <br>
+            цвет линии <br>
+            ширина
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;polyline&gt;</td>
+          <td>ломанная</td>
+          <td>
+            points <br>
+            stroke <br>
+            stroke-width <br>
+            fill
+          </td>
+          <td>
+            координаты точек <br>
+            цвет  <br>
+            ширина <br>
+            заливка
+          </td>
+        </tr>
+      </table>
+
+      <table class="discription-table">
+        <caption>svg-css</caption>
+        <tr>
+          <th>Теги</th>
+          <th>css</th>
+          <th>Описание</th>
+        </tr>
+        <tr>
+          <td>svg</td>
+          <td><code style="font-size: 1.2em;">
+<span class="red">svg</span> {<br>
+&nbsp;&nbsp;border: 1px solid #000;<br>
+&nbsp;&nbsp;width: 200px;<br>
+&nbsp;&nbsp;height: 200px;<br>
+}
+          </code>
+          </td>
+          <td style="color: #000; font-weight: normal;">Можно применять любые доступные css-свойства</td>
+        </tr>
+        <tr>
+          <td>circle, ellipse, rect, polygon, line, polyline</td>
+          <td><code style="font-size: 1.2em;">
+<span class="red">.svg-elem</span> {<br>
+&nbsp;&nbsp;fill: yellowgreen;<br>
+&nbsp;&nbsp;fill-opacity: .5;<br>
+&nbsp;&nbsp;stroke: orange;<br>
+&nbsp;&nbsp;stroke-width: 5;<br>
+&nbsp;&nbsp;stroke-opacity: 0.5;<br>
+&nbsp;&nbsp;stroke-linecap: round;<br>
+&nbsp;&nbsp;stroke-linejoin: bevel;<br>
+&nbsp;&nbsp;stroke-dasharray: 15 15;<br>
+}
+          </code>
+          </td>
+          <td style="color: #000; font-weight: normal; width: 500px" >
+            <b>fill</b> - заливка (none - без заливки);<br>
+            <b>fill-opacity</b>&nbsp;-&nbsp;прозрачность&nbsp;заливки;<br>
+            <b>stroke</b> - цвет;<br>
+            <b>stroke-width</b> - толщина обводки;<br>
+            <b>stroke-opacity</b> - прозрачность обводки;<br>
+            <b>stroke-linecap</b>&nbsp;-&nbsp;концы&nbsp;линий&nbsp;(butt&nbsp;-&nbsp;по ум*,&nbsp;round&nbsp;-&nbsp;закруглённые, square - квадратные);<br>
+            <b>stroke-linejoin</b> - вид изгибов (miter - по ум*, round - закруглённые, bevel - ленточный изгиб);<br>
+            <b>stroke-dasharray</b> - пунктир (длина отрезка длина пробела)
+
+          </td>
+        </tr>
+      </table>
+
       <h3>Окружность</h3>
       <svg style="border: 1px solid black">
         <circle cx="50%" cy="50%" r="50" fill="red" />
       </svg>
       <br>
       <code>
-		&ltsvg <span class="red">style="border: 1px solid black"</span>&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltcircle <span class="red">cx="50%" cy="50%" r="50" fill="red"/</span>&gt;<br>
-		&lt/svg&gt;
+		&lt;svg <span class="red">style="border: 1px solid black"</span>&gt;<br>
+			&nbsp;&nbsp;&lt;circle <span class="red">cx="50%" cy="50%" r="50" fill="red"/</span>&gt;<br>
+		&lt;/svg&gt;
 	</code>
 
       <h3>Прямоугольник</h3>
@@ -69,9 +228,9 @@
       </svg>
       <br>
       <code>
-		&ltsvg <span class="red">style="border: 1px solid black"</span>&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltrect <span class="red">height="100px" width="150px" x=25% y="30" rx="15" ry="10" fill="green"/</span>&gt;<br>
-		&lt/svg&gt;
+		&lt;svg <span class="red">style="border: 1px solid black"</span>&gt;<br>
+			&nbsp;&nbsp;&lt;rect <span class="red">height="100px" width="150px" x=25% y="30" rx="15" ry="10" fill="green"/</span>&gt;<br>
+		&lt;/svg&gt;
 	</code>
 
       <h3>Многоугольники</h3>
@@ -81,10 +240,10 @@
       </svg>
       <br>
       <code>
-		&ltsvg <span class="red">style="border: 1px solid black"</span>&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltpolygon <span class="red">points="230,30 200,60 260,60" fill="maroon"</span>/&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltpolygon <span class="red">points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" fill="chocolate"</span>/&gt;<br>
-		&lt/svg&gt;
+		&lt;svg <span class="red">style="border: 1px solid black"</span>&gt;<br>
+			&nbsp;&nbsp;&lt;polygon <span class="red">points="230,30 200,60 260,60" fill="maroon"</span>/&gt;<br>
+			&nbsp;&nbsp;&lt;polygon <span class="red">points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" fill="chocolate"</span>/&gt;<br>
+		&lt;/svg&gt;
 	</code>
 
       <h3>Эллипсы</h3>
@@ -93,9 +252,9 @@
       </svg>
       <br>
       <code>
-	&ltsvg <span class="red">style="border: 1px solid black"</span>&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltellipse <span class="red">rx="80" ry="20" cx="50%" cy="50%" fill="lightgray"</span>/&gt;<br>
-	&lt/svg&gt;
+	&lt;svg <span class="red">style="border: 1px solid black"</span>&gt;<br>
+			&nbsp;&nbsp;&lt;ellipse <span class="red">rx="80" ry="20" cx="50%" cy="50%" fill="lightgray"</span>/&gt;<br>
+	&lt;/svg&gt;
 	</code>
 
       <h3>Линии</h3>
@@ -103,9 +262,9 @@
         <line x1="50" y1="50" x2="250" y2="100" " stroke="deeppink " stroke-width="6 "/>
 	</svg><br>
 	<code>
-	&ltsvg <span class="red ">style="border: 1px solid black "</span>&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltline <span class="red "> x1="50 " y1="50 " x2="250 " y2="100 " stroke="deeppink " stroke-width="6 "</span>/&gt;<br>
-	&lt/svg&gt;
+	&lt;svg <span class="red ">style="border: 1px solid black "</span>&gt;<br>
+			&nbsp;&nbsp;&lt;line <span class="red "> x1="50 " y1="50 " x2="250 " y2="100 " stroke="deeppink " stroke-width="6 "</span>/&gt;<br>
+	&lt;/svg&gt;
 	</code>
 	
 	<h3>Ломанные</h3>
@@ -114,7 +273,7 @@
 	</svg><br>
 	<code>
 	&ltsvg <span class="red ">style="border: 1px solid black "</span>&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&ltpolyline <span class="red ">points="30,50 40,10 80,100 0,30 70,25 10,85 " stroke="pink " stroke-width="4 " fill="none "</span>/&gt;<br>
+			&nbsp;&nbsp;&lt;polyline <span class="red ">points="30,50 40,10 80,100 0,30 70,25 10,85 " stroke="pink " stroke-width="4 " fill="none "</span>/&gt;<br>
 	&lt/svg&gt;
 	</code>
 	
