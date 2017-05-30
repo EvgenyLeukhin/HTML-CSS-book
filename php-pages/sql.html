@@ -63,12 +63,31 @@
 		<div class="row">
 				<table class="table table-bordered table-condensed">
 					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">SQL</th>
+						<th class="lead  text-center  bg-primary" colspan="3">Подключение БД</th>
 					</tr>
 					<tr>
-						<td><b>SQL</b></td>
+						<td>Название файлов настроек баз данных в Битрикс</td>
 						<td>
+						<code style="font-size: 1em;">
+						.settings.php&nbsp;&nbsp;&nbsp;db-conn.php&nbsp;&nbsp;&nbsp;db_conn.php
+						</code>
 						</td>
+					</tr>
+					<tr>
+						<td>Название файлов настроек баз данных в Yii</td>
+						<td>
+						<code style="font-size: 1em;">
+						main-local.php <br>
+						</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Установка БД</td>
+						<td><ol>
+							<li>Скачать БД через админку хостинга в PhpMyAdmin (Экспорт);</li>
+							<li>Подключить БД к локальному серверу в PhpMyAdmin (импорт);</li>
+							<li>Сделать изменения в файлах подключения БД;</li>
+						</ol></td>
 					</tr>
 
 				</table>
@@ -82,7 +101,6 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 													 EvgenyLeukhin@yandex.ru</p>
-
 		<p class="footer-copyright">© 2017 Все права защищены</p>
 	</div>
 </div>
