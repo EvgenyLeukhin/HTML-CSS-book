@@ -216,7 +216,7 @@
         <br>
         <span class="red">[if !(IE 8)]</span> – НЕ 8-я версия
         <br>
-        <span class="red">[if (gt IE 5)&(lt IE 7)]</span> - 5-я И меньше 7-ой
+        <span class="red">[if (gt IE 5)&amp;(lt IE 7)]</span> - 5-я И меньше 7-ой
         <br>
       </p>
       <h3>Чтобы IE понимал новые теги HTML5</h3>
@@ -224,7 +224,30 @@
     &lt;!--<span class="red">[if lt IE 9]</span>&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="<span class="gray">//html5shiv.googlecode.com/svn/trunk/html5.js</span>"&gt;&lt;/script&gt;<br>
     &lt;<span class="red">![endif]</span>--&gt;
-    </code>
+    </code><br>
+    или записать скрипт + css:
+
+    <pre><code>&lt;!--[if lt IE 9]&gt;
+  &lt;script&gt;
+    var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      "progress,section,time,video").split(',');
+      for (var i = 0; i &lt; e.length; i++) {
+        document.createElement(e[i]);
+      }
+  &lt;/script&gt;
+&lt;![endif]--&gt;
+
+article,aside,details,figcaption,
+figure,footer,header,hgroup,menu,
+nav,section {
+  display:block;
+}
+    </code></pre>
+
+
+
+
 
       <h3>Несколько внешних стилей</h3> &lt;
       <span class="red">link rel="stylesheet" href="</span><span class="gray">css/styles.css</span>"&gt;
