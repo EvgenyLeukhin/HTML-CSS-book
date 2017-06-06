@@ -131,6 +131,38 @@ JQuery basics</a></li>
                     <code></code>
                 </td>
             </tr>
+            <tr>
+                <td colspan="3" style="color: black; font-weight: bold; width: 300px;">Архивация файлов</td>
+                <td class="col2">
+                	<code>tar -cf ~/some_arh.tar folder/</code> <br>
+                	или <br>
+                	<code>tar -czf ~/some_arh.tgz folder/</code> - создание архива с сжатием 
+                </td>
+                <td class="col3" style="color: #000; font-weight: normal;">
+									<b>tar</b> - команда архивировать <br>
+									<b>-cf</b> - создать несжимаемый архив <br>
+									<b>~/some_arh.tar</b> - файл архива <br>
+									<b>folder/</b> - какую директорию архивировать <br>
+									
+									
+                </td>
+            </tr>
+				    <tr>
+                <td colspan="3" style="color: black; font-weight: bold; width: 300px;">Скачать созданный архив через ssh-протокол</td>
+                <td class="col2">
+                	<code>scp okcenter:~/some-arh.tar .</code><br>
+                	или <br>
+                	<code>scp okcenter:~/some-arh.tgz .</code>
+                </td>
+                <td class="col3" style="color: #000; font-weight: normal;">
+									<b>scp</b> - команда скачать <br>
+									<b>okcenter</b> - ssh-хост <br>
+									<b>:~/some_arh.tar</b> - путь до файла <br>
+									<b>.</b> - скачать в текущую директорию
+									
+									
+                </td>
+            </tr>
         <tr>
           <th colspan="5" style="font-size: 2em; color: darkcyan;">node.js <span class="gray">в консоли</span></th>
         </tr>
