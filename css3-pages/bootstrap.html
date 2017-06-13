@@ -301,6 +301,49 @@
           </td>
           <td class="col3" style="width: 400px;"></td>
         </tr>
+        <tr>
+          <td class="col1" style="width: 120px;"><b>ПЕРЕМЕННЫЕ</b></td>
+          <td class="col2" style="width: 800px;">
+            <pre>
+<code><span class="text-danger">@grid-columns</span> = 12;</code>             <span class="text-muted">// кол-во колонок по ум*</span>
+<code><span class="text-danger">@grid-gutter-width</span> = 30px;</code>      <span class="text-muted">// расстояние между колонками</span>
+<code><span class="text-danger">@screen-sm</span> = 768px;</code>             <span class="text-muted">// small viewport</span>
+<code><span class="text-danger">@screen-md</span> = 992px;</code>             <span class="text-muted">// middle viewport</span>
+<code><span class="text-danger">@screen-lg</span> = 1200px;</code>            <span class="text-muted">// large viewport</span>
+            </pre>
+          </td>
+          <td>Убрать отступы между колонками (добавить класс):
+            <pre><code>.col-xs--p0 { padding: 0; }</code></pre>
+            <pre><code>.col-xs--pr0 { padding-right: 0; }</code></pre>
+            <pre><code>.col-xs--pl0 { padding-left: 0; }</code></pre>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="col1" style="width: 120px;"><b>ИМПОРТ less-файлов</b></td>
+          <td class="col2" style="width: 800px;">
+            <pre><code><span class="text-danger">@import</span> normalize.less;         // нормализатор</code></pre>
+            <pre><code><span class="text-danger">@import</span> scaffolding.less;       // базовые стили</code></pre>
+            <pre><code><span class="text-danger">@import</span> type.less;              // нормализатор</code></pre>
+            <pre><code><span class="text-danger">@import</span> grid.less;              // сетка</code></pre>
+            <pre><code><span class="text-danger">@import</span> tables.less;            // таблицы</code></pre>
+            <pre><code><span class="text-danger">@import</span> form.less;              // формы</code></pre>
+            <pre><code><span class="text-danger">@import</span> buttons.less;           // кнопки</code></pre>
+            <pre><code><span class="text-danger">@import</span> code.less;              // код</code></pre>
+            <br>
+            <pre><code><span class="text-danger">@import</span> add.less;               // изменения</code></pre>
+          </td>
+          <td>Поменять сетку на inline-block
+          <pre><code>
+<span class="text-danger">.row--inline-blocks</span> { font-size: 0; }
+<span class="text-danger">&gt; [class^="col-"]</span> {
+  float: none;
+  font-size: @font-size-base;
+  display: inline-block;
+  vertical-inline: top;
+}</code></pre>
+          </td>
+        </tr>
       </table>
       <h2>Значения ширины по умолчанию</h2>
       <img src="../img/bootstrap.png" alt="bootstrap">
