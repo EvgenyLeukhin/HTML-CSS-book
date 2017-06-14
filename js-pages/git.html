@@ -992,7 +992,7 @@ git remote add origin git@github.com:address.git <span class="pl-c"># добав
 		<li>
 			Заходим через консоль в корневую локальную директорию с разработкой (git должен там быть установлен) <br>
 			Связываем локальный git-репозиторий с удалённым на хостинге <code>git remote add hosting ssh://...</code> (вставляем скопированный путь) <br>
-			Пушим на хостинг в ветку production <code>git push hosting master:production</code>
+			Пушим на хостинг в ветку production <code>git push hosting master:production</code> <mark>(НЕЛЬЗЯ ПУШИТЬ В ТЕКУЩУЮ ВЕТКУ НА ХОСТИНГ, только в неактивную)</mark>
 		</li>
 		<li>
 			Заходим через консоль на хостинг и переключаем текущую ветку в <b>production</b> 
