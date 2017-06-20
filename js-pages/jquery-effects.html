@@ -110,57 +110,60 @@ JQuery basics</a></li>
 		</tr>
 
 		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-				.animate()
-			</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.animate()</td>
 			
-			<td style="width: 600px;"></td>
-			<td rowspan="1" style="width: 300px; color: #555;">Анимации</td>
+			<td style="width: 600px;">
+				<code>$('.test').<span class="red">animate</span>(<span class="gray">{top: '+=100px'}</span>, 2500);</code><br><br>
+				<span class="gray">// Временные функции</span><br>
+				<code>$('.test').<span class="red">animate</span>(<span class="gray">{top: '+=100px'}</span>, 2500, <span class="red">'swing'</span>);</code><br>
+				<code>$('.test').<span class="red">animate</span>(<span class="gray">{top: '+=100px'}</span>, 2500, <span class="red">'linear'</span>);</code><br>
+				
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Плавно меняет какое-либо css-свойство элемента<br>
+			swing - по ум*<br>
+			linear - линейная
+			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
 					.fadeIn() <br>
-					.fadeOut()
+					.fadeOut() <br>
+					.fadeToggle() <br>
+					.fadeTo()
 			</td>
 			
 			<td style="width: 600px;">
 				<code>$('.test').<span class="red">fadeIn</span>(2000);</code><br>
-				<code>$('.test').<span class="red">fadeOut</span>(2000);</code>
+				<code>$('.test').<span class="red">fadeOut</span>(2000);</code><br>
+				<code>$('.test').<span class="red">fadeToggle</span>('slow');</code><br>
+				<code>$('.test').<span class="red">fadeTo</span>('slow', .33);</code>
 			</td>
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Плавное исчезновение\появление элемента, значение в милисекундах
+				Плавное появление-исчезновение-переключение прозрачности элемента, значение в милисекундах<br>
+				'slow' - 600, <br>
+				'normal' - 400, <br>
+				'fast' - 200 <br>
+				Плавное изменение прозрачности
 			</td>
 		</tr>
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.slideUp()
+					.slideUp() <br>
+					.slideDown() <br>
+					.slideToggle()
 			</td>
 			
 			<td style="width: 600px;">
 				<code>$('.test').<span class="red">slideUp</span>(2000);</code>
 			</td>
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Исчезновение с прокруткой вверх
+				Исчезновение с прокруткой вверх, со скольжением
 			</td>
 		</tr>
 
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-				.offset().top;
-			</td>
-			
-			<td style="width: 600px;">
-				<code>
-					<span class="gray">// Значение отступа в пикселях от верха окна браузера до .some-class сохраняем в переменную someVar</span><br>
-					var <span class="red">someVar</span> = $(".some-class").<span class="red">offset().top</span>;
-				</code>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">
-				Вертикальный отступ 
-			</td>
-		</tr>
+		
 	</table>
 
 	<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>

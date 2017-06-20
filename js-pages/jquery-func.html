@@ -479,14 +479,32 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
 					.hide() <br>
-					.show()
+					.show() <br>
+					.toggle()
 			</td>
 			
 			<td style="width: 600px;">
+				<code>$('.test')<span class="red">.toggle</span>('slow');</code>
 			</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Скрыть-показать элемент (аналог display: none;)
+				Скрыть-показать элемент (аналог display: none;), .toggle() переключает эти состояния, можно указывать значения в милисекундах или ключевые слова
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+				.offset().top;
+			</td>
+			
+			<td style="width: 600px;">
+				<code>
+					<span class="gray">// Значение отступа в пикселях от верха окна браузера до .some-class сохраняем в переменную someVar</span><br>
+					var <span class="red">someVar</span> = $(".some-class").<span class="red">offset().top</span>;
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Вертикальный отступ 
 			</td>
 		</tr>
 
