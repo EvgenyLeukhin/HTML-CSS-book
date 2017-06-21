@@ -82,14 +82,13 @@
 			<li>
 			    <a class="active" href="#">jQuery</a>
 			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">
-
-JQuery basics</a></li>
+			        <li><a href="jquery-html.html">JQuery basics</a></li>
 			        <li><a href="jquery-func.html">jQuery-функции</a></li>
-                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+              <li><a href="jquery-actions.html">jQuery-события</a></li>
 			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                </ul>
+              <li><a href="jquery-forms.html">jQuery-формы</a></li>       
+              <li><a href="jquery-examples.html">Примеры</a></li>
+          </ul>
 			 </li>
 			 <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
@@ -165,66 +164,6 @@ JQuery basics</a></li>
 
 		
 	</table>
-
-	<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>
-		<pre class="code"><code><span>// До одного блока</span>
-$(function() {
-  $("<b>.link-class</b>").on("<b>click</b>", function(event) { <span>// анонимная функция</span>
-    <span>// сброс настроек</span>
-    event.preventDefault();
-
-    <span>// сохраняем расстояние до h1 в переменную</span>
-    var <mark>scrollToBlock</mark> = $("<b>.block-class</b>").offset().top;
-
-    <span>// скролим тело документа (html и body для кроссбраузерности) на расстояние scrollHight 500млс</span>
-    $("<b>html, body</b>").animate({ scrollTop: <mark>scrollToBlock</mark> }, 500);
-  });
-});
-<hr><span>// Если нужны разные скролы по нескольким ссылкам</span>
-$(function() {
-  <span>// вставляем общий селектор для всех ссылок меню</span>
-  $("<b>ul.menu a</b>").on("<b>click</b>", function(event) { 
-    <span>// сброс настроек</span>
-    event.preventDefault();
-
-    <span>// сохраняем id блока, это будет значение атрибута href кликнутой ссылки, 
-    // ссылки должны быть связаны с блоками по id</span>
-    var <mark>currentBlock</mark> = $(this).attr('href');
-
-
-    <span>// делаем выборку элемента по сохранённому id, и вычисляем до него расстояние </span>
-    var <mark>topHeight</mark> = $(<mark>currentBlock</mark>).offset().top;
-
-    <span>// скролим при клике до нужного блока</span>
-    $("<b>html, body</b>").animate({ scrollTop: <mark>topHeight</mark> + 20}, 500);
-  });
-});</code></pre>
-
-
-	<h2>2. Фиксированное меню при скролле</h2>
-	<span class="gray">// Fixed header when scroll</span>
-	<pre class="code"><code>$(function() {
-  <span>// сохранем значение высоты хэдера в var</span>
-  var <mark>headerHeight</mark> = $("<b>.page-header</b>").innerHeight(); <span>// или height()</span>
-
-  <span>// улавливаем событие скрола</span>
-  $(document).on("<b>scroll</b>", function() {
-    <span>// текущее значение высоты скрола от верха окна при скроле</span>
-    var <mark>documentScroll</mark> = $(this).scrollTop();
-
-    <span>// Если высота скрола > высоты хэдера</span>
-    if(<mark>documentScroll</mark> > <mark>headerHeight</mark>) {
-      <span>// добавляем класс хедеру</span>
-      $("<b>.page-header</b>").addClass("fixed"); 
-
-      <span>// и padding для body на высоту хэдера (т.к. фикс. хэдер выходит из потока)</span>
-      $("<b>body</b>").css("paddingTop", headerHeight);  
-    } esle {
-      $("<b>.page-header</b>").removeClass("fixed");
-      $("<b>body</b>").css({"paddingTop": 0});
-    }
-  });
-});</code></pre>
 
 	</div>
 </div>
