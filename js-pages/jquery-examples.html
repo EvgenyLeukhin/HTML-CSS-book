@@ -68,7 +68,7 @@
             <li><a href="function.html">Функции</a></li>
 			<li><a href="object.html">Объекты</a></li>
             <li>
-                <a href="#">JS & HTML</a>
+                <a href="#">JS &amp; HTML</a>
                 <ul class="sub-menu sub-menu6">
                     <li><a href="complete.html">Вывод данных</a></li>
 			        <li><a href="dom.html">DOM</a></li>
@@ -90,7 +90,7 @@
               <li><a href="jquery-examples.html">Примеры</a></li>
           </ul>
 			 </li>
-			 <li><a href="ajax.html">Ajax</a></li>
+			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
 			 <li><a href="git.html">Git + SSH</a></li>
 			 <li><a href="console.html">Консоль</a></li>
@@ -162,6 +162,21 @@ $(function() {
     }
   });
 });</code></pre>
+
+<h2>3. Звёзды рейтинга</h2>
+<pre class="code"><code>$(document).ready(function() {
+  $("<b>.star-input</b>").on("click", function() {
+    <span>// выводим зачение поля в консоль</span>
+    console.log($(<b>this</b>).val());
+  });
+
+  $("<b>.star</b>").on("click", function() {
+    $(<b>this</b>).<mark>css</mark>('background-position', '-40px -5px');
+    $(<b>this</b>).<mark>nextAll</mark>().css('background-position', '-5px  -5px');
+    $(<b>this</b>).<mark>prevAll</mark>().css('background-position', '-40px -5px');
+  });
+});
+</code></pre>
 
 	</div>
 </div>

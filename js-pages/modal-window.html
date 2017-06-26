@@ -71,7 +71,7 @@
             <li><a href="function.html">Функции</a></li>
 			<li><a href="object.html">Объекты</a></li>
             <li>
-                <a class="active" href="#">JS & HTML</a>
+                <a class="active" href="#">JS &amp; HTML</a>
                 <ul class="sub-menu sub-menu6">
                     <li><a href="complete.html">Вывод данных</a></li>
 			        <li><a href="dom.html">DOM</a></li>
@@ -94,7 +94,7 @@ JQuery basics</a></li>
                     <li><a href="jquery-forms.html">jQuery-формы</a></li>               <li><a href="jquery-examples.html">Примеры</a></li>
                 </ul>
 			 </li>
-			 <li><a href="ajax.html">Ajax</a></li>
+			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
 			 <li><a href="git.html">Git + SSH</a></li>
 			 <li><a href="console.html">Консоль</a></li>
@@ -160,6 +160,41 @@ var <span class="red">modalWindowClose</span> = document.querySelector("<span cl
 });</pre></code>
             
 <p><mark>Если в браузере у посетителей отключится JS, нужно сделать так, чтобы окна могли открываться в <b>отдельных html-страницах без JS</b>.</mark></p>
+
+<p>
+	<h2>Слой-маска для затемнения экрана</h2>
+	<pre><code style="font-size: 120%;"><span class="red">.overlay</span> {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 888;
+}
+	</code></pre>
+
+	<h2>Стили для мод. окна</h2>
+	<pre><code style="font-size: 120%;"><span class="red">.modal</span> {
+  display: none;
+  position: fixed;
+  padding: 20px;
+  width: 300px;
+  margin-left: -150px;
+  top: 100px;
+  left: 50%;
+  z-index: 900;
+}
+	</code></pre>
+
+	<h2>Скрыть вертикальный скролл у боди, при появлении мод. окна</h2>
+	<pre><code style="font-size: 120%;"><span class="red">body</span>.open-modal {
+  overflow-y: hidden;
+  padding-right: 15px;
+}
+	</code></pre>
+</p>
 
             </div>
     
