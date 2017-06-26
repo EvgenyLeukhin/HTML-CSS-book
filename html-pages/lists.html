@@ -290,27 +290,38 @@
 
       </table>
 
-      <h3>Редактирование маркеров <i>(маркеры станут красными)</i></h3>
+      <h3>Редактирование маркеров у ul <i>(маркеры станут красными и поменяют вид)</i></h3>
       <code>
-<span class="red">ul li</span> {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;list-style-type: none;<br>
-}<br>
-<span class="red">ul li:before</span> {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;content: counter(item, disc) " ";<br>
+<span class="red">ul > li</span> {list-style-type: none;}<br>
+<span class="red">ul > li::before</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content: '&mdash; ';<br>
 &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
 }
 </code>
       <hr>
-      <code>
-<span class="red">ol li</span> {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;list-style-type: none;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;counter-increment: item;<br>
-}<br>
-<span class="red">ol li:before</span> {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;content: counter(item) ". ";<br>
-&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
-}<br>
-</code>
+      
+      
+<h3>Редактирование цифр у ol</h3>      
+<pre><code><span class="red">ol</span> {
+  <mark>counter-reset: myCounter;</mark>
+  margin-bottom: 60px;
+}
+<span class="red">ol > li</span> {list-style: none;}
+<span class="red">ol > li::before</span> {
+  <mark>counter-increment: myCounter;</mark>
+  <mark>content:counter(myCounter);</mark>
+  color: #ff7301;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  margin-left: 0;
+  font-size: 14px;
+  line-height: 14px;
+  width: 20px;
+  height: 20px;
+}
+</code></pre>
 
 
 
