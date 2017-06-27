@@ -177,6 +177,25 @@ $(function() {
   });
 });
 </code></pre>
+	
+<h2>4. Переключение радио-кнопок</h2>
+<pre class="code"><code>$(document).ready(function() {
+  var firstBtn  = $('<b>#btn-1</b>'),
+    secondBtn   = $('<b>#btn-2</b>'),
+    firstTitle  = $('<b>.js-autor-title1</b>'),
+    secondTitle = $('<b>.js-autor-title2</b>');
+ 
+  firstTitle.on('click', function() {
+    secondBtn.get(0).<b>checked</b> = false;
+    firstBtn.get(0).<b>checked</b> = true;
+  });
+  
+  secondTitle.on('click', function() {
+    firstBtn.get(0).<b>checked</b> = false;
+    secondBtn.get(0).<b>checked</b> = true;
+  });
+});
+</code></pre>
 
 	</div>
 </div>
