@@ -70,13 +70,12 @@
 						<li>
 							<a href="#">jQuery</a>
 							<ul class="sub-menu sub-menu7">
-								<li><a href="jquery-html.html">
-
-JQuery basics</a></li>
+								<li><a href="jquery-html.html">JQuery basics</a></li>
 								<li><a href="jquery-func.html">jQuery-функции</a></li>
 								<li><a href="jquery-actions.html">jQuery-события</a></li>
 								<li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-								<li><a href="jquery-forms.html">jQuery-формы</a></li>               <li><a href="jquery-examples.html">Примеры</a></li>
+								<li><a href="jquery-forms.html">jQuery-формы</a></li>
+								<li><a href="jquery-examples.html">Примеры</a></li>
 							</ul>
 						</li>
 						<li><a href="ajax.html">Ajax</a></li>
@@ -90,6 +89,9 @@ JQuery basics</a></li>
 	<div class="content clearfix">
 	
 	<h2>Мой Справочник | JavaScript | Git + SSH</h2>
+	<a href="https://git-scm.com/book/ru/v1/Введение-Установка-Git" target="_blank">Документация на русском</a>&nbsp;&nbsp;&nbsp;
+	<a href="https://githowto.com/ru" target="_blank">Ещё один ресурс</a>
+
 	
 	<table class="css3-table">
 		<tr>
@@ -250,6 +252,20 @@ JQuery basics</a></li>
 			<td>Сбросить репозиторий на состояние указанного коммита</td>
 			<td></td>
 		</tr>
+
+		<tr>
+			<th class="css3-table-title" colspan="3">Git-алиасы</th>
+		</tr>
+		<tr>
+			<td colspan="3"><code>git config alias.<b style="color: red;">zalit</b> '!(git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'</code></td>
+		</tr>
+
+		<tr>
+			<td colspan="3">После ввода в консоли команды <mark>git zalit</mark> выполнятся все команды, указанные в скобках (команды внутри ssh пишутся в кавычках). Это очень удобно! <br>
+			Все настройки можно посмотреть в файле <b>.git/config</b>
+			</td>
+		</tr>
+
 
 		<tr>
 			<th class="css3-table-title" colspan="3">SSH-протокол</th>
