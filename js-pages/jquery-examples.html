@@ -52,16 +52,15 @@
             <li>
                 <a href="#">Основы</a>
                 <ul class="sub-menu sub-menu9">
-                    <li><a href="js-lang.html">Язык JS</a></li>
-                    <li><a href="load.html">Загрузка</a></li>
-			        <li><a href="types.html">Типы данных</a></li>
-			        <li><a href="var.html">Переменные</a></li>
-			        <li><a href="operators.html">Операторы</a></li>
-			        
-			        <li><a href="algorythm.html">Алгоритмы</a></li>
-			        <li><a href="if-else.html">if - else, switch-case</a></li>
-			        <li><a href="cycle.html">Циклы</a></li>
-                    <li><a href="math.html">Math</a></li>
+                  <li><a href="js-lang.html">Язык JS</a></li>
+                  <li><a href="load.html">Загрузка</a></li>
+    			        <li><a href="types.html">Типы данных</a></li>
+    			        <li><a href="var.html">Переменные</a></li>
+    			        <li><a href="operators.html">Операторы</a></li>
+    			        <li><a href="algorythm.html">Алгоритмы</a></li>
+    			        <li><a href="if-else.html">if - else, switch-case</a></li>
+    			        <li><a href="cycle.html">Циклы</a></li>
+                  <li><a href="math.html">Math</a></li>
                 </ul>
             </li>
             <li><a href="array.html">Массивы</a></li>
@@ -70,25 +69,25 @@
             <li>
                 <a href="#">JS &amp; HTML</a>
                 <ul class="sub-menu sub-menu6">
-                    <li><a href="complete.html">Вывод данных</a></li>
-			        <li><a href="dom.html">DOM</a></li>
-			        <li><a href="html-methods.html">Методы</a></li>
-			        <li><a href="actions.html">События</a></li>
-			        <li><a href="modal-window.html">Мод. окно</a></li>
-			        <li><a href="forms.html">Формы</a></li>
+                  <li><a href="complete.html">Вывод данных</a></li>
+    			        <li><a href="dom.html">DOM</a></li>
+    			        <li><a href="html-methods.html">Методы</a></li>
+    			        <li><a href="actions.html">События</a></li>
+    			        <li><a href="modal-window.html">Мод. окно</a></li>
+    			        <li><a href="forms.html">Формы</a></li>
                 </ul>
             </li>
 			
 			<li>
-			    <a class="active" href="#">jQuery</a>
-			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">JQuery basics</a></li>
-			        <li><a href="jquery-func.html">jQuery-функции</a></li>
-              <li><a href="jquery-actions.html">jQuery-события</a></li>
-			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-              <li><a href="jquery-forms.html">jQuery-формы</a></li>       
-              <li><a href="jquery-examples.html">Примеры</a></li>
-          </ul>
+  	    <a class="active" href="#">jQuery</a>
+  	    <ul class="sub-menu sub-menu7">
+  	        <li><a href="jquery-html.html">JQuery basics</a></li>
+  	        <li><a href="jquery-func.html">jQuery-функции</a></li>
+            <li><a href="jquery-actions.html">jQuery-события</a></li>
+  	        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+            <li><a href="jquery-forms.html">jQuery-формы</a></li>       
+            <li><a href="jquery-examples.html">Примеры</a></li>
+        </ul>
 			 </li>
 			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
@@ -194,6 +193,24 @@ $(function() {
     firstBtn.get(0).<b>checked</b> = false;
     secondBtn.get(0).<b>checked</b> = true;
   });
+});
+</code></pre>
+
+<h2>5. Аккордион (НЕсамозакрывающийся)</h2>
+<pre class="code"><code><span>// нужно предварительно средствами css спрятать параграфы</span>
+$('.accordion h3').on('click', function() {
+  <span>// по клику на заголовок показываем следующий за ним параграф</span>
+  $(this).next().slideToggle(); 
+});
+</code></pre>
+
+<h2>5. Аккордион (Cамозакрывающийся)</h2>
+<pre class="code"><code>$('.accord p').hide()  <span>// прячем все параграфы средствами css и jq</span>
+              .prev() <span>// обращаемся к предыдущему элементу (заголовку)</span>
+              .on('click', function() { <span>// отслеживаем его по клику</span>
+  $('.accord p').not(<b>this</b>).slideUp();   <span>// прячем все параграфы, кроме текущего</span>
+  $(<b>this</b>).next().not('<b>:visible</b>').slideDown();  <span>// обращаемся к следующему за заголовком 
+  // элементу, за this (заголовок), это параграф и если он неотображенный, то будет показан</span>
 });
 </code></pre>
 
