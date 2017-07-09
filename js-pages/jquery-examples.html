@@ -214,6 +214,76 @@ $('.accordion h3').on('click', function() {
 });
 </code></pre>
 
+<h2>6. Модальное окно</h2>
+<pre class="code" style="float: left;"><code><span>// слой-маска для body</span>
+<b>.overlay</b> {
+  display: none;
+  background: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}</code></pre>
+
+<pre class="code" style="float: left;"><code><span>// мод. окно</span>
+<b>.modal</b> {
+  display: none;
+  position: fixed;
+  background: white;
+  width: 300px;
+  top: 100px;
+  left: 50%;
+  margin;left: -150px;
+  z-index: 1000;
+}
+<b>body.open-modal</b> {
+  overflow-y: hidden;
+  padding-right: 16px;
+}</code></pre>
+
+<pre class="code" style="float: left;"><code>$('<b>.js-show-modal</b>').on('click', function(e) {
+  e.preventDefault();
+  $('<b>js-modal, js-overlay</b>').fadeIn();
+  $('<b>body</b>').addClass('open-modal');
+});
+
+$('<b>.js-modal-close</b>').on('click', function(e) {
+  e.preventDefault();
+  $('<b>js-modal, js-overlay</b>').fadeOut();
+  $('<b>body</b>').removeClass('open-modal');
+});
+
+<span>// если мод. окон несколько с одним классом</span>
+$('<b>.js-show-modal</b>').on('click', function(e) {
+  e.preventDefault();
+  <span>// сохраняем значение атрибута в переменную</span>
+  var currentModal = $(this).attr('href');
+
+  $(<b>currentModal +  ', js-overlay</b>').fadeIn();
+  $('<b>body</b>').addClass('open-modal');
+});
+
+$('<b>.js-modal-close, js-overlay</b>').on('click', function(e) {
+  e.preventDefault();
+  $(<b>currentModal +  ', js-overlay</b>').fadeOut();
+  $('<b>body</b>').removeClass('open-modal');
+});
+
+</code></pre>
+
+<h2 style="clear: both;">7. Всплывающие подсказки при наведении (pop-up)</h2>
+<pre class="code"><code>$('.js-popup').hover(function() {
+  var $this = $(this),
+      popUpId = $this.attr('href');
+  $(popUpId).fadeIn();  <span>// появление при наведении</span>
+}, function() {
+  $('.js-popup').fadeOut();  <span>// исчезовение при отведении</span>
+});
+  
+</code></pre>
+
 	</div>
 </div>
 
