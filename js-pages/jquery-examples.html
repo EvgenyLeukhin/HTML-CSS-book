@@ -274,12 +274,12 @@ $('<b>.js-modal-close, js-overlay</b>').on('click', function(e) {
 </code></pre>
 
 <h2 style="clear: both;">7. Всплывающие подсказки при наведении (pop-up)</h2>
-<pre class="code"><code>$('.js-popup').hover(function() {
+<pre class="code"><code>$('<b>.js-popup</b>').hover(function() {
   var $this = $(this),
       popUpId = $this.attr('href');
   $(popUpId).fadeIn();  <span>// появление при наведении</span>
 }, function() {
-  $('.js-popup').fadeOut();  <span>// исчезовение при отведении</span>
+  $('<b>.js-popup</b>').fadeOut();  <span>// исчезовение при отведении</span>
 });
   
 </code></pre>
