@@ -243,19 +243,26 @@ $('.accordion h3').on('click', function() {
   padding-right: 16px;
 }</code></pre>
 
-<pre class="code" style="float: left;"><code>$('<b>.js-show-modal</b>').on('click', function(e) {
+
+<pre class="code" style="float: left;"><code><span>// показываем при клике на кнопку</span>
+$('<b>.js-show-modal</b>').on('click', function(e) {
   e.preventDefault();
+  <span>// планое появление мод. окна и маски</span>
   $('<b>js-modal, js-overlay</b>').fadeIn();
+  <span>// убираем скролл у боди</span>
   $('<b>body</b>').addClass('open-modal');
 });
 
+<span>// делаем обратное при клике на close</span>
 $('<b>.js-modal-close</b>').on('click', function(e) {
   e.preventDefault();
   $('<b>js-modal, js-overlay</b>').fadeOut();
   $('<b>body</b>').removeClass('open-modal');
 });
 
+
 <span>// если мод. окон несколько с одним классом</span>
+<span>// тогда нужно привязать им разный id</span>
 $('<b>.js-show-modal</b>').on('click', function(e) {
   e.preventDefault();
   <span>// сохраняем значение атрибута в переменную</span>
