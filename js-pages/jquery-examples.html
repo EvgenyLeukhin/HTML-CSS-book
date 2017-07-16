@@ -204,7 +204,7 @@ $('.accordion h3').on('click', function() {
 });
 </code></pre>
 
-<h2>5. Аккордион (Cамозакрывающийся)</h2>
+<h2>6. Аккордион (Cамозакрывающийся)</h2>
 <pre class="code"><code>$('.accord p').hide()  <span>// прячем все параграфы средствами css и jq</span>
               .prev() <span>// обращаемся к предыдущему элементу (заголовку)</span>
               .on('click', function() { <span>// отслеживаем его по клику</span>
@@ -214,7 +214,7 @@ $('.accordion h3').on('click', function() {
 });
 </code></pre>
 
-<h2>6. Модальное окно</h2>
+<h2>7. Модальное окно</h2>
 <pre class="code" style="float: left;"><code><span>// слой-маска для body</span>
 <b>.overlay</b> {
   display: none;
@@ -280,7 +280,7 @@ $('<b>.js-modal-close, js-overlay</b>').on('click', function(e) {
 
 </code></pre>
 
-<h2 style="clear: both;">7. Всплывающие подсказки при наведении (pop-up)</h2>
+<h2 style="clear: both;">8. Всплывающие подсказки при наведении (pop-up)</h2>
 <pre class="code"><code>$('<b>.js-popup</b>').hover(function() {
   var $this = $(this),
       popUpId = $this.attr('href');
@@ -290,6 +290,26 @@ $('<b>.js-modal-close, js-overlay</b>').on('click', function(e) {
 });
   
 </code></pre>
+
+
+<h2 style="clear: both;">9. Выпадающий текст</h2>
+<pre class="code"><code><span>// Обрабатываем все элементы списка методом .each()</span>
+$('.list-item').<b>each</b>(function() {
+  <span>// сохраняем выпадающий текст внутри текущего элемента списка в пер. text</span>
+  var <mark>text</mark> = $('<b>.js-drop-down-text</b>', this);
+
+  <span>// Улавливаем клик по ссылке внутри текущего элемента</span>
+  $('<b>.js-details</b>', this).on('click', function(e) {
+    e.preventDefault();
+    <span>// меняем стилизацию кнопки</span>
+    $(this).toggleClass('active');
+
+    <span>// показываем-скрываем текст при клике</span>
+    <mark>text</mark>.toggle();
+  });
+});
+</code></pre>
+
 
 	</div>
 </div>
