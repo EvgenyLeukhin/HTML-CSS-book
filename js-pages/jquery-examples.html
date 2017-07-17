@@ -4,8 +4,10 @@
 <head> 
     <title>Мой Справочник | JS | jQuery-примеры</title>
     <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
+
     <style>
 			tr > td:first-child {
 				font-size: 1.5em;
@@ -24,6 +26,47 @@
 			.code code b {
 				color: red;
 			}
+			.stars-cont {
+		    display: inline;
+		    padding-left: 20px;
+		    font-size: 0;
+			}
+			.stars-cont .star {
+		    display: inline-block;
+		    vertical-align: top;
+		    box-sizing: border-box;
+		    width: 25px;
+		    height: 25px;
+		    background-image: url(../img/stars_25.png);
+		    background-repeat: no-repeat;
+		    background-position: -5px -5px;
+		    margin-right: 5px;
+		    cursor: pointer;
+		}
+		.js-overlay {
+		  display: none;
+		  background: rgba(0,0,0,.7);
+		  width: 100%;
+		  height: 100%;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 10000;
+		}
+		.js-modal {
+		  display: none;
+		  position: fixed;
+		  background: white;
+		  width: 300px;
+		  top: 100px;
+		  left: 50%;
+		  margin;left: -150px;
+		  z-index: 1000;
+		}
+		body.open-modal {
+		  overflow-y: hidden;
+		  padding-right: 16px;
+		}
 		</style>
 </head>
 
@@ -103,7 +146,11 @@
 	<h2>Мой Справочник | JavaScript | jQuery-примеры</h2>
 
 	<h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class)</h2>
-		<pre class="code"><code><span>// До одного блока</span>
+    <button class="scroll  js-scroll">
+      1. Scroll to footer
+    </button>
+		<pre class="code"><code>&lt;button class="<b>js-scroll</b>"&gt;<span>1. Scroll to footer</span>&lt;/button&gt;
+<hr><span>// До одного блока</span>
 $(function() {
   $("<b>.link-class</b>").on("<b>click</b>", function(event) { <span>// анонимная функция</span>
     <span>// сброс настроек</span>
@@ -163,6 +210,15 @@ $(function() {
 });</code></pre>
 
 <h2>3. Звёзды рейтинга</h2>
+<div class="stars-cont">
+	<form action="#">
+		<label class="star" id="label1" for="star-1"></label>
+		<label class="star" id="label2" for="star-2"></label>
+		<label class="star" id="label3" for="star-3"></label>
+		<label class="star" id="label4" for="star-4"></label>
+		<label class="star" id="label5" for="star-5"></label>
+	</form>
+</div>
 <pre class="code"><code>$(document).ready(function() {
   $("<b>.star-input</b>").on("click", function() {
     <span>// выводим зачение поля в консоль</span>
@@ -177,21 +233,26 @@ $(function() {
 });
 </code></pre>
 	
-<h2>4. Переключение радио-кнопок</h2>
+<h2>4. Отслеживание элементов в DOM через .get()</h2>
+
 <pre class="code"><code>$(document).ready(function() {
   var firstBtn  = $('<b>#btn-1</b>'),
     secondBtn   = $('<b>#btn-2</b>'),
-    firstTitle  = $('<b>.js-autor-title1</b>'),
-    secondTitle = $('<b>.js-autor-title2</b>');
+    firstTitle  = $('<b>.js-title-1</b>'),
+    secondTitle = $('<b>.js-title-2</b>');
  
   firstTitle.on('click', function() {
-    secondBtn.get(0).<b>checked</b> = false;
-    firstBtn.get(0).<b>checked</b> = true;
+    secondBtn.<b>get(0)</b>.<b>checked</b> = false;
+    firstBtn.<b>get(0)</b>.<b>checked</b> = true;
+    firstTitle.css('color', 'orange');
+    secondTitle.css('color', 'black');
   });
   
   secondTitle.on('click', function() {
-    firstBtn.get(0).<b>checked</b> = false;
-    secondBtn.get(0).<b>checked</b> = true;
+    firstBtn.<b>get(0)</b>.<b>checked</b> = false;
+    secondBtn.<b>get(0)</b>.<b>checked</b> = true;
+    secondTitle.css('color', 'orange');
+    firstTitle.css('color', 'black');
   });
 });
 </code></pre>
@@ -204,7 +265,7 @@ $('.accordion h3').on('click', function() {
 });
 </code></pre>
 
-<h2>6. Аккордион (Cамозакрывающийся)</h2>
+<h2>6. Аккордион (Cамозакрывающийся) (ХЗ как работает)</h2>
 <pre class="code"><code>$('.accord p').hide()  <span>// прячем все параграфы средствами css и jq</span>
               .prev() <span>// обращаемся к предыдущему элементу (заголовку)</span>
               .on('click', function() { <span>// отслеживаем его по клику</span>
@@ -214,7 +275,8 @@ $('.accordion h3').on('click', function() {
 });
 </code></pre>
 
-<h2>7. Модальное окно</h2>
+<h2>7. Модальное окно</h2> 
+<button class="js-show-modal">Show modal</button><br>
 <pre class="code" style="float: left;"><code><span>// слой-маска для body</span>
 <b>.overlay</b> {
   display: none;
@@ -323,9 +385,64 @@ $('.list-item').<b>each</b>(function() {
 	</div>
 </div>
 
+<div class="js-modal">
+	<a class="js-modal-close">Закрыть</a>
+</div>
+<div class="js-overlay"></div>
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+
+		// =========================================================================== 1. SCROLL TO FOOTER
+		$(".js-scroll").on("click", function(event) { // анонимная функция
+    // сброс настроек
+    event.preventDefault();
+
+    // сохраняем расстояние до h1 в переменную
+    var scrollToBlock = $(".footer").offset().top;
+
+    // скролим тело документа (html и body для кроссбраузерности) на расстояние scrollHight 500млс
+    $("html, body").animate({ scrollTop: scrollToBlock }, 1000);
+  	});
 
 
 
+
+		// =========================================================================== 2. RATING STARS
+		$(".star").on("click", function() {
+	    $(this).css('background-position', '-40px -5px');
+	    $(this).nextAll().css('background-position', '-5px  -5px');
+	    $(this).prevAll().css('background-position', '-40px -5px');
+	  });
+
+
+
+
+	// =========================================================================== 3. SHOW modal
+	// показываем при клике на кнопку
+	$('.js-show-modal').on('click', function(e) {
+	  e.preventDefault();
+	  // планое появление мод. окна и маски
+	  $('.js-modal, .js-overlay').fadeIn();
+	  // убираем скролл у боди
+	  $('body').addClass('open-modal');
+	});
+
+// делаем обратное при клике на close
+	$('.js-modal-close').on('click', function(e) {
+	  e.preventDefault();
+	  $('.js-modal, .js-overlay').fadeOut();
+	  $('body').removeClass('open-modal');
+	});
+
+
+
+
+
+
+});
+</script>
 
 </body>
 </html>
