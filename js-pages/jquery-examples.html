@@ -51,18 +51,24 @@
 		  position: fixed;
 		  top: 0;
 		  left: 0;
-		  z-index: 10000;
+		  z-index: 1001;
 		}
 		.modal {
 		  display: none;
 		  position: fixed;
 		  background: white;
+      padding: 15px;
 		  width: 300px;
 		  top: 100px;
 		  left: 50%;
-		  margin;left: -150px;
-		  z-index: 1000;
+		  margin-left: -150px;
+		  z-index: 1002;
 		}
+    .modal-close {
+      cursor: pointer;
+      color: maroon;
+      font-weight: bold;
+    }
 		body.open-modal {
 		  overflow-y: hidden;
 		  padding-right: 16px;
@@ -276,6 +282,8 @@ $('.accordion h3').on('click', function() {
 </code></pre>
 
 <h2>7. Модальное окно</h2> 
+<button class="show-modal">Show modal</button>
+
 
 <pre class="code"><code>&lt;button class="<b>show-modal</b>">Show modal&lt;/button&gt;
 <span>// должен стоять перед модальным окном</span>
@@ -308,7 +316,7 @@ $('.accordion h3').on('click', function() {
   top: 100px;
   left: 50%;
   margin-left: -150px;
-  z-index: 1000;
+  z-index: 1100;
 }
 <b>body.open-modal</b> {
   overflow-y: hidden;
@@ -395,10 +403,14 @@ $('.list-item').<b>each</b>(function() {
 	</div>
 </div>
 
-<div class="js-modal">
-	<a class="js-modal-close">Закрыть</a>
+<div class="overlay"></div>
+
+<div class="modal">
+  <h4>Мод. окно</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ab distinctio quo dolores expedita ea assumenda, nisi quisquam necessitatibus ad nostrum enim quibusdam omnis maiores deserunt maxime et sunt, doloribus optio a impedit vel ut! Fugiat obcaecati facilis autem repellat culpa quo praesentium quas ex, quaerat est consequatur inventore esse sunt repudiandae totam dicta illum, eius, quia maiores architecto velit nemo recusandae ducimus sequi! Hic rerum cumque consequuntur sit! Blanditiis explicabo, minus harum! Nesciunt modi fugiat architecto eum laboriosam doloribus dolorem adipisci alias, maiores expedita necessitatibus eos soluta officia hic corrupti reprehenderit accusamus nihil cumque iure facilis labore, mollitia delectus!</p>
+
+  <a class="modal-close">X Закрыть</a>
 </div>
-<div class="js-overlay"></div>
 
 <script src="../js/jquery-3.1.0.min.js"></script>
 <script>
@@ -431,18 +443,18 @@ $('.list-item').<b>each</b>(function() {
 
 	// =========================================================================== 3. SHOW modal
 	// показываем при клике на кнопку
-	$('.js-show-modal').on('click', function(e) {
+	$('.show-modal').on('click', function(e) {
 	  e.preventDefault();
 	  // планое появление мод. окна и маски
-	  $('.js-modal, .js-overlay').fadeIn();
+	  $('.modal, .overlay').fadeIn();
 	  // убираем скролл у боди
 	  $('body').addClass('open-modal');
 	});
 
 // делаем обратное при клике на close
-	$('.js-modal-close').on('click', function(e) {
+	$('.modal-close').on('click', function(e) {
 	  e.preventDefault();
-	  $('.js-modal, .js-overlay').fadeOut();
+	  $('.modal, .overlay').fadeOut();
 	  $('body').removeClass('open-modal');
 	});
 
