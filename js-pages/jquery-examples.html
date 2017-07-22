@@ -43,26 +43,33 @@
 				margin-right: 5px;
 				cursor: pointer;
 		}
-		.js-overlay {
-			display: none;
-			background: rgba(0,0,0,.7);
-			width: 100%;
-			height: 100%;
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 10000;
+
+		.overlay {
+		  display: none;
+		  background: rgba(0,0,0,.7);
+		  width: 100%;
+		  height: 100%;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 1001;
 		}
-		.js-modal {
-			display: none;
-			position: fixed;
-			background: white;
-			width: 300px;
-			top: 100px;
-			left: 50%;
-			margin;left: -150px;
-			z-index: 1000;
+		.modal {
+		  display: none;
+		  position: fixed;
+		  background: white;
+      padding: 15px;
+		  width: 300px;
+		  top: 100px;
+		  left: 50%;
+		  margin-left: -150px;
+		  z-index: 1002;
 		}
+    .modal-close {
+      cursor: pointer;
+      color: maroon;
+      font-weight: bold;
+    }
 		body.open-modal {
 			overflow-y: hidden;
 			padding-right: 16px;
@@ -276,7 +283,19 @@ $('.accordion h3').on('click', function() {
 </code></pre>
 
 <h2>7. Модальное окно</h2> 
-<button class="js-show-modal">Show modal</button><br>
+<button class="show-modal">Show modal</button>
+
+
+<pre class="code"><code>&lt;button class="<b>show-modal</b>">Show modal&lt;/button&gt;
+<span>// должен стоять перед модальным окном</span>
+&lt;div class="<b>overlay</b>"&gt;&lt;/div&gt;
+
+<span>// должен стоять перед /body</span>
+&lt;div class="<b>modal</b>"&gt;
+  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio cum dolores</span>
+  &lt;button class="<b>modal-close</b>"&gt;Закрыть мод. окно&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
 <pre class="code" style="float: left;"><code><span>// слой-маска для body</span>
 <b>.overlay</b> {
 	display: none;
@@ -291,14 +310,14 @@ $('.accordion h3').on('click', function() {
 
 <pre class="code" style="float: left;"><code><span>// мод. окно</span>
 <b>.modal</b> {
-	display: none;
-	position: fixed;
-	background: white;
-	width: 300px;
-	top: 100px;
-	left: 50%;
-	margin;left: -150px;
-	z-index: 1000;
+  display: none;
+  position: fixed;
+  background: white;
+  width: 300px;
+  top: 100px;
+  left: 50%;
+  margin-left: -150px;
+  z-index: 1100;
 }
 <b>body.open-modal</b> {
 	overflow-y: hidden;
@@ -307,37 +326,39 @@ $('.accordion h3').on('click', function() {
 
 
 <pre class="code" style="float: left;"><code><span>// показываем при клике на кнопку</span>
-$('<b>.js-show-modal</b>').on('click', function(e) {
-	e.preventDefault();
-	<span>// планое появление мод. окна и маски</span>
-	$('<b>js-modal, js-overlay</b>').fadeIn();
-	<span>// убираем скролл у боди</span>
-	$('<b>body</b>').addClass('open-modal');
+<span>// делаем обратное при клике на close</span>
+$('<b>.show-modal</b>').on('click', function(e) {
+  e.preventDefault();
+  <span>// планое появление мод. окна и маски</span>
+  $('<b>.modal, .overlay</b>').fadeIn();
+  <span>// убираем скролл у боди</span>
+  $('<b>body</b>').addClass('open-modal');
 });
 
 <span>// делаем обратное при клике на close</span>
-$('<b>.js-modal-close</b>').on('click', function(e) {
-	e.preventDefault();
-	$('<b>js-modal, js-overlay</b>').fadeOut();
-	$('<b>body</b>').removeClass('open-modal');
+$('<b>.modal-close</b>').on('click', function(e) {
+  e.preventDefault();
+  $('<b>.modal, .overlay</b>').fadeOut();
+  $('<b>body</b>').removeClass('open-modal');
 });
 
 
 <span>// если мод. окон несколько с одним классом</span>
 <span>// тогда нужно привязать им разный id</span>
-$('<b>.js-show-modal</b>').on('click', function(e) {
-	e.preventDefault();
-	<span>// сохраняем значение атрибута в переменную</span>
-	var currentModal = $(this).attr('href');
 
-	$(<b>currentModal +  ', js-overlay</b>').fadeIn();
-	$('<b>body</b>').addClass('open-modal');
+$('<b>.show-modal</b>').on('click', function(e) {
+  e.preventDefault();
+  <span>// сохраняем значение атрибута в переменную</span>
+  var currentModal = $(this).attr('href');
+
+  $(<b>currentModal +  ', .overlay</b>').fadeIn();
+  $('<b>body</b>').addClass('open-modal');
 });
 
-$('<b>.js-modal-close, js-overlay</b>').on('click', function(e) {
-	e.preventDefault();
-	$(<b>currentModal +  ', js-overlay</b>').fadeOut();
-	$('<b>body</b>').removeClass('open-modal');
+$('<b>.modal-close, .overlay</b>').on('click', function(e) {
+  e.preventDefault();
+  $(<b>currentModal +  ', .overlay</b>').fadeOut();
+  $('<b>body</b>').removeClass('open-modal');
 });
 
 </code></pre>
@@ -385,10 +406,14 @@ $('.list-item').<b>each</b>(function() {
 	</div>
 </div>
 
-<div class="js-modal">
-	<a class="js-modal-close">Закрыть</a>
+<div class="overlay"></div>
+
+<div class="modal">
+  <h4>Мод. окно</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ab distinctio quo dolores expedita ea assumenda, nisi quisquam necessitatibus ad nostrum enim quibusdam omnis maiores deserunt maxime et sunt, doloribus optio a impedit vel ut! Fugiat obcaecati facilis autem repellat culpa quo praesentium quas ex, quaerat est consequatur inventore esse sunt repudiandae totam dicta illum, eius, quia maiores architecto velit nemo recusandae ducimus sequi! Hic rerum cumque consequuntur sit! Blanditiis explicabo, minus harum! Nesciunt modi fugiat architecto eum laboriosam doloribus dolorem adipisci alias, maiores expedita necessitatibus eos soluta officia hic corrupti reprehenderit accusamus nihil cumque iure facilis labore, mollitia delectus!</p>
+
+  <a class="modal-close">X Закрыть</a>
 </div>
-<div class="js-overlay"></div>
 
 <script src="../js/jquery-3.1.0.min.js"></script>
 <script>
@@ -421,19 +446,19 @@ $('.list-item').<b>each</b>(function() {
 
 	// =========================================================================== 3. SHOW modal
 	// показываем при клике на кнопку
-	$('.js-show-modal').on('click', function(e) {
-		e.preventDefault();
-		// планое появление мод. окна и маски
-		$('.js-modal, .js-overlay').fadeIn();
-		// убираем скролл у боди
-		$('body').addClass('open-modal');
+	$('.show-modal').on('click', function(e) {
+	  e.preventDefault();
+	  // планое появление мод. окна и маски
+	  $('.modal, .overlay').fadeIn();
+	  // убираем скролл у боди
+	  $('body').addClass('open-modal');
 	});
 
 // делаем обратное при клике на close
-	$('.js-modal-close').on('click', function(e) {
-		e.preventDefault();
-		$('.js-modal, .js-overlay').fadeOut();
-		$('body').removeClass('open-modal');
+	$('.modal-close').on('click', function(e) {
+	  e.preventDefault();
+	  $('.modal, .overlay').fadeOut();
+	  $('body').removeClass('open-modal');
 	});
 
 
