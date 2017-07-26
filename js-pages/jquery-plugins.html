@@ -87,7 +87,7 @@
 
   <div class="content clearfix">
 
-  <h2>Мой Справочник | JavaScript | jQuery-плагины</h2>
+  <h2>Мой Справочник | JavaScript | <a href="http://plugins.jquery.com/" target="_blank">jQuery-плагины</a></h2>
 
   <ol class="plugins-list">
     <li>
@@ -119,6 +119,12 @@
     </li>
     <hr>
   </ol>
+
+  <h2>Перестраховка от ошибок в консоли</h2>
+  <p>Если код прописан в <b>main.js</b>, а скрипт не подключен на текущей странице</p>
+  <code>if ($('.some-class').<span class="red">lenght</span>) {<br>
+&nbsp;&nbsp;$('.some-class').pluginFunc();<br>
+  }</code>
   
 
 
