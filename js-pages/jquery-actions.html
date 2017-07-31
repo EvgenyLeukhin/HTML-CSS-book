@@ -1,241 +1,261 @@
-<!DOCTYPE html> 
-<html lang="ru">
 
-<head> 
-    <title>Мой Справочник | JS | jQuery-события</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-</head>
 
-<body>
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-		<ul class="header-menu">
-			<li><a href="../index.html">Главная</a></li>
-			<li><a href="../design-page.html">WEB-DESIGN</a></li>
-			<li><a href="../html-page.html">HTML</a></li>
-			<li><a href="../css-page.html">CSS</a></li>
-			<li><a href="../css3-page.html">CSS3</a></li>
-			<li><a class="active" href="../javascript-page.html">JS</a></li>
-			<li><a href="../php.html">PHP</a></li>
-		</ul>
-	</div>
-</div>
 
-<div class="layout-positioner clearfix">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
-	<div class="vert-menu-cont">
-		<ul class="vert-menu">
-	    <li>
-	    	<a href="#">Основы</a>
-	        <ul class="sub-menu sub-menu9">
-	          <li><a href="js-lang.html">Язык JS</a></li>
-	          <li><a href="load.html">Загрузка</a></li>
-		        <li><a href="types.html">Типы данных</a></li>
-		        <li><a href="var.html">Переменные</a></li>
-		        <li><a href="operators.html">Операторы</a></li>
-		        <li><a href="algorythm.html">Алгоритмы</a></li>
-		        <li><a href="if-else.html">if - else, switch-case</a></li>
-		        <li><a href="cycle.html">Циклы</a></li>
-	          <li><a href="math.html">Math</a></li>
-	        </ul>
-	    </li>
-      <li><a href="array.html">Массивы</a></li>
-      <li><a href="function.html">Функции</a></li>
-			<li><a href="object.html">Объекты</a></li>
-      <li>
-      	<a href="#">JS &amp; HTML</a>
-	        <ul class="sub-menu sub-menu6">
-	          <li><a href="complete.html">Вывод данных</a></li>
-		        <li><a href="dom.html">DOM</a></li>
-		        <li><a href="html-methods.html">Методы</a></li>
-		        <li><a href="actions.html">События</a></li>
-		        <li><a href="modal-window.html">Мод. окно</a></li>
-		        <li><a href="forms.html">Формы</a></li>
-	        </ul>
-			</li>
-      <li>
-	  		<a class="active" href="#">jQuery</a>
-	  			<ul class="sub-menu sub-menu7">
-		        <li><a href="jquery-html.html">
-
-JQuery basics</a></li>
-		        <li><a href="jquery-func.html">jQuery-функции</a></li>
-	          <li><a href="jquery-actions.html">jQuery-события</a></li>
-	      		<li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-	          <li><a href="jquery-forms.html">jQuery-формы</a></li>
-	          <li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
-	          <li><a href="jquery-examples.html">Примеры</a></li>
-	        </ul>
-			 </li>
-			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
-			 <li><a href="canvas.html">Canvas</a></li>
-			 <li><a href="git.html">Git + SSH</a></li>
-			 <li><a href="console.html">Консоль</a></li>
-			 <li><a href="project.html">Новый проект</a></li>
-		</ul>
-	</div>
-
-	<div class="content clearfix">
 	
-	<h2>Мой Справочник | JavaScript | jQuery-события</h2>
 	
-	<table class="discription-table" border-spacing: 5px;>
-		<tr>
-			<th colspan="4" style="font-size: 2em;">События</th>
-		</tr>
-		<tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">
-				Click
-			</td>
+	
+	
+	
+		
+		
 			
-			<td style="width: 600px;">
-				<code>$('p').<span class="red">click</span>(function() {<br>
-&nbsp;&nbsp;$(<span class="red">this</span>).slideUp();<br>
-});</code>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">Метод для события клик</td>
-
-		</tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.on()</td>
-			<td style="width: 600px;">
-				<code>
+			
+							   EvgenyLeukhin@yandex.ru</p>
 					$("<span class="gray">.link-js</span>").<span class="red">on</span>("<span class="red">click</span>", function(<span class="red">event</span>) {<br>
-					&nbsp;&nbsp;<span class="red">event</span>.preventDefault(); <br>
-					&nbsp;&nbsp;$(<span class="red">this</span>).text("<span class="gray">Click</span>");<br>
-					});<br><br>
-
-					<span class="gray">// с методом on() можно навешивать сразу несколько событий через пробел</span><br>
-					$(<span class="red">this</span>).<span class="red">on</span>('<mark>click mouseover mouseout</mark>', function(e) { ...
-				</code>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">с методом on() можно навешивать сразу несколько событий через пробел</td>
-			
-		</tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.off()</td>
-			<td style="width: 600px;">
-				<code><span class="gray">// событие клика будет отслеживаться только 1 раз</span>
 					$('p').<span class="red">click</span>(function() {<br>
+					$(<span class="red">this</span>).<span class="red">on</span>('<mark>click mouseover mouseout</mark>', function(e) { ...
 					&nbsp;&nbsp;$(<span class="red">this</span>).after('<span class="gray">&lt;p&gt;Some text&lt;/p&gt;</span>');<br>
 					&nbsp;&nbsp;$(<span class="red">this</span>).off();<br>
+					&nbsp;&nbsp;$(<span class="red">this</span>).text("<span class="gray">Click</span>");<br>
+					&nbsp;&nbsp;<span class="red">event</span>.preventDefault(); <br>
+					<span class="gray">// с методом on() можно навешивать сразу несколько событий через пробел</span><br>
 					});
+					});<br><br>
+				.click()
 				</code>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">Убирает элементы для отслеживания на события, которые были заданы ранее (если нужно задать клик на элемент только 1 раз)</td>
-		</tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.each()</td>
-			<td style="width: 600px;"></td>
-			<td rowspan="1" style="width: 300px; color: #555;">Если нужно перебрать несколько элементов и отловить какое-либо событие внутри текущего элемента</td>
-		</tr>
-
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Mouse actions</td>
-			<td style="width: 600px;">
+				</code>
+				<code>
+				<code>$('p').<span class="red">click</span>(function() {<br>
+				<code><span class="gray">// событие клика будет отслеживаться только 1 раз</span>
 				<pre><code>.dbclick <span class="gray">  // Двойной клик</span>
-.mousedown <span class="gray">// Нажим на клик, без отпуска</span>
-.mouseup   <span class="gray">// Отпуск клика</span>
-.mouseover <span class="gray">// Аналог :hover в css</span>
-.mouseout  <span class="gray">// Когда убираете курсор с элемента</span>
-.mousemove <span class="gray">// При перемещении курсора (выполняется всегда)</span>
-.scroll    <span class="gray">// При скроле (Home, End, PgUp, PgDown)</span>
-</code></pre>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">Клик и события с мышью</td>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Keyboard</td>
-			<td style="width: 600px;">
 				<pre><code>.keypress <span class="gray">// Нажатие на клавишу</span>
-.keydown <span class="gray"> // Нажим на клавишу, без отпуска</span>
-.keyup  <span class="gray">  // Отпуск клавиши</span>
-</code></pre>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">События с клавиатурой</td>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Forms</td>
-			<td style="width: 600px;">
+				<pre><code>.load <span class="gray">   // при загрузке страницы</span>
 				<pre><code>.submit <span class="gray">// отправка формы (нажатие на Enter)</span>
-.reset <span class="gray"> // сброс полей формы</span>
+			 </li>
+			 <li><a href="canvas.html">Canvas</a></li>
+			 <li><a href="console.html">Консоль</a></li>
+			 <li><a href="git.html">Git + SSH</a></li>
+			 <li><a href="project.html">Новый проект</a></li>
+			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
+			</li>
+			</td>
+			</td>
+			</td>
+			</td>
+			</td>
+			</td>
+			</td>
+			</td>
+			</td>
+			<li><a class="active" href="../javascript-page.html">JS</a></li>
+			<li><a href="../css-page.html">CSS</a></li>
+			<li><a href="../css3-page.html">CSS3</a></li>
+			<li><a href="../design-page.html">WEB-DESIGN</a></li>
+			<li><a href="../html-page.html">HTML</a></li>
+			<li><a href="../index.html">Главная</a></li>
+			<li><a href="../php.html">PHP</a></li>
+			<li><a href="object.html">Объекты</a></li>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.each()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.hover()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.moveBy()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.moveTo()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.off()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.on()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.resizeBy(), .resizeTo()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.scrollBy(), .scrollTo()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.trigger()</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Document</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Forms</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Keyboard</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Mouse actions</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Координаты</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+			<td rowspan="1" style="width: 300px; color: #555;">Если нужно перебрать несколько элементов и отловить какое-либо событие внутри текущего элемента</td>
+			<td rowspan="1" style="width: 300px; color: #555;">изменение ширины и высоты окна</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Клик и события с мышью</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Метод для события клик</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Наведение на элемент</td>
+			<td rowspan="1" style="width: 300px; color: #555;">переместить в заданное место на экране</td>
+			<td rowspan="1" style="width: 300px; color: #555;">перемещение элементов на заданное число пикселей</td>
+			<td rowspan="1" style="width: 300px; color: #555;">прокручивает документ внутри окна вправо и вниз</td>
+			<td rowspan="1" style="width: 300px; color: #555;">с методом on() можно навешивать сразу несколько событий через пробел</td>
+			<td rowspan="1" style="width: 300px; color: #555;">События с документом</td>
+			<td rowspan="1" style="width: 300px; color: #555;">События с клавиатурой</td>
+			<td rowspan="1" style="width: 300px; color: #555;">События с формами</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Убирает элементы для отслеживания на события, которые были заданы ранее (если нужно задать клик на элемент только 1 раз)</td>
+			<td style="width: 600px;">
+			<td style="width: 600px;">
+			<td style="width: 600px;">
+			<td style="width: 600px;">
+			<td style="width: 600px;">
+			<td style="width: 600px;">
+			<td style="width: 600px;">
+			<td style="width: 600px;"></td>
+			<td style="width: 600px;"><code>.pageX, .pageY</code></td>
+			<td style="width: 600px;"><pre><code></code></pre><span class="gray"></td>
+			<td style="width: 600px;"><pre><code></code></pre><span class="gray"></td>
+			<td style="width: 600px;"><pre><code></code></pre><span class="gray"></td>
+			<td style="width: 600px;"><pre><code><span class="gray">// принимает анонимную функцию в параметр</span>
+			<td style="width: 600px;"><pre><code>el.moveBy(100, 100)</code></pre><span class="gray"></td>
+			<td style="width: 600px;"><pre><code>el.scrollBy(100, 100)</code></pre><span class="gray"></td>
+			<th colspan="4" style="font-size: 2em;">Методы</th>
+			<th colspan="4" style="font-size: 2em;">События</th>
+		        <li><a href="actions.html">События</a></li>
+		        <li><a href="algorythm.html">Алгоритмы</a></li>
+		        <li><a href="cycle.html">Циклы</a></li>
+		        <li><a href="dom.html">DOM</a></li>
+		        <li><a href="forms.html">Формы</a></li>
+		        <li><a href="html-methods.html">Методы</a></li>
+		        <li><a href="if-else.html">if - else, switch-case</a></li>
+		        <li><a href="jquery-func.html">jQuery-функции</a></li>
+		        <li><a href="jquery-html.html">
+		        <li><a href="modal-window.html">Мод. окно</a></li>
+		        <li><a href="operators.html">Операторы</a></li>
+		        <li><a href="types.html">Типы данных</a></li>
+		        <li><a href="var.html">Переменные</a></li>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</tr>
+		</ul>
+		</ul>
+		<p class="footer-copyright">© 2017 Все права защищены</p>
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<tr>
+		<ul class="header-menu">
+		<ul class="vert-menu">
+	  			<ul class="sub-menu sub-menu7">
+	  		<a class="active" href="#">jQuery</a>
+	    	<a href="#">Основы</a>
+	      		<li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+	          <li><a href="complete.html">Вывод данных</a></li>
+	          <li><a href="jquery-actions.html">jQuery-события</a></li>
+	          <li><a href="jquery-examples.html">Примеры</a></li>
+	          <li><a href="jquery-forms.html">jQuery-формы</a></li>
+	          <li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
+	          <li><a href="js-lang.html">Язык JS</a></li>
+	          <li><a href="load.html">Загрузка</a></li>
+	          <li><a href="math.html">Math</a></li>
+	        </ul>
+	        </ul>
+	        </ul>
+	        <ul class="sub-menu sub-menu6">
+	        <ul class="sub-menu sub-menu9">
+	    </li>
+	    <li>
+	</div>
+	</div>
+	</div>
+	</div>
+	</table>
+	<div class="content clearfix">
+	<div class="header-logo"></div>
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="layout-positioner clearfix">
+	<div class="layout-positioner">
+	<div class="vert-menu-cont">
+	<h2>Мой Справочник | JavaScript | jQuery-события</h2>
+	<table class="discription-table" border-spacing: 5px;>
+      	<a href="#">JS &amp; HTML</a>
+      <li>
+      <li>
+      <li><a href="array.html">Массивы</a></li>
+      <li><a href="function.html">Функции</a></li>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Мой Справочник | JS | jQuery-события</title>
+  console.info(a.text().toLowerCase());
+  var a = $("div").eq(2).<span class="red">hover</span>(function() {
+$(#btn).<span class="red">hover</span>(<mark>closeMenu</mark>, <mark>showMenu</mark>);
+$(#btn).hover(function() {...}, function() {...});
+&nbsp;&nbsp;$(<span class="red">this</span>).slideUp();<br>
+.blur <span class="gray">  // противоположное focus, выход из фокуса</span>
 .change <span class="gray">// изменение значений полей формы, переключение</span>
 .focus <span class="gray"> // фокусировка на поле формы (клавиша Tab)</span>
-.blur <span class="gray">  // противоположное focus, выход из фокуса</span>
-</code></pre>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">События с формами</td>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Document</td>
-			<td style="width: 600px;">
-				<pre><code>.load <span class="gray">   // при загрузке страницы</span>
-.unload <span class="gray"> // при переходе на другую страницу</span>
-.resize <span class="gray"> // при изменении размеров окна</span>
+.keydown <span class="gray"> // Нажим на клавишу, без отпуска</span>
+.keyup  <span class="gray">  // Отпуск клавиши</span>
+.mousedown <span class="gray">// Нажим на клик, без отпуска</span>
+.mousemove <span class="gray">// При перемещении курсора (выполняется всегда)</span>
+.mouseout  <span class="gray">// Когда убираете курсор с элемента</span>
+.mouseover <span class="gray">// Аналог :hover в css</span>
+.mouseup   <span class="gray">// Отпуск клика</span>
 .ready  <span class="gray"> // загрузка документа</span></code></pre>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">События с документом</td>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">Координаты</td>
-			<td style="width: 600px;"><code>.pageX, .pageY</code></td>
-			<td rowspan="1" style="width: 300px; color: #555;"></td>
-		</tr>
-		<tr>
-			<th colspan="4" style="font-size: 2em;">Методы</th>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.hover()</td>
-			<td style="width: 600px;"><pre><code><span class="gray">// принимает анонимную функцию в параметр</span>
-  var a = $("div").eq(2).<span class="red">hover</span>(function() {
-  console.info(a.text().toLowerCase());
-});
-
+.reset <span class="gray"> // сброс полей формы</span>
+.resize <span class="gray"> // при изменении размеров окна</span>
+.scroll    <span class="gray">// При скроле (Home, End, PgUp, PgDown)</span>
+.unload <span class="gray"> // при переходе на другую страницу</span>
+<!DOCTYPE html> 
+</body>
+</code></pre>
+</code></pre>
+</code></pre>
+</code></pre>
+</div>
+</div>
+</div>
+</head>
+</html>
+<body>
+<div class="footer">
+<div class="header">
+<div class="layout-positioner clearfix">
+<head> 
 <hr><span class="gray">// c двумя функциями (но не более)</span>
-$(#btn).hover(function() {...}, function() {...});
+<html lang="ru">
+<span class="gray">// и можно указывать только названия</span>
 <span class="gray">// эти функции можно называть</span>
 function <mark>closeMenu</mark>() {...}
 function <mark>showMenu</mark>()  {...}
-<span class="gray">// и можно указывать только названия</span>
-$(#btn).<span class="red">hover</span>(<mark>closeMenu</mark>, <mark>showMenu</mark>);
-</code></pre>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">Наведение на элемент</td>
-		</tr>
-		
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.trigger()</td>
-			<td style="width: 600px;"><pre><code><span class="gray"></td>
-			<td rowspan="1" style="width: 300px; color: #555;"></td>
-		</tr>
-	</table>
-	
-	
-	
-	</div>
-</div>
-
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
-		<p class="footer-copyright">© 2017 Все права защищены</p>
-	</div>
-</div>
-
-
-
-
-
-</body>
-</html>
+JQuery basics</a></li>
+});
+});</code>
