@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head> 
-    <title>Мой Справочник | CSS | Текст</title>
+    <title>Мой Справочник | CSS | Шрифт и текст</title>
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
@@ -99,7 +99,7 @@
 		<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
 		<li><a href="../css-pages/color.html">Цвет</a></li>
 		<li><a href="../css-pages/bg.html">Фон</a></li>
-		<li><a href="../css-pages/text.html" class="active">Текст</a></li>
+		<li><a href="../css-pages/text.html" class="active">Шрифт и текст</a></li>
 		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
 		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
 		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
@@ -132,12 +132,12 @@
 	
 	<div class="content clearfix">
 	
-	<h2>Мой Справочник | CSS | Текст</h2>
+	<h2>Мой Справочник | CSS | Шрифт и текст</h2>
 
 	<h3>Добавление нестандартных шрифтов</h3>
 	<hr>
 	<p><b><u style="font-size: 2em;">I способ - Веб-шрифты</u> (через <span class="red">&lt;link&gt;</span>)</b></p>
-	<p>1. Копируем ссылку из <i><a href="https://www.google.com/fonts#ChoosePlace:select" target="_blank" rel="nofollow">Google Fonts</a></i> на расположение шрифта и вставляем её в &lt;head&gt;</p>
+	<p>1. Копируем ссылку из <i><a href="https://www.google.com/fonts#ChoosePlace:select" target="_blank" rel="nofollow">Google Fonts</a></i> или любого другого ресурса на расположение шрифта и вставляем её в &lt;head&gt;</p>
 	<code>
 	&lt;<span class="red">link</span> href='<span class="gray">https://fonts.googleapis.com/css?family=Indie+Flower</span>' rel='stylesheet' type='text/css'&gt;
 	</code>
@@ -154,17 +154,27 @@
 		<i><a href="http://ru.fontriver.com/" target="_blank" rel="nofollow">Fontriver</a></i>
 	</p>
 	<p>2. Подключаем с помощью к CSS-файлу<span class="red">@font-face</span> (CSS-код может быть вместе со скаченным шрифтом, нужно вставить на самый верх CSS-кода)</p>
+	<b style="font-size: 1.3em;"><mark>Сейчас(2017) уже достаточно загружать 2 формата (woff2 и woff), форматы eot, ttf, svg загружать больше нет смысла и у них большой вес и поддержка старых версий браузеров</mark></b><hr>
 	<code>
 <span class="red">@font-face</span> {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Anfisa Grotesk';<br>
-&nbsp;&nbsp;&nbsp;&nbsp;src: local('Anfisa Grotesk'),<br>
-&nbsp;&nbsp;&nbsp;&nbsp;url('../fonts/anfisa/anfisagrotesk.woff2') format('woff2'),<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;url('../fonts/anfisa/anfisagrotesk.woff') format('woff'),<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;url('../fonts/anfisa/anfisagrotesk.ttf') format('truetype');<br>
-&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 400;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal;<br>
+&nbsp;&nbsp;font-family: 'Anfisa Grotesk';<br>
+&nbsp;&nbsp;src: local('Anfisa Grotesk'), local('Anfisa_Grotesk'), local('Anfisa-Grotesk'),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url('../fonts/anfisa/anfisagrotesk.woff2') format('woff2'),<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url('../fonts/anfisa/anfisagrotesk.woff') format('woff');<br> 
+&nbsp;&nbsp;font-weight: normal;<br>
+&nbsp;&nbsp;font-style: normal;<br>
 }
-</code><br> 
+</code><hr>
+<h3>Подключение системных шрифтов для разных ОС</h3>
+<code>
+<span class="red">@font-face</span> {<br>
+&nbsp;&nbsp;font-family: -apple-system, BlinkMacSystem Font, BlinkMacSystemFont, Segoe UI,<br> 
+&nbsp;&nbsp;Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; <br>
+}
+</code><hr>
+
+
+
 	<code>
 		font-family: 'Anfisa Grotesk';<br>
 		&lt;span style="<mark>font-family: 'Anfisa Grotesk';</mark>"&gt;<span class="gray">Some text</span>&lt;/span&gt;<br>
