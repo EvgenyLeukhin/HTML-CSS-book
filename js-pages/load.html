@@ -207,6 +207,15 @@ html.ClassName = html.ClassName.replace("<span class="red">no-js</span>","<span 
                 </td>
             </tr>
         </table>
+
+        <h3>Предварительная загрузка изображений</h3>
+        <b>var newPhoto = new Image();</b> (создание нового изображения) <hr> 
+        <pre><code>var preloadImages = ['img/photo1.jpg', 'img/photo2.jpg', 'img/photo3.jpg'];
+for (var i = 1; i < preloadImages.lenght; i++) {
+  <span class="red">new Image()</span>.src = preloadImages[i];
+}
+
+</code></pre>
         
         
         
