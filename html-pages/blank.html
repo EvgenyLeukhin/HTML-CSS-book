@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | HTML | Заготовка</title>
+  <title>Мой Справочник | HTML | Семантика</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
@@ -13,6 +13,24 @@
       left: 0;
       bottom: 0;
     }
+    .semantic-link {
+      list-style: none;
+      padding-left: 0;
+    }
+    .semantic-link h2,
+    .semantic-link p {
+      margin: 0;
+    }
+    .semantic-link p {
+      margin-bottom: 15px;
+    }
+    .semantic-link h2 {
+      color: rebeccapurple;
+    }
+    .semantic-link li:nth-child(even) {
+      background: #edd;
+    }
+
   </style>
 </head>
 
@@ -50,7 +68,7 @@
         <li><a href="../html-pages/svg.html">Графика SVG</a></li>
         <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
         <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
-        <li><a href="../html-pages/blank.html" class="active">Заготовка</a></li>
+        <li><a href="../html-pages/blank.html" class="active">Семантика</a></li>
         <li><a href="editors.html">Редакторы кода</a></li>
         <li><a href="internet.html">Интернет</a></li>
       </ul>
@@ -58,31 +76,50 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | HTML | Заготовка</h2>
-      <a href="../!_New_project_blank.rar" title="Скачать заготовку" download>Скачать заготовку</a>
-      <br>
-      <code>
-&lt;!DOCTYPE html&gt;<br>
-&lt;html <span class="red">lang="ru"</span>&gt;<br>
-&lt;head&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta <span class="red">charset="utf-8"</span>&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span class="gray">Заголовок страницы</span>&lt;/title&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta <span class="red">http-equiv="X-UA-Compatible" content="IE=edge"</span>&gt;<span class="gray">&lt;!--для IE--&gt;</span><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta <span class="red">name="keywords" content="<span class="gray">ключевое слово или фраза1, ключевое слово или фраза2, ...</span>"</span>&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta <span class="red">name="description" content="<span class="gray">Описание страницы в поисковике</span>"</span>&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta <span class="red">name="viewport" content="width: 1024"</span>&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;link <span class="red">rel="stylesheet" type="text/css" href="css/normalize.css"</span>&gt;<br> 
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;link <span class="red">rel="stylesheet" type="text/css" href="css/style.css"</span>&gt;<br> 
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script <span class="red">async src="js/jquery-3.1.0.min.js"</span>&gt;&lt;/script&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-<span class="gray">...Видимый контент...</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;script <span class="red"> src="js/main.js"</span>&gt;&lt;/script&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;<br>
-<br>        
-&lt;!--<span class="gray">Комментарии в html-коде</span>--&gt;     
-    </code>
+      <h2>Мой Справочник | HTML | Семантика</h2>
+
+      <ul class="semantic-link">
+        <li>
+          <h2>&lt;header&gt;...&lt;/header&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;footer&gt;...&lt;/footer&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;main&gt;...&lt;/main&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;aside&gt;...&lt;/aside&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;nav&gt;...&lt;/nav&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;section&gt;...&lt;/section&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;article&gt;...&lt;/article&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;figure&gt;...&lt;/figure&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;strong&gt;...&lt;/strong&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+        <li>
+          <h2>&lt;h1&gt;...&lt;/h1&gt;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, aliquam dolore nostrum doloremque ipsum repellendus eveniet cum reprehenderit rerum temporibus voluptatum. Atque sit fuga laborum, vel sapiente officia repudiandae aperiam.</p>
+        </li>
+      </ul>
 
 
     </div>
