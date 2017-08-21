@@ -266,7 +266,7 @@
 			<td colspan="3"><code>git config alias.<b style="color: red;">zalit</b> '!(git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br><br>
 			<span class="gray">// или написать в файле .git/<b>config</b><br></span>
 			[alias] <br>
-			&nbsp;&nbsp;zalit = !(git add . && git commit -m \"quick commit\" && git push origin master && ssh provisov \"cd ~/sites/ulybka-new && git merge master --ff-only\")
+			&nbsp;&nbsp;q = !(git pull origin master && git add . && git commit -m \"quick commit\" && git push origin master && ssh provisov \"cd ~/sites/ulybka-new && git merge master --ff-only\")
 
 			</code></td>
 		</tr>
