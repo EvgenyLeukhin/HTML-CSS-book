@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head> 
-    <title>Мой Справочник | PHP | Почта</title>
+    <title>Мой Справочник | PHP | Yii</title>
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,16 @@
       width: 100%;
       left: 0;
       bottom: 0;
+    }
+    code {
+    	line-height: 1em;
+    	font-size: 16px;
+    	color: darkred;
+    	background: #ddd;
+    }
+    table td:nth-child(2) {
+    	font-weight: bold;
+    	color: darkgreen;
     }
     </style>
 </head>
@@ -47,11 +57,11 @@
 			<li><a href="arrayd.html                 ">Массивы</a></li>
 			<li><a href="functionss.html             ">Функции</a></li>
 			<li><a href="forms.html                  ">Формы</a></li>
-			<li><a class="active" href="post.html    ">Почта</a></li>
-            <li><a href="yii.html                    ">Yii</a></li>
-            <li><a href="bitrix.html                 ">Bitrix</a></li>
+			<li><a href="post.html                   ">Почта</a></li>
+			<li><a class="active" href="yii.html     ">Yii</a></li>
+        	<li><a href="bitrix.html                 ">Bitrix</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
-			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="cms.html     				 ">CMS</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
 		</ul>
 	
@@ -59,31 +69,53 @@
 	</div>
 	<div class="content clearfix">
 	
-	<h2>Мой Справочник | PHP | Почта</h2>
+	<h2>Мой Справочник | PHP | Yii</h2>
+
+	<a href="https://nix-tips.ru/yii2-api-guides/">Руководство на русском</a>
 
 	<div class="container-fluid">
 		<div class="row">
-				<table class="table table-bordered table-condensed">
-					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">mail()</th>
-					</tr>
-					<tr>
-						<td><b>Почта</b></td>
-						<td><pre><code>$to       = "sniperman316@gmail.com";
-$from     = "e.leukhin@gmail.com";
-$subject  = "Тема Письма";
-$message  = "Текст письма<span class="red">\n</span>Текст письма<span class="red">\n</span>Текст письма<span class="red">\n</span>Текст письма"; 
-$headers  = "Content-type: text/plain; charset=utf-8 <span class="red">\r\n</span>";
-$headers .= "From: $from<span class="red">\r\n</span>"; 
+			<table class="table table-bordered table-condensed">
+				<tr>
+				  <th class="lead  text-center  bg-primary" colspan="3">Yii2</th>
+				</tr>
+				<tr>
+					<td><b>Подключение БД</b></td>
+					<td>common/config/main-local.php</td>
+					<td style="width: 33.3%;">
+						<code>dbname="..."</code>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Минификация скриптов</b></td>
+					<td>frontend/config/main.php</td>
+					<td style="width: 33.3%;">
+						<code>'enableMinify' => false || !YII_DEBUG</code>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Директория запуска</b></td>
+					<td>frontend/web</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+				<tr>
+					<td><b>Страницы</b></td>
+					<td>frontend/views/</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+				<tr>
+					<td><b>Сетка страниц</b></td>
+					<td>frontend/views/layouts/main.php</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+				<tr>
+					<td><b>Скрипты</b></td>
+					<td>frontend/assets/AppAsset.php</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
 
-<span class="red">mail</span>($to, $subject, $message, $headers); 
-
-<span class="red">echo</span> "<span class="gray">&lt;h1&gt;Скрипт выполнен&lt;/h1&gt;</span>";
-<span class="red">echo</span> <span class="red">date</span>("Y-m-d H:i:s")." (GTM +3 Moscow)";</code></pre></td>
-						<td style="width: 33.3%;">На OpenServer эти письма будут сохраняться в txt-формате</td>
-					</tr>
-
-				</table>
+			</table>
+			<p>Если проект на Yii2 скачен через git, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим</p>
 			</div>
 	</div>
 	
