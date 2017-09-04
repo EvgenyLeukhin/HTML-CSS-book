@@ -74,7 +74,7 @@
                 <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
                 <li><a href="../css3-pages/foundation.html">Foundation</a></li>
                 <li>
-                  <a href="#">LESS\SASS</a>
+                  <a href="#" class="active">LESS\SASS</a>
                   <ul class="sub-menu sub-menu-less">
                     <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
                     <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
@@ -280,12 +280,55 @@ rgb(<span class="red">20, 20, 20</span>)
 С помощью «переменных-вставок» можно формировать имена селекторов динамически в зависимости от определённых условий или в цикле
       </td>
     </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Кастомные свойства в чистом CSS</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        Создание переменных в чистом CSS
+      </td>
+      <td class="col2"><pre><code><span class="gray">/* Объявление переменных */</span>
+<span class="red">:root</span> {
+  <b>--my-custom-color</b>: tomato;
+  <b>--my-custom-size</b>: 16px;
+}</code></pre>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Для глобальной видимости эти свойства нужно объявлять в корневом элементе <b>html</b>, лучше в <b>:root</b> (для svg). Название кастомного свойства должно начинаться с двойного тире <b>--</b>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        Применение
+      </td>
+      <td class="col2"><pre><code><span class="red">.some-class</span> {
+  color: var(<b>--my-custom-color</b>);
+  font-size: var(<b>--my-custom-size</b>);
+}</code></pre>
+<pre><code><span class="gray">/* Объявление внутри с присваиванием или переопределение */</span>
+<span class="red">.some-class</span> {
+  color: var(<b>--my-custom-color</b>, red);
+  font-size: var(<b>--my-custom-size</b>, 14px);
+}</code></pre>
+      </td>
+      <td class="col3" style="width: 400px;">
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        Взаимодействие с функцией <b>calc()</b>
+      </td>
+      <td class="col2"><pre><code><span class="red">.some-class</span> {
+  font-size: <b>calc</b>(var(--my-custom-size)*0.5);
+}</code></pre>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Можно использовать математические операции с цифровыми значениями с помощью функции <b>calc()</b>
+      </td>
+    </tr>
     
   </table>
-	
-	
-	
-	
+
 	</div>
 </div>
 

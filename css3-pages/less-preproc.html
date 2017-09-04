@@ -74,7 +74,7 @@
                 <li><a href="../css3-pages/bootstrap.html">Bootstrap</a></li>
                 <li><a href="../css3-pages/foundation.html">Foundation</a></li>
                 <li>
-                  <a href="#">LESS\SASS</a>
+                  <a href="#" class="active">LESS\SASS</a>
                   <ul class="sub-menu sub-menu-less">
                     <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
                     <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
@@ -149,7 +149,37 @@
 }
 <span class="red">.content-box</span> {
   color: @base-color;
-  <b>&:extend</b>(.some-class);
+  <b>&amp;:extend</b>(.some-class);
+  border: 1px solid red;       
+}<hr><span class="gray"> // Результат:</span>
+<span class="red">.some-class</span>, 
+<span class="red">.content-box</span>, {
+  clear: left
+  float: left;       
+}      
+<span class="red">.content-box</span> {
+  color: #000;
+  border: 1px solid red;       
+}</pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Стили не дублируются, а наоборот редактируемый селектор добавляется через "," к расширяемому,<br>
+        но лучше особо их <u>НЕ ИСПОЛЬЗОВАТЬ</u>
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Расширения</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.some-class</span> {
+  clear: left
+  float: left;       
+}
+<span class="red">.content-box</span> {
+  color: @base-color;
+  <b>&amp;:extend</b>(.some-class);
   border: 1px solid red;       
 }<hr><span class="gray"> // Результат:</span>
 <span class="red">.some-class</span>, 
@@ -171,13 +201,6 @@
   </table>
   <br>
 	<img src="../pict/pre-prec-css.png" alt="pre-prec-css code organization" width="787" height="597">
-
-  <h3>Кастомные свойста чистого css</h3>
-<pre><code><span class="gray">/*Присваивание значения переменной. Для глобальной области видимости, нужно писать :root или html*/</span>
-:root {
-  --my-custom-color: tomato;
-  --my-custom-size: 16px;
-}</code></pre>
 
 	</div>
 </div>
