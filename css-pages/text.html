@@ -205,6 +205,40 @@
 
 	<hr>
 
+	<p><b><u style="font-size: 2em;">III способ</u> (<b class="red">использовать локальные системные шрифты</b>)</span></b></p>
+
+	<pre><code><span class="gray">/* Define the "system" font family */</span>
+<span class="red">@font-face</span> {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), 
+       local(".HelveticaNeueDeskInterface-Light"), 
+       local(".LucidaGrandeUI"), 
+       local("Ubuntu Light"), 
+       local("Segoe UI Light"), 
+       local("Roboto-Light"), 
+       local("DroidSans"), 
+       local("Tahoma");
+}
+
+<span class="gray">/* Now, let's apply it on an element */</span>
+<span class="red">body</span> {
+  font-family: "system";
+}
+<span class="gray">/* или как на GitHub */</span>
+<span class="red">body</span> {
+  font-family: -apple-system, 
+               BlinkMacSystemFont, 
+               "Segoe UI", 
+               Roboto, 
+               Helvetica, 
+               Arial, sans-serif, 
+               "Apple Color Emoji", 
+               "Segoe UI Emoji", 
+               "Segoe UI Symbol";
+}</code></pre>
+
 	<table class="discription-table">
 			<caption>Оформление текста</caption>
 			<tr>
