@@ -116,7 +116,11 @@
 
 			</table>
 			<p>Если проект на Yii2 скачен через <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим</p>
-			</div>
+
+            <h3>Подключить скрипт только на текущую страницу</h3>
+            <code>$this->registerJsFile("js/jquery.some-plugin.min.js", ['depends' => 'yii\web\YiiAsset']);</code><br><br>
+            <code>$this->registerCssFile("css/come-styles.min.css", ['depends' => 'yii\web\YiiAsset']);</code>
+		</div>
 	</div>
 	
 	</div>
