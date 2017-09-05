@@ -114,6 +114,16 @@
 			<td></td>
 		</tr>
 		<tr>
+			<td><code>git config --global push.default upstream</code></td>
+			<td>Разовая настройка флага -u для команды <b>git push</b></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git help config</code></td>
+			<td>Хэлповник git-a</td>
+			<td></td>
+		</tr>
+		<tr>
 			<td><code>git init</code></td>
 			<td>Создание гит-репозитория (инициализация)</td>
 			<td><h3>Создание репозитория</h3></td>
@@ -144,8 +154,8 @@
 			<td><h3>Клонирование репозитория</h3></td>
 		</tr>
 		<tr>
-			<td><code>git status</code></td>
-			<td>Статус файлов на изменение</td>
+			<td><code>git status | git status -s</code></td>
+			<td>Статус файлов на изменение, флаг -s укороченная версия</td>
 			<td><h3>Статус</h3></td>
 		</tr>
 		<tr>
@@ -154,8 +164,8 @@
 			<td><h3>Отслеживание файлов</h3></td>
 		</tr>
 		<tr>
-			<td><code>git add .</code></td>
-			<td>Добавить все изменнённые файлы к отслеживаемым на отправку изменений перед коммитом</td>
+			<td><code>git add . | git add -p</code></td>
+			<td>Добавить все | по выбору изменнённые файлы к отслеживаемым на отправку изменений перед коммитом</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -241,7 +251,7 @@
 		<tr>
 			<td><code>git revert HEAD --no-edit</i></code></td>
 			<td>Cоздать новый коммит, отменяющий изменения последнего коммита</td>
-			<td><h3>Отмена коммита</h3></td>
+			<td><h3>Отмены</h3></td>
 		</tr>
 		<tr>
 			<td><code>git revert <i>commit_hash</i> --no-edit</i></code></td>
@@ -254,25 +264,46 @@
 			<td></td>
 		</tr>
 		<tr>
+			<td><code>git reset HEAD .</code></td>
+			<td>Убрать из индекса</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git rm --cached <i>file-name</i></code></td>
+			<td>Удалить файл из индекса, не удаляя его из директории</td>
+			<td></td>
+		</tr>
+		<tr>
 			<td><code>git checkout -- .</code></td>
 			<td>Отменить все локальные изменения</td>
 			<td></td>
+		</tr>
+		<tr>
+			<th class="css3-table-title" colspan="3">.gitignore</th>
+		</tr>
+		<tr>
+			<td><code>
+			  *<br>
+			  !.gitignore
+			</code></td>
+			<td>Игнорировать все фаайлы, кроме !.gitignore</td>
+			<td>Можно вкладывать в любую директорию</td>
 		</tr>
 
 		<tr>
 			<th class="css3-table-title" colspan="3">Git-алиасы</th>
 		</tr>
 		<tr>
-			<td colspan="3"><code>git config alias.<b style="color: red;">zalit</b> '!(git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br><br>
+			<td colspan="3"><code>git config alias.<b style="color: red;">q</b> '!(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br><br>
 			<span class="gray">// или написать в файле .git/<b>config</b><br></span>
 			[alias] <br>
-			&nbsp;&nbsp;q = !(git pull origin master && git add . && git commit -m \"quick commit\" && git push origin master && ssh provisov \"cd ~/sites/ulybka-new && git merge master --ff-only\")
+			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m \"quick commit\" &amp;&amp; git push origin master &amp;&amp; ssh provisov \"cd ~/sites/ulybka-new &amp;&amp; git merge master --ff-only\")
 
 			</code></td>
 		</tr>
 
 		<tr>
-			<td colspan="3">После ввода в консоли команды <mark>git zalit</mark> выполнятся все команды, указанные в скобках (команды внутри ssh пишутся в кавычках). Это очень удобно! <br>
+			<td colspan="3">После ввода в консоли команды <mark>git q</mark> выполнятся все команды, указанные в скобках (команды внутри ssh пишутся в кавычках). Это очень удобно! <br>
 			Все настройки можно посмотреть в файле <b>.git/config</b>
 			</td>
 		</tr>
@@ -298,6 +329,15 @@
 					<li>Добавляем комментарий в конец шифра ключа <b>ssh-keygen -C "Jenya@FERMA21"</b></li>
 					<li>Добавляем содержимое публичного ключа <b>id_rsa.pub</b > в конец строки файла <b>.ssh/autorized_keys</b> на сервере</li> 
 					 <li>Можно заходить на сервер командой <b>ssh some_server</b></li>
+				</ol>
+				<hr>
+				<h4>Добавление своего публичного ключа на сервер (доступ по SSH на нём должен быть установлен)</h4>
+				<ol>
+					<li>Заходим с паролем по SSH или по FTP на сервер</li>
+					<li>Ищем в корневой директории папку <b>.ssh/</b> командой <b>ls -a</b>, скорее всего эта папка будет здесь <b>cd ~/.ssh/authorized_keys</b></li>
+					<li>открываем через встроенный текстовый редактор vim этот файл <b>vim</b> ~/.ssh/authorized_keys</li>
+					<li>добавляем в конец свой публичный ключ и сохраняем</li>
+					<li>выходим <b>Ctrl + D</b> или командой <b>exit || logout</b></li>
 				</ol>
 			</td>
 <!-- 			<td></td>
