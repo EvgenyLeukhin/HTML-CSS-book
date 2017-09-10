@@ -34,6 +34,17 @@
     .index-links-cont a {
       vertical-align: top;
     }
+    .links_cont {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
   </style>
 </head>
 
@@ -66,100 +77,105 @@
 
       <h1>Главная</h1>
 
-      <div class="index-links-cont">
-        <h3>Курсы:</h3>
-        <ul>
-          <li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank"><mark><b>w3schools</b></mark></a></li>
-          <li><a href="https://htmlacademy.ru/profile/id1876460" target="_blank">HTML-academy</a></li>
-          <li><a href="https://geekbrains.ru/streams" target="_blank">Geetbrains</a></li>
-          <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
-          <li><a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a></li>
-          <li><a href="https://ru.hexlet.io/courses/free" target="_blank">Hexlet</a></li>
-          <li><a href="https://webref.ru/layout" target="_blank">Webref</a></li>
-          <li><a href="http://www.w3schools.com" target="_blank">W3schools</a></li>
-          <li><a href="http://javarush.ru/cs50.html" target="_blank">CS50 Harvard</a></li>
-          <li><a href="https://www.youtube.com/user/ArtSorax" target="_blank">Sorax</a></li>
-        </ul>
-      </div>
+      <div class="links_cont">
 
-      <div class="index-links-cont">
-        <h3>Справочники:</h3>
-        <ul>
-          <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a></li>
-          <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a></li>
-          <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference" target="_blank">Справочник JavaScript</a></li>
-          <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference" target="_blank">Справочник JavaScript</a></li>
-          <li><a href="https://www.w3.org/" target="_blank"><b><mark>W3C</mark></b></a></li>
-          <li><mark><a href="https://whatwg.org/" target="_blank"><b><mark>WHATWG</mark></b></a></li>
-        </ul>
-      </div>
+        <div class="index-links-cont">
+          <h3>Курсы:</h3>
+          <ul>
+            <li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank"><mark><b>w3schools</b></mark></a></li>
+            <li><a href="https://htmlacademy.ru/profile/id1876460" target="_blank">HTML-academy</a></li>
+            <li><a href="https://geekbrains.ru/streams" target="_blank">Geetbrains</a></li>
+            <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+            <li><a href="https://www.codecademy.com/learn" target="_blank">Codecademy</a></li>
+            <li><a href="https://ru.hexlet.io/courses/free" target="_blank">Hexlet</a></li>
+            <li><a href="https://webref.ru/layout" target="_blank">Webref</a></li>
+            <li><a href="http://www.w3schools.com" target="_blank">W3schools</a></li>
+            <li><a href="http://javarush.ru/cs50.html" target="_blank">CS50 Harvard</a></li>
+            <li><a href="https://www.youtube.com/user/ArtSorax" target="_blank">Sorax</a></li>
+          </ul>
+        </div>
 
-      <div class="index-links-cont">
-        <h3>Тестирование:</h3>
-        <ul>
-          <li><a href="http://validator.w3.org/nu" target="_blank">Валидатор HTML</a></li>
-          <li><a href="http://jigsaw.w3.org/css-validator" target="_blank">Валидатор CSS</a></li>
-          <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google Page Speed</a></li>
-          <li><a href="https://gtmetrix.com/" target="_blank">GT-metrix</a></li>
-          <li><a href="http://www.webpagetest.org/" target="_blank">Web-page test</a></li>
-          <li><a href="https://bestvpn.org/whats-my-ip/" target="_blank">Тестирование браузера</a></li>
-          <li><a href="http://www.responsinator.com" target="_blank">Тест адаптивности</a></li>
-          <li><a href="http://caniuse.com/" target="_blank"><b><mark>Can I use?</mark></b></a></li>
-          <li><a href="https://tech.yandex.ru/" target="_blank">
-            <mark>Яндекс. Технологии </mark>
-          </a></li>
-          <li><a href="https://certification.mail.ru/" target="_blank">
-            <mark>Mail.ru - Сертификация</mark>
-          </a></li>
+        <div class="index-links-cont">
+          <h3>Справочники:</h3>
+          <ul>
+            <li><a href="https://webref.ru/html" target="_blank">Справочник HTML</a></li>
+            <li><a href="https://webref.ru/css" target="_blank">Справочник CSS</a></li>
+            <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference" target="_blank">Справочник JavaScript</a></li>
+            <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference" target="_blank">Справочник JavaScript</a></li>
+            <li><a href="https://www.w3.org/" target="_blank"><b><mark>W3C</mark></b></a></li>
+            <li><mark><a href="https://whatwg.org/" target="_blank"><b><mark>WHATWG</mark></b></a></li>
+          </ul>
+        </div>
 
-        </ul>
-      </div>
+        <div class="index-links-cont">
+          <h3>Тестирование:</h3>
+          <ul>
+            <li><a href="http://validator.w3.org/nu" target="_blank">Валидатор HTML</a></li>
+            <li><a href="http://jigsaw.w3.org/css-validator" target="_blank">Валидатор CSS</a></li>
+            <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google Page Speed</a></li>
+            <li><a href="https://gtmetrix.com/" target="_blank">GT-metrix</a></li>
+            <li><a href="http://www.webpagetest.org/" target="_blank">Web-page test</a></li>
+            <li><a href="https://bestvpn.org/whats-my-ip/" target="_blank">Тестирование браузера</a></li>
+            <li><a href="http://www.responsinator.com" target="_blank">Тест адаптивности</a></li>
+            <li><a href="http://caniuse.com/" target="_blank"><b><mark>Can I use?</mark></b></a></li>
+            <li><a href="https://tech.yandex.ru/" target="_blank">
+              <mark>Яндекс. Технологии </mark>
+            </a></li>
+            <li><a href="https://certification.mail.ru/" target="_blank">
+              <mark>Mail.ru - Сертификация</mark>
+            </a></li>
 
-      <div class="index-links-cont">
-        <h3>Инструменты:</h3>
-        <ul>
-          <li><a href="http://emmet.io" target="_blank">Emmet</a></li>
-          <li><a href="http://codepen.io" target="_blank">Онлайн-песочница</a></li>
-          <li><a href="http://compressjpeg.com/ru/" target="_blank">Уменьшение веса картинок</a></li>
-          <li><a href="https://imageoptim.com/api" target="_blank">Уменьшение веса картинок 2</a></li>
-        </ul>
-      </div>
-      <div class="index-links-cont">
-        <h3>Ссылки:</h3>
-        <ul>
-          <li><a href="https://evgenyleukhin.github.io/IT-book/" target="_blank"><mark><b>Справочник на GitHub.io</b></mark></a></li>
-          <li><a href="http://htmllinks.ru/" target="_blank">Ссылки от Николая Громова</a></li>
-          <li><a href="https://htmlforum.io/" target="_blank">HTML-forum</a></li>
-        </ul>
-      </div>
-      
-      <div class="index-links-cont">
-        <h3>Крутые сайты:</h3>
-        <ul>
-          <li><a href="http://csselite.com/" target="_blank">csselite</a></li>
-          <li><a href="http://www.cssmania.com/" target="_blank">cssmania</a></li>
-          <li><a href="http://www.csswinner.com/" target="_blank">csswinner</a></li>
-        </ul>
-      </div>
-      
-      <div class="index-links-cont">
-        <h3>Слепой набор:</h3>
-        <ul>
-          <li><a href="http://klava.org/" target="_blank">klava.org</a></li>
-          <li><a href="http://fasttype.pro.xsph.ru/" target="_blank">fasttype.pro.xsph.ru/</a></li>
-          <li><a href="http://nabiraem.ru/" target="_blank">nabiraem.ru</a></li>
-          <li><a href="http://klavogonki.ru/" target="_blank">klavogonki.ru</a></li>
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div class="index-links-cont">
-        <h3><u>Обучение в Омске:</u></h3>
-        <ul>
-          <li><a href="http://intern.thumbtack.ru/" target="_blank">ТАМТЭК - Школа разработчиков</a></li>
-          <li><a href="https://vk.com/it_sunday_school" target="_blank">ТАМТЭК - Школа разработчиков (группа ВК)</a></li>
-          <li><a href="http://7bits.ru/internship.html" target="_blank">7bits - Стажировка</a></li>
-          <li><a href="http://7bits.ru/internship.html" target="_blank">7bits </a></li>
-        </ul>
+        <div class="index-links-cont">
+          <h3>Инструменты:</h3>
+          <ul>
+            <li><a href="http://emmet.io" target="_blank">Emmet</a></li>
+            <li><a href="http://codepen.io" target="_blank">Онлайн-песочница</a></li>
+            <li><a href="http://compressjpeg.com/ru/" target="_blank">Уменьшение веса картинок</a></li>
+            <li><a href="https://imageoptim.com/api" target="_blank">Уменьшение веса картинок 2</a></li>
+          </ul>
+        </div>
+
+        <div class="index-links-cont">
+          <h3>Ссылки:</h3>
+          <ul>
+            <li><a href="https://evgenyleukhin.github.io/IT-book/" target="_blank"><mark><b>Справочник на GitHub.io</b></mark></a></li>
+            <li><a href="http://htmllinks.ru/" target="_blank">Ссылки от Николая Громова</a></li>
+            <li><a href="https://htmlforum.io/" target="_blank">HTML-forum</a></li>
+          </ul>
+        </div>
+        
+        <div class="index-links-cont">
+          <h3>Крутые сайты:</h3>
+          <ul>
+            <li><a href="http://csselite.com/" target="_blank">csselite</a></li>
+            <li><a href="http://www.cssmania.com/" target="_blank">cssmania</a></li>
+            <li><a href="http://www.csswinner.com/" target="_blank">csswinner</a></li>
+          </ul>
+        </div>
+        
+        <div class="index-links-cont">
+          <h3>Слепой набор:</h3>
+          <ul>
+            <li><a href="http://klava.org/" target="_blank">klava.org</a></li>
+            <li><a href="http://fasttype.pro.xsph.ru/" target="_blank">fasttype.pro.xsph.ru/</a></li>
+            <li><a href="http://nabiraem.ru/" target="_blank">nabiraem.ru</a></li>
+            <li><a href="http://klavogonki.ru/" target="_blank">klavogonki.ru</a></li>
+          </ul>
+        </div>
+
+        <div class="index-links-cont">
+          <h3><u>Обучение в Омске:</u></h3>
+          <ul>
+            <li><a href="http://intern.thumbtack.ru/" target="_blank">ТАМТЭК - Школа разработчиков</a></li>
+            <li><a href="https://vk.com/it_sunday_school" target="_blank">ТАМТЭК - группа ВК</a></li>
+            <li><a href="http://7bits.ru/internship.html" target="_blank">7bits - Стажировка</a></li>
+            <li><a href="http://7bits.ru/internship.html" target="_blank">7bits </a></li>
+          </ul>
+        </div>
+
       </div>
 
     </div>
