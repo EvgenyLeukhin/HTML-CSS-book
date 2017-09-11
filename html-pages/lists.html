@@ -301,7 +301,7 @@
       <hr>
       
       
-<h3>Редактирование цифр у ol</h3>      
+<h3>Редактирование цифр у ol</h3>
 <pre><code><span class="red">ol</span> {
   <mark>counter-reset: myCounter;</mark>
   margin-bottom: 60px;
@@ -322,10 +322,44 @@
   height: 20px;
 }
 </code></pre>
+<span class="gray">СПИСКИ часто используют для создания МЕНЮ</span>
+
+
+<h3>Раскрывающийся(интерактивный) список в товых тегах <span class="red">&lt;details&gt;</span> и <span class="red">&lt;summary&gt;</span></h3>
+
+<p>При открытии у тега <b>details</b> появляется артрибут <b>[open]</b>, и можно стилизовать это состояние <code>detail[open] {...}</code>.</p>
+
+<p>Элемент <b>&lt;summary&gt;</b> это первый потомок элемента <b>&lt;details&gt;</b> для краткого описания раскрывающегося списка.</p>
+
+<code>
+&lt;details&gt;<br>
+  &nbsp;&nbsp;&lt;summary&gt;<span class="gray">Раскройте список</span> &lt;/summary&gt;<br>
+  &nbsp;&nbsp;&lt;p&gt;<span class="gray">текст №1</span>&lt;/p&gt;<br>
+  &nbsp;&nbsp;&lt;p&gt;<span class="gray">текст №2</span>&lt;/p&gt;<br>
+  &nbsp;&nbsp;&lt;p&gt;<span class="gray">текст №3</span>&lt;/p&gt;<br>
+  &nbsp;&nbsp;&lt;p&gt;<span class="gray">текст №4</span>&lt;/p&gt;<br>
+  &nbsp;&nbsp;&lt;p&gt;<span class="gray">текст №5</span>&lt;/p&gt;<br>
+&lt;/details&gt;
+</code>
+<hr>
+<details>
+  <summary>Раскройте список </summary>
+  <p>текст №1</p>
+  <p>текст №2</p>
+  <p>текст №3</p>
+  <p>текст №4</p>
+  <p>текст №5</p>
+</details>
 
 
 
-      <span class="gray">СПИСКИ часто используют для создания МЕНЮ</span>
+
+
+
+
+
+
+
 
     </div>
   </div>
