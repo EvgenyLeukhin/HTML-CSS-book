@@ -99,12 +99,17 @@
 					<td style="width: 33.3%;"></td>
 				</tr>
 				<tr>
+					<td><b>Главный файл запуска</b></td>
+					<td>frontend/web/index.php</td>
+					<td style="width: 33.3%;">Его не трогать, в нём настроки и подключения</td>
+				</tr>
+				<tr>
 					<td><b>Страницы</b></td>
 					<td>frontend/views/</td>
 					<td style="width: 33.3%;"></td>
 				</tr>
 				<tr>
-					<td><b>Сетка страниц</b></td>
+					<td><b>Скелет всех страниц (header, footer, pop-ups)</b></td>
 					<td>frontend/views/layouts/main.php</td>
 					<td style="width: 33.3%;"></td>
 				</tr>
@@ -113,15 +118,20 @@
 					<td>frontend/assets/AppAsset.php</td>
 					<td style="width: 33.3%;"></td>
 				</tr>
-                <tr>
-                    <td><b>Debug-режим</b></td>
-                    <td>frontend/web/index.php</td>
-                    <td style="width: 33.3%;">
-                    Для отключения нужно поменять true => false,<br> dev => env <br>
-                      <code>defined('YII_DEBUG') or define('YII_DEBUG', <span class="red">true</span>);
-                            defined('YII_ENV') or define('YII_ENV', '<span class="red">dev</span>');</code>
-                    </td>
-                </tr>
+        <tr>
+          <td><b>Debug-режим</b></td>
+          <td>frontend/web/index.php</td>
+          <td style="width: 33.3%;">
+          Для отключения нужно поменять true => false,<br> dev => env <br>
+            <code>defined('YII_DEBUG') or define('YII_DEBUG', <span class="red">true</span>);
+                  defined('YII_ENV') or define('YII_ENV', '<span class="red">dev</span>');</code>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Настройки</b></td>
+          <td>frontend/config/main.php</td>
+          <td style="width: 33.3%;"><code>'assetManager'</code> Компилятор scss</td>
+        </tr>
 
 			</table>
 			<p>Если проект на Yii2 скачен через <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим</p>
