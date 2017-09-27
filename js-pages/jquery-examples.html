@@ -512,8 +512,66 @@ $('.list-item').<b>each</b>(function() {
 
 
 <br><br><br>
+<h3>ПОДСВЕТКА ТАБЛИЦЫ</h3>
+
+<code><pre class="code">
+  // сохраняем колонки в переменную
+  var cols = $('.products-table col');
+
+  // перебираем все строки
+  $('.products-table tr').each(function() {
+
+    // выбираем все ячейки (th и td) внутри выбранной строки и сохраняем её номер в DOM-е в переменную i
+    $('th, td', this).each(function(i) {
+
+      // при наведении на i-тую ячейку, окрашиваем(#c4eff6) i-тую колонку при на наведении, при отведении (#fff)
+      $(this).hover(
+        // при наведении
+        function() {
+          cols.eq(i).css('background-color', '#c4eff6');
+        },
+
+        // при отведении
+        function() {
+          cols.eq(i).css('background-color', '#fff');
+      });
+    });
+
+  });
+</code></pre>
 
 
+<br><br><br>
+<h3><a href="http://dimox.name/universal-jquery-tabs-script/" target="_blank">ТАБЫ</a></h3>
+
+<code><pre class="code">$('ul.products__menu') <span class="gray">// меню</span>
+  .on('click', 'li:not(.active)', function() { <span class="gray">// кликаем по li без класса .active</span>
+    $(this)
+      .<b>addClass</b>('active')         <span>// добавляем li класс .active</span>
+      .<b>siblings</b>()                 <span>// у родственников</span>
+      .<b>removeClass</b>('active')      <span>// удаляем класс .active</span>
+      .<b>closest</b>('div.tabs')        <span>// находит первый в DOM div.tabs</span>
+      .<b>find</b>('div.tabs__content')  <span>// находит div.tabs__content</span>
+      .<b>removeClass</b>('active')      <span>// удаляем у него класс .active</span>
+      .<b>eq</b>($(this)                 <span>// </span>
+      .<b>index</b>())                   <span>//</span>
+      .<b>addClass</b>('active');        <span>//</span>
+    }
+  );
+
+&lt;ul class="products__menu"&gt;
+  &lt;li class="<b>active</b>"&gt;<span>ТАБ-1</span>&lt;/li&gt;
+  &lt;li&gt;<span>ТАБ-2</span>&lt;/li&gt;
+  &lt;li&gt;<span>ТАБ-3</span>&lt;/li&gt;
+  &lt;li&gt;<span>ТАБ-4</span>&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabs__content  active"&gt; <span>ТАБ-1 контент</span> &lt;/div&gt;
+&lt;div class="tabs__content"&gt; <span>ТАБ-2 контент</span> &lt;/div&gt;
+&lt;div class="tabs__content"&gt; <span>ТАБ-3 контент</span> &lt;/div&gt;
+&lt;div class="tabs__content"&gt; <span>ТАБ-4 контент</span> &lt;/div&gt;
+
+
+</code></pre>
 
 
 
