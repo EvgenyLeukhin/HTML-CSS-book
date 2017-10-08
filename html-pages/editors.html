@@ -231,12 +231,8 @@
           </td>
 
           <td class="col3" style="min-width: 600px;">
-<pre>
-1. Открыть консоль в Sublime text 3 (View - Show console)
-2. Вставить код:
-<span style="font-size: 2px">import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)</span>
-
-3. (Ctrl + Shift + P) Package control
+<pre>1. Открыть консоль в Sublime text 3 (View - Show console)
+2. (Ctrl + Shift + P) Install Package control
 </pre>
           </td>
         </tr>
@@ -293,6 +289,20 @@
 
       </table>
 
+<h2>Пользовательские настройки</h2>
+<pre><code>{
+  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "default_line_ending": "unix",
+  "draw_white_space": "all",
+  "font_face": "Consolas",
+  "font_size": 12,
+  "margin": -3,
+  "tab_size": 2,
+  "theme": "Default.sublime-theme",
+  "word_separators": "./\\()\"'-:,.;&lt;&gt;~!@#$%^&amp;*|+=[]{}`~?",
+  "word_wrap": true
+}</code></pre>
+
 
   <h2>Активация <b>Sublime text 3</b></h2>
       <pre><code style="font-size: 1em;">
@@ -326,18 +336,6 @@ AC5AA84C 034F7A53 2C9A801B 8AED239F
 —— END LICENSE ——
       </code></pre>
       
-    <h3>Mozilla Firefox add-ons:</h3>
-    <div class="index-links-cont">
-        <ul>
-          <li><a href="https://addons.mozilla.org/ru/firefox/addon/firebug" target="_blank">Firebug</a></li>
-          <li><a href="https://addons.mozilla.org/ru/firefox/addon/web-developer" target="_blank">
-            Web Developer</a></li>
-          <li><a href="https://addons.mozilla.org/RU/firefox/addon/auto-reload" target="_blank">
-            Auto-reload</a></li>
-          <li><a href="https://addons.mozilla.org/Ru/firefox/addon/measureit" target="_blank">
-            Measureit (линейка)</a></li>
-        </ul>
-      </div>
       <h3>Key Building</h3>
       <ul>
         <li>
