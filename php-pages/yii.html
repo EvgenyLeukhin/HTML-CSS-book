@@ -133,8 +133,14 @@
           <td style="width: 33.3%;"><code>'assetManager'</code> Компилятор scss</td>
         </tr>
 
+        <tr>
+          <td><b>Путь в корневую директорию</b></td>
+          <td>frontend/web/</td>
+          <td style="width: 33.3%;"><code>include_once <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code></td>
+        </tr>
+
 			</table>
-			<p>Если проект на Yii2 скачен через <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим</p>
+			<p>Если проект на Yii2 скачен через <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим, потом нажать <b>yes</b> для генерации файлов</p>
 
             <h3>Подключить скрипт только на текущую страницу</h3>
             <code>$this->registerJsFile("js/jquery.some-plugin.min.js", ['depends' => 'yii\web\YiiAsset']);</code><br><br>
@@ -147,8 +153,7 @@
 
 <div class="footer">
 	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-													 EvgenyLeukhin@yandex.ru</p>
+		<p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
 
 		<p class="footer-copyright">© 2017 Все права защищены</p>
 	</div>
