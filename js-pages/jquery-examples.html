@@ -573,6 +573,27 @@ $('.list-item').<b>each</b>(function() {
 
 </code></pre>
 
+<br><br><br>
+<h3>Checked</h3>
+
+<code><pre class="code"><span>// при checked делать что-нибудь</span>
+$('#add-complect-item-6').click(function() {
+  if($(this).is(':checked')) {
+    $('#add-complect-other-id').addClass('active');
+  } else {
+    $('#add-complect-other-id').removeClass('active');
+  }
+});
+</pre></code>
+
+
+<br><br><br>
+<h3>Scroll</h3>
+
+<code><pre class="code"><span>// значение скрола от верха окна</span>
+$(document).scrollTop();</pre></code>
+
+
 
 
   </div>
