@@ -4,9 +4,6 @@ body {
   padding: 0;
   font-family: Tahoma, Arial, sans-serif;
 }
-.content {
-  min-height: 92vh;
-}
 
 
 /*центровщик*/
@@ -249,7 +246,7 @@ body {
 /*контент*/
 
 .content {
-  min-height: 600px;
+  min-height: 92vh;
   margin-left: 125px;
   padding: 20px;
   /*border-left: 1px solid #967adc;*/
