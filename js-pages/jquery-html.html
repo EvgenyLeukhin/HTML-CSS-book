@@ -2,11 +2,10 @@
 <html lang="ru">
 
 <head> 
-    <title>Мой Справочник | JS | 
-
-JQuery basics</title>
+    <title>Мой Справочник | JS | JQuery basics</title>
     <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
@@ -65,14 +64,12 @@ JQuery basics</title>
 			<li>
 			    <a class="active" href="#">jQuery</a>
 			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">
-
-JQuery basics</a></li>
+			        <li><a href="jquery-html.html">JQuery basics</a></li>
 			        <li><a href="jquery-func.html">jQuery-функции</a></li>
               <li><a href="jquery-actions.html">jQuery-события</a></li>
 			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
               <li><a href="jquery-forms.html">jQuery-формы</a></li>
-              <li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
+              <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
               <li><a href="jquery-examples.html">Примеры</a></li>
            </ul>
 			 </li>
@@ -87,9 +84,7 @@ JQuery basics</a></li>
 	</div>
 	<div class="content clearfix">
 	
-	<h2>Мой Справочник | JavaScript | 
-
-JQuery basics</h2>
+	<h2>Мой Справочник | JavaScript | JQuery basics</h2>
 	
 	<table class="discription-table" border-spacing: 5px;>
 		<tr>
@@ -97,9 +92,7 @@ JQuery basics</h2>
 		</tr>
 		
 		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-                 Через абсолютный путь
-			</td>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">Через абсолютный путь</td>
 			
 			<td style="width: 400px;">
               <code>
@@ -191,6 +184,9 @@ $(document).ready(function() {<br>
               <code>'main-menu a'</code> - вложенные<br>
               <code>'li > a'</code> - дочерние <br>
               <code>'p + ul'</code> - соседние <br>
+              <code>'*'</code> - все <br>
+              <code>$('...', '...')</code> - несколько селекторов <br>
+              <code>$('[src]')</code> - с атрибутом src <br>
               
 			</td>
 			
@@ -216,9 +212,10 @@ $(document).ready(function() {<br>
 			        <span class="red">:last</span> <span class="gray">// последний элемент</span><br>
 			        <span class="red">:hidden</span> <span class="gray">// скрытые элементы</span><br>
 			        <span class="red">:visible</span> <span class="gray">// видимые элементы</span><br>
-			        $('a<span class="red">:not</span>([href^="http://"])') <span class="gray">// кроме</span><br>
-			        $('li<span class="red">:has</span>(a)') <span class="gray">// li, внутри которых есть a</span><br>
-			        $('p<span class="red">:contains</span>(JavaScript)') <span class="gray">// p, внутри которых есть текст Javascript</span><br>
+			        $('a<span class="red">:not</span>([href^="http://"])') <span class="gray">// кроме этого</span><br>
+			        $('a<span class="red">:not</span>(this) <span class="gray">// кроме</span><br>
+			        $('li<span class="red">:has</span>(a)') <span class="gray">// li, внутри которых есть ссылки</span><br>
+			        $('p<span class="red">:contains</span>('text')') <span class="gray">// p, внутри которых есть текст 'text'</span><br>
 			    </code>
 			</td>
 			

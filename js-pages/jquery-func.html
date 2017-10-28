@@ -327,7 +327,18 @@ JQuery basics</a></li>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.clone()</td>
 			
-			<td style="width: 600px;"><code></code></td>
+			<td style="width: 600px;">
+<pre><code>$(".hello").<span class="red">clone</span>()       // сделаем копию элемента hello
+  .addClass("newElement") // добавим копии класс newElement
+  .text("И снова ... ")   // изменим текст внутри нее
+  .append(".container");  // вставим элемента container</code></pre>
+<hr>
+&lt;div class="container"&gt;<br>
+  &lt;div class="hello"&gt;Привет&lt;/div&gt;<br>
+  &lt;div class="goodbye"&gt;Пока&lt;/div&gt;<br>
+  <span class="red">&lt;div class="hello newElement"&gt;И снова ...&lt;/div&gt;</span><br>
+&lt;/div&gt;
+</td>
 			
 			<td rowspan="1" style="width: 300px; color: #555;">Склонировать элемент</td>
 		</tr>
@@ -356,6 +367,13 @@ JQuery basics</a></li>
 			</td>
 			<td style="width: 600px;">Все родители</td>
 			<td rowspan="1" style="width: 300px; color: #555;">Возвращает массив</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					.child()
+			</td>
+			<td style="width: 600px;">Потомок</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
 		</tr>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
@@ -526,6 +544,14 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
 			<td rowspan="1" style="width: 300px; color: #555;">
 				Вертикальный отступ 
 			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+				.find()
+			</td>
+			<td style="width: 600px;"></td>
+			<td rowspan="1" style="width: 300px; color: #555;">Что-то типа children()</td>
 		</tr>
 
 
