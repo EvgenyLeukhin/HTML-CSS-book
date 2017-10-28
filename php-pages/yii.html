@@ -144,8 +144,36 @@
           <td>frontend/web/</td>
           <td style="width: 33.3%;"><code>include_once <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code></td>
         </tr>
+        <tr>
+          <td><b>Путь в корневую директорию</b></td>
+          <td>frontend/web/</td>
+          <td style="width: 33.3%;"><code>include_once <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code></td>
+        </tr>
 
-			</table>
+        <tr>
+          <td><b>Контроллеры для запуска страниц</b></td>
+          <td>frontend/web/FormController.php</td>
+          <td style="width: 33.3%;">
+<pre><code><?php
+  namespace frontend\controllers;
+  class FormController extends \app\components\SeoController {
+    // страница /form
+    public function actionIndex() { return $this->render("index"); }
+    // страница /form/step2
+    public function actionStep2() { return $this->render("step2"); }
+    // страница /form/step3
+    public function actionStep3() { return $this->render("step3"); }
+    // страница /form/step4
+    public function actionStep4() { return $this->render("step4"); }
+    // страница /form/step5
+    public function actionStep5() { return $this->render("step5"); }
+    // страница /form/step6
+    public function actionStep6() { return $this->render("step6"); }
+            }</code></pre>
+          </td>
+        </tr>
+
+	</table>
 			<p>Если проект на Yii2 скачен через <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим, потом нажать <b>yes</b> для генерации файлов</p>
 
             <h3>Подключить скрипт только на текущую страницу</h3>
