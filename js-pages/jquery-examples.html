@@ -588,10 +588,20 @@ $('#add-complect-item-6').click(function() {
 
 
 <br><br><br>
-<h3>Scroll</h3>
+<h3>Фиксируем блок при скроле</h3>
 
-<code><pre class="code"><span>// значение скрола от верха окна</span>
-$(document).scrollTop();</pre></code>
+<code><pre class="code"><span class="gray">// фиксируем .progress-cont</span>
+  $(window).scroll(function() {
+    var pageScroll = $(document).scrollTop(),
+        bodyHeight = $('body').height();
+
+    if ((pageScroll > 175) &amp;&amp; (pageScroll < bodyHeight - 700)) {
+      $('.progress-cont').css('top', pageScroll - 150);
+    } else {
+      $('.progress-cont').css('top', 26);
+    }
+  });
+</pre></code>
 
 
 
