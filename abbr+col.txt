@@ -1,0 +1,25 @@
+<abbr title="Полное название">Абиривиатура</abbr>
+
+ТАБЛИЦЫ
+<caption>
+<thead></thead> не может быть пустой
+<tfoot></tfoot>
+<tbody></tbody> Может быть несколько
+<colgroup>
+  <col span="2">
+  <col>
+</colgroup>
+
+
+.table {
+  border-spacing: 5px;
+  table-layout: fixed|after
+}
+
+disabled
+autofocus
+tabindex="2"
+
+<input form="form-id" type="submit"> // если инпут вне form
+
+input:checked
