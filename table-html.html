@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      table td,
+      table th {
+        border: 1px solid red;
+        vertical-align: bottom;
+      }
+     colgroup > col:hover {
+        background: red;
+        cursor: pointer;
+      }
+
+    </style>
+</head>
+<body>
+<table>
+  <!-- Заголовок таблицы-->
+  <caption>Таблица</caption>
+  <!-- Разметка для колонок -->
+  <colgroup>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+
+  <!-- Заголовочные строки -->
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+      <th>Header content 3</th>
+    </tr>
+  </thead>
+
+  <!-- Тело таблицы -->
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+      <td>Body content 3</td>
+    </tr>
+  </tbody>
+
+  <!-- Футерные строки таблицы -->
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+      <td>Footer content 3</td>
+    </tr>
+  </tfoot>
+
+</table>
+</body>
+</html>

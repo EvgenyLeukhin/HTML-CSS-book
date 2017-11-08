@@ -23,3 +23,13 @@ tabindex="2"
 <input form="form-id" type="submit"> // если инпут вне form
 
 input:checked
+
+
+
+.breadcrumb > .active {
+  white-space: nowrap;
+  vertical-align: bottom;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+}
