@@ -1,10 +1,10 @@
-<abbr title="Полное название">Абиривиатура</abbr>
+<abbr title="ГЏГ®Г«Г­Г®ГҐ Г­Г Г§ГўГ Г­ГЁГҐ">ГЂГЎГЁГ°ГЁГўГЁГ ГІГіГ°Г </abbr>
 
-ТАБЛИЦЫ
+Г’ГЂГЃГ‹Г€Г–Г›
 <caption>
-<thead></thead> не может быть пустой
+<thead></thead> Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј ГЇГіГ±ГІГ®Г©
 <tfoot></tfoot>
-<tbody></tbody> Может быть несколько
+<tbody></tbody> ГЊГ®Г¦ГҐГІ ГЎГ»ГІГј Г­ГҐГ±ГЄГ®Г«ГјГЄГ®
 <colgroup>
   <col span="2">
   <col>
@@ -20,7 +20,7 @@ disabled
 autofocus
 tabindex="2"
 
-<input form="form-id" type="submit"> // если инпут вне form
+<input form="form-id" type="submit"> // ГҐГ±Г«ГЁ ГЁГ­ГЇГіГІ ГўГ­ГҐ form
 
 input:checked
 
