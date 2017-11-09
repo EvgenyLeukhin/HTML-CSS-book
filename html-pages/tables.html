@@ -122,6 +122,7 @@
         <li><span class="red">border-collapse: collapse;</span> - границы слиплись</li>
         <li><span class="red">cellspacing: 5px;</span> - отступы между ячейками</li>
         <li><span class="red">border-spacing: 5px 10px;</span> - отступы между ячейками</li>
+        <li><span class="red">table-layout: fixed;</span> - ???</li>
         <li>или <span class="red">padding</span> для ячеек</li>
         <li><span class="red">caption-side:</span> |top|bottom| - расположение заголовка таблицы</li>
         <li><code>&lt;thead&gt;</code> - группировка рядов хедера таблицы</li>
@@ -138,7 +139,7 @@
         <h4>Полная разметка</h4>
       <code><pre>&lt;table&gt;
   &lt;caption&gt;<span class="gray">Заголовок</span>&lt;/caption&gt;
-  &lt;col&gt;
+  &lt;col span="1"&gt;
   &lt;thead&gt;
     &lt;tr&gt;&lt;td&gt;<span class="gray">Головная строка</span>&lt;/td&gt;&lt;/tr&gt;
   &lt;/thead&gt;
