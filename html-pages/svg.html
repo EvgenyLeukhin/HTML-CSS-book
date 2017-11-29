@@ -276,7 +276,7 @@
 	</svg><br>
 	<code>
 	&lt;svg <span class="red ">style="border: 1px solid black "</span>&gt;<br>
-			&nbsp;&nbsp;&lt;polyline <span class="red ">points="30,50 40,10 80,100 0,30 70,25 10,85 " stroke="pink " stroke-width="4 " fill="none "</span>/&gt;<br>
+			&nbsp;&nbsp;&lt;polyline <span class="red ">points="30,50 40,10 80,100 0,30 70,25 10,85" stroke="pink" stroke-width="4" fill="none"</span>/&gt;<br>
 	&lt;/svg&gt;
 	</code>
 	
@@ -285,15 +285,26 @@
   <p>Вставлять <b>&lt;svg&gt;</b> можно с помощью тега <b>&lt;img&gt;</b> (подойдет для контента), также с помощью <b>background-image</b> (подойдёт для декора).</p>
 
   <p>Если необходим полный доступ к svg-элементу, то необходимо записывать сам тег svg, либо внутри object</p>
-	
+
+  <h3>SVG-спрайты</h3>
+  <p>Вставить после body:</p>
+  <code>&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;<br>
+  &nbsp;&nbsp;&lt;symbol id="svg-logo"&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...svg-код...</span> <br>
+  &nbsp;&nbsp;&lt;/symbol&gt;<br>
+  &lt;/svg&gt;</code>
+
+  <p>Использование через id symbol:</p>
+  <code>&lt;svg class="svg-map" width="136.1px" height="75px" viewBox="0 0 136.1 75"&gt;<br>
+  &nbsp;&nbsp;&lt;use xlink:href="#svg-map"&gt;&lt;/use&gt;<br>
+  &lt;/svg&gt;</code>
+
 	</div>
 </div>
 
 <div class="footer ">
 	<div class="layout-positioner ">
-		<p class="footer-text ">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
+		<p class="footer-text ">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
 		<p class="footer-copyright ">© 2017 Все права защищены</p>
 	</div>
 </div>
