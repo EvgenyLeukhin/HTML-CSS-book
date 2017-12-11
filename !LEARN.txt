@@ -1,0 +1,103 @@
+Каналы (Sorax, Хауди Хо)
+envatomarket, themeforest (дизайн)
+design non stop
+Ководство (А.Лебедев)
+Форумы, IT-торренты
+
+Ресурсы:
+Евгений Попов - HTML, CSS, jQuery, PHP
+PHP - Дмитрий Катеров (книга)
+https://puzzle-english.com/ - Английский язык
+НЕ распыляться и выбрать одну сферу (web-, soft-, game-)
+Google лучше как поиск (ГУГЛИТЬ!!! ВСЁ есть)
+
+Frontend
+==================
+1. HTML
+htmlbook
+htmlacademy +++
+webref
+Марк Пилигрим - Погружение в HTML5(книга)
+Sublime Text 3 + Emmet +++
+
+2. CSS
+htmlbook
+htmlacademy +++
+webref
+SCSS +++
+DevTips(YouTube канал)
+uroki-css.ru
+Дэвид МакФарланд - Большая книга CSS
+Эрик Майер - CSS. Подробное руководство
+Bootstrap 
+gulp +++
+Table of contents ???
+Правило 14 KB ???
+gzip сжатие  ???
+
+3. JavaScript
+IDE WebStorm
+Лекция Виталия Фридмана - Dirty little front-end tricks 2016 JSConf
+learn.javascript.ru
+Дэвид Фленаган - JavaScript. Подробное руководство
+jQuery
+nodeJS
+React
+Angular 2
+Vue.js
+Webpack, Jade, Font Ninja, Visual Event
+
+
+
+
+
+Библиотеки-плагины
+
+Slick - слайдер (http://kenwheeler.github.io/slick/)
+Owl-carousel - слайдер (https://owlcarousel2.github.io/OwlCarousel2/)
+Flickity - слайдер (https://flickity.metafizzy.co/)
+Cute Slider - слайдер (с красивой анимацией) (https://codecanyon.net/item/cute-slider-3d-2d-html5-image-slider/3046001)
+Swiper - слайдер (http://idangero.us/swiper/)
+
+ТИПОГРАФИКА
+FitText - FitText простой JQuery-плагин, который автоматически делает текст по ширине родительского элемента. Идеально подходит для необычных заголовков! (http://fittextjs.com/)
+
+Lettering.js - Несмотря на то, что CSS3 и @font-face директива определенно улучшились для веб-типографики, это не дает полного контроля. Вот почему был создан Lettering.js. Если вы ищете простое решение, чтобы получить полный контроль написания каждого отдельного элемента заголовка, то этот плагин для вас (http://letteringjs.com/)
+
+approach - Смена размера и цвета текста при наведении (http://srobbin.com/jquery-plugins/approach/)
+
+ARCTEXT.JS - Текст изгибами (https://tympanus.net/Development/Arctext/)
+
+
+
+
+
+Masonry pkgd - сетка для фотографий (https://masonry.desandro.com/)
+jQuery UI Sortable - drag&drop сортировка (https://jqueryui.com/sortable/)
+PhotoSwipe - галерея (http://photoswipe.com/)
+Magnific Popup - мод. окна, галереи (http://dimsemenov.com/plugins/magnific-popup/)
+jQuery Form Validation - валидация (http://www.formvalidator.net/)
+Select2 - селекты (https://select2.org/)
+Progress.js - прогресс-бар загрузки (http://usablica.github.io/progress.js/)
+Tooltipster - всплывающие подсказки (http://iamceege.github.io/tooltipster/)
+Typehead - поле поиска со всплывающими ответами (https://twitter.github.io/typeahead.js/)
+
+PrettyEmbed
+Fitvids - адаптивный видео-плейер (http://fitvidsjs.com/)
+fullPage.js - блоки во всю ширину экрана (https://alvarotrigo.com/fullPage/#firstPage)
+Tree.js
+MatchHeight
+Slideout.js - бокое меню для мобильного телефона (https://slideout.js.org/)
+FocusPoint
+Liquid Images
+Vide - видеофон (http://vodkabears.github.io/vide/)
+Swipe
+AutocompleteJS
+
+Template7
+JsBarcode
+InputMask
+Remodal
+gIDatePicker
+ChartJS
+EasyTabs
