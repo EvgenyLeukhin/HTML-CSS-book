@@ -17,30 +17,40 @@ h1—h6, в тех случаях, когда заголовок имеет мн
 http://www.mirovideoconverter.com/) — Бесплатный видео-конвертёр для конвертирования в веб-форматы
 
 
-==================
-Каналы (Sorax, Хауди Хо)
-envatomarket, themeforest (дизайн)
-design non stop
-Ководство (А.Лебедев)
+
+Каналы (Sorax, Хауди Хо) - WEB
 Форумы, IT-торренты
 
 Ресурсы:
-Евгений Попов - HTML, CSS, jQuery, PHP
-PHP - Дмитрий Катеров (книга)
-https://puzzle-english.com/ - Английский язык
-НЕ распыляться и выбрать одну сферу (web-, soft-, game-)
-Google лучше как поиск (ГУГЛИТЬ!!! ВСЁ есть)
+    Евгений Попов - HTML, CSS, jQuery, PHP
+    PHP - Дмитрий Катеров (книга)
+    https://puzzle-english.com/ - Английский язык
+    НЕ распыляться и выбрать одну сферу (web-, soft-, game-)
+    Google лучше как поиск (ГУГЛИТЬ!!! ВСЁ есть)
+    php.su
+    php.net
+
+
+==================
+WEB-ДИЗАЙН
+==================
+envatomarket, themeforest (дизайн)
+design non stop
+Ководство (А.Лебедев)
 
 Frontend
 ==================
 1. HTML
+==================
 htmlbook
 htmlacademy +++
 webref
 Марк Пилигрим - Погружение в HTML5(книга)
 Sublime Text 3 + Emmet +++
 
+==================
 2. CSS
+==================
 htmlbook
 htmlacademy +++
 webref
@@ -55,7 +65,9 @@ Table of contents ???
 Правило 14 KB ???
 gzip сжатие  ???
 
+==================
 3. JavaScript
+==================
 IDE WebStorm
 Лекция Виталия Фридмана - Dirty little front-end tricks 2016 JSConf
 learn.javascript.ru
@@ -68,10 +80,9 @@ Vue.js
 Webpack, Jade, Font Ninja, Visual Event
 
 
-
-
-
+==================
 Библиотеки-плагины
+==================
 
 Slick - слайдер (http://kenwheeler.github.io/slick/)
 Owl-carousel - слайдер (https://owlcarousel2.github.io/OwlCarousel2/)
