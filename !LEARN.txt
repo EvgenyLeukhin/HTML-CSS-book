@@ -1,3 +1,23 @@
+в html5 (вместе с JS)
+<canvas>
+
+<geolocation>
+
+<localstorage>
+
+<html> vs :root 
+
+<hgroup>
+Элемент hgroup (http://www.whatwg.org/specs/web-apps/current-work/
+multipage/sections.html#the-hgroup-element) представляет собой заголо-
+вок раздела. Элемент используется для группировки набора элементов
+h1—h6, в тех случаях, когда заголовок имеет множество уровней, включая
+подзаголовки, альтернативные заголовки, или строки тегов (taglines)
+
+http://www.mirovideoconverter.com/) — Бесплатный видео-конвертёр для конвертирования в веб-форматы
+
+
+==================
 Каналы (Sorax, Хауди Хо)
 envatomarket, themeforest (дизайн)
 design non stop
