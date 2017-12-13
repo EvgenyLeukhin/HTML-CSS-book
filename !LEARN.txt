@@ -7,6 +7,8 @@
 
 <html> vs :root 
 
+HTML5 Микроданные (стр 235) (itemprop itemscope itemtype)
+
 <hgroup>
 Элемент hgroup (http://www.whatwg.org/specs/web-apps/current-work/
 multipage/sections.html#the-hgroup-element) представляет собой заголо-
@@ -132,3 +134,4 @@ Remodal
 gIDatePicker
 ChartJS
 EasyTabs
+geo.js - Геолокация

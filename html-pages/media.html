@@ -184,6 +184,14 @@
         &nbsp;&nbsp;&lt;source src="pr6.webm" type='video/webm; codecs="vp8, vorbis"'&gt;<br>
         &nbsp;&nbsp;&lt;source src="pr6.ogv" type='video/ogg; codecs="theora, vorbis"'&gt;<br>
         &lt;/video&gt;
+<hr>
+        &lt;script&gt;<br>
+          &nbsp;&nbsp;var v = document.getElementById("movie");<br>
+          &nbsp;&nbsp;v.onclick = function() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if (v.paused) { v.play();} <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;else { v.pause(); } <br>
+          &nbsp;&nbsp;});<br>
+        &lt;/script&gt;
       </code>
 
     </div>
