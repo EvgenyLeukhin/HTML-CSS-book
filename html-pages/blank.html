@@ -16,6 +16,7 @@
     .semantic-link {
       list-style: none;
       padding-left: 0;
+      padding-bottom: 30px;
     }
     .semantic-link h2,
     .semantic-link p {
@@ -26,9 +27,17 @@
     }
     .semantic-link h2 {
       color: rebeccapurple;
+      font-size: 1.25em;
     }
     .semantic-link li:nth-child(even) {
       background: #edd;
+    }
+    span.grey {
+      color: #000;
+      opacity: .75;
+    }
+    .schemes > li {
+      margin-bottom: 15px;
     }
 
   </style>
@@ -144,7 +153,67 @@
         </li>
       </ul>
 
+      <h2>Микроданные. Более глубокая семантика</h2>
+      <p>Нужно для лучшей обработки результата поисковых запросов</p>
 
+          <p><b><mark>itemscope</mark></b> - указывает границы блока по микроданным в открывающем теге</p>
+          <p><b><mark>itemtype</mark></b> - тип схемы для микроданных с сайта <a href="http://schema.org/" target="_blank">http://schema.org/</a> (всегда URL-тип)</p>
+          <p><b><mark>itemprop="name"</mark></b> - свойство этой схемы со значением (полный список значений на сайте <a href="http://ruschema.org" target="_blank">http://ruschema.org/</a>)</p>
+          <pre><code>&lt;div <span class="red"><b>itemscope</b> <b>itemtype="http://schema.org/Person"</b></span>&gt;
+  &lt;div <span class="red">itemprop="<b>name</b>"</span>&gt;<span class="grey">Евгений Леухин</span>&lt;/div&gt;
+  &lt;img <span class="red">itemprop="<b>image</b>"</span> <span class="grey">src="http://server/photo.jpg"</span>&gt;
+  &lt;div <span class="red">itemprop="<b>gender</b>"</span>&gt;<span class="grey">Мужской</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>url</b>"</span>&gt;<span class="grey">http://mysite.ru</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>birthDate</b>"</span>&gt;<span class="grey">01-04-1986</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>nationality</b>"</span>&gt;<span class="grey">Русский</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>homeLocation</b>"</span>&gt;<span class="grey">Россия, Омск</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>telephone</b>"</span>&gt;<span class="grey">+79043270421</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>email</b>"</span>&gt;<span class="grey">evgenyleukhin@ya.ru</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>jobTitle</b>"</span>&gt;<span class="grey">Web-разработчик</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>spouse</b>"</span>&gt;<span class="grey">Бегунова Инна</span>&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Виды схем:</h3>
+<ul class="schemes">
+  <li>Творческие работы: <br>
+    &nbsp;<a href="http://ruschema.org/CreativeWork">CreativeWork (Творчество)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Book">Book (Книга)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Movie">Movie (Фильм)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/MusicRecording">MusicRecording (Музыкальная запись)</a>, <br>
+    &nbsp;<a href="/Recipe">Recipe (Рецепт)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/TVSeries">TVSeries (Телесериал)</a>
+  </li>
+
+  <li>Встроенные нетекстовые объекты: <br>
+    &nbsp;<a href="http://ruschema.org/AudioObject">AudioObject (Аудио)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/ImageObject">ImageObject (Изображение)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/VideoObject">VideoObject (Видео)</a>
+  </li>
+
+  <li>&nbsp;<a href="http://ruschema.org/Event">Event (Событие)</a></li>
+  <li>&nbsp;<a href="http://ruschema.org/Organization">Organization (Организация)</a></li>
+  <li>&nbsp;<a href="http://ruschema.org/Person">Person (Человек)</a></li>
+  <li>
+    &nbsp;<a href="http://ruschema.org/Place">Place (Место)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/LocalBusiness">LocalBusiness (Местный Бизнес)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Restaurant">Restaurant (Ресторан)</a>
+  </li>
+  <li>
+    &nbsp;<a href="http://ruschema.org/Product">Product (Продукт)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Offer">Offer (Предложение)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/AggregateOffer">AggregateOffer (Совокупное Предложение)</a>
+  </li>
+  <li>
+    &nbsp;<a href="http://ruschema.org/Review">Review (Отзыв)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/AggregateRating">AggregateRating (Cовокупный Рейтинг)</a><br>
+  </li>
+</ul>
+
+
+
+      <br>
+      <br>
+      <br>
     </div>
   </div>
 
