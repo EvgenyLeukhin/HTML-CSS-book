@@ -122,9 +122,16 @@ require_once "<span class="text-success">blocks/block2.php</span>";</code></pre>
 					<tr>
 						<td></td>
 						<td>
-<pre><code>include_once <span class="red">$_SERVER['DOCUMENT_ROOT'] . "blocks/block1.php</span>";</code></pre>
+<pre><code>include_once <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code></pre>
 						</td>
 						<td style="width: 33.3%;">Указывать ссылку от корня документа</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+<pre><code>include_once <span class="red">__DIR__</span> . "/blocks/block1.php";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Указывать ссылку от текущей документа, где располагается текущий открытый файл</td>
 					</tr>
 					<tr>
 						<th class="lead  text-center  bg-primary" colspan="3">Создание файлов</th>
