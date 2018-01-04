@@ -132,6 +132,9 @@
 	
 	<h2>Мой Справочник | CSS | Шрифт и текст</h2>
 
+	<img src="../img/CSS-mezhstrochnyj-interval.jpg" alt="CSS-mezhstrochnyj-interval.jpg" width="454" height="454">
+	<p><b><u>Лидинг</u> это <code>line-height - font-size;</code></b></p>
+	<hr>
 	<h3>Добавление нестандартных шрифтов</h3>
 	<hr>
 	<p><b><u style="font-size: 2em;">I способ - Веб-шрифты</u> (через <span class="red">&lt;link&gt;</span>)</b></p>
@@ -140,7 +143,7 @@
 	&lt;<span class="red">link</span> href='<span class="gray">https://fonts.googleapis.com/css?family=Indie+Flower</span>' rel='stylesheet' type='text/css'&gt;
 	</code>
 	<p>2. Копируем с сайта строку <span class="red">font-family</span> в CSS и готово;</p>
-	<code>font-family: 'Indie Flower', cursive;<br>
+	<code>font-family: 'Indie Flower', cursive; <mark>(НАСЛЕДУЕТСЯ!</mark>)<br>
 	&lt;span style="<mark>font-family: 'Indie Flower', cursive;</mark>"&gt;<span class="gray">Some text</span>&lt;/span&gt;</code><br>
 	<span style="font-family: 'Indie Flower', cursive; border: 1px solid black; font-size: 2em;">Some text</span>
 	<hr>
@@ -246,18 +249,47 @@
 				<th>Код CSS</th>
 			</tr>
 			<tr>
-				<td rowspan="5">font-size</td>
-				<td rowspan="5">
+				<td>font-size</td>
+				<td>
 					<b><mark>Размер шрифта</mark></b><br>
 					<span class="gray">
-						(Обычно в px, pt или em)<br>
-						xx-small, xsmall, small, medium(12pt), large(15pt), x-large(18pt), xx-large(27pt), smaller, larger	
+						xx-small (9px),<br>
+						x-small (10px),<br>
+						small (13px),<br> 
+						medium(16px),<br> 
+						large(18px),<br> 
+						x-large(24px),<br> 
+						xx-large(32px),<br> 
+						smaller (на шаг ниже),<br> 
+						larger (на шаг выше)
 					</span>
 				</td>
-				<td style="color: black; font-weight: normal; font-size: 24px;">Some text</td>
-				<td><code>font-<span class="red">size:</span> 24px;</code></td>
+				<!-- <td style="color: black; font-weight: normal; font-size: 24px;">Some text</td> -->
+				<td colspan="2" style="color: #000;">
+					<h3>Как задавать font-size</h3>
+					<b>Пиксели</b><br>
+					<code>font-<span class="red">size:</span> 24px;</code>
+					<p>Просто и понятно. Фиксированное абсолютное значение</p> <hr>
+
+					<b>em</b><br>
+					<code>font-<span class="red">size:</span> 1em;</code>
+					<p>em — в типографике относительная единица длины, равная размеру текущего шрифта (размер буквы M, напечатанной шрифтом Cicero). <b>Базовая 1em = 16px;</b>, но она переопределяется для дочерних элементов. <br>Если вы прописали для заголовка (h1) font-size: 2em, и если у него родительский элемент body c font-size: 1em, то вычисляем для h2 font-size=16*2=32px, но если у h1 есть вложенный элемент span, то уже для font-size: 1em уже будет равен 32px, а 2em = 64px <hr>
+
+					<b>rem</b><br>
+					<hr>
+
+					<b>%</b><br>
+					<hr>
+
+					<b>vw</b><br>
+					<hr>
+
+					<b>Ключевые слова</b><br>
+					<hr>
+
+				</td>
 			</tr>
-			<tr>
+<!-- 			<tr>
 				<td style="color: black; font-weight: normal; font-size: 1.5em;">Some text</td>
 				<td><code>font-<span class="red">size: </span>1.5em;</code></td>
 			</tr>
@@ -272,9 +304,9 @@
 			<tr>
 				<td style="color: black; font-weight: normal; font-size: 2.5rem;">Some text</td>
 				<td><code>font-<span class="red">size:</span> 2.5rem;</code></td>
-			</tr>
+			</tr> -->
 			<tr>
-				<td rowspan="2">font-weight<br><span class="gray">Аналог &ltb&gt;</span></td>
+				<td rowspan="2">font-weight<br><span class="gray">Аналог &lt;b&gt;</span></td>
 				<td rowspan="2">
 					<b><mark>Толщина начертания</mark></b><hr>
 					<b>normal</b> - обычная*<br>
@@ -293,7 +325,7 @@
 				<td><code>font-<span class="red">weight: </span>bold;</code></td>
 			</tr>
 			<tr>
-				<td rowspan="2">font-style<br><span class="gray">Аналог &lti&gt;</span></td>
+				<td rowspan="2">font-style<br><span class="gray">Аналог &lt;i&gt;</span></td>
 				<td rowspan="2">
 					<b><mark>Стиль шрифта</mark></b><hr>
 					<b>normal</b> - обычный*<br>
@@ -337,6 +369,45 @@
 				</td>
 				<td>
 					<code>font-<span class="red">variant: </span>small-caps;</code>
+				</td>
+			</tr>
+			<tr>
+				<td>line-height</td>
+				<td>
+					<b><u><mark>Высота строки (Интерльяж)</mark></u></b><br>
+					В Google Chrome по ум*<code>.fz(16px;18px;"Times New Roman");</code>
+				</td>
+				<td style="line-height: 1em; color: black; font-weight: normal;">Some text Some text Some text Some text Some text Some text Some text Some text </td>
+				<td>
+					<u style="font-weight: bold; font-size: 18px;">В пикселях (<span style="color: green;">most pop</span>):</u> <br>
+					<code>font-size: <span class="red">16px;</span></code><br>
+					<code>line-height: <span class="red">20px;</span></code>
+					<p>Значение lh в пикселях абсолютное, фиксированное и наследуется!</p>
+					<hr>
+
+					<u style="font-weight: bold; font-size: 18px;">Множитель (<span style="color: green;">хорошо</span>):</u> <br>
+					<code>font-size: <span class="red">16px;</span></code><br>
+					<code>line-height: <span class="red">2; <span class="gray">//16px*2=32px</span></span></code>
+					<p>Адаптивное значение lh, всегда будет высчитываться заново при изменении кегля. 1.15 по ум* в браузерах</p>
+					<hr>
+
+					<u style="font-weight: bold; font-size: 18px;">В em:</u> <br>
+					<code>font-size: <span class="red">16px;</span></code><br>
+					<code>line-height: <span class="red">1.5em;</span></code>
+
+					<hr>
+
+					<u style="font-weight: bold; font-size: 18px;">В %:</u> <br>
+					<code>line-height: <span class="red">100%;</span></code>
+					<p>font-size: 100% = 16px;<br>line-height: 100% = 16px;</p>
+					<hr>
+
+					<u style="font-weight: bold; font-size: 18px;">В rem:</u> <br>
+					<code>line-height: <span class="red">2rem;</span></code>
+					<p>1rem = 16px;</p><hr>
+					
+					<u style="font-weight: bold; font-size: 18px;">В ключевых словах:</u> <br>
+					<code>line-height: <span class="red">normal;</span></code><hr>
 				</td>
 			</tr>
 
@@ -520,17 +591,6 @@
 				<td style="vertical-align: bottom; color: black; font-weight: normal;">Some text </td>
 				<td>
 					<code>vertical-align: <span class="red">bottom;</span></code>
-				</td>
-			</tr>
-			<tr>
-				<td rowspan="3">line-height</td>
-				<td rowspan="3">
-					<b><u><mark>Высота строки (Интерльяж)</mark></u></b><br>
-					Стандартный размер межстрочного интервала браузера составляет 120 %
-				</td>
-				<td style="line-height: 1em; color: black; font-weight: normal;">Some text Some text Some text Some text Some text Some text Some text Some text </td>
-				<td>
-					<code>line-height: <span class="red">1em;</span></code>
 				</td>
 			</tr>
 			<tr>
