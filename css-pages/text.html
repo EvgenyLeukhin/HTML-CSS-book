@@ -252,59 +252,54 @@
 				<td>font-size</td>
 				<td>
 					<b><mark>Размер шрифта</mark></b><br>
-					<span class="gray">
-						xx-small (9px),<br>
-						x-small (10px),<br>
-						small (13px),<br> 
-						medium(16px),<br> 
-						large(18px),<br> 
-						x-large(24px),<br> 
-						xx-large(32px),<br> 
-						smaller (на шаг ниже),<br> 
-						larger (на шаг выше)
-					</span>
 				</td>
 				<!-- <td style="color: black; font-weight: normal; font-size: 24px;">Some text</td> -->
 				<td colspan="2" style="color: #000;">
 					<h3>Как задавать font-size</h3>
-					<b>Пиксели</b><br>
-					<code>font-<span class="red">size:</span> 24px;</code>
+					<b><mark>Пиксели</mark></b> (Фиксированное значение)<br>
+					<code>font-<span class="red">size:</span> 10px;</code>
 					<p>Просто и понятно. Фиксированное абсолютное значение</p> <hr>
 
-					<b>em</b><br>
-					<code>font-<span class="red">size:</span> 1em;</code>
-					<p>em — в типографике относительная единица длины, равная размеру текущего шрифта (размер буквы M, напечатанной шрифтом Cicero). <b>Базовая 1em = 16px;</b>, но она переопределяется для дочерних элементов. <br>Если вы прописали для заголовка (h1) font-size: 2em, и если у него родительский элемент body c font-size: 1em, то вычисляем для h2 font-size=16*2=32px, но если у h1 есть вложенный элемент span, то уже для font-size: 1em уже будет равен 32px, а 2em = 64px <hr>
+					<b><mark>em</mark></b> (Отн. значение от родителя)<br>
+					<code><span class="red">body</span> { font-size: 20px; }</code> <br>
+					<code><span class="red">h1</span> { font-size: 2em; } <span class="gray">// 40px</span></code><br>
+					<code><span class="red">h1 span</span> { font-size: 1em; } <span class="gray">// 40px</span></code><br>
+					<p>em — в типографике относительная единица длины, равная размеру текущего (унаследованного шрифта) (размер буквы M, напечатанной шрифтом Cicero). <b>Базовая 1em = 16px;</b>, но она переопределяется для дочерних элементов. <br>Если вы прописали для заголовка (h1) font-size: 2em, и если у него родительский элемент body c font-size: 1em, то вычисляем для h2 font-size=16*2=32px, но если у h1 есть вложенный элемент span, то уже для этого span font-size: 1em уже будет равен 32px, а 2em = 64px <hr>
 
-					<b>rem</b><br>
+					<b><mark>rem</mark></b> (root em, отн. значение от корня)<br>
+					<code><span class="red">:root</span> { font-size: 16px; }</code><br>
+					<code><span class="red">h2</span> { font-size: 2rem; } <span class="gray">// 32px</span></code><br>
+					<code><span class="red">h2 span</span> { font-size: 1rem; } <span class="gray">// 16px</span></code><br>
+					<p>rem - по сути тоже самое, что em, только значение размера шрифта зависит не от размера родительского элемента, а от размера корневого элемента (:root) и не бужет изменяться от вложенности</p>
 					<hr>
 
-					<b>%</b><br>
+					<b><mark>%</mark></b> (тоже самое, что и em, только запись в процентах)<br>
+					<code><span class="red">body</span> { font-size: 20px; }</code> <br>
+					<code><span class="red">h1</span> { font-size: 200%; } <span class="gray">// 40px</span></code><br>
+					<code><span class="red">h1 span</span> { font-size: 100%; } <span class="gray">// 40px</span></code><br>
 					<hr>
 
-					<b>vw</b><br>
+					<b><mark>vw</mark></b> (Проценты от ширины viewport)<br>
+					<code><span class="red">h1</span> { font-size: 10vw; }</code><br>
+					<p>В примере: 10 процентов от высоты вьюпорта. Адаптивное значение</p>
 					<hr>
 
-					<b>Ключевые слова</b><br>
+					<b><mark>Ключевые слова<mark></b> (редко)<br>
+						<code>font-size: xx-small (9px),<br>
+						font-size: x-small (10px),<br>
+						font-size: small (13px),<br> 
+						font-size: medium(16px),<br> 
+						font-size: large(18px),<br> 
+						font-size: x-large(24px),<br> 
+						font-size: xx-large(32px),<br> 
+						font-size: smaller (на шаг ниже),<br> 
+						font-size: larger (на шаг выше)</code>
+					</span>
 					<hr>
 
 				</td>
 			</tr>
-<!-- 			<tr>
-				<td style="color: black; font-weight: normal; font-size: 1.5em;">Some text</td>
-				<td><code>font-<span class="red">size: </span>1.5em;</code></td>
-			</tr>
-			<tr>
-				<td style="color: black; font-weight: normal; font-size: 8pt;">Some text</td>
-				<td><code>font-<span class="red">size:</span> 8pt;</code></td>
-			</tr>
-			<tr>
-				<td style="color: black; font-weight: normal; font-size: 200%;">Some text</td>
-				<td><code>font-<span class="red">size:</span> 200%;</code></td>
-			</tr>
-			<tr>
-				<td style="color: black; font-weight: normal; font-size: 2.5rem;">Some text</td>
-				<td><code>font-<span class="red">size:</span> 2.5rem;</code></td>
-			</tr> -->
+
 			<tr>
 				<td rowspan="2">font-weight<br><span class="gray">Аналог &lt;b&gt;</span></td>
 				<td rowspan="2">
@@ -377,37 +372,30 @@
 					<b><u><mark>Высота строки (Интерльяж)</mark></u></b><br>
 					В Google Chrome по ум*<code>.fz(16px;18px;"Times New Roman");</code>
 				</td>
-				<td style="line-height: 1em; color: black; font-weight: normal;">Some text Some text Some text Some text Some text Some text Some text Some text </td>
-				<td>
-					<u style="font-weight: bold; font-size: 18px;">В пикселях (<span style="color: green;">most pop</span>):</u> <br>
-					<code>font-size: <span class="red">16px;</span></code><br>
-					<code>line-height: <span class="red">20px;</span></code>
-					<p>Значение lh в пикселях абсолютное, фиксированное и наследуется!</p>
-					<hr>
 
-					<u style="font-weight: bold; font-size: 18px;">Множитель (<span style="color: green;">хорошо</span>):</u> <br>
-					<code>font-size: <span class="red">16px;</span></code><br>
-					<code>line-height: <span class="red">2; <span class="gray">//16px*2=32px</span></span></code>
-					<p>Адаптивное значение lh, всегда будет высчитываться заново при изменении кегля. 1.15 по ум* в браузерах</p>
-					<hr>
-
-					<u style="font-weight: bold; font-size: 18px;">В em:</u> <br>
-					<code>font-size: <span class="red">16px;</span></code><br>
-					<code>line-height: <span class="red">1.5em;</span></code>
-
-					<hr>
-
-					<u style="font-weight: bold; font-size: 18px;">В %:</u> <br>
-					<code>line-height: <span class="red">100%;</span></code>
-					<p>font-size: 100% = 16px;<br>line-height: 100% = 16px;</p>
-					<hr>
-
-					<u style="font-weight: bold; font-size: 18px;">В rem:</u> <br>
-					<code>line-height: <span class="red">2rem;</span></code>
-					<p>1rem = 16px;</p><hr>
-					
-					<u style="font-weight: bold; font-size: 18px;">В ключевых словах:</u> <br>
-					<code>line-height: <span class="red">normal;</span></code><hr>
+				<td colspan="2" style="color: black;">
+					<h3>Как задавать line-height</h3>
+					<b><mark>Пиксели</mark></b> (Самое распространённое)<br>
+					<code>line-height: 20px;</code>
+					<p>Просто и понятно. Фиксированное абсолютное значение</p> <hr>
+					<b><mark>Множитель</mark></b> (Адаптивное значение)<br>
+					<code>
+						font-size: 20px;<br>
+						line-height: 1.5;
+					</code>
+					<p>Зависит от размера шрифта. line-height = 20px * 1.5 = 30px;</p> <hr>
+					<b><mark>Проценты</mark></b> (Адаптивное значение)<br>
+					<code>
+						font-size: 20px;<br>
+						line-height: 150%;
+					</code>
+					<p>То же самое как и множитель, только в процентах. line-height = 20px * 1.5 = 30px;</p> <hr>
+					<b><mark>Ключевое слово</mark></b><br>
+					<code>
+						font-size: 20px;<br>
+						line-height: normal;
+					</code>
+					<p>Будет вычисляться автоматически по стандартным свойствам браузера</p>
 				</td>
 			</tr>
 
