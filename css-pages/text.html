@@ -285,15 +285,15 @@
 					<hr>
 
 					<b><mark>Ключевые слова<mark></b> (редко)<br>
-						<code>font-size: xx-small (9px),<br>
-						font-size: x-small (10px),<br>
-						font-size: small (13px),<br> 
-						font-size: medium(16px),<br> 
-						font-size: large(18px),<br> 
-						font-size: x-large(24px),<br> 
-						font-size: xx-large(32px),<br> 
-						font-size: smaller (на шаг ниже),<br> 
-						font-size: larger (на шаг выше)</code>
+						<code>font-size: <span class="red">xx-small</span> (9px),<br>
+						font-size: <span class="red">x-small</span> (10px),<br>
+						font-size: <span class="red">small</span> (13px),<br> 
+						font-size: <span class="red">medium</span> (16px),<br> 
+						font-size: <span class="red">large</span> (18px),<br> 
+						font-size: <span class="red">x-large</span> (24px),<br> 
+						font-size: <span class="red">xx-large</span> (32px),<br> 
+						font-size: <span class="red">smaller</span> (на шаг ниже),<br> 
+						font-size: <span class="red">larger</span> (на шаг выше)</code>
 					</span>
 					<hr>
 
@@ -793,7 +793,7 @@
 					</div> 
 				</td>
 				<td>
-					<code>overflow: <span class="red">auto;</span></code>
+					<code>overflow: <span class="red">auto;</span></code><br>
 				</td>
 			</tr>
 			<tr>
@@ -806,7 +806,9 @@
 					</div> 
 				</td>
 				<td>
-					<code>overflow: <span class="red">scroll;</span></code>
+					<code>&nbsp;&nbsp;overflow: <span class="red">scroll;</span></code><br>
+					<code>overflow-x: <span class="red">scroll;</span></code><br>
+					<code>overflow-y: <span class="red">scroll;</span></code>
 				</td>
 			</tr>
 			<tr>
@@ -860,6 +862,37 @@
 				</td>
 				<td>
 					<code>word-wrap: <span class="red">break-word;</span></code>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="3">writing-mode</td>
+				<td rowspan="3">
+					<b><u><mark>Устанавливает направление текста на странице — по горизонтали или вертикали</mark></u></b><br><br>
+					<b>horizontal-tb*</b> - устанавливает направление текста по горизонтали слева направо и сверху вниз<br>
+					<b>vertical-rl</b> - задаёт направление текста по вертикали сверху вниз и справа налево;<br>
+					<b>vertical-lr</b> - адаёт направление текста по вертикали сверху вниз и слева направо.<br>
+				</td>
+				<td>
+					<div style="writing-mode:horizontal-tb;">Some text</div>
+				</td>
+				<td>
+					<code>writing-mode: <span class="red">horizontal-tb;</span></code>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div style="writing-mode:vertical-rl;">Some text</div>
+				</td>
+				<td>
+					<code>writing-mode: <span class="red">vertical-rl;</span></code>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div style="writing-mode:vertical-lr;">Some text</div>
+				</td>
+				<td>
+					<code>writing-mode: <span class="red">vertical-lr;</span></code>
 				</td>
 			</tr>
 

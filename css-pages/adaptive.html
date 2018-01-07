@@ -138,6 +138,11 @@
        &lt;link href="css/<mark>tablet</mark>.css" rel="stylesheet" media="(<span class="red">min-width:481px</span>) and (<span class="red">max-width:767px</span>)"&gt;<br>
        &lt;link href="css/<mark>mobile</mark>.css" rel="stylesheet" media="(<span class="red">max-width:480px</span>)"&gt;</code>
 
+        <h2>Адаптивность с помощью @import</h2>
+ <code>@import url(css/base.css); <span class="gray">/* без медиазапроса, для всех */</span> <br>
+       @import url(css/medium.css) <span class="red">(min-width:481px) and (max-width:768px)</span>;<br>
+       @import url(css/small.css) <span class="red">(max-width: 480px)</span>;</code>
+
 <h2>Mobile first (адаптивная вёрстка, адаптивный дизайн)</h2>
 <ul>
   <li>Усложнять простое проще, чем упрощать сложное</li>

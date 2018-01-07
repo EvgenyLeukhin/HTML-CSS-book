@@ -33,11 +33,9 @@
         .flex-sample2-2 {
           margin-right: auto;
         }
-        .flex-sample3-1 {
-          margin-left: auto;
-        }
         .flex-sample3-3 {
           margin-right: auto;
+          margin-left: auto;
         }
         .col3-flex-sample1 {
           flex-direction: column;
@@ -214,10 +212,23 @@
 	<div class="content clearfix">
 	
 	<h2>Мой Справочник |  CSS3 | flex и block</h2>
+      <h3>Кратко:</h3>
+      <p>Все свойства, которые рассмотрены здесь придумали для того, чтобы не задавать фиксированные размеры флекс-элементам, а чтобы они высчитывались автоматически, в зависимости от размеров флекс-контейнера</p>
+    <code>
+        <span class="red">flex-grow</span>: 0* | 1 | 2 | 3 ...; <span class="gray">/* Это свойство определяет, какую часть от оставшегося свободного пространства во флекс-контейнере займёт флекс-элемент(расчитывается пропорционально). 0&nbsp;-&nbsp;по&nbsp;ум*, ужимаются под контент*/</span><br>
+        <span class="red">flex-shrink</span>: 0 | 1* | 2 | ...; <span class="gray">/* "Ужимание" флекс-элементов.  0&nbsp;-&nbsp;отмена ужимания */</span><br>
+        <span class="red">flex-basis</span>: 100% | 200px | auto* ...; <span class="gray">/* Значение базового размера элемента вдоль ФЛЕКС-оси, если для row записывать это значение в px, то при flex-shrink: 0;, это будет являться значением мин. ширины. auto - по ум* (без базового значения) */</span><hr>
+        <span class="red">flex:</span>: flex-grow | flex-shrink | flex-basis; <span class="gray">/* Краткая запись */</span><br>
+        <span class="gray">/* Приемлимые варианты: */</span><br>
+        <span class="red">flex:</span>: 0 | 0 | 150px; <span class="gray">/* Фиксированный размер элементов по базису (без растяжений и сжатий) */</span><br>
+        <span class="red">flex:</span>: 1 | 0 | 150px; <span class="gray">/* Занимают равную ширину, ужимаются до базиса */</span><br>
+
+
+    </code>
 	
   <table class="css3-table">
     <tr>
-      <th class="css3-table-title" colspan="3">flex и block</th>
+      <th class="css3-table-title" colspan="3">flex &amp; block-model</th>
     </tr>
     <tr>
       <td class="col1">
@@ -234,7 +245,7 @@
 }
         </code>
       </td>
-      <td class="col3 col3-flex-sample">
+      <td class="col3 col3-flex-sample"> 
         <div class="flex-sample">1</div>
         <div class="flex-sample">2</div>
         <div class="flex-sample">3</div>
@@ -253,7 +264,7 @@
 <span class="red">.flex-sample1</span> {<br>
 &nbsp;&nbsp;margin-left: auto;<br>
 }<hr>
-<span class="red">.flex-sample3</span> {<br>
+<span class="red">.flex-sample2</span> {<br>
 &nbsp;&nbsp;margin-right: auto;<br>
 }<hr>
 <span class="red">.flex-sample3</span> {<br>
@@ -282,50 +293,7 @@
         <div class="flex-sample flex-sample3-3">3</div>
       </td>
     </tr>
-    <tr>
-      <th class="css3-table-title" colspan="3">flex-basis</th>
-    </tr>
-    <tr>
-      <td rowspan="2" class="col1">
-        Размер элемента вдоль <b>ГЛАВНОЙ ОСИ</b><br><br>
-        В первом примере базис переопределяет ширину, во втором - высоту
-      </td>
-      <td rowspan="2" class="col2">
-        <code>
-<span class="red">.flex-cont</span> {<br>
-&nbsp;&nbsp;display: flex;<br>
-&nbsp;&nbsp;<mark><b>flex-direction: row;</b></mark><br>
-&nbsp;&nbsp;align-items: center;<br>
-&nbsp;&nbsp;border: 1px solid #000;<br>
-&nbsp;&nbsp;width: 100%;<br>
-&nbsp;&nbsp;height: 500px;<br>
-}<br>
-<span class="red">.flex-cont2</span> {<br>
-&nbsp;&nbsp;...<br>
-&nbsp;&nbsp;<mark><b>flex-direction: column;</b></mark><br>
-&nbsp;&nbsp;...<br>
-}<br>
-<span class="red">.flex-sample</span> {<br>
-&nbsp;&nbsp;width: 50px;<br>
-&nbsp;&nbsp;height: 50px;<br>
-&nbsp;&nbsp;<mark><b>flex-basis: 100%;</b></mark><br>
-&nbsp;&nbsp;color: #fff;<br>
-&nbsp;&nbsp;font-size: 25px;<br>
-&nbsp;&nbsp;background-color: maroon;<br>
-&nbsp;&nbsp;border: 3px solid yellow;<br>
-&nbsp;&nbsp;margin: 10px;<br>
-}
-        </code>
-      </td>
-      <td class="flex-cont-basis">
-        <div class="flex-sample-basis">1</div>
-      </td>
-    </tr>
-    <tr>
-      <td class="flex-cont-basis2">
-        <div class="flex-sample-basis">2</div>
-      </td>
-    </tr>
+
     <tr>
       <th class="css3-table-title" colspan="3">flex-grow</th>
     </tr>
@@ -382,6 +350,54 @@
         <div class="flex-sample flex-sample5-3">2</div>
       </td>
     </tr>
+
+
+    <tr>
+      <th class="css3-table-title" colspan="3">flex-basis</th>
+    </tr>
+    <tr>
+      <td rowspan="2" class="col1">
+        Размер элемента вдоль <b>ФЛЕКС-ОСИ</b><br><br>
+        В первом примере базис переопределяет ширину, во втором - высоту. <br><br>
+        Может быть как высотой, так и шириной соответственно. Если для row записывать это значение в px, то при <b>flex-shrink: 0;</b>, это будет являться значением мин. ширины
+      </td>
+      <td rowspan="2" class="col2">
+        <code>
+<span class="red">.flex-cont</span> {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;<mark><b>flex-direction: row;</b></mark><br>
+&nbsp;&nbsp;align-items: center;<br>
+&nbsp;&nbsp;border: 1px solid #000;<br>
+&nbsp;&nbsp;width: 100%;<br>
+&nbsp;&nbsp;height: 500px;<br>
+}<br>
+<span class="red">.flex-cont2</span> {<br>
+&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;<mark><b>flex-direction: column;</b></mark><br>
+&nbsp;&nbsp;...<br>
+}<br>
+<span class="red">.flex-sample</span> {<br>
+&nbsp;&nbsp;width: 50px;<br>
+&nbsp;&nbsp;height: 50px;<br>
+&nbsp;&nbsp;<mark><b>flex-basis: 100%;</b></mark><br>
+&nbsp;&nbsp;color: #fff;<br>
+&nbsp;&nbsp;font-size: 25px;<br>
+&nbsp;&nbsp;background-color: maroon;<br>
+&nbsp;&nbsp;border: 3px solid yellow;<br>
+&nbsp;&nbsp;margin: 10px;<br>
+}
+        </code>
+      </td>
+      <td class="flex-cont-basis">
+        <div class="flex-sample-basis">1</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="flex-cont-basis2">
+        <div class="flex-sample-basis">2</div>
+      </td>
+    </tr>
+
     <tr>
       <th class="css3-table-title" colspan="3">flex-shrink</th>
     </tr>
@@ -423,12 +439,14 @@
       </td>
       <td>
         <p>Это свойство наподобие <b>flex-grow</b>, только действует оно не на расширение размера элемента, а его сжатие, это актуально когда флекс-элементы "вылазят" из флекс контейнеров</p>
+        <p>Это блоки без overflow бы выпадали</p>
       </td>
     </tr>
     <tr>    
-      <td class="col3 col3-flex-sample">
+      <td class="col3 col3-flex-sample" style="overflow-x: scroll;">
         <div class="flex-sample flex-sample6-1">1</div>
         <div class="flex-sample flex-sample6-1">2</div>
+
       </td>
     </tr>
     <tr>    
