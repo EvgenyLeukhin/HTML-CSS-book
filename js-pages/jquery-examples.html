@@ -219,7 +219,7 @@ $(function() {
 
       <span>// и padding для body на высоту хэдера (т.к. фикс. хэдер выходит из потока)</span>
       $("<b>body</b>").css("paddingTop", headerHeight);  
-    } esle {
+    } else {
       $("<b>.page-header</b>").removeClass("fixed");
       $("<b>body</b>").css({"paddingTop": 0});
     }
@@ -605,7 +605,7 @@ $('#add-complect-item-6').click(function() {
   });
 </pre></code>
 
-
+<p>Для простого переключения чего-либо классом, можно сначала удалить этот класс у всех элементов, в затем добавить класс только для $(this)</p>
 
 
   </div>
