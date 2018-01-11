@@ -91,7 +91,7 @@
 	
 	<table class="css3-table">
 
-    <tr>
+<!--     <tr>
       <td class="col1" style="width: 200px;">
         <a href="https://wearekiss.com/simpless" title="SimpLESS">SimpLESS</a>
       </td>
@@ -100,7 +100,7 @@
       <td class="col3" style="width: 400px;">
         Приложение под Windows. Не требует консольных команд, всё очень просто и понятно
       </td>
-    </tr>
+    </tr> -->
      
     <tr>
       <th class="css3-table-title" colspan="3">Подключение файлов</th>
@@ -128,7 +128,8 @@
       <td class="col3" style="width: 400px;">
 <h4>Расширения файлов:</h4>
 У <b>LESS</b> файлы <b><mark>.less</mark></b><br>
-У <b>SASS</b> файлы <b><mark>.scss</mark></b>
+У <b>SASS</b> файлы <b><mark>.scss</mark></b><hr>
+При импорте файлов .less, .scss само расширение файла можно <b>НЕ ПИСАТЬ</b>, но если импортировать css-файл, то писать .css <b>НУЖНО!</b>
       </td>
     </tr>
     <tr>
@@ -142,7 +143,7 @@
         <code><pre>
 <span class="red">.some-class</span> {
   clear: left
-  float: left;       
+  float: left;
 }
 <span class="red">.content-box</span> {
   color: @base-color;
