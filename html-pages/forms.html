@@ -695,15 +695,16 @@
 &lt;/time&gt;
       </pre></code>
 
-  <h3>Стилизация placeholder</h3>
+<code>input:placeholder {color: gray;}</code> - инпут не в фокусе (ОТОБРАЖАЕТСЯ ЗНАЧЕНИЕ АТРИБУТА placeholder)<br>
+<code>input:focus {color: red;}</code> - инпут в фокусе (ПРОЦЕСС набирания текста)<br>
+<code>input[placeholder] {color: blue;}</code> - инпут вне фокуса (С НАБРАННЫМ ТЕКСТОМ)<br>
+
+<h3>Префиксы для placeholder</h3>
 <pre><code>input::-webkit-input-placeholder {color: #989daa;}
 input::-moz-placeholder          {color: #989daa;}
 input:-moz-placeholder           {color: #989daa;}
 input:-ms-input-placeholder      {color: #989daa;}
 input:placeholder                {color: #989daa;}</code></pre>
-
-<code>input[placeholder] {color: #989daa;}</code> - инпут в фокусе, но еще не был набран текст<br>
-<code>input:focus {color: #989daa;}</code> - инпут в фокусе<br>
 
 
     </div>
