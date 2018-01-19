@@ -159,14 +159,30 @@
 		</code>
 	</div>
 
+	<h3>сurrentColor</h3>
+	<p>При применении свойства color, автоматически происходит сохранение этого значения в переменную <b>сurrentColor</b>, и можно записывать css-код таким образом, если нужно присвоить тоже значение цвета.</p>
+	<code>
+		<span class="red">div</span> {<br>
+		&nbsp;&nbsp;color: #888;<br>
+		&nbsp;&nbsp;border: 1px solid <span class="red">currentColor</span>;<br>
+		&nbsp;&nbsp;<span class="gray">... или так ... </span><br>
+		&nbsp;&nbsp;border: 1px solid; <br>
+	}
+	</code>
+
+	<p>При такой записи вернётся значение того же цвета, что и у color</p>
+
+
+
+
 	</div>
 </div>
 
 <div class="footer">
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-		
+		EvgenyLeukhin@yandex.ru</p>
+
 		<p class="footer-copyright">© 2017 Все права защищены</p>
 	</div>
 </div>
