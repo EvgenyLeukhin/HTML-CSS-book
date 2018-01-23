@@ -191,15 +191,17 @@
 
     </table>
     <p>Если проект на Yii2 скачен через <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли <code>init</code> и выбрать <b>[0]</b> Development режим, потом нажать <b>yes</b> для генерации файлов</p>
+    <hr>
   <h3>Подключить скрипт только на текущую страницу</h3>
   <code>$this->registerJsFile("js/jquery.some-plugin.min.js", ['depends' => 'yii\web\YiiAsset']);</code><br><br>
   <code>$this->registerCssFile("css/come-styles.min.css", ['depends' => 'yii\web\YiiAsset']);</code>
 
+<hr>
   <h3>Подключение новых страниц</h3>
   <p>1. Создаём новую страницу <b>somepage.php</b> с заголовком в директорию <b>frontend/views/</b> <br>
-    <code>&lt;? $this-&gt;title="Ходовая часть" ?&gt;</code></p>
+    <code>&lt;? $this-&gt;title="Some page" ?&gt;</code></p> <br>
 
-  <p>2. Создаём контроллер для новой страницы <b>SomeSiteController.php</b> в директории <b>frontend/controllers/</b>, название в camel-case как название новой страницы</p>
+  <p>2. Создаём контроллер для новой страницы <b>SomepageController.php</b> в директории <b>frontend/controllers/</b>, название в camel-case как название новой страницы</p>
 
   <pre><code>&lt;?php
 namespace frontend\controllers;
@@ -222,13 +224,15 @@ use yii\filters\AccessControl;
 /**
  * Site controller
  */
-class ChassisController extends \app\components\SeoController
+class <mark>Somepage</mark>Controller extends \app\components\SeoController
 {
     public function actionIndex(){
-        return $this->render('/chassis');
+        return $this->render('/<mark>somepage</mark>');
     }
 }
   </pre></code>
+
+  <h4>Картинки какие-то</h4>
   <img src="../img/yii1.jpg" alt="yii1.jpg" width="433" height="242">
   <img src="../img/yii2.jpg" alt="yii2.jpg" width="571" height="154">
 
