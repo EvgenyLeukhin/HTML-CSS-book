@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | CSS3 | Bootstrap3</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+  <style>
+    code {
+      font-size: 1.25em;
+    }
+    .col-1 {width: 20%;}
+    .col-2 {width: 50%;}
+    .col-3 {width: 30%;}
+    .less {color: blue; outline: 1px solid;}
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">Градиент</a>
+          <ul class="sub-menu sub-menu4">
+            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/shadow.html">Тени</a></li>
+        <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+        <li>
+          <a href="#">Таблицы на CSS3</a>
+          <ul class="sub-menu sub-menu5">
+            <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+            <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+            <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/animation.html">Анимации</a></li>
+        <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+        <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+        <li><a href="../css3-pages/centered.html">Центровка</a></li>
+        <li><a href="../css3-pages/mask.html">Маска</a></li>
+        <li>
+          <a href="#">Слайдер</a>
+          <ul class="sub-menu sub-menu3">
+            <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+            <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../css3-pages/flex.html">Флекс</a>
+          <ul class="sub-menu sub-menu8">
+            <li><a href="../css3-pages/flex.html">flex</a></li>
+            <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+        <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+        
+          <li>
+            <a href="#">Bootstrap</a>
+            <ul class="sub-menu sub-menu-bs">
+              <li><a class="active" href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
+              <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
+              <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
+              <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="#">LESS\SASS</a>
+          <ul class="sub-menu sub-menu-less">
+            <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+            <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+            <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+            <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+            <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="content clearfix">
+
+      <h2>Мой Справочник |  CSS3 | Bootstrap3-сетка</h2>
+      <a href="http://getbootstrap.com/" target="_blank">Bootstrap - official docs</a>&nbsp;|&nbsp;
+      <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>&nbsp;|&nbsp;
+      <a href="https://startbootstrap.com/" target="_blank">Bootstrap-темы</a>
+
+
+      <table class="css3-table">
+        <tr>
+            <th class="css3-table-title" colspan="3">Bootstrap-3</th>
+        </tr>
+
+        <tr>
+          <td class="col-1"><b>.container</b> и <b>breakpoints</b></td>
+          <td class="col-2">
+<code><pre>&lt;div class="<span class="red">container</span>&gt; ... &lt;/div&gt; <hr><span class="red">.container</span> {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  <span class="gray"><mark><b>lg</b></mark> 1200px &gt; +∞ --&gt;</span> width: 1170px; <span class="gray">(ДЕСТОПЫ, НОУТБУКИ)</span>
+  <span class="gray"><mark><b>md</b></mark> 992-1199px  --&gt;</span> width: 970px;  <span class="gray">(СТАРЫЕ ДЕСКТОПЫ и НОУТБУКИ)</span>
+  <span class="gray"><mark><b>sm</b></mark> 768-991px   --&gt;</span> width: 750px;  <span class="gray">(ПЛАНШЕТЫ)</span>
+  <span class="gray"><mark><b>xs</b></mark> 767px &lt; 0   --&gt;</span> width: auto;   <span class="gray">(ТЕЛЕФОНЫ)</span>
+}<hr>
+  <span class="gray">/* <mark>lg</mark> Large "TV-SET" (1200px - +infinity): */</span>
+  <span class="red">@media</span> (min-width: 1200px) {...}
+          
+  <span class="gray">/* <mark>md</mark> Medium "DESKTOP" (992px - 1199px): */</span>
+  <span class="red">@media</span> (min-width: 992px) and (max-width: 1199px) {...} 
+
+  <span class="gray">/* <mark>sm</mark> Small "TABLET" (768px - 991px): */</span>
+  <span class="red">@media</span> (min-width: 768px) and (max-width: 991px) {...} 
+
+  <span class="gray">/* <mark>xs</mark> Extra-small "MOBILE" (0 - 767px): */</span>
+  <span class="red">@media</span> (max-width: 767px) {...}
+
+<h3 style="color: #000;">LESS-переменные</h3><h4><u>Для <span class="red">breakpoints</span> (@media - min-width):</u></h4>  <mark><b>lg</b></mark> --&gt; <span class="less">@screen-lg: <b>1200px</b></span>;
+  <mark><b>md</b></mark> --&gt; <span class="less">@screen-md: <b>992px</b></span>;
+  <mark><b>sm</b></mark> --&gt; <span class="less">@screen-sm: <b>768px</b></span>;
+  <h4><u>Для <span class="red">.container</span> (fix width):</u></h4>  <mark><b>lg</b></mark> --&gt; <span class="less">@container-large-desktop: <b>1140px</b> + @grid-gutter-width</span>;
+  <mark><b>md</b></mark> --&gt; <span class="less">@container-desktop:        <b>940px</b> + @grid-gutter-width</span>;
+  <mark><b>sm</b></mark> --&gt; <span class="less">@container-tablet:         <b>720px</b> + @grid-gutter-width</span>;<h4><u>padding контейнера и колонок (0 15px):</u></h4>  <span class="less">@grid-gutter-width: <b>30px</b>;</span>
+
+</pre></code>
+          </td>
+          <td class="col-3">Отцентрованный адаптивный контейнер, меняет размеры при разной ширине viewport. <br><br>
+          Можно использовать в качестве основного контейнера для контента, если не нужна колоночность.</td>
+        </tr>
+
+        <tr>
+          <td><b>.container-fluid</b></td>
+          <td>
+            <code><span class="red">.container-fluid</span> { <br>
+&nbsp;&nbsp;width: auto; <br>
+}
+            </code>
+          </td>
+          <td>"Жидкий контейнер". Контейнер не зависит от breakpoints и всегда занимает всю ширину</td>
+        </tr>
+
+        <tr>
+          <td><b>.row</b></td>
+          <td>
+            <code>
+              <span class="red">.row</span> { <br>
+              &nbsp;&nbsp;margin-left: -15px; <br>
+              &nbsp;&nbsp;margin-right: -15px; <br>
+            }
+            </code>
+            
+          </td>
+          <td>
+            <b>.row</b> служит для группировки <b>.col</b>, сам по себе .row без .col НЕ используется, НЕЛЬЗЯ также вкладывать какие-либо контейнеры между .row и .col !!! <br> <br>
+            Содержит отрицательные margin для компенсирования padding у .container (чтобы не было наложения padding у колонок и контейнера).
+          </td>
+        </tr>
+
+
+        <tr>
+          <td><b>.col-</b> колонки </td>
+          <td>
+            <code>&lt;div class="<span class="red">container</span>"&gt;<br>
+&nbsp;&nbsp;&lt;div class="<span class="red">row</span>"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-xs-12&nbsp;  col-sm-10&nbsp;  col-md-9&nbsp;  col-lg-6</span>"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br>
+&nbsp;&nbsp;&lt;/div&gt; <br>
+&lt;/div&gt;
+<hr><h3 style="color: #000;">LESS-переменные</h3>
+<span class="less">@grid-columns: <b>12</b>;</span> - <span class="gray">кол-во колонок в контейнере</span>; <br>
+<span class="less">@grid-gutter-width:  <b>30px</b>;</span> - <span class="gray">padding у колонок</span>;
+            </code><hr><h4 style="color: #000;">Bootstrap-классы для сетки</h4>
+<code><span class="red">.col-xs-*</span> - *-колонок при <mark>xs</mark></code><br>
+<code><span class="red">.col-sm-*</span> - *-колонок при <mark>sm</mark></code><br>
+<code><span class="red">.col-md-*</span> - *-колонок при <mark>md</mark></code><br>
+<code><span class="red">.col-lg-*</span> - *-колонок при <mark>lg</mark></code><hr>
+
+<code><span class="red">.visible-xs</span> - видимость только на <mark>xs</mark></code><br>
+<code><span class="red">.visible-sm</span> - видимость только на <mark>sm</mark></code><br>
+<code><span class="red">.visible-md</span> - видимость только на <mark>md</mark></code><br>
+<code><span class="red">.visible-lg</span> - видимость только на <mark>lg</mark></code><hr>
+
+<code><span class="red">.hidden-xs</span> - будет спрятан на <mark>xs</mark></code><br>
+<code><span class="red">.hidden-sm</span> - будет спрятан на <mark>sm</mark></code><br>
+<code><span class="red">.hidden-md</span> - будет спрятан на <mark>md</mark></code><br>
+<code><span class="red">.hidden-lg</span> - будет спрятан на <mark>lg</mark></code><hr>
+
+<code><span class="red">.col-lg-offset-*</span> - отступ ВПРАВО(margin-left) на *-кол при <mark>lg</mark></code><br>
+<code><span class="red">.col-md-offset-*</span> - отступ ВПРАВО(margin-left) на *-кол при <mark>md</mark></code><br>
+<code><span class="red">.col-sm-offset-*</span> - отступ ВПРАВО(margin-left) на *-кол при <mark>sm</mark></code><br>
+<code><span class="red">.col-xs-offset-*</span> - отступ ВПРАВО(margin-left) на *-кол при <mark>xs</mark></code><hr>
+
+<code><span class="red">.col-xs-push-*</span> - отступ ВПРАВО(left) на *-кол при <mark>xs</mark></code><br>
+<code><span class="red">.col-sm-push-*</span> - отступ ВПРАВО(left) на *-кол при <mark>sm</mark></code><br>
+<code><span class="red">.col-md-push-*</span> - отступ ВПРАВО(left) на *-кол при <mark>md</mark></code><br>
+<code><span class="red">.col-lg-push-*</span> - отступ ВПРАВО(left) на *-кол при <mark>lg</mark></code><hr>
+
+<code><span class="red">.col-xs-pull-*</span> - отступ ВЛЕВО(right) на *-кол при <mark>xs</mark></code><br>
+<code><span class="red">.col-sm-pull-*</span> - отступ ВЛЕВО(right) на *-кол при <mark>sm</mark></code><br>
+<code><span class="red">.col-md-pull-*</span> - отступ ВЛЕВО(right) на *-кол при <mark>md</mark></code><br>
+<code><span class="red">.col-lg-pull-*</span> - отступ ВЛЕВО(right) на *-кол при <mark>lg</mark></code><hr>
+<code><span class="red">.clearfix</span> - распорка для float-ов</code><br>
+<code><span class="red">.pull-right</span> - float: right;</code><br>
+<code><span class="red">.center-block</span> - margin: 0 auto;</code><br>
+
+
+
+
+
+          </td>
+          <td>Буквенный префикс содержит информацию о breakpoint, а цифровой - о кол-ве колонок, которое будте занимать колонка внутри .row. <br><br> Реализованы с помощью <b>float</b> и процентной ширины. <br><br>
+          Меньшие breakpoints наследуются старшим, если прописать <b>.col-xs-10</b>, то колонка будет из 10-ти на всех breakpoints
+
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2017 Все права защищены</p>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/jquery-3.1.0.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
