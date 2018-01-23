@@ -196,6 +196,39 @@
   <code>$this->registerCssFile("css/come-styles.min.css", ['depends' => 'yii\web\YiiAsset']);</code>
 
   <h3>Подключение новых страниц</h3>
+  <p>1. Создаём новую страницу <b>somepage.php</b> с заголовком в директорию <b>frontend/views/</b> <br>
+    <code>&lt;? $this-&gt;title="Ходовая часть" ?&gt;</code></p>
+
+  <p>2. Создаём контроллер для новой страницы <b>SomeSiteController.php</b> в директории <b>frontend/controllers/</b>, название в camel-case как название новой страницы</p>
+
+  <pre><code>&lt;?php
+namespace frontend\controllers;
+
+use common\models\Coach;
+use common\models\Travel;
+use common\models\TravelReview;
+use Yii;
+use common\models\LoginForm;
+use frontend\models\PasswordResetRequestForm;
+use frontend\models\ResetPasswordForm;
+use frontend\models\SignupForm;
+use frontend\models\ContactForm;
+use yii\base\InvalidParamException;
+use yii\web\BadRequestHttpException;
+use yii\web\Controller;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+
+/**
+ * Site controller
+ */
+class ChassisController extends \app\components\SeoController
+{
+    public function actionIndex(){
+        return $this->render('/chassis');
+    }
+}
+  </pre></code>
   <img src="../img/yii1.jpg" alt="yii1.jpg" width="433" height="242">
   <img src="../img/yii2.jpg" alt="yii2.jpg" width="571" height="154">
 
