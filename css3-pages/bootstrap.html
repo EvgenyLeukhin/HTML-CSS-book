@@ -16,6 +16,7 @@
     .col-1 {width: 20%;}
     .col-2 {width: 50%;}
     .col-3 {width: 30%;}
+    .less {color: blue; outline: 1px solid;}
   </style>
 </head>
 
@@ -111,21 +112,22 @@
         <tr>
           <td class="col-1"><b>.container</b> и <b>breakpoints</b></td>
           <td class="col-2">
-<code><pre>
-  &lt;div class="<span class="red">container</span>&gt; ... &lt;/div&gt; <hr><span class="red">.container</span> {
+<code><pre>&lt;div class="<span class="red">container</span>&gt; ... &lt;/div&gt; <hr><span class="red">.container</span> {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  <span class="gray"><mark><b>lg</b></mark> (1200px+)    --&gt;</span> width: 1170px;
-  <span class="gray"><mark><b>md</b></mark> (992-1199px) --&gt;</span> width: 970px;
-  <span class="gray"><mark><b>sm</b></mark> (768-991px)  --&gt;</span> width: 750px;
-  <span class="gray"><mark><b>xs</b></mark> (767-480px)  --&gt;</span> width: auto;
-}<hr><h3 style="color: #000;">LESS-переменные</h3><h4><u>Для breakpoints:</u></h4>  <mark><b>lg</b></mark> --&gt; @screen-lg: 1200px;
-  <mark><b>md</b></mark> --&gt; @screen-md: 992px;
-  <mark><b>sm</b></mark> --&gt; @screen-sm: 768px;
-  <mark><b>xs</b></mark> --&gt; @screen-xs: 480px;
-  <h4><u>Для .container:</u></h4>
+  <span class="gray"><mark><b>lg</b></mark> 1200px &gt; +∞ --&gt;</span> width: 1170px; <span class="gray">(ДЕСТОПЫ, НОУТБУКИ)</span>
+  <span class="gray"><mark><b>md</b></mark> 992-1199px  --&gt;</span> width: 970px;  <span class="gray">(СТАРЫЕ ДЕСКТОПЫ и НОУТБУКИ)</span>
+  <span class="gray"><mark><b>sm</b></mark> 768-991px   --&gt;</span> width: 750px;  <span class="gray">(ПЛАНШЕТЫ)</span>
+  <span class="gray"><mark><b>xs</b></mark> 767px &lt; 0   --&gt;</span> width: auto;   <span class="gray">(ТЕЛЕФОНЫ)</span>
+}<hr><h3 style="color: #000;">LESS-переменные</h3><h4><u>Для <span class="red">breakpoints</span> (@media - min-width):</u></h4>  <mark><b>lg</b></mark> --&gt; <span class="less">@screen-lg: <b>1200px</b></span>;
+  <mark><b>md</b></mark> --&gt; <span class="less">@screen-md: <b>992px</b></span>;
+  <mark><b>sm</b></mark> --&gt; <span class="less">@screen-sm: <b>768px</b></span>;
+  <h4><u>Для <span class="red">.container</span> (fix width):</u></h4>  <mark><b>lg</b></mark> --&gt; <span class="less">@container-large-desktop: <b>1140px</b> + @grid-gutter-width</span>;
+  <mark><b>md</b></mark> --&gt; <span class="less">@container-desktop:        <b>940px</b> + @grid-gutter-width</span>;
+  <mark><b>sm</b></mark> --&gt; <span class="less">@container-tablet:         <b>720px</b> + @grid-gutter-width</span>;<h4><u>padding контейнера и колонок (0 15px):</u></h4>  <span class="less">@grid-gutter-width: <b>30px</b>;</span>
+
 </pre></code>
           </td>
           <td class="col-3">Отцентрованный адаптивный контейнер, меняет размеры при разной ширине viewport. <br><br>
@@ -143,6 +145,59 @@
             </code>
           </td>
           <td>"Жидкий контейнер". Контейнер не зависит от breakpoints и всегда занимает всю ширину</td>
+        </tr>
+
+        <tr>
+          <td><b>.row</b></td>
+          <td>
+            <code>
+              <span class="red">.row</span> { <br>
+              &nbsp;&nbsp;margin-left: -15px; <br>
+              &nbsp;&nbsp;margin-right: -15px; <br>
+            }
+            </code>
+            
+          </td>
+          <td>
+            <b>.row</b> служит для группировки <b>.col</b>, сам по себе .row без .col НЕ используется, НЕЛЬЗЯ также вкладывать какие-либо контейнеры между .row и .col !!! <br> <br>
+            Содержит отрицательные margin для компенсирования padding у .container (чтобы не было наложения padding у колонок и контейнера).
+          </td>
+        </tr>
+
+
+        <tr>
+          <td><b>.col-</b> колонки </td>
+          <td>
+            <code>&lt;div class="<span class="red">container</span>"&gt;<br>
+&nbsp;&nbsp;&lt;div class="<span class="red">row</span>"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-xs-12&nbsp;  col-sm-10&nbsp;  col-md-9&nbsp;  col-lg-6</span>"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br>
+&nbsp;&nbsp;&lt;/div&gt; <br>
+&lt;/div&gt;
+<hr><h3 style="color: #000;">LESS-переменные</h3>
+<span class="less">@grid-columns: <b>12</b>;</span> - <span class="gray">кол-во колонок в контейнере</span>; <br>
+<span class="less">@grid-gutter-width:  <b>30px</b>;</span> - <span class="gray">padding у колонок</span>;
+            </code><hr><h4 style="color: #000;">Bootstrap-классы для сетки</h4>
+<code><span class="red">.visible-xs</span> - видимость только на <mark>xs</mark></code><br>
+<code><span class="red">.visible-sm</span> - видимость только на <mark>sm</mark></code><br>
+<code><span class="red">.visible-md</span> - видимость только на <mark>md</mark></code><br>
+<code><span class="red">.visible-lg</span> - видимость только на <mark>lg</mark></code><hr>
+<code><span class="red">.hidden-xs</span> - будет спрятан на <mark>xs</mark></code><br>
+<code><span class="red">.hidden-sm</span> - будет спрятан на <mark>sm</mark></code><br>
+<code><span class="red">.hidden-md</span> - будет спрятан на <mark>md</mark></code><br>
+<code><span class="red">.hidden-lg</span> - будет спрятан на <mark>lg</mark></code><hr>
+<code><span class="red">.col-lg-offset-*</span> - отпступ ВЛЕВО на *-колонок на <mark>lg</mark></code><br>
+<code><span class="red">.col-md-offset-*</span> - отпступ ВЛЕВО на *-колонок на <mark>md</mark></code><br>
+<code><span class="red">.col-sm-offset-*</span> - отпступ ВЛЕВО на *-колонок на <mark>sm</mark></code><br>
+<code><span class="red">.col-xs-offset-*</span> - отпступ ВЛЕВО на *-колонок на <mark>xs</mark></code><br>
+
+
+
+          </td>
+          <td>Буквенный префикс содержит информацию о breakpoint, а цифровой - о кол-ве колонок, которое будте занимать колонка внутри .row. <br><br> Реализованы с помощью <b>float</b> и процентной ширины. <br><br>
+          Меньшие breakpoints наследуются старшим, если прописать <b>.col-xs-10</b>, то колонка будет из 10-ти на всех breakpoints
+
+          </td>
         </tr>
       </table>
     </div>
