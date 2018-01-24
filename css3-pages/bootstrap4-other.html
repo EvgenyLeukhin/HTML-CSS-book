@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | CSS3 | Bootstrap3</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head 4
+    content must come *after* these tags -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+  <style>
+    .vert-menu .sub-menu3, 
+    .vert-menu .sub-menu4, 
+    .vert-menu .sub-menu5, 
+    .vert-menu .sub-menu8,
+    .vert-menu .sub-menu-less {
+      left: 125px;
+    }
+    
+/* Large(1200px - +infinity): */
+@media (min-width: 1200px) { .test {color: red;} }
+        
+/* Medium(992px - 1199px): */
+@media (min-width: 992px) and (max-width: 1199px) { .test {color: yellow;} }
+
+/* Small(768px - 991px): */
+@media (min-width: 768px) and (max-width: 991px) { .test {color: green;} }
+
+/* Extra-small(0 - 767px): */
+@media (max-width: 767px) { .test {color: deeppink;} }
+  .carousel {
+    max-width: 500px;
+    margin: 10px auto;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">Градиент</a>
+          <ul class="sub-menu sub-menu4">
+            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/shadow.html">Тени</a></li>
+        <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+        <li>
+          <a href="#">Таблицы на CSS3</a>
+          <ul class="sub-menu sub-menu5">
+            <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+            <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+            <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/animation.html">Анимации</a></li>
+        <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+        <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+        <li><a href="../css3-pages/centered.html">Центровка</a></li>
+        <li><a href="../css3-pages/mask.html">Маска</a></li>
+        <li>
+          <a href="#">Слайдер</a>
+          <ul class="sub-menu sub-menu3">
+            <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+            <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../css3-pages/flex.html">Флекс</a>
+          <ul class="sub-menu sub-menu8">
+            <li><a href="../css3-pages/flex.html">flex</a></li>
+            <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+        <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+        
+        <li>
+          <a href="#">Bootstrap</a>
+          <ul class="sub-menu sub-menu-bs">
+            <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
+            <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
+            <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
+            <li><a class="active" href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">LESS\SASS</a>
+          <ul class="sub-menu sub-menu-less">
+            <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+            <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+            <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+            <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+            <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник |  CSS3 | Bootstrap3 - Прочее</h2> Документация:
+      <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>&nbsp;|&nbsp;
+      <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>&nbsp;|&nbsp;
+      <a href="https://startbootstrap.com/" target="_blank">Bootstrap-темы</a>
+
+
+
+  
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2017 Все права защищены</p>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/jquery-3.1.0.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

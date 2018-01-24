@@ -233,6 +233,11 @@ body {
   top: -10px;
 }
 
+.vert-menu .sub-menu-bs {
+  left: 125px;
+  top: -10px;
+}
+
 .vert-menu .sub-menu a {
   border: 1px solid #E5E5E5;
   margin: -1px;
