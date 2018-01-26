@@ -2,45 +2,20 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | CSS3 | Bootstrap3</title>
+  <title>Мой Справочник | CSS3 | Bootstrap4</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head 4
-    content must come *after* these tags -->
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
   <style>
-    .vert-menu .sub-menu3, 
-    .vert-menu .sub-menu4, 
-    .vert-menu .sub-menu5, 
-    .vert-menu .sub-menu8,
-    .vert-menu .sub-menu-less {
-      left: 125px;
+    code {
+      font-size: 1.25em;
     }
-    
-/* Large(1200px - +infinity): */
-@media (min-width: 1200px) { .test {color: red;} }
-        
-/* Medium(992px - 1199px): */
-@media (min-width: 992px) and (max-width: 1199px) { .test {color: yellow;} }
-
-/* Small(768px - 991px): */
-@media (min-width: 768px) and (max-width: 991px) { .test {color: green;} }
-
-/* Extra-small(0 - 767px): */
-@media (max-width: 767px) { .test {color: deeppink;} }
-  .carousel {
-    max-width: 500px;
-    margin: 10px auto;
-  }
+    .col-1 {width: 20%;}
+    .col-2 {width: 50%;}
+    .col-3 {width: 30%;}
+    .less {color: blue; outline: 1px solid;}
   </style>
 </head>
 
@@ -126,10 +101,23 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник |  CSS3 | Bootstrap3 - Прочее</h2> Документация:
+      <h2>Мой Справочник |  CSS3 | Bootstrap4 - Прочее</h2> Документация:
       <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>&nbsp;|&nbsp;
       <a href="http://mybootstrap.ru/" target="_blank">Bootstrap по-русски</a>&nbsp;|&nbsp;
       <a href="https://startbootstrap.com/" target="_blank">Bootstrap-темы</a>
+
+
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">Bootstrap-3</th>
+        </tr>
+        <tr>
+          <td class="col-1"><b>.container</b> и <b>breakpoints</b></td>
+          <td class="col-2"></td>
+          <td class="col-3"></td>
+        </tr>
+      </table>
+
 
 
 
