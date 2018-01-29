@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | CSS3 | Bootstrap3</title>
+  <title>Мой Справочник | CSS3 | Bootstrap4</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +10,13 @@
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
   <style>
-    code {
-      font-size: 1.25em;
+  code {
+      font-size: 1em;
     }
     .col-1 {width: 20%;}
     .col-2 {width: 50%;}
     .col-3 {width: 30%;}
-    .less {color: blue; outline: 1px solid;}
+    .sass {color: #dc3545; outline: 1px solid; font-weight: bold;}
   </style>
 </head>
 
@@ -119,8 +119,65 @@
 
         <tr>
           <td class="col-1"><b>breakpoints</b></td>
-          <td class="col-2"></td>
-          <td class="col-3"></td>
+          <td class="col-2">
+            <h4>Примеси для <b>min-width:</b></h4>
+            <code><span class="sass">@include media-breakpoint-up(xs)</span> { ... } <span class="gray">// min-width: <b>0</b> (default)</span><br>
+<span class="sass">@include media-breakpoint-up(sm)</span> { ... }  <span class="gray">// min-width: <b>576px</b></span><br>
+<span class="sass">@include media-breakpoint-up(md)</span> { ... }  <span class="gray">// min-width: <b>768px</b></span><br>
+<span class="sass">@include media-breakpoint-up(lg)</span> { ... }  <span class="gray">// min-width: <b>992px</b></span><br>
+<span class="sass">@include media-breakpoint-up(xl)</span> { ... }  <span class="gray">// min-width: <b>1200px</b></span><br><br>
+<span class="gray">// Example usage:</span> <br>
+<span class="sass">@include media-breakpoint-up(sm)</span> { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+} <br>
+<span class="red">@media</span> (min-width:576px) { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+}
+</code> <hr>
+<h4>Примеси для <b>max-width:</b></h4>
+<code><span class="sass">@include media-breakpoint-down(xs)</span> { ... } <span class="gray">// max-width: <b>575.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(sm)</span> { ... } <span class="gray">// max-width: <b>797.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(md)</span> { ... } <span class="gray">// max-width: <b>991.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(lg)</span> { ... } <span class="gray">// max-width: <b>1199.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(xl)</span> { ... } <span class="gray">// min-width: <b>1200px + </b></span><br> <br>
+<span class="gray">// Example usage:</span> <br>
+<span class="sass">@include media-breakpoint-down(lg)</span> { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+} <br>
+<span class="red">@media</span> (max-width:1199.98px) { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+}</code> <hr>
+<h4>Примеси для <b>min-width:</b> и <b>max-width:</b></h4>
+<code><span class="sass">@include media-breakpoint-only(xs)</span> { ... } 
+<span class="gray">// (0 - 575.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(sm)</span> { ... } 
+<span class="gray">// (576px - 797.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(md)</span> { ... } 
+<span class="gray">// (798px - 991.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(lg)</span> { ... } 
+<span class="gray">// (992px - 1199.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(xl)</span> { ... } 
+<span class="gray">// (1200px -&gt; +)</span><br>
+</code><hr>
+
+<h4>Примеси для <b>min-width:</b> и <b>max-width:</b> (заданная примесь)</h4>
+<code><span class="sass">@include media-breakpoint-between(md, xl)</span> { ... }
+<span class="gray">// (720px -&gt; +)</span><br>
+</code>
+
+
+          </td>
+          <td class="col-3"><code><span class="sass">$grid-breakpoints:</span> ( <br>
+&nbsp;&nbsp;xs: 0,<br>
+&nbsp;&nbsp;sm: 576px,<br>
+&nbsp;&nbsp;md: 768px,<br>
+&nbsp;&nbsp;lg: 992px,<br>
+&nbsp;&nbsp;xl: 1200px<br>
+) !default;</td>
         </tr>
 
         <tr>
@@ -128,20 +185,60 @@
             <b>.container</b> <br>
             <b>.container-fluid</b>
           </td>
-          <td class="col-2"></td>
-          <td class="col-3"></td>
+          <td class="col-2"><code><span class="red">.container</span> {<br>
+&nbsp;&nbsp;max-width: 1140px; (<mark>xl</mark>)<br>
+&nbsp;&nbsp;max-width: 960px;&nbsp; (<mark>lg</mark>)<br>
+&nbsp;&nbsp;max-width: 720px;&nbsp; (<mark>md</mark>)<br>
+&nbsp;&nbsp;max-width: 540px;&nbsp; (<mark>sm</mark>)<br>
+<hr>
+&nbsp;&nbsp;padding-left: 15px;<br>
+&nbsp;&nbsp;padding-right: 15px;<br>
+&nbsp;&nbsp;margin-left: auto;<br>
+&nbsp;&nbsp;margin-right: auto;<br>
+}
+<br>
+<span class="red">.container-fluid</span> { <br>
+&nbsp;&nbsp;max-width: 100%; <br>
+}</code>
+
+
+
+</td>
+          <td class="col-3"><code><span class="sass">$container-max-widths:</span> ( <br>
+&nbsp;&nbsp;sm: 540px,<br>
+&nbsp;&nbsp;md: 720px,<br>
+&nbsp;&nbsp;lg: 960px,<br>
+&nbsp;&nbsp;xl: 1140px<br>
+) !default;</code>
+          </td>
         </tr>
 
         <tr>
           <td class="col-1"><b>.row</b></td>
-          <td class="col-2"></td>
+          <td class="col-2">
+<code><span class="red">.justify-content-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-start</span> { justify-content: flex-start; }</code> <br>
+<code><span class="red">.justify-content-end</span> { justify-content: flex-end; }</code> <br>
+<code><span class="red">.justify-content-around</span> { justify-content: space-around; }</code> <br>
+<code><span class="red">.justify-content-between</span> { justify-content: space-between; }</code> <hr>
+<code><span class="red">.justify-content-sm-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-md-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-lg-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-xl-center</span> { justify-content: center; }</code> <hr>
+<code><span class="red">.justify-items-start</span> { align-items: flex-start; }</code> <br>
+<code><span class="red">.justify-items-end</span> { align-items: flex-end; }</code> <br>
+<code><span class="red">.justify-items-center</span> { align-items: center; }</code> <hr>
+<code><span class="red">.no-gutters</span> { padding: 0; }</code> <span class="gray">// для .col</span><hr>
+
+          </td>
           <td class="col-3"></td>
         </tr>
 
         <tr>
           <td class="col-1"><b>.col</b></td>
           <td class="col-2"></td>
-          <td class="col-3"></td>
+          <td class="col-3"><code><span class="sass">$grid-columns:</span> 12 !default;<br>
+          <span class="sass">$grid-gutter-width:</span> 30px !default;</code></td>
         </tr>
 
       </table>
