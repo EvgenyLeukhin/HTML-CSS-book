@@ -17,6 +17,11 @@
     .col-2 {width: 50%;}
     .col-3 {width: 30%;}
     .sass {color: #dc3545; outline: 1px solid; font-weight: bold;}
+    .black {color: #000;}
+    h4 {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -167,11 +172,8 @@
 <h4>Примеси для <b>min-width:</b> и <b>max-width:</b> (заданная примесь)</h4>
 <code><span class="sass">@include media-breakpoint-between(md, xl)</span> { ... }
 <span class="gray">// (720px -&gt; +)</span><br>
-</code>
-
-
-          </td>
-          <td class="col-3"><code><span class="sass">$grid-breakpoints:</span> ( <br>
+</code></td>
+<td class="col-3"><code><span class="sass">$grid-breakpoints:</span> ( <br>
 &nbsp;&nbsp;xs: 0,<br>
 &nbsp;&nbsp;sm: 576px,<br>
 &nbsp;&nbsp;md: 768px,<br>
@@ -216,19 +218,26 @@
         <tr>
           <td class="col-1"><b>.row</b></td>
           <td class="col-2">
+<h4>Распределение по флекс-оси</h4>
 <code><span class="red">.justify-content-center</span> { justify-content: center; }</code> <br>
 <code><span class="red">.justify-content-start</span> { justify-content: flex-start; }</code> <br>
 <code><span class="red">.justify-content-end</span> { justify-content: flex-end; }</code> <br>
 <code><span class="red">.justify-content-around</span> { justify-content: space-around; }</code> <br>
 <code><span class="red">.justify-content-between</span> { justify-content: space-between; }</code> <hr>
+
+<h4>Распределение по флекс-оси на ЗАДАННЫХ bp</h4>
 <code><span class="red">.justify-content-sm-center</span> { justify-content: center; }</code> <br>
 <code><span class="red">.justify-content-md-center</span> { justify-content: center; }</code> <br>
 <code><span class="red">.justify-content-lg-center</span> { justify-content: center; }</code> <br>
 <code><span class="red">.justify-content-xl-center</span> { justify-content: center; }</code> <hr>
-<code><span class="red">.justify-items-start</span> { align-items: flex-start; }</code> <br>
-<code><span class="red">.justify-items-end</span> { align-items: flex-end; }</code> <br>
-<code><span class="red">.justify-items-center</span> { align-items: center; }</code> <hr>
-<code><span class="red">.no-gutters</span> { padding: 0; }</code> <span class="gray">// для .col</span><hr>
+
+<h4>Выравнивание по поперечной оси</h4>
+<code><span class="red">.align-items-start</span> { align-items: flex-start; }</code> <br>
+<code><span class="red">.align-items-end</span> { align-items: flex-end; }</code> <br>
+<code><span class="red">.align-items-center</span> { align-items: center; }</code> <hr>
+
+<h4>Убрать padding у .col-</h4>
+<code><span class="red">.no-gutters</span> -&gt; <span class="red">.col-s </span>{ padding: 0; }</code>
 
           </td>
           <td class="col-3"></td>
@@ -236,9 +245,39 @@
 
         <tr>
           <td class="col-1"><b>.col</b></td>
-          <td class="col-2"></td>
+          <td class="col-2">
+            <code>
+<span class="black"><b>Деление на РАВНЫЕ колонки на ВСЕХ bp (равномерное, зависит от кол-ва)</b></span> <br>
+              <span class="red">.col</span> { flex-grow: 1; flex-basis: 0; } <hr>
+
+<span class="black"><b>Деление на РАВНЫЕ колонки на ЗАДАННЫХ bp (равномерное, зависит от кол-ва)</b></span> <br>
+              <span class="red">.col-md</span> { flex-grow: 1; flex-basis: 0; } <span class="black"><b>(НАСЛЕДУЮТСЯ от меньших к большим)</b></span><hr>
+
+<span class="black"><b>Деление на ЗАДАННЫЕ колонки на ЗАДАННЫХ bp (НАСЛЕДУЮТСЯ от меньших к большим)</b></span> <br>
+              <span class="red">.col-4</span> &nbsp;&nbsp;&nbsp;{ flex: 0 0 33.33333%; } <span class="gray">- xs</span><br>
+              <span class="red">.col-sm-4</span> { flex: 0 0 33.33333%; } <br>
+              <span class="red">.col-md-4</span> { flex: 0 0 33.33333%; } <br>
+              <span class="red">.col-lg-4</span> { flex: 0 0 33.33333%; } <br>
+              <span class="red">.col-xl-4</span> { flex: 0 0 33.33333%; } <hr>
+            </code>
+            <h4>Классы</h4>
+<code><span class="red">.align-self-start</span> { align-self: flex-start; }</code><br>
+<code><span class="red">.align-self-center</span> { align-self: center; }</code><br>
+<code><span class="red">.align-self-end</span> { align-self: flex-end; }</code><hr>
+
+<span class="black"><b>ОТОБРАЖЕНИЕ (НАСЛЕДУЮТСЯ от меньших к большим)</b></span> <br>
+<code><span class="red">.d-block</span> { display: block; }</code><br>
+<code><span class="red">.d-none</span> { display: block; }</code><br>
+<code><span class="red">.d-sm-block</span> { display: block; }</code><br>
+<code><span class="red">.d-sm-none</span> { display: block; }</code><br>
+          </td>
+
+
+
+
           <td class="col-3"><code><span class="sass">$grid-columns:</span> 12 !default;<br>
-          <span class="sass">$grid-gutter-width:</span> 30px !default;</code></td>
+          <span class="sass">$grid-gutter-width:</span> 30px !default;</code>
+        </td>
         </tr>
 
       </table>
