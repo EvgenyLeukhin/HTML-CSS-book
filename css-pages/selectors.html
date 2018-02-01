@@ -223,22 +223,25 @@ input[type="checkbox"]:checked {border-color: red;}
 
 	<h3><b>Наследуемые</b> свойства (родитель-потомок):</h3>
 		<ul>
-			<li>line-height;</li>
-			<li>color;</li>
-			<li>font-size, font-family, font-style, font-weight;</li>	
-			<li>text-transform, text-align, text-indent;</li>	
-			<li>letter-spacing, white-space, word-spacing, direction;</li>
-			<li>list-style, visibilyty, cursor, border-collapse;</li>
+			<li><code>line-height;</code></li>
+			<li><code>color;</code></li>
+			<li><code>font-size, font-family, font-style, font-weight;</code></li>
+			<li><code>text-transform, text-align, text-indent;</code></li>
+			<li><code>letter-spacing, white-space, word-spacing, direction;</code></li>
+			<li><code>list-style, visibilyty, cursor, border-collapse;</code></li>
 			<li>Принудительное наследование (для свойств, кот. не наследуются): <span class="red">inherit;</span></li>
-			<li>Принудительное присвоение (для свойств, у кот. низкий приоритет): <span class="red">!important;</span> (использовать НЕ РЕКОМЕНДУЕТСЯ)</li>
+			<li>Принудительное присвоение (для свойств, у кот. низкий приоритет): <span class="red">!important;</span> (часто использовать НЕ РЕКОМЕНДУЕТСЯ)</li>
+			<li><code>initial</code> - по умолчанию</li>
+			<li><code>unset</code> - если наследуется, то как у родителя, если нет - то <code>initial</code></li>
+			<li><code>inherit</code> - принудительно наследовать у родителя</li>
 		</ul>
 	
 	<h3><b>Ненаследуемые</b> свойства (родитель-потомок):</h3>
 		<ul>
-			<li>background;</li>
-			<li>position;</li>
-			<li>height, width;</li>
-			<li>margin, padding;</li>
+			<li><code>background;</code></li>
+			<li><code>position;</code></li>
+			<li><code>height, width;</code></li>
+			<li><code>margin, padding;</code></li>
 		</ul>
 	<a href="https://www.w3.org/TR/CSS21/propidx.html">
 		Полный список (значение <span class="red">yes</span> или <span class="red">no</span> в колонке <b>Inherited?</b>)
