@@ -49,7 +49,7 @@
 			<li><a href="forms.html                  ">Формы</a></li>
 			<li><a href="post.html                   ">Почта</a></li>
 			<li><a href="yii.html                    ">Yii2</a></li>
-        	<li><a href="bitrix.html                 ">CMS Bitrix</a></li>
+      <li><a href="bitrix.html                 ">CMS Bitrix</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
 			<li><a href="cms.html                    ">CMS</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
@@ -68,6 +68,20 @@
 				<tr>
 					<td><b>Объявление массива</b></td>
 					<td>
+						<span class="gray">// Массив</span>
+						<pre><code>$array = ["some0", "some1", "some2"];</code></pre>
+						<span class="gray">// Пустой массив</span>
+						<pre><code>$array = [];</code></pre>
+						
+						<span class="gray">// Замена элемента по индексу</span>
+						<pre><code>$array[0] = "some_another0";</code></pre>
+						<span class="gray">// Вывести элемент</span>
+						<pre><code>print($array[0]);</code></pre>
+						<span class="gray">// Вывести все элементы массива (ДЛЯ ОТЛАДКИ)</span>
+						<pre><code><span class="red">var_dump</span>($array);</code></pre>
+
+
+
 						<pre><code>$arr = <span class="red">array</span>("first","sec","trd","foufth");
 echo $arr[0]."<span class="gray">&lt;br&gt;</span>";    <span class="gray">// вывод 1-го элемента массива</span></code></pre>
 					</td>
@@ -81,6 +95,7 @@ echo $arr[0]."<span class="gray">&lt;br&gt;</span>";    <span class="gray">// в
 					<td>
 						<pre><code>$arr[] = "<span class="gray">New string</span>";</code></pre>
 						<pre><code>$arr[4] = "<span class="gray">New another string</span>";    <span class="gray">// с индексом</span></code></pre>
+						<pre><code><span class="red">array_push</span>(<b>$array</b>, "some0");</code></pre>
 					</td>
 					<td style="width: 33.3%;">
 						Добавляется в конец массива
