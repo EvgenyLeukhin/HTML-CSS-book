@@ -274,7 +274,23 @@ JQuery basics</a></li>
 
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px; font-size: 1.5em;">.each()</td>
 
-			<td style="width: 600px;"></td>
+			<td style="width: 600px;"><pre class="code"><code><span>// Обрабатываем все элементы списка методом .each()</span>
+$('.list-item').<b>each</b>(function() {
+  <span class="gray">// сохраняем выпадающий текст внутри текущего элемента списка в пер. text</span>
+  var <mark>text</mark> = $('<b>.js-drop-down-text</b>', this);
+
+  <span class="gray">// Улавливаем клик по ссылке внутри текущего элемента</span>
+  $('<b>.js-details</b>', this).on('click', function(e) {
+    e.preventDefault();
+    <span class="gray">// меняем стилизацию кнопки</span>
+    $(this).toggleClass('active');
+
+    <span class="gray">// показываем-скрываем текст при клике</span>
+    <mark>text</mark>.slideToggle();
+  });
+});
+</code></pre>
+			</td>
 
 			<td rowspan="1" style="width: 300px; color: #555;">Если нужно перебрать несколько элементов и отловить какое-либо событие внутри текущего элемента</td>
 

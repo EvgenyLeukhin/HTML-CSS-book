@@ -290,12 +290,13 @@ JQuery basics</a></li>
 
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-					.attr()
+					.attr() <br>
+					.hasAttr()
 			</td>
 			
 			<td style="width: 600px;">
 				<code>
-					&lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
+					&lt;h1><span class="gray">Атрибут, наличие атрибута</span>&lt;/h1> <br>
 					 $('h1').<span class="red">attr</span>(<span class="gray">'style', 'color:red;'</span>);<hr>
 					 &lt;h1 <mark>style="color: red;"</mark>><span class="gray">Заголовок</span>&lt;/h1>
 				</code>
@@ -405,7 +406,7 @@ JQuery basics</a></li>
 		</tr>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">.empty()</td>
-			<td style="width: 600px;">Удалить потомков</td>
+			<td style="width: 600px;">Удалить потомков, либо удалить текст внутри тега, сам тег удалён не будет</td>
 			<td rowspan="1" style="width: 300px; color: #555;"></td>
 		</tr>
 		<tr>
@@ -553,8 +554,10 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
 				.find()
 			</td>
-			<td style="width: 600px;"></td>
-			<td rowspan="1" style="width: 300px; color: #555;">Что-то типа children()</td>
+			<td style="width: 600px;">
+				<code>$('h1 a') === $('h1').<span class="red">find</span>('a');</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
 		</tr>
 
 
