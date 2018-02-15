@@ -207,7 +207,7 @@ console.log(typeof text); <span class="gray">//object</span>
 			    Число
 			</td>
 			<td style="width: 400px;">
-            <h3><mark>Преобразование СТРОК в ЧИСЛА:</mark></h3>				
+            <h3><mark>Преобразование СТРОК в ЧИСЛА:</mark></h3>
 				<code>
             var a = '5';<br>
             a = <span class="red">Number</span>(a); <span class="gray">//Конвертация строки в число</span><br>
@@ -216,7 +216,11 @@ console.log(typeof text); <span class="gray">//object</span>
                 var a = <span class="red">parseInt</span>('125 px', 10);<br> <span class="gray">/*Работает только с целыми числами ,10 - десятичная форма*/</span><br>
                 console.log(typeof a); <span class="gray">//number 125</span><hr>
                 var a = <span class="red">parseFloat</span>('12.45 em', 10);
-                <span class="gray">//12.45 Работает c дробными числами</span><br>
+                <span class="gray">//12.45 Работает c дробными числами</span><br><br>
+                <strong>Также можно ставить <span class="red">+</span> перед строкой или использовать функцию <span class="red">Number()</span> для перевода строки в число</strong>
+
+
+
                 <h3><mark>ПРОВЕРКА на число:</mark></h3>
                     var <span class="red">a</span> = '1a';<br>
                     !isNaN(parseFloat(<span class="red">a</span>)) && isFinite(<span class="red">a</span>);<br>
@@ -346,7 +350,8 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
 		</tr>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-			    Неопределённый тип данных
+			    Неопределённый тип данных. <br><br>
+			    Переменные без других значений. 
 			</td>
 			<td style="width: 400px;">
 				<code>
@@ -426,7 +431,7 @@ var <span class="red"><b>a</b></span>;<br>
 &nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">number</span>') {...} <span class="gray">// на число</span> <br>
 &nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">string</span>') {...} <span class="gray">// на строку</span> <br>
 &nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">boolean</span>') {...} <span class="gray">// на булеан</span> <br>
-&nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">underfined</span>') {...} <span class="gray">// на underfined</span> <br>
+&nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">undefined</span>') {...} <span class="gray">// на undefined</span> <br>
 &nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">object</span>') {...}<span class="gray">//объекты, массивы, null</span><br>
 &nbsp;&nbsp;if (Array.isArray(<span class="red"><b>a</b></span>)) {...}<span class="gray"> //на массив</span><br>
 &nbsp;&nbsp;if isNaN(<span class="red"><b>a</b></span>) {...}<span class="gray"> //на не число</span><br>
@@ -439,7 +444,7 @@ var <span class="red"><b>a</b></span>;<br>
 		</tr>
 		
 	</table>
-	<p><b>ИТОГО:</b> 5 примитивных типов данных (number, string, boolean, underfined, null) и object</p>
+	<p><b>ИТОГО:</b> 5 примитивных типов данных (number, string, boolean, undefined, null) и object</p>
 
 	</div>
 </div>
