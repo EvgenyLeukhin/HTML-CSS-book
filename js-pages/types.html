@@ -249,6 +249,39 @@ console.log(1.25e4);    <span class="gray">//12500</span><br>
 В восмиричной форме могут быть цифры от 0 до 7, если будут цифры 8 и 9, то Parser автоматически перевёдёт в 10-тичную
 			</td>
 		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					<span style="font-size: 2em;">NaN</span> <br>
+			    Not a number (не число). Подвид числа
+			</td>
+			<td style="width: 400px;">
+				<code>
+				var a = prompt('a = ');<br>
+                    if (<span class="red">isNaN</span>(a)) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;console.log('a NaN');<br>
+				} else {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;console.log('a number');<br>
+				}
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+                <code>isNaN</code> проверяет тип на NaN <br>
+                При делении числа на строку будет NaN <br>
+                <code>console.log(234/'Some string')</code> <span class="gray">//NaN</span>
+ 			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+					<span style="font-size: 2em;">Infinity</span> <br>
+			    Бесконечность. Подвид числа
+			</td>
+			<td style="width: 400px;">
+				<code>5 / 0</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+				При делении числа на 0
+ 			</td>
+		</tr>
 		
 		<tr>
 			<th colspan="4" style="font-size: 2em; color: darkcyan;">boolean</th>
@@ -361,33 +394,10 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
                Объектные типы: ОБЪЕКТЫ, МАССИВЫ, рег. выражения, ФУНКЦИИ 
 			</td>
 		</tr>
+	
 		
 		<tr>
-			<th colspan="4" style="font-size: 2em; color: darkcyan;">NaN</th>
-		</tr>
-		<tr>
-			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-			    Not a number (не число)
-			</td>
-			<td style="width: 400px;">
-				<code>
-				var a = prompt('a = ');<br>
-                    if (<span class="red">isNaN</span>(a)) {<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;console.log('a NaN');<br>
-				} else {<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;console.log('a number');<br>
-				}
-				</code>
-			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">
-                <code>isNaN</code> проверяет тип на NaN <br>
-                При делении числа на строку будет NaN <br>
-                <code>console.log(234/'Some string')</code> <span class="gray">//NaN</span>
- 			</td>
-		</tr>
-		
-		<tr>
-			<th colspan="4" style="font-size: 2em; color: darkcyan;">typeof</th>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">typeof <small>(проверка по типу данных)</small></th>
 		</tr>
 		<tr>
 			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">

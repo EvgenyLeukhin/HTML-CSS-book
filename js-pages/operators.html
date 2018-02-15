@@ -110,7 +110,7 @@ JQuery basics</a></li>
 				<code>
 					var a = 'John ';<br>
 					var b = 'Smith';<br>
-					var c = a + b;<br>
+					var c = a + '' + b;<br>
                     console.log(c);
                     <span class="gray">//John Smith</span>   
 				</code><hr>
@@ -124,7 +124,8 @@ JQuery basics</a></li>
 				</code>
 			</td>
 			<td rowspan="1" style="width: 300px; color: #555;">
-				Если при сложении различных переменных хотя бы одно будет 'строкой', то интерпретатор присваивает остальным тоже строчный тип
+				Если при сложении различных переменных хотя бы одно будет 'строкой', то интерпретатор присваивает остальным тоже строчный тип. У них приоритет. <br>
+				<mark>Так работает ДИНАМИЧЕСКОЕ ПРИВЕДЕНИЕ ТИПОВ</mark>
 			</td>
 		</tr>
 		
@@ -273,7 +274,7 @@ JQuery basics</a></li>
             </tr>
             <tr>
                 <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-                    
+                    Перемещение 1 в двоичной системе исчисления
                 </td>
                 <td style="width: 400px;">
                     <h3>Побитовое И</h3> 
