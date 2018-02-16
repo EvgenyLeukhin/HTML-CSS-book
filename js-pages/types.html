@@ -18,7 +18,7 @@
 		<li><a href="../design-page.html">WEB-DESIGN</a></li>
 		<li><a href="../html-page.html">HTML</a></li>
 		<li><a href="../css-page.html">CSS</a></li>
-        <li><a href="../css3-page.html">CSS3</a></li>
+    <li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
 		
@@ -35,15 +35,15 @@
                 <ul class="sub-menu sub-menu9">
                 <li><a href="js-lang.html">Язык JS</a></li>
                 <li><a href="load.html">Загрузка</a></li>
-			        <li><a href="types.html">Типы данных</a></li>
-			        <li><a href="var.html">Переменные</a></li>
-			        <li><a href="operators.html">Операторы</a></li>
+				        <li><a href="types.html">Типы данных</a></li>
+				        <li><a href="var.html">Переменные</a></li>
+				        <li><a href="operators.html">Операторы</a></li>
 			        
-			        <li><a href="algorythm.html">Алгоритмы</a></li>
-			        <li><a href="if-else.html">if - else, switch-case</a></li>
-			        <li><a href="cycle.html">Циклы</a></li>
-                    <li><a href="math.html">Math</a></li>
-                </ul>
+				        <li><a href="algorythm.html">Алгоритмы</a></li>
+				        <li><a href="if-else.html">if - else, switch-case</a></li>
+				        <li><a href="cycle.html">Циклы</a></li>
+                <li><a href="math.html">Math</a></li>
+              </ul>
             </li>
             <li><a href="array.html">Массивы</a></li>
             <li><a href="function.html">Функции</a></li>
@@ -76,9 +76,9 @@
 			 <li><a href="canvas.html">Canvas</a></li>
 			 <li><a href="git.html">Git + SSH</a></li>
 			 <li><a href="console.html">Консоль</a></li>
-			 <li><a href="project.html">Новый проект</a></li>
-             <li><a href="../css3-pages/grunt.html">Grunt</a></li>
-             <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+			 <li><a href="moduls.html">Модули</a></li>
+       <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+       <li><a href="../css3-pages/gulp.html">Gulp</a></li>
 		</ul>
 	
 	
@@ -196,6 +196,35 @@ console.log(typeof text); <span class="gray">//object</span>
             <code>alert(<span class="gray">'\"Hello, World!\"'</span>);</code><br>
         </p>
         1 символ - 2 байта<br>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Новые методы
+			</td>
+			<td style="width: 400px;">
+				<code>
+					'my string'<span class="red">.startsWith</span>('my'); <span class="gray">// true</span> <br>
+					'my string'<span class="red">.endsWith</span>('my');   <span class="gray">// false</span> <br>
+					'my string'<span class="red">.includes</span>('str');  <span class="gray">// true</span> <br>
+					'my string '<span class="red">.repeat</span>(3);        <span class="gray">// my string my string my string</span> <br>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;"></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+			    Шаблонные литералы
+			</td>
+			<td style="width: 400px;">
+				<code>
+					let name = '<span class="gray">John</span>'; <br>
+   				alert(`<span class="gray">Hello,</span> <span class="red">${name}</span><span class="gray">!</span>`);
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Облегчает конкатенацию строк. <br><br>
+				Нужно заключать в обратные кавычки и использовать ${...} такой синтаксис
 			</td>
 		</tr>
 		
@@ -395,9 +424,20 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
 
 				</code>
 			</td>
-			<td rowspan="1" style="width: 300px; color: #555;">
-               Объектные типы: ОБЪЕКТЫ, МАССИВЫ, рег. выражения, ФУНКЦИИ 
+			<td rowspan="1" style="width: 300px; color: #555;">Объектные типы: ОБЪЕКТЫ, МАССИВЫ, рег. выражения, ФУНКЦИИ</td>
+		</tr>
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">symbol</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">Символ</td>
+			<td style="width: 400px;">
+				<code>
+					const CONST_1 = <span class="red">Symbol</span>('my symbol'); <br>
+					alert(typeof CONST_1); <span class="gray">// symbol</span>
+				</code>
 			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">Новый примитивный тип</td>
 		</tr>
 	
 		

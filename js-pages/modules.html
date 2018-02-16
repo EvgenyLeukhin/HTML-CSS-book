@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Мой Справочник | Модули и классы</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+		code {
+			font-size: 1.5em;
+		}
+		hr {
+			color: pink;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<div class="layout-positioner clearfix">
+			<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+			<div class="header-logo"></div>
+			<ul class="header-menu">
+				<li><a href="../index.html">Главная</a></li>
+				<li><a href="../design-page.html">WEB-DESIGN</a></li>
+				<li><a href="../html-page.html">HTML</a></li>
+				<li><a href="../css-page.html">CSS</a></li>
+				<li><a href="../css3-page.html">CSS3</a></li>
+				<li><a class="active" href="../javascript-page.html">JS</a></li>
+				<li><a href="../php.html">PHP</a></li>
+				
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="layout-positioner clearfix">
+		<div class="vert-menu-cont">
+			<ul class="vert-menu">
+				<li>
+					<a href="#">Основы</a>
+					<ul class="sub-menu sub-menu9">
+						<li><a href="js-lang.html">Язык JS</a></li>
+						<li><a href="load.html">Загрузка</a></li>
+						<li><a href="types.html">Типы данных</a></li>
+						<li><a href="var.html">Переменные</a></li>
+						<li><a href="operators.html">Операторы</a></li>
+						<li><a href="algorythm.html">Алгоритмы</a></li>
+						<li><a href="if-else.html">if - else, switch-case</a></li>
+						<li><a href="cycle.html">Циклы</a></li>
+						<li><a href="math.html">Math</a></li>
+					</ul>
+				</li>
+				<li><a href="array.html">Массивы</a></li>
+				<li><a href="function.html">Функции</a></li>
+				<li><a href="object.html">Объекты</a></li>
+				<li>
+					<a href="#">JS &amp; HTML</a>
+					<ul class="sub-menu sub-menu6">
+						<li><a href="complete.html">Вывод данных</a></li>
+						<li><a href="dom.html">DOM</a></li>
+						<li><a href="html-methods.html">Методы</a></li>
+						<li><a href="actions.html">События</a></li>
+						<li><a href="modal-window.html">Мод. окно</a></li>
+						<li><a href="forms.html">Формы</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#">jQuery</a>
+					<ul class="sub-menu sub-menu7">
+						<li><a href="jquery-html.html">
+
+JQuery basics</a></li>
+						<li><a href="jquery-func.html">jQuery-функции</a></li>
+						<li><a href="jquery-actions.html">jQuery-события</a></li>
+						<li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+						<li><a href="jquery-forms.html">jQuery-формы</a></li>
+						<li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
+						<li><a href="jquery-examples.html">Примеры</a></li>
+					</ul>
+				</li>
+				<li><a href="storage.html">Storage</a></li>
+				<li><a href="ajax.html">Ajax</a></li>
+				<li>
+					<a href="canvas.html">Canvas</a>
+					<ul class="sub-menu sub-menu9">
+						<a href="canvas.html">Настройка</a>
+						<a href="canvas-figures.html">Фигуры</a>
+						<a href="canvas-text.html">Текст</a>
+						<a href="canvas-animation.html">Циклы</a>
+					</ul>
+				</li>
+				<li><a href="git.html">Git + SSH</a></li>
+				<li><a href="console.html">Консоль</a></li>
+				<li><a class="active" href="project.html">Новый проект</a></li>
+				<li><a href="../css3-pages/grunt.html">Grunt</a></li>
+        		<li><a href="../css3-pages/gulp.html">Gulp</a></li>
+			</ul>
+
+
+		</div>
+		<div class="content clearfix">
+
+			<h2>Мой Справочник | Модули и классы</h2>
+
+			<table class="discription-table" border-spacing: 5px>
+				<tr>
+					<th colspan="5" style="font-size: 2em; color: darkcyan;">Структура проекта для фронтэнда</th>
+				</tr>
+				<tr>
+					<td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+						1. node.js + npm
+					</td>
+					<td rowspan="1" style="width: 700px; color: #555;">
+					 Устанавливаем <b>node.js+ npm</b> для вашей ОС (делается 1 раз вручную)<br>
+					</td>
+					<td rowspan="1" style="width: 200px; color: #555;">
+						<a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+						2. GitHub 
+					</td>
+
+					<td rowspan="1" style="width: 700px; color: #555;">
+					 1. Устанавливаем себе консоль <b>Git bash</b> (делается 1 раз вручную)
+					 <a href="https://git-scm.com/download" target="_blank">https://git-scm.com/download</a><br><hr>
+					 2. Регистрируемся и авторизуемся (<b>Sign in</b>) на <a href="https://github.com/" target="_blank">github.com</a><br><hr>
+					 3. Создаём репозиторий (<b>New repository</b> + Initialize this repository with a <b>Readme.md</b>)<br><hr>
+					 4. Клонируем репозиторий себе на жёсткий диск (<b>Clone or download</b>), копируем адрес, открываем консоль, встаём в нужную директорию, пишем команду: <code>git clone</code> + <i>адрес репозитория</i><br><hr>
+					 5. Создаём <b><mark>.gitignore</mark></b> (файлы, кот. НЕ будут отправляться)<br>
+					 <code style="font-size: 1em; line-height: 1em;">dist/<br>
+								node_modules/<br>
+								Thumbs.db<br>
+								*.psd<br>
+								*.pdf
+						</code><br><hr>
+
+					 6. Редактируем <b><mark>Readme.md</mark></b> (информация о проекте)<br>
+					 <code style="font-size: 1em; line-height: 1em;"># IT-book (Russian language)<br>
+						&lt;hr&gt;<br>
+						My IT-book <br>
+						&lt;br&gt;<br>
+						Author: Evgeny Leukhin<br>
+						&lt;br&gt;<br>
+						Mail: EvgenyLeukhin@ya.ru<br>
+						&lt;br&gt;<br>
+						VK: &lt;https://vk.com/leukhin_ei&gt;<br>
+						&lt;br&gt;<br>
+						GutHub hosting: &lt;https://evgenyleukhin.github.io/IT-book/&gt;
+					 </code>
+					</td>
+					<td rowspan="1" style="width: 200px; color: #555;">
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+						3. Создаём директории проекта
+					</td>
+
+					<td rowspan="1" style="width: 700px; color: #555;">
+<pre><code><span class="red"><b>dist/</b></span>                  <span class="gray">директория собранного проекта</span>
+<span class="red"><b>src/</b></span>		       <span class="gray">рабочая директория</span>
+	<span class="red">../_design     <span class="gray">файлы дизайна</span>
+	../coffee      <span class="gray">файлы coffee</span>       
+	../css         <span class="gray">файлы css</span>
+	../docs        <span class="gray">документы, прочие файлы</span>
+	../fonts       <span class="gray">шрифты</span>
+	../img         <span class="gray">изображения для дизайна</span>
+	../js          <span class="gray">js-скрипты</span>
+	../js/libs     <span class="gray">js-библиотеки</span>
+	../less        <span class="gray">файлы less</span>
+	../sass        <span class="gray">файлы sass</span>
+	../pict        <span class="gray">изображения для контента</span>
+	../<b>index.html</b>  <span class="gray">основной html-файл</span></span>
+</code></pre>
+					</td>
+					<td rowspan="1" style="width: 200px; color: #555;">
+
+					</td>
+				</tr>
+				
+ 				<tr>
+					<td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+						4. Инициализация проекта
+					</td>
+
+					<td rowspan="1" style="width: 700px; color: #555;">
+						<b>Тут три варианта:</b> <br><br>
+						1. Создавать настройки с нуля, прописать в директории с проектом команду <code>npm init</code> и создать все настройки вручную <br><br>
+						2. Взять уже готовый файл <b><mark>package.json</mark></b> для типовых проектов c готовым набором <b>devDependencies</b>, и в нём отредактировать при необходимости name, description, repository, keywords<br><br>
+						3. Создать файл <mark>package.json</mark> вручную;
+					</td>
+					<td rowspan="1" style="width: 200px; color: #555;">
+						Будет создан <b>package.json</b> с зависимомтями
+					</td>
+				</tr> 
+
+				<tr>
+					<td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+						5. bower
+					</td>
+
+					<td rowspan="1" style="width: 700px; color: #555;">
+						1. Устанавливаем глобально node-пакет <b>bower</b> для загрузки библиотек <code>npm i -g bower</code> <br>
+						(делается 1 раз)<hr>
+						2. Создаём в главной директории с проектом <b><mark>.bowerrc</mark></b>, в котором указываем директорию назначения для установки библиотек: <br>
+						<code>{<br>
+&nbsp;&nbsp;"directory": "src/js/libs/"<br>
+						}</code><hr>
+						3. В консоли устанавливаем все нужные для проекта библиотеки <br>
+						<code>bower i bootstrap jquery react angular</code>
+					</td>
+					<td rowspan="1" style="width: 200px; color: #555;">
+
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+						6. gulp и gulpfile.js
+					</td>
+
+					<td rowspan="1" style="width: 700px; color: #555;">
+						<b>gulpfile.js</b> Тут два варианта: <br><br>
+						1. Создать <mark><b>gulpfile.js</b></mark> вручную, прописав в нём все необходимые настройки для данного проекта<br><br>
+						2. Взять готовый <mark><b>gulpfile.js</b></mark>, и использовать уже типовой набор настроек <br><hr>
+						<b>Установка gulp и gulp плагинов</b> Тут тоже два варианта: <br><br>
+						1. Установить gulp и все плагины вручную, прописав команду в консоли: <br><code>npm i --save-dev gulp gulp-less gulp-watch gulp-concat</code> <i>и т. д.</i> <br><br>
+						2. Установить всё из готового <mark><b>package.json</b></mark>, прописав в консоли команду: <code>npm i</code>
+					</td>
+					<td rowspan="1" style="width: 200px; color: #555;">
+
+					</td>
+				</tr>
+
+			</table>
+
+
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="layout-positioner">
+			<p class="footer-text">Разработчик: Евгений Леухин
+				<br> EvgenyLeukhin@yandex.ru
+			</p>
+
+			<p class="footer-copyright">© 2018 Все права защищены</p>
+		</div>
+	</div>
+
+
+
+
+
+</body>
+
+</html>
