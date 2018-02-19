@@ -74,13 +74,13 @@ JQuery basics</a></li>
                     <li><a href="jquery-examples.html">Примеры</a></li>
                 </ul>
 			 </li>
-			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
+			  <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
 			 <li><a href="git.html">Git + SSH</a></li>
 			 <li><a href="console.html">Консоль</a></li>
 			 <li><a href="moduls.html">Модули</a></li>
              <li><a href="../css3-pages/grunt.html">Grunt</a></li>
-             <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+             <li><a href="../css3-pages/gulp.html">Gulp</a></li><li><a href="react.html">React</a></li>
 		</ul>
 	
 	
@@ -90,6 +90,36 @@ JQuery basics</a></li>
 	<h2>Мой Справочник | JavaScript | Циклы</h2>
 
 	<table class="discription-table" border-spacing: 5px;>
+		<tr>
+			<th colspan="4" style="font-size: 2em; color: darkcyan;">Цикл на рекурсивной функции</th>
+		</tr>
+		<tr>
+			<td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+				Функции можно также использовать для исполнения циклов. 
+			</td>
+			<td style="width: 400px;">
+				<code>
+					var orangesLeft = 3; <br>
+					function <span class="red">peelNextOrange</span>() { <br>
+					&nbsp;&nbsp;orangesLeft -= 1; <br>
+					&nbsp;&nbsp;if (orangesLeft > 0) { <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">peelNextOrange</span>(); <br>
+					&nbsp;&nbsp;}<br>
+					}<br><br>
+					<span class="red">peelNextOrange</span>(); <span class="gray">// вызов</span>
+					orangesLeft; <span class="gray">// 0</span>
+				</code>
+			</td>
+			<td rowspan="1" style="width: 300px; color: #555;">
+				Чистка апельсинов. <br>
+				<ol>
+					<li>Взять апельсин</li>
+					<li>Почистить его</li>
+					<li>Убрать в тарелку</li>
+					<li>Если есть ещё апельсины - почистить</li>
+				</ol>
+			</td>
+		</tr>
 		<tr>
 			<th colspan="4" style="font-size: 2em; color: darkcyan;">while</th>
 		</tr>

@@ -74,7 +74,7 @@ JQuery basics</a></li>
             <li><a href="jquery-examples.html">Примеры</a></li>
           </ul>
         </li>
-        <li><a href="storage.html">Storage</a></li>
+        
         <li><a href="ajax.html">Ajax</a></li>
         <li><a href="canvas.html">Canvas</a></li>
         <li><a href="git.html">Git + SSH</a></li>
@@ -82,6 +82,7 @@ JQuery basics</a></li>
         <li><a href="moduls.html">Модули</a></li>
         <li><a href="../css3-pages/grunt.html">Grunt</a></li>
         <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+        <li><a href="react.html">React</a></li>
       </ul>
 
 
@@ -429,6 +430,28 @@ JQuery basics</a></li>
             Указываем несколько индексов друг за другом, в данном случае первый элемент третьего массива
           </td>
         </tr>
+
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">Цикл for и массивы</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            С помощью этого цикла можно легко перебирать элементы массива
+          </td>
+          <td style="width: 500px;">
+            <code>
+              var someArray = [123, 234, 345, 456], <br>
+              summa = 0; <br>
+              for (var i = 0; i < someArray.length; i++) { <br>
+              &nbsp;&nbsp;summa += someArray[i]; <br>
+              &nbsp;&nbsp;<span class="gray">// summa = summa + someArray[i];</span> <br>
+              } <br>
+              console.log(summa); <span class="gray">// 1158</span>
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
+        </tr>
+
         <tr>
           <th colspan="4" style="font-size: 2em; color: darkcyan;">...</th>
         </tr>

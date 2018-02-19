@@ -18,7 +18,7 @@
 		<li><a href="../design-page.html">WEB-DESIGN</a></li>
 		<li><a href="../html-page.html">HTML</a></li>
 		<li><a href="../css-page.html">CSS</a></li>
-        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
 		
@@ -70,17 +70,17 @@ JQuery basics</a></li>
                     <li><a href="jquery-actions.html">jQuery-события</a></li>
 			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
                     <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                    <li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
+                    <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
                     <li><a href="jquery-examples.html">Примеры</a></li>
                 </ul>
 			 </li>
-			 <li><a href="storage.html">Storage</a></li> <li><a href="ajax.html">Ajax</a></li>
+			  <li><a href="ajax.html">Ajax</a></li>
 			 <li><a href="canvas.html">Canvas</a></li>
 			 <li><a href="git.html">Git + SSH</a></li>
 			 <li><a href="console.html">Консоль</a></li>
 			 <li><a href="moduls.html">Модули</a></li>
              <li><a href="../css3-pages/grunt.html">Grunt</a></li>
-             <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+             <li><a href="../css3-pages/gulp.html">Gulp</a></li><li><a href="react.html">React</a></li>
 		</ul>
 	
 	
@@ -125,7 +125,7 @@ JQuery basics</a></li>
 				ВМЕСТО document можно писать НАЗВАНИЕ ПЕРЕМЕННОЙ, в кот. сохранён какой-либо DOM-элемент
 			</td>
             <td rowspan="1" style="width: 300px; color: #555;">
-                document - корень DOM-дерева страницы в браузере<br>
+                document - корень DOM-дерева страницы в браузере<br>
 				Так язык JS взаимодействует с веб-страницей через DOM 
 			</td>
     </tr>
@@ -200,6 +200,19 @@ document.body.style.backgroundColor = ''; <hr>
 				<code>$('.class').get(0);</code>
 			</td>
       <td rowspan="1" style="width: 300px; color: #555;">Выбор первого элемента с классом class</td>
+    </tr>
+    <tr>
+			<th colspan="5" style="font-size: 2em; color: darkcyan;">data-атрибуты</th>
+		</tr>
+		<tr>
+      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">Можно добавлять в любые теги, должен быть префикс <b>data-</b></td>
+      <td style="width: 600px;">
+      	<code>&lt;div <span class="red">data-filter="first'</span>&gt;&lt;/div&gt;</code> <br>
+      	<code>document.querySellector('div').dataset.filter; <span class="gray">// 'first'</span> </code> 
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+      	С помощью них можно хранить любую информацию
+      </td>
     </tr>
     </table>
 	
