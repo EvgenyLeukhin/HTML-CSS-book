@@ -1,0 +1,3 @@
+Чтобы время не сбивалось в Windows после Linux
+reg add HKLM\System\CurrentControlSet\Control\TimeZoneInformation
+/v RealTimeIsUniversal /t reg_dword /d 1

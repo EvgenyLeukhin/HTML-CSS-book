@@ -468,6 +468,20 @@ JQuery basics</a></li>
         </tr>
       </table>
 
+      <h3>Поиск мин. значения в массиве</h3>
+      <pre><code>var usersByDay = [62,28,31,56,42,40,43,27,23,56,23,-57];
+var currentIndex = 0;
+var minValue = usersByDay[currentIndex];
+
+<span class="red">for</span> (var j = currentIndex + 1; j <= usersByDay.length - 1; j++) {
+  <span class="red">if</span> (usersByDay[j] < minValue) {
+    minValue = usersByDay[j]; 
+    console.log(<span class="gray">'Новый минимальный элемент: '</span> + minValue);
+  }
+}
+
+console.log(<span class="gray">'Минимальный элемент: '</span> + minValue);</pre></code>
+
 
     </div>
   </div>
