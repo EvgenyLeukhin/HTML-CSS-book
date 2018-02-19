@@ -469,9 +469,9 @@ JQuery basics</a></li>
       </table>
 
       <h3>Поиск мин. значения в массиве</h3>
-      <pre><code>var usersByDay = [62,28,31,56,42,40,43,27,23,56,23,-57];
-var currentIndex = 0;
-var minValue = usersByDay[currentIndex];
+      <pre><code>var usersByDay = [62,28,31,56,42,40,43,27,23,56,23,-57],
+currentIndex = 0,
+minValue = usersByDay[currentIndex];
 
 <span class="red">for</span> (var j = currentIndex + 1; j <= usersByDay.length - 1; j++) {
   <span class="red">if</span> (usersByDay[j] < minValue) {
@@ -481,6 +481,28 @@ var minValue = usersByDay[currentIndex];
 }
 
 console.log(<span class="gray">'Минимальный элемент: '</span> + minValue);</pre></code>
+
+<h3>Сортировка элементов в массиве</h3>
+<pre><code><span class="red">var</span> usersByDay = [62,28,31,56,42,40,43,27,23,56,37,57];
+
+<span class="gray">// неотсортированный массив</span>
+console.log(usersByDay);
+
+<span class="red">for</span> (var i = 0; i <= usersByDay.length - 2; i++) {
+  var minValue = usersByDay[i];
+
+  <span class="red">for</span> (var j = i + 1; j <= usersByDay.length - 1; j++) {
+    <span class="red">if</span> (usersByDay[j] < minValue) {
+      minValue = usersByDay[j];
+      <span class="red">var</span> swap = usersByDay[i];
+      usersByDay[i] = minValue;
+      usersByDay[j] = swap;
+    }
+  }
+}
+
+<span class="gray">// отсортированный массив</span>
+console.log(usersByDay);</code></pre>
 
 
     </div>

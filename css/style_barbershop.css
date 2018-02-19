@@ -226,3 +226,12 @@ input[type="password"].icon-pw {
     5 .modal-window input[type="checkbox"]:checked + label[for="remember-me-id"]::before {...}
 */
 
+
+.main-nav {
+    color: #fff;
+    text-decoration: none;
+    text-decoration: underline;
+}
+.main-nav a:hover {
+    color: rgba(255,255,255,.70);
+}
