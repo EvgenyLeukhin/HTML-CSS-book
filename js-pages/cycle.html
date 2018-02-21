@@ -1,11 +1,11 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
   <title>Мой Справочник | JS | Циклы</title>
-  <meta charset="utf-8"> 
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
@@ -70,17 +70,25 @@
         </ul>
       </li>
       <li><a href="ajax.html">Ajax</a></li>
-      <li><a href="canvas.html">Canvas</a></li>
+      <li>
+           <a href="canvas.html">Canvas</a>
+           <ul class="sub-menu sub-menu9">
+               <a href="canvas.html">Настройка</a>
+               <a href="canvas-figures.html">Фигуры</a>
+               <a href="canvas-text.html">Текст</a>
+               <a href="canvas-animation.html">Примеры</a>
+           </ul>
+       </li>
       <li><a href="git.html">Git + SSH</a></li>
       <li><a href="console.html">Консоль</a></li>
-      <li><a href="moduls.html">Модули</a></li>
+      <li><a href="modules.html">Модули</a></li>
       <li><a href="../css3-pages/grunt.html">Grunt</a></li>
       <li><a href="../css3-pages/gulp.html">Gulp</a></li><li><a href="react.html">React</a></li>
     </ul>
   </div>
 
   <div class="content clearfix">
-  
+
   <h2>Мой Справочник | JavaScript | Циклы</h2>
 
   <table class="discription-table" border-spacing: 5px;>
@@ -89,7 +97,7 @@
     </tr>
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-        Функции можно также использовать для исполнения циклов. 
+        Функции можно также использовать для исполнения циклов.
       </td>
       <td style="width: 400px;">
         <code>
@@ -120,22 +128,22 @@
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
                 Если цикл выполнился <code>(true)</code> то, он всегда возвращает значения, если <code>false</code>, то прерывается<br>
-                Условие пришется в <code>()</code>, так же как у оператора <code>if</code> 
+                Условие пришется в <code>()</code>, так же как у оператора <code>if</code>
       </td>
       <td style="width: 400px;">
         <code>
 var n = 10;<br>
 var a = 1;<br>
 <span class="red">while</span> (n > a) {<br>
-&nbsp;&nbsp;n = n - 1; <span class="gray">// n--;</span><br> 
-&nbsp;&nbsp;a = a + 1; <span class="gray">// a++;</span><br> 
-&nbsp;&nbsp;console.log(n - a);<br> 
+&nbsp;&nbsp;n = n - 1; <span class="gray">// n--;</span><br>
+&nbsp;&nbsp;a = a + 1; <span class="gray">// a++;</span><br>
+&nbsp;&nbsp;console.log(n - a);<br>
 }
 <hr>
 var i = 10;<br>
 while (<span class="red">i--</span>) {<br>
 &nbsp;&nbsp;console.log(i);<br>
-}            
+}
 <span class="gray">// 9,8,7,6,5,4,3,2,1,0</span>
         </code>
         <hr>
@@ -143,12 +151,12 @@ while (<span class="red">i--</span>) {<br>
 var i = 10;<br>
 while (<span class="red">--i</span>) {<br>
 &nbsp;&nbsp;console.log(i);<br>
-}            
+}
 <span class="gray">// 9,8,7,6,5,4,3,2,1</span>
         </code>
-        
-        
-        
+
+
+
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
 <mark>УДОБНО ИСПОЛЬЗОВАТЬ, когда кол-во итераций заранее неизвестно</mark>
@@ -156,7 +164,7 @@ while (<span class="red">--i</span>) {<br>
         <hr>Упрощенная форма записи цикла с счётчиком внутри условия, когда счётчик <code>i = 0</code>, то условие не выполнится, потому что <br><code>Boolean(0) = false;</code>
       </td>
     </tr>
-    
+
         <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">do while</th>
     </tr>
@@ -178,7 +186,7 @@ console.log('ЗАЧЕМ ТЫ ВВЁЛ 1');
 Будет выполнятся блок инструкций после ключевой фразы <code>do</code> {...}, пока условие <code>true</code>
       </td>
     </tr>
-    
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">for</th>
     </tr>
@@ -203,7 +211,7 @@ console.log('ЗАЧЕМ ТЫ ВВЁЛ 1');
         </code>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
-        Характеризуется 3-мя выражениями: <hr> 
+        Характеризуется 3-мя выражениями: <hr>
         1 - объявление переменной с начальными значениями (инициализация);<hr>
         2 - условие проверки (нельзя ставить ==, нужно <, >, >=, &lt;=);<hr>
         3 - инкремент (шаг цикла) <code>true</code><hr>
@@ -211,7 +219,7 @@ console.log('ЗАЧЕМ ТЫ ВВЁЛ 1');
         После завершения ЦИКЛА, значение переменной всегда будет равно, значению которое было на последней совершенной ИТЕРАЦИИ
       </td>
     </tr>
-    
+
         <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">break</th>
     </tr>
@@ -232,7 +240,7 @@ for (i = 1; i <= 100; i++) {<br>
 Программа прервёт цикл, если условие после if выполниться, т.е. когда <code>i</code> странет равным 15.
       </td>
     </tr>
-    
+
         <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">continue</th>
     </tr>
@@ -251,11 +259,11 @@ for (i = 1; i <= 100; i++) {<br>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
 Программа пропустит все этапы цикла при значениям <code>i</code> кратных двум.
-        
+
       </td>
     </tr>
   </table>
-    
+
     <table class="discription-table" border-spacing: 5px;>
         <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">Взаимодействие с массивами</th>
@@ -281,7 +289,7 @@ for (var i = 0; i < arr.length; i++) {<br>
                 <code>i &lt; arr.length</code> - Условие, что кол-во циклов равно кол-ву элементов в массиве
       </td>
     </tr>
-   
+
         <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
 Присваивание элементов массива с помощью цикла
@@ -301,8 +309,8 @@ for (var i = 0; i <= 100; i++) {<br>
     </tr>
     </table>
 
-  
-  
+
+
   </div>
 </div>
 
@@ -310,7 +318,7 @@ for (var i = 0; i <= 100; i++) {<br>
   <div class="layout-positioner">
     <p class="footer-text">Разработчик: Евгений Леухин<br>
                  EvgenyLeukhin@yandex.ru</p>
-    
+
     <p class="footer-copyright">© 2018 Все права защищены</p>
   </div>
 </div>

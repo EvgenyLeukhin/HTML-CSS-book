@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | JS | Canvas - Фигуры</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 		code {font-size: 1.5em;}
@@ -24,8 +24,8 @@
         <li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
+
+
 	</ul>
 	</div>
 </div>
@@ -41,7 +41,7 @@
 			        <li><a href="types.html">Типы данных</a></li>
 			        <li><a href="var.html">Переменные</a></li>
 			        <li><a href="operators.html">Операторы</a></li>
-			        
+
 			        <li><a href="algorythm.html">Алгоритмы</a></li>
 			        <li><a href="if-else.html">if - else, switch-case</a></li>
 			        <li><a href="cycle.html">Циклы</a></li>
@@ -62,7 +62,7 @@
 					        <li><a href="forms.html">Формы</a></li>
                 </ul>
             </li>
-			
+
 			<li>
 			    <a href="#">jQuery</a>
 			    <ul class="sub-menu sub-menu7">
@@ -79,23 +79,23 @@
 			 <li>
 			     <a class="active" href="canvas.html">Canvas</a>
 			     <ul class="sub-menu sub-menu9">
-               <a href="canvas.html">Настройка</a> 
+               <a href="canvas.html">Настройка</a>
 			         <a href="canvas-figures.html">Фигуры</a>
 			         <a href="canvas-text.html">Текст</a>
-			         <a href="canvas-animation.html">Циклы</a>
+			         <a href="canvas-animation.html">Примеры</a>
            </ul>
 			 </li>
 			 <li><a href="git.html">Git + SSH</a></li>
 			 <li><a href="console.html">Консоль</a></li>
-			 <li><a href="moduls.html">Модули</a></li>
+			 <li><a href="modules.html">Модули</a></li>
              <li><a href="../css3-pages/grunt.html">Grunt</a></li>
              <li><a href="../css3-pages/gulp.html">Gulp</a></li><li><a href="react.html">React</a></li>
 		</ul>
-	
-	
+
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | JavaScript | Canvas - Фигуры</h2>
 
 	 <table class="discription-table" border-spacing: 5px>
@@ -106,7 +106,7 @@
 			<td colspan="3" style="color: black; font-weight: bold; width: 300px;">
 			    Прямоугольник с заливкой
 			</td>
-			
+
 			<td rowspan="1" style="width: 600px; color: #555;">
         <code>
 ctx.<span class="red">fillStyle</span> = 'rgba(0, 0, 0, 0.7)'; <span class="gray">// Цвет заливки</span><br>
@@ -118,7 +118,7 @@ ctx.<span class="red"><b>fillRect</b></span>(10, 10, 310, 170);
 310 - ширина, 170 - высота (в пикселях)
 			</td>
 		</tr>
-		
+
 		<tr>
 			<th colspan="5" style="font-size: 2em; color: darkcyan;">ctx.strokeRect</th>
 		</tr>
@@ -126,7 +126,7 @@ ctx.<span class="red"><b>fillRect</b></span>(10, 10, 310, 170);
 			<td colspan="3" style="color: black; font-weight: bold; width: 300px;">
 			    Прямоугольник без заливки
 			</td>
-			
+
 			<td rowspan="1" style="width: 600px; color: #555;">
         <code>
 ctx.<span class="red">strokeStyle</span> = 'blue';<span class="gray">// Цвет обводки</span><br>
@@ -138,15 +138,15 @@ ctx.<span class="red"><b>strokeRect</b></span>(75, 0, 150, 150);
 150 - ширина, 150 - высота (в пикселях)
 			</td>
 		</tr>
-		
+
 		<tr>
 			<th colspan="5" style="font-size: 2em; color: darkcyan;">ctx.clearRect</th>
-		</tr>	
+		</tr>
 		<tr>
 			<td colspan="3" style="color: black; font-weight: bold; width: 300px;">
 			    Очистка холста
 			</td>
-			
+
 			<td rowspan="1" style="width: 600px; color: #555;">
         <code>
 ctx.<span class="red"><b>clearRect</b></span>(0, 0, 300, 150);
@@ -156,15 +156,15 @@ ctx.<span class="red"><b>clearRect</b></span>(0, 0, 300, 150);
 Указываются нулевые координаты и ширина и высота всего золста
 			</td>
 		</tr>
-		
+
 		<tr>
 			<th colspan="5" style="font-size: 2em; color: darkcyan;">Path</th>
-		</tr>	
+		</tr>
 		<tr>
 			<td colspan="3" style="color: black; font-weight: bold; width: 300px;">
 			    Сложные фигуры (Контуры)
 			</td>
-			
+
 			<td rowspan="1" style="width: 600px; color: #555;">
         <code>
           ctx.<span class="red">beginPath</span>(); <span class="gray">// Начало контура</span><br>
@@ -173,8 +173,8 @@ ctx.<span class="red"><b>clearRect</b></span>(0, 0, 300, 150);
           ctx.<span class="red">lineTo</span>(x, y); <br>
           <span class="gray">// Перемещать по нелинейной функции Безье (x,y в конце)</span><br>
           ctx.<span class="red">bezierCurveTo</span>(140, 90, 110, 90, 100, 100);
-          
-          
+
+
           ctx.<span class="red">closePath</span>(); <span class="gray">// Конец контура</span><br>
         </code>
 			</td>
@@ -182,7 +182,7 @@ ctx.<span class="red"><b>clearRect</b></span>(0, 0, 300, 150);
 
 			</td>
 		</tr>
-		
+
 		<tr>
 			<th colspan="5" style="font-size: 2em; color: darkcyan;">Градиент</th>
 		</tr>
@@ -190,7 +190,7 @@ ctx.<span class="red"><b>clearRect</b></span>(0, 0, 300, 150);
 			<td colspan="3" style="color: black; font-weight: bold; width: 300px;">
 			    Линейный
 			</td>
-			
+
 			<td rowspan="1" style="width: 600px; color: #555;">
         <code>
 var <span class="red">gradient</span> = ctx.<mark>createLinearGradient</mark>(0, 0, 300, 150);<br>
@@ -206,12 +206,12 @@ ctx.fillRect(0, 0, 300, 150);
 
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td colspan="3" style="color: black; font-weight: bold; width: 300px;">
 			    Радиальный
 			</td>
-			
+
 			<td rowspan="1" style="width: 600px; color: #555;">
         <code>
 var <span class="red">gradient</span> = ctx.<mark>createRadialGradient</mark>(150, 72, 0, 150, 72, 72);<br>
@@ -227,15 +227,15 @@ ctx.fillRect(0, 0, 300, 150);
 
 			</td>
 		</tr>
-		
 
-  
-  
-  
-  
-  
+
+
+
+
+
+
    </table>
-	
+
 	</div>
 </div>
 
@@ -243,7 +243,7 @@ ctx.fillRect(0, 0, 300, 150);
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

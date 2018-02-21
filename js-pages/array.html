@@ -21,8 +21,8 @@
         <li><a href="../css3-page.html">CSS3</a></li>
         <li><a class="active" href="../javascript-page.html">JS</a></li>
         <li><a href="../php.html">PHP</a></li>
-        
-        
+
+
       </ul>
     </div>
   </div>
@@ -74,12 +74,20 @@ JQuery basics</a></li>
             <li><a href="jquery-examples.html">Примеры</a></li>
           </ul>
         </li>
-        
+
         <li><a href="ajax.html">Ajax</a></li>
-        <li><a href="canvas.html">Canvas</a></li>
+        <li>
+          <a href="canvas.html">Canvas</a>
+          <ul class="sub-menu sub-menu9">
+             <li><a href="canvas.html">Настройка</a></li>
+             <li><a href="canvas-figures.html">Фигуры</a></li>
+             <li><a href="canvas-text.html">Текст</a></li>
+             <li><a href="canvas-animation.html">Примеры</a></li>
+         </ul>
+       </li>
         <li><a href="git.html">Git + SSH</a></li>
         <li><a href="console.html">Консоль</a></li>
-        <li><a href="moduls.html">Модули</a></li>
+        <li><a href="modules.html">Модули</a></li>
         <li><a href="../css3-pages/grunt.html">Grunt</a></li>
         <li><a href="../css3-pages/gulp.html">Gulp</a></li>
         <li><a href="react.html">React</a></li>
@@ -112,9 +120,9 @@ JQuery basics</a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;'Porshe'</span><br>
 				]<br>
 				alert(array);<span class="gray">//покажет все элементы в массиве</span><br>
-				
+
 				var arr = [];<span class="gray">//пустой массив</span>
-				
+
 				</code>
           </td>
           <td rowspan="1" style="width: 300px; color: #555;">
@@ -202,7 +210,7 @@ JQuery basics</a></li>
             <hr>
             <code>
 				    array[array.length] = 'Fiat';  <span class="gray">//аналог aray[4] = 'Fiat'; добавит новый элемент в конец массива</span>
-                    
+
 				</code>
           </td>
           <td rowspan="1" style="width: 300px; color: #555;">
@@ -409,7 +417,7 @@ JQuery basics</a></li>
 &nbsp;&nbsp;&nbsp;&nbsp;arr3 = [7, 8, 9];<br>
                         var bigArr = [arr1, arr2, arr3];<br>
                         <span class="gray">// создали двумерный массив bigArr</span>
-            
+
 				</code>
           </td>
           <td rowspan="1" style="width: 300px; color: #555;">
@@ -475,7 +483,7 @@ minValue = usersByDay[currentIndex];
 
 <span class="red">for</span> (var j = currentIndex + 1; j <= usersByDay.length - 1; j++) {
   <span class="red">if</span> (usersByDay[j] < minValue) {
-    minValue = usersByDay[j]; 
+    minValue = usersByDay[j];
     console.log(<span class="gray">'Новый минимальный элемент: '</span> + minValue);
   }
 }

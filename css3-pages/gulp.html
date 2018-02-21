@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Gulp</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
     <style>
@@ -34,9 +34,9 @@
     <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -86,21 +86,21 @@
             <li><a href="../js-pages/jquery-examples.html">Примеры</a></li>
           </ul>
         </li>
-        <li><a href="../js-pages/storage.html">Storage</a></li>
         <li><a href="../js-pages/ajax.html">Ajax</a></li>
         <li><a href="../js-pages/canvas.html">Canvas</a></li>
         <li><a href="../js-pages/git.html">Git + SSH</a></li>
         <li><a href="../js-pages/console.html">Консоль</a></li>
-        <li><a href="../js-pages/project.html">Новый проект</a></li>
+        <li><a href="../js-pages/modules.html">Модули</a></li>
         <li><a href="grunt.html">Grunt</a></li>
         <li><a class="active" href="gulp.html">Gulp</a></li>
+        <li><a href="../js-pages/react.html">React</a></li>
       </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | Gulp</h2>
-	
+
 	<table class="css3-table">
     <tr>
       <th class="css3-table-title" colspan="3">Установка</th>
@@ -139,20 +139,20 @@
         <code>npm init</code>
       </td>
       <td class="col3">Будет создан файл <b>package.json</b> с информацией о проекте</td>
-    </tr> 
+    </tr>
     <tr>
       <th class="css3-table-title" colspan="3">Плагины</th>
     </tr>
-    <tr> 
+    <tr>
       <td class="col1" style="width: 200px;">Компилятор less-кода в css</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://github.com/plus3network/gulp-less"
    target="_blank">npm i -save-dev gulp-less</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp less</mark>  
+<mark>gulp less</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -164,16 +164,16 @@
         </code>
       </td>
     </tr>
-    <tr> 
+    <tr>
       <td class="col1" style="width: 200px;">Компилятор sass-кода в css</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-sass/"
    target="_blank">npm i -save-dev gulp-sass</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp sass</mark>  
+<mark>gulp sass</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -185,16 +185,16 @@
         </code>
       </td>
     </tr>
-    <tr> 
+    <tr>
       <td class="col1" style="width: 200px;">Компилятор coffee-кода в js</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-coffee/"
    target="_blank">npm i -save-dev gulp-coffee</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp coffee</mark>  
+<mark>gulp coffee</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -206,17 +206,17 @@
         </code>
       </td>
     </tr>
-    
-    <tr> 
+
+    <tr>
       <td class="col1" style="width: 200px;">Мнгновенное сохранение изменений</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-watch/"
    target="_blank">npm install --save-dev gulp-watch</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp watch</mark>  
+<mark>gulp watch</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -228,17 +228,17 @@
         </code>
       </td>
     </tr>
-    
-    <tr> 
+
+    <tr>
       <td class="col1" style="width: 200px;">Конкатинатор</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-concat/"
    target="_blank">npm install --save-dev gulp-concat</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp concat</mark>  
+<mark>gulp concat</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -250,17 +250,17 @@
         </code>
       </td>
     </tr>
-    
-     <tr> 
+
+     <tr>
       <td class="col1" style="width: 200px;">Минификатор css</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-cssmin/"
    target="_blank">npm install --save-dev gulp-minify-css</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp minify-css</mark>  
+<mark>gulp minify-css</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -272,17 +272,17 @@
         </code>
       </td>
     </tr>
-    
-    <tr> 
+
+    <tr>
       <td class="col1" style="width: 200px;">Минификатор js</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-uglify/"
    target="_blank">npm install --save-dev gulp-uglify</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp uglify</mark>  
+<mark>gulp uglify</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -294,17 +294,17 @@
         </code>
       </td>
     </tr>
-    
-    <tr> 
+
+    <tr>
       <td class="col1" style="width: 200px;">Сжатие картинок</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-imagemin/"
    target="_blank">npm install --save-dev gulp-imagemin</a>
 
 <span class="gray">// Запуск плагина:</span>
-<mark>gulp imagemin</mark>  
+<mark>gulp imagemin</mark>
      </pre></code>
       </td>
       <td class="col3">
@@ -316,14 +316,14 @@
         </code>
       </td>
     </tr>
-    <tr> 
+    <tr>
       <td class="col1" style="width: 200px;">Синхронизатор</td>
       <td class="col2" style="width: 700px;">
         <code><pre>
-<a class="gulp-link" 
+<a class="gulp-link"
    href="https://www.npmjs.com/package/gulp-imagemin/"
    target="_blank">npm install --save-dev browser-sync</a>
- 
+
      </pre></code>
       </td>
       <td class="col3">
@@ -336,10 +336,10 @@
       </td>
     </tr>
 
-    
+
     <tr>
       <th class="css3-table-title" colspan="3">Настройка</th>
-    </tr> 
+    </tr>
     <tr>
       <td class="col1" style="width: 200px;">
         <b>gulpfile.js</b>
@@ -367,10 +367,10 @@ gulp.<mark>task</mark>('<span class="red">less</span>', function() { <span class
 });
 
 <span class="gray">//4. Настройка плагина watch:</span>
-gulp.<mark>task</mark>('<span class="red">watch</span>', function() { 
+gulp.<mark>task</mark>('<span class="red">watch</span>', function() {
   gulp.<mark>watch</mark>('less/**/*.less', ['browser-sync', 'less']) <span class="gray">// какие таски будем
   // выполнять ['less'] при изменении файлов <b>less</b></span>
-  .pipe(gulp.<mark>dest</mark>('css')); 
+  .pipe(gulp.<mark>dest</mark>('css'));
 });
 
 <span class="gray">//5. Настройка плагина browser-sync:</span>
@@ -388,7 +388,7 @@ gulp.task('<span class="red">browser-sync</span>', function() {
 пишем команду: </span>
 <b>gulp less</b>
 
-<span style="color: #000">После этого у нас создался <b>style.css</b> 
+<span style="color: #000">После этого у нас создался <b>style.css</b>
 путём преобразования файла <b>style.less</b></span>
         </pre></code>
       </td>
@@ -399,7 +399,7 @@ gulp.task('<span class="red">browser-sync</span>', function() {
   </table>
   <br>
   <img src="../img/css-comb.jpg" alt="css-comb.jpg">
-  
+
 	</div>
 </div>
 
@@ -407,7 +407,7 @@ gulp.task('<span class="red">browser-sync</span>', function() {
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
