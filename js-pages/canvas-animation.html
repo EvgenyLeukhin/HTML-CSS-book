@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
-		code {font-size: 1.5em;}
+		code {font-size: 1.5em !important;}
     canvas {
       border: 1px solid #ccc;
     }
@@ -104,12 +104,13 @@
 
   <canvas width="1130" height="500"></canvas>
 
-<pre><code>// DOM-элемент канваса
+<pre><code><h2>// DOM-элемент канваса</h2>
 var canvas = document.querySelector('canvas');
 // Контекст отрисовки
 var ctx = canvas.getContext('2d');
 
-// рисуем 1 прямоугольник (лев. верх. угол,   ширина, высота) - по ум. заливка чёрная
+
+<h2>// рисуем 1 прямоугольник </h2>(лев. верх. угол,   ширина, высота) - по ум. заливка чёрная
 ctx.fillRect(0,0,  100, 100);
 
 
@@ -120,7 +121,7 @@ ctx.fillRect(200,0,  200, 200);
 
 
 
-// создаём ЛИНЕЙНЫЙ ГРАДИЕНТ (координаты точек из какой в какую он перетекает)
+<h2>// создаём ЛИНЕЙНЫЙ ГРАДИЕНТ</h2> (координаты точек из какой в какую он перетекает)
 var gradient1 = ctx.createLinearGradient(550,0,  850,0);
     gradient1.addColorStop(0.00,  'red');
     gradient1.addColorStop(0.25,  'orange');
@@ -134,7 +135,7 @@ ctx.fillRect(550,0,  300, 300);
 
 
 
-// создаём РАДИАЛЬНЫЙ ГРАДИЕНТ (координаты центра первой окр(x,y,R) и второй)
+<h2>// создаём РАДИАЛЬНЫЙ ГРАДИЕНТ</h2> (координаты центра первой окр(x,y,R) и второй)
 var gradient2 = ctx.createRadialGradient(150,400,0,  150,400,50);
     gradient2.addColorStop(0,  'red');
     gradient2.addColorStop(1,  'orange');
@@ -145,7 +146,7 @@ ctx.fillRect(100,350,  100, 100);
 
 
 
-// РАМКИ
+<h2>// РАМКИ</h2>
 // цвет рамки
 ctx.strokeStyle = 'red';
 // рисуем рамку
@@ -153,12 +154,12 @@ ctx.strokeRect(90,340,  120, 120);
 
 
 
-// ОЧИСКА хоста (дырка на чёрном квадрате)
+<h2>// ОЧИСКА хоста (дырка на чёрном квадрате)</h2>
 ctx.clearRect(0, 0, 15, 15);
 
 
 
-// ФИГУРЫ
+<h2>// ФИГУРЫ</h2>
 ctx.beginPath();
 // ставим перо
 ctx.moveTo(100, 100);
@@ -174,7 +175,7 @@ ctx.bezierCurveTo(140, 90, 110, 90, 100, 100);
 ctx.stroke();
 
 
-// ТЕКСТ
+<h2>// ТЕКСТ</h2>
 // кегль + гарнитура
 ctx.font = '30px Consolas';
 // чтобы не вылазил
@@ -187,7 +188,7 @@ ctx.fillText('Как дела?', 0, 148);
 <hr>
 
 
-// ТЕПЛОВЫЕ КАРТЫ
+<h2>// ТЕПЛОВЫЕ КАРТЫ</h2>
 /**
  * Переменные, названные заглавными буквами, по соглашению, считаются
  * постоянными.
