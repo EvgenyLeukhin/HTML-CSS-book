@@ -5,9 +5,13 @@
     <title>Мой Справочник | JS | Canvas - Примеры</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 		code {font-size: 1.5em;}
+    canvas {
+      border: 1px solid #ccc;
+    }
 	</style>
 </head>
 
@@ -96,7 +100,174 @@
 	</div>
 	<div class="content clearfix">
 
-	<h2>Мой Справочник | JavaScript | Canvas - Циклы</h2>
+	<h2>Мой Справочник | JavaScript | Canvas - Примеры</h2>
+
+  <canvas width="1130" height="500"></canvas>
+
+<pre><code>// DOM-элемент канваса
+var canvas = document.querySelector('canvas');
+// Контекст отрисовки
+var ctx = canvas.getContext('2d');
+
+// рисуем 1 прямоугольник (лев. верх. угол,   ширина, высота) - по ум. заливка чёрная
+ctx.fillRect(0,0,  100, 100);
+
+
+// заливка 2 прямоугольника - переопределение заливки
+ctx.fillStyle = 'blue';
+// рисуем 2 прямоугольник с новой заливкой
+ctx.fillRect(200,0,  200, 200);
+
+
+
+// создаём ЛИНЕЙНЫЙ ГРАДИЕНТ (координаты точек из какой в какую он перетекает)
+var gradient1 = ctx.createLinearGradient(550,0,  850,0);
+    gradient1.addColorStop(0.00,  'red');
+    gradient1.addColorStop(0.25,  'orange');
+    gradient1.addColorStop(0.50,  'yellow');
+    gradient1.addColorStop(0.75,  'green');
+    gradient1.addColorStop(1.00,  'blue');
+// заливаем градиентом
+ctx.fillStyle = gradient1;
+// создаём прямоугольник с градиентом
+ctx.fillRect(550,0,  300, 300);
+
+
+
+// создаём РАДИАЛЬНЫЙ ГРАДИЕНТ (координаты центра первой окр(x,y,R) и второй)
+var gradient2 = ctx.createRadialGradient(150,400,0,  150,400,50);
+    gradient2.addColorStop(0,  'red');
+    gradient2.addColorStop(1,  'orange');
+// заливаем градиентом
+ctx.fillStyle = gradient2;
+// рисуем квадрат залитый рад. град.
+ctx.fillRect(100,350,  100, 100);
+
+
+
+// РАМКИ
+// цвет рамки
+ctx.strokeStyle = 'red';
+// рисуем рамку
+ctx.strokeRect(90,340,  120, 120);
+
+
+
+// ОЧИСКА хоста (дырка на чёрном квадрате)
+ctx.clearRect(0, 0, 15, 15);
+
+
+
+// ФИГУРЫ
+ctx.beginPath();
+// ставим перо
+ctx.moveTo(100, 100);
+// хочу передвинуть перо на эти точки
+ctx.lineTo(80, 60);
+ctx.lineTo(110, 80);
+ctx.lineTo(125, 40);
+ctx.lineTo(140, 80);
+ctx.lineTo(170, 60);
+ctx.lineTo(150, 100);
+ctx.lineTo(150, 100);
+ctx.bezierCurveTo(140, 90, 110, 90, 100, 100);
+ctx.stroke();
+
+
+// ТЕКСТ
+// кегль + гарнитура
+ctx.font = '30px Consolas';
+// чтобы не вылазил
+ctx.textBaseline = 'hanging';
+
+ctx.fillText('Привет!', 0, 120);
+ctx.fillText('Как дела?', 0, 148);
+
+
+<hr>
+
+
+// ТЕПЛОВЫЕ КАРТЫ
+/**
+ * Переменные, названные заглавными буквами, по соглашению, считаются
+ * постоянными.
+ * @constant {number}
+ */
+// размеры canvas
+var TILE_SIZE = 256;
+
+/** @constant {number} */
+var DIAMOND_SIZE = 16;
+
+/**
+ * Функция getMapTile будет использоваться
+ * для отрисовки прямоугольников поверх карты
+ * @return {HTMLCanvasElement}
+ */
+var getMapTile = function() {
+    // Каждый канвас будет замощен ромбами,
+    // непрозрачность заливки которых будет означать
+    // количество ресторанов под указанным ромбом.
+    // Для простоты непрозрачность будем получать,
+    // генерируя случайное число.
+
+    // тег canvas сохраняем в пер.
+    var canvasElement = document.createElement('canvas');
+
+    // добавляем атрибуты
+    canvasElement.setAttribute('width', TILE_SIZE);
+    canvasElement.setAttribute('height', TILE_SIZE);
+
+    // контекст
+    var ctx = canvasElement.getContext('2d');
+
+    var x;
+    var y = -DIAMOND_SIZE / 2;
+    var row = 1;
+
+    while (y < TILE_SIZE) {
+        x = row % 2 === 0 ? -DIAMOND_SIZE / 2 : 0;
+
+        while (x < TILE_SIZE) {
+            drawDiamond(ctx, DIAMOND_SIZE, x, y);
+            x += DIAMOND_SIZE;
+        }
+
+        y += DIAMOND_SIZE / 2;
+        row++;
+    }
+
+    // добавляем canvas на страницу
+    return canvasElement;
+};
+
+/**
+ * Рисует ромб, вписанный в прямоугольник
+ * с заданными координатами
+ * @param {CanvasRenderingContext2D} ctx
+ * @param {number} size
+ * @param {number} x
+ * @param {number} y
+ */
+var drawDiamond = function(ctx, size, x, y) {
+    ctx.beginPath();
+    ctx.moveTo(x + size / 2, y);
+    ctx.lineTo(x + size, y + size / 2);
+    ctx.lineTo(x + size / 2, y + size);
+    ctx.lineTo(x, y + size / 2);
+    ctx.lineTo(x + size / 2, y);
+    ctx.fillStyle = getRandomColor();
+    ctx.fill();
+};
+
+/** @return {string} */
+var getRandomColor = function() {
+  return 'rgba(30, 128, 30, ' + (Math.random() * 0.6).toFixed(1) + ')';
+};
+
+
+document.body.appendChild(getMapTile());
+</code></pre>
 
 
 
@@ -114,6 +285,170 @@
 
 
 
+<script>
+  // DOM-элемент канваса
+var canvas = document.querySelector('canvas');
+// Контекст отрисовки
+var ctx = canvas.getContext('2d');
 
+// рисуем 1 прямоугольник (лев. верх. угол,   ширина, высота) - по ум. заливка чёрная
+ctx.fillRect(0,0,  100, 100);
+
+
+// заливка 2 прямоугольника - переопределение заливки
+ctx.fillStyle = 'blue';
+// рисуем 2 прямоугольник с новой заливкой
+ctx.fillRect(200,0,  200, 200);
+
+
+
+// создаём ЛИНЕЙНЫЙ ГРАДИЕНТ (координаты точек из какой в какую он перетекает)
+var gradient1 = ctx.createLinearGradient(550,0,  850,0);
+    gradient1.addColorStop(0.00,  'red');
+    gradient1.addColorStop(0.25,  'orange');
+    gradient1.addColorStop(0.50,  'yellow');
+    gradient1.addColorStop(0.75,  'green');
+    gradient1.addColorStop(1.00,  'blue');
+// заливаем градиентом
+ctx.fillStyle = gradient1;
+// создаём прямоугольник с градиентом
+ctx.fillRect(550,0,  300, 300);
+
+
+
+// создаём РАДИАЛЬНЫЙ ГРАДИЕНТ (координаты центра первой окр(x,y,R) и второй)
+var gradient2 = ctx.createRadialGradient(150,400,0,  150,400,50);
+    gradient2.addColorStop(0,  'red');
+    gradient2.addColorStop(1,  'orange');
+// заливаем градиентом
+ctx.fillStyle = gradient2;
+// рисуем квадрат залитый рад. град.
+ctx.fillRect(100,350,  100, 100);
+
+
+
+// РАМКИ
+// цвет рамки
+ctx.strokeStyle = 'red';
+// рисуем рамку
+ctx.strokeRect(90,340,  120, 120);
+
+
+
+// ОЧИСКА хоста (дырка на чёрном квадрате)
+ctx.clearRect(0, 0, 15, 15);
+
+
+
+// ФИГУРЫ
+ctx.beginPath();
+// ставим перо
+ctx.moveTo(100, 100);
+// хочу передвинуть перо на эти точки
+ctx.lineTo(80, 60);
+ctx.lineTo(110, 80);
+ctx.lineTo(125, 40);
+ctx.lineTo(140, 80);
+ctx.lineTo(170, 60);
+ctx.lineTo(150, 100);
+ctx.lineTo(150, 100);
+ctx.bezierCurveTo(140, 90, 110, 90, 100, 100);
+ctx.stroke();
+
+
+// ТЕКСТ
+// кегль + гарнитура
+ctx.font = '30px Consolas';
+// чтобы не вылазил
+ctx.textBaseline = 'hanging';
+
+ctx.fillText('Привет!', 0, 120);
+ctx.fillText('Как дела?', 0, 148);
+
+
+
+
+
+// ТЕПЛОВЫЕ КАРТЫ
+/**
+ * Переменные, названные заглавными буквами, по соглашению, считаются
+ * постоянными.
+ * @constant {number}
+ */
+// размеры canvas
+var TILE_SIZE = 256;
+
+/** @constant {number} */
+var DIAMOND_SIZE = 16;
+
+// *
+//  * Функция getMapTile будет использоваться
+//  * для отрисовки прямоугольников поверх карты
+//  * @return {HTMLCanvasElement}
+
+var getMapTile = function() {
+    // Каждый канвас будет замощен ромбами,
+    // непрозрачность заливки которых будет означать
+    // количество ресторанов под указанным ромбом.
+    // Для простоты непрозрачность будем получать,
+    // генерируя случайное число.
+
+    // тег canvas сохраняем в пер.
+    var canvasElement = document.createElement('canvas');
+
+    // добавляем атрибуты
+    canvasElement.setAttribute('width', TILE_SIZE);
+    canvasElement.setAttribute('height', TILE_SIZE);
+
+    // контекст
+    var ctx = canvasElement.getContext('2d');
+
+    var x;
+    var y = -DIAMOND_SIZE / 2;
+    var row = 1;
+
+    while (y < TILE_SIZE) {
+        x = row % 2 === 0 ? -DIAMOND_SIZE / 2 : 0;
+
+        while (x < TILE_SIZE) {
+            drawDiamond(ctx, DIAMOND_SIZE, x, y);
+            x += DIAMOND_SIZE;
+        }
+
+        y += DIAMOND_SIZE / 2;
+        row++;
+    }
+
+    // добавляем canvas на страницу
+    return canvasElement;
+};
+
+/**
+ * Рисует ромб, вписанный в прямоугольник
+ * с заданными координатами
+ * @param {CanvasRenderingContext2D} ctx
+ * @param {number} size
+ * @param {number} x
+ * @param {number} y
+ */
+var drawDiamond = function(ctx, size, x, y) {
+    ctx.beginPath();
+    ctx.moveTo(x + size / 2, y);
+    ctx.lineTo(x + size, y + size / 2);
+    ctx.lineTo(x + size / 2, y + size);
+    ctx.lineTo(x, y + size / 2);
+    ctx.lineTo(x + size / 2, y);
+    ctx.fillStyle = getRandomColor();
+    ctx.fill();
+};
+
+/** @return {string} */
+var getRandomColor = function() {
+  return 'rgba(30, 128, 30, ' + (Math.random() * 0.6).toFixed(1) + ')';
+};
+
+
+document.body.appendChild(getMapTile());
+</script>
 </body>
 </html>
