@@ -368,6 +368,30 @@ AC5AA84C 034F7A53 2C9A801B 8AED239F
 under <b>Main menu -> Preferences -> Package Settings -> BufferScroll -> Settings Default</b> set <b>"synch_folds" : true</b></p>
 
 
+  <h3>.eslintrc.js</h3>
+      <pre><code style="font-size: 1.25em;">module.exports = {
+  "env": { "browser": true },
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent":          [ "error", 2        ],
+    "linebreak-style": [ "error", "unix"   ],
+    "quotes":          [ "error", "single" ],
+    "semi":            [ "error", "always" ]
+  }
+};</code></pre>
+
+  <h3>.editorconfig</h3>
+      <pre><code style="font-size: 1.25em;">root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true</code></pre>
+
+
 
     </div>
   </div>

@@ -1,6 +1,2 @@
-bin/server.js
-bin/middleware.config.js
-bin/webpack.config.js
-bin/data/*
-src/js/*.min.js
-src/js/check.js
+dist/
+node_modules/
