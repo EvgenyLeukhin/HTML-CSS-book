@@ -99,6 +99,21 @@
 	
 	<table class="css3-table">
 		<tr>
+			<th class="css3-table-title" colspan="3">Git-алиасы</th>
+		</tr>
+		<tr>
+			<td colspan="3"><code>git config alias.<b style="color: red;">q</b> '!(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br>
+			<span class="gray">// или написать в файле .git/<b>config</b><br></span>
+			[alias] <br>
+			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master) <br>
+			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master) <br>
+			&nbsp;&nbsp;q-ssh = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master &amp;&amp; ssh provisov \"cd ~/sites/ulybka-new &amp;&amp; git merge master --ff-only\") <br>
+
+			
+
+			</code></td>
+		</tr>
+		<tr>
 			<th class="css3-table-title" colspan="3">Git - Real use</th>
 		</tr>
 		<tr>
@@ -117,8 +132,18 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td><code>git config --global push.default upstream</code></td>
+			<td><code>git config --global push.default <mark>upstream</mark></code></td>
 			<td>Разовая настройка флага -u для команды <b>git push</b></td>
+			<td><h3>Настройка git push</h3></td>
+		</tr>
+		<tr>
+			<td><code>git config --global push.default <mark>simple</mark></code></td>
+			<td>git будет сам запоминать в какую ветку отправлять при команде <b>git push</b></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>git config --global push.default <mark>matching</mark></code></td>
+			<td>Вернуть исходную настройку</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -309,21 +334,6 @@
 			<td><code><mark>.git/info/exclude</mark></code></td>
 			<td>Игнорировать локальные файлы. Файлы, вписанные сюда не будут видны git-ом вообще</td>
 			<td></td>
-		</tr>
-
-		<tr>
-			<th class="css3-table-title" colspan="3">Git-алиасы</th>
-		</tr>
-		<tr>
-			<td colspan="3"><code>git config alias.<b style="color: red;">q</b> '!(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br>
-			<span class="gray">// или написать в файле .git/<b>config</b><br></span>
-			[alias] <br>
-			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master &amp;&amp; ssh provisov \"cd ~/sites/ulybka-new &amp;&amp; git merge master --ff-only\") <br>
-			&nbsp;qc = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m \"quick commit\" &amp;&amp; git push origin master &amp;&amp; ssh provisov \"cd ~/sites/ulybka-new &amp;&amp; git merge master --ff-only\") <br>
-
-			
-
-			</code></td>
 		</tr>
 
 		<tr>
