@@ -53,7 +53,7 @@
                 <ul class="sub-menu sub-menu6">
                     <li><a href="complete.html">Вывод данных</a></li>
               <li><a href="dom.html">DOM</a></li>
-              <li><a href="html-methods.html">Методы</a></li>
+              <li><a href="html-methods.html">DOM-методы</a></li>
               <li><a href="actions.html">События</a></li>
               <li><a href="modal-window.html">Мод. окно</a></li>
               <li><a href="forms.html">Формы</a></li>
@@ -299,7 +299,46 @@ for (var i = 1; i <= 3 ; i++) {
                 </code>
       </td>
       <td></td>
-        </tr>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Функции в объектах</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Если функция хранится в объекте, то она будет называться МЕТОДОМ</td>
+
+      <td style="width: 400px;">
+        <code>
+          var table = {  <br>
+          &nbsp;&nbsp;height: 100, <br>
+          &nbsp;&nbsp;legsCount: 4, <br>
+          &nbsp;&nbsp;<mark>myFunc</mark>: function() { alert(23); } <br>
+          }; <br>
+
+          table.['myFunc'];<span class="gray">// покажет тело функции</span>
+          table.['myFunc']<span class="red">()</span>;<span class="gray">// вызовет функцию</span>
+        </code>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">this</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Обращение к ЭТОМУ объекту</td>
+
+      <td style="width: 400px;">
+        <code>
+          var table = {  <br>
+          &nbsp;&nbsp;height: 100, <br>
+          &nbsp;&nbsp;legsCount: 4, <br>
+          &nbsp;&nbsp;myFunc: function() { <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<mark>this</mark>.height = 300;
+          &nbsp;&nbsp;} <br>
+          };
+        </code>
+      </td>
+      <td style="color: #000;">this указывает на принадлежность к текущему объекту, как бы глубоко не находились его свойства</td>
+    </tr>
 
         </table>
   </div>
@@ -307,9 +346,7 @@ for (var i = 1; i <= 3 ; i++) {
 
 <div class="footer">
   <div class="layout-positioner">
-    <p class="footer-text">Разработчик: Евгений Леухин<br>
-                 EvgenyLeukhin@yandex.ru</p>
-
+    <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
     <p class="footer-copyright">© 2018 Все права защищены</p>
   </div>
 </div>
