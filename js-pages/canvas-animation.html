@@ -101,7 +101,7 @@
 	<div class="content clearfix">
 
 	<h2>Мой Справочник | JavaScript | Canvas - Примеры</h2>
-
+  <a href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Tutorial" target="_blank">Tutorial</a>
   <canvas width="1130" height="500"></canvas>
 
 <pre><code><h2>// DOM-элемент канваса</h2>
@@ -268,6 +268,21 @@ var getRandomColor = function() {
 
 
 document.body.appendChild(getMapTile());
+
+
+
+
+
+<h2>// Замощение квадратами</h2>
+function draw() {
+  for (var i=0;i<6;i++){
+    for (var j=0;j<6;j++){
+      ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ',0)';
+      ctx.fillRect((j*25) + 300, (i*25) + 300,25,25);
+    }
+  }
+}
+draw();
 </code></pre>
 
 
@@ -450,6 +465,20 @@ var getRandomColor = function() {
 
 
 document.body.appendChild(getMapTile());
+
+
+
+
+// Замощение квадратами
+function draw() {
+  for (var i=0;i<6;i++){
+    for (var j=0;j<6;j++){
+      ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ',0)';
+      ctx.fillRect((j*25) + 300, (i*25) + 300,25,25);
+    }
+  }
+}
+draw();
 </script>
 </body>
 </html>
