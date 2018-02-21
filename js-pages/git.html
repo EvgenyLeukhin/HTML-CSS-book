@@ -113,7 +113,7 @@
 			<td colspan="3"><code>git config alias.<b style="color: red;">q</b> '!(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br>
 			<span class="gray">// или написать в файле .git/<b>config</b><br></span>
 			[alias] <br>
-			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master) <br>
+			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m \"quick commit\" &amp;&amp; git push origin master) <br>
 			&nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master) <br>
 			&nbsp;&nbsp;q-ssh = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master &amp;&amp; ssh provisov \"cd ~/sites/ulybka-new &amp;&amp; git merge master --ff-only\") <br>
 
