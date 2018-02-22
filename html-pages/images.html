@@ -50,11 +50,9 @@
         <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
         <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
         <li><a href="../html-pages/blank.html">Семантика</a></li>
-        <li><a href="editors.html">Редакторы кода</a></li>
-        <li><a href="../design-pages/programs.html">Программы</a></li>
-        <li><a href="internet.html">Интернет</a></li>
-        <li><a href="optimization.html">Оптимизация</a></li>
-        <li><a href="seo.html">SEO</a></li>
+
+
+
       </ul>
 
     </div>
@@ -77,7 +75,7 @@
           <td rowspan="8">
             Изображение<br><br>
             По умолчанию:
-            <code>display: inline;</code> 
+            <code>display: inline;</code>
           </td>
           <td>src</td>
           <td>путь к расположению файла, URL-адрес</td>
@@ -107,7 +105,7 @@
             <span class="red">sizes="(max-width: 600px) 300px, (min-width: 600px) 600px"</span><br><br>
             <span class="gray">// или так: (: это иначе, vw - процент от ширины вьюпорта)</span><br>
             <span class="red">sizes="(min-width: 600px) 50vw : 100vw"</span>
-            
+
           </td>
         </tr>
         <tr>
@@ -227,8 +225,8 @@
 &nbsp;&nbsp;<span class="red">@media (min-resolution: 1.5dppx) </span> { <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="red">.sample</span> { <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backgroung-image: url("<span class="gray">img/<mark>bg400px</mark>.png</span>");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}  <br>   
-&nbsp;&nbsp;}        
+&nbsp;&nbsp;&nbsp;&nbsp;}  <br>
+&nbsp;&nbsp;}
         </code>
       </p>
 
@@ -243,7 +241,7 @@
 <span class="gray">// Можно указывать сразу несколько изображений для двух- и трехслойной ретины</span><br>
 &lt;<span class="red">img</span> src="img/pict<mark>400px</mark>.png" width="400" srcset="img/pict<mark>800px</mark>.png <span class="red"><b>2x</b></span>, <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img/pict<mark>1200px</mark>.png <span class="red"><b>3x</b></span>"&gt;<br><br>
-       
+
 <span class="gray">// Или таким образом (w - ширина физ. пикселей): </span><br>
 &lt;<span class="red">img</span> src="img/pict<mark>400px</mark>.png" width="400" srcset="img/pict<mark>800px</mark>.png <span class="red"><b>800w</b></span>, <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img/pict<mark>1200px</mark>.png <span class="red"><b>1200w</b></span>"&gt;
@@ -302,9 +300,9 @@
 &nbsp;&nbsp;&lt;sourse type="<mark>image/vnd.ms-photo</mark>" srcset="img/pic.<span class="red"><b>jpxr</b></span>"&gt;<br>
 &nbsp;&nbsp;&lt;img src="img/pic.<span class="red"><b>jpg</b></span>"&gt;<br>
 &lt;/picture&gt;
-        </code>    
+        </code>
 <br><br>
-<span class="gray">// Примерное отражение всех возможностей (весь код только для одной картинки :)</span><br>    
+<span class="gray">// Примерное отражение всех возможностей (весь код только для одной картинки :)</span><br>
 <pre>
 &lt;picture&gt;
   &lt;source type="image/webp"
@@ -312,18 +310,18 @@
           srcset="img/desktop-large.webp 2x,
                   img/desktop-small.webp 1x"&gt;
 
-  &lt;source media="(min-width: 960px)" 
+  &lt;source media="(min-width: 960px)"
           srcset="img/desktop-large.jpg 2x,
                   img/desktop-small.jpg 1x"&gt;
-             
+
   &lt;source type="image/webp" media="(min-width: 640px)"
                             srcset="img/mobile-large.webp 2x,
                                     img/mobile-small.webp 1x"&gt;
-  
-  &lt;source media="(min-width: 640px)" 
+
+  &lt;source media="(min-width: 640px)"
           srcset="img/mobile-large.jpg 2x,
                   img/mobile-small.jpg 1x"&gt;
-                   
+
   &lt;img src="img/mobile-small.jpg"&gt;
 &lt;/picture&gt;
 </pre>

@@ -49,11 +49,10 @@
         <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
         <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
         <li><a href="../html-pages/blank.html">Семантика</a></li>
-        <li><a href="editors.html">Редакторы кода</a></li>
-        <li><a href="../design-pages/programs.html">Программы</a></li>
-        <li><a href="internet.html">Интернет</a></li>
-        <li><a href="optimization.html">Оптимизация</a></li>
-        <li><a href="seo.html">SEO</a></li>
+
+
+
+
       </ul>
 
     </div>
@@ -420,7 +419,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="radio" name="age" value="over60"</span>&gt;<span class="gray">более 60</span><br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<i>Ваш возраст:</i> 
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>Ваш возраст:</i>
     <label>
         <input type="radio" name="age" value="0-17" disabled>0-17
     </label>
@@ -434,7 +433,7 @@
         <input type="radio" name="age" value="over60">более 60
     </label>
     <hr>
-    
+
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="education-input"&gt;<span class="gray">Ваше образование</span></span>&lt;/label&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="text" list="education" name="education" id="education-input"</span>&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;datalist <span class="red">id="education"&gt;</span><br>
@@ -442,29 +441,29 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Среднее"</span>&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Средне-специальное"</span>&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее неполное"</span>&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее(бакалавр)"</span>&gt;<br>  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее(бакалавр)"</span>&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее"</span>&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее(магистр)"</span>&gt;<br>   
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее(магистр)"</span>&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/datalist&gt;<br>
 
     &nbsp;&nbsp;&nbsp;&nbsp;<label for="education-input">Ваше образование</label>
     <input type="text" list="education" name="education" id="education-input">
         <datalist id="education">
             <option value="Среднее неполное">
-            <option value="Среднее">    
+            <option value="Среднее">
             <option value="Средне-специальное">
             <option value="Высшее неполное">
-            <option value="Высшее(бакалавр)">    
+            <option value="Высшее(бакалавр)">
             <option value="Высшее">
-            <option value="Высшее(магистр)">    
+            <option value="Высшее(магистр)">
         </datalist>
    <hr>
-    
+
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="year-id"&gt;</span><span class="gray">Год рождения:</span>&lt;/label&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;select <span class="red">name="year" id="year-id"</span>&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<span class="gray">1970 год</span>&lt;/option&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<span class="gray">2008 год</span>&lt;/option&gt;<br>   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<span class="gray">2008 год</span>&lt;/option&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<label for="year-id">Год рождения:</label>
     <select name="year" id="year-id">
@@ -506,10 +505,10 @@
         <option>2005 год</option>
         <option>2006 год</option>
         <option>2007 год</option>
-        <option>2008 год</option>    
+        <option>2008 год</option>
     </select>
     <hr>
-    
+
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="reset" value="Сбросить"</span>&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="submit" value="Отправить"</span>&gt;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&lt;button <span class="red">type="submit"&gt;</span>&lt;img <span class="red">src="../pict/phone.png" width="35" alt="button-img"&gt;</span>&lt;/button&gt;<br>
@@ -517,12 +516,12 @@
     <input type="submit" value="Отправить">
     <button type="submit"><img src="../pict/phone.png" width="35" alt="button-img"></button>
     <hr>
-    
-    
-    
-    
+
+
+
+
   &nbsp;&nbsp;&lt;/fieldset&gt;<br>
-    
+
 &lt;/form&gt;
     </code>
       <br>
@@ -668,26 +667,26 @@
         <br> Значение RANGE:
         <output name="result" for="range_id">0</output>
       </form>
-  <br>  
+  <br>
      <h4>Убирает прозрачность у placeholders</h4>
       <code><pre>
 <span class="gray">/*placeholder*/</span>
 ::-webkit-input-placeholder {
-  color:#fff; 
+  color:#fff;
   opacity: 1;
 }
 ::-moz-placeholder {
-  color:#fff; 
+  color:#fff;
   opacity: 1;
 }
 <span class="gray">/* Firefox 19+ */</span>
 :-moz-placeholder {
-  color:#fff; 
+  color:#fff;
   opacity: 1;
 }
 <span class="gray">/* Firefox 18- */</span>
 :-ms-input-placeholder {
-  color:#fff; 
+  color:#fff;
   opacity: 1;
 }
 <span class="gray">/* Время */</span>
