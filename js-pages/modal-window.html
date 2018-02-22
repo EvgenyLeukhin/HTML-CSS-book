@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | JS | Мод. окно</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/style_barbershop.css">
@@ -43,8 +43,8 @@
         <li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
+
+
 	</ul>
 	</div>
 </div>
@@ -60,7 +60,7 @@
 			        <li><a href="types.html">Типы данных</a></li>
 			        <li><a href="var.html">Переменные</a></li>
 			        <li><a href="operators.html">Операторы</a></li>
-			        
+
 			        <li><a href="algorythm.html">Алгоритмы</a></li>
 			        <li><a href="if-else.html">if - else, switch-case</a></li>
 			        <li><a href="cycle.html">Циклы</a></li>
@@ -81,18 +81,23 @@
 			        <li><a href="forms.html">Формы</a></li>
                 </ul>
             </li>
-			
+
+            <li>
+              <a href="js-pages/react.html"><span class="react">React</span></a>
+              <ul class="sub-menu sub-menu-react">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+
 			<li>
 			    <a href="#">jQuery</a>
 			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">
-
-JQuery basics</a></li>
+			        <li><a href="jquery-html.html">JQuery basics</a></li>
 			        <li><a href="jquery-func.html">jQuery-функции</a></li>
                     <li><a href="jquery-actions.html">jQuery-события</a></li>
 			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
                     <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                    <li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
+                    <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
                     <li><a href="jquery-examples.html">Примеры</a></li>
                 </ul>
 			 </li>
@@ -106,22 +111,22 @@ JQuery basics</a></li>
        <a href="canvas-animation.html">Примеры</a>
    </ul>
 </li>
-			 
+
 			 <li><a href="console.html">Консоль</a></li>
 			 <li><a href="modules.html">Модули</a></li>
        <li><a href="../css3-pages/grunt.html">Grunt</a></li>
        <li><a href="../css3-pages/gulp.html">Gulp</a></li>
-      
+
 		</ul>
-	
-	
+
+
 	</div>
 	<div class="content clearfix">
-	
+
 	    <h2>Мой Справочник | JavaScript | Модальное окно</h2>
 
        <a href="#" class="modal-window-btn">Модальное окно</a>
-       
+
 	   <div class="modal-window">
         <div class="modal-window-close"></div>
         <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
@@ -139,7 +144,7 @@ JQuery basics</a></li>
             <div class="close"></div>
         </form>
         </div>
-        
+
     <div class="code">
           <h2>Показать\убрать окно</h2>
            <div class="html">
@@ -149,13 +154,13 @@ JQuery basics</a></li>
     ...
 &lt;div class="<span class="red">modal-window</span>"&gt; <span class="gray">&lt;!--CSS {display: none;}--&gt; </span>
     ...
-    &lt;input type="submit" value="ВОЙТИ"&gt; 
-    &lt;div class="<span class="red">close</span>"&gt;&lt;/div&gt;            
+    &lt;input type="submit" value="ВОЙТИ"&gt;
+    &lt;div class="<span class="red">close</span>"&gt;&lt;/div&gt;
 &lt;/div&gt;
-                
+
              </pre></code>
             </div>
-           
+
             <div class="js">
 <h3>JS-код:</h3>
 <code id="code"><pre>
@@ -167,11 +172,11 @@ var <span class="red">modalWindowClose</span> = document.querySelector("<span cl
 <span class="red">modalWindowBtn</span>.addEventListener('click', function(event){
     event.preventDefault(); <span class="gray">// сбрасывает дефолтные настройки</span>
     <span class="red">modalWindow</span>.classList.add("<span class="red">modal-window-show</span>");
-}); 
+});
 <span class="red">modalWindowClose</span>.addEventListener('click', function(){
     <span class="red">modalWindow</span>.classList.remove("<span class="red">modal-window-show</span>");
 });</pre></code>
-            
+
 <p><mark>Если в браузере у посетителей отключится JS, нужно сделать так, чтобы окна могли открываться в <b>отдельных html-страницах без JS</b>.</mark></p>
 
 <p>
@@ -210,7 +215,7 @@ var <span class="red">modalWindowClose</span> = document.querySelector("<span cl
 </p>
 
             </div>
-    
+
 	   </div>
 </div>
 </div>
@@ -218,7 +223,7 @@ var <span class="red">modalWindowClose</span> = document.querySelector("<span cl
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
@@ -230,14 +235,14 @@ var <span class="red">modalWindowClose</span> = document.querySelector("<span cl
     var modalWindowBtn = document.querySelector(".modal-window-btn");
     var modalWindow = document.querySelector(".modal-window");
     var modalWindowClose = document.querySelector(".close");
-    
+
     modalWindowBtn.addEventListener('click', function(event){
         event.preventDefault();
         modalWindow.classList.add("modal-window-show");
-    }); 
+    });
     modalWindowClose.addEventListener('click', function(){
         modalWindow.classList.remove("modal-window-show");
-    }); 
+    });
 </script>
 
 

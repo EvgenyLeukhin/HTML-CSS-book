@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | JS | jQuery-функции</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <style>
       tr > td:first-child {
@@ -75,22 +75,27 @@
                 <li><a href="forms.html">Формы</a></li>
               </ul>
             </li>
-      
+
+            <li>
+              <a href="js-pages/react.html"><span class="react">React</span></a>
+              <ul class="sub-menu sub-menu-react">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+
             <li>
           <a class="active" href="#">jQuery</a>
           <ul class="sub-menu sub-menu7">
-              <li><a href="jquery-html.html">
-
-JQuery basics</a></li>
+              <li><a href="jquery-html.html">JQuery basics</a></li>
               <li><a href="jquery-func.html">jQuery-функции</a></li>
               <li><a href="jquery-actions.html">jQuery-события</a></li>
               <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
               <li><a href="jquery-forms.html">jQuery-формы</a></li>
-              <li><a href="jquery-plugins.html">jQuery-плагины</a></li>               
+              <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
               <li><a href="jquery-examples.html">Примеры</a></li>
             </ul>
        </li>
-       
+
        <li><a href="ajax.html">Ajax</a></li>
        <li>
    <a href="canvas.html">Canvas</a>
@@ -101,20 +106,20 @@ JQuery basics</a></li>
        <a href="canvas-animation.html">Примеры</a>
    </ul>
 </li>
-       
+
        <li><a href="console.html">Консоль</a></li>
        <li><a href="modules.html">Модули</a></li>
        <li><a href="../css3-pages/grunt.html">Grunt</a></li>
            <li><a href="../css3-pages/gulp.html">Gulp</a></li>
-      
+
     </ul>
-  
-  
+
+
   </div>
   <div class="content clearfix">
-  
+
   <h2>Мой Справочник | JavaScript | jQuery-функции</h2>
-  
+
   <table class="discription-table" border-spacing: 5px;>
     <tr>
       <th colspan="4" style="font-size: 2em;">HTML-манипуляции</th>
@@ -124,9 +129,9 @@ JQuery basics</a></li>
           .html()
           <br><small style="color: #bbb;">создание вложенных html-тегов</small>
       </td>
-      
+
       <td style="width: 600px;">
-                
+
        <code>
            &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
             $('h1').<span class="red">html</span>('<span class="gray"&lt;h1&gt;>&lt;u>Новый заголовок&lt;/u></span>');<br>
@@ -141,13 +146,13 @@ JQuery basics</a></li>
           Создаёт вложенные html-теги и меняет содержимое
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .text()
           <br><small style="color: #bbb;">замена текста</small>
       </td>
-      
+
       <td style="width: 600px;">
         <code>
           &lt;h1><span class="gray">Заголовок</span>&lt;/h1><br>
@@ -161,7 +166,7 @@ JQuery basics</a></li>
           &lt;h1><span class="gray"><mark>Новый заголовок</mark></span>&lt;/h1> <br>
         </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
           Меняет содержимое html-тегов, не создаёт вложенных. Даже если написать скобки &lt;, они будут отражены как символ
       </td>
@@ -172,9 +177,9 @@ JQuery basics</a></li>
           .prepend()
           <br><small style="color: #bbb;">добавление во внутрь в начало</small>
       </td>
-      
+
       <td style="width: 600px;">
-                
+
                  <code>
                      &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
                       $('h1').<span class="red">prepend</span>('<span class="gray">&lt;span&gt;Some text&lt;/span&gt;</span>');<br>
@@ -184,7 +189,7 @@ JQuery basics</a></li>
                     &lt;h1><mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark><span class="gray">Заголовок</span>&lt;/h1>
                  </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Добавляет html-тег во внутрь выбранного элемента в начало
       </td>
@@ -195,9 +200,9 @@ JQuery basics</a></li>
           .append()
           <br><small style="color: #bbb;">добавление во внутрь в конец</small>
       </td>
-      
+
       <td style="width: 600px;">
-                
+
                  <code>
                      &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
                       $('h1').<span class="red">append</span>('<span class="gray">&lt;span&gt;Some text&lt;/span&gt;</span>');<br>
@@ -207,21 +212,21 @@ JQuery basics</a></li>
                      &lt;h1><span class="gray">Заголовок</span><mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark>&lt;/h1>
                  </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Добавляет html-тег во внутрь выбранного элемента в конец
       </td>
     </tr>
-   
 
-    
+
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .before()
       </td>
-      
+
       <td style="width: 600px;">
-                
+
                  <code>
                      &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
                       $('h1').<span class="red">before</span>('<span class="gray">&lt;span&gt;Some text&lt;/span&gt;</span>');<br>
@@ -232,19 +237,19 @@ JQuery basics</a></li>
                     &lt;h1><span class="gray">Заголовок</span>&lt;/h1>
                  </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
           Добавляет html-тег до выбранного элемента
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .after()
       </td>
-      
+
       <td style="width: 600px;">
-                
+
                  <code>
                      &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
                       $('h1').<span class="red">after</span>('<span class="gray">&lt;span&gt;Some text&lt;/span&gt;</span>');
@@ -255,34 +260,34 @@ JQuery basics</a></li>
                     <mark>&lt;span><span class="gray">Some text</span>&lt;/span></mark>
                  </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
           Добавляет html-тег после выбранного элемента
       </td>
     </tr>
-   
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .remove()
       </td>
-      
+
       <td style="width: 600px;">
                  <code>
                      &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
                       $('h1').<span class="red">remove</span>();
                  </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Удаляет выбранный html-тег
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .replaceWith()
       </td>
-      
+
       <td style="width: 600px;">
        <code>
          &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
@@ -290,7 +295,7 @@ JQuery basics</a></li>
          <mark>&lt;p><span class="gray">New tag</span>&lt;/p></mark>
        </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Заменяет выбранный html-тег на новый
       </td>
@@ -302,7 +307,7 @@ JQuery basics</a></li>
           .attr() <br>
           .hasAttr()
       </td>
-      
+
       <td style="width: 600px;">
         <code>
           &lt;h1><span class="gray">Атрибут, наличие атрибута</span>&lt;/h1> <br>
@@ -310,7 +315,7 @@ JQuery basics</a></li>
            &lt;h1 <mark>style="color: red;"</mark>><span class="gray">Заголовок</span>&lt;/h1>
         </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Установить аттрибут<br>
         Можно также получать значение аттрибута сохранив его в переменную
@@ -323,7 +328,7 @@ JQuery basics</a></li>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .removeAttr()
       </td>
-      
+
       <td style="width: 600px;">
         <code>
           &lt;h1 class="<mark>title</mark>"><span class="gray">Заголовок</span>&lt;/h1> <br>
@@ -331,7 +336,7 @@ JQuery basics</a></li>
            &lt;h1><span class="gray">Заголовок</span>&lt;/h1>
         </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Удалить аттрибут
       </td>
@@ -339,7 +344,7 @@ JQuery basics</a></li>
 
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">.clone()</td>
-      
+
       <td style="width: 600px;">
 <pre><code>$(".hello").<span class="red">clone</span>()       // сделаем копию элемента hello
   .addClass("newElement") // добавим копии класс newElement
@@ -352,15 +357,15 @@ JQuery basics</a></li>
   <span class="red">&lt;div class="hello newElement"&gt;И снова ...&lt;/div&gt;</span><br>
 &lt;/div&gt;
 </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">Склонировать элемент</td>
     </tr>
 
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">.not()</td>
-      
+
       <td style="width: 600px;"><code>$('ul li').<span class="red">not</span>(this).show();</code></td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">Не текущий элемент</td>
     </tr>
 
@@ -437,7 +442,7 @@ JQuery basics</a></li>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .addClass()
       </td>
-      
+
       <td style="width: 600px;">
        <code>
          &lt;h1><span class="gray">Заголовок</span>&lt;/h1> <br>
@@ -445,17 +450,17 @@ JQuery basics</a></li>
          &lt;h1 <mark>class="title"</mark>><span class="gray">Заголовок</span>&lt;/h1>
        </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Добавляет класс выбранному элементу
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .removeClass()
       </td>
-      
+
       <td style="width: 600px;">
        <code>
          &lt;h1 class="title"><span class="gray">Заголовок</span>&lt;/h1> <br>
@@ -463,7 +468,7 @@ JQuery basics</a></li>
          &lt;h1><span class="gray">Заголовок</span>&lt;/h1>
        </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Удаляет класс у выбранного элемента
       </td>
@@ -473,7 +478,7 @@ JQuery basics</a></li>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .toggleClass()
       </td>
-      
+
       <td style="width: 600px;">
         <code>
            &lt;h1 class="<mark>title-big</mark>"><span class="gray">Заголовок</span>&lt;/h1> <br>
@@ -481,7 +486,7 @@ JQuery basics</a></li>
            &lt;h1 class="<mark>title-small</mark>"><span class="gray">Заголовок</span>&lt;/h1>
          </code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Переключает класс
       </td>
@@ -491,12 +496,12 @@ JQuery basics</a></li>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           .css()
       </td>
-      
+
       <td style="width: 600px;">
         <code>$('h1').<span class="red">css</span>(<span class="gray">'border', '1px solid #000'</span>);</code><pre><code><span class="gray">// передать несколько свойств</span>
 $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border":"1px solid red"}</span>);</code></pre>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Изменить css-свойство
       </td>
@@ -506,10 +511,10 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
         .height()<br>.innerHeight()<br>.outerHeight()
       </td>
-      
+
       <td style="width: 600px;">
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Высота элемента,<br>Высота (с padding)<br>Полная высота (с padding и border)
       </td>
@@ -518,10 +523,10 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
         .width()<br>.innerWidth()<br>.outerWidth()
       </td>
-      
+
       <td style="width: 600px;">
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Ширина элемента,<br>Ширина (с padding),<br>Полная ширина (с padding и border)
       </td>
@@ -533,21 +538,21 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
           .show() <br>
           .toggle()
       </td>
-      
+
       <td style="width: 600px;">
         <code>$('.test')<span class="red">.toggle</span>('slow');</code>
       </td>
-      
+
       <td rowspan="1" style="width: 300px; color: #555;">
         Скрыть-показать элемент (аналог display: none;), .toggle() переключает эти состояния, можно указывать значения в милисекундах или ключевые слова
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
         .offset().top;
       </td>
-      
+
       <td style="width: 600px;">
         <code>
           <span class="gray">// Значение отступа в пикселях от верха окна браузера до .some-class сохраняем в переменную someVar</span><br>
@@ -555,7 +560,7 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
         </code>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
-        Вертикальный отступ 
+        Вертикальный отступ
       </td>
     </tr>
 
@@ -580,7 +585,7 @@ $('h1').<span class="red">css</span>(<span class="gray">{"color":"red", "border"
   <div class="layout-positioner">
     <p class="footer-text">Разработчик: Евгений Леухин<br>
                  EvgenyLeukhin@yandex.ru</p>
-    
+
     <p class="footer-copyright">© 2018 Все права защищены</p>
   </div>
 </div>

@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | JS | Типы данных</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
@@ -21,8 +21,8 @@
     <li><a href="../css3-page.html">CSS3</a></li>
     <li><a class="active" href="../javascript-page.html">JS</a></li>
     <li><a href="../php.html">PHP</a></li>
-    
-    
+
+
   </ul>
   </div>
 </div>
@@ -38,7 +38,7 @@
                 <li><a href="types.html">Типы данных</a></li>
                 <li><a href="var.html">Переменные</a></li>
                 <li><a href="operators.html">Операторы</a></li>
-              
+
                 <li><a href="algorythm.html">Алгоритмы</a></li>
                 <li><a href="if-else.html">if - else, switch-case</a></li>
                 <li><a href="cycle.html">Циклы</a></li>
@@ -59,7 +59,14 @@
               <li><a href="forms.html">Формы</a></li>
                 </ul>
             </li>
-      
+
+            <li>
+              <a href="js-pages/react.html"><span class="react">React</span></a>
+              <ul class="sub-menu sub-menu-react">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+
       <li>
           <a href="#">jQuery</a>
           <ul class="sub-menu sub-menu7">
@@ -82,15 +89,15 @@
        <a href="canvas-animation.html">Примеры</a>
    </ul>
 </li>
-       
+
        <li><a href="console.html">Консоль</a></li>
        <li><a href="modules.html">Модули</a></li>
        <li><a href="../css3-pages/grunt.html">Grunt</a></li>
        <li><a href="../css3-pages/gulp.html">Gulp</a></li>
-      
+
     </ul>
-  
-  
+
+
   </div>
   <div class="content clearfix">
   &lt;ul&gt;
@@ -108,7 +115,7 @@
             'Some text'<br>
             "Some text"<br>
             alert(<span class="gray">'Hello, World!'</span>);<br>
-          alert(typeof(<span class="gray">'Hello, World!'</span>));   
+          alert(typeof(<span class="gray">'Hello, World!'</span>));
           <span class="gray">//string</span>
         </code>
             <h3><mark>Преобразование ЧИСЕЛ в СТРОКУ:</mark></h3>
@@ -121,33 +128,33 @@
                     console.log(typeof number); <span class="gray">//string</span><hr>
         </code>
         <code>
-          
+
         </code>
         <h3>Конвертация регистра</h3>
         <code>
                     var text = 'Some Text';<br>
                     <span class="gray">//в верхний регистр</span><br>
-            text = text<span class="red">.toUpperCase()</span>;<br> 
+            text = text<span class="red">.toUpperCase()</span>;<br>
             <span class="gray">//в нижний регистр</span><br>
             text = text<span class="red">.toLowerCase()</span>;
         </code>
         <h3>Узнать длинну строки</h3>
         <code>console.log(text<span class="red">.length)</span>; <span class="gray">//9</span></code>
-        
+
         <h3>Вытаскивать символы из строки по индексу</h3>
         <code>
             console.log(text<span class="red">.charAt(0)</span>); <span class="gray">//S</span><br>
                     console.log(text[0]); <span class="gray">//хотя можно оперировать строкой как массивом, спец. ES5, будет такой же результат как и с .charAt(0)</span>
         </code>
-        
-        
-        
+
+
+
         <h3>Вытаскивать подстроку из строки по индексу</h3>
         <code>console.log(text<span class="red">.substring(5)</span>); <span class="gray">//text (начиная с 5-го индекса)</span></code><br>
         <code>console.log(text<span class="red">.substring(5, 8)</span>); <span class="gray">//tex (начиная с 5-го индекса, заканчивая 8-м, не включая 8-ой)</span></code><br>
         <code>console.log(text<span class="red">.slice(-2)</span>); <span class="gray">//xt (вытаскивает последние 2 символа из  строки)</span></code><br>
         <code>console.log(text<span class="red">.substr(5, 2)</span>); <span class="gray">//te (вытаскивает 2 символа начиная с 5-го индекса)</span></code>
-        
+
         <h3>Вытаскивать индекс из фразы строки</h3>
         <code>console.log(text<span class="red">.indexOf('text')</span>); <span class="gray">//5 (ищет индекс первого символа в фразе)</span></code><br>
         <code>console.log(text<span class="red">.lastIndexOf('text')</span>); <span class="gray">//8 (ищет индекс первого символа с конца фразы)</span></code>
@@ -158,7 +165,7 @@
 text = text<span class="red">.split(' ')</span>; <span class="gray">//[Some, text]</span><br>
 <span class="gray">В этом случае строка поменяет тип на объект и сохранит значение массива</span><br>
 console.log(typeof text); <span class="gray">//object</span>
-                
+
                 </code>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
@@ -166,7 +173,7 @@ console.log(typeof text); <span class="gray">//object</span>
         Строка неизменяемый тип в отличие от <code>number</code>, все манипуляции над строками НЕ сохраняются, возвращаеся всегда исходная строка.
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           Формы записи
@@ -177,21 +184,21 @@ console.log(typeof text); <span class="gray">//object</span>
                 <code>
                 'Some \"text\" Some text'
                 </code>
-        
+
                 <h3>Многострочная запись строки в коде</h3>
-                Нужно вставлять символ <code>\</code> перед переходом на новую строку, при этом интерпретатор будет думать, что это одна строка, не смотря на то, что в коде это не так<br> 
+                Нужно вставлять символ <code>\</code> перед переходом на новую строку, при этом интерпретатор будет думать, что это одна строка, не смотря на то, что в коде это не так<br>
                 <code>
                     'Some text1,<span class="red">\</span><br>
                     Some text2,<span class="red">\</span><br>
                     Some text3'
                 </code>
                 <h3>Переносы строк</h3>
-                Нужно вставлять <code>n</code> (newline) после символа <code>\</code> для переноса текста на новую строку<br> 
+                Нужно вставлять <code>n</code> (newline) после символа <code>\</code> для переноса текста на новую строку<br>
                 <code>
                     'Some text1,<span class="red">\n</span>Some text2,<span class="red">\n</span>Some text3'
                 </code>
                 <h3>Табуляция</h3>
-                Нужно вставлять <code>\t</code> (tabulation) после символа <code>\n</code> для переноса текста на новую строку и табуляции<br> 
+                Нужно вставлять <code>\t</code> (tabulation) после символа <code>\n</code> для переноса текста на новую строку и табуляции<br>
                 <code>
                     'Some text1,\n<span class="red">\t</span>
                     Some text2,\n<span class="red">\t</span>
@@ -236,7 +243,7 @@ console.log(typeof text); <span class="gray">//object</span>
         Нужно заключать в обратные кавычки и использовать ${...} такой синтаксис
       </td>
     </tr>
-    
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">number</th>
     </tr>
@@ -272,7 +279,7 @@ console.log(typeof text); <span class="gray">//object</span>
         С числами можно производить все мат. операции.
       </td>
     </tr>
-    
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           Формы записи
@@ -326,7 +333,7 @@ console.log(1.25e4);    <span class="gray">//12500</span><br>
         При делении числа на 0
       </td>
     </tr>
-    
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">boolean</th>
     </tr>
@@ -340,7 +347,7 @@ console.log(5==5); <span class="gray">//true</span><br>
 console.log(5==0); <span class="gray">//false</span><br>
 console.log(0); <span class="gray">//false</span><br>
 console.log(<span class="red">!!5</span>); <span class="gray">//true (упрощенная форма записи)</span><br>
-alert( +true ); <span class="gray">// 1 </span><br> 
+alert( +true ); <span class="gray">// 1 </span><br>
 alert( +false ); <span class="gray">// 0</span>
 <hr>
 var a;<br>
@@ -348,12 +355,12 @@ a = <span class="red">Boolean</span>(123); <span class="gray">//true</span><br>
 a = Boolean(' '); <span class="gray">//true</span><br>
 a = Boolean('Text'); <span class="gray">//true</span><br>
 a = Boolean(0); <span class="gray">//false</span><br>
-a = Boolean(''); <span class="gray">//false</span><br> 
+a = Boolean(''); <span class="gray">//false</span><br>
 a = Boolean(undefined); <span class="gray">//false</span><br>
 a = Boolean(Nan); <span class="gray">//false</span><br>
-a = Boolean(null); <span class="gray">//false</span><br>   
+a = Boolean(null); <span class="gray">//false</span><br>
 a = Boolean(true && false); <span class="gray">//false</span><br>
-a = Boolean(true && true); <span class="gray">//true</span><br> 
+a = Boolean(true && true); <span class="gray">//true</span><br>
 a = Boolean(true || false); <span class="gray">//true</span><br>
 a = Boolean(!false); <span class="gray">//true</span><hr>
 </code>
@@ -377,21 +384,21 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
 /*пока в переменной <b>someString</b> стоит текст, <b>newString</b> принимает значения <b>someString</b>,
 если в переменной <b>someString</b> будет пустая строка, <b>newString</b> примет значение <b>'Default text'</b>*/</span><hr>
           Методы конвертирования типов <span class="red">String, Number и Boolean</span> наз. конструкторами
-           
+
             </td>
       <td rowspan="1" style="width: 300px; color: #555;">
                 Может иметь только одно из двух значений <code>true</code> и <code>false</code><br>
                 Условия, стоящие в () у условного оператора <code>if</code> автоматически конвертируются в булевский тип
       </td>
     </tr>
-    
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">undefined</th>
     </tr>
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           Неопределённый тип данных. <br><br>
-          Переменные без других значений. 
+          Переменные без других значений.
       </td>
       <td style="width: 400px;">
         <code>
@@ -404,7 +411,7 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
                 Определяется как undefined.
       </td>
     </tr>
-    
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">null</th>
     </tr>
@@ -422,7 +429,7 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
                 Определяется как объект.
       </td>
     </tr>
-    
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">object</th>
     </tr>
@@ -450,8 +457,8 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">Новый примитивный тип</td>
     </tr>
-  
-    
+
+
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">typeof <small>(проверка по типу данных)</small></th>
     </tr>
@@ -486,14 +493,14 @@ var <span class="red"><b>a</b></span>;<br>
 &nbsp;&nbsp;if (typeof <span class="red"><b>a</b></span> = '<span class="gray">object</span>') {...}<span class="gray">//объекты, массивы, null</span><br>
 &nbsp;&nbsp;if (Array.isArray(<span class="red"><b>a</b></span>)) {...}<span class="gray"> //на массив</span><br>
 &nbsp;&nbsp;if isNaN(<span class="red"><b>a</b></span>) {...}<span class="gray"> //на не число</span><br>
-                             
+
         </code>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
-               
+
       </td>
     </tr>
-    
+
   </table>
   <p><b>ИТОГО:</b> 5 примитивных типов данных (number, string, boolean, undefined, null) и object</p>
 
@@ -504,7 +511,7 @@ var <span class="red"><b>a</b></span>;<br>
   <div class="layout-positioner">
     <p class="footer-text">Разработчик: Евгений Леухин<br>
                  EvgenyLeukhin@yandex.ru</p>
-    
+
     <p class="footer-copyright">© 2018 Все права защищены</p>
   </div>
 </div>

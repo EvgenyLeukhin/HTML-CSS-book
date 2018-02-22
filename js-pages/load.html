@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | JS | Загрузка</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
@@ -21,8 +21,8 @@
         <li><a href="../css3-page.html">CSS3</a></li>
 		<li><a class="active" href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
+
+
 	</ul>
 	</div>
 </div>
@@ -58,7 +58,14 @@
 			        <li><a href="forms.html">Формы</a></li>
                 </ul>
             </li>
-			
+
+            <li>
+              <a href="js-pages/react.html"><span class="react">React</span></a>
+              <ul class="sub-menu sub-menu-react">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+
 			<li>
 			    <a href="#">jQuery</a>
 			    <ul class="sub-menu sub-menu7">
@@ -81,20 +88,20 @@
        <a href="canvas-animation.html">Примеры</a>
    </ul>
 </li>
-			 
+
 			 <li><a href="console.html">Консоль</a></li>
 			 <li><a href="modules.html">Модули</a></li>
              <li><a href="../css3-pages/grunt.html">Grunt</a></li>
              <li><a href="../css3-pages/gulp.html">Gulp</a></li>
-      
+
 		</ul>
-	
-	
+
+
 	</div>
 	<div class="content clearfix">
-	
+
 	    <h2>Мой Справочник | JavaScript | Загрузка</h2>
-        
+
         <table class="discription-table" border-spacing: 5px;>
             <tr>
                 <th colspan="4" style="font-size: 2em; color: darkcyan;">&lt;script&gt;</th>
@@ -110,12 +117,12 @@
     ...
 &lt;/script&gt;<hr>
 <span class="gray">//внешний файл</span>
-&lt;script <span class="red">src="main.js"</span>&gt;&lt;/script&gt;    
-<span class="gray">//Если записан код внутри тега &lt;script&gt; 
+&lt;script <span class="red">src="main.js"</span>&gt;&lt;/script&gt;
+<span class="gray">//Если записан код внутри тега &lt;script&gt;
 с атрибутом src, то код будет проигнорирован</span></pre></code>
                 </td>
                 <td style="width: 300px; color: #555;">
-                    Скрипты-библиотеки нужно подключать внутри &lt;head&gt;, а остальные перед 
+                    Скрипты-библиотеки нужно подключать внутри &lt;head&gt;, а остальные перед
                     &lt;/body&gt;, чтобы скрипты начали работать только после полной загрузки страницы
                 </td>
             </tr>
@@ -140,15 +147,15 @@
                 <td style="width: 400px;">
                     <code><pre>
 &lt;script <span class="red">async="true"</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;
-&lt;script <span class="red">async="true"</span> src="<span class="gray">forms.js</span>"&gt;&lt;/script&gt;              
+&lt;script <span class="red">async="true"</span> src="<span class="gray">forms.js</span>"&gt;&lt;/script&gt;
 &lt;script <span class="red">async="true"</span> src="<span class="gray">gallery.js</span>"&gt;&lt;/script&gt;</pre></code>
                 </td>
                 <td style="width: 300px; color: #555;">
-Если скриптов с <span class="red">async</span> несколько, то порядок их загрузки может не совпать с порядком 
+Если скриптов с <span class="red">async</span> несколько, то порядок их загрузки может не совпать с порядком
 коде (какой скрипт быстрее загрузится - тот и будет выполнен первым)
                 </td>
             </tr>
-            
+
             <tr>
                 <td  rowspan="2" style="color: black; font-weight: bold; width: 300px;">
                   defer (После загрузки страницы)
@@ -165,15 +172,15 @@
                 <td style="width: 400px;">
                     <code><pre>
 &lt;script <span class="red">defer</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;
-&lt;script <span class="red">defer</span> src="<span class="gray">forms.js</span>"&gt;&lt;/script&gt;              
+&lt;script <span class="red">defer</span> src="<span class="gray">forms.js</span>"&gt;&lt;/script&gt;
 &lt;script <span class="red">defer</span> src="<span class="gray">gallery.js</span>"&gt;&lt;/script&gt;</pre></code>
                 </td>
                 <td style="width: 300px; color: #555;">
-Если скриптов с <span class="red">defer</span> несколько, то порядок их выполнения БУДЕТ СОВПАДАТЬ с порядком 
+Если скриптов с <span class="red">defer</span> несколько, то порядок их выполнения БУДЕТ СОВПАДАТЬ с порядком
 в коде (пока не выполнился первый, второй будет ждать, даже если загрузился раньше)
                 </td>
             </tr>
-            
+
             <tr>
                 <th colspan="4" style="font-size: 2em; color: darkcyan;">&lt;noscript&gt;</th>
             </tr>
@@ -182,31 +189,31 @@
 <p style="text-align: justify; line-height: 1.3em;">Этот тег применяют на случай, когда язык JS по каким-либо причинам не работает на странице и основные скрипты
 не работают. Чаще всего внутрь этого тега помещают <code style="line-height: inherit;">&lt;link&gt;</code> со стилями скрывающими интерактивность,
 чтобы у посетителей без JS не отображались на странице неработающие кнопки, галлереи и т.д.</p></td>
-                
+
                 <td style="width: 400px;">
                     <code><pre>
 &lt;noscript>
-    &lt;link rel="stylesheet" 
-          type="text/css" 
-          href="css/<span class="red">noscript.css</span>"> 
-&lt;/noscript></pre></code>  
+    &lt;link rel="stylesheet"
+          type="text/css"
+          href="css/<span class="red">noscript.css</span>">
+&lt;/noscript></pre></code>
                 </td>
                 <td style="width: 300px; color: #555;">
                     Если теги <code>&lt;script></code> не работают, то запускается код внутри <code>&lt;noscript></code>
                     и стили переопределяются. Для любого сайта нужно это прорабатывать (Прогрессивное улучшение).
                 </td>
             </tr>
-            
+
             <tr>
                 <td style="color: black; font-weight: bold; width: 300px;">
-                    Можно обойтись и без тегов <code>&lt;noscript></code> написав js-код, который будет менять класс 
+                    Можно обойтись и без тегов <code>&lt;noscript></code> написав js-код, который будет менять класс
                     у тега <code>&lt;html></code>
                 </td>
-                
+
                 <td style="width: 400px;">
                     <code><pre>&lt;html class="<span class="red">no-js</span>"><hr>
 var html = document.documentElement;
-html.ClassName = html.ClassName.replace("<span class="red">no-js</span>","<span class="red">js</span>");</pre></code>  
+html.ClassName = html.ClassName.replace("<span class="red">no-js</span>","<span class="red">js</span>");</pre></code>
                 </td>
                 <td style="width: 300px; color: #555;">
                     Этот код будет менять класс у тега <code>&lt;html></code>, если JS работает, если JS не работает,
@@ -218,7 +225,7 @@ html.ClassName = html.ClassName.replace("<span class="red">no-js</span>","<span 
         </table>
 
         <h3>Предварительная загрузка изображений</h3>
-        <b>var newPhoto = new Image();</b> (создание нового изображения) <hr> 
+        <b>var newPhoto = new Image();</b> (создание нового изображения) <hr>
         <pre><code>var preloadImages = ['img/photo1.jpg', 'img/photo2.jpg', 'img/photo3.jpg'];
 for (var i = 1; i < preloadImages.lenght; i++) {
   <span class="red">new Image()</span>.src = preloadImages[i];
@@ -232,7 +239,7 @@ for (var i = 1; i < preloadImages.lenght; i++) {
 };</code></pre>
 
 <code>document.write('Something'); <span class="gray">// Будет заново отрисовывать страницу и сбросит всё, что уже было загружено, поэтому если есть скрипт с этим выражением, то его нужно размещать в <b>head</b></span></code>
-	
+
     <h2><code>debugger;</code> - остановка кода (breakpoint)</h2>
 	</div>
 </div>
@@ -241,7 +248,7 @@ for (var i = 1; i < preloadImages.lenght; i++) {
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
