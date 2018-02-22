@@ -54,14 +54,71 @@
 
       <h2>Мой Справочник | Linux</h2>
 
+      <table class="discription-table" border-spacing: 5px>
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">Linux</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            git
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;">
+            <code>sudo apt-get install <span class="red">git</span></code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;"></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            nodejs + npm
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;">
+            <code>curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - <hr>
+                  sudo apt-get install -y <span class="red">nodejs</span></code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;"></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            f.lux
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;">
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;"><a href="https://justgetflux.com/" target="_blank">flux</a></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Docker and Docker-compose
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;"><code>sh install.sh</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;"><a href="../files/install.sh" download>install.sh</a></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Чтобы не сбивалось время в Windows поcле Linux
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;"><code>reg add HKLM\System\CurrentControlSet\Control\TimeZoneInformation
+/v RealTimeIsUniversal /t reg_dword /d 1</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">В PowerShell Windows</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Кракозябры в Linux
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;"></td>
+          <td rowspan="1" style="width: 200px; color: #555;"></td>
+        </tr>
+
+      </table>
+
 
     </div>
   </div>
 
   <div class="footer">
     <div class="layout-positioner">
-      <p class="footer-text">Разработчик: Евгений Леухин
-        <br> EvgenyLeukhin@yandex.ru
+      <p class="footer-text">Разработчик: Евгений Леухин<br> EvgenyLeukhin@yandex.ru
       </p>
 
       <p class="footer-copyright">© 2018 Все права защищены</p>
