@@ -2,244 +2,298 @@
 <html lang="ru">
 
 <head>
-    <title>Мой Справочник | JS | Методы работы с DOM</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <title>Мой Справочник | JS | Методы работы с DOM</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    .new-table {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .new-table h2 {
+      font-size: 1.25em;
+    }
+    .new-table mark {
+      background: none;
+      color: #C85470;
+    }
+    .new-table th {
+      padding: 10px;
+    }
+    .new-table td {
+      vertical-align: top;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 30px;
+    }
+    .new-table tr > td:first-child,
+    .new-table tr > td:nth-child(2) {padding-right: 15px;}
+    .new-table h2 {
+      color: #997393;
+      margin: 0;
+    }
+    .new-table th[colspan] {
+      background: #997393;
+    }
+    .new-table th {
+      border-bottom: 1px solid #ddd;
+    }
+    .new-table th > code {
+      color: #EAE2C1;
+      font-size: 2em;
+    }
+    .new-table code {
+      font-size: 18px;
+      line-height: 24px;
+      color: #729997;
+    }
+    .new-table tr > td {padding-top: 10px;}
+    .new-table tr > td:nth-child(1) { min-width: 300px; }
+    .new-table tr > td:nth-child(2) { min-width: 500px; }
+    .new-table tr > td:nth-child(3) { width:     250px; }
+    .new-table span.gray {
+      display: block;
+      margin-top: 15px;
+      color: #aaa;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 <div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-		<ul class="header-menu">
-		<li><a href="../index.html">Главная</a></li>
-		<li><a href="../design-page.html">WEB-DESIGN</a></li>
-		<li><a href="../html-page.html">HTML</a></li>
-		<li><a href="../css-page.html">CSS</a></li>
-        <li><a href="../css3-page.html">CSS3</a></li>
-		<li><a class="active" href="../javascript-page.html">JS</a></li>
-		<li><a href="../php.html">PHP</a></li>
+  <div class="layout-positioner clearfix">
+    <div class="header-title">
+      <strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong>
+    </div>
 
+    <div class="header-logo"></div>
 
-	</ul>
-	</div>
+    <ul class="header-menu">
+      <li><a href="../index.html">Главная</a></li>
+      <li><a href="../design-page.html">WEB-DESIGN</a></li>
+      <li><a href="../html-page.html">HTML</a></li>
+      <li><a href="../css-page.html">CSS</a></li>
+      <li><a href="../css3-page.html">CSS3</a></li>
+      <li><a class="active" href="../javascript-page.html">JS</a></li>
+      <li><a href="../php.html">PHP</a></li>
+    </ul>
+  </div>
 </div>
 
 <div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-		<ul class="vert-menu">
-            <li>
-                <a href="#">Основы</a>
-                <ul class="sub-menu sub-menu9">
-                    <li><a href="js-lang.html">Язык JS</a></li>
-                    <li><a href="load.html">Загрузка</a></li>
-			        <li><a href="types.html">Типы данных</a></li>
-			        <li><a href="var.html">Переменные</a></li>
-			        <li><a href="operators.html">Операторы</a></li>
 
-			        <li><a href="algorythm.html">Алгоритмы</a></li>
-			        <li><a href="if-else.html">if - else, switch-case</a></li>
-			        <li><a href="cycle.html">Циклы</a></li>
-                    <li><a href="math.html">Math</a></li>
-                </ul>
-            </li>
-            <li><a href="array.html">Массивы</a></li>
-            <li><a href="function.html">Функции</a></li>
-			<li><a href="object.html">Объекты</a></li>
-            <li>
-                <a class="active" href="#">JS &amp; HTML</a>
-                <ul class="sub-menu sub-menu6">
-                    <li><a href="complete.html">Вывод данных</a></li>
-			        <li><a href="dom.html">DOM</a></li>
-			        <li><a href="html-methods.html">DOM-методы</a></li>
-			        <li><a href="actions.html">События</a></li>
-			        <li><a href="modal-window.html">Мод. окно</a></li>
-			        <li><a href="forms.html">Формы</a></li>
-                </ul>
-            </li>
+  <div class="vert-menu-cont">
+    <ul class="vert-menu">
+      <li>
+        <a href="#">Основы</a>
+        <ul class="sub-menu sub-menu9">
+          <li><a href="js-lang.html">Язык JS</a></li>
+          <li><a href="load.html">Загрузка</a></li>
+          <li><a href="types.html">Типы данных</a></li>
+          <li><a href="var.html">Переменные</a></li>
+          <li><a href="operators.html">Операторы</a></li>
+          <li><a href="algorythm.html">Алгоритмы</a></li>
+          <li><a href="if-else.html">if - else, switch-case</a></li>
+          <li><a href="cycle.html">Циклы</a></li>
+          <li><a href="math.html">Math</a></li>
+        </ul>
+      </li>
+      <li><a href="array.html">Массивы</a></li>
+      <li><a href="function.html">Функции</a></li>
+      <li><a href="object.html">Объекты</a></li>
+      <li>
+        <a class="active" href="#">JS &amp; HTML</a>
+        <ul class="sub-menu sub-menu6">
+          <li><a href="complete.html">Вывод данных</a></li>
+          <li><a href="dom.html">DOM</a></li>
+          <li><a href="html-methods.html">DOM-методы</a></li>
+          <li><a href="actions.html">События</a></li>
+          <li><a href="modal-window.html">Мод. окно</a></li>
+          <li><a href="forms.html">Формы</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="js-pages/react.html"><span class="react">React</span></a>
+        <ul class="sub-menu sub-menu-react">
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">jQuery</a>
+        <ul class="sub-menu sub-menu7">
+          <li><a href="jquery-html.html">JQuery basics</a></li>
+          <li><a href="jquery-func.html">jQuery-функции</a></li>
+          <li><a href="jquery-actions.html">jQuery-события</a></li>
+          <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+          <li><a href="jquery-forms.html">jQuery-формы</a></li>
+          <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+          <li><a href="jquery-examples.html">Примеры</a></li>
+        </ul>
+      </li>
+      <li><a href="ajax.html">Ajax</a></li>
+      <li>
+        <a href="canvas.html">Canvas</a>
+        <ul class="sub-menu sub-menu9">
+          <li><a href="canvas.html">Настройка</a></li>
+          <li><a href="canvas-figures.html">Фигуры</a></li>
+          <li><a href="canvas-text.html">Текст</a></li>
+          <li><a href="canvas-animation.html">Примеры</a></li>
+        </ul>
+      </li>
+      <li><a href="console.html">Консоль</a></li>
+      <li><a href="modules.html">Модули</a></li>
+      <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+      <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+    </ul>
+  </div>
 
-            <li>
-              <a href="js-pages/react.html"><span class="react">React</span></a>
-              <ul class="sub-menu sub-menu-react">
-                <li><a href="#"></a></li>
-              </ul>
-            </li>
+  <div class="content clearfix">
 
-			<li>
-			    <a href="#">jQuery</a>
-			    <ul class="sub-menu sub-menu7">
-			        <li><a href="jquery-html.html">JQuery basics</a></li>
-			        <li><a href="jquery-func.html">jQuery-функции</a></li>
-                    <li><a href="jquery-actions.html">jQuery-события</a></li>
-			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
-                    <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
-                    <li><a href="jquery-examples.html">Примеры</a></li>
-                </ul>
-			 </li>
-			  <li><a href="ajax.html">Ajax</a></li>
-			 <li>
-           <a href="canvas.html">Canvas</a>
-           <ul class="sub-menu sub-menu9">
-               <a href="canvas.html">Настройка</a>
-               <a href="canvas-figures.html">Фигуры</a>
-               <a href="canvas-text.html">Текст</a>
-               <a href="canvas-animation.html">Примеры</a>
-           </ul>
-       </li>
+  <h2>Мой Справочник | JavaScript | Методы работы с DOM</h2>
 
-			 <li><a href="console.html">Консоль</a></li>
-			 <li><a href="modules.html">Модули</a></li>
-             <li><a href="../css3-pages/grunt.html">Grunt</a></li>
-             <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+    <table class="new-table">
 
-		</ul>
+      <tr>
+        <th colspan="3"><code>Поиск элементов</code></th>
+      </tr>
+
+      <tr>
+        <td><h2>.querySelector()</h2></td>
+        <td><code>document.<mark>querySelector</mark>('.some-class');</code></td>
+        <td>Выбрать элементы по любому селектору как в CSS</td>
+      </tr>
+      <tr>
+        <td><h2>.querySelectorAll()</h2></td>
+        <td><code>document.<mark>querySelector</mark>('.some-class');</code></td>
+        <td>Выбрать все элементы по любому селектору как в CSS</td>
+      </tr>
+      <tr>
+        <td><h2>.getElementById()</h2></td>
+        <td><code>document.<mark>getElementById</mark>('some-id');</code></td>
+        <td>Выбрать элемент по id</td>
+      </tr>
+      <tr>
+        <td><h2>.getElementsByClassName()</h2></td>
+        <td><code>document.<mark>getElementsByClassName</mark>('some-class');</code></td>
+        <td>Выбрать элемент по классу</td>
+      </tr>
+      <tr>
+        <td><h2>.getElementsByTagName()</h2></td>
+        <td>
+          <code>document.<mark>getElementsByTagName</mark>('p');</code>
+          <span class="gray">// all elements</span>
+          <code>document.<mark>getElementsByTagName</mark>('*');</code>
+          <span class="gray">// first paragraph</span>
+          <code>document.<mark>getElementsByTagName</mark>('p')[0];</code>
+        </td>
+        <td>Выбрать элементы по названию тега</td>
+      </tr>
+
+      <tr>
+        <th colspan="3"><code>classList</code></th>
+      </tr>
+      <tr>
+        <td><h2>.classList.add()</h2></td>
+        <td><code>someElement.<mark>classList.add</mark>('some-class');</code></td>
+        <td>Добавить класс к элементу someElement</td>
+      </tr>
+      <tr>
+        <td><h2>.classList.remove()</h2></td>
+        <td><code>someElement.<mark>classList.remove</mark>('some-class');</code></td>
+        <td>Удалить класс у элемента someElement</td>
+      </tr>
+      <tr>
+        <td><h2>.classList.toggle()</h2></td>
+        <td><code>someElement.<mark>classList.toggle</mark>('some-class');</code></td>
+        <td>Переключает класс у someElement на some-class</td>
+      </tr>
+      <tr>
+        <td><h2>.classList.contains()</h2></td>
+        <td><code>someElement.<mark>classList.contains</mark>('some-class');</code></td>
+        <td>Проверка на наличие класса</td>
+      </tr>
+
+      <tr>
+        <th colspan="3"><code>Attributes</code></th>
+      </tr>
+      <tr>
+        <td><h2>.setAttribute()</h2></td>
+        <td><code>someElement.<mark>setAttribute</mark>('style', 'color: red;');</code></td>
+        <td>Добавить атрибут или атрибут со значением</td>
+      </tr>
+      <tr>
+        <td><h2>.hasAttribute()</h2></td>
+        <td><code>someElement.<mark>hasAttribute</mark>('style');</code></td>
+        <td>Проверка на наличие атрибута</td>
+      </tr>
+      <tr>
+        <td><h2>.getAttribute()</h2></td>
+        <td><code>someElement.<mark>getAttribute</mark>('style');</code></td>
+        <td>Получить значение атрибута</td>
+      </tr>
+      <tr>
+        <td><h2>.removeAttribute()</h2></td>
+        <td><code>someElement.<mark>removeAttribute</mark>('style');</code></td>
+        <td>Удалить атрибут</td>
+      </tr>
+      <tr>
+        <td><h2>.className()</h2></td>
+        <td><code>someElement.<mark>className</mark>('some-class');</code></td>
+        <td>Добавить класс</td>
+      </tr>
+      <tr>
+        <td><h2>.title()</h2></td>
+        <td><code>someElement.<mark>title</mark>('title text');</code></td>
+        <td>Атрибут title</td>
+      </tr>
+      <tr>
+        <td><h2>.style()</h2></td>
+        <td>
+          <code>someElement.<mark>style</mark>.color = 'red';</code><br>
+          <code>someElement.<mark>style</mark>.backgroundColor = 'red';</code>
+        </td>
+        <td>Атрибут style. У каждого css-свойства есть свой метод в объекте style</td>
+      </tr>
+      <tr>
+        <td><h2>.hidden</h2></td>
+        <td>
+          <code>someElement.<mark>hidden</mark> = true;</code><br>
+        </td>
+        <td>Атрибут hidden. Не функция, скрывает, но не удаляет из DOM</td>
+      </tr>
+      <tr>
+        <td><h2>.remove()</h2></td>
+        <td>
+          <code>someElement.<mark>remove()</mark>;</code><br>
+        </td>
+        <td>Функция, полностью удаляющаяя элемент из DOM</td>
+      </tr>
+      <tr>
+        <th colspan="3"><code>OtherFunctions</code></th>
+      </tr>
+      <tr>
+        <th colspan="3"><code>localStorage</code></th>
+      </tr>
+      <tr>
+        <th colspan="3"><code>Cookies</code></th>
+      </tr>
+
+    </table>
 
 
-	</div>
-	<div class="content clearfix">
 
-	<h2>Мой Справочник | JavaScript | Методы работы с DOM</h2>
+
+
+
+
+
+
+
 
 <table class="discription-table" border-spacing: 5px;>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">getElementById('<span class="gray">id-name</span>');</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Получение элемента по <mark>ИДЕНТИФИКАТОРУ</mark>
-		</td>
-        <td style="width: 600px;">
-			<code>
-                document.<mark>getElementById</mark>('banner');<br>
-			</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-            &lt;div id="banner"&gt;<br>
-            #banner {...}
-        </td>
-    </tr>
-
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;"><s>getElementsByClassName</s>('<span class="gray">class-name</span>');</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Получение элемента по <mark>НАЗВАНИЮ КЛАССА</mark>
-		</td>
-        <td style="width: 600px;">
-			<code>
-                document.<mark>getElementsByСlassName</mark>('sub-menu');<br>
-			</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-            &lt;div class="sub-menu"&gt;<br>
-            .sub-menu {...}
-        </td>
-    </tr>
-
-    <tr>
-      <th colspan="5" style="font-size: 2em; color: darkcyan;"><s>getElementsByTagName</s>('<span class="gray">tag-name</span>');</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Получение элемента по <mark>НАЗВАНИЮ ТЕГА</mark>
-		</td>
-        <td style="width: 600px;">
-			<code>
-                document.<mark>getElementsByTagName</mark>('a');<br>
-			</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-            &lt;a&gt;<br>
-            a {...}
-        </td>
-    </tr>
-
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">querySelector('<span class="gray">селектор</span>');</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Получение элемента по <mark>СЕЛЕКТОРУ</mark><br>
-		    querySelector() - поиск элемента по селектору как написано в css-коде
-		</td>
-        <td style="width: 600px;">
-			<code>
-                document.<mark>querySelector</mark>('.user-block');<hr>
-			</code>
-			<code>document</code> - ищем по всему документу<br>
-			<code>.</code> - все методы у объектов пишутся через точку<br>
-	        <code>querySelector</code> - методом селекторов<br>
-	        <code>'.user-block'</code> - селектор с таким именем<hr>
-	        <code>var <span class="red">link</span> = document.querySelector('.user-block');</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-            Найдёт первый попавшийся элемент в коде. Все методы можно сохранять в переменные
-        </td>
-    </tr>
-
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">querySelectorAll('<span class="gray">селектор</span>');</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            Получение элементов по <mark>СЕЛЕКТОРУ</mark><br>
-		    querySelector() найдёт только один элемент, если их много нужен данный метод
-		</td>
-        <td style="width: 600px;">
-			<code>
-				document.<mark>querySelectorAll</mark>('.main-menu li');<hr>
-			</code>
-			<code>document</code> - ищем по всему документу<br>
-	        <code>querySelector</code> - методом селекторов<br>
-	        <code>'.user-block'</code> - селектор с таким именем<hr>
-	        <code>var <span class="red">link</span> = document.querySelector('.main-menu li');</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-
-            Найдёт первый попавшийся элемент в коде. Все методы можно сохранять в переменные
-        </td>
-    </tr>
-
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">classList</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            Набор методов для управления классами
-		</td>
-        <td style="width: 600px;">
-            <h3 style="margin: 5px 0;">Добавление нового класса:</h3>
-		    <code>element.<mark>classList.add</mark>("new-class");</code><br>
-		    element - элемент, кот. будет добавлен новый класс;<br>
-		    <h3 style="margin: 5px 0;">Удаление класса:</h3>
-		    <code>element.<mark>classList.remove</mark>("some-class");</code><br>
-		    element - элемент, у кот. будет удален класс;<br>
-		    <h3 style="margin: 5px 0;">Переключение класса:</h3>
-		    <code>element.<mark>classList.toggle</mark>("some-class");</code><br>
-		    element - элемент, у кот. будет переключён класс;<br>
-		    <h3 style="margin: 5px 0;">Сообщает есть ли класс у элемента:</h3>
-		    <code>element.<mark>classList.contains</mark>("some-class");</code><br>
-		    element - элемент, у кот. будет переключён класс;<br>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-
-        </td>
-    </tr>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">className</th>
-    </tr>
-    <tr>
-      <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            Присвоить класс</td>
-        <td rowspan="1" style="width: 300px; color: #555;"><code>document.querySelector('h1').<mark>className</mark> = 'some-class';</code></td>
-      <td></td>
-    </tr>
-
 
     <tr>
         <th colspan="5" style="font-size: 2em; color: darkcyan;">localStorage</th>
@@ -247,11 +301,11 @@
     <tr>
         <td colspan="3" rowspan="4" style="color: black; font-weight: bold; width: 300px;">
             Локальное хранилище
-		</td>
+    </td>
         <td style="width: 600px;">
             <code><pre><span style="color: #000;"><b>Сохранить значение в хранилище:</b></span>
 localStorage.<mark>setItem</mark>('name', '<span class="gray">John Smith</span>'); </pre></code>
-		</td>
+    </td>
         <td rowspan="1" style="width: 300px; color: #555;">
         <code>name</code> - переменная (ключ), внутри которой будет храниться '<span class="gray">John Smith</span>'
         </td>
@@ -260,7 +314,7 @@ localStorage.<mark>setItem</mark>('name', '<span class="gray">John Smith</span>'
         <td style="width: 600px;">
             <code><pre><span style="color: #000;"><b>Получить значение ключа в хранилище:</b></span>
 localStorage.<mark>getItem</mark>('name'); </pre></code>
-		</td>
+    </td>
         <td rowspan="1" style="width: 300px; color: #555;">
         Если у переменной <code>name</code> есть сохранённое значение в <code>localStorage</code>, то этот метод
         вернёт это значение
@@ -270,7 +324,7 @@ localStorage.<mark>getItem</mark>('name'); </pre></code>
         <td style="width: 600px;">
             <code><pre><span style="color: #000;"><b>Удалить значение ключа в хранилище:</b></span>
 localStorage.<mark>removeItem</mark>('name'); </pre></code>
-		</td>
+    </td>
         <td rowspan="1" style="width: 300px; color: #555;">
         Если у переменной <code>name</code> есть сохранённое значение в <code>localStorage</code>, то этот метод
         УДАЛИТ это значение
@@ -280,7 +334,7 @@ localStorage.<mark>removeItem</mark>('name'); </pre></code>
         <td style="width: 600px;">
             <code><pre><span style="color: #000;"><b>Полностью очистить хранилище:</b></span>
 localStorage.<mark>clear</mark>(); </pre></code>
-		</td>
+    </td>
         <td rowspan="1" style="width: 300px; color: #555;">
         Метод очищает все сохранённые значения в хранилище
         </td>
@@ -290,96 +344,31 @@ localStorage.<mark>clear</mark>(); </pre></code>
     </tr>
     <tr>
         <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Меняет содержимое html-документа
-		</td>
+        Меняет содержимое html-документа
+    </td>
         <td style="width: 600px;">
-			<code>
+      <code>
                 &lt;div id = "<span class="red">banner</span>"><span class="gray">Баннер</span>&lt;/div> <br>
                 var elem = document.getElementById('banner');<br>
         elem.<mark>innerHTML</mark>('&lt;p><span class="gray">Превратили в другой элемент</span>&lt;/p>');<br>
-			</code>
-		</td>
+      </code>
+    </td>
         <td rowspan="1" style="width: 300px; color: #555;">
         </td>
-    </tr>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">Атрибуты</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Атрибуты
-		</td>
-        <td style="width: 600px;">
-			<code>
-        <span class="gray">// Задать атрибут со значением:</span><br>
-        elem.<mark>setAttribute</mark>('style', 'color: red;');<br>
-        <span class="gray">// Удалить атрибут:</span><br>
-        elem.<mark>removetAttribute</mark>('style');<br>
-        <span class="gray">// Проверяет наличие атрибута (true или false):</span><br>
-        elem.<mark>hasAttribute</mark>('style');<br>
-        <span class="gray">// Получает значение атрибута:</span><br>
-        elem.<mark>getAttribute</mark>('style');<br>
-        <span class="gray">// Атрибут title:</span><br>
-        elem.<mark>title</mark> = 'style';
-			</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-        </td>
-    </tr>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">style</th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-Добавлять атрибут style
-		    </td>
-        <td style="width: 600px;">
-			<code>
-var elem = document.getElementById('banner');<br>
-elem.<mark>style.color</mark> = 'red';<br>
-elem.<mark>style.backgroundColor</mark> = 'red';
-			</code>
-		</td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-Будет заменён цвет на красный
-        </td>
-    </tr>
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">Прочее</th>
-    </tr>
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-		    Удалить элемент
-		  </td>
-      <td style="width: 600px;">
-			  <code>elem.<mark>remove()</mark>;</code>
-		  </td>
-      <td rowspan="1" style="width: 300px; color: #555;"></td>
-    </tr>
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-        Спрятать элемент
-      </td>
-      <td style="width: 600px;">
-        <code>elem.<mark>hidden</mark> = true;</code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;"></td>
     </tr>
 
 </table>
 
 
 
-	</div>
+  </div>
 </div>
 
 <div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-
-		<p class="footer-copyright">© 2018 Все права защищены</p>
-	</div>
+  <div class="layout-positioner">
+    <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
+    <p class="footer-copyright">© 2018 Все права защищены</p>
+  </div>
 </div>
 
 </body>
