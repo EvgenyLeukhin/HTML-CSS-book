@@ -471,3 +471,6 @@ code span {
 .react {
   color: maroon;
 }
+.active > .react {
+color: #fff;
+}
