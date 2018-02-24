@@ -295,9 +295,19 @@
         <td>Можно сохранять или изменять, вложенный внутрь элемента html-код</td>
       </tr>
       <tr>
+        <td><h2>.createElement()</h2></td>
+        <td><code>document.<mark>createElement</mark>('LI');</code><br></td>
+        <td>Создание нового элемента</td>
+      </tr>
+      <tr>
         <td><h2>.appendChild()</h2></td>
-        <td></td>
-        <td></td>
+        <td><code>el.<mark>appendChild</mark>(someVar);</code><br></td>
+        <td>Добавить элемент в конец</td>
+      </tr>
+      <tr>
+        <td><h2>.prepend()</h2></td>
+        <td><code>el.<mark>prepend</mark>(someVar);</code><br></td>
+        <td>Добавить элемент в начало</td>
       </tr>
       <tr>
         <td><h2>.children()</h2></td>
@@ -344,7 +354,7 @@
           <span class="gray">// show all cookies</span>
           <code>alert(document.<mark>cookie</mark>); </code>
         </td>
-        <td>Сохраняем в ключ myFirstCookie значение Somethind. <br><br>
+        <td>Сохраняем в ключ myFirstCookie значение Somethind. Эти сохранённые значения храняться на сервере тоже. Не более 4KB. Для больших объёмов нужно использовать localStorage  <br><br>
             Есть библиотека <a href="https://github.com/madmurphy/cookies.js" target="_blank">cookies.js</a> для упрощеия работы с куками. Подключантся в &lt;head&gt;
         </td>
       </tr>
