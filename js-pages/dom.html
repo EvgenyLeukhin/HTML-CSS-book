@@ -40,7 +40,7 @@
               <li><a href="operators.html">Операторы</a></li>
 
               <li><a href="algorythm.html">Алгоритмы</a></li>
-              <li><a href="if-else.html">if - else, switch-case</a></li>
+              <li><a href="if-else.html">Условия</a></li>
               <li><a href="cycle.html">Циклы</a></li>
                     <li><a href="math.html">Math</a></li>
                 </ul>
@@ -141,16 +141,35 @@
       </td>
 
       <td rowspan="1" style="width: 300px; color: #555;"><pre>
-  <code>document.<mark>all</mark>;         <span class="gray">// все элементы</span></code>
-  <code>document.<mark>forms</mark>;       <span class="gray">// все формы</span></code>
-  <code>document.<mark>images</mark>;      <span class="gray">// все изображения</span></code>
-  <code>document.<mark>links</mark>;       <span class="gray">// все ссылки</span></code>
-  <code>document.<mark>scripts</mark>;     <span class="gray">// все скрипты</span></code>
-  <code>document.<mark>stylesheets</mark>; <span class="gray">// все стили</span></code></pre>
+  <code>document.<mark>documentElement;</mark>;   <span class="gray">// всё, что лежит в &lt;html&gt;</span></code>
+  <code>document.<mark>body</mark>;               <span class="gray">// всё, что лежит в &lt;body&gt;</span></code>
+  <code>document.<mark>all</mark>;                <span class="gray">// все элементы (*)</span></code>
+  <code>document.<mark>forms</mark>;              <span class="gray">// все формы</span></code>
+  <code>document.<mark>images</mark>;             <span class="gray">// все изображения</span></code>
+  <code>document.<mark>links</mark>;              <span class="gray">// все ссылки</span></code>
+  <code>document.<mark>scripts</mark>;            <span class="gray">// все скрипты</span></code>
+  <code>document.<mark>stylesheets</mark>;        <span class="gray">// все стили</span></code></pre>
       </td>
 
       <td rowspan="1" style="width: 300px; color: #555;">
 
+      </td>
+    </tr>
+
+    <tr>
+      <th colspan="5" style="font-size: 2em; color: darkcyan;">window</th>
+    </tr>
+    <tr>
+      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+          window <br>(ОКНО, внутри кот. находится DOM-дерево), всё нохадится в нём, даже document
+      </td>
+           <td style="width: 600px;">
+        <code>
+          window.<span class="gray"><i>методы</i></span>
+        </code>
+      </td>
+            <td rowspan="1" style="width: 300px; color: #555;">
+        По умолчанию стоит у методов <code>alert, prompt, confirm</code>
       </td>
     </tr>
     <tr>
@@ -185,77 +204,11 @@
       </td>
         <td rowspan="1" style="width: 300px; color: #555;">находится в window</td>
     </tr>
-    <tr>
-      <th colspan="5" style="font-size: 2em; color: darkcyan;">window</th>
-    </tr>
-         <tr>
-           <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-          window <br>(ОКНО, внутри кот. находится DOM-дерево), всё нохадится в нём, даже document
-      </td>
-           <td style="width: 600px;">
-        <code>
-          window.<span class="gray"><i>методы</i></span>
-        </code>
-      </td>
-            <td rowspan="1" style="width: 300px; color: #555;">
-        По умолчанию стоит у методов <code>alert, prompt, confirm</code>
-      </td>
-         </tr>
 
-    <tr>
-      <th colspan="5" style="font-size: 2em; color: darkcyan;">Примеры</th>
-    </tr>
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
- Задание цвета для body
-      </td>
-      <td style="width: 600px;">
-        <code>
-<span class="gray">//задали цвет:</span><br>
-document.body.style.backgroundColor = 'red';<br>
-<span class="gray">//сбросили цвет:</span><br>
-document.body.style.backgroundColor = ''; <hr>
-        </code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">
 
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-        Теги html и body
-      </td>
-      <td style="width: 600px;">
-        <code>
-&lt;HTML> = document.documentElement; <br>
-&lt;BODY> = document.body; <br>
-        </code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">
 
-      </td>
-    </tr>
 
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">Выбор элементов в DOM</td>
-      <td style="width: 600px;">
-        <code>$('.class').get(0);</code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">Выбор первого элемента с классом class</td>
-    </tr>
-    <tr>
-      <th colspan="5" style="font-size: 2em; color: darkcyan;">data-атрибуты</th>
-    </tr>
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">Можно добавлять в любые теги, должен быть префикс <b>data-</b></td>
-      <td style="width: 600px;">
-        <code>&lt;div <span class="red">data-filter="first'</span>&gt;&lt;/div&gt;</code> <br>
-        <code>document.querySellector('div').dataset.filter; <span class="gray">// 'first'</span> </code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">
-        С помощью них можно хранить любую информацию
-      </td>
-    </tr>
+
     </table>
 
   </div>

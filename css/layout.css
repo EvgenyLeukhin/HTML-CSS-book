@@ -472,5 +472,62 @@ code span {
   color: maroon;
 }
 .active > .react {
-color: #fff;
+  color: #fff;
+}
+
+.new-table {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.new-table h2 {
+  font-size: 1.25em;
+}
+.new-table mark {
+  background: none;
+  color: #C85470;
+}
+.new-table th {
+  padding: 10px;
+}
+.new-table td {
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+.new-table tr > td:first-child,
+.new-table tr > td:nth-child(2) {padding-right: 15px;}
+.new-table h2 {
+  color: #7d657a;
+  margin: 0;
+}
+.new-table th[colspan] {
+  background: #997393;
+}
+.new-table th {
+  border-bottom: 1px solid #ddd;
+}
+.new-table th > code {
+  color: #EAE2C1;
+  font-size: 2em;
+}
+.new-table code {
+  font-size: 18px;
+  line-height: 24px;
+  color: #729997;
+}
+.new-table tr > td {padding-top: 10px;}
+.new-table tr > td:nth-child(1) { min-width: 300px; }
+.new-table tr > td:nth-child(2) { min-width: 500px; }
+.new-table tr > td:nth-child(3) { width:     250px; }
+
+.new-table span.gray {
+  display: block;
+  margin-top: 15px;
+  color: #aaa;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.new-table code > span {
+color: #aaa;
 }

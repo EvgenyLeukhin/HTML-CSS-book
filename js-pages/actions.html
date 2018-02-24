@@ -56,7 +56,7 @@
             <li><a href="operators.html">Операторы</a></li>
 
             <li><a href="algorythm.html">Алгоритмы</a></li>
-            <li><a href="if-else.html">if - else, switch-case</a></li>
+            <li><a href="if-else.html">Условия</a></li>
             <li><a href="cycle.html">Циклы</a></li>
             <li><a href="math.html">Math</a></li>
           </ul>
@@ -124,81 +124,127 @@
 
       <h2>Мой Справочник | JavaScript | События</h2>
 
-      <table class="discription-table" style="border-spacing: 5px;">
+      <table class="new-table">
+
         <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">addEventListener();</th>
+          <th colspan="3"><code>События</code></th>
+        </tr>
+
+        <tr>
+          <td><h2>event loop</h2></td>
+          <td>
+            Бесконечный цикл, который постоянно крутиться интерпретатором и улавливает все события. <br><br>
+            После того, как отлавливает события, то записывает их в СТЕК(очередь) ЗАДАЧ. <br><br>
+            Задачи выполняются АСИНХРОННО, это означает, что если какая-либо задача выполняется, то Event loop не прекращается свою работу, а будет улавливать все события постоянно.
+          </td>
+          <td></td>
         </tr>
         <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            <mark>ПОИСК СОБЫТИЙ</mark>
+          <td><h2>addEventListener()</h2></td>
+          <td>
+            <code>el.<mark>addEventListener</mark>('event', function() { <br>
+            &nbsp;&nbsp;<span>// js for event;</span> <br>
+            });</code>
           </td>
-          <td style="width: 600px;">
+          <td>Метод, добавляющий обработку событий</td>
+        </tr>
+        <tr>
+          <td><h2>event.preventDefault()</h2></td>
+          <td>
+            <code>el.addEventListener('event', function(e) { <br>
+            &nbsp;&nbsp;<mark>e.preventDefault()</mark>;<br>
+            });</code>
+          </td>
+          <td>
+            Сброс событий, которые стоят по ум*, например, переход по клику на ссылку. <br><br>
+            Нужно указать параметр вызываемой функции event или просто e
+          </td>
+        </tr>
+        <tr>
+          <td><h2>click</h2></td>
+          <td>
+            <code>el.addEventListener('<mark>click</mark>', function() { <br>
+              &nbsp;&nbsp;<span>// js for click;</span> <br>
+            });</code>
+          </td>
+          <td>Клик мышью</td>
+        </tr>
+        <tr>
+          <td><h2>keydown</h2></td>
+          <td>
+            <code>el.addEventListener('<mark>keydown</mark>', function(e) { <br>
+              &nbsp;&nbsp;<span>// js for keypress;</span> <br>
+              &nbsp;&nbsp; if (e.<mark>keyCode</mark> == 27) { ... }<br>
+            });</code>
+          </td>
+          <td>Нажатие клавиши. <a href="https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes" target="_blank">Keycodes</a></td>
+        </tr>
+        <tr>
+          <td><h2>event list</h2></td>
+          <td>
             <code>
-			    var <span class="red">link</span> = document.querySelector('<span class="gray">.user-block</span>');<br>
-				<span class="red">link</span>.<mark>addEventListener</mark>('click', function(){<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;console.log('<span class="gray">Нажатие на user-block</span>');<br>
-           });
+              <mark>
+              click , dblclick, keydown, keyup, keypress, mouseover, mouseout, reset, submit, focus, focusin, focusout, change, blur
+              </mark>
             </code>
-            <hr>
-            <code><span class="red">link</span></code> - название переменной
-            <br>
-            <code>addEventListener</code> - метод
-            <br>
-            <code>'click'</code> - какое событие мы отслеживаем (клик мышью)
-            <br>
-            <code>function(){}</code> - функция, которая будет выполняться по клику
           </td>
-          <td rowspan="1" style="width: 300px; color: #555;">
-            <h3><u>СОБЫТИЯ:</u></h3>
-            <code>click</code> - клик
-            <br>
-            <code>dblclick</code> - двойной клик
-            <br>
-            <code>keydown</code> - клавиша НАЖАТА
-            <br>
-            <code>keyup</code> - клавиша отжата
-            <br>
-            <code>keypress</code> - клавиша зажата
-            <br>
-            <code>mouseover</code> - наведения курсора мыши
-            <br>
-            <code>mouseout</code> - отвод курсора мыши
-            <br>
-            <code>reset</code> - сброс формы
-            <br>
-            <code>submit</code> - отправка формы
-            <br>
-            <code>focus</code> - фокусировка на поле
-            <br>
-            <code>focusin</code> -
-            <br>
-            <code>focusout</code> -
-            <br>
-            <code>change</code> -
-            <br>
-            <code>blur</code> - анти-фокусировка
+          <td>Событий много</td>
+        </tr>
+        <tr>
+          <th colspan="3"><code>События для форм</code></th>
+        </tr>
+        <tr>
+          <td><h2>oninput</h2></td>
+          <td>
+            <code>
+              el.<mark>oninput</mark> = function() { <br>
+              &nbsp;&nbsp;<span>// js for oninput</span><br>
+              }
+            </code>
+          </td>
+          <td>
+            Ввод значения в текстовое поле. <br><br>
+            В этом случае в теле функции запуститься код при данном событии
           </td>
         </tr>
         <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">event.preventDefault();</th>
+          <td><h2>onchange</h2></td>
+          <td>
+            <code>
+              el.<mark>onchange</mark> = function() { <br>
+              &nbsp;&nbsp;<span>// js for onchange</span><br>
+              }
+            </code>
+          </td>
+          <td>Тоже самое</td>
         </tr>
         <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            Сброс событий, которые стоят по ум*, например, переход по клику на ссылку
+          <td><h2>onsubmit</h2></td>
+          <td>
+            <code>
+              el.<mark>onsubmit</mark> = function(e) { <br>
+              &nbsp;&nbsp;e.preventDefault();<br>
+              &nbsp;&nbsp;<span>// js for onsubmit</span><br>
+              }
+            </code>
           </td>
-          <td style="width: 600px;">
-            <code><pre><b>
-var <span class="red">userBlock</span> = document.querySelector(".user-block a");
-<span class="red">userBlock</span>.addEventListener("click", function(<mark>event</mark>){
-    <mark>event</mark>.preventDefault();
-    alert("<span class="gray">Появилось модальное окно</span>");
-});
-            </b></pre></code>
-          </td>
-          <td rowspan="1" style="width: 300px; color: #555;">
-            Нужно указать параметр вызываемой функции <u>event</u>
-          </td>
+          <td>Успешная отправка формы. Хорошо добавлять в куки значения полей при этом событии</td>
         </tr>
+        <tr>
+          <td><h2>submit</h2></td>
+          <td>
+            <code>el.<mark>submit()</mark>;</code>
+          </td>
+          <td>Отправка формы</td>
+        </tr>
+      </table>
+
+      <br>
+      <h2>Inline JS</h2>
+
+      <table class="discription-table" style="border-spacing: 5px;">
+
+
         <tr>
           <th colspan="5" style="font-size: 2em; color: darkcyan;">onclick</th>
         </tr>
@@ -273,29 +319,29 @@ var <span class="red">userBlock</span> = document.querySelector(".user-block a")
             <span style="color: #000;" onmouseover="counterFunc(this);">На этот текст наведено указателем мыши 0 раз</span>
           </td>
         </tr>
-
         <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">keydown</th>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">onchange</th>
         </tr>
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            Закрытие клавишей Ecs при условии открытого мод. окна
+            Изменение в полях
           </td>
           <td style="width: 600px;">
-            <code><pre>
-<mark>window</mark>.addEventListener('<mark>keydown</mark>', function(event) {
-    if (event.<mark>keyCode</mark> == 27) {
-       if (modalWindowclassList.<mark>contains</mark>("<span class="gray">modal-window-show</span>")) {
-            modalWindow.classList.remove("<span class="gray">modal-window-show</span>");
-        }
-    }
-});</pre></code>
           </td>
-          <td rowspan="1" style="width: 300px; color: #555;">
-            <mark>keyCode</mark>
-            <br> keycod.es
-          </td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
         </tr>
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">oninput</th>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+            Почти тоже самое, что и onchange, только работает быстрее
+          </td>
+          <td style="width: 600px;">
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
+        </tr>
+
       </table>
 
 

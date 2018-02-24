@@ -7,59 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
-  <style>
-    .new-table {
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
-    .new-table h2 {
-      font-size: 1.25em;
-    }
-    .new-table mark {
-      background: none;
-      color: #C85470;
-    }
-    .new-table th {
-      padding: 10px;
-    }
-    .new-table td {
-      vertical-align: top;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 30px;
-    }
-    .new-table tr > td:first-child,
-    .new-table tr > td:nth-child(2) {padding-right: 15px;}
-    .new-table h2 {
-      color: #997393;
-      margin: 0;
-    }
-    .new-table th[colspan] {
-      background: #997393;
-    }
-    .new-table th {
-      border-bottom: 1px solid #ddd;
-    }
-    .new-table th > code {
-      color: #EAE2C1;
-      font-size: 2em;
-    }
-    .new-table code {
-      font-size: 18px;
-      line-height: 24px;
-      color: #729997;
-    }
-    .new-table tr > td {padding-top: 10px;}
-    .new-table tr > td:nth-child(1) { min-width: 300px; }
-    .new-table tr > td:nth-child(2) { min-width: 500px; }
-    .new-table tr > td:nth-child(3) { width:     250px; }
-    .new-table span.gray {
-      display: block;
-      margin-top: 15px;
-      color: #aaa;
-      font-family: monospace;
-      font-size: 14px;
-    }
-  </style>
 </head>
 
 <body>
@@ -96,7 +43,7 @@
           <li><a href="var.html">Переменные</a></li>
           <li><a href="operators.html">Операторы</a></li>
           <li><a href="algorythm.html">Алгоритмы</a></li>
-          <li><a href="if-else.html">if - else, switch-case</a></li>
+          <li><a href="if-else.html">Условия</a></li>
           <li><a href="cycle.html">Циклы</a></li>
           <li><a href="math.html">Math</a></li>
         </ul>
@@ -174,13 +121,18 @@
       </tr>
       <tr>
         <td><h2>.querySelectorAll()</h2></td>
-        <td><code>document.<mark>querySelector</mark>('.some-class');</code></td>
+        <td><code>document.<mark>querySelectorAll</mark>('.some-class');</code></td>
         <td>Выбрать все элементы по любому селектору как в CSS</td>
       </tr>
       <tr>
         <td><h2>.getElementById()</h2></td>
         <td><code>document.<mark>getElementById</mark>('some-id');</code></td>
         <td>Выбрать элемент по id</td>
+      </tr>
+      <tr>
+        <td><h2>.getElementName()</h2></td>
+        <td><code>document.<mark>getElementByName</mark>('some-id');</code></td>
+        <td>Выбрать элемент по атрибуту name</td>
       </tr>
       <tr>
         <td><h2>.getElementsByClassName()</h2></td>
@@ -272,6 +224,87 @@
         <td>Атрибут hidden. Не функция, скрывает, но не удаляет из DOM</td>
       </tr>
       <tr>
+        <th colspan="3"><code>forms</code></th>
+      </tr>
+      <tr>
+        <td><h2>.forms</h2></td>
+        <td><code>docuement.<mark>forms</mark>;</code></td>
+        <td>DOM-коллекция всех форм</td>
+      </tr>
+      <tr>
+        <td><h2>.validity</h2></td>
+        <td>
+          <code>someElement.<mark>validity.ValidityState;</mark></code><br>
+        </td>
+        <td>Объект и подобъект, кот. хранят в себе валидацию</td>
+      </tr>
+      <tr>
+        <td><h2>.value</h2></td>
+        <td>
+          <code>someElement.<mark>value</mark> = 2;</code>
+        </td>
+        <td>Присваивание значений полям</td>
+      </tr>
+      <tr>
+        <td><h2>.min<br> .max</h2></td>
+        <td>
+          <code>someElement.<mark>min</mark> = 0;</code><br>
+          <code>someElement.<mark>max</mark> = 10;</code>
+        </td>
+        <td>Макс. и минимальные значения полей</td>
+      </tr>
+      <tr>
+        <td><h2>.selected</h2></td>
+        <td><code>someElement.<mark>selected</mark> = true;</code></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><h2>.checked</h2></td>
+        <td><code>someElement.<mark>checked</mark> = true;</code></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th colspan="3"><code>dataset</code></th>
+      </tr>
+      <tr>
+        <td><h2>.dataset()</h2></td>
+        <td>
+          <code>&lt;div <mark>data-filter="active"</mark>&gt;&lt;/div&gt;</code> <br>
+          <span class="gray">// значение этого data-атрибута</span>
+          <code>someElement.<mark>dataset</mark>.filter;</code>
+        </td>
+        <td>Можно получить или изменить значение любых data-атрибутов</td>
+      </tr>
+      <tr>
+        <th colspan="3"><code>OtherFunctions</code></th>
+      </tr>
+      <tr>
+        <td><h2>.get()</h2></td>
+        <td>
+          <code>someElement.<mark>get</mark>(0);</code>
+        </td>
+        <td>Выбор элемента по порядку в коде. Первый элемент в коде</td>
+      </tr>
+      <tr>
+        <td><h2>innerHTML()</h2></td>
+        <td>
+          <code>someElement.<mark>innerHTML</mark>;</code><br>
+          <span class="gray">// change html-code</span>
+          <code>someElement.<mark>innerHTML</mark> = '&lt;p&gt;Something'&lt;p&gt;;</code><br>
+        </td>
+        <td>Можно сохранять или изменять, вложенный внутрь элемента html-код</td>
+      </tr>
+      <tr>
+        <td><h2>.appendChild()</h2></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><h2>.children()</h2></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><h2>.remove()</h2></td>
         <td>
           <code>someElement.<mark>remove()</mark>;</code><br>
@@ -279,94 +312,44 @@
         <td>Функция, полностью удаляющаяя элемент из DOM</td>
       </tr>
       <tr>
-        <th colspan="3"><code>OtherFunctions</code></th>
+        <th colspan="3"><code>localStorage</code></th>
       </tr>
       <tr>
-        <th colspan="3"><code>localStorage</code></th>
+        <td><h2>.setItem()</h2></td>
+        <td><code><mark>localStorage.setItem</mark>('name', 'John Smith'); </code></td>
+        <td>Сохранить значение в хранилище. <br><br>name - переменная (ключ), внутри которой будет храниться 'John Smith'</td>
+      </tr>
+      <tr>
+        <td><h2>.getItem()</h2></td>
+        <td><code><mark>localStorage.setItem</mark>('name'); </code></td>
+        <td>Получить значение ключа в хранилище.<br><br> Если у переменной name есть сохранённое значение в localStorage, то этот метод вернёт это значение</td>
+      </tr>
+      <tr>
+        <td><h2>.removeItem()</h2></td>
+        <td><code><mark>localStorage.removeItem</mark>('name'); </code></td>
+        <td>Удалить значение ключа из хранилища. <br><br> Если у переменной name есть сохранённое значение в localStorage, то этот метод УДАЛИТ это значение</td>
+      </tr>
+      <tr>
+        <td><h2>.clear()</h2></td>
+        <td><code><mark>localStorage.clear</mark>(); </code></td>
+        <td>Очистить всё хранилище. <br><br>Метод очищает все сохранённые значения в хранилище</td>
       </tr>
       <tr>
         <th colspan="3"><code>Cookies</code></th>
       </tr>
+      <tr>
+        <td><h2>Cookies</h2></td>
+        <td>
+          <code>document.<mark>cookie</mark> = 'myFirstCookie=Something'; </code>
+          <span class="gray">// show all cookies</span>
+          <code>alert(document.<mark>cookie</mark>); </code>
+        </td>
+        <td>Сохраняем в ключ myFirstCookie значение Somethind. <br><br>
+            Есть библиотека <a href="https://github.com/madmurphy/cookies.js" target="_blank">cookies.js</a> для упрощеия работы с куками. Подключантся в &lt;head&gt;
+        </td>
+      </tr>
 
     </table>
-
-
-
-
-
-
-
-
-
-
-
-<table class="discription-table" border-spacing: 5px;>
-
-    <tr>
-        <th colspan="5" style="font-size: 2em; color: darkcyan;">localStorage</th>
-    </tr>
-    <tr>
-        <td colspan="3" rowspan="4" style="color: black; font-weight: bold; width: 300px;">
-            Локальное хранилище
-    </td>
-        <td style="width: 600px;">
-            <code><pre><span style="color: #000;"><b>Сохранить значение в хранилище:</b></span>
-localStorage.<mark>setItem</mark>('name', '<span class="gray">John Smith</span>'); </pre></code>
-    </td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-        <code>name</code> - переменная (ключ), внутри которой будет храниться '<span class="gray">John Smith</span>'
-        </td>
-    </tr>
-    <tr>
-        <td style="width: 600px;">
-            <code><pre><span style="color: #000;"><b>Получить значение ключа в хранилище:</b></span>
-localStorage.<mark>getItem</mark>('name'); </pre></code>
-    </td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-        Если у переменной <code>name</code> есть сохранённое значение в <code>localStorage</code>, то этот метод
-        вернёт это значение
-        </td>
-    </tr>
-    <tr>
-        <td style="width: 600px;">
-            <code><pre><span style="color: #000;"><b>Удалить значение ключа в хранилище:</b></span>
-localStorage.<mark>removeItem</mark>('name'); </pre></code>
-    </td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-        Если у переменной <code>name</code> есть сохранённое значение в <code>localStorage</code>, то этот метод
-        УДАЛИТ это значение
-        </td>
-    </tr>
-    <tr>
-        <td style="width: 600px;">
-            <code><pre><span style="color: #000;"><b>Полностью очистить хранилище:</b></span>
-localStorage.<mark>clear</mark>(); </pre></code>
-    </td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-        Метод очищает все сохранённые значения в хранилище
-        </td>
-    </tr>
-    <tr>
-      <th colspan="5" style="font-size: 2em; color: darkcyan;"><s>innerHTML</s></th>
-    </tr>
-    <tr>
-        <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-        Меняет содержимое html-документа
-    </td>
-        <td style="width: 600px;">
-      <code>
-                &lt;div id = "<span class="red">banner</span>"><span class="gray">Баннер</span>&lt;/div> <br>
-                var elem = document.getElementById('banner');<br>
-        elem.<mark>innerHTML</mark>('&lt;p><span class="gray">Превратили в другой элемент</span>&lt;/p>');<br>
-      </code>
-    </td>
-        <td rowspan="1" style="width: 300px; color: #555;">
-        </td>
-    </tr>
-
-</table>
-
-
 
   </div>
 </div>

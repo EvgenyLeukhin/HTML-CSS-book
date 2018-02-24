@@ -40,7 +40,7 @@
               <li><a href="operators.html">Операторы</a></li>
 
               <li><a href="algorythm.html">Алгоритмы</a></li>
-              <li><a href="if-else.html">if - else, switch-case</a></li>
+              <li><a href="if-else.html">Условия</a></li>
               <li><a href="cycle.html">Циклы</a></li>
                     <li><a href="math.html">Math</a></li>
                 </ul>
@@ -214,23 +214,17 @@
     </tr>
 
     <tr>
-      <th colspan="4" style="font-size: 2em; color: darkcyan;">Приоритет</th>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Остаток от деления (%)</th>
     </tr>
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-          Приоритет у умножения и деления, но если поставить (), то приоритет изменится
+          Возвращает целвй остаток от деления чисел
       </td>
       <td style="width: 400px;">
         <code>
-            var a, b, c, d;<br>
-                    a = 1;<br>
-                    b = 2;<br>
-                    c = 3;<br>
-                    d = 4;<br>
-                    e = a + b * c / d;<br>
-                    f = (a + b)* c / d;<br>
-                    console.log(e);    <span class="gray">//2.5</span><br>
-                    console.log(f);    <span class="gray">//2.25</span>
+          10 % 3; <span class="gray">// 1</span> <br>
+          10 % 4; <span class="gray">// 2</span> <br>
+          10 % 5; <span class="gray">// 0</span>
         </code>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
@@ -239,50 +233,47 @@
     </tr>
 
     <tr>
-      <th colspan="4" style="font-size: 2em; color: darkcyan;">Другие операторы</th>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Приоритет</th>
     </tr>
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-          Некоторые распространённые операторы
+          Приоритет у умножения и деления, но если поставить (), то приоритет изменится
       </td>
       <td style="width: 400px;">
-                <h3>Унарные операторы</h3>
+        <code>
+                    e = a + b * c / d;<br>
+                    f = (a + b)* c / d;<br>
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+        То, что стоит в скобках, то приоритетней, как в математике. <br><br>
+        При сложении числа и строки интерпретатор будет преобразовывать число в строку. <br><br>
+        При умножении или делении будет наоборот
+      </td>
+    </tr>
+
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Краткая запись</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+          Краткая запись операторов
+      </td>
+      <td style="width: 400px;">
           <code>++</code> Увеличивает на 1 (ИНКРИМЕНТ)<br>
           <code>++a</code> Префиксный инкримент, увеличивает сразу на 1<br>
           <code>a++</code> Посткрисный инкримент, увеличивает на 1, но возвращает старое значение<br>
-        <code>--</code> Уменьшает на 1 (ДИКРИМЕНТ)<br>
-                <code>&lt;&lt;</code> Возведение в квадрат <span class="gray">// 2 &lt;&lt; 8</span><br>
-                <code>a = (10%3);</code> <span class="gray">//1</span> Остаток от деления<br>
-                <code>a += 10;</code> <i>Аналог:</i> <code>a = a + 10;</code><br>
-        <code>a -= 10;</code> <i>Аналог:</i> <code>a = a - 10;</code><br>
-        <code>a *= 10;</code> <i>Аналог:</i> <code>a = a * 10;</code><br>
-        <code>a /= 10;</code> <i>Аналог:</i> <code>a = a / 10;</code><br>
-        <code>%</code> Вычисление остатка от деления <code>if (a%2 == 2)</code> (если при делении a на 2 остаток 0, любые чётные числа) <br>
-        <code>=</code> Присваивание
-                <h3>Операторы СРАВНЕНИЯ</h3>
-        <code>==</code> Нестрогое равенство (10 == '10' true), лучше НЕ использовать<br>
-                <code>===</code> Строгое равно (с равенствами типов 10 === '10' false), <mark>на практике лучше всегда пользоваться строгим равенством</mark><br>
-                <code>!=</code> Не равно<br>
-                <code>!==</code> Строго не равно<br>
-                <code>></code> Больше<br>
-                <code>&lt;</code> Меньше<br>
-        <code>>=</code> Больше или равно<br>
-        <code>&lt;=</code> Меньше или равно<br>
-        <h3>Логические операторы (возвращают значения, не бул)</h3>
-        <code>&&</code> И <br>
-        <code>||</code> ИЛИ <br>
-                <code>a && b</code> Если a true, то b не проверяется<br>
-                <code>a || b</code> Если a false, то b не проверяется<br>
-                <code>'1' || '2' || '3'</code> //1<br>
-                <code>'1' && '2' && '3'</code> //3<br>
+          <code>--</code> Уменьшает на 1 (ДИКРИМЕНТ)<hr>
+          <code>a = (10%3);</code> <span class="gray">//1</span> Остаток от деления<br>
+          <code>a += 10;</code> <i>Аналог:</i> <code>a = a + 10;</code><br>
+          <code>a -= 10;</code> <i>Аналог:</i> <code>a = a - 10;</code><br>
+          <code>a *= 10;</code> <i>Аналог:</i> <code>a = a * 10;</code><br>
+          <code>a /= 10;</code> <i>Аналог:</i> <code>a = a / 10;</code><hr>
+          <code>=</code> Оператор присваивания <hr>
+          <code>.</code> Оператор доступа в объектах
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
-                Операторы <code>+= </code> и другие, добавляют к переменной то, что располагается справа от знака =<hr>
-                Операторы <code>></code> Больше и <code>&lt;</code> Меньше так же работают со СТРОКОВЫМ ТИПОМ ДАННЫХ, больше будет, то слово, чья буква дальше по алфавиту, причём строчные буквы стоят дальше заглавных, поэтому больше ('a' > 'A')<hr>
-                Логический оператор <code>||</code> проверяет на истинность левый операнд, если он тру, то остальные не проверяет, а сразу возвращает значение этого правдивого операнда, если левый ложь, тогда проверяет правый<br>
-                Логический оператор <code>&&</code> также начинает проверять левый операнд, если он ложный, то другое не проверяется, а сразу возвращает ложь первого<br>
-                ИЛИ вспотыкается на правде, И - на лжи<br>
-                Операторы вида ++ применяются ТОЛЬКО К ПЕРЕМЕННЫМ, нельзя записывать <s>++5</s>
+
       </td>
     </tr>
 
@@ -294,7 +285,7 @@
             <th colspan="4" style="font-size: 2em; color: darkcyan;">Логические операторы</th>
           </tr>
           <tr>
-              <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Применяются для условных операторов if</td>
+              <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Чаще всего применяются для условных операторов if</td>
               <td style="width: 400px;">
                 <code>
                   >&nbsp;&nbsp; <span class="gray">- больше</span> <br>
@@ -305,9 +296,22 @@
                   === <span class="gray">- строгое равно</span> <br>
                   !=&nbsp; <span class="gray">- нестрогое неравно</span> <br>
                   !== <span class="gray">- строгое неравно</span> <br>
+                  &amp;&amp; <span class="gray">- И</span> <br>
+                  || <span class="gray">- ИЛИ</span> <hr>
+                  a &amp;&amp; b <span class="gray">- если a true, то b не проверяется</span><br>
+                  a || b <span class="gray">- если a false, то b не проверяется</span><br>
+                  '1' || '2' || '3' <span class="gray">//1</span><br>
+                  '1' &amp;&amp; '2' &amp;&amp; '3' <span class="gray">//3</span><br>
                 </code>
               </td>
-              <td rowspan="1" style="width: 300px; color: #555;"></td>
+              <td rowspan="1" style="width: 300px; color: #555;">
+                Операторы <code>+= </code> и другие, добавляют к переменной то, что располагается справа от знака =<hr>
+                Операторы <code>></code> Больше и <code>&lt;</code> Меньше так же работают со СТРОКОВЫМ ТИПОМ ДАННЫХ, больше будет, то слово, чья буква дальше по алфавиту, причём строчные буквы стоят дальше заглавных, поэтому больше ('a' > 'A')<hr>
+                Логический оператор <code>||</code> проверяет на истинность левый операнд, если он тру, то остальные не проверяет, а сразу возвращает значение этого правдивого операнда, если левый ложь, тогда проверяет правый<br>
+                Логический оператор <code>&amp;&amp;</code> также начинает проверять левый операнд, если он ложный, то другое не проверяется, а сразу возвращает ложь первого<br>
+                <mark>ИЛИ вспотыкается на правде, И - на лжи</mark><br>
+                Операторы вида ++ применяются ТОЛЬКО К ПЕРЕМЕННЫМ, нельзя записывать <s>++5</s>
+              </td>
             </tr>
 
             <tr>
