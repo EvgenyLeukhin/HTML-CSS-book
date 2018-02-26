@@ -238,6 +238,11 @@ body {
   top: -10px;
 }
 
+.vert-menu .sub-menu-nodejs {
+  left: 75px;
+  top: 0;
+}
+
 .vert-menu .sub-menu a {
   border: 1px solid #E5E5E5;
   margin: -1px;
@@ -246,6 +251,8 @@ body {
 .vert-menu > li:hover .sub-menu {
   display: block;
 }
+
+
 
 
 /*контент*/
