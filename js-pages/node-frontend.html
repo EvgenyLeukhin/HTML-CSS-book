@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | Модули и классы</title>
+  <title>Мой Справочник | Frontend</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
@@ -76,7 +76,7 @@
         <li>
           <a class="active" href="nodejs.html"><span class="react">node.js</span></a>
           <ul class="sub-menu sub-menu-nodejs">
-            <li><a href="node-main.html">Основы</a></li>
+            <li><a href="node-main.html">Начало работы</a></li>
             <li><a href="node-frontend.html">Frontend</a></li>
             <li><a href="node-backend.html">Backend</a></li>
             <li><a href="node-sql.html">SQL</a></li>
@@ -118,19 +118,83 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | Модули и классы</h2>
+      <h2>Мой Справочник | Frontend</h2>
 
-      <table class="discription-table" border-spacing: 5px>
-        <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">Модули и классы</th>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;"></td>
-          <td rowspan="1" style="width: 700px; color: #555;"></td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
+      <table class="new-table">
+      <tr>
+        <th colspan="3"><code>Frontend</code></th>
+      </tr>
+      <tr>
+        <td>
+          <h2>ESLint</h2>
+          <code>.eslintrc.js</code>
+        </td>
+        <td>
+          <code>npm i -g eslint</code> <br>
+          <code>npm i --save-dev eslint</code> <br><br>
+          Если нужно создать конфиг (.eslintrc.js) с нуля: <br>
+          ---------------------------------------------------- <br>
+          <code>eslint --init</code><br><br>
+Или взять готовый(.eslintrc.js): <br>
+          ---------------------------------------------------- <br>
+<pre><code style="font-size: 1.25em;">module.exports = {
+  "env": { "browser": true },
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent":          [ "error", 2        ],
+    "linebreak-style": [ "error", "unix"   ],
+    "quotes":          [ "error", "single" ],
+    "semi":            [ "error", "always" ]
+  }
+};</code></pre><br>
+Запуск в консоли: <br>
+---------------------------------------------------- <br>
+<code>eslint some-file.js</code> <br>
+<code>eslint some-file.js --fix</code> <br>
+        </td>
+        <td>Чтобы ESlint работал в горячем режиме в редакторе кода, для редактора нужно установить плагин ESLint. <br><br>
+B Sublime нужно установить два плагина (<b>SublimeLinter, SublimeLinter-eslint</b>). <br><br>
+Если установлен плагин для ESLint, то в конфиге пишем <code>"extends":"plugin-name"</code>
 
-      </table>
+        </td>
+      </tr>
+      <tr>
+        <td><h2>browser-sync</h2></td>
+        <td>
+          <code>npm i -g browser-sync</code> <br>
+          <code>npm i --save-dev browser-sync</code> <br><br>
+          Запуск в консоли в директории с проектом: <br>
+          ---------------------------------------------------- <br>
+          <code>browser-sync start --server --directory --files "**/*"</code>
+        </td>
+        <td>Будет выполнен запуск файла index.html в браузере, который лежит в текущей директории. И браузер будет перезагружаться при изменении всех файлов в директории</td>
+      </tr>
+      <tr>
+        <td>
+          <h2>gulp</h2>
+          <code>gulpfile.js</code>
+        </td>
+        <td>
+          <code>npm i -g gulp-cli</code> <br>
+          <code>npm i -g gulp</code> <br>
+          <code>npm i --save-dev gulp</code> <br><br>
+        </td>
+        <td>Глобальная установка выполняется только один раз</td>
+      </tr>
+      <tr>
+        <td>
+          <h2>WebPack</h2>
+          <code>webpack.config.js</code>
+        </td>
+        <td>
+          <code>npm i -g webpack-cli</code> <br>
+          <code>npm i -g webpack</code> <br>
+          <code>npm i -D webpack</code> <br>
+          <code>npm i --save-dev webpack</code> <br><br>
+        </td>
+        <td>Глобальная установка выполняется только один раз</td>
+      </tr>
+    </table>
 
 
     </div>

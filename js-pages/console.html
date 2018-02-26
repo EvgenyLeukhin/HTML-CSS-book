@@ -73,7 +73,7 @@
         <li>
           <a href="nodejs.html"><span class="react">node.js</span></a>
           <ul class="sub-menu sub-menu-nodejs">
-            <li><a href="node-main.html">Основы</a></li>
+            <li><a href="node-main.html">Начало работы</a></li>
             <li><a href="node-frontend.html">Frontend</a></li>
             <li><a href="node-backend.html">Backend</a></li>
             <li><a href="node-sql.html">SQL</a></li>
@@ -184,169 +184,9 @@
 
                 </td>
             </tr>
-        <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">node.js <span class="gray">в консоли</span></th>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            1. Установка <a href="https://nodejs.org/en/" target="_blank"><b>node.js</b></a>
-          </td>
 
-          <td rowspan="1" style="width: 600px; color: #555;">
-            <code>
-            <b>node</b> <span style="color: #000">- переключение в режим Node.js-консоли</span><br>
-            <b>.exit</b> <span style="color: #000">или</span> <kbd>Ctrl + C</kbd> <span style="color: #000">- выход</span><br>
-            <b>node script.js</b> <span style="color: #000">- выполниться script.js в консоли</span>
-          </code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            Консоль с интерпретатором JavaScript-кода
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            2. Установка <a href="https://www.npmjs.com/" target="_blank"><b>npm</b></a>
-          </td>
-
-          <td rowspan="1" style="width: 600px; color: #555;">
-            После установки <b>node.js</b>, <b>npm</b> уже установлен, но для каждого проекта нужен свой набор моделей. Встаём в папку с новым проектом и набираем:
-            <br>
-            <code>npm install</code>
-            <hr> Структура node-модулей (после установки npm):
-            <br>
-            <code>
-          node-modules/ - <span style="color: #000"><i>модули</i></span><br>
-          src/ - <span style="color: #000"><i>файлы проекта</i></span><br>
-          test/<br>
-          index.js/ - <span style="color: #000"><i>указывает на путь js-файлов проекта, копирует весь js-код в себя</i></span><br>
-          Makefile<br>
-          npm-debug.log<br>
-          <mark><b>package.json</b></mark> - <span style="color: #000"><i>файл настроек</i></span><br>
-          Readme.md - <span style="color: #000"><i>информация о проекте</i></span><hr>
-          <h3 style="color: #000;">npm на практике</h3>
-          npm run \название скрипта\- <span style="color: #000"><i>запуск скриптов в файле package</i></span><br>
-          npm run test - <span style="color: #000"><i>запуск теста</i></span><br>
-
-          </code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            Пакетный менеджер для <b>node.js</b>
-            <br> Установщик различных модулей, приложений, библиотек
-            <br>
-            <u>package.json</u> - главный файл с настойками (с ключами)
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            3. Установка <a href="http://eslint.org/" target="_blank"><b>ESLint</b></a>
-          </td>
-
-          <td rowspan="1" style="width: 600px; color: #555;">
-            <h3 style="color: #000;">Глобальная установка:</h3>
-            <code>
-            npm i -g eslint <br>
-            npm i --save-dev eslint <br>
-            eslint --init <br>
-            <span class="gray">// по желанию:</span> <br>
-            npm install -g --save-dev eslint-config-airbnb <br>
-            npm install -g --save-dev eslint-plugin-import
-          </code>
-            <br>
-            <span class="gray">
-           Заменить на
-            //.eslintrc <br>
-            <code>
-            {<br>
-            &nbsp;&nbsp;"extends": "airbnb/base"<br>
-            }
-            </code>
-          </span>
-            <h3 style="color: #000;">ESLint на практике</h3>
-            <code>
-            eslint <i>/file or folder/</i><br>
-            eslint <i>/file or folder/</i> --fix <span class="gray"> //Исправит пробелы</span><br>
-            npm run eslint index.js - <span style="color: #000"><i>запуск ESLint</i></span>
-
-          </code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            Теоритически при команде <code>npm install</code> этот пакет уже должен поставить в папку
-            <b>node-modules/</b>, но можно его поставить как локально в проект, так и глобально
-            <br> Файл настроек <code><b><mark>.eslintrc</mark></b></code>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            4. Установка <a href="https://www.browsersync.io/" target="_blank"><b>browser-sync</b></a>
-          </td>
-
-          <td rowspan="1" style="width: 600px; color: #555;">
-            <h3 style="color: #000;">Установка:</h3>
-            <pre><code>
-npm install --save-dev browser-sync
-
-          </code></pre>
-            <h3 style="color: #000;">Подключить браузер:</h3>
-            <h4 style="color: #000;">Встать в консоли в нужную директорию и набрать команду:</h4>
-            <code>browser-sync start --server --directory --files "**/*"</code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            И сайт в режиме разработки будет запускаться с локального сервера по адресу: <b>http://localhost:3000/</b>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-            5. Установка <a href="https://bower.io/" target="_blank"><b>bower</b></a>
-            <br>
-            <br> Установщик библиотек
-          </td>
-
-          <td rowspan="1" style="width: 600px; color: #555;">
-            <h3 style="color: #000;">Установка:</h3>
-            <pre><code>
-npm i -g bower
-          </code></pre> Далее создаём файл в директории с проектом
-            <mark>.bowerrc</mark>, в котором указываем директорию назначения для установки библиотек:
-            <pre><code>
-{
-	"directory": "app/js/libs/"
-}
-</code></pre> Теперь можно устанавливать библиотеки командой:
-            <br>
-            <code>bower i jquery magnific-popup</code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-
-          </td>
-        </tr>
       </table>
 
-  <h3>.eslintrc.js</h3>
-      <pre><code style="font-size: 1.25em;">module.exports = {
-  "env": { "browser": true },
-  "extends": "eslint:recommended",
-  "rules": {
-    "indent":          [ "error", 2        ],
-    "linebreak-style": [ "error", "unix"   ],
-    "quotes":          [ "error", "single" ],
-    "semi":            [ "error", "always" ]
-  }
-};</code></pre>
-
-  <h3>.editorconfig</h3>
-      <pre><code style="font-size: 1.25em;">root = true
-
-[*]
-charset = utf-8
-indent_style = space
-indent_size = 2
-end_of_line = lf
-trim_trailing_whitespace = true
-insert_final_newline = true</code></pre>
 
 
     </div>

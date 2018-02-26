@@ -18,17 +18,17 @@
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
   <style>
-    .vert-menu .sub-menu3, 
-    .vert-menu .sub-menu4, 
-    .vert-menu .sub-menu5, 
+    .vert-menu .sub-menu3,
+    .vert-menu .sub-menu4,
+    .vert-menu .sub-menu5,
     .vert-menu .sub-menu8,
     .vert-menu .sub-menu-less {
       left: 125px;
     }
-    
+
 /* Large(1200px - +infinity): */
 @media (min-width: 1200px) { .test {color: red;} }
-        
+
 /* Medium(992px - 1199px): */
 @media (min-width: 992px) and (max-width: 1199px) { .test {color: yellow;} }
 
@@ -102,9 +102,9 @@
         </li>
         <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
         <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-        
+
         <li>
-          <a href="#">Bootstrap</a>
+          <a href="#" class="active">Bootstrap</a>
           <ul class="sub-menu sub-menu-bs">
             <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
             <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
@@ -161,7 +161,7 @@
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Hello, world!&lt;/h1&gt;
-    
+
     <span class="gray">&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;</span>
     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/<mark>jquery.min.js</mark>"&gt;&lt;/script&gt;
     <span class="gray">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
@@ -170,7 +170,7 @@
 &lt;/html&gt;
 <hr>
 <span class="gray" style="font-size: 1.5em;">/* Адаптивность в Bootstrap */ </span>
-             
+
 <span class="gray">/* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */</span>
 
@@ -182,27 +182,27 @@
 
 <span class="gray">/* Large devices (large desktops, 1200px and up) */</span>
 <span class="red">@media (min-width: @screen-lg-min) { ... }</span>
-             
-<span class="gray">/* или так: */</span>       
+
+<span class="gray">/* или так: */</span>
 <span class="red">@media (max-width: @screen-xs-max) { ... }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
 @media (min-width: @screen-lg-min) { ... }</span>
-       
+
 <span class="gray" style="font-size: 1.5em;">/* Стилизация адаптивности */ </span>
-    
+
 <span class="gray">/* Large "TV-SET" (<mark>1200px</mark> - +infinity): */</span>
 @media (min-width: <span class="red">1200px</span>) {...}
-        
+
 <span class="gray">/* Medium "DESKTOP" (<mark>992px</mark> - <mark>1199px</mark>): */</span>
-@media (min-width: <span class="red">992px</span>) and (max-width: <span class="red">1199px</span>) {...} 
+@media (min-width: <span class="red">992px</span>) and (max-width: <span class="red">1199px</span>) {...}
 
 <span class="gray">/* Small "TABLET" (<mark>768px</mark> - <mark>991px</mark>): */</span>
-@media (min-width: <span class="red">768px</span>) and (max-width: <span class="red">991px</span>) {...} 
+@media (min-width: <span class="red">768px</span>) and (max-width: <span class="red">991px</span>) {...}
 
 <span class="gray">/* Extra-small "MOBILE" (0 - <mark>767px</mark>): */</span>
 @media (max-width: <span class="red">767px</span>) {...}</pre></code>
-         
+
 <p class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, maiores deserunt non quasi enim earum et nam iure, ipsam beatae. Laborum tempora ducimus illo ea. Odit expedita aperiam quas voluptates aliquid omnis ipsum eligendi consectetur deleniti saepe. Molestiae, illo! Ducimus, nisi, consequatur. Illo necessitatibus, quaerat illum eligendi, expedita iusto et.</p>
           </td>
           <td class="col3" style="width: 400px;">
@@ -223,9 +223,9 @@
             <code>
           &lt;div class="<span class="red">container</span>"&gt;<br>
           &nbsp;&nbsp;&lt;div class="<span class="red">row</span>"&gt; <span class="gray">&lt;!--<mark>Имеет 12 колонок</mark>--&gt;</span><br><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-lg-6 col-md-5 col-sm-4 col-xs-3</span>"&gt; 
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-lg-6 col-md-5 col-sm-4 col-xs-3</span>"&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-lg-6 col-md-7 col-sm-8 col-xs-9</span>"&gt; 
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="red">col-lg-6 col-md-7 col-sm-8 col-xs-9</span>"&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
           &nbsp;&nbsp;&lt;/div&gt;<br>
           &lt;/div&gt;
@@ -237,7 +237,7 @@
             <br>
           </td>
         </tr>
-        
+
         <tr>
           <td class="col1" style="width: 120px;">
             <b>ВЛОЖЕННОСТЬ</b>
@@ -274,9 +274,9 @@
             </p>
             <code>&lt;div class="<span class="red">main-content</span>&nbsp;&nbsp;col-lg-12 ..."&gt;&lt;/div&gt;</code><br><br>
            <pre>
-<code>.container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width</u></b>: размеру breakpoints; 
+<code>.container          </code><span class="gray">- ОСНОВНОЙ контейнер (<b><u>width</u></b>: размеру breakpoints;
                       центрирует содержимое)</span>
-                      
+
 <code>.container-fluid    </code><span class="gray">- ОСНОВНОЙ контейнер резиновый (width: 100%;)</span>
 
 <code>.row                </code><span class="gray">- СТРОЧНЫЙ подконтейнер, объединяет кол. классы </span>
@@ -377,22 +377,22 @@
         <tr>
           <td class="col1">
             <b>Основные классы навбара</b><br><br>
-            
+
             <span class="red">.navbar</span>
           </td>
           <td class="col2" style="width: 800px;">
             <code><pre>&lt;header&gt;
   &lt;nav class="<span class="red">navbar navbar-default</span>"&gt;
     &lt;div class="container"&gt;
-     
+
       &lt;div class="<span class="red">navbar-header</span>"&gt;
         ...
       &lt;/div&gt;
-      
+
       &lt;div class="<span class="red">collapse navbar-collapse</span>" id="<mark>bs-example-navbar-collapse-1</mark>"&gt;
         ...
       &lt;/div&gt;
-      
+
     &lt;/div&gt;
   &lt;/nav&gt;
 &lt;/header&gt;<hr><code>.navbar              </code><span class="gray">- НАВБАР </span>
@@ -417,16 +417,16 @@
           </td>
           <td class="col2" style="width: 800px;">
             <code><pre>&lt;div class="<span class="red">navbar-header</span>"&gt;
-  <span class="text-success">&lt;!--ГАМБУРГЕР--&gt;</span>         
-  &lt;button type="button" class="<span class="red">navbar-toggle collapsed</span>" 
+  <span class="text-success">&lt;!--ГАМБУРГЕР--&gt;</span>
+  &lt;button type="button" class="<span class="red">navbar-toggle collapsed</span>"
   data-toggle="collapse" data-target="<mark>#bs-example-navbar-collapse-1</mark>" aria-expanded="false"&gt;
     &lt;span class="<span class="red">sr-only</span>"&gt;Toggle navigation&lt;/span&gt;
     &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
     &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
     &lt;span class="<span class="red">icon-bar</span>"&gt;&lt;/span&gt;
   &lt;/button&gt;
-	
-  <span class="text-success">&lt;!--ЛОГОТИП--&gt;</span>  
+
+  <span class="text-success">&lt;!--ЛОГОТИП--&gt;</span>
   &lt;a class="<span class="red">navbar-brand</span>" href="<span class="text-success">index.html</span>"&gt;
     &lt;img src="<span class="text-success">http://Some-logo.png</span>" alt="logo" width="100" height="100"&gt;
   &lt;/a&gt;
@@ -452,23 +452,23 @@
           </td>
           <td class="col2" style="width: 800px;">
             <code><pre>&lt;div class="<span class="red">collapse navbar-collapse</span>" id="<mark>bs-example-navbar-collapse-1</mark>"&gt;
-            
+
   <span class="gray">&lt;!-- Ссылки меню СЛЕВА--&gt;</span>
   &lt;ul class="<span class="red">nav navbar-nav</span>"&gt;
     <span class="gray">&lt;!-- Активная ссылка --&gt;</span>
     &lt;li class="<span class="red">active</span>"&gt;
-      &lt;a href="#"&gt;Link1 
+      &lt;a href="#"&gt;Link1
         &lt;span class="sr-only"&gt;(current)&lt;/span&gt;
       &lt;/a&gt;
     &lt;/li&gt;
     <span class="gray">&lt;!-- Остальные ссылки --&gt;</span>
     &lt;li&gt;&lt;a href="#"&gt;Link2&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Link3&lt;/a&gt;&lt;/li&gt;
-    
+
     <span class="gray">&lt;!-- Выпадающая ссылка --&gt;</span>
     &lt;li class="<span class="red">dropdown</span>"&gt;
-      &lt;a href="#" class="<span class="red">dropdown-toggle</span>" 
-      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Link4 
+      &lt;a href="#" class="<span class="red">dropdown-toggle</span>"
+      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Link4
         &lt;span class="<span class="red">caret</span>"&gt;&lt;/span&gt;
       &lt;/a&gt;
       <span class="gray">&lt;!-- Выпадающее меню этой ссылки--&gt;</span>
@@ -483,27 +483,27 @@
       &lt;/ul&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-  
+
 <span class="gray">&lt;!-- Ссылки меню СПРАВА или ИКОНКИ--&gt;</span>
   &lt;ul class="<span class="red">nav navbar-nav  navbar-right</span>"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Link5&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Link6&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Link7&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
-  
-&lt;/div&gt;<hr><code>.collapse            </code><span class="gray">- для контейнера списка ссылок</span>   
-<code>.navbar-collapse     </code><span class="gray">- для контейнера списка ссылок</span>   
 
-<code>.nav                 </code><span class="gray">- для списка ссылок</span>   
-<code>.navbar-nav          </code><span class="gray">- для списка ссылок</span> 
-<code>.navbar-right        </code><span class="gray">- для списка ссылок справа</span> 
-  
-<code>.active              </code><span class="gray">- активная ссылка</span> 
-  
-<code>.dropdown            </code><span class="gray">- элемент списка, с вып. под-меню</span>   
-<code>.dropdown-toggle     </code><span class="gray">- для ссылки внутри &lt;li&gt; с вып. под-меню</span>   
-<code>.caret               </code><span class="gray">- иконка вып. под-меню</span>   
-<code>.dropdown-menu       </code><span class="gray">- список вып. под-меню</span>   
+&lt;/div&gt;<hr><code>.collapse            </code><span class="gray">- для контейнера списка ссылок</span>
+<code>.navbar-collapse     </code><span class="gray">- для контейнера списка ссылок</span>
+
+<code>.nav                 </code><span class="gray">- для списка ссылок</span>
+<code>.navbar-nav          </code><span class="gray">- для списка ссылок</span>
+<code>.navbar-right        </code><span class="gray">- для списка ссылок справа</span>
+
+<code>.active              </code><span class="gray">- активная ссылка</span>
+
+<code>.dropdown            </code><span class="gray">- элемент списка, с вып. под-меню</span>
+<code>.dropdown-toggle     </code><span class="gray">- для ссылки внутри &lt;li&gt; с вып. под-меню</span>
+<code>.caret               </code><span class="gray">- иконка вып. под-меню</span>
+<code>.dropdown-menu       </code><span class="gray">- список вып. под-меню</span>
 <code>.divider             </code><span class="gray">- разделитель</span></pre></code>
           </td>
           <td class="col3" style="width: 400px;">
@@ -514,38 +514,38 @@
       <h3>Результат:</h3>
         <header>
           <nav class="navbar navbar-default pull-left">
-            <div class="container">    
+            <div class="container">
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" 
+                <button type="button" class="navbar-toggle collapsed"
   data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-	  
+
                 <a class="navbar-brand" href="index.html">
                   <img src="https://avatanplus.com/files/resources/original/570bf8709201d15406c277d6.png" alt="logo" width="50" height="50" style="position: relative; top: -15px;">
                 </a>
               </div>
-              
+
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <!-- Ссылки меню СЛЕВА-->
                 <ul class="nav navbar-nav">
                   <!-- Активная ссылка -->
                   <li class="active">
-                    <a href="#">Link1 
+                    <a href="#">Link1
                       <span class="sr-only">(current)</span>
                     </a>
                   </li>
                   <!-- Остальные ссылки -->
                   <li><a href="#">Link2</a></li>
                   <li><a href="#">Link3</a></li>
-                  
+
                   <!-- Выпадающая ссылка -->
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" 
-                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Link4 
+                    <a href="#" class="dropdown-toggle"
+                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Link4
                       <span class="caret"></span>
                     </a>
                     <!-- Выпадающее меню этой ссылки-->
@@ -560,7 +560,7 @@
                     </ul>
                   </li>
                 </ul>
-  
+
               <!-- Ссылки меню СПРАВА или ИКОНКИ-->
                 <ul class="nav navbar-nav  navbar-right">
                   <li><a href="#">Link5</a></li>
@@ -571,7 +571,7 @@
             </div>
           </nav>
         </header>
-     
+
       <br>
       <table class="css3-table">
         <tr>
@@ -581,32 +581,32 @@
           <td class="col1"><b>Текст</b></td>
           <td class="col2" style="width: 800px;">
             <pre><code>.lead               </code><span class="gray">- увеличение размера шрифта</span>
-            
-<code>.text-left          </code><span class="gray">- выравнивание текста слева</span> 
-<code>.text-center        </code><span class="gray">- выравнивание текста по центру</span> 
-<code>.text-right         </code><span class="gray">- выравнивание текста справа</span> 
-<code>.text-justify       </code><span class="gray">- выравнивание текста по ширине</span> 
-<code>.text-nowrap        </code><span class="gray">- без переноса на новую строку</span> 
 
-<code>.text-lowercase     </code><span class="gray">- все строчные</span> 
-<code>.text-uppercase     </code><span class="gray">- все заглавные</span> 
-<code>.text-capitalize    </code><span class="gray">- все первые буквы заглавные</span> 
+<code>.text-left          </code><span class="gray">- выравнивание текста слева</span>
+<code>.text-center        </code><span class="gray">- выравнивание текста по центру</span>
+<code>.text-right         </code><span class="gray">- выравнивание текста справа</span>
+<code>.text-justify       </code><span class="gray">- выравнивание текста по ширине</span>
+<code>.text-nowrap        </code><span class="gray">- без переноса на новую строку</span>
 
-<code>.list-unstyled      </code><span class="gray">- список без маркером 1-го уровня (для тегов &lt;ul&gt;)</span> 
-<code>.list-inline        </code><span class="gray">- список строкой (для тегов &lt;ul&gt;)</span> 
+<code>.text-lowercase     </code><span class="gray">- все строчные</span>
+<code>.text-uppercase     </code><span class="gray">- все заглавные</span>
+<code>.text-capitalize    </code><span class="gray">- все первые буквы заглавные</span>
 
-<code>.text-muted         </code><span class="text-muted">- текст приглушённый</span> 
-<code>.text-primary       </code><span class="text-primary">- текст основной</span> 
-<code>.text-success       </code><span class="text-success">- текст (успех)</span> 
-<code>.text-info          </code><span class="text-info">- текст (информация)</span> 
-<code>.text-warning       </code><span class="text-warning">- текст (предупреждение)</span> 
-<code>.text-danger        </code><span class="text-danger">- текст (опасность)</span> 
- 
-<code>.bg-primary         - </code><span class="bg-primary">фон основной</span> 
-<code>.bg-success         - </code><span class="bg-success">фон (успех)</span> 
-<code>.bg-info            - </code><span class="bg-info">фон (информация)</span> 
-<code>.bg-warning         - </code><span class="bg-warning">фон (предупреждение)</span> 
-<code>.bg-danger          - </code><span class="bg-danger">фон (опасность)</span> 
+<code>.list-unstyled      </code><span class="gray">- список без маркером 1-го уровня (для тегов &lt;ul&gt;)</span>
+<code>.list-inline        </code><span class="gray">- список строкой (для тегов &lt;ul&gt;)</span>
+
+<code>.text-muted         </code><span class="text-muted">- текст приглушённый</span>
+<code>.text-primary       </code><span class="text-primary">- текст основной</span>
+<code>.text-success       </code><span class="text-success">- текст (успех)</span>
+<code>.text-info          </code><span class="text-info">- текст (информация)</span>
+<code>.text-warning       </code><span class="text-warning">- текст (предупреждение)</span>
+<code>.text-danger        </code><span class="text-danger">- текст (опасность)</span>
+
+<code>.bg-primary         - </code><span class="bg-primary">фон основной</span>
+<code>.bg-success         - </code><span class="bg-success">фон (успех)</span>
+<code>.bg-info            - </code><span class="bg-info">фон (информация)</span>
+<code>.bg-warning         - </code><span class="bg-warning">фон (предупреждение)</span>
+<code>.bg-danger          - </code><span class="bg-danger">фон (опасность)</span>
            </pre>
           </td>
           <td class="col3" style="width: 400px;"></td>
@@ -630,14 +630,14 @@
 <code>.table-responsive    </code><span class="gray">- таблица будет скролиться по горизонтали</span>
 
 <span class="red">/* классы для &lt;tr&gt;, &lt;td&gt; и &lt;th&gt; */</span>
-<code>.active              </code><span class="gray">- выделяем цветом ячейку или строку</span>          
-<code>.success             </code><span class="gray">- выделяем цветом ячейку или строку</span>          
-<code>.info                </code><span class="gray">- выделяем цветом ячейку или строку</span>          
-<code>.warning             </code><span class="gray">- выделяем цветом ячейку или строку</span>          
+<code>.active              </code><span class="gray">- выделяем цветом ячейку или строку</span>
+<code>.success             </code><span class="gray">- выделяем цветом ячейку или строку</span>
+<code>.info                </code><span class="gray">- выделяем цветом ячейку или строку</span>
+<code>.warning             </code><span class="gray">- выделяем цветом ячейку или строку</span>
 <code>.danger              </code><span class="gray">- выделяем цветом ячейку или строку</span></pre>
           </td>
           <td class="col3" style="width: 400px;">
-           
+
             <table class="table table-hover table-bordered table-striped">
               <caption>Table</caption>
               <tr>
@@ -678,11 +678,11 @@
             &lt;span class="<span class="red">glyphicon glyphicon-hourglass</span>"&gt;&lt;/span&gt;<br>
           </td>
           <td class="col3" style="width: 400px;">
-            <span class="glyphicon glyphicon-star" style="font-size: 3em;"></span> 	
-            <span class="glyphicon glyphicon-heart" style="font-size: 3em;"></span> 	
-            <span class="glyphicon glyphicon-asterisk" style="font-size: 3em;"></span> 	
-            <span class="glyphicon glyphicon-fire" style="font-size: 3em;"></span> 	
-            <span class="glyphicon glyphicon-hourglass" style="font-size: 3em;"></span> 	
+            <span class="glyphicon glyphicon-star" style="font-size: 3em;"></span>
+            <span class="glyphicon glyphicon-heart" style="font-size: 3em;"></span>
+            <span class="glyphicon glyphicon-asterisk" style="font-size: 3em;"></span>
+            <span class="glyphicon glyphicon-fire" style="font-size: 3em;"></span>
+            <span class="glyphicon glyphicon-hourglass" style="font-size: 3em;"></span>
           </td>
         </tr>
       </table>
@@ -721,14 +721,14 @@
           <td class="col2" style="width: 800px;">
           <code><pre><span class="gray">&lt;!--Контейнер--&gt;</span>
 &lt;div id="<mark>carousel</mark>" class="<span class="red">carousel slide</span>"&gt;
-  
+
   <span class="gray">&lt;!--Кружочки-переключатели--&gt;</span>
   &lt;ol class="<span class="red">carousel-indicators</span>"&gt;
     &lt;li data-target="<mark>#carousel</mark>" data-slide-to="<span class="red">0</span>" class="<span class="red">active</span>&gt;&lt;/li&gt;
     &lt;li data-target="<mark>#carousel</mark>" data-slide-to="<span class="red">1</span>"&gt;&lt;/li&gt;
     &lt;li data-target="<mark>#carousel</mark>" data-slide-to="<span class="red">2</span>"&gt;&lt;/li&gt;
   &lt;/ol&gt;
-  
+
   <span class="gray">&lt;!--Контейнер-слайдов--&gt;</span>
   &lt;div class="<span class="red">carousel-inner</span>"&gt;
     <span class="gray">&lt;!--Слайд №1--&gt;</span>
@@ -744,18 +744,18 @@
     &lt;div class="<span class="red">item</span>"&gt;...&lt;/div&gt;
     &lt;div class="<span class="red">item</span>"&gt;...&lt;/div&gt;
   &lt;/div&gt;
-  
+
   <span class="gray">&lt;!--Стрелки-переключатели--&gt;</span>
   <span class="gray">&lt;!--стрелка-влево--&gt;</span>
   &lt;a class="<span class="red">left carousel-control</span>" href="<mark>#carousel</mark>" data-slide="<span class="red">prev</span>"&gt;
     &lt;span class="<span class="red">glyphicon glyphicon-chevron-left</span>"&gt;&lt;/span&gt;
   &lt;/a&gt;
-			
+
   <span class="gray">&lt;!--стрелка-вправо--&gt;</span>
   &lt;a class="<span class="red">right carousel-control</span>" href="<mark>#carousel</mark>" data-slide="<span class="red">next</span>"&gt;
     &lt;span class="<span class="red">glyphicon glyphicon-chevron-right</span>"&gt;&lt;/span&gt;
   &lt;/a&gt;
-  
+
 &lt;/div&gt;
           </pre></code>
           </td>
@@ -764,7 +764,7 @@
           </td>
         </tr>
       </table>
-      
+
       <!--СЛАЙДЕР-->
       <div id="carousel" class="carousel slide">
         <!--Кружочки-индикаторы-->
@@ -804,13 +804,13 @@
         <a class="left carousel-control" href="#carousel" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        
+
         <!--Стрелка вправо-->
         <a class="right carousel-control" href="#carousel" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
 		  </div>
-		  
+
 		  <table class="css3-table">
         <tr>
           <th class="css3-table-title" colspan="3">9. Кнопки</th>
@@ -822,9 +822,9 @@
           <td class="col2" style="width: 800px;">
 &lt;a class="<span class="red">btn btn-primary</span>" href="#"&gt; или <br> <br>
 &lt;button class="<span class="red">btn btn-primary</span>"&gt; или <br> <br>
-&lt;input class="<span class="red">btn btn-primary</span>"&gt; type="<span class="red">submit</span> value="<span class="red">submit</span>"&gt;<br> 
+&lt;input class="<span class="red">btn btn-primary</span>"&gt; type="<span class="red">submit</span> value="<span class="red">submit</span>"&gt;<br>
           <pre><code>.btn         <span class="gray">- основной класс кнопки</span>
-          
+
 .btn-default <span class="gray">- вспомогательный класс</span>
 .btn-primary <span class="gray">- вспомогательный класс</span>
 .btn-success <span class="gray">- вспомогательный класс</span>
@@ -838,10 +838,10 @@
 .btn-lg      <span class="gray">- большой размер</span>
 .btn-md      <span class="gray">- средний размер (стоит по ум*)</span>
 .btn-sm      <span class="gray">- маленький размер</span>
-.btn-xs      <span class="gray">- экстра-маленький размер</span>         
-.btn-block   <span class="gray">- растянуть по всей доступной ширине</span>         
+.btn-xs      <span class="gray">- экстра-маленький размер</span>
+.btn-block   <span class="gray">- растянуть по всей доступной ширине</span>
 </code></pre>
-  <a href="#" class="btn btn-default">.btn .btn-default</a> 
+  <a href="#" class="btn btn-default">.btn .btn-default</a>
   <a href="#" class="btn btn-primary">.btn .btn-primary</a>
   <a href="#" class="btn btn-success">.btn .btn-success</a><br><br>
   <a href="#" class="btn btn-warning">.btn .btn-warning</a>
@@ -849,10 +849,10 @@
   <a href="#" class="btn btn-danger">.btn .btn-danger</a>
   <a href="#" class="btn btn-link">.btn .btn-link</a><br>
 &lt;div class="<span class="red">btn-group</span>"&gt;<br>
-&nbsp;&nbsp;&lt;a class="<span class="red">btn btn-primary</span>" href="#"&gt;Text&lt;/a&gt;<br>     
-&nbsp;&nbsp;&lt;a class="<span class="red">btn btn-success</span>" href="#"&gt;Text&lt;/a&gt;<br>     
-&nbsp;&nbsp;&lt;a class="<span class="red">btn btn-info</span>" href="#"&gt;Text&lt;/a&gt;<br>     
-&lt;/div&gt;<br><br>   
+&nbsp;&nbsp;&lt;a class="<span class="red">btn btn-primary</span>" href="#"&gt;Text&lt;/a&gt;<br>
+&nbsp;&nbsp;&lt;a class="<span class="red">btn btn-success</span>" href="#"&gt;Text&lt;/a&gt;<br>
+&nbsp;&nbsp;&lt;a class="<span class="red">btn btn-info</span>" href="#"&gt;Text&lt;/a&gt;<br>
+&lt;/div&gt;<br><br>
 	<div class="btn-group">
     <a class="btn btn-primary" href="#">Text</a>
     <a class="btn btn-success" href="#">Text</a>
@@ -877,8 +877,8 @@
           </td>
         </tr>
       </table>
-  
-      
+
+
     </div>
   </div>
 

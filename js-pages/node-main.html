@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | node.js - Основы</title>
+  <title>Мой Справочник | node.js - Начало работы</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
@@ -76,7 +76,7 @@
         <li>
           <a class="active" href="nodejs.html"><span class="react">node.js</span></a>
           <ul class="sub-menu sub-menu-nodejs">
-            <li><a href="node-main.html">Основы</a></li>
+            <li><a href="node-main.html">Начало работы</a></li>
             <li><a href="node-frontend.html">Frontend</a></li>
             <li><a href="node-backend.html">Backend</a></li>
             <li><a href="node-sql.html">SQL</a></li>
@@ -118,33 +118,63 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | node.js - Основы</h2>
+      <h2>Мой Справочник | node.js - Начало работы</h2>
 
       <table class="new-table">
-
       <tr>
-        <th colspan="3"><code>Инициализация</code></th>
+        <th colspan="3"><code>Начало работы</code></th>
       </tr>
       <tr>
-        <td><h2>Инициализация</h2></td>
-        <td><code>mkdir some-dir</code> <br>
-            <code>cd some-dir</code> <br>
-            <code>npm init -y</code>
+        <td><h2>node</h2></td>
+        <td>
+          <code>node</code> <br> <br>
+          Запуск скриптов: <br>
+          -------------------------- <br>
+          <code>node some-script.js</code>
         </td>
-        <td></td>
+        <td>Режим node в консоли. Можно писать js-код или выполнять скрипты</td>
+      </tr>
+      <tr>
+        <td><h2>npm</h2></td>
+        <td>
+          Установка пакетов: <br>
+          -------------------------- <br>
+          <code>npm install /package-name + flag/</code> <br>
+          <code>npm i /package-name + flag/</code><br><br>
+          Удаление пакетов: <br>
+          -------------------------- <br>
+          <code>npm uninstall /package-name + flag/</code> <br><br>
+          Установка всех пакетов<br> (если есть готовый package.json): <br>
+          -------------------------- <br>
+          <code>npm install</code>
+        </td>
+        <td>node package manager - пакетный менеджер для node</td>
       </tr>
       <tr>
         <td><h2>Флаги</h2></td>
-        <td><pre><code>-g</code>                // global<br>
-<code>--save</code>          // save for work<br>
-<code>--save-dev</code>    // save for development</pre>
+        <td><pre><code>-g, --global</code>  // global
+<code>--save</code>          // save for work
+<code>--save-dev</code>    // save for development
+<code>-y</code>               // yes for npm init</pre>
         </td>
         <td>Все установленные пакеты с save будут сохранены в файл <b>package.json</b></td>
       </tr>
+
       <tr>
-        <td><h2>Запуск скриптов</h2></td>
-        <td><code>node 1.js</code></td>
-        <td>Будет выполнен скрипт 1.js</td>
+        <td><h2>Инициализация проекта</h2></td>
+        <td>
+
+          <code>mkdir some-dir</code> <br>
+            <code>cd some-dir</code> <br>
+            <code>npm init || npm init -y</code>
+        </td>
+        <td>Так создаются проекты с нуля, в других случаях можно брать уже готовый файл <b>package.json</b></td>
+      </tr>
+
+      <tr>
+        <td><h2>package.json</h2></td>
+        <td></td>
+        <td>Создаётся при инициализации. Все пакеты с флагами --save и --save-dev будут записаны.</td>
       </tr>
     </table>
 

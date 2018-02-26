@@ -520,7 +520,7 @@ code span {
 .new-table code {
   font-size: 18px;
   line-height: 24px;
-  color: #729997;
+  color: #009688;
 }
 .new-table tr > td {padding-top: 10px;}
 .new-table tr > td:nth-child(1) { min-width: 300px; }
