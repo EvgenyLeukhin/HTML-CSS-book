@@ -107,27 +107,88 @@
   </div>
   <div class="content clearfix">
 
-  <h2>Мой Справочник | JavaScript | JQuery basics</h2>
+  <h2>Мой Справочник | JavaScript | React</h2>
   <a href="https://reactjs.org/">reactjs.org</a> - Официальная документация
-  <table class="discription-table" border-spacing: 5px;>
-    <tr>
-      <th colspan="4" style="font-size: 2em; color: darkcyan;">Подключение</th>
-    </tr>
 
+  <table class="new-table">
     <tr>
-      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Нужно подключить эти скрипты в HEAD</td>
-      <td style="width: 400px;">
-        <code style="font-size: 1em;">
-          &lt;script src="<span class="gray">https://unpkg.com/react@16/umd/react.development.js</span>"&gt;&lt;/script&gt; <br>
-          &lt;script src="<span class="gray">https://unpkg.com/react-dom@16/umd/react-dom.development.js</span>"&gt;&lt;/script&gt; <br>
-          &lt;script src="<span class="gray">https://unpkg.com/babel-standalone@6.15.0/babel.min.js</span>"&gt;&lt;/script&gt;
+      <th colspan="3"><code>Шаблон</code></th>
+    </tr>
+    <tr>
+      <td>Нужно подключить эти скрипты в HEAD</td>
+      <td><code style="font-size: .88em;">
+          &lt;script src="https://unpkg.com/react@16/umd/react.development.js"&gt;&lt;/script&gt; <br>
+          &lt;script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"&gt;&lt;/script&gt; <br>
+          &lt;script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"&gt;&lt;/script&gt;
+        </code></td>
+      <td>Для разработки на React лучше использовать сборщик фронтенда (Webpack, gulp). Таким образом можно использовать React в образовательных целях</td>
+    </tr>
+    <tr>
+      <th colspan="3"><code>React.createElement()</code></th>
+    </tr>
+    <tr>
+      <td>Создание React-элемента</td>
+      <td>
+        <span class="gray">// &lt;h1&gt;Some text&lt;/h1&gt;</span>
+        <code>var h1 = <mark>React.createElement</mark>( <br>
+        &nbsp;&nbsp;'h1',<br>
+        &nbsp;&nbsp;&nbsp;null,<br>
+        &nbsp;&nbsp;'Some text' <br>
+        );</code> <hr>
+        <span class="gray">// &lt;h1 class="some-class"&gt;Some text&lt;/h1&gt;</span>
+        <code>var h1 = <mark>React.createElement</mark>( <br>
+        &nbsp;&nbsp;'h1',<br>
+        &nbsp;&nbsp;&nbsp;<mark>{className: 'some-class'}</mark>,<br>
+        &nbsp;&nbsp;'Some text' <br>
+        );</code>
+      </td>
+      <td>
+        Принимает три параметра: <hr>
+        1 - какой элемент создавать; <br>
+        2 - параметры элемента <br><br>
+        Нестандартные параметры отрендерены не будут <br><br>
+        3 - содержание элемента <br>
+        Могут быть также различные переменные в третьем параметре (принимает сколь угодно значений)
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3"><code>ReactDOM.render()</code></th>
+    </tr>
+    <tr>
+      <td>Рендеринг React-кода</td>
+      <td>
+        <code>
+          <mark>ReactDOM.render</mark>( <br>
+          &nbsp;&nbsp;h1, <br>
+          &nbsp;&nbsp;document.<mark>getElementById</mark>('content') <br>
+          ); <br> <br> <br>
+          &lt;div id="content"&gt;&lt;h1&gt;Some text&lt;/h1&gt;&lt;/div&gt;
+        </code> <hr>
+
+        <code>
+          ReactDOM.render( <br>
+          &nbsp;&nbsp;<mark>React.createElement('div', null,   h1,h1,h1)</mark>, <br>
+          &nbsp;&nbsp;document.getElementById('content') <br>
+          );<br> <br> <br>
+          &lt;div id="content"&gt; <br>
+          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
+          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
+          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
+          &lt;/div&gt;
         </code>
       </td>
-      <td rowspan="2" style="width: 300px; color: #555;">
-        React-код пишется через препроцессор <u>babel</u>
+      <td>
+        Принимает два параметра: <hr>
+        1 - что рендерить; <br>
+        React-элементы (принимает только одно значение).<br><br>
+        Можно также записывать React.createElement первым параметром <br><br>
+        2 - куда рендерить; <br>
+        id тега в html-разметке
       </td>
     </tr>
-    </table>
+  </table>
+
+
   </div>
 </div>
 
