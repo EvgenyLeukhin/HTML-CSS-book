@@ -401,7 +401,50 @@ var e = myFunc1(10); <span class="gray">// </span></code></pre>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">Без вторых круглых скобок функция не сработает. <b>Создаётся изолированная область видимости</b>, чтобы код внутри скобок не конфликтовал с другим кодом</td>
     </tr>
-      </table>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Экспорт и импорт</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"></td>
+      <td style="width: 400px;">
+        <span class="gray">// готовим функцию для ЭКСПОРТА</span> <br>
+        <code><span class="red">export default</span> function <mark>someFunc</mark>(a) { <br>
+        &nbsp;&nbsp;return console.log(a); <br>
+}</code> <br><br>
+<span class="gray">// ИМПОРТИРУЕМ функцию из файла test.js</span> <br>
+<code><span class="red">import</span> <mark>someFunc</mark> from './test'; <br>
+<span class="gray">// и вызываем её здесь же</span> <br>
+<mark>someFunc</mark>('Hello Webpack!');</code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">Это новые возможности ES6</td>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Стрелочные функции</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Более короткая запись кода</td>
+      <td style="width: 400px;">
+        <code>
+          <span class="gray">// ES5</span> <br>
+          var someFunc = function(a, b) { <br>
+          &nbsp;&nbsp;return a + b; <br>
+          }<br><br>
+          <span class="gray">// ES6</span> <br>
+          var somefunc = <span class="red">(a, b) =></span> a + b; <br><br>
+          <span class="gray">// Если более одной строки, то нужны {}</span> <br>
+          var somefunc = <span class="red">(a, b) =></span> { <br>
+          &nbsp;&nbsp; a *= 1000;<br>
+          &nbsp;&nbsp; b *= 1000;<br>
+          &nbsp;&nbsp; return a * b;<br>
+          }
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">Это новые возможности ES6</td>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Классы</th>
+    </tr>
+  </table>
 
         <h3>Пример кода расчёта покупки</h3>
         <code>
