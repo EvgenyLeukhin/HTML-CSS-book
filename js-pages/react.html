@@ -108,11 +108,11 @@
   <div class="content clearfix">
 
   <h2>Мой Справочник | JavaScript | React</h2>
-  <a href="https://reactjs.org/">reactjs.org</a> - Официальная документация
+  <a href="https://reactjs.org/" target="_blank"><mark>reactjs.org</mark></a> - Официальная документация
 
   <table class="new-table">
     <tr>
-      <th colspan="3"><code>Шаблон</code></th>
+      <th colspan="3"><code>Скрипты</code></th>
     </tr>
     <tr>
       <td>Нужно подключить эти скрипты в HEAD</td>
@@ -121,10 +121,10 @@
           &lt;script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"&gt;&lt;/script&gt; <br>
           &lt;script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"&gt;&lt;/script&gt;
         </code></td>
-      <td>Для разработки на React лучше использовать сборщик фронтенда (Webpack, gulp). Таким образом можно использовать React в образовательных целях</td>
+      <td>Для разработки на React лучше использовать сборщик фронтенда (Webpack, gulp), a с помощью шаблона с этими скриптами можно использовать React в образовательных целях</td>
     </tr>
     <tr>
-      <th colspan="3"><code>React.createElement()</code></th>
+      <th colspan="3"><code>React-элемент</code></th>
     </tr>
     <tr>
       <td>Создание React-элемента</td>
@@ -145,11 +145,35 @@
       <td>
         Принимает три параметра: <hr>
         1 - какой элемент создавать; <br>
-        2 - параметры элемента <br><br>
-        Нестандартные параметры отрендерены не будут <br><br>
-        3 - содержание элемента <br>
+        2 - параметры элемента <br>
+        3 - содержание элемента <br><br>
         Могут быть также различные переменные в третьем параметре (принимает сколь угодно значений)
       </td>
+    </tr>
+    <tr>
+      <th colspan="3"><code>jsx</code></th>
+    </tr>
+    <tr>
+      <td>Этот формат симбиоз js и html. В нём можно записывать html-код как и в html-файлах без кавычек. </td>
+      <td></td>
+      <td>Транспилируется с помощью транспилятора <b>babel</b></td>
+    </tr>
+
+    <tr>
+      <th colspan="3"><code>Параметры</code></th>
+    </tr>
+    <tr>
+      <td>Параметры объекта второго<br> аргумента функции React.createElement()</td>
+      <td>
+        <code>
+          <mark>className</mark> - class <br>
+          <mark>title</mark> - title <br>
+          <mark>style</mark> - style <br>
+          <mark>id</mark> - id <br>
+          <mark>href</mark> - href <br>
+        </code>
+      </td>
+      <td>Нестандартные параметры отрендерены не будут, но React про них будет помнить</td>
     </tr>
     <tr>
       <th colspan="3"><code>ReactDOM.render()</code></th>
@@ -185,6 +209,73 @@
         2 - куда рендерить; <br>
         id тега в html-разметке
       </td>
+    </tr>
+    <tr>
+      <th colspan="3"><code>React-компонент</code></th>
+    </tr>
+    <tr>
+      <td>Компоненты дают возможность многократного использования</td>
+      <td>
+        <span class="gray">// создаём компонент ReactComp</span>
+        <code>
+          <mark>class</mark> ReactComp <mark>extends React.Component</mark> { <br>
+          &nbsp;&nbsp;<mark>return</mark> React.createElement('div', null, h1,h1,h1); <br>
+          } <br>
+          <span class="gray">// теперь можно его отрендерить</span>
+            ReactDOM.render( <br>
+            &nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, null), <br>
+            &nbsp;&nbsp;document.getElementById('content') <br>
+            );
+          <span class="gray">// или так <b style="color: black;">div>div*3>h1+h1+h1</b></span>
+        </code>
+        <h3>Компоненты без параметров</h3>
+        <code>ReactDOM.render( <br>
+          &nbsp;&nbsp;React.createElement(<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;'div',<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;null,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, null),<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, null),<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, null)<br>
+          ), <br>
+          &nbsp;&nbsp;document.getElementById('content') <br>
+          );
+        </code>
+        <h3>Компоненты с параметрами</h3>
+        <code>
+          ... <br>
+          &nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, { <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"title": "first", <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"className": "some-class1", <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"id": "some-id1" <br>
+          &nbsp;&nbsp;}),<br>
+          &nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, { <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"title": "second", <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"className": "some-class2", <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"id": "some-id2" <br>
+          &nbsp;&nbsp;}),<br>
+          &nbsp;&nbsp;React.createElement(<mark>HelloReact</mark>, { <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"title": "third", <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"className": "some-class3", <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;"id": "some-id3" <br>
+          &nbsp;&nbsp;}),<br>
+          ... <br>
+        </code>
+        <h3>Можно выводить эти параметры, поменяв компонент</h3>
+        <code>
+        class ReactComp extends React.Component { <br>
+          &nbsp;&nbsp;return React.createElement('div', null, <br>
+          &nbsp;&nbsp;<mark>'text ' + this.props.title</mark>); <br>
+        }
+        </code>
+        <h3>И присвоить все параметры</h3>
+        <code>
+          class ReactComp extends React.Component { <br>
+          &nbsp;&nbsp;return React.createElement('div', <mark>this.props</mark>, <br>
+          &nbsp;&nbsp;'text ' + this.props.title); <br>
+        }
+        </code>
+      </td>
+      <td>Результат будет такой же как в коде выше</td>
     </tr>
   </table>
 
