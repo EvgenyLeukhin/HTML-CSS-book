@@ -1,0 +1,40 @@
+пароль от компьютера: sup_2018_port или 2018
+-----------------------------------------
+0. Почта (через Yandex https://mail.yandex.ru/)
+eleukhin@codenetix.com 
+пароль: fstaf48812! 
+-----------------------------------------
+1. JIRA (https://treesoft.atlassian.net/secure/Dashboard.jspa)
+Username: eleukhin
+Пароль: 
+-----------------------------------------
+2. ФТО -TMS (tms.fto.com.ru) - Учёт времени вконце рабочего дня 
+Учетная запись: EVLE
+Пароль: sup_2018_port
+Docs: https://docs.google.com/document/d/1r2TcfsaKO_CW_EI66Z700NHvmaYCP6XX4l4jTntVWpw/edit
+-----------------------------------------
+3. GitLab - Codenetix (https://git.codenetix.com/) - git-репозитории для проектов
+Username: eleukhin
+PW: sup_2018_port 
+-----------------------------------------
+4. GitLab - Personal (https://gitlab.com/)
+Username: EvgenyLeukhin@yandex.ru
+Вход через аккаунт GitHub
+-----------------------------------------
+5. Slack (https://tree-soft.slack.com) - чатилка для сотрудников
+Username: eleukhin@codenetix.com
+PW: sup_2018_port  
+-----------------------------------------
+6. TRELLO (https://trello.com/) - Запросы по железу и канцелярии
+Username: eleukhin@codenetix.com
+PW:  
+-----------------------------------------
+7. КУРС по REACT (https://www.udemy.com/home/my-courses/learning/)
+login: bupaev@gmail.com
+
+пароль: udemy123
+-----------------------------------------
+
+
+DropBox Lenovo
+uioJtr5e
