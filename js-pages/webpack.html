@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | node.js - SQL</title>
+  <title>Мой Справочник | Webpack</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
@@ -74,7 +74,7 @@
           </ul>
         </li>
         <li>
-          <a class="active" href="nodejs.html"><span class="react">node.js</span></a>
+          <a href="nodejs.html"><span class="react">node.js</span></a>
           <ul class="sub-menu sub-menu-nodejs">
             <li><a href="node-main.html">Начало работы</a></li>
             <li><a href="node-frontend.html">Frontend</a></li>
@@ -109,7 +109,7 @@
 
         <li><a href="console.html">Консоль</a></li>
         <li><a href="modules.html">Модули</a></li>
-        <li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+        <li><a class="active" href="webpack.html"><span class="react">Webpack</span></a></li>
         <li><a href="../css3-pages/grunt.html">Grunt</a></li>
         <li><a href="../css3-pages/gulp.html">Gulp</a></li>
       </ul>
@@ -118,19 +118,126 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | node.js - SQL</h2>
+      <h2>Мой Справочник | Webpack</h2>
 
-      <table class="discription-table" border-spacing: 5px>
-        <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">SQL</th>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;"></td>
-          <td rowspan="1" style="width: 700px; color: #555;"></td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
+      <table class="new-table">
+      <tr>
+        <th colspan="3"><code>Webpack</code></th>
+      </tr>
+      <tr>
+        <td>
+          <h2>Установка</h2>
+          <a href="https://webpack.github.io/" target="_blank">Документация</a>
+        </td>
+        <td>
+          <code>
+            <span class="gray">Глобальная установка</span>
+            npm i -g webpack
+            <span class="gray">Локальная установка</span>
+            npm i --save-dev webpack
+            <span class="gray">Может ещё это потребоваться</span>
+            npm i -g webpack-cli <br>
+            npm i --save-dev webpack-cli
+          </code>
+        </td>
+        <td>Что такое webpack-cli ?</td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Установка пакетов<br> для React</h2>
+        </td>
+        <td>
+          <code>
+            <span class="gray">ставим React</span>
+            npm i --save react <br>
+            npm i --save react-dom
+            <span class="gray">ставим Babel, загрузчик, пресеты</span>
+            npm i --save-dev babel-core <br>
+            npm i --save-dev babel-loader <br>
+            npm i --save-dev babel-preset-es2015 <br>
+            npm i --save-dev babel-preset-react
+            <span class="gray">ставим Сервер</span>
+            npm i --save-dev webpack-dev-server
+          </code>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <h2>package.json готовый</h2>
+        </td>
+        <td>
+          <pre><code>{
+  "name": "react_starter",
+  "version": "1.0.0",
+  "description": "react_starter",
+  "main": "index.js",
+  "scripts": {
+    "<mark>dev</mark>": "webpack-dev-server --progress --colors",
+    "<mark>build</mark>": "webpack",
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  "author": "Brice Ayres",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
 
-      </table>
+          </code></pre>
+        </td>
+        <td>
+          команды для запуска: <br><br>
+          <code>npm run dev</code> <br>
+          <code>npm run build</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h2>webpack.config.js</h2>
+        </td>
+        <td>
+          <pre><code>
+<span class="gray">// подключение модулей</span>
+const path = require('path');
+const webpack = require('webpack');
+
+
+<span class="gray">// настройка </span>
+module.exports = {
+  entry: './index.js',
+  output: { path: __dirname, filename: 'webpack_bundle.js'},
+  module: {
+    loaders: [
+      {
+        test: /.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
+    ]
+  }
+};
+</code></pre>
+        </td>
+        <td>Файл с конфигурацией для WEBpack</td>
+      </tr>
+
+    </table>
+
+
 
 
     </div>
