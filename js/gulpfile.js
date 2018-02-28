@@ -1,24 +1,24 @@
 // 1. Подгружаем плагины, сохраняем их в переменные после установки:
 
 var gulp         = require('gulp'),											// Подгружаем сам gulp
-		less         = require('gulp-less'),								// Подгружаем плагин less
-		sass         = require('gulp-sass'),								// Подгружаем плагин sass
-		postcss      = require('gulp-postcss'),							// Подгружаем плагин postcss 
-		plumber      = require('gulp-plumber'),							// Подгружаем плагин plumber (выполняет с ошибками, не останавливает)
-		mqpacker     = require('css-mqpacker'),							// Подгружаем плагин mqpacker (объединяет медиа-выражения)
-		browserSync  = require('browser-sync'),							// Подгружаем плагин browser-sync
-		concat       = require('gulp-concat'),							// Подгружаем плагин concat
-		concatCss    = require('gulp-concat-css'),					// Подгружаем плагин concat-css
-		uglify       = require('gulp-uglify'),							// Подгружаем плагин uglify
-		cssnano      = require('gulp-cssnano'),							// Подгружаем плагин cssnano
-		rename       = require('gulp-rename'),							// Подгружаем плагин rename
-		del          = require('del'),											// Подгружаем плагин del
-		imageMin     = require('gulp-imagemin'),						// Подгружаем плагин gulp-imagemin
-		pngquant     = require('imagemin-pngquant'),				// Подгружаем плагин imagemin-pngquant
-		cache        = require('gulp-cache'),								// Подгружаем плагин cache
-		autoprefixer = require('gulp-autoprefixer'),				// Подгружаем плагин autoprefixer
-		svgmin       = require('gulp-svgmin'),							// Подгружаем плагин svgmin (svg-минификатор)
-		svgstore     = require('gulp-svgstore');						// Подгружаем плагин svgstore (svg-спрайты)
+  less         = require('gulp-less'),								// Подгружаем плагин less
+  sass         = require('gulp-sass'),								// Подгружаем плагин sass
+  postcss      = require('gulp-postcss'),							// Подгружаем плагин postcss 
+  plumber      = require('gulp-plumber'),							// Подгружаем плагин plumber (выполняет с ошибками, не останавливает)
+  mqpacker     = require('css-mqpacker'),							// Подгружаем плагин mqpacker (объединяет медиа-выражения)
+  browserSync  = require('browser-sync'),							// Подгружаем плагин browser-sync
+  concat       = require('gulp-concat'),							// Подгружаем плагин concat
+  concatCss    = require('gulp-concat-css'),					// Подгружаем плагин concat-css
+  uglify       = require('gulp-uglify'),							// Подгружаем плагин uglify
+  cssnano      = require('gulp-cssnano'),							// Подгружаем плагин cssnano
+  rename       = require('gulp-rename'),							// Подгружаем плагин rename
+  del          = require('del'),											// Подгружаем плагин del
+  imageMin     = require('gulp-imagemin'),						// Подгружаем плагин gulp-imagemin
+  pngquant     = require('imagemin-pngquant'),				// Подгружаем плагин imagemin-pngquant
+  cache        = require('gulp-cache'),								// Подгружаем плагин cache
+  autoprefixer = require('gulp-autoprefixer'),				// Подгружаем плагин autoprefixer
+  svgmin       = require('gulp-svgmin'),							// Подгружаем плагин svgmin (svg-минификатор)
+  svgstore     = require('gulp-svgstore');						// Подгружаем плагин svgstore (svg-спрайты)
 
 
 // 2. Настойка плагинов:
@@ -27,21 +27,21 @@ var gulp         = require('gulp'),											// Подгружаем сам gul
 // SASS (npm i gulp-sass --save-dev) !!! Почему-то криво работает с browser-sync (не сохраняет, если редактировать импортируемые sass-файлы)
 
 gulp.task('sass', function() {													// Команда в консоли |gulp sass|
-	return gulp.src('src/sass/style.sass')								// Исходники
-	.pipe(plumber())																			// Работа плагина plumber
-	.pipe(sass())																					// Работа плагина sass
-	.pipe(autoprefixer([																	// Работа плагина autoprefixer 
-		'last 15 versions', 																// последние 15-ать версий браузеров
-		'> 1%', 																						// для IE
-		'ie 8', 																						// поддержка IE8
-		'ie 7' 																							// поддержка IE7
-	], 
-		{ cascade: true }))																	// Формаирование кода
-	.pipe(postcss([
-		mqpacker({sort: true})															// Сортировка медиа-выражений
-	]))
-	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у sass
-	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
+  return gulp.src('src/sass/style.sass')								// Исходники
+    .pipe(plumber())																			// Работа плагина plumber
+    .pipe(sass())																					// Работа плагина sass
+    .pipe(autoprefixer([																	// Работа плагина autoprefixer 
+      'last 15 versions', 																// последние 15-ать версий браузеров
+      '> 1%', 																						// для IE
+      'ie 8', 																						// поддержка IE8
+      'ie 7' 																							// поддержка IE7
+    ], 
+    { cascade: true }))																	// Формаирование кода
+    .pipe(postcss([
+      mqpacker({sort: true})															// Сортировка медиа-выражений
+    ]))
+    .pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у sass
+    .pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
 });
 
 
@@ -49,21 +49,21 @@ gulp.task('sass', function() {													// Команда в консоли |
 // LESS (npm i gulp-less --save-dev)
 
 gulp.task('less', function() {													// Команда в консоли |gulp less|
-	return gulp.src('src/less/style.less')								// Исходники
-	.pipe(plumber())																			// Работа плагина plumber
-	.pipe(less())																					// Работа плагина less
-	.pipe(autoprefixer([																	// Работа плагина autoprefixer 
-		'last 15 versions', 																// последние 15-ать версий браузеров
-		'> 1%', 																						// для IE
-		'ie 8', 																						// поддержка IE8
-		'ie 7' 																							// поддержка IE7
-	], 
-		{ cascade: true }))																	// Формаирование кода
-	.pipe(postcss([
-		mqpacker({sort: true})															// Сортировка медиа-выражений
-	]))
-	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у less
-	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
+  return gulp.src('src/less/style.less')								// Исходники
+    .pipe(plumber())																			// Работа плагина plumber
+    .pipe(less())																					// Работа плагина less
+    .pipe(autoprefixer([																	// Работа плагина autoprefixer 
+      'last 15 versions', 																// последние 15-ать версий браузеров
+      '> 1%', 																						// для IE
+      'ie 8', 																						// поддержка IE8
+      'ie 7' 																							// поддержка IE7
+    ], 
+    { cascade: true }))																	// Формаирование кода
+    .pipe(postcss([
+      mqpacker({sort: true})															// Сортировка медиа-выражений
+    ]))
+    .pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у less
+    .pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
 });
 
 
@@ -71,16 +71,16 @@ gulp.task('less', function() {													// Команда в консоли |
 // JS-CONCAT (ДЛЯ JS-БИБЛИОТЕК)
 
 gulp.task('js-libs', function() {												// Команда в консоли |gulp js-libs|
-	return gulp.src([																			// Перечень js-библиотек для конкатинации
-		'src/js/libs/angular/angular.min.js', 
-		'src/js/libs/bootstrap/dist/js/bootstrap.min.js',
-		'src/js/libs/jquery/dist/jquery.min.js',
-		'src/js/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'src/js/libs/react/react.min.js'
-	])
-	.pipe(concat('libs.min.js'))													// Конкатинируем в готовый файл
-	.pipe(uglify())																				// Минифицируем
-	.pipe(gulp.dest('src/js'));														// Директория для готового файла 
+  return gulp.src([																			// Перечень js-библиотек для конкатинации
+    'src/js/libs/angular/angular.min.js', 
+    'src/js/libs/bootstrap/dist/js/bootstrap.min.js',
+    'src/js/libs/jquery/dist/jquery.min.js',
+    'src/js/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'src/js/libs/react/react.min.js'
+  ])
+    .pipe(concat('libs.min.js'))													// Конкатинируем в готовый файл
+    .pipe(uglify())																				// Минифицируем
+    .pipe(gulp.dest('src/js'));														// Директория для готового файла 
 });
 
 
@@ -88,13 +88,13 @@ gulp.task('js-libs', function() {												// Команда в консоли
 // CSS-CONCAT (ДЛЯ CSS-БИБЛИОТЕК)
 
 gulp.task('css-libs', function() {											// Команда в консоли |gulp css-libs|
-	return gulp.src([ 																		// Пути к css-библиотекам
-		'src/css/libs/1.css',
-		'src/css/libs/2.css'
-	])
-	.pipe(concatCss('libs.min.css'))											// Конкатинируем в готовый файл
-	.pipe(cssnano())																			// Минифицируем
-	.pipe(gulp.dest('src/css/'));													// Директория для готового файла 
+  return gulp.src([ 																		// Пути к css-библиотекам
+    'src/css/libs/1.css',
+    'src/css/libs/2.css'
+  ])
+    .pipe(concatCss('libs.min.css'))											// Конкатинируем в готовый файл
+    .pipe(cssnano())																			// Минифицируем
+    .pipe(gulp.dest('src/css/'));													// Директория для готового файла 
 });
 
 
@@ -102,13 +102,13 @@ gulp.task('css-libs', function() {											// Команда в консоли
 // CSS-ALL (libs + style)
 
 gulp.task('css-all', ['css-libs'], function() {					// Команда в консоли |gulp css-all|
-	return gulp.src([ 																		// Пути к css
-		'src/css/libs.min.css',
-		'src/css/style.css'
-	])
-	.pipe(concatCss('all.min.css'))												// Конкатинируем в готовый файл
-	.pipe(cssnano())																			// Минифицируем
-	.pipe(gulp.dest('dist/css/'));													// Директория для готового файла 
+  return gulp.src([ 																		// Пути к css
+    'src/css/libs.min.css',
+    'src/css/style.css'
+  ])
+    .pipe(concatCss('all.min.css'))												// Конкатинируем в готовый файл
+    .pipe(cssnano())																			// Минифицируем
+    .pipe(gulp.dest('dist/css/'));													// Директория для готового файла 
 });
 
 
@@ -116,12 +116,12 @@ gulp.task('css-all', ['css-libs'], function() {					// Команда в кон�
 // BROWSER-SYNC (npm i browser-sync --save-dev)
 
 gulp.task('browser-sync', function() {									// Команда в консоли |gulp browser-sync|
-	browserSync({
-		server: {
-			baseDir: 'src'																		// Указываем сервер-директорию
-		},
-		notify: true																				// Окна оповещения browser-sync
-	});
+  browserSync({
+    server: {
+      baseDir: 'src'																		// Указываем сервер-директорию
+    },
+    notify: true																				// Окна оповещения browser-sync
+  });
 });
 
 
@@ -129,7 +129,7 @@ gulp.task('browser-sync', function() {									// Команда в консол
 // DEL (для удаления папки dist, нужно перед build)
 
 gulp.task('del', function() {														// Команда в консоли |gulp del|
-	return del.sync('dist');
+  return del.sync('dist');
 });
 
 
@@ -137,21 +137,21 @@ gulp.task('del', function() {														// Команда в консоли |
 // CLEAR (чистка кэша) ВРУЧНУЮ
 
 gulp.task('clear', function() {													// Команда в консоли |gulp clear| (пользоваться лучше вручную)
-	return cache.clearAll();
+  return cache.clearAll();
 });
 
 
 // IMAGEMIN (сжатие изображений)
 
 gulp.task('img', function() {														// Команда в консоли |gulp img|
-	return gulp.src('src/img/**/*')												// Все изображения любых форматов
-	.pipe(cache(imageMin({
-		interlaced: true,
-		progressive: true,
-		scgoPlugins: [{removeVievBox: false}],
-		use: [pngquant()]
-	})))
-	.pipe(gulp.dest('src/img-min/'));											// Куда сохранять обработанные
+  return gulp.src('src/img/**/*')												// Все изображения любых форматов
+    .pipe(cache(imageMin({
+      interlaced: true,
+      progressive: true,
+      scgoPlugins: [{removeVievBox: false}],
+      use: [pngquant()]
+    })))
+    .pipe(gulp.dest('src/img-min/'));											// Куда сохранять обработанные
 });
 
 
@@ -159,13 +159,13 @@ gulp.task('img', function() {														// Команда в консоли |
 // SVG-спрайты (символьный svg-спрайт через id)
 
 gulp.task('icons-sprite', function() {														// Команда в консоли |gulp icons-sprite|
-	return gulp.src('src/img/icons/*.svg')													// Все изображения любых форматов
-	.pipe(svgmin())																								// Минифицируем svg
-	.pipe(svgstore({																								// Делаем спрайт
-		inlineSvg: true
-	}))
-	.pipe(gulp.rename('icons-sprite.svg'))																// Переименовываем
-	.pipe(gulp.dest('dist/img/'));																				// Куда сохранять обработанные
+  return gulp.src('src/img/icons/*.svg')													// Все изображения любых форматов
+    .pipe(svgmin())																								// Минифицируем svg
+    .pipe(svgstore({																								// Делаем спрайт
+      inlineSvg: true
+    }))
+    .pipe(gulp.rename('icons-sprite.svg'))																// Переименовываем
+    .pipe(gulp.dest('dist/img/'));																				// Куда сохранять обработанные
 });
 
 
@@ -173,9 +173,9 @@ gulp.task('icons-sprite', function() {														// Команда в кон�
 // WATCH (устанавливать не надо, стоит по умолчанию)
 
 gulp.task('watch', ['browser-sync', 'less'], function() {					// Команда в консоли |gulp watch|, ['browser-sync и less'] запустится до watch
-	gulp.watch('src/less/**/*.less', ['less']);											// Какие файлы вотчить и какой ['less'] при этом выполнять
-	gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
-	gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
+  gulp.watch('src/less/**/*.less', ['less']);											// Какие файлы вотчить и какой ['less'] при этом выполнять
+  gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
+  gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
 });
 
 
@@ -183,9 +183,9 @@ gulp.task('watch', ['browser-sync', 'less'], function() {					// Команда 
 // WATCH-SASS (если пользуемся sass) 
 
 gulp.task('watch-sass', ['browser-sync', 'sass'], function() {		// Команда в консоли |gulp watch-sass|, ['browser-sync и sass'] запустится до watch
-	gulp.watch('src/sass/**/*.sass', ['sass']);											// Какие файлы вотчить и какой ['sass'] при этом выполнять
-	gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
-	gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
+  gulp.watch('src/sass/**/*.sass', ['sass']);											// Какие файлы вотчить и какой ['sass'] при этом выполнять
+  gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
+  gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
 });
 
 
@@ -193,22 +193,22 @@ gulp.task('watch-sass', ['browser-sync', 'sass'], function() {		// Команд�
 // BUILD (сохранение готовых файлов проекта)
 
 gulp.task('build', ['del', 'img', 'less', 'css-all'], function() {	// Команда в консоли |gulp build|
-	var buildCss = gulp.src([
-		'src/css/*.css'
-	])
-	.pipe(gulp.dest('dist/css'));
+  var buildCss = gulp.src([
+    'src/css/*.css'
+  ])
+    .pipe(gulp.dest('dist/css'));
 
-	var buildFonts = gulp.src('src/fonts/**/*')
-	.pipe(gulp.dest('dist/fonts'));
+  var buildFonts = gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'));
 
-	var buildJs = gulp.src('src/js/**/*')
-	.pipe(gulp.dest('dist/js'));
+  var buildJs = gulp.src('src/js/**/*')
+    .pipe(gulp.dest('dist/js'));
 
-	var buildHtml = gulp.src('src/**/*.html')
-	.pipe(gulp.dest('dist'));
+  var buildHtml = gulp.src('src/**/*.html')
+    .pipe(gulp.dest('dist'));
 
-	var buildImg = gulp.src('src/img-min/**/*')
-	.pipe(gulp.dest('dist/img'));
+  var buildImg = gulp.src('src/img-min/**/*')
+    .pipe(gulp.dest('dist/img'));
 });
 
 
@@ -216,12 +216,12 @@ gulp.task('build', ['del', 'img', 'less', 'css-all'], function() {	// Коман
 // 2.1 Кастомный таск (можно создать самому)
 
 gulp.task('mytask', function() {												// команда в консоли | gulp mytask | и отобразится фраза в консоли
-	console.log('********\n\tМОЖНО \n\tТАК \n\tСОЗДАВАТЬ \n\tСВОИ \n\tТАСКИ \n********');
-	var a, b, c;
-	a = 0.1; 
-	b = 0.2;
-	c = a + b;
-	console.log('a = ' + a, '\nb = ' + b, '\na + b = ' + c);
+  console.log('********\n\tМОЖНО \n\tТАК \n\tСОЗДАВАТЬ \n\tСВОИ \n\tТАСКИ \n********');
+  var a, b, c;
+  a = 0.1; 
+  b = 0.2;
+  c = a + b;
+  console.log('a = ' + a, '\nb = ' + b, '\na + b = ' + c);
 });
 
 
