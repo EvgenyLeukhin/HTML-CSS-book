@@ -204,8 +204,8 @@
       <td>
         Принимает два параметра: <hr>
         1 - что рендерить; <br>
-        React-элементы (принимает только одно значение).<br><br>
-        Можно также записывать React.createElement первым параметром <br><br>
+        ReactDOM принимает только один первый параметр на вход.<br><br>
+        Можно также записывать React.createElement или переменную первым параметром <br><br>
         2 - куда рендерить; <br>
         id тега в html-разметке
       </td>
@@ -274,6 +274,27 @@
           &nbsp;&nbsp;'text ' + this.props.title); <br>
         }
         </code>
+        <h3>Шаблон React-компонента</h3>
+        <span class="gray">// Создаём функцию компонента с параметрами</span>
+        <pre><code>function <mark>Person(props)</mark> {
+  return (
+    &lt;div className="person"&gt;
+      &lt;h1&gt;<mark>{props.name}</mark>&lt;/h1&gt;
+      &lt;p&gt;Your Age: <mark>{props.age}</mark>&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+<span class="gray">// сохраняем шаблон компонента в переменную</span>
+var <mark>app</mark> = (
+  &lt;div&gt;
+     &lt;<mark>Person</mark> name="Max" age="28" /&gt;
+      &lt;<mark>Person</mark> name="Manu" age="29" /&gt;
+  &lt;/div&gt;
+);
+
+<span class="gray">// рендерим этот шаблон в #app</span>
+ReactDOM.render(<mark>app</mark>, document.querySelector('#app'));</code></pre>
       </td>
       <td>Результат будет такой же как в коде выше</td>
     </tr>
