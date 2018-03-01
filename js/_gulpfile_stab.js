@@ -4,7 +4,6 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     watch        = require('gulp-watch'),
     del          = require('del'),
-    rimraf       = require('rimraf'),
     cache        = require('gulp-cache'),
     rigger       = require('gulp-rigger'),
     // компиляция less и scss
@@ -30,7 +29,7 @@ var path = {
   src: {
     html:       'src/*.html',
     less:       'src/less/style.less',
-    scss:       'src/scss/sass.scss',
+    scss:       'src/scss/style.scss',
     jsLibs:     'src/js/all-libs.js',
     jsMain:     'src/js/main.js',
     img:        'src/img/**/*.*',
@@ -40,13 +39,12 @@ var path = {
   watch: {
     html:      ['src/*.html', 'src/html/**/*.html'],
     less:      ['src/less/**/*.less', 'src/_lib/**/*.less'],
-    scss:      ['src/scss/**/*.scss', 'src/_lib/**/*.scss']
+    scss:      ['src/less/**/*.scss', 'src/_lib/**/*.scss']
   },
   // Сборка
   dist: {
     html:  'dist/',
     css:   'dist/css/',
-    less:  'src/less', 
     js:    'dist/js/',
     img:   'dist/img/',
     fonts: 'dist/fonts/'
@@ -68,10 +66,19 @@ gulp.task('browser-sync', function() {
   // browser-sync start --server --directory --files "**/*" // без gulp
 });
 
-// WATCH
-gulp.task('w', ['browser-sync'], function() {
+// WATCH-scss
+gulp.task('ws', ['browser-sync'], function() {
   gulp.watch(path.watch.html,   ['html:build'],    browserSync.reload);
-  gulp.watch(path.watch.scss,   ['scss:watch',],   browserSync.reload);
+  gulp.watch(path.watch.scss,   ['scss:watch'],    browserSync.reload);
+  gulp.watch(path.src.jsLibs,   ['js-libs:build'], browserSync.reload);
+  gulp.watch(path.src.jsMain,   ['js-main:build'], browserSync.reload);
+  gulp.watch(path.src.img,      ['img:build'],     browserSync.reload);
+  gulp.watch(path.src.fonts,    ['fonts:build'],   browserSync.reload);
+});
+
+// WATCH-less
+gulp.task('wl', ['browser-sync'], function() {
+  gulp.watch(path.watch.html,   ['html:build'],    browserSync.reload);
   gulp.watch(path.watch.less,   ['less:watch'],    browserSync.reload);
   gulp.watch(path.src.jsLibs,   ['js-libs:build'], browserSync.reload);
   gulp.watch(path.src.jsMain,   ['js-main:build'], browserSync.reload);
@@ -83,11 +90,6 @@ gulp.task('w', ['browser-sync'], function() {
 // DEL (для удаления папки dist) работает при build
 gulp.task('del', function() {
   return del.sync(path.clean);
-});
-
-// RIMRAF (aналог del)
-gulp.task('rimraf', function (cb) {
-   rimraf(path.clean, cb);
 });
 
 // CLEAR cache 
@@ -123,12 +125,13 @@ gulp.task('scss:build', function() {
     'ie 7'                                                // поддержка IE7
   ], 
     { cascade: true }))                                   // Формаирование кода
-  .pipe(csscomb())                                        // Комбинатор css-правил 
+  .pipe(csscomb())                                        // Комбинатор css-правил
   .pipe(postcss([
     mqpacker({sort: true})                                // Сортировка медиа-выражений
   ]))
-  .pipe(rename(function(path) {path.extname = ".less"}))  // изменяем расширение файла
-  .pipe(gulp.dest(path.dist.less))                        // Название файла будет как у scss
+  // .pipe(cssnano({zindex: false}))                         // минификация
+  // .pipe(rename({suffix: '.min'}))                         // добавить суффикс min
+  .pipe(gulp.dest(path.dist.css))                         // Название файла будет как у scss
   .pipe(browserSync.reload({stream: true}));              // Для перезагрузки сервера browser-sync при изменении
 });
 
@@ -137,8 +140,7 @@ gulp.task('scss:watch', function() {
   return gulp.src(path.src.scss)                          // путь к исходнику style.scss
   .pipe(plumber())                                        // Работа плагина plumber
   .pipe(scss())                                           // scss()
-  .pipe(rename(function(path) {path.extname = ".less"}))  // изменяем расширение файла
-  .pipe(gulp.dest(path.dist.less))                        // Название файла будет как у scss
+  .pipe(gulp.dest(path.dist.css))                         // Название файла будет как у scss
   .pipe(browserSync.reload({stream: true}));              // Для перезагрузки сервера browser-sync при изменении
 });
 
@@ -155,7 +157,7 @@ gulp.task('less:build', function() {
     'ie 7'                                                // поддержка IE7
   ], 
     { cascade: true }))                                   // Формаирование кода
-  .pipe(csscomb())                                        // Комбинатор css-правил ("space-before-opening-brace":" ")
+  .pipe(csscomb())                                        // Комбинатор css-правил
   .pipe(postcss([
     mqpacker({sort: true})                                // Сортировка медиа-выражений
   ]))
@@ -209,13 +211,25 @@ gulp.task('img:build', function() {
   .pipe(browserSync.reload({stream: true}));
 });
 
-
-// ALL BUILD
-gulp.task('b', [
+// ВСЯ СБОРКА
+// build scss
+gulp.task('bs', [
   'clear',
   'del',
   'html:build',
   'scss:build',
+  'js-libs:build',
+  'js-main:build',
+  'fonts:build',
+  'img:build',
+  'build-done'
+]);
+
+// build less
+gulp.task('bl', [
+  'clear',
+  'del',
+  'html:build',
   'less:build',
   'js-libs:build',
   'js-main:build',

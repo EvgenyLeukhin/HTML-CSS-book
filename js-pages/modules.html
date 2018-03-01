@@ -122,14 +122,87 @@
 
       <table class="discription-table" border-spacing: 5px>
         <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">Модули и классы</th>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">export, import</th>
         </tr>
         <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;"></td>
-          <td rowspan="1" style="width: 700px; color: #555;"></td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Можно  экспортировать-импортировать любые константы, функции, объекты, что в ES5 реализуется с помощью <b>CommonJS</b></td>
+          <td style="width: 400px;">
+            <code>const = person { <br>
+              &nbsp;&nbsp;name: 'Evgeny'; <br>
+            }</code><br><br>
+            <code>const = address { <br>
+              &nbsp;&nbsp;city: 'Omsk'; <br>
+            }</code><br><br>
+            <span class="gray">// экспортируем константы</span> <br>
+            <code><mark>export</mark> <span class="red">default</span> person;</code><br>
+            <code><mark>export</mark> address;</code><hr>
+            <span class="gray">// импортируем константу в другом файле</span> <br>
+            <code><mark>import</mark> person <mark>from './person.js'</mark>;</code> <br>
+            <code><mark>import</mark> {address} <mark>from './person.js'</mark>;</code> <br><br>
+            <span class="gray">// или с изменением имена </span> <br>
+            <code><mark>import</mark> {address as Add} <mark>from './address.js'</mark>;</code> <br><br>
+            <span class="gray">// импортировать всё </span> <br>
+            <code>import <mark>*</mark>as bundled <mark>from './person.js'</mark>;</code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            Это новые возможности ES6. <br>
+            Если export без default, то импортировать нужно в фигурных скобках и можно изменить название этой пере
+          </td>
         </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">function-конструктор</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Конструкторы принято называть с большой буквы</td>
+          <td style="width: 400px;">
+            <code>
+              <span class="gray">// создание конструктора</span> <br>
+              var <span class="red">Person</span>  = function(name) { <br>
+              &nbsp;&nbsp;this.name = name; <br>
+              &nbsp;&nbsp;return console.log(this.name); <br>
+              };<br><br>
+              <span class="gray">// вызов  функции-конструктора (new)</span> <br>
+              var person = <span class="red">new</span> Person('Some name');
 
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            КОНСТРУКТОР - это функция, возвращающая объект через ключевое слово this. (Функция, создающая объект с параметрами)<br><br>
+
+            Принимает свойство name и присваивает ему значение. <br><br>
+
+            Можно вызвать этот конструктор через ключевое слово <u>new</u>.
+          </td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">class-конструктор</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Вместо var используем ключевое слово class</td>
+          <td style="width: 400px;">
+            <code>
+              <span class="gray">// создание конструктора</span> <br>
+              <span class="red">class </span>Person {<br>
+              &nbsp;&nbsp;constructor(name) { <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; this.name = name;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp; return console.log(name);<br>
+              &nbsp;&nbsp;} <br>
+              };<br><br>
+              <span class="gray">// вызов  функции-конструктора (new)</span> <br>
+              let person = <span class="red">new</span> Person('Some name');
+
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">В ES6 конструкторы создаются с помощью классов</td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">наследование в классах</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;"></td>
+          <td style="width: 400px;"></td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
+        </tr>
       </table>
 
 

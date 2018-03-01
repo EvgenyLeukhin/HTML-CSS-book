@@ -1,12 +1,5 @@
 .idea
 .DS_Store
 *.log
-node_modules/
-dist/
 Thumbs.db
-*.psd
-*.pdf
-*.ai
-package.json
-gulpfile.js
 node_modules/
