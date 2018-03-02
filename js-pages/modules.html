@@ -174,24 +174,38 @@
             Можно вызвать этот конструктор через ключевое слово <u>new</u>.
           </td>
         </tr>
+
         <tr>
           <th colspan="4" style="font-size: 2em; color: darkcyan;">class-конструктор</th>
         </tr>
         <tr>
           <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Вместо var используем ключевое слово class</td>
           <td style="width: 400px;">
-            <code>
-              <span class="gray">// создание конструктора</span> <br>
-              <span class="red">class </span>Person {<br>
-              &nbsp;&nbsp;constructor(<span class="red">name</span>) { <br>
-              &nbsp;&nbsp;&nbsp;&nbsp; this.<span class="red">name</span> = name;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp; return console.log(name);<br>
-              &nbsp;&nbsp;} <br>
-              };<br><br>
-              <span class="gray">// вызов  функции-конструктора (new)</span> <br>
-              let person = <span class="red">new</span> Person('Some name');
+            <pre><code><span class="gray">// создаётся класс с большой буквы (класс это объект)</span>
+<span class="red">class</span> Person {
+  <span class="gray">// создаётся функция-конструктор этого класса,
+  // присваивающая свойству name этого объекта
+  // значение 'MAX'</span>
+  <span class="red">constructor</span>() { <span class="red">this</span>.name = 'MAX'; }
 
-            </code>
+  <span class="gray">// создаётся функция класса, выводящяя значение
+  // свойства name этого класса</span>
+  printMyName() {
+    console.log(this.name);
+  }
+}
+
+<span class="gray">// используем конструктор класса и создаём новый объект</span>
+<span class="gray">// сохраняем его в константу</span>
+const person = <span class="red">new Person</span>();
+
+<span class="gray">// теперь person это тоже объект со свойством name = 'MAX'</span>
+person.printMyName();  <span class="gray">// 'MAX'</span>
+
+<span class="gray">// но его можно изменить</span>
+person.name = 'Eugin';
+person.printMyName();  <span class="gray">// 'Eugin'</span>
+</code></pre>
           </td>
           <td rowspan="1" style="width: 300px; color: #555;">В ES6 конструкторы создаются с помощью классов и стандартной функции constructor</td>
         </tr>
@@ -200,10 +214,34 @@
         </tr>
         <tr>
           <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Наследование класса</td>
-          <td style="width: 400px;"></td>
+          <td style="width: 400px;">
+            <code>
+class Person { <br>
+&nbsp;&nbsp;constructor() { this.name = 'MAX'; } <br>
+&nbsp;&nbsp;printMyName() { console.log(this.name); } <br>
+} <br>
+ <br>
+ <span class="gray">// создаём новый класс, который наследует свойства другого класса</span> <br>
+class <span class="red">Gender extends Person</span> { <br>
+&nbsp;&nbsp;constructor()   { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">// указываем функцию super для наследавания свойств</span> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">super()</span>; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.gender = 'male'; <br>
+&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;printMyGender() { console.log(this.gender); } <br>
+} <br>
+ <br>
+let some = new Gender(); <br>
+console.log(some.name); <br>
+console.log(some.gender); <br>
+
+            </code>
+          </td>
           <td rowspan="1" style="width: 300px; color: #555;"></td>
         </tr>
       </table>
+
+
 
 
     </div>

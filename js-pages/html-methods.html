@@ -367,10 +367,29 @@
           <code>var convertFormatDate = new Date(<mark>dateToExpire</mark>).toUTCString();</code>
           <span class="gray">// сохранение значений полей</span>
           <code>document.cookie = 'inputVar=' + inputVar.value + ';expires=' + <mark>convertFormatDate</mark>;</code>
+          <hr>
+          <p>Теперь нужно вставить эти сохранённые значения в поля при следуещем визите пользователя (В этом поможет библиотека <b><a href="https://github.com/madmurphy/cookies.js" target="_blank">cookies.js</a></b> (Подключантся в &lt;head&gt;)).  <br>
+          Хранит cookie в объекте <b>docCookies</b></p>
+          <hr>
+          <span class="gray">// если в куках есть сохранённое значение, то оно вставиться в поле из кук, если в куках нет сохраннёных значений, то поле будет пустым</span>
+          <code>
+            inputVar.value = <mark>docCookies</mark>.getItem('inputVar');
+          </code>
+          <hr>
+          <p>В принципе, можно пользоваться только этой библиотекой и для сохранения в куки и для получения значений из кук (но лучше сохранять как в примере выше, так как сохранении кук этой библиотекой имеет проблемы с различными браузерами)</p>
+          <span class="gray">// сохранить куку (число-кол-во секунд)</span>
+          <code>docCookies.<mark>setItem</mark>("cookie-name", "cookie-value", <mark>150</mark>);</code>
+
+          <span class="gray">// получить куку</span>
+          <code>docCookies.<mark>getItem</mark>("cookie-name");</code>
+          <span class="gray">// удалить куку</span>
+          <code>docCookies.<mark>removeItem</mark>("cookie-name");</code>
+          <span class="gray">// проверить куку</span>
+          <code>docCookies.<mark>hasItem</mark>("cookie-name");</code>
         </td>
-        <td>Сохраняем в ключ myFirstCookie значение Somethind. Эти сохранённые значения храняться на сервере тоже. Не более 4KB. Для больших объёмов нужно использовать localStorage  <br><br>
-            Есть библиотека <a href="https://github.com/madmurphy/cookies.js" target="_blank">cookies.js</a> для упрощеия работы с куками. Подключантся в &lt;head&gt; <br><br>
-            Чтобы сохранить cookie нужно при событии отправки (onsubmit),отправку остановить e.preventDefault(), затем сохранить введённые значения в куки, а потом отправить форму .submit()
+        <td>
+          Сохраняем в ключ myFirstCookie значение Somethind. Эти сохранённые значения храняться на сервере тоже. Не более 4KB. Для больших объёмов нужно использовать localStorage  <br><br>
+          Чтобы сохранить cookie нужно при событии отправки (onsubmit),отправку остановить e.preventDefault(), затем сохранить введённые значения в куки, а потом отправить форму .submit()
         </td>
       </tr>
 
