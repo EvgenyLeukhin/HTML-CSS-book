@@ -313,6 +313,33 @@
                 Операторы вида ++ применяются ТОЛЬКО К ПЕРЕМЕННЫМ, нельзя записывать <s>++5</s>
               </td>
             </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">... (Оператор распространения ES6)</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            Оператор распространения
+          </td>
+          <td style="width: 500px;">
+            <code>
+              let oldArray = [1, 2, 4]; <br>
+              let newArray = [<span class="red">...oldArray</span>, 8]; <span class="gray">// [1, 2, 4, 8]</span>
+            </code>
+            <hr>
+            <code><span class="gray">// тоже самое для объектов</span> <br>
+            let oldObj = {pro1: val1, pro2: val2, pro3: val3}; <br>
+              let newObj = {<span class="red">...oldObj</span>, pro4: val4};
+            </code>
+            <hr>
+            <code>
+            <span class="gray">// также можно склеивать аргументы функции в массив и применять к ним методы для массивов</span> <br>
+              function sortArg(<span class="red">...args</span>) { <br>
+              &nbsp;&nbsp;return sortArg.sort(); <br>
+              }
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">Вставить куда-либо элементы массива</td>
+        </tr>
 
             <tr>
                 <th colspan="4" style="font-size: 2em; color: darkcyan;">Побитовые операторы</th>

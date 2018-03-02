@@ -111,6 +111,51 @@
 
     <table class="discription-table" border-spacing: 5px;>
 
+      <tr>
+        <th colspan="4" style="font-size: 2em; color: darkcyan;">Стрелочные функции</th>
+      </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Новая запись (ES6)</td>
+      <td style="width: 500px;">
+        <code>
+          <span class="gray">// старая запись:</span><br>
+          function someFunc(a, b, c) { <br>
+          &nbsp;&nbsp;... <br>
+          } <hr>
+          <span class="gray">// новая запись:</span><br>
+          let someFunc = <span class="red">(a, b, c) =></span> { <br>
+          &nbsp;&nbsp;... <br>
+          } <hr>
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;"></td>
+    </tr>
+
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Более короткая запись кода</td>
+      <td style="width: 400px;">
+        <code>
+          <span class="gray">// ES5</span> <br>
+          var someFunc = function(a, b) { <br>
+          &nbsp;&nbsp;return a + b; <br>
+          }<br><br>
+          <span class="gray">// ES6</span> <br>
+          let somefunc2 = <span class="red">a =></span> a + 2; <br>
+          let somefunc = <span class="red">(a, b) =></span> a + b; <br><br>
+          <span class="gray">// Если более одной строки, то нужны {}</span> <br>
+          let somefunc = <span class="red">(a, b) =></span> { <br>
+          &nbsp;&nbsp; a *= 1000;<br>
+          &nbsp;&nbsp; b *= 1000;<br>
+          &nbsp;&nbsp; return a * b;<br>
+          }
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">Это новые возможности ES6. <br>
+      В скобках параметры, =&gt; указывает на тело функции. <br><br>
+      Если параметр один, то скобки можно опустить, если без параметров - то пустые скобки. <br><br>
+      Если в теле функции одна строка, то фигурные скобки и ключевое слово <u>return</u> можно опустить</td>
+    </tr>
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
                ИНСТРУКЦИЯ ОБЪЯВЛЕНИЯ ФУНКЦИИ <br> <br>
@@ -419,33 +464,7 @@ func2();
       <td rowspan="1" style="width: 300px; color: #555;">Без вторых круглых скобок функция не сработает. <b>Создаётся изолированная область видимости</b>, чтобы код внутри скобок не конфликтовал с другим кодом</td>
     </tr>
 
-    <tr>
-      <th colspan="4" style="font-size: 2em; color: darkcyan;">Стрелочные функции</th>
-    </tr>
-    <tr>
-      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Более короткая запись кода</td>
-      <td style="width: 400px;">
-        <code>
-          <span class="gray">// ES5</span> <br>
-          var someFunc = function(a, b) { <br>
-          &nbsp;&nbsp;return a + b; <br>
-          }<br><br>
-          <span class="gray">// ES6</span> <br>
-          let somefunc2 = <span class="red">a =></span> a + 2; <br>
-          let somefunc = <span class="red">(a, b) =></span> a + b; <br><br>
-          <span class="gray">// Если более одной строки, то нужны {}</span> <br>
-          let somefunc = <span class="red">(a, b) =></span> { <br>
-          &nbsp;&nbsp; a *= 1000;<br>
-          &nbsp;&nbsp; b *= 1000;<br>
-          &nbsp;&nbsp; return a * b;<br>
-          }
-        </code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">Это новые возможности ES6. <br>
-      В скобках параметры, =&gt; указывает на тело функции. <br><br>
-      Если параметр один, то скобки можно опустить, если без параметров - то пустые скобки. <br><br>
-      Если в теле функции одна строка, то фигурные скобки и ключевое слово <u>return</u> можно опустить</td>
-    </t/r>
+
   </table>
 
         <h3>Пример кода расчёта покупки</h3>

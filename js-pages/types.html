@@ -115,6 +115,22 @@
     </tr>
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+          Шаблонные литералы
+      </td>
+      <td style="width: 400px;">
+        <code>
+          let name = '<span class="gray">John</span>'; <br>
+          alert(`<span class="gray">Hello,</span> <span class="red">${name}</span><span class="gray">!</span>`); <span class="gray">// Hello, John!</span>
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+        Облегчает конкатенацию строк. <br><br>
+        Нужно заключать в обратные кавычки и использовать ${...} такой синтаксис
+      </td>
+    </tr>
+    <tr>
+     <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           Строка
       </td>
       <td style="width: 600px;">
@@ -235,21 +251,7 @@ console.log(typeof text); <span class="gray">//object</span>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;"></td>
     </tr>
-    <tr>
-      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-          Шаблонные литералы
-      </td>
-      <td style="width: 400px;">
-        <code>
-          let name = '<span class="gray">John</span>'; <br>
-          alert(`<span class="gray">Hello,</span> <span class="red">${name}</span><span class="gray">!</span>`);
-        </code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">
-        Облегчает конкатенацию строк. <br><br>
-        Нужно заключать в обратные кавычки и использовать ${...} такой синтаксис
-      </td>
-    </tr>
+
 
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">number</th>

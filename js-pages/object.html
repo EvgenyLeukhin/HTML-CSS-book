@@ -33,11 +33,11 @@
             <li>
                 <a href="#">Основы</a>
                 <ul class="sub-menu sub-menu9">
-                    <li><a href="js-lang.html">Язык JS</a></li>
-                    <li><a href="load.html">Загрузка</a></li>
-              <li><a href="types.html">Типы данных</a></li>
-              <li><a href="var.html">Переменные</a></li>
-              <li><a href="operators.html">Операторы</a></li>
+                  <li><a href="js-lang.html">Язык JS</a></li>
+                  <li><a href="load.html">Загрузка</a></li>
+                  <li><a href="types.html">Типы данных</a></li>
+                  <li><a href="var.html">Переменные</a></li>
+                  <li><a href="operators.html">Операторы</a></li>
 
               <li><a href="algorythm.html">Алгоритмы</a></li>
               <li><a href="if-else.html">Условия</a></li>
@@ -353,8 +353,37 @@ for (var i = 1; i <= 3 ; i++) {
       </td>
       <td style="color: #000;">this указывает на принадлежность к текущему объекту, как бы глубоко не находились его свойства</td>
     </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Копия объекта и копия свойств объекта</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"></td>
+      <td style="width: 400px">
+<code>
+<span class="gray">// создаём объект со свойством name</span> <br>
+var someObj = { name: 'First-name' }; <br>
+ <br>
+<span class="gray">// создаём копию этого объекта в переменной copyObj</span> <br>
+var copyObj = someObj; <br>
+ <br>
+<span class="gray">// меняем name у копии </span> <br>
+copyObj.name = 'Anoter-name'; <br>
+ <br>
+<span class="gray">// name у оригинала тоже меняется</span> <br>
+console.log(someObj.name); <br>
+<hr>
+<span class="gray">// но если создать копию таким способом, то перебиваться значения не
+будут</span> <br>
+var copyObj2 = { <br>
+&nbsp;&nbsp;<span class="red">...someObj</span> <br>
+}
 
-        </table>
+</code>
+      </td>
+      <td style="color: #000;">Так как объект и его копия занимают одну ячейку памяти, то свойства у них меняются синхронно</td>
+    </tr>
+
+    </table>
   </div>
 </div>
 
