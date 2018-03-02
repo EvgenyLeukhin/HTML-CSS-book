@@ -228,7 +228,15 @@
       </tr>
       <tr>
         <td><h2>.forms</h2></td>
-        <td><code>docuement.<mark>forms</mark>;</code></td>
+        <td>
+          <code>docuement.<mark>forms</mark>;</code> <br>
+          <span class="gray">// форма с id</span>
+          <code>var someForm = docuement.forms['<mark>some-id</mark>']</code>
+          <span class="gray">// поля этой формы c id</span>
+          <code>someForm['<mark>some-input-1</mark>'];</code> <br>
+          <code>someForm['<mark>some-input-2</mark>'];</code> <br>
+
+        </td>
         <td>DOM-коллекция всех форм</td>
       </tr>
       <tr>
@@ -348,14 +356,21 @@
         <th colspan="3"><code>Cookies</code></th>
       </tr>
       <tr>
-        <td><h2>Cookies</h2></td>
+        <td><h2>Сохранять значения в сookies</h2></td>
         <td>
           <code>document.<mark>cookie</mark> = 'myFirstCookie=Something'; </code>
           <span class="gray">// show all cookies</span>
           <code>alert(document.<mark>cookie</mark>); </code>
+          <span class="gray">// создаём шаблон даты для cookie (3 дня)</span>
+          <code>var dateToExpire = +<mark>Date.now</mark>() + <mark>3</mark>*24*60*60*1000;</code>
+          <span class="gray">// переводим её в читаемый вид для cookie</span>
+          <code>var convertFormatDate = new Date(<mark>dateToExpire</mark>).toUTCString();</code>
+          <span class="gray">// сохранение значений полей</span>
+          <code>document.cookie = 'inputVar=' + inputVar.value + ';expires=' + <mark>convertFormatDate</mark>;</code>
         </td>
         <td>Сохраняем в ключ myFirstCookie значение Somethind. Эти сохранённые значения храняться на сервере тоже. Не более 4KB. Для больших объёмов нужно использовать localStorage  <br><br>
-            Есть библиотека <a href="https://github.com/madmurphy/cookies.js" target="_blank">cookies.js</a> для упрощеия работы с куками. Подключантся в &lt;head&gt;
+            Есть библиотека <a href="https://github.com/madmurphy/cookies.js" target="_blank">cookies.js</a> для упрощеия работы с куками. Подключантся в &lt;head&gt; <br><br>
+            Чтобы сохранить cookie нужно при событии отправки (onsubmit),отправку остановить e.preventDefault(), затем сохранить введённые значения в куки, а потом отправить форму .submit()
         </td>
       </tr>
 
