@@ -183,8 +183,8 @@
             <code>
               <span class="gray">// создание конструктора</span> <br>
               <span class="red">class </span>Person {<br>
-              &nbsp;&nbsp;constructor(name) { <br>
-              &nbsp;&nbsp;&nbsp;&nbsp; this.name = name;<br>
+              &nbsp;&nbsp;constructor(<span class="red">name</span>) { <br>
+              &nbsp;&nbsp;&nbsp;&nbsp; this.<span class="red">name</span> = name;<br>
               &nbsp;&nbsp;&nbsp;&nbsp; return console.log(name);<br>
               &nbsp;&nbsp;} <br>
               };<br><br>
@@ -193,13 +193,13 @@
 
             </code>
           </td>
-          <td rowspan="1" style="width: 300px; color: #555;">В ES6 конструкторы создаются с помощью классов</td>
+          <td rowspan="1" style="width: 300px; color: #555;">В ES6 конструкторы создаются с помощью классов и стандартной функции constructor</td>
         </tr>
         <tr>
-          <th colspan="4" style="font-size: 2em; color: darkcyan;">наследование в классах</th>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">class extends</th>
         </tr>
         <tr>
-          <td colspan="2" style="color: black; font-weight: bold; width: 300px;"></td>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Наследование класса</td>
           <td style="width: 400px;"></td>
           <td rowspan="1" style="width: 300px; color: #555;"></td>
         </tr>
