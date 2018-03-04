@@ -291,7 +291,7 @@ console.log(typeof text); <span class="gray">//object</span>
 
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-          Формы записи
+          Формы записи<br>(16, 10, 8, 2)
       </td>
       <td style="width: 400px;">
         <code>
@@ -299,6 +299,8 @@ console.log(typeof text); <span class="gray">//object</span>
 console.log(<span class="red">0x</span>abc123);    <span class="gray">//11256099</span><br>
 <span class="gray">8-ми:</span><br>
 console.log(<span class="red">0</span>123);    <span class="gray">//83</span><br>
+<span class="gray">2-чная:</span><br>
+console.log(<span class="red">0b</span>1001);    <span class="gray">//9</span><br>
 <span class="gray">В дробных значениях, если перед точкой стоит ноль, его можно опустить:</span><br>
 console.log(.123);    <span class="gray">//0.123</span><br>
 <span class="gray">Экспонентальная форма (х10 в степени):</span><br>
@@ -417,7 +419,8 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
                 Когда интерпретатор JS не понимает к какому типу отсносится элемент. Значение отсутствует.
-                Определяется как undefined.
+                Определяется как undefined. <br>
+                Служебный тип
       </td>
     </tr>
 
@@ -435,7 +438,8 @@ a = Boolean(!false); <span class="gray">//true</span><hr>
         </code>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
-                Определяется как объект.
+                Определяется как объект. <br>
+                Служебный тип
       </td>
     </tr>
 

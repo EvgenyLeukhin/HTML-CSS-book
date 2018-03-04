@@ -128,6 +128,8 @@
         2. HTMLBodyElement</b>
       </td>
       <td rowspan="1" style="width: 300px; color: #555;">
+        DOM - это объект, через который с JS может взаимодействовать с html-разметкой.
+        <br><br>
         Работа с DOM - это работа с методами, поэтому все ключевые фразы записываются
         через точку
       </td>
@@ -155,23 +157,6 @@
 
       </td>
     </tr>
-
-    <tr>
-      <th colspan="5" style="font-size: 2em; color: darkcyan;">window</th>
-    </tr>
-    <tr>
-      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
-          window <br>(ОКНО, внутри кот. находится DOM-дерево), всё нохадится в нём, даже document
-      </td>
-           <td style="width: 600px;">
-        <code>
-          window.<span class="gray"><i>методы</i></span>
-        </code>
-      </td>
-            <td rowspan="1" style="width: 300px; color: #555;">
-        По умолчанию стоит у методов <code>alert, prompt, confirm</code>
-      </td>
-    </tr>
     <tr>
       <th colspan="5" style="font-size: 2em; color: darkcyan;">document</th>
     </tr>
@@ -190,6 +175,44 @@
         Так язык JS взаимодействует с веб-страницей через DOM
       </td>
     </tr>
+
+    <tr>
+      <th colspan="5" style="font-size: 2em; color: darkcyan;">BOM</th>
+    </tr>
+    <tr>
+      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">Browser object model</td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+        <code>
+          screen <br>
+          location <br>
+          history <br>
+          cokkies <br>
+          localStorage <br>
+          Date, time <br>
+          ...
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">BOM - объект для взаимодействия с браузером</td>
+    </tr>
+
+    <tr>
+      <th colspan="5" style="font-size: 2em; color: darkcyan;">window</th>
+    </tr>
+    <tr>
+      <td colspan="3" style="color: black; font-weight: bold; width: 300px;">
+          <mark>КОРЕНЬ ВСЕГО</mark><br><br>
+          ОКНО, внутри кот. находится DOM-дерево и всё содержимое.
+      </td>
+           <td style="width: 600px;">
+        <code>
+          window.<span class="gray"><i>методы</i></span>
+        </code>
+      </td>
+            <td rowspan="1" style="width: 300px; color: #555;">
+        По умолчанию стоит у методов <code>alert, prompt, confirm</code>
+      </td>
+    </tr>
+
     <tr>
       <th colspan="5" style="font-size: 2em; color: darkcyan;">location</th>
     </tr>
