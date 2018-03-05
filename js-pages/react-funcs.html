@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Мой Справочник | JS | React</title>
+    <title>Мой Справочник | JavaScript | React | Основные функции</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
           </ul>
         </li>
         <li>
-          <a class="active" href="js-pages/react.html"><span class="react">React</span></a>
+          <a class="active" href="react.html"><span class="react">React</span></a>
           <ul class="sub-menu sub-menu-react">
             <li><a href="react-start.html">Старт проекта</a></li>
             <li><a href="react-funcs.html">Основные функции</a></li>
@@ -110,9 +110,93 @@
   </div>
   <div class="content clearfix">
 
-  <h2>Мой Справочник | JavaScript | React</h2>
-  <a href="https://reactjs.org/" target="_blank"><mark>reactjs.org</mark></a> - Официальная документация
+  <h2>Мой Справочник | JavaScript | React | Основные функции</h2>
 
+  <table class="new-table">
+
+    <tr>
+      <th colspan="3">
+        <code>React.createElement()</code>
+      </th>
+    </tr>
+
+    <tr>
+      <td>Создание React-элемента</td>
+      <td>
+        <span class="gray">// &lt;h1&gt;Some text&lt;/h1&gt;</span>
+        <code>var h1 = <mark>React.createElement</mark>( <br>
+        &nbsp;&nbsp;'h1',<br>
+        &nbsp;&nbsp;&nbsp;null,<br>
+        &nbsp;&nbsp;'Some text' <br>
+        );</code> <hr>
+        <span class="gray">// &lt;h1 class="some-class"&gt;Some text&lt;/h1&gt;</span>
+        <code>var h1 = <mark>React.createElement</mark>( <br>
+        &nbsp;&nbsp;'h1',<br>
+        &nbsp;&nbsp;&nbsp;<mark>{className: 'some-class'}</mark>,<br>
+        &nbsp;&nbsp;'Some text' <br>
+        );</code>
+      </td>
+      <td>
+        Принимает три параметра: <hr>
+        1 - какой элемент создавать; <br>
+        2 - параметры элемента <br>
+        3 - содержание элемента <br><br>
+        Могут быть также различные переменные в третьем параметре (принимает сколь угодно значений)
+      </td>
+    </tr>
+
+    <tr>
+      <th colspan="3">
+        <code>ReactDOM.render()</code>
+      </th>
+    </tr>
+    <tr>
+      <td>Основная функция для построения виртуального DOM</td>
+      <td>
+        <code>
+          <mark>ReactDOM.render</mark>( <br>
+          &nbsp;&nbsp;h1, <br>
+          &nbsp;&nbsp;document.<mark>getElementById</mark>('content') <br>
+          ); <br> <br> <br>
+          &lt;div id="content"&gt;&lt;h1&gt;Some text&lt;/h1&gt;&lt;/div&gt;
+        </code> <hr>
+
+        <code>
+          ReactDOM.render( <br>
+          &nbsp;&nbsp;<mark>React.createElement('div', null,   h1,h1,h1)</mark>, <br>
+          &nbsp;&nbsp;document.getElementById('content') <br>
+          );<br> <br> <br>
+          &lt;div id="content"&gt; <br>
+          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
+          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
+          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
+          &lt;/div&gt;
+        </code>
+      </td>
+      <td>
+        Принимает два параметра: <hr>
+        1 - что рендерить; <br>
+        ReactDOM принимает только один первый параметр на вход.<br><br>
+        Можно также записывать React.createElement или переменную первым параметром <br><br>
+        2 - куда рендерить; <br>
+        id тега в html-разметке
+      </td>
+    </tr>
+
+
+
+
+
+    <tr>
+      <th colspan="3"><code>jsx</code></th>
+    </tr>
+    <tr>
+      <td>Этот формат симбиоз js и html. В нём можно записывать html-код как и в html-файлах без кавычек. </td>
+      <td></td>
+      <td>Транспилируется с помощью транспилятора <b>babel</b></td>
+    </tr>
+
+  </table>
 
 
   </div>

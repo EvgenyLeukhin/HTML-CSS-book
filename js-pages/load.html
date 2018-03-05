@@ -139,7 +139,7 @@
             </tr>
             <tr>
                 <td rowspan="2" style="color: black; font-weight: bold; width: 300px;">
-                  async <br> <br>
+                  <h1>async</h1> <br> <br>
                   <mark>Без src-атрибута использовать НЕЛЬЗЯ</mark>
                 </td>
                 <td style="width: 400px;">
@@ -148,8 +148,6 @@
                 </td>
                 <td style="width: 300px; color: #555;">
                   При старте загрузкеи скрипта не будет блокироваться отрисовка html, но будет блокироваться при старте выполнения скрипта(после окончания загрузки)
-                  <br><br>
-                  Порядок загрузки будет таким - какой скрипт загрузится первым - тот первым и выполниться.
                 </td>
             </tr>
             <tr>
@@ -160,22 +158,19 @@
 &lt;script <span class="red">async="true"</span> src="<span class="gray">gallery.js</span>"&gt;&lt;/script&gt;</pre></code>
                 </td>
                 <td style="width: 300px; color: #555;">
-Если скриптов с <span class="red">async</span> несколько, то порядок их загрузки может не совпать с порядком
-коде.
+Если скриптов с <span class="red">async</span> несколько, то порядок их загрузки и выполнения может не совпать с порядком в коде. Какой скрипт згрузится первым - тот и будет первым выполняться
                 </td>
             </tr>
 
             <tr>
                 <td  rowspan="2" style="color: black; font-weight: bold; width: 300px;">
-                  defer (После загрузки страницы)
+                  <h1>defer</h1> (После загрузки страницы)
                 </td>
                 <td style="width: 400px;">
                     <code><pre>
 &lt;script <span class="red">defer</span> src="<span class="gray">main.js</span>"&gt;&lt;/script&gt;</pre></code>
                 </td>
-                <td style="width: 300px; color: #555;">Скрипт не будет блокировать отрисовку страницы даже после загрузки, он будет ждать момента, когда страница отрисуется полностью.  <br><br>
-                Порядок загрузки соблюдается по порядку в коде</td>
-            </tr>
+                <td style="width: 300px; color: #555;">Скрипт не будет блокировать отрисовку страницы даже после загрузки, он будет ждать момента, когда страница отрисуется полностью.</tr>
             <tr>
                 <td style="width: 400px;">
                     <code><pre>

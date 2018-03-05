@@ -238,7 +238,8 @@ body {
   top: -10px;
 }
 
-.vert-menu .sub-menu-nodejs {
+.vert-menu .sub-menu-nodejs,
+.vert-menu .sub-menu-react {
   left: 75px;
   top: 0;
 }
