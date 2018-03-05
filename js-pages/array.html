@@ -412,25 +412,7 @@
             <br> 3 и последующие - элементы, которые нужно вставить на место удалённых
           </td>
         </tr>
-        <tr>
-          <th colspan="4" style="font-size: 2em; color: darkcyan;">map() ES6</th>
-        </tr>
 
-        <tr>
-          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Функция для изменения элементов в массиве</td>
-          <td style="width: 400px;">
-            <code>
-
-            </code>
-          </td>
-          <td rowspan="1" style="width: 300px; color: #555;">
-
-          </td>
-        </tr>
-
-      </table>
-
-      <table class="discription-table" border-spacing: 5px;>
         <tr>
           <th colspan="4" style="font-size: 2em; color: darkcyan;">Многомерные массивы</th>
         </tr>
@@ -468,7 +450,7 @@
         </tr>
 
         <tr>
-          <th colspan="4" style="font-size: 2em; color: darkcyan;">Цикл for и массивы</th>
+          <th colspan="4" style="font-size: 3em; color: darkcyan;">Циклы и массивы</th>
         </tr>
         <tr>
           <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
@@ -487,6 +469,141 @@
           </td>
           <td rowspan="1" style="width: 300px; color: #555;"></td>
         </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">forEach()</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            Специальная функция в JS для <mark>ПЕРЕБОРКИ</mark> элементов массива
+          </td>
+          <td style="width: 500px;">
+            <code>
+              var arr = [1, 2, 3]; <br>
+              <span class="gray">// перебор элементов</span>
+              arr.<span class="red">forEach</span>(function(item, index, array) { <br>
+              &nbsp;&nbsp;console.log(<span class="red">item</span>); <br>
+              }); <br>
+              <span class="gray">// перебор индексов</span>
+              arr.<span class="red">forEach</span>(function(item, index, array) { <br>
+              &nbsp;&nbsp;return console.log(<span class="red">index</span>); <br>
+              }); <br>
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            Тип данных у элементов массива должен быть одинаковым. <br><br>
+            Третий параметр array возвращает сам массив
+          </td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">map()</th>
+        </tr>
+
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Функция для <mark>ИЗМЕНЕНИЯ</mark> элементов в массиве.<br><br>Мапирование</td>
+          <td style="width: 400px;">
+            <code>
+              var arr = [1, 2, 3]; <br>
+              <span class="gray">// создаём новый массив по карте основного</span> <br>
+              var arr2 = arr.<span class="red">map</span>(function(item, i, arr) { <br>
+              &nbsp;&nbsp; <span class="gray">// умножим элементы на 2</span><br>
+              &nbsp;&nbsp; return <span class="red">item * 2</span>; <br>
+              }); <br>
+              <span class="gray">// выводим новый массив [2,4,6]</span> <br>
+              console.log(<span class="red">arr2</span>);
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">filter()</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            Функция для возвращения определённых значений массива. <mark>ФИЛЬТРАЦИЯ</mark>
+          </td>
+
+          <td style="width: 400px;">
+            <code>
+              var arr = [1, 2, 3]; <br>
+              var arr2 = arr.<span class="red">filter</span>(function(item, i, arr) { <br>
+              <span class="gray">// выведем только нечётные</span><br>
+              &nbsp;&nbsp;return item%2 !==0; <br>
+              }); <br>
+              <span class="gray">// выводим новый массив [1,3]</span> <br>
+              console.log(<span class="red">arr2</span>);
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">some()</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            Проверяет элемент массива на соответствие какому-либо <mark>УСЛОВИЮ</mark>
+          </td>
+
+          <td style="width: 400px;">
+            <code>
+              var arr = [1, 2, 3]; <br>
+              var checkTrue = arr.<span class="red">some</span>(function(item, i, arr) { <br>
+              <span class="gray">// проверим массив на содержание в нём нечётных элементов</span><br>
+              &nbsp;&nbsp;return item%2 !==0; <br>
+              }); <br>
+              <span class="gray">// выводим результат проверки</span> <br>
+              console.log(<span class="red">checkTrue</span>); <span class="gray">// true</span>
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">Возвращает true, если хотя бы один элемент true.  <br><br>
+          Когда  "наткнётся" на первое true, то цикл прекращается и возвращается true</td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">every()</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            Проверяет <mark>ВСЕ</mark> элементы массива на соответствие какому-либо <mark>УСЛОВИЮ</mark>
+          </td>
+
+          <td style="width: 400px;">
+            <code>
+              var arr = [1, 2, 3]; <br>
+              var checkFalse = arr.<span class="red">every</span>(function(item, i, arr) { <br>
+              <span class="gray">// проверим массив на содержание в нём нечётных элементов</span><br>
+              &nbsp;&nbsp;return item%2 !==0; <br>
+              }); <br>
+              <span class="gray">// выводим результат проверки</span> <br>
+              console.log(<span class="red">checkFalse</span>); <span class="gray">// false</span>
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">Возвращает false, если хотя бы один элемент false.  <br><br>
+          Когда  "наткнётся" на первый false, то цикл прекращается и возвращается false</td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">reduce()</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            Функция для "<mark>СВОРАЧИВАНИЯ</mark>" массива в одно значение
+          </td>
+
+          <td style="width: 400px;">
+            <code>
+              var arr = [1, 2, 3]; <br>
+              var arr2 = arr.<span class="red">reduce</span>(function(preVal, item) { <br>
+              &nbsp;&nbsp;<span class="gray">// сложение элементов</span> <br>
+              &nbsp;&nbsp;return preVal + item; <br>
+              }, 0); <br>
+              <span class="gray">// сумма элементов массива</span> <br>
+              console.log(<span class="red">arr2</span>); <span class="gray">// 6</span>
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            <code>preVal</code> - предыдущий элемент <br><br>
+            <code>0</code> - второй аргумент функции (НАЧАЛЬНОЕ ЗНАЧЕНИЕ)
+          </td>
+        </tr>
+
       </table>
 
       <h3>Поиск мин. значения в массиве</h3>
