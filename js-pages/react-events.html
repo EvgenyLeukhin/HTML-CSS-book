@@ -120,13 +120,73 @@
 
     <tr>
       <td><h2>onClick</h2></td>
-      <td><code>onClick={this.someFunc}</code></td>
-      <td>Обработка клика</td>
+      <td>
+        <code>onClick={this.someFunc}</code> <hr>
+        <h2>Можно использовать для отслеживания изменения свойств объекта данных</h2>
+        <pre><code style="font-size: .75em;">class <mark>App</mark> extends Component {
+  // объект данных
+  <mark>state</mark> = {
+    persons: [
+      { name: 'Ivan',   age: '34', city: 'Moskva'},
+      { name: 'Sergei', age: '23', city: 'Tomsk' },
+      { name: 'Semion', age: '19', city: 'Samara'}
+    ]
+  }
+  // функция клика меняющаяя данные
+  <mark>switchName</mark> = () => {
+    // setState - метод, который изменяет данные в объекте state
+    <mark>this.setState</mark>({
+      persons: [
+        { name: 'Ivan',   age: '33', city: 'New Moskva' },
+        { name: 'Sergei', age: '33', city: 'New Tomsk' },
+        { name: 'Semion', age: '33', city: 'New Samara' }
+      ]
+    })
+  }
+
+  render() {
+    return (
+      &lt;div className="App"&gt;
+        &lt;h1>Hello React App&lt;/h1&gt;
+        &lt;button <mark>onClick={this.switchName}</mark>&gt;
+          Switch data
+        &lt;/button&gt;
+        &lt;Person
+          name={this.state.persons[0].name}
+           age={this.state.persons[0].age}
+          city={this.state.persons[0].city}
+        /&gt;
+        &lt;Person
+          name={this.state.persons[1].name}
+           age={this.state.persons[1].age}
+          city={this.state.persons[1].city}
+        /&gt;
+        &lt;Person
+          name={this.state.persons[2].name}
+           age={this.state.persons[2].age}
+          city={this.state.persons[2].city}
+        &gt;Some text&lt;/Person&gt;
+      &lt;/div&gt;
+    );
+  }
+}</code></pre>
+<p>После клика будут сравнены новый объект с основным, если данные не совпадают, то они изменяться</p>
+      </td>
+      <td>Обработка клика внутри App.js</td>
     </tr>
-
+    <tr>
+      <td><h2>onClick в компоненте</h2></td>
+      <td>
+        <h3>Обработка клика из компонента</h3>
+        <code>
+          <span class="gray">// нужно добавить клик в компонент как его свойство</span>
+          &lt;p <mark>onClick={props.click}</mark>&gt;My name is &lt;b>{props.name}&lt;/b&gt;&lt;/p&gt;
+          <span class="gray">// И добавить в рендер сназванием функции</span>
+          &lt;Person <mark>click={this.switchName}</mark> /&gt;</code>
+      </td>
+      <td>Вызов функций же может быть как свойство объекта</td>
+    </tr>
   </table>
-
-
   </div>
 </div>
 
