@@ -64,6 +64,7 @@
             <li><a href="react-funcs.html">Основные функции</a></li>
             <li><a href="react-component.html">React-компонент</a></li>
             <li><a href="react-events.html">React-события</a></li>
+            <li><a href="react-styling.html">React-styles</a></li>
           </ul>
         </li>
         <li>
@@ -124,15 +125,20 @@
         <code><span class="gray">// импортируем React</span>
         <mark>import</mark> React from 'react';
         <span class="gray">// функция, создающая компонент</span>
-        const <mark>SomeComponent</mark> = () =&gt; { <br>
-        &nbsp;&nbsp;return &lt;h1&gt;Hello, World!&lt;/h1&gt;<br>
-        };<br><hr>
-        </code>
+        const <mark>someComponent</mark> = () =&gt; { <br>
+        &nbsp;&nbsp;return( <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Hello, React!&lt;/h2&gt;<br>
+        &nbsp;&nbsp;); <br>
+        };<br>
+        <span class="gray">// экспортируем константу</span>
+        export default <mark>someComponent</mark>;<hr></code>
+
         <h3>Рендеринг (App.js)</h3>
 
         <code>
-          class App extends Component { <br>
-          &nbsp;&nbsp;render() { return (&lt;<mark>SomeComponent /</mark>&gt;); } <br>
+          class App extends SomeComponent { <br>
+          &nbsp;&nbsp;render() { return (&lt;<mark>someComponent /</mark>&gt;); } <br>
           }
         </code>
 
@@ -152,7 +158,9 @@
           <span class="gray">// создаём класс компонента</span>
           <mark>class SomeComponent extends Component</mark> { <br>
           &nbsp;&nbsp;return &lt;h1&gt;Hello, World!&lt;/h1&gt;<br>
-          }; <br>
+          };
+          <span class="gray">// экспортируем класс</span>
+        export default <mark>someComponent</mark>;
         </code> <hr>
         <h3>Рендеринг (App.js)</h3>
 

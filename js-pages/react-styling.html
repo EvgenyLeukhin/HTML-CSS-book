@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Мой Справочник | JS | React | React-события</title>
+    <title>Мой Справочник | JavaScript | React | React-styles</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
           </ul>
         </li>
         <li>
-          <a class="active" href="react.html"><span class="react">React</span></a>
+          <a class="active" href="js-pages/react.html"><span class="react">React</span></a>
           <ul class="sub-menu sub-menu-react">
             <li><a href="react-start.html">Старт проекта</a></li>
             <li><a href="react-funcs.html">Основные функции</a></li>
@@ -111,108 +111,54 @@
   </div>
   <div class="content clearfix">
 
-  <h2>Мой Справочник | JavaScript | React | React-события</h2>
+  <h2>Мой Справочник | JavaScript | React | React-styles</h2>
 
   <table class="new-table">
-
     <tr>
-      <th colspan="3"><code>React-события</code></th>
-    </tr>
-
-    <tr>
-      <td>
-        <h2>onClick</h2>
-        Событие по клику
-      </td>
-      <td>
-        <code>onClick={this.someFunc}</code> <hr>
-        <h2>Можно использовать для отслеживания изменения свойств объекта данных</h2>
-        <pre><code style="font-size: .75em;">class <mark>App</mark> extends Component {
-  // объект данных
-  <mark>state</mark> = {
-    persons: [
-      { name: 'Ivan',   age: '34', city: 'Moskva'},
-      { name: 'Sergei', age: '23', city: 'Tomsk' },
-      { name: 'Semion', age: '19', city: 'Samara'}
-    ]
-  }
-  // функция клика меняющаяя данные
-  <mark>switchName</mark> = () => {
-    // setState - метод, который изменяет данные в объекте state
-    <mark>this.setState</mark>({
-      persons: [
-        { name: 'Ivan',   age: '33', city: 'New Moskva' },
-        { name: 'Sergei', age: '33', city: 'New Tomsk' },
-        { name: 'Semion', age: '33', city: 'New Samara' }
-      ]
-    })
-  }
-
-  render() {
-    return (
-      &lt;div className="App"&gt;
-        &lt;h1>Hello React App&lt;/h1&gt;
-        &lt;button <mark>onClick={this.switchName}</mark>&gt;
-          Switch data
-        &lt;/button&gt;
-        &lt;Person
-          name={this.state.persons[0].name}
-           age={this.state.persons[0].age}
-          city={this.state.persons[0].city}
-        /&gt;
-        &lt;Person
-          name={this.state.persons[1].name}
-           age={this.state.persons[1].age}
-          city={this.state.persons[1].city}
-        /&gt;
-        &lt;Person
-          name={this.state.persons[2].name}
-           age={this.state.persons[2].age}
-          city={this.state.persons[2].city}
-        &gt;Some text&lt;/Person&gt;
-      &lt;/div&gt;
-    );
-  }
-}</code></pre>
-<p>После клика будут сравнены новый объект с основным, если данные не совпадают, то они изменяться</p>
-      </td>
-      <td>Обработка клика внутри App.js</td>
+      <th colspan="3"><code>Стилизация</code></th>
     </tr>
     <tr>
-      <td><h2>onClick в компоненте</h2></td>
       <td>
-        <h3>Обработка клика из компонента</h3>
+        <h2>I способ</h2>
+        Импорт стилей в <b>App.js</b>
+      </td>
+      <td>
         <code>
-          <span class="gray">// нужно добавить клик в компонент как его свойство</span>
-          &lt;p <mark>onClick={props.click}</mark>&gt;My name is &lt;b>{props.name}&lt;/b&gt;&lt;/p&gt;
-          <span class="gray">// И добавить в рендер сназванием функции</span>
-          &lt;Person <mark>click={this.switchName}</mark> /&gt;</code>
+          <span class="gray">// импортируем стили в App.js</span>
+          import '<mark>./SomeComponent/SomeComponent.css'</mark>;
+        </code>
       </td>
-      <td>Вызов функций же может быть как свойство объекта</td>
+      <td>
+        Работу по импорту css-файлов в App.js осуществляет Webpack
+      </td>
     </tr>
     <tr>
       <td>
-        <h2>onChange</h2>
-        Событие на изменение значения поля
+        <h2>II способ</h2>
+        Инлайн-стилитизация
       </td>
-      <td><code>
-        <span class="gray">// добаляем поле в компонент и навешиваем на него событие onChange, которое равно значению свойства changed</span>
-        &lt;input type='text' <mark>onChange={props.changed}</mark> /&gt; <br><br>
-        <span class="gray">// добавляем ещё одно свойство в рендеринг компонента и присваиваиваем ему функцию printName</span>
-        <mark>changed={this.printName}</mark> <br> <br>
-        <span class="gray">// создаём функцию для работы с этим событием</span>
-        <pre><mark>printhName</mark> = (<mark>event</mark>) => {
-  this.setState({
-    persons: [
-      { name: 'Ivan', ... },
-      { name: <mark>event.target.value</mark>, ... },
-      { name: 'Semion', ... }
-    ]
-  })
-}</pre></code></td>
-      <td>При изменении значения поля будет изменено свойство name</td>
+      <td>
+        <code>render() {
+<span class="gray">&nbsp;&nbsp;// после рендера создаём объект style</span>
+&nbsp;&nbsp;const <mark>style</mark> = { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; color: 'white',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; fontSize: '20px',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; border: '1px solid #ccc',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; backgroundColor: 'blue'<br>
+&nbsp;&nbsp;}; <br><br>
+&nbsp;&nbsp;... <br>
+} <br>
+<span class="gray">// а замем нужно присвоить этот объект атрибуту style</span>
+&lt;button <mark>style={style}</mark>&gt;
+        </code>
+      </td>
+      <td>
+        css-свойства должны записываться в js-формате (в camelCase)
+      </td>
     </tr>
   </table>
+
+
   </div>
 </div>
 
