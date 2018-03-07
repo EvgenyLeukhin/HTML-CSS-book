@@ -7,6 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+      ol {
+        list-style-position: outside;
+        padding-left: 0;
+      }
+      ol > li { 
+        padding: 5px;
+        font-size: 20px;
+      }
+      ol > li b { text-decoration: underline; }
+    </style>
 </head>
 
 <body>
@@ -113,6 +124,16 @@
 
   <h2>Мой Справочник | JavaScript | React</h2>
   <a href="https://reactjs.org/" target="_blank"><mark>reactjs.org</mark></a> - Официальная документация
+
+  <h1>Этапы разработки на React</h1>
+  <ol>
+    <li>Разворачивание стартера <b>create-react-app</b>;</li>
+    <li><b>Вёрска компонентов</b> (отдельные папки, отдельные файлы);</li>
+    <li><b>Импорт</b> файлов компонентов в App.js;</li>
+    <li><b>Сохранение данных</b> компонентов в state;</li>
+    <li>Написание функций для <b>обработки событий</b> с компонентами;</li>
+    <li><b>Билдинг</b> проекта и оптимизация.</li>
+  </ol>
 
 
 

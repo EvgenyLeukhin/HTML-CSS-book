@@ -212,6 +212,28 @@
 }</pre></code></td>
       <td>При изменении значения поля будет изменено свойство name</td>
     </tr>
+    <tr>
+      <td>
+        <h2>value</h2>
+        Значение поля
+      </td>
+      <td>
+        <code>
+          <span class="gray">// создаём атрибут значения  у компонента  и привязываем ему свойство</span>
+          &lt;input type='text' <mark>value={props.curName}</mark> /&gt; <br><br>
+          <span class="gray">// и это свойство будет равно 
+          какому-либо значению из state <br>
+          // И поле будет синхронизировано с каким либо текстовым элементом
+        </span>
+          &lt;SomeInput  <br>
+          &nbsp;&nbsp;<mark>curName={this.state.persons[0].username}</mark> <br>
+          /&gt;
+        </code>
+      </td>
+      <td>
+        Значние поля будет привязано в state
+      </td>
+    </tr>
   </table>
   </div>
 </div>

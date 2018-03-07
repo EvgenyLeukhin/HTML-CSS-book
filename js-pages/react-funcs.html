@@ -183,6 +183,52 @@
         id тега в html-разметке
       </td>
     </tr>
+    <tr>
+      <th colspan="3">
+        <code>setState()</code>
+      </th>
+      <tr>
+        <td>Функция сравнения для state</td>
+        <td>
+          <pre><code> <span class="gray">// статичный state. username может быть у кого угодно</span>
+  <mark>state</mark> = {
+    persons: [
+      { username: 'Sergey' },
+      { username: 'John' },
+      { username: 'Olga' }
+    ]
+  }
+<span class="gray">// функция для изменения state при событии</span>
+  printName = (<mark>event</mark>) => {
+    this.<mark>setState</mark>({
+      persons: [
+<span class="gray">// будет изменено значение username 1 элемента массива
+// оно будет равно значению в поле</span>
+        { username: <mark>event</mark>.target.value},
+        { username: 'John' },
+        { username: 'Olga' }
+      ]
+    })
+  }
+<span class="gray">// навешивание обработчика событий 
+// при любом изменении в этот поле будет запускаться что-то, что
+// лежит в свойстве <b>changed</b></span>
+  &lt;input
+      type='text'
+      style={style}
+      <mark>onChange={props.changed}</mark>
+  /&gt;
+
+<span class="gray">// а там лежит эта функция</span>
+&lt;UserInput
+  <mark>changed={this.printName}</mark>
+/&gt;
+
+</code></pre>
+        </td>
+        <td>Сравнивает состояния state, можно реализовывать вместе с обытиями</td>
+      </tr>
+    </tr>
 
 
 
