@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | PHP | Функции</title>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../js/jquery-3.1.0.min.js"></script>
@@ -49,16 +49,15 @@
 			<li><a href="forms.html                  ">Формы</a></li>
 			<li><a href="post.html                   ">Почта</a></li>
 			<li><a href="yii.html                    ">Yii2</a></li>
-        	<li><a href="bitrix.html                 ">CMS Bitrix</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
-			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="cms.html                    ">Wordpress</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
 		</ul>
-	
-	
+
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | PHP | Функции</h2>
 
 	<div class="container-fluid">
@@ -72,7 +71,7 @@
 						<td><pre><code><span class="red">function</span> <b class="text-success">sum</b>($x, $y) {
   $sum = $x + $y;
   <span class="red">return</span> $sum;
-} 
+}
 echo <b class="text-success">sum</b>(5, 25)."<span class="gray">&lt;br&gt;</span>";    <span class="gray">// 30</span>
 echo <b class="text-success">sum</b>(1, 2)."<span class="gray">&lt;br&gt;</span>";     <span class="gray">// 3</span>
 echo <b class="text-success">sum</b>("1", "2")."<span class="gray">&lt;br&gt;</span>"; <span class="gray">// 3</span>
@@ -98,7 +97,7 @@ echo $sum(1, 2);<span class="gray">            // 3</span></code></pre>
 							В этом случае название функции будет выполнять переменная
 						</td>
 					</tr>
-					
+
 					<tr>
 						<th class="lead  text-center  bg-primary" colspan="3">Функции для работы с типами переменных</th>
 					</tr>
@@ -107,9 +106,9 @@ echo $sum(1, 2);<span class="gray">            // 3</span></code></pre>
 						<td>
 							<ul style="list-style: none; padding: 0;">
 								<li><b class="lead">isset()</b> - проверка на наличие переменой
-<pre><code><span class="red">if</span> (<span class="red">isset</span>($x1)) { <span class="red">echo</span> "<span class="gray">Переменная существует</span>"; } 
+<pre><code><span class="red">if</span> (<span class="red">isset</span>($x1)) { <span class="red">echo</span> "<span class="gray">Переменная существует</span>"; }
   <span class="red">else</span> { <span class="red">echo</span> "<span class="gray">Переменная НЕ существует</span>"; }
-</code></pre></li>								
+</code></pre></li>
 								<li><b class="lead">unset()</b> - удаляет переменную
 <pre><code><span class="red">unset</span>($x1);</code></pre></li>
 								<li><b class="lead">is_numeric()</b> - проверка на числовой тип данных, даже если записан строкой
@@ -148,22 +147,22 @@ echo $sum(1, 2);<span class="gray">            // 3</span></code></pre>
 <pre><code><span class="red">echo </span>M_E;</code></pre></li>
 								<li><b class="lead">abs()</b> - модуль
 <pre><code><span class="red">abs</span>($x1);</code></pre></li>
-								<li><b class="lead">round()</b> - округление 
+								<li><b class="lead">round()</b> - округление
 <pre><code><span class="red">round</span>(9.4999); <span class="gray">// 9</span>
 <span class="red">round</span>(9.5001); <span class="gray">// 10</span>
 <span class="gray">// можно добавить число вторым параметром round($x1, 3) - 3 знака после запятой, по ум* стоит 0</span></code></pre></li>
-								<li><b class="lead">ceil()</b> - округление в большую сторону 
+								<li><b class="lead">ceil()</b> - округление в большую сторону
 <pre><code><span class="red">ceil</span>(9.0001); <span class="gray">// 10</span>
 <span class="gray">// всегда один аргумент</span></code></pre></li>
-								<li><b class="lead">floor()</b> - округление в меньшую сторону 
+								<li><b class="lead">floor()</b> - округление в меньшую сторону
 <pre><code><span class="red">floor</span>(9.9999); <span class="gray">// 9</span>
 <span class="gray">// всегда один аргумент</span></code></pre></li></code></pre></li>
-								<li><b class="lead">mt_rand()</b> - рандомное значение 
+								<li><b class="lead">mt_rand()</b> - рандомное значение
 <pre><code><span class="red">mt_rand</span>(1, 6); <span class="gray">// от 1 до 6</span>
 <span class="gray">// после перезагрузки страницы будут новые значения</span></code></pre></li></code></pre></li>
-								<li><b class="lead">min()</b> - вычисление минимального значения 
+								<li><b class="lead">min()</b> - вычисление минимального значения
 <pre><code><span class="red">min</span>(1, 6, 4, -1, -10); <span class="gray">// -10</span></code></pre></li></code></pre></li>
-								<li><b class="lead">max()</b> - вычисление максимального значения 
+								<li><b class="lead">max()</b> - вычисление максимального значения
 <pre><code><span class="red">max</span>(1, 6, 4, -1, -10); <span class="gray">// 6</span></code></pre></li></code></pre></li>
 							</ul>
 						</td>
@@ -223,7 +222,7 @@ echo <span class="red">str_replace</span>(array("Hello", "Goodbye"), array("Пр
 								<li><b class="lead">strtoupper()</b> - конвертировать в ВЕРХНИЙ регистр</li>
 								<li><b class="lead">md5()</b> - шифрование паролей
 <pre><code>echo <span class="red">md5</span>("Пароль");</code></pre></li>
-								<li><b class="lead">trim()</b> - удаление многочисленных пробелов до одного 
+								<li><b class="lead">trim()</b> - удаление многочисленных пробелов до одного
 <pre><code>echo <span class="red">trim</span>("   Hello,     World!      "); <span class="gray">// Hello, World!</span></code></pre></li>
 						</ul>
 					</td>
@@ -259,7 +258,7 @@ $arr = <span class="red">getdate</span>($time);
 			</table>
 		</div>
 	</div>
-	
+
 	</div>
 </div>
 
