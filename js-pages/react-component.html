@@ -137,15 +137,23 @@
         <h3>Рендеринг (App.js)</h3>
 
         <code>
-          class App extends SomeComponent { <br>
-          &nbsp;&nbsp;render() { return (&lt;<mark>someComponent /</mark>&gt;); } <br>
+          import React, { Component } from 'react'; <br> <br>
+          import <mark><u>CompName</u></mark> from '<mark>./CompFold/CompFile</mark>'; <br>
+          import '<mark>./CompFold/CompStyles.css</mark>'; <br><br>
+          class App extends Component { <br>
+          &nbsp;&nbsp;render() { <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return ( <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<mark>CompName /</mark>&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);  <br>
+          &nbsp;&nbsp;} <br>
           }
         </code>
       </td>
       <td>
         SomeComponent.js <br><br>
         В константу сохраняем функцию, которая возвращает html. <br><br>
-        <h2>Best-practice!</h2>
+        <h2>Best-practice!</h2> <br>
+        При импорте компонента из файла выбор названия ПРОИЗВОЛЬНЫЙ
       </td>
     </tr>
     <tr>
@@ -372,3 +380,5 @@ ReactDOM.render(<mark>app</mark>, document.querySelector('#app'));</code></pre>
 
 </body>
 </html>
+
+
