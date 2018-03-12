@@ -320,6 +320,13 @@
         <td>Дата-атрибут. Можно получить или изменить значение любых data-атрибутов</td>
       </tr>
       <tr>
+        <td>
+          <h2>.href</h2>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
         <th colspan="3"><code>Создание новых элементов / Перемещение</code></th>
       </tr>
       <tr>
@@ -374,6 +381,19 @@
           <code>someElement.<mark>insertBefore(newElement, null)</mark>;</code><br>
         </td>
         <td>Вставить новый элемент в начало родителя</td>
+      </tr>
+      <tr>
+        <td><h2>new Image()</h2></td>
+        <td>
+          <pre><code>var someImg = <mark>new Image()</mark>;<span class="gray">// указываем source</span>someImg.<mark>src</mark> = 'img/some-img.jpg';
+someImg.<mark>alt</mark> = 'some alt text';
+
+          </code></pre>
+        </td>
+        <td>
+          Создать новое изображение. <br><br>
+          Изображение это объект
+        </td>
       </tr>
       <tr>
         <th colspan="3"><code>forms</code></th>

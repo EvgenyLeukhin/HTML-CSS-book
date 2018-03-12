@@ -134,7 +134,10 @@
         <span class="gray">// билдинг проекта</span>
         <code>npm <mark>run build</mark></code>
         <span class="gray">// запуск сервера из /build</span>
-        <code><mark>serve -s build</mark></code>
+        <code>npm i -g <mark>serve</mark></code> <br>
+        <code><mark>serve -s build</mark></code> <br>
+        <span class="gray">// или записать скрипт в package.json</span>
+        <code>npm run <mark>build-server</mark></code> <br>
       </td>
       <td>Официальный стартер от создателей React.js (facebook.com)</td>
     </tr>
@@ -169,7 +172,8 @@
         registerServiceWorker();</code>
       </td>
       <td>Это главный файл для транспилирования. В него импортируется главный файл разработки <b>App.js</b> <br><br>
-      При рендеринге этого файла выполняется главная работа React - построение виртуального DOM-дерева
+      При рендеринге этого файла выполняется главная работа React - построение виртуального DOM-дерева <br><br>
+      <h3>ЕГО МОЖНО ВООБЩЕ НЕ ТРОГАТЬ</h3>
 
       </td>
     </tr>
@@ -249,7 +253,10 @@ export default <mark>person</mark>;
         <p>./public/index.html/</p>
       </td>
       <td><code>&lt;div id="<mark>root</mark>"&gt;&lt;/div&gt;</code></td>
-      <td>Файл в котом будет содержаться виртуальный DOM, id="root"</td>
+      <td>
+        Файл в котом будет содержаться виртуальный DOM, id="root" <br><br>
+        <h3>В него можно подгружать глобальные файлы</h3>
+      </td>
     </tr>
 
      <tr>
