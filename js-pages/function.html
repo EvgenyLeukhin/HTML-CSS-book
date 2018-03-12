@@ -449,19 +449,53 @@ func2();
       </td>
     </tr>
     <tr>
-      <th colspan="4" style="font-size: 2em; color: darkcyan;">Колбек-функция</th>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Колбек-функция (callback)</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Вызов функции по окончанию работы другой функции</td>
+      <td style="width: 400px;">
+        <code style="font-size:1em;">
+          <span class="gray">// <b style="font-size: 2em;">I способ</b> (через св-во объекта)</span> <br>
+          'use strict'; <br>
+          var Marx = { <br>
+          &nbsp;&nbsp;<span class="red">catchPokemons</span>: function() { <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;var started = Date.now();<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;while (Date.now() - started &lt; 100) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('I\'m gonna get them all!');<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+          <span class="gray">// условие вызова колбэка</span> <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if (typeof this.<mark>callBack</mark> === 'function') {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<mark>callBack</mark>();<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+          &nbsp;&nbsp;}, <br>
+          &nbsp;&nbsp;<span class="gray">// создаём св-во callBack изначально равное null </span><br>
+          &nbsp;&nbsp;<span class="red">callBack: </span> null <br>
+          };<br><br>
+
+          <span class="gray">// вызов функии, КОЛБЭКА НЕТ</span> <br>
+          Marx.<span class="red">catchPokemons</span>(); <br><br>
+
+          <span class="gray">// переопределяем св-во объекта - создаём колбэк</span> <br>
+          Marx.<mark>callBack</mark> = function() { <br>
+          &nbsp;&nbsp;console.log('I\'m calling Carl!');<br>
+          }; <br><br>
+
+          <span class="gray">// вызываем основную функцию и КОЛБЭК</span> <br>
+          Marx.<span class="red">catchPokemons</span>(); <hr>
+          <span class="gray">// <b style="font-size: 2em;">II способ</b> (через параметр функции)</span> <br>
+          <span class="gray">// более предпочтительный</span> <br>
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">Простыми словами, это вызов какой-либо функции (колбэк-функции) по окончанию работы какой-либо основной функции. Эти функциии каким-то образом связаны, колбек должен знать, когда выполниться основная, чтобы выполниться самой.</td>
     </tr>
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">Анонимная-функция</th>
     </tr>
      <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Объявление анонимной функции</td>
-      <td style="width: 400px;">
-        <pre><code>(function() {
-  // some code
-})<span class="red">()</span>;</code></pre>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">Без вторых круглых скобок функция не сработает. <b>Создаётся изолированная область видимости</b>, чтобы код внутри скобок не конфликтовал с другим кодом</td>
+      <td style="width: 400px;"></td>
+
+      <td rowspan="1" style="width: 300px; color: #555;"></td>
     </tr>
 
 
