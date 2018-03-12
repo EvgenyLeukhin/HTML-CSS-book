@@ -2,128 +2,151 @@
 <html lang="ru">
 
 <head>
-    <title>Мой Справочник | JS | React | React-события</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <title>Мой Справочник | JS | React | React-события</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
 </head>
 
 <body>
-<div class="header">
+
+  <div class="header">
+    <div class="layout-positioner clearfix">
+    <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+    <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a class="active" href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="layout-positioner clearfix">
-  <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-  <div class="header-logo"></div>
-    <ul class="header-menu">
-    <li><a href="../index.html">Главная</a></li>
-    <li><a href="../design-page.html">WEB-DESIGN</a></li>
-    <li><a href="../html-page.html">HTML</a></li>
-    <li><a href="../css-page.html">CSS</a></li>
-    <li><a href="../css3-page.html">CSS3</a></li>
-    <li><a class="active" href="../javascript-page.html">JS</a></li>
-    <li><a href="../php.html">PHP</a></li>
-  </ul>
-  </div>
-</div>
-
-<div class="layout-positioner clearfix">
-  <div class="vert-menu-cont">
-    <ul class="vert-menu">
-      <li>
-        <a href="#">Основы</a>
-        <ul class="sub-menu sub-menu9">
-          <li><a href="js-lang.html">Язык JS</a></li>
-          <li><a href="load.html">Загрузка</a></li>
-          <li><a href="types.html">Типы данных</a></li>
-          <li><a href="var.html">Переменные</a></li>
-          <li><a href="operators.html">Операторы</a></li>
-          <li><a href="algorythm.html">Алгоритмы</a></li>
-          <li><a href="if-else.html">Условия</a></li>
-          <li><a href="cycle.html">Циклы</a></li>
-          <li><a href="math.html">Math</a></li>
-        </ul>
-      </li>
-      <li><a href="array.html">Массивы</a></li>
-      <li><a href="function.html">Функции</a></li>
-      <li><a href="object.html">Объекты</a></li>
-      <li>
-        <a href="#">JS &amp; HTML</a>
-          <ul class="sub-menu sub-menu6">
-            <li><a href="complete.html">Вывод данных</a></li>
-            <li><a href="dom.html">DOM</a></li>
-            <li><a href="html-methods.html">DOM-методы</a></li>
-            <li><a href="actions.html">События</a></li>
-            <li><a href="modal-window.html">Мод. окно</a></li>
-            <li><a href="forms.html">Формы</a></li>
-          </ul>
-        </li>
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
         <li>
-          <a class="active" href="react.html"><span class="react">React</span></a>
-          <ul class="sub-menu sub-menu-react">
-            <li><a href="react-start.html">Старт проекта</a></li>
-            <li><a href="react-funcs.html">Основные функции</a></li>
-            <li><a href="react-component.html">React-компонент</a></li>
-            <li><a href="react-events.html">React-события</a></li>
+          <a href="#">Основы</a>
+          <ul class="sub-menu sub-menu9">
+            <li><a href="js-lang.html">Язык JS</a></li>
+            <li><a href="load.html">Загрузка</a></li>
+            <li><a href="types.html">Типы данных</a></li>
+            <li><a href="var.html">Переменные</a></li>
+            <li><a href="operators.html">Операторы</a></li>
+            <li><a href="algorythm.html">Алгоритмы</a></li>
+            <li><a href="if-else.html">Условия</a></li>
+            <li><a href="cycle.html">Циклы</a></li>
+            <li><a href="math.html">Math</a></li>
           </ul>
         </li>
+        <li><a href="array.html">Массивы</a></li>
+        <li><a href="function.html">Функции</a></li>
+        <li><a href="object.html">Объекты</a></li>
         <li>
-          <a href="nodejs.html"><span class="react">node.js</span></a>
-          <ul class="sub-menu sub-menu-nodejs">
-            <li><a href="node-main.html">Начало работы</a></li>
-            <li><a href="node-frontend.html">Frontend</a></li>
-            <li><a href="node-backend.html">Backend</a></li>
-            <li><a href="node-sql.html">SQL</a></li>
+          <a href="#">JS &amp; HTML</a>
+            <ul class="sub-menu sub-menu6">
+              <li><a href="complete.html">Вывод данных</a></li>
+              <li><a href="dom.html">DOM</a></li>
+              <li><a href="html-methods.html">DOM-методы</a></li>
+              <li><a href="actions.html">События</a></li>
+              <li><a href="modal-window.html">Мод. окно</a></li>
+              <li><a href="forms.html">Формы</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="active" href="react.html"><span class="react">React</span></a>
+            <ul class="sub-menu sub-menu-react">
+              <li><a href="react-start.html">Старт проекта</a></li>
+              <li><a href="react-funcs.html">Основные функции</a></li>
+              <li><a href="react-component.html">React-компонент</a></li>
+              <li><a href="react-events.html">React-события</a></li>
+              <li><a href="react-styling.html">React-styles</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="nodejs.html"><span class="react">node.js</span></a>
+            <ul class="sub-menu sub-menu-nodejs">
+              <li><a href="node-main.html">Начало работы</a></li>
+              <li><a href="node-frontend.html">Frontend</a></li>
+              <li><a href="node-backend.html">Backend</a></li>
+              <li><a href="node-sql.html">SQL</a></li>
+            </ul>
+          </li>
+
+        <li>
+          <a href="#">jQuery</a>
+          <ul class="sub-menu sub-menu7">
+            <li><a href="jquery-html.html">JQuery basics</a></li>
+            <li><a href="jquery-func.html">jQuery-функции</a></li>
+            <li><a href="jquery-actions.html">jQuery-события</a></li>
+            <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+            <li><a href="jquery-forms.html">jQuery-формы</a></li>
+            <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+            <li><a href="jquery-examples.html">Примеры</a></li>
+           </ul>
+         </li>
+
+         <li><a href="ajax.html">Ajax</a></li>
+         <li>
+           <a href="canvas.html">Canvas</a>
+           <ul class="sub-menu sub-menu9">
+             <li><a href="canvas.html">Настройка</a></li>
+             <li><a href="canvas-figures.html">Фигуры</a></li>
+             <li><a href="canvas-text.html">Текст</a></li>
+             <li><a href="canvas-animation.html">Примеры</a></li>
           </ul>
         </li>
 
-      <li>
-        <a href="#">jQuery</a>
-        <ul class="sub-menu sub-menu7">
-          <li><a href="jquery-html.html">JQuery basics</a></li>
-          <li><a href="jquery-func.html">jQuery-функции</a></li>
-          <li><a href="jquery-actions.html">jQuery-события</a></li>
-          <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
-          <li><a href="jquery-forms.html">jQuery-формы</a></li>
-          <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
-          <li><a href="jquery-examples.html">Примеры</a></li>
-         </ul>
-       </li>
+        <li><a href="console.html">Консоль</a></li>
+        <li><a href="modules.html">Модули</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+        <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+        <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+      </ul>
+    </div>
 
-       <li><a href="ajax.html">Ajax</a></li>
-       <li>
-         <a href="canvas.html">Canvas</a>
-         <ul class="sub-menu sub-menu9">
-           <li><a href="canvas.html">Настройка</a></li>
-           <li><a href="canvas-figures.html">Фигуры</a></li>
-           <li><a href="canvas-text.html">Текст</a></li>
-           <li><a href="canvas-animation.html">Примеры</a></li>
-        </ul>
-      </li>
+    <div class="content clearfix">
 
-      <li><a href="console.html">Консоль</a></li>
-      <li><a href="modules.html">Модули</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
-      <li><a href="../css3-pages/grunt.html">Grunt</a></li>
-      <li><a href="../css3-pages/gulp.html">Gulp</a></li>
-    </ul>
-
-
-  </div>
-  <div class="content clearfix">
-
-  <h2>Мой Справочник | JavaScript | React | React-события</h2>
-
-  <table class="new-table">
-
-    <tr>
-      <th colspan="3"><code>React-события</code></th>
-    </tr>
-
-    <tr>
-      <td><h2>onClick</h2></td>
+      <h2>Мой Справочник | JavaScript | React | React-события</h2>
+      <table class="new-table">
+        <tr>
+          <th colspan="3"><code>React-события</code></th>
+        </tr>
+        <tr>
+          <td>
+            <h2>onClick</h2>
+            Событие по клику
+          </td>
+          <td>
+            <code>onClick={this.<mark>switchName</mark>}</code> <br>
+            <pre><code>
+          <td>Обработка клика</td>
+        </tr>
+        <tr>
+      <td><h2>onClick в компоненте</h2></td>
       <td>
-        <code>onClick={this.<mark>switchName</mark>}</code> <br>
-        <pre><code>
-state = {
+        <h3>Обработка клика из компонента</h3>
+        <code>
+          <span class="gray">// нужно добавить клик в компонент как его свойство</span>
+          &lt;p <mark>onClick={props.click}</mark>&gt;My name is &lt;b>{props.name}&lt;/b&gt;&lt;/p&gt;
+          <span class="gray">// И добавить в рендер сназванием функции</span>
+          &lt;Person <mark>click={this.switchName}</mark> /&gt;</code>
+      </td>
+      <td>Вызов функций же может быть как свойство объекта</td>
+    </tr>
+        <tr>
+      <td><h2>setState()</h2></td>
+      <td>
+        <code>onClick={this.someFunc}</code> <hr>
+        <h2>Можно использовать для отслеживания изменения свойств объекта данных</h2>
+        <pre><code style="font-size: .75em;">class <mark>App</mark> extends Component {
+  // объект данных
+  <mark>state</mark> = {
+
     persons: [
       { name: 'Ivan',   age: '34', city: 'Moskva'},
       { name: 'Sergei', age: '23', city: 'Tomsk' },
@@ -131,12 +154,13 @@ state = {
     ]
   }
 
+// функция клика меняющаяя данные
 <mark>switchName</mark> = () => {
   this.<mark>setState</mark>({
     persons: [
-      { name: 'Pavel',   age: '33', city: 'New Moskva' },
+      { name: 'Pavel',  age: '33', city: 'New Moskva' },
       { name: 'Andrei', age: '34', city: 'New Tomsk' },
-      { name: 'Vlad', age: '35', city: 'New Samara' }
+      { name: 'Vlad',   age: '35', city: 'New Samara' }
     ]})
 }
 
@@ -145,30 +169,117 @@ state = {
 
 </code></pre>
       </td>
-      <td>Обработка клика</td>
+      <td>Функция для сравнения данных</td>
     </tr>
     <tr>
-      <td><h2>setState()</h2></td>
-      <td></td>
-      <td>Функция для сравнения данных</td>
+      <td>
+        <h2>onChange</h2>
+        Событие на изменение значения поля
+      </td>
+      <td><code>
+        <span class="gray">// добаляем поле в компонент и навешиваем на него событие onChange, которое равно значению свойства changed</span>
+        &lt;input type='text' <mark>onChange={props.changed}</mark> /&gt; <br><br>
+        <span class="gray">// добавляем ещё одно свойство в рендеринг компонента и присваиваиваем ему функцию printName</span>
+        <mark>changed={this.printName}</mark> <br> <br>
+        <span class="gray">// создаём функцию для работы с этим событием</span>
+        <pre><mark>printhName</mark> = (<mark>event</mark>) => {
+  this.setState({
+    persons: [
+      { name: 'Ivan', ... },
+      { name: <mark>event.target.value</mark>, ... },
+      { name: 'Semion', ... }
+    ]
+  })
+}</pre></code></td>
+      <td>При изменении значения поля будет изменено свойство name</td>
+    </tr>
+    <tr>
+      <td>
+        <h2>value</h2>
+        Значение поля
+      </td>
+      <td>
+        <code>
+          <span class="gray">// создаём атрибут значения  у компонента  и привязываем ему свойство</span>
+          &lt;input type='text' <mark>value={props.curName}</mark> /&gt; <br><br>
+          <span class="gray">// и это свойство будет равно
+          какому-либо значению из state <br>
+          // И поле будет синхронизировано с каким либо текстовым элементом
+        </span>
+          &lt;SomeInput  <br>
+          &nbsp;&nbsp;<mark>curName={this.state.persons[0].username}</mark> <br>
+          /&gt;
+        </code>
+      </td>
+      <td>
+        Значние поля будет привязано в state
+      </td>
     </tr>
 
   </table>
 
-
+    </div>
   </div>
-</div>
 
-<div class="footer">
-  <div class="layout-positioner">
-    <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
-    <p class="footer-copyright">© 2018 Все права защищены</p>
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
+      <p class="footer-copyright">© 2018 Все права защищены</p>
+    </div>
   </div>
-</div>
-
-
-
-
 
 </body>
 </html>
+
+
+
+
+
+
+
+<!--
+
+
+  <mark>switchName</mark> = () => {
+    // setState - метод, который изменяет данные в объекте state
+    <mark>this.setState</mark>({
+      persons: [
+        { name: 'Ivan',   age: '33', city: 'New Moskva' },
+        { name: 'Sergei', age: '33', city: 'New Tomsk' },
+        { name: 'Semion', age: '33', city: 'New Samara' }
+      ]
+    })
+  }
+
+  render() {
+    return (
+      &lt;div className="App"&gt;
+        &lt;h1>Hello React App&lt;/h1&gt;
+        &lt;button <mark>onClick={this.switchName}</mark>&gt;
+          Switch data
+        &lt;/button&gt;
+        &lt;Person
+          name={this.state.persons[0].name}
+           age={this.state.persons[0].age}
+          city={this.state.persons[0].city}
+        /&gt;
+        &lt;Person
+          name={this.state.persons[1].name}
+           age={this.state.persons[1].age}
+          city={this.state.persons[1].city}
+        /&gt;
+        &lt;Person
+          name={this.state.persons[2].name}
+           age={this.state.persons[2].age}
+          city={this.state.persons[2].city}
+        &gt;Some text&lt;/Person&gt;
+      &lt;/div&gt;
+    );
+  }
+}</code></pre>
+<p>После клика будут сравнены новый объект с основным, если данные не совпадают, то они изменяться</p>
+      </td>
+      <td>Обработка клика внутри App.js</td>
+    </tr> -->
+
+

@@ -64,6 +64,7 @@
             <li><a href="react-funcs.html">Основные функции</a></li>
             <li><a href="react-component.html">React-компонент</a></li>
             <li><a href="react-events.html">React-события</a></li>
+            <li><a href="react-styling.html">React-styles</a></li>
           </ul>
         </li>
         <li>
@@ -127,9 +128,13 @@
         <code>npm install -g create-react-app</code>
         <code>create-react-app my-app</code>
         <span class="gray">// new npm</span>
-        <code>npx create-react-app <u>my-app</u></code>
-        <span class="gray">// запуск сервера</span>
-        <code><mark>npm start</mark></code>
+        <code>npx <mark>create-react-app</mark> <u>my-app</u></code>
+        <span class="gray">// запуск dev-сервера</span>
+        <code>npm <mark>start</mark></code>
+        <span class="gray">// билдинг проекта</span>
+        <code>npm <mark>run build</mark></code>
+        <span class="gray">// запуск сервера из /build</span>
+        <code><mark>serve -s build</mark></code>
       </td>
       <td>Официальный стартер от создателей React.js (facebook.com)</td>
     </tr>
@@ -247,6 +252,42 @@ export default <mark>person</mark>;
       <td>Файл в котом будет содержаться виртуальный DOM, id="root"</td>
     </tr>
 
+     <tr>
+      <th colspan="3"><code>devDependencies</code></th>
+    </tr>
+    <tr>
+      <td>
+        <h2>eslint</h2>
+        <h2>eslint-config-react-app</h2>
+      </td>
+      <td>
+        <span class="gray">// eslint</span>
+        <code>npm i -g <mark>eslint</mark></code> <br>
+        <code>npm i --save-dev <mark>eslint</mark></code> <br>
+        <code>npm i --save-dev <mark>eslint-config-react-app</mark></code> <br>
+        <code>npm i --save-dev <mark>eslint-plugin-flowtype</mark></code><br>
+        <code>npm i --save-dev <mark>eslint-plugin-import</mark></code> <br>
+        <code>npm i --save-dev <mark>eslint-plugin-jsx-a11y</mark></code> <br>
+        <code>npm i --save-dev <mark>eslint-plugin-react</mark></code> <br>
+        <code>
+          <span class="gray">// eslintrc.js</span>
+          module.exports = { <br>
+          &nbsp;&nbsp;"extends": "<mark>react-app</mark>" <br>
+          };
+        </code>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><h2>serve</h2></td>
+      <td>
+        <span class="gray">// serve from /build</span>
+        <code>npm i -g <mark>serve</mark></code> <br>
+        <code>npm i --save-dev <mark>serve</mark></code>
+      </td>
+      <td></td>
+    </tr>
+
     <tr>
       <th colspan="3"><code>Скрипты</code></th>
     </tr>
@@ -278,3 +319,5 @@ export default <mark>person</mark>;
 
 </body>
 </html>
+
+

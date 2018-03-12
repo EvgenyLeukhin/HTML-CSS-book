@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | PHP | Формы</title>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../js/jquery-3.1.0.min.js"></script>
@@ -48,17 +48,16 @@
 			<li><a href="functionss.html             ">Функции</a></li>
 			<li><a class="active" href="forms.html   ">Формы</a></li>
 			<li><a href="post.html                   ">Почта</a></li>
-            <li><a href="yii.html                    ">Yii2</a></li>
-            <li><a href="bitrix.html                 ">CMS Bitrix</a></li>
+      <li><a href="yii.html                    ">Yii2</a></li>
 			<li><a href="sql.html                    ">SQL</a></li>
-			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="cms.html                    ">Wordpress</a></li>
 			<li><a href="console.html                ">Консоль</a></li>
 		</ul>
-	
-	
+
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | PHP | Формы</h2>
 
 	<div class="container-fluid">
@@ -195,7 +194,7 @@ print_r(<span class="red">$_REQUEST</span>);</code></pre>
 					</tr>
 					<tr>
 						<td><b>Обработка формы внутри текущей страницы</b></td>
-						<td><pre><code><span class="gray">// Обработка формы будет выполнена после нажатия на 
+						<td><pre><code><span class="gray">// Обработка формы будет выполнена после нажатия на
 <b>&lt;input[type="submit"] name="<mark>done</mark>"&gt;</b>, так работает функция <b><mark>isset</mark></b></span>
 
 <span class="red">if</span> (<span class="red">isset</span>($_POST["done"])) {
@@ -235,7 +234,7 @@ if (<span class="red">isset</span>($_POST["done"])) {
   ...
 }
 <span class="gray">// 3. Прописываем в поля форм значения массива SESSION</span>
-&lt;input type="text name="first-name" 
+&lt;input type="text name="first-name"
 value="<span class="red">&lt;?php echo $_SESSION["first-name"]&gt;</span>"&gt;    <span class="gray">или так:</span>
 value="<span class="red">&lt;?=$_SESSION["first-name"]&gt;</span>"&gt;
 </code></pre>
@@ -251,13 +250,13 @@ value="<span class="red">&lt;?=$_SESSION["first-name"]&gt;</span>"&gt;
 if ($first_name == "" || <span class="red">!preg_match("/@/", $first_name)</span>) {
   <span class="red">$error_first_name</span> = "Вы не корректно указали своё имя";
   <span class="red">$error</span> = true;
-} 
+}
 <span class="gray">// далее создаём условие для каждого поля</span>
 <span class="gray">// 2. Создаём переменные ошибок</span>
 <span class="red">$error_first_name</span> = "Вы не указали своё имя";
 
 <span class="gray">// 3. Вставляем спаны после полей форм</span>
-&lt;input type="text name="first-name" 
+&lt;input type="text name="first-name"
   value="<span class="red">&lt;?=$_SESSION["first-name"]&gt;</span>"&gt;
   &lt;span style="color: red;"&gt;&lt;/span&gt;
 
@@ -265,7 +264,7 @@ if ($first_name == "" || <span class="red">!preg_match("/@/", $first_name)</span
 &lt;span style="color: red;"&gt;<span class="red">&lt;?=$error_first_name&gt;</span>&lt;/span&gt;
 </code></pre>
 						</td>
-						<td style="width: 33.3%;"><b>!preg_match("/@/", $first_name)</b> - проверяет, чтобы поле не содержало спецсимволы или некорректность. <br> 
+						<td style="width: 33.3%;"><b>!preg_match("/@/", $first_name)</b> - проверяет, чтобы поле не содержало спецсимволы или некорректность. <br>
 						Если <b>$error = true</b>, то сообщение не будем отправлять<br>
 						<b>strlen</b> - также можно указывать в условии, проверка на длину строки
 						</td>
@@ -289,7 +288,7 @@ if ($first_name == "" || <span class="red">!preg_match("/@/", $first_name)</span
 				</table>
 			</div>
 	</div>
-	
+
 	</div>
 </div>
 

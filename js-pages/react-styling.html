@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Мой Справочник | JavaScript | React | Основные функции</title>
+    <title>Мой Справочник | JavaScript | React | React-styles</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
           </ul>
         </li>
         <li>
-          <a class="active" href="react.html"><span class="react">React</span></a>
+          <a class="active" href="js-pages/react.html"><span class="react">React</span></a>
           <ul class="sub-menu sub-menu-react">
             <li><a href="react-start.html">Старт проекта</a></li>
             <li><a href="react-funcs.html">Основные функции</a></li>
@@ -111,138 +111,51 @@
   </div>
   <div class="content clearfix">
 
-  <h2>Мой Справочник | JavaScript | React | Основные функции</h2>
+  <h2>Мой Справочник | JavaScript | React | React-styles</h2>
 
   <table class="new-table">
-
     <tr>
-      <th colspan="3">
-        <code>React.createElement()</code>
-      </th>
+      <th colspan="3"><code>Стилизация</code></th>
     </tr>
-
     <tr>
-      <td>Создание React-элемента</td>
       <td>
-        <span class="gray">// &lt;h1&gt;Some text&lt;/h1&gt;</span>
-        <code>var h1 = <mark>React.createElement</mark>( <br>
-        &nbsp;&nbsp;'h1',<br>
-        &nbsp;&nbsp;&nbsp;null,<br>
-        &nbsp;&nbsp;'Some text' <br>
-        );</code> <hr>
-        <span class="gray">// &lt;h1 class="some-class"&gt;Some text&lt;/h1&gt;</span>
-        <code>var h1 = <mark>React.createElement</mark>( <br>
-        &nbsp;&nbsp;'h1',<br>
-        &nbsp;&nbsp;&nbsp;<mark>{className: 'some-class'}</mark>,<br>
-        &nbsp;&nbsp;'Some text' <br>
-        );</code>
+        <h2>I способ</h2>
+        Импорт стилей в <b>App.js</b>
       </td>
       <td>
-        Принимает три параметра: <hr>
-        1 - какой элемент создавать; <br>
-        2 - параметры элемента <br>
-        3 - содержание элемента <br><br>
-        Могут быть также различные переменные в третьем параметре (принимает сколь угодно значений)
-      </td>
-    </tr>
-
-    <tr>
-      <th colspan="3">
-        <code>ReactDOM.render()</code>
-      </th>
-    </tr>
-    <tr>
-      <td>Основная функция для построения виртуального DOM</td>
-      <td>
         <code>
-          <mark>ReactDOM.render</mark>( <br>
-          &nbsp;&nbsp;h1, <br>
-          &nbsp;&nbsp;document.<mark>getElementById</mark>('content') <br>
-          ); <br> <br> <br>
-          &lt;div id="content"&gt;&lt;h1&gt;Some text&lt;/h1&gt;&lt;/div&gt;
-        </code> <hr>
-
-        <code>
-          ReactDOM.render( <br>
-          &nbsp;&nbsp;<mark>React.createElement('div', null,   h1,h1,h1)</mark>, <br>
-          &nbsp;&nbsp;document.getElementById('content') <br>
-          );<br> <br> <br>
-          &lt;div id="content"&gt; <br>
-          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
-          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
-          &nbsp;&nbsp;&lt;h1&gt;Some text&lt;/h1&gt; <br>
-          &lt;/div&gt;
+          <span class="gray">// импортируем стили в App.js</span>
+          import '<mark>./SomeComponent/SomeComponent.css'</mark>;
         </code>
       </td>
       <td>
-        Принимает два параметра: <hr>
-        1 - что рендерить; <br>
-        ReactDOM принимает только один первый параметр на вход.<br><br>
-        Можно также записывать React.createElement или переменную первым параметром <br><br>
-        2 - куда рендерить; <br>
-        id тега в html-разметке
+        Работу по импорту css-файлов в App.js осуществляет Webpack
       </td>
     </tr>
     <tr>
-      <th colspan="3">
-        <code>setState()</code>
-      </th>
-      <tr>
-        <td>Функция сравнения для state</td>
-        <td>
-          <pre><code> <span class="gray">// статичный state. username может быть у кого угодно</span>
-  <mark>state</mark> = {
-    persons: [
-      { username: 'Sergey' },
-      { username: 'John' },
-      { username: 'Olga' }
-    ]
-  }
-<span class="gray">// функция для изменения state при событии</span>
-  printName = (<mark>event</mark>) => {
-    this.<mark>setState</mark>({
-      persons: [
-<span class="gray">// будет изменено значение username 1 элемента массива
-// оно будет равно значению в поле</span>
-        { username: <mark>event</mark>.target.value},
-        { username: 'John' },
-        { username: 'Olga' }
-      ]
-    })
-  }
-<span class="gray">// навешивание обработчика событий 
-// при любом изменении в этот поле будет запускаться что-то, что
-// лежит в свойстве <b>changed</b></span>
-  &lt;input
-      type='text'
-      style={style}
-      <mark>onChange={props.changed}</mark>
-  /&gt;
-
-<span class="gray">// а там лежит эта функция</span>
-&lt;UserInput
-  <mark>changed={this.printName}</mark>
-/&gt;
-
-</code></pre>
-        </td>
-        <td>Сравнивает состояния state, можно реализовывать вместе с обытиями</td>
-      </tr>
+      <td>
+        <h2>II способ</h2>
+        Инлайн-стилитизация
+      </td>
+      <td>
+        <code>render() {
+<span class="gray">&nbsp;&nbsp;// после рендера создаём объект style</span>
+&nbsp;&nbsp;const <mark>style</mark> = { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; color: 'white',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; fontSize: '20px',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; border: '1px solid #ccc',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; backgroundColor: 'blue'<br>
+&nbsp;&nbsp;}; <br><br>
+&nbsp;&nbsp;... <br>
+} <br>
+<span class="gray">// а замем нужно присвоить этот объект атрибуту style</span>
+&lt;button <mark>style={style}</mark>&gt;
+        </code>
+      </td>
+      <td>
+        css-свойства должны записываться в js-формате (в camelCase)
+      </td>
     </tr>
-
-
-
-
-
-    <tr>
-      <th colspan="3"><code>jsx</code></th>
-    </tr>
-    <tr>
-      <td>Этот формат симбиоз js и html. В нём можно записывать html-код как и в html-файлах без кавычек. </td>
-      <td></td>
-      <td>Транспилируется с помощью транспилятора <b>babel</b></td>
-    </tr>
-
   </table>
 
 

@@ -1,123 +1,165 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
-    <title>Мой Справочник | PHP | CMS</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="../js/jquery-3.1.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <style>
+<head>
+  <title>Мой Справочник | PHP | CMS Wordpress</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../js/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
     .footer {
       position: fixed;
       width: 100%;
       left: 0;
       bottom: 0;
     }
-    </style>
+
+  </style>
 </head>
 
 <body>
-<div class="header">
-	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
-	<div class="header-logo"></div>
-		<ul class="header-menu">
-		<li><a href="../index.html             ">Главная</a></li>
-		<li><a href="../design-page.html       ">WEB-DESIGN</a></li>
-		<li><a href="../html-page.html         ">HTML</a></li>
-		<li><a href="../css-page.html          ">CSS</a></li>
-    <li><a href="../css3-page.html         ">CSS3</a></li>
-		<li><a href="../javascript-page.html   ">JS</a></li>
-		<li><a class="active" href="../php.html">PHP</a></li>
-	</ul>
-	</div>
-</div>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title">
+        <strong>
+          <a href="../index.html">Справочник HTML/CSS/JavaScript</a>
+        </strong>
+      </div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li>
+          <a href="../index.html             ">Главная</a>
+        </li>
+        <li>
+          <a href="../design-page.html       ">WEB-DESIGN</a>
+        </li>
+        <li>
+          <a href="../html-page.html         ">HTML</a>
+        </li>
+        <li>
+          <a href="../css-page.html          ">CSS</a>
+        </li>
+        <li>
+          <a href="../css3-page.html         ">CSS3</a>
+        </li>
+        <li>
+          <a href="../javascript-page.html   ">JS</a>
+        </li>
+        <li>
+          <a class="active" href="../php.html">PHP</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-<div class="layout-positioner clearfix">
-	<div class="vert-menu-cont">
-		<ul class="vert-menu">
-			<li><a href="php-lang.html               ">Язык PHP</a></li>
-			<li><a href="echo.html                   ">Вывод данных</a></li>
-			<li><a href="vars.html                   ">Переменные</a></li>
-			<li><a href="if-else.html                ">Условные<br>операторы</a></li>
-			<li><a href="cicles.html                 ">Циклы</a></li>
-			<li><a href="arrayd.html                 ">Массивы</a></li>
-			<li><a href="functionss.html             ">Функции</a></li>
-			<li><a href="forms.html                  ">Формы</a></li>
-			<li><a href="post.html                   ">Почта</a></li>
-			<li><a href="yii.html                    ">Yii2</a></li>
-        	<li><a href="bitrix.html                 ">CMS Bitrix</a></li>
-			<li><a href="sql.html                    ">SQL</a></li>
-			<li><a class="active" href="cms.html     ">CMS</a></li>
-			<li><a href="console.html                ">Консоль</a></li>
-		</ul>
-	
-	
-	</div>
-	<div class="content clearfix">
-	
-	<h2>Мой Справочник | PHP | CMS</h2>
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="php-lang.html               ">Язык PHP</a>
+        </li>
+        <li>
+          <a href="echo.html                   ">Вывод данных</a>
+        </li>
+        <li>
+          <a href="vars.html                   ">Переменные</a>
+        </li>
+        <li>
+          <a href="if-else.html                ">Условные
+            <br>операторы</a>
+        </li>
+        <li>
+          <a href="cicles.html                 ">Циклы</a>
+        </li>
+        <li>
+          <a href="arrayd.html                 ">Массивы</a>
+        </li>
+        <li>
+          <a href="functionss.html             ">Функции</a>
+        </li>
+        <li>
+          <a href="forms.html                  ">Формы</a>
+        </li>
+        <li>
+          <a href="post.html                   ">Почта</a>
+        </li>
+        <li>
+          <a href="yii.html                    ">Yii2</a>
+        </li>
+        <li>
+          <a href="sql.html                    ">SQL</a>
+        </li>
+        <li>
+          <a class="active" href="cms.html     ">Wordpress</a>
+        </li>
+        <li>
+          <a href="console.html                ">Консоль</a>
+        </li>
+      </ul>
 
-	<div class="container-fluid">
-		<div class="row">
-				<table class="table table-bordered table-condensed">
-					<tr>
-						<th class="lead  text-center  bg-primary" colspan="3">CMS</th>
-					</tr>
-					<tr>
-						<td><b>Drupal</b></td>
-						<td></td>
-						<td style="width: 33.3%;">
-							Официальный сайт: <a href="https://www.drupal.org/" target="_blank">www.drupal.org</a><br>
-							Русскоязычный портал: <a href="http://www.drupal.ru/" target="_blank">www.drupal.ru</a><br>
-							Ещё один русскоязычный портал: <a href="http://dru.io/" target="_blank">dru.io</a>
-						</td>
-					</tr>
-					<tr>
-						<td><b>Wordpress</b></td>
-						<td></td>
-						<td style="width: 33.3%;"></td>
-					</tr>
-					<tr>
-						<td><b>Joomla</b></td>
-						<td></td>
-						<td style="width: 33.3%;">
-							
-						</td>
-					</tr>
-					<tr>
-						<td><b>ModX</b></td>
-						<td></td>
-						<td style="width: 33.3%;"></td>
-					</tr>
-					<tr>
-						<td><b>1C Bitrix </b></td>
-						<td></td>
-						<td style="width: 33.3%;"></td>
-					</tr>
 
-				</table>
-			</div>
-	</div>
-	
-	</div>
-</div>
+    </div>
+    <div class="content clearfix">
 
-<div class="footer">
-	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-													 EvgenyLeukhin@yandex.ru</p>
+      <h2>Мой Справочник | PHP | CMS</h2>
 
-		<p class="footer-copyright">© 2018 Все права защищены</p>
-	</div>
-</div>
+      <div class="container-fluid">
+        <div class="row">
+          <table class="table table-bordered table-condensed new-table">
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">CMS Wordpress</th>
+            </tr>
+
+            <tr>
+              <td><h2>Установка</h2></td>
+              <td></td>
+              <td>
+                <a href="https://ru.wordpress.org/download/">Скачать Wordpress (ru)</a> <br>
+                <a href="https://wordpress.org/download/">Скачать Wordpress (en)</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <h2>Основные директории</h2>
+              </td>
+
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <h2>Плагины</h2>
+              </td>
+
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+   </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2018 Все права защищены</p>
+    </div>
+  </div>
 
 
 
 
 
 </body>
+
 </html>
