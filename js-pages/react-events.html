@@ -120,8 +120,37 @@
 
     <tr>
       <td><h2>onClick</h2></td>
-      <td><code>onClick={this.someFunc}</code></td>
+      <td>
+        <code>onClick={this.<mark>switchName</mark>}</code> <br>
+        <pre><code>
+state = {
+    persons: [
+      { name: 'Ivan',   age: '34', city: 'Moskva'},
+      { name: 'Sergei', age: '23', city: 'Tomsk' },
+      { name: 'Semion', age: '19', city: 'Samara'}
+    ]
+  }
+
+<mark>switchName</mark> = () => {
+  this.<mark>setState</mark>({
+    persons: [
+      { name: 'Pavel',   age: '33', city: 'New Moskva' },
+      { name: 'Andrei', age: '34', city: 'New Tomsk' },
+      { name: 'Vlad', age: '35', city: 'New Samara' }
+    ]})
+}
+
+&lt;button <mark>onClick={this.switchName}</mark>>Switch name&lt;/button&gt;
+
+
+</code></pre>
+      </td>
       <td>Обработка клика</td>
+    </tr>
+    <tr>
+      <td><h2>setState()</h2></td>
+      <td></td>
+      <td>Функция для сравнения данных</td>
     </tr>
 
   </table>
