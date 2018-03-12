@@ -483,10 +483,22 @@ func2();
           <span class="gray">// вызываем основную функцию и КОЛБЭК</span> <br>
           Marx.<span class="red">catchPokemons</span>(); <hr>
           <span class="gray">// <b style="font-size: 2em;">II способ</b> (через параметр функции)</span> <br>
-          <span class="gray">// более предпочтительный</span> <br>
-        </code>
+          <span class="gray">// более предпочтительный</span> <br></code>
+          <pre><code>var catchPokemons = function(<mark>cb</mark>) {
+  var started = Date.now();
+  while (Date.now() - started < 100) {
+    console.log('I\'m gonna get them all');
+  }
+  if (typeof <mark>cb</mark> === 'function') { <mark>cb</mark>(); }
+};
+
+<span class="gray">// вызов колбека</span>
+catchPokemons(function() {
+  return console.log('Call to Carl');
+});</code></pre>
       </td>
-      <td rowspan="1" style="width: 300px; color: #555;">Простыми словами, это вызов какой-либо функции (колбэк-функции) по окончанию работы какой-либо основной функции. Эти функциии каким-то образом связаны, колбек должен знать, когда выполниться основная, чтобы выполниться самой.</td>
+      <td rowspan="1" style="width: 300px; color: #555;">Простыми словами, это вызов какой-либо функции (колбэк-функции) по окончанию работы какой-либо основной функции. Эти функциии каким-то образом связаны, колбек должен знать, когда выполниться основная, чтобы выполниться самой. <hr>
+      В параметр функции записываем функцию, и эта колбек-функция выполниться после  выполнения основной функции</td>
     </tr>
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">Анонимная-функция</th>
