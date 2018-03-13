@@ -215,6 +215,34 @@
         Значние поля будет привязано в state
       </td>
     </tr>
+    <tr>
+      <th colspan="3">
+        <code>Переключатель</code>
+      </th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <h3>Превый способ</h3>
+        <pre><code>state = {  <span class="gray">// записываем начальный параметр в state</span>  ...
+  showContent: <mark>false</mark>,
+  ...
+}
+<span class="gray">// задаём какому-либо элементу клик-функцию</span>&lt;button style={style} onClick={this.<mark>toggleContent</mark>}&gt;
+  Показать\Скрыть контент
+&lt;/button&gt;
+<span class="gray">// записываем эту функцию</span>toggleContent = () => {  <span class="gray">// сохраняем текущее значение переключателя (заданное в state)</span>  const toogleState = this.state.<mark>showContent</mark>; <span class="gray">// и с помощью setState меняем его на противоположное</span>  this.setState({showContent: <mark>!toogleState</mark>});
+} <hr><span class="gray">// и вставляем данный юлок в {}</span>{ this.state.<mark>showContent ?</mark>
+  &lt;div className="text-block-cont"&gt;
+    &lt;TextBlock /&gt;
+    &lt;TextBlock /&gt;
+    &lt;TextBlock /&gt;
+  &lt;/div> <mark>: null</mark>
+}
+        </code></pre>
+      </td>
+      <td>Здесь всю работу выполняет ТЕРНАНЫЙ ОПЕРАТОР (... ? ... : ...)</td>
+    </tr>
 
   </table>
 
