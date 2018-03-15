@@ -480,11 +480,11 @@
             <code>
               var arr = [1, 2, 3]; <br>
               <span class="gray">// перебор элементов</span>
-              arr.<span class="red">forEach</span>(function(item, index, array) { <br>
+              arr.<span class="red">forEach</span>(function(item, i, thisArray) { <br>
               &nbsp;&nbsp;console.log(<span class="red">item</span>); <br>
               }); <br>
               <span class="gray">// перебор индексов</span>
-              arr.<span class="red">forEach</span>(function(item, index, array) { <br>
+              arr.<span class="red">forEach</span>(function(item, i, thisArray) { <br>
               &nbsp;&nbsp;return console.log(<span class="red">index</span>); <br>
               }); <br>
             </code>
@@ -504,7 +504,7 @@
             <code>
               var arr = [1, 2, 3]; <br>
               <span class="gray">// создаём новый массив по карте основного</span> <br>
-              var arr2 = arr.<span class="red">map</span>(function(item, i, arr) { <br>
+              var arr2 = arr.<span class="red">map</span>(function(item, i, thisArr) { <br>
               &nbsp;&nbsp; <span class="gray">// умножим элементы на 2</span><br>
               &nbsp;&nbsp; return <span class="red">item * 2</span>; <br>
               }); <br>
@@ -512,7 +512,11 @@
               console.log(<span class="red">arr2</span>);
             </code>
           </td>
-          <td rowspan="1" style="width: 300px; color: #555;"></td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+             <u style="font-size: 1.5em;">item</u> - 1-й аргумент (выводит значение элемента массива на каждой итерации) <hr>
+             <u style="font-size: 1.5em;">i</u> - 2-й аргумент (выводит порядковый номер элемента массива на каждой итерации) <hr>
+             <u style="font-size: 1.5em;">thisArr</u> - 3-й аргумент (выводит весь массив на каждой итерации)
+          </td>
         </tr>
         <tr>
           <th colspan="4" style="font-size: 2em; color: darkcyan;">filter()</th>
@@ -525,7 +529,7 @@
           <td style="width: 400px;">
             <code>
               var arr = [1, 2, 3]; <br>
-              var arr2 = arr.<span class="red">filter</span>(function(item, i, arr) { <br>
+              var arr2 = arr.<span class="red">filter</span>(function(item, i, thisArray) { <br>
               <span class="gray">// выведем только нечётные</span><br>
               &nbsp;&nbsp;return item%2 !==0; <br>
               }); <br>
@@ -546,7 +550,7 @@
           <td style="width: 400px;">
             <code>
               var arr = [1, 2, 3]; <br>
-              var checkTrue = arr.<span class="red">some</span>(function(item, i, arr) { <br>
+              var checkTrue = arr.<span class="red">some</span>(function(item, i, thisArray) { <br>
               <span class="gray">// проверим массив на содержание в нём нечётных элементов</span><br>
               &nbsp;&nbsp;return item%2 !==0; <br>
               }); <br>
@@ -568,7 +572,7 @@
           <td style="width: 400px;">
             <code>
               var arr = [1, 2, 3]; <br>
-              var checkFalse = arr.<span class="red">every</span>(function(item, i, arr) { <br>
+              var checkFalse = arr.<span class="red">every</span>(function(item, i, thisArray) { <br>
               <span class="gray">// проверим массив на содержание в нём нечётных элементов</span><br>
               &nbsp;&nbsp;return item%2 !==0; <br>
               }); <br>
