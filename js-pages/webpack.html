@@ -7,12 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <style>
-    code {
-      font-size: 1.5em;
-    }
-    hr {
-      color: pink;
-    }
+    code { font-size: 1.5em; }
+    hr   { color: pink; }
+    ol { padding-left: 0;  list-style-position: inside;}
   </style>
 </head>
 
@@ -29,8 +26,6 @@
         <li><a href="../css3-page.html">CSS3</a></li>
         <li><a class="active" href="../javascript-page.html">JS</a></li>
         <li><a href="../php.html">PHP</a></li>
-
-
       </ul>
     </div>
   </div>
@@ -66,7 +61,6 @@
             <li><a href="forms.html">Формы</a></li>
           </ul>
         </li>
-
         <li>
           <a href="react.html"><span class="react">React</span></a>
           <ul class="sub-menu sub-menu-react">
@@ -82,8 +76,6 @@
             <li><a href="node-sql.html">SQL</a></li>
           </ul>
         </li>
-
-
         <li>
           <a href="#">jQuery</a>
           <ul class="sub-menu sub-menu7">
@@ -106,23 +98,68 @@
             <a href="canvas-animation.html">Примеры</a>
           </ul>
         </li>
-
         <li><a href="console.html">Консоль</a></li>
         <li><a href="modules.html">Модули</a></li>
         <li><a class="active" href="webpack.html"><span class="react">Webpack</span></a></li>
         <li><a href="../css3-pages/grunt.html">Grunt</a></li>
         <li><a href="../css3-pages/gulp.html">Gulp</a></li>
       </ul>
-
-
     </div>
+
     <div class="content clearfix">
 
       <h2>Мой Справочник | Webpack</h2>
 
-      <table class="new-table">
+    <table class="new-table">
       <tr>
-        <th colspan="3"><code>Webpack</code></th>
+        <th colspan="3">
+          <code>Webpack - Курс Udemy</code>
+        </th>
+      </tr>
+      <tr>
+        <td><h2>Описание</h2></td>
+        <td>
+          Webpack - это bundler (упаковщик). <br>
+          Его работа включает 4 этапа:
+          <ol>
+            <li><b>Entry point</b> (Точка входа. App.js или index.js)<br><br></li>
+            <li><b>Loaders</b> - загрузчики (они загружают и преобразуют файлы). Их работа состоит в компиляции файлов (JSX -&gt; js, less/scss -&gt; css)<br><br></li>
+            <li><b>Plugins</b> - плагины (они выполняют разлючные функци, например, минификацию)<br><br></li>
+            <li><b>Output</b> - выходная точка (build/bundler.js)</li>
+          </ol>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><h2>Установка</h2></td>
+        <td>
+          <code>npm init -y</code> <br>
+          <code>npm i --save-dev webpack</code> <br>
+          <code>npm i --save-dev webpack-dev-server</code> <br>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><h2>Структура проекта</h2></td>
+<td><pre><code><mark>.gitignore</mark> <small>(node_modules .DS_Store /dist)</small>
+<mark>.eslintrc</mark>
+<mark>src/</mark>
+  <mark>App.js</mark> - <small>root-component</small>
+  <mark>index.html</mark> - <small>body &gt; #root</small>
+  <mark>index.js</mark> - <small>for import all you nedd</small>
+  <mark>index.css</mark> - <small>global styles</small>
+  <mark>assets/</mark> - <small>imgs, fonts, svg, ...</small>
+  <mark>components/</mark> - <small>React-components</small>
+  <mark>container/</mark>
+         </code></pre>
+        </td>
+        <td></td>
+      </tr>
+
+
+
+      <tr>
+        <th colspan="3"><code>Webpack - установка вручную</code></th>
       </tr>
       <tr>
         <td>
@@ -236,7 +273,6 @@ module.exports = {
         </td>
         <td>Файл с конфигурацией для WEBpack</td>
       </tr>
-
     </table>
 
 
