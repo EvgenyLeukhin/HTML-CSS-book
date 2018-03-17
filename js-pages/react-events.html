@@ -215,6 +215,88 @@
         Значние поля будет привязано в state
       </td>
     </tr>
+    <tr>
+      <th colspan="3">
+        <code>Переключатель</code>
+      </th>
+    </tr>
+    <tr>
+      <td>Здесь всю работу выполняет ТЕРНАНЫЙ ОПЕРАТОР (... ? ... : ...)</td>
+      <td>
+        <h3>Первый способ</h3>
+        <pre><code>state = {  <span class="gray">// записываем начальный параметр в state</span>  ...
+  showContent: <mark>false</mark>,
+  ...
+}
+<span class="gray">// задаём какому-либо элементу клик-функцию</span>&lt;button style={style} onClick={this.<mark>toggleContent</mark>}&gt;
+  Показать\Скрыть контент
+&lt;/button&gt;
+<span class="gray">// записываем эту функцию</span>toggleContent = () => {  <span class="gray">// сохраняем текущее значение переключателя (заданное в state)</span>  const toogleState = this.state.<mark>showContent</mark>; <span class="gray">// и с помощью setState меняем его на противоположное</span>  this.setState({showContent: <mark>!toogleState</mark>});
+} <hr><span class="gray">// и вставляем данный юлок в {}</span>{ this.state.<mark>showContent ?</mark>
+  &lt;div className="text-block-cont"&gt;
+    &lt;TextBlock /&gt;
+    &lt;TextBlock /&gt;
+    &lt;TextBlock /&gt;
+  &lt;/div> <mark>: null</mark>
+}</code></pre> <hr>
+        <h3>Второй способ (предпочтительнее)</h3>
+        <code>
+          <span class="gray">// перед return создаём переменную для контента c исходным значением</span>
+          let <mark>content</mark> = <mark>null</mark>;
+          <span class="gray">// затем пишем условие ниже</span>
+           if(this.state.<mark>showContent</mark>) { <br/>
+            &nbsp;&nbsp;<mark>content</mark> = (<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div className="text-block-cont"&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock /&gt; <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock /&gt;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextBlock /&gt;<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+             &nbsp;&nbsp;);<br/>
+           }
+           <span class="gray">// далее вставляем данную переменную в рендер куда нужно</span>
+           <code>{<mark>content</mark>}</code>
+           <span class="gray">// переключатель showContent реализует также как в примере выше</span>
+          </code>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="3">
+        <code>Динамический вывод данных из state</code>
+      </th>
+    </tr>
+    <tr>
+      <td><h2>.map()</h2></td>
+      <td>
+        <pre><code><span class="gray">// Допустим, есть данные в state</span>state = {
+  <mark>textBlock:</mark> [
+   { header: 'Header#1', text: 'Some text1' },
+   { header: 'Header#2', text: 'Some text2' },
+   { header: 'Header#3', text: 'Some text3' },
+  ]
+}
+<span class="gray">// и связанный с ними компонент</span>&lt;<mark>TextBlock</mark>
+  header={textBlock[0].header}
+    text={textBlock[0].text}
+/&gt;
+&lt;<mark>TextBlock</mark>
+  header={textBlock[1].header}
+    text={textBlock[1].text}
+/&gt;
+&lt;<mark>TextBlock</mark>
+  header={textBlock[2].header}
+    text={textBlock[2].text}
+/&gt;<span class="gray">// И ЗАЧЕМ ТАК ВСЁ ДУБЛИРОВАТЬ, а если что-нибудь изменяться</span><hr><span class="gray">// поможен функция для массивов .map()</span><span class="gray">// создадим карту данных из state</span>{this.state.textBlock.<mark>map(mapFunc</mark> =&gt; {
+  return &lt;TextBlock
+    header={<mark>mapFunc.header</mark>}
+      text={<mark>mapFunc.text</mark>} /&gt;
+})} <span class="gray">// ОШИБКА только вылазить будет (key - value)</span></code></pre>
+
+      </td>
+      <td>
+        <p>Допустим, у нас есть компоненты, связанные с данными, хранящимися в state. Если вручную всегда вводить информацию и манипулировать ею, то это крайне трудоёмко. Упростить это положение может функция <b>.map()</b></p>
+      </td>
+    </tr>
 
   </table>
 
