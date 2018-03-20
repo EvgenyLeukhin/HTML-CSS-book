@@ -91,7 +91,7 @@
           <a href="sql.html                    ">SQL</a>
         </li>
         <li>
-          <a class="active" href="cms.html     ">Wordpress</a>
+          <a class="active" href="cms.html     ">CMS</a>
         </li>
         <li>
           <a href="console.html                ">Консоль</a>
@@ -162,6 +162,12 @@
             </tr>
 
             <tr>
+              <td><h2>Подключение БД</h2></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
               <th class="lead  text-center  bg-primary" colspan="3">CMS Drupal</th>
             </tr>
             <tr>
@@ -172,6 +178,25 @@
               <td>
                 <a href="https://www.drupal.org/project/drupal/releases/8.5.0" target="_blank">Скачать</a>
               </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Подключение БД</h2>
+              </td>
+              <td>
+                <span class="gray">./sites/default/settings.php</span>
+                <pre><code>$databases['default']['default'] = array (
+  'database' => '<mark>fto</mark>',
+  'username' => '<mark>root</mark>',
+  'password' => '',
+  'prefix' => '',
+  'host' => '<mark>localhost</mark>',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);</code></pre>
+              </td>
+              <td>Подключение к OpenServer</td>
             </tr>
           </table>
         </div>
