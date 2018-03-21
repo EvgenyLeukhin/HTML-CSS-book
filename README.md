@@ -1,5 +1,5 @@
-# IT-book (Russian language)
-<hr>
+# IT-book
+<br>
 My IT-book
 <br>
 Author: Evgeny Leukhin
