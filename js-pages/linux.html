@@ -44,6 +44,9 @@
           <a href="../html-pages/vim.html">VIM</a>
         </li>
         <li><a class="active" href="../js-pages/linux.html">Linux</a></li>
+        <li>
+          <a href="../html-pages/console.html">Консоль</a>
+        </li>
         <li><a href="../design-pages/programs.html">Программы</a></li>
         <li><a href="../html-pages/seo.html">SEO</a></li>
         <li><a href="../html-pages/optimization.html">Оптимизация</a></li>
@@ -143,7 +146,7 @@
         </tr>
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            mc (Midnight Commander)
+            Midnight Commander
           </td>
           <td rowspan="1" style="width: 700px; color: #555;">
             <code>sudo apt install mc</code>
@@ -178,6 +181,17 @@
               <code>
                 cd /opt/lampp <br>
                 sudo ./manager-linux-x64.run</code>
+                <h3>rootinf xampp ()</h3>
+                <pre><code style="font-size: 1em;"><span class="gray">/usr/share/applications/xampp.desktop</span><hr>#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=gksudo /opt/lampp/manager-linux-x64.run
+Name=XAMPP
+Comment=Star XAMPP Control Panel
+Icon=/opt/lampp/htdocs/favicon.ico
+Name[ru]=xampp</code></pre>
 
           </td>
           <td rowspan="1" style="width: 200px; color: #555;">

@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | PHP | CMS </title>
+  <title>Мой Справочник | PHP | Docker</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,10 +94,10 @@
           <a href="sql.html                    ">SQL</a>
         </li>
         <li>
-          <a href="docker.html                 ">Docker</a>
+          <a class="active" href="docker.html  ">Docker</a>
         </li>
         <li>
-          <a class="active" href="cms.html     ">CMS</a>
+          <a href="cms.html                    ">CMS</a>
         </li>
         <li>
           <a href="console.html                ">Консоль</a>
@@ -108,101 +108,18 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | PHP | CMS</h2>
+      <h2>Мой Справочник | PHP | Docker</h2>
 
       <div class="container-fluid">
         <div class="row">
-          <table class="table table-bordered table-condensed new-table">
+          <table class="new-table">
             <tr>
-              <th class="lead  text-center  bg-primary" colspan="3">CMS Wordpress</th>
+              <th class="lead  text-center  bg-primary" colspan="3">Docker</th>
             </tr>
-
             <tr>
-              <td>
-                <h2>Установка</h2>
-              </td>
-              <td>
-                <ol>
-                  <li>Скачать установщик с оф. сайта</li>
-                  <li>Распаковать и провязать локальный домен</li>
-                  <li>В браузере нажимаем
-                    <b>Далее</b>
-                  </li>
-                  <li>
-                    Создаём БД
-                    <ol>
-                      <li>Заходим в
-                        <b>PHPMyAdmin</b> (root, '');</li>
-                      <li>Создать
-                        <b>БД</b> (utf_general_cli);</li>
-                    </ol>
-                  </li>
-                  <li>Вводим название БД, имена, пароли</li>
-                  <li>Вводим название сайта, указываем имя и пароль от админки и e-mail</li>
-                  <li>Войти</li>
-                </ol>
-              </td>
-              <td>
-                <a href="https://ru.wordpress.org/download/">Скачать Wordpress (ru)</a>
-                <br>
-                <a href="https://wordpress.org/download/">Скачать Wordpress (en)</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <h2>Основные директории</h2>
-              </td>
-
               <td></td>
               <td></td>
-            </tr>
-
-            <tr>
-              <td>
-                <h2>Плагины</h2>
-              </td>
-
               <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td><h2>Подключение БД</h2></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th class="lead  text-center  bg-primary" colspan="3">CMS Drupal</th>
-            </tr>
-            <tr>
-              <td><h2>Установка</h2></td>
-              <td>
-                <p>Для версии Drupal 8, нужна версия PHP 7 и выше с кешированием OPCACHE </p>
-              </td>
-              <td>
-                <a href="https://www.drupal.org/project/drupal/releases/8.5.0" target="_blank">Скачать</a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h2>Подключение БД</h2>
-              </td>
-              <td>
-                <span class="gray">./sites/default/settings.php</span>
-                <pre><code>$databases['default']['default'] = array (
-  'database' => '<mark>fto</mark>',
-  'username' => '<mark>root</mark>',
-  'password' => '',
-  'prefix' => '',
-  'host' => '<mark>localhost</mark>',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);</code></pre>
-              </td>
-              <td>Подключение к OpenServer</td>
             </tr>
           </table>
         </div>
