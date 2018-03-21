@@ -1,7 +1,7 @@
 {
-  "name": "My IT-book",
+  "name": "",
   "version": "1.0.0",
-  "description": "<hr> My IT-book <br> Author: Evgeny Leukhin <br> Mail: EvgenyLeukhin@ya.ru <br> VK: <https://vk.com/leukhin_ei> <br> [IT-book(GutHub hosting)] [https://evgenyleukhin.github.io/IT-book/]",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
