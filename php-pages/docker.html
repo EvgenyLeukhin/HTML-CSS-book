@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="../js/jquery-3.1.0.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <style>
     .footer {
@@ -112,13 +111,75 @@
 
       <div class="container-fluid">
         <div class="row">
+          <a href="https://docs.docker.com/" target="_blank">Docker-Docs</a>
           <table class="new-table">
             <tr>
-              <th class="lead  text-center  bg-primary" colspan="3">Docker</th>
+              <th colspan="3"><code>Docker-команды</code></th>
             </tr>
             <tr>
+              <td>
+                Docker and Docker-compose
+              </td>
+              <td>
+                <code>sh install.sh</code>
+              </td>
+              <td>
+                <a href="../files/install.sh" download>install.sh</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Версия</td>
+              <td>
+                <code><mark>docker -v</mark></code> <br>
+                <code><mark>docker-compose -v</mark></code>
+              </td>
               <td></td>
+            </tr>
+            <tr>
+              <td>Добавить группу и пользователя</td>
+              <td>
+                <span class="gray">// добавить группу</span>
+                <code>sudo groupadd docker</code>
+                <span class="gray">// добавить пользователя в группу</span>
+                <code>sudo usermod -aG docker <mark>username</mark></code>
+                <span class="gray">// узнать username</span>
+                <code>sudo whoami</code>
+              </td>
               <td></td>
+            </tr>
+            <tr>
+              <td>Посмотреть образы и/или контейнеры</td>
+              <td>
+                <span class="gray">// запущенные</span>
+                <code><mark>docker ps</mark></code>
+                <span class="gray">// установленные</span>
+                <code><mark>docker ps -a</mark></code>
+                <span class="gray">// посмотреть только образы</span>
+                <code>docker <mark>image</mark> ls (--all)</code>
+                <span class="gray">// посмотреть только контейнеры</span>
+                <code>docker <mark>container</mark> ls (--all)</code>
+              </td>
+              <td>NAMES - имена контейнеров</td>
+            </tr>
+            <tr>
+              <td>Запустить указанные контейнеры</td>
+              <td>
+                <code><mark>docker start</mark> cont_name1 cont_name2</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Остановить контейнеры</td>
+              <td>
+                <code><mark>docker stop</mark> cont_name1 cont_name2</code>
+                <span class="gray">// остановить все </span>
+                <code><mark>docker stop</mark> $(docker ps -q)</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Перезапуск docker</td>
+              <td><code><mark>docker service docker restart</mark></code></td>
               <td></td>
             </tr>
           </table>
