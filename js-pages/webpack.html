@@ -98,7 +98,7 @@
             <a href="canvas-animation.html">Примеры</a>
           </ul>
         </li>
-        
+
         <li><a href="modules.html">Модули</a></li>
         <li><a class="active" href="webpack.html"><span class="react">Webpack</span></a></li>
         <li><a href="../css3-pages/grunt.html">Grunt</a></li>
@@ -188,13 +188,11 @@
         </td>
         <td>
           <code>
-            <span class="gray">Глобальная установка</span>
-            npm i -g webpack
             <span class="gray">Локальная установка</span>
-            npm i --save-dev webpack
-            <span class="gray">Может ещё это потребоваться</span>
-            npm i -g webpack-cli <br>
+            npm i --save-dev webpack <br>
             npm i --save-dev webpack-cli
+            <span class="gray">ставим Сервер</span>
+            npm i --save-dev webpack-dev-server
           </code>
         </td>
         <td>Что такое webpack-cli ?</td>
@@ -211,13 +209,19 @@
             <span class="gray">ставим Babel, загрузчик, пресеты</span>
             npm i --save-dev babel-core <br>
             npm i --save-dev babel-loader <br>
-            npm i --save-dev babel-preset-es2015 <br>
+            npm i --save-dev babel-preset-env <br>
             npm i --save-dev babel-preset-react
-            <span class="gray">ставим Сервер</span>
-            npm i --save-dev webpack-dev-server
           </code>
         </td>
         <td>Это ручная установка</td>
+      </tr>
+      <tr>
+        <td><h2>eslint</h2></td>
+        <td>
+          <code>npm i --save-dev eslint</code> <br>
+          <code>npm i --save-dev eslint</code>
+        </td>
+        <td></td>
       </tr>
       <tr>
         <td>
@@ -242,11 +246,13 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "eslint": "^4.19.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
   }
 }
 
