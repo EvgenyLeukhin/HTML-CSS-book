@@ -148,8 +148,8 @@
                 <br>
               </li>
               <li>
-                <b>Loaders</b> - загрузчики (они загружают и преобразуют файлы). Их работа состоит в компиляции файлов (JSX -&gt; js,
-                less/scss -&gt; css)
+                <b>Loaders</b> - загрузчики (они загружают и преобразуют файлы). Их работа состоит в компиляции файлов (JSX -&gt; js, less/scss -&gt; css). <br>
+                Лоадеры загружают файлы в Webpack, чтобы Webpack мог с ними работать
                 <br>
                 <br>
               </li>
@@ -282,7 +282,7 @@
             { <br>
             &nbsp;&nbsp;use: '<mark>babel-loader</mark>',<br>
             &nbsp;&nbsp;test: /\.js$/, <br>
-            &nbsp;&nbsp;exclude: 'node_modules' <br>
+            <!-- &nbsp;&nbsp;exclude: 'node_modules' <br> -->
             },
           </code>
           <p><h2>use</h2> - использовать для загрузки (какой загрузчик)</p>
@@ -299,9 +299,16 @@
           <td>Позволяет транспилировать ES6, ES7 в поддерживающий всеми браузерами формат ES5</td>
         </tr>
         <tr>
-          <td><h2>css-loader</h2></td>
-          <td></td>
-          <td></td>
+          <td><h2>css-loader + style-loader</h2></td>
+          <td>
+            <pre><code>{
+  use: [<mark>'style-loader', 'css-loader'</mark>],
+  test: /\.css$/
+},</code></pre>
+<p>Позволяет импортировать css-файлы напрямую в js-код (css-loader).  <br>
+ Вставляет css-код, полученный из импортированных css-файлов, в тег &lt;style&gt; в index.html</p>
+</td>
+          <td>Круто, правда?!!!</td>
         </tr>
         <tr>
           <td><h2>postcss-loader</h2></td>
@@ -356,6 +363,17 @@
             <h2>filename</h2> - название файла <hr>
             <h2>puclicPath</h2> - путь для копирования остальных файлов, связанных с entry point (стили, шрифты, изображения)
           </td>
+        </tr>
+        <tr><th colspan="3"><code>package.json</code></th></tr>
+        <tr>
+          <td><h2>Скрипты для запуска</h2></td>
+          <td>
+            <code>"scripts": { <br>
+            &nbsp;&nbsp;"<mark>dev</mark>": "webpack-dev-server --hot --open --port 8888 --mode development",<br>
+            &nbsp;&nbsp;"<mark>build</mark>": "rimraf dist && webpack --config webpack.prod.config.js  --progress --profile --color --mode production"<br>
+  },</code>
+          </td>
+          <td>--mode указывает принадлежность запуска</td>
         </tr>
 
       </table>
