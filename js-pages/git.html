@@ -349,20 +349,22 @@
           <li>добавляем в конец свой публичный ключ и сохраняем</li>
           <li>выходим <b>Ctrl + D</b> или командой <b>exit || logout</b></li>
         </ol><hr>
-        <h3>.git/config</h3>
+        <h3>.git/config (для GitHub)</h3>
         <pre><code>[core]
   repositoryformatversion = 0
   filemode = false
   bare = false
   logallrefupdates = true
 [remote "origin"]
-  url = <mark>ssh://</mark>github.com/EvgenyLeukhin/IT-book.git
+  url = <mark>git@github.com:</mark>EvgenyLeukhin/IT-book.git
   fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
   remote = origin
   merge = refs/heads/master</code></pre>
+<h3>.git/config (для GitLab)</h3>
+  <pre><code>  url = <mark>git@gitlab.com:</mark>EvgenyLeukhin/frontend.git</code></pre>
 <hr>
-  <h3>.ssh/config</h3>
+  <h3>.ssh/config (для GitHub)</h3>
 <pre><code>Host github.com
   User git
   Port 22
@@ -370,7 +372,11 @@
   IdentityFile <mark>~/.ssh/id_rsa</mark>
   TCPKeepAlive yes
   IdentitiesOnly yes</code></pre>
-      </td>
+<h3>.ssh/config (для GitLab)</h3>
+<pre><code>Host gitlab.com
+  RSAAuthentication yes
+  IdentityFile <mark>~/.ssh/id_rsa</mark></code></pre>
+</td>
 
 
     </tr>
