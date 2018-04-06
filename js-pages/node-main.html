@@ -151,11 +151,27 @@
         <td>node package manager - пакетный менеджер для node</td>
       </tr>
       <tr>
-        <td><h2>Флаги</h2></td>
+        <td><h2>yarn</h2></td>
+        <td>
+          Установка: <br>
+          -------------------------- <br>
+          <code>npm install -g yarn</code> <br><br>
+          Установка всех пакетов из package.json (аналог npm i): <br>
+          -------------------------- <br>
+          <code>yarn</code> <br><br>
+          Установка\удаление пакетов (аналог npm i --save): <br>
+          -------------------------- <br>
+          <code>yarn add [package-name]</code> <br>
+          <code>yarn remove [package-name]</code> <br>
+        </td>
+        <td>yarn - более быстрая альтернатива npm</td>
+      </tr>
+      <tr>
         <td><pre><code>-g, --global</code>  // global
 <code>--save</code>          // save for work
 <code>--save-dev</code>    // save for development
-<code>--save-exact</code>    // save version (w\o update)
+<code>--save-exact</code>  // save version (w\o update)
+<code>-v</code>               // current version
 <code>-y</code>               // yes for npm init</pre>
         </td>
         <td>Все установленные пакеты с save будут сохранены в файл <b>package.json</b></td>
