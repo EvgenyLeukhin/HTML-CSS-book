@@ -122,7 +122,7 @@
 
       <table class="discription-table" border-spacing: 5px>
         <tr>
-          <th colspan="4" style="font-size: 2em; color: darkcyan;">export, import</th>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">Модульность - export, import</th>
         </tr>
         <tr>
           <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Можно  экспортировать-импортировать любые константы, функции, объекты, что в ES5 реализуется с помощью <b>CommonJS</b></td>
@@ -142,12 +142,63 @@
             <span class="gray">// или с изменением имена </span> <br>
             <code><mark>import</mark> {address as Add} <mark>from './address.js'</mark>;</code> <br><br>
             <span class="gray">// импортировать всё </span> <br>
-            <code>import <mark>*</mark>as bundled <mark>from './person.js'</mark>;</code>
+            <code>import <mark>*</mark> as bundled <mark>from './person.js'</mark>;</code>
           </td>
           <td rowspan="1" style="width: 300px; color: #555;">
             Это новые возможности ES6. <br>
             Если export без default, то импортировать нужно в фигурных скобках и можно изменить название этой переменной
           </td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">Classes</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            
+          </td>
+          <td style="width: 400px;">
+            <p>С помощью классов можно существенно сократь дублирование кода, за счёт расширения дочернего класса другим родительским классом. Повторное использование кода</p>
+<pre><code><span class="gray">Классы принято именовать с большой буквы</span>
+<span class="red">class</span> Parentclass {
+  <span class="red">constructor()</span> { <span class="gray">// для свойств</span>
+    this.prop1 = 'prop1'
+    this.prop2 = 'prop2'
+    this.prop3 = 'prop3'
+  }
+
+  <span class="red">someFunc()</span> { ... }
+};
+
+<span class="gray">// создаём новый класс и наследуем св-ва род. класса</span>
+<span class="red">class</span> Childclass <span class="red">extends</span> Parentclass {
+  <span class="red">constructor()</span> {
+    <span class="red">super()</span>;
+    this.prop1 = 'prop1+'
+  }
+}
+<span class="gray">// теперь этот класс унаследовал все св-ва род. класса</span>
+<span class="gray">// и можно изменять св-ва род. класса и функции</span>
+<span class="red">const some</span> = new <span class="red">Childclass()</span>;
+some.<span class="red">someFunc()</span>;
+some.<span class="red">prop2</span> = 'another';</pre></code>
+            <mark style="font-size: 1.3em;">Через BABEL constructor(), super() и this можно не записывать (ES7)</mark>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            <p>Очень похожи на объекты, только записываем = вместо : для присваивания значенией и не нужно запятых между свойствами. <br><br>Упрощенный синтаксис</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">Запись в ES7 через BABEL</td>
+          <td style="width: 400px;">
+<pre><code>class Someclass = {
+  prop1 = 'key1'
+  prop2 = 'key2'
+  ...
+  someFunc = () => ...
+}
+            </code></pre>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;"></td>
         </tr>
         <tr>
           <th colspan="4" style="font-size: 2em; color: darkcyan;">function-конструктор</th>
@@ -163,7 +214,6 @@
               };<br><br>
               <span class="gray">// вызов  функции-конструктора (new)</span> <br>
               var person = <span class="red">new</span> Person('Some name');
-
             </code>
           </td>
           <td rowspan="1" style="width: 300px; color: #555;">

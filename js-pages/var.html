@@ -113,7 +113,78 @@
 
   <table class="discription-table" border-spacing: 5px;>
     <tr>
-      <th colspan="4" style="font-size: 2em; color: darkcyan;">var, let, const</th>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">Distructing</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"><h2>Диструктивное присваивание</h2></td>
+      <td style="width: 400px;">
+        <code>
+          const [a, b, c, d] = [1, 2, 3, 4];<br>
+          console.log(a); <span class="gray">// 1</span><br>
+          console.log(b); <span class="gray">// 2</span><br>
+          console.log(c); <span class="gray">// 3</span><br>
+          console.log(d); <span class="gray">// 4</span>
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">С одной стороны массив с названиями переменных, с другой стороны массив со значениями</td>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">let</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"><h2>let</h2></td>
+      <td style="width: 400px;">
+        <h3>Нельзя повторно переобъявлять</h3>
+        <code>
+          <span class="red">let</span> a = 5; <br>
+          a = 15; <span class="gray">// Изменять можно</span><br>
+          <span class="red">let</span> a = 15; <span class="gray">// Ошибка!</span> 
+        </code> <hr>
+        <h3>Scope</h3>
+        <code>
+        <span class="red">let</span> a = 5;<br>
+        console.log(a); <span class="gray">// 5</span><br>
+        {<br>
+        &nbsp;&nbsp;<span class="red">let</span> a = 15;<br>
+        &nbsp;&nbsp;console.log(a); <span class="gray">// 15</span><br>
+        }
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+        В отличие от var, scope у let - это блок, в кот. выполянется объявление.<br><br>
+        <mark>В ES6 можно его использовать всегда вместо var</mark> <br><br>
+        В {} ограничивается scope у let, и даже переменные с одинаковыми названиями на разных уровнях ничего не знают друг о друге
+      </td>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">const</th>
+    </tr>
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"><h2>const</h2></td>
+      <td style="width: 400px;">
+        <h3>Нельзя повторно переобъявлять и изменять</h3>
+        <code>
+          <span class="red">const</span> a = 5; <br>
+          a = 15; <span class="gray">// Ошибка!</span><br>
+          <span class="red">const</span> a = 15; <span class="gray">// Ошибка!</span> 
+          </code> <hr>
+          <h3>Scope</h3>
+          <code>
+            <span class="red">const</span> a = 5;<br>
+            console.log(a); <span class="gray">// 5</span><br>
+            {<br>
+            &nbsp;&nbsp;<span class="red">const</span> a = 15;<br>
+            &nbsp;&nbsp;console.log(a); <span class="gray">// 15</span><br>
+            }
+          </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+        При объявление этой константы единожды, ей нельзя будет присвоить другое значение, иначе будет ошибка. <br><br>
+        Scope у const действует также как и у let. На разных уровнях константы ничего не знают друг о друге
+      </td>
+    </tr>
+    <tr>
+      <th colspan="4" style="font-size: 2em; color: darkcyan;">var (ES5)</th>
     </tr>
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
@@ -187,48 +258,8 @@
       </td>
     </tr>
 
-    <tr>
-      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-                Конвертировать "строчные цифры" в number
-      </td>
-      <td style="width: 400px;">
-        <code>
-          var a = '1';<br>
-          var b = '2';<br>
-          c = a + b;<span class="gray">//12 (складываются строки)</span>
-                </code>
-                <h3>1 способ (+ перед переменной):</h3>
-                <code>
-                    var a = '1';<br>
-          var b = '2';<br>
-                    c = <span class="red">+</span>a + <span class="red">+</span>b;<span class="gray">//3</span>
-        </code>
-        <h3>2 способ (Number):</h3>
-        <code>
-          var a = '1';<br>
-          var b = '2';<br>
-                    c = <span class="red">Number</span>(a) + <span class="red">Number</span>(b);<span class="gray">//3</span>
-        </code>
-      </td>
-      <td rowspan="1" style="width: 300px; color: #555;">
-
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"><h2>let</h2></td>
-      <td style="width: 400px;"></td>
-      <td rowspan="1" style="width: 300px; color: #555;">
-        В отличие от var, scope у let - это блок, в кот. выполянется объявление.<br><br>
-        <mark>В ES6 можно его использовать всегда вместо var</mark>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="color: black; font-weight: bold; width: 300px;"><h2>const</h2></td>
-      <td style="width: 400px;"></td>
-      <td rowspan="1" style="width: 300px; color: #555;">
-        При объявление этой константы единожды, ей нельзя будет присвоить другое значение, иначе будет ошибка
-      </td>
-    </tr>
+    
+    
 
     <tr>
       <th colspan="4" style="font-size: 2em; color: darkcyan;">Имена переменных</th>

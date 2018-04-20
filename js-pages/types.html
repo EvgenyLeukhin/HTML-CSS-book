@@ -237,6 +237,36 @@ console.log(typeof text); <span class="gray">//object</span>
         1 символ - 2 байта<br>
       </td>
     </tr>
+
+    <tr>
+      <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                Конвертировать "строчные цифры" в number
+      </td>
+      <td style="width: 400px;">
+        <code>
+          var a = '1';<br>
+          var b = '2';<br>
+          c = a + b;<span class="gray">//12 (складываются строки)</span>
+                </code>
+                <h3>1 способ (+ перед переменной):</h3>
+                <code>
+                    var a = '1';<br>
+          var b = '2';<br>
+                    c = <span class="red">+</span>a + <span class="red">+</span>b;<span class="gray">//3</span>
+        </code>
+        <h3>2 способ (Number):</h3>
+        <code>
+          var a = '1';<br>
+          var b = '2';<br>
+                    c = <span class="red">Number</span>(a) + <span class="red">Number</span>(b);<span class="gray">//3</span>
+        </code>
+      </td>
+      <td rowspan="1" style="width: 300px; color: #555;">
+
+      </td>
+    </tr>
+
+
     <tr>
       <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
           Новые методы
