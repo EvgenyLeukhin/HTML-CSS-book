@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "start": "browser-sync start --server --files \"**/*\" --port 8000 --ui-port 8001 --startPath \"./index.html\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "s": "browser-sync start --server --files \"**/*\" --port 8000 --ui-port 8001 --startPath \"./index.html\""
   },
