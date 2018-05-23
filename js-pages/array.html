@@ -98,7 +98,7 @@
          </ul>
        </li>
 
-        
+
         <li><a href="modules.html">Модули</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
         <li><a href="../css3-pages/grunt.html">Grunt</a></li>
         <li><a href="../css3-pages/gulp.html">Gulp</a></li>
@@ -450,11 +450,11 @@
         </tr>
 
         <tr>
-          <th colspan="4" style="font-size: 3em; color: darkcyan;">Циклы и массивы</th>
+          <th colspan="4" style="font-size: 3em; color: darkcyan;">Циклы и массивы (ES6) - helpers</th>
         </tr>
         <tr>
           <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-            С помощью этого цикла можно легко перебирать элементы массива
+            Old-school. Так перебирали элементы массива в ES5
           </td>
           <td style="width: 500px;">
             <code>
@@ -470,6 +470,25 @@
           <td rowspan="1" style="width: 300px; color: #555;"></td>
         </tr>
         <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">for ... of</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+            В ES6 появилосб много хэлперов для таких задач
+          </td>
+          <td style="width: 500px;">
+            <code>
+              const mumbers = [0,1,2,3,4,5]; <br><br>
+              <span class="red">for</span> (let output <span class="red">of</span> numbers) {<br>
+              &nbsp;&nbsp;console.log(output);<br>
+              }<br>
+            </code>
+          </td>
+          <td rowspan="1" style="width: 300px; color: #555;">
+            Простой перебор элементов массива
+          </td>
+        </tr>
+        <tr>
           <th colspan="4" style="font-size: 2em; color: darkcyan;">forEach()</th>
         </tr>
         <tr>
@@ -479,11 +498,11 @@
           <td style="width: 500px;">
             <code>
               var arr = [1, 2, 3]; <br>
-              <span class="gray">// перебор элементов</span>
+              <span class="gray">// перебор элементов</span> <br>
               arr.<span class="red">forEach</span>(function(item, i, thisArray) { <br>
               &nbsp;&nbsp;console.log(<span class="red">item</span>); <br>
               }); <br>
-              <span class="gray">// перебор индексов</span>
+              <span class="gray">// перебор индексов</span> <br>
               arr.<span class="red">forEach</span>(function(item, i, thisArray) { <br>
               &nbsp;&nbsp;return console.log(<span class="red">index</span>); <br>
               }); <br>
@@ -588,7 +607,7 @@
         </tr>
         <tr>
           <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
-            Функция для "<mark>СВОРАЧИВАНИЯ</mark>" массива в одно значение
+            Функция для "<mark>СВОРАЧИВАНИЯ</mark>" массива в одно значение (суммирование)
           </td>
 
           <td style="width: 400px;">
@@ -606,6 +625,9 @@
             <code>preVal</code> - предыдущий элемент <br><br>
             <code>0</code> - второй аргумент функции (НАЧАЛЬНОЕ ЗНАЧЕНИЕ)
           </td>
+        </tr>
+        <tr>
+          <th colspan="4" style="font-size: 2em; color: darkcyan;">find()</th>
         </tr>
 
       </table>
