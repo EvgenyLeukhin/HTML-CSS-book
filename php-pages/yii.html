@@ -18,10 +18,8 @@
     }
 
     code {
-      line-height: 1em;
       font-size: 16px;
       color: darkred;
-      background: #ddd;
     }
 
     table td:nth-child(2) {
@@ -130,7 +128,44 @@
         <div class="row">
           <table class="table table-bordered table-condensed">
             <tr>
-              <th class="lead  text-center  bg-primary" colspan="3">Yii2</th>
+              <th class="lead  text-center  bg-primary" colspan="3">Установка</th>
+            </tr>
+            <tr>
+              <td><b>1. PHP</b></td>
+              <td>
+                <code>sudo apt install php7.0-cli</code>
+              </td>
+              <td>Установка PHP</td>
+            </tr>
+            <tr>
+              <td><b>2. Composer</b></td>
+              <td><code>curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer</code></td>
+              <td>Установка Composer</td>
+            </tr>
+            <tr>
+              <td>
+                <b>3. XAMMP</b>
+              </td>
+              <td>
+                <code>sudo su</code> <br>
+                <code>./xampp-linux-x64-7.2.5-0-installer.run</code>
+              </td>
+              <td>
+                  Установка XAMMP <br>
+                  Скачать установочный файл с оф. сайта <a href="https://www.apachefriends.org/download.html" target="_blank">link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>4. Yii2</b>
+              </td>
+              <td>
+                <code>composer create-project --prefer-dist yiisoft/yii2-app-basic yii2-project</code>
+              </td>
+              <td>Скачивание Yii2</td>
+            </tr>
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">Разворачивание</th>
             </tr>
             <tr>
               <td>
