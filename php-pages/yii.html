@@ -18,7 +18,7 @@
     }
 
     code {
-      font-size: 16px;
+      font-size: 14px;
       color: darkred;
     }
 
@@ -129,29 +129,15 @@
         <div class="row">
           <table class="table table-bordered table-condensed">
             <tr>
-              <th class="lead  text-center  bg-primary" colspan="3">Установка</th>
-            </tr>
-            <tr>
-              <td><b>1. PHP</b></td>
-              <td>
-                <code>sudo apt install php7.0-cli</code> <br>
-                <code>sudo apt-get install php-mbstring</code>
-              </td>
-              <td>Установка PHP</td>
-            </tr>
-            <tr>
-              <td><b>2. Composer</b></td>
-              <td>
-                <code>sudo curl -sS https://getcomposer.org/installer | php</code> <br><br>
-                <code>sudo mv composer.phar /usr/local/bin/composer</code><br><br>
-                <code>composer global require "fxp/composer-asset-plugin:~1.1.1"</code><br><br>
-                <code>composer install</code>
-              </td>
-              <td>Установка Composer</td>
+              <th class="lead  text-center  bg-primary" colspan="2">Установка</th>
             </tr>
             <tr>
               <td>
-                <b>3. XAMMP</b>
+                <b>1. XAMMP</b>
+                <p>Скачать установочный файл с оф. сайта
+                <a href="https://www.apachefriends.org/download.html" target="_blank">link</a>
+                <br> Директория для разворачивания:
+                <code>~/../../opt/lampp/htdocs</code></p>
               </td>
               <td>
                 <code>sudo su</code> <br>
@@ -161,25 +147,52 @@
                 <code>sudo su</code> <br>
                 <code>cd ~/../../opt/lampp && ./manager-linux-x64.run</code>
               </td>
+            </tr>
+            <!-- <tr>
+              <td><b>1. PHP</b></td>
               <td>
-                  Установка XAMMP <br>
-                  Скачать установочный файл с оф. сайта <a href="https://www.apachefriends.org/download.html" target="_blank">link</a> <br>
-                  Директория для разворачивания: <code>~/../../opt/lampp/htdocs</code>
+                <span class="gray">// установка php7</span><br>
+                <code>sudo apt install php7.0-cli</code> <br><br>
+                <span class="gray">// установка расширения для php7</span><br>
+                <code>sudo apt-get install php7.0-mbstring</code>
+              </td>
+            </tr> -->
+            <tr>
+              <td><b>2-1. Composer</b></td>
+              <td>
+                <code>curl -s http://getcomposer.org/installer | php</code> <br>
+                <code>sudo mv composer.phar /usr/local/bin/composer</code> <br>
+                <code>sudo composer global require "fxp/composer-asset-plugin:~1.3"</code> <br><br>
               </td>
             </tr>
             <tr>
+              <td><b>2-2. Composer - Удаление</b></td>
               <td>
-                <b>4. Yii2</b>
+                delete <code>~/home/user/.composer</code> <br>
+                delete <code>~/home/user/.config/composer</code> <br>
+                delete <code>~/usr/bin/composer</code> <br>
+                <code>sudo apt-get remove composer</code> <br>
+                <code>sudo apt-get remove --auto-remove composer</code> <br>
+                <code>sudo apt-get purge composer</code> <br>
+                <code>sudo apt-get purge --auto-remove composer</code> <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <b>3. Yii2</b>
               </td>
               <td>
-                <code>sudo composer create-project --prefer-dist yiisoft/yii2-app-advanced yii2-project</code>
+                <code>cd ~/../../opt/lampp/htdocs</code>
+                <code>sudo composer create-project yiisoft/yii2-app-advanced yii2</code>
                 <br>
-                <code>cd yii2-project</code>
+                <code>cd yii2</code>
                 <br>
                 <code>sudo php init</code>
               </td>
-              <td>Скачивание Yii2 <h2>Не устанавливается директория vendor/ !!!</h2></td>
             </tr>
+          </table>
+          <table class="table table-bordered table-condensed">
             <tr>
               <th class="lead  text-center  bg-primary" colspan="3">Разворачивание</th>
             </tr>
