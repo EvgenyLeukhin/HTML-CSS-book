@@ -133,7 +133,7 @@
             </tr>
             <tr>
               <td>
-                <b>1. XAMMP</b>
+                <b>1-1. XAMMP</b>
                 <p>Скачать установочный файл с оф. сайта
                 <a href="https://www.apachefriends.org/download.html" target="_blank">link</a>
                 <br> Директория для разворачивания:
@@ -148,15 +148,28 @@
                 <code>cd ~/../../opt/lampp && ./manager-linux-x64.run</code>
               </td>
             </tr>
-            <!-- <tr>
-              <td><b>1. PHP</b></td>
+            <tr>
+              <td><b>1-1. XAMMP - Virtual Hosts</b></td>
               <td>
-                <span class="gray">// установка php7</span><br>
-                <code>sudo apt install php7.0-cli</code> <br><br>
-                <span class="gray">// установка расширения для php7</span><br>
-                <code>sudo apt-get install php7.0-mbstring</code>
+                <span class="gray">Включить поддержку вирт. хостов</span><br>
+                <span class="gray">/opt/lampp/etc/extra/httpd.conf</span><br>
+                <code># Include etc/extra/httpd-vhosts.conf</code><br><br>
+                
+                <span class="gray">Добавление вирт. хоста в систему</span><br>
+                <span class="gray">/etc/hosts</span><br>
+                <code>127.0.0.1 some-site.loc</code><br><br>
+                
+                <span class="gray">Добавление вирт. хоста в XAMPP</span><br>
+                <span class="gray">/opt/lampp/etc/extra/httpd-vhosts.conf</span><br>
+                <code>&lt;VirtualHost *:80&gt;<br>
+                    &nbsp;&nbsp;ServerAdmin admin@some-site.loc<br>
+                    &nbsp;&nbsp;DocumentRoot "/opt/lampp/htdocs/some-site"<br>
+                    &nbsp;&nbsp;ServerName some-site.loc<br>
+                    &nbsp;&nbsp;ErrorLog "logs/some-site.example.com-error_log"<br>
+                    &nbsp;&nbsp;CustomLog "logs/some-site.example.com-access_log" common<br>
+                &lt;/VirtualHost&gt;</code>
               </td>
-            </tr> -->
+            </tr>
             <tr>
               <td><b>2-1. Composer</b></td>
               <td>
