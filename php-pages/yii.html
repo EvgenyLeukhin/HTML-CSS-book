@@ -152,15 +152,15 @@
               <td><b>1-1. XAMMP - Virtual Hosts</b></td>
               <td>
                 <span class="gray">Включить поддержку вирт. хостов</span><br>
-                <span class="gray">/opt/lampp/etc/extra/httpd.conf</span><br>
+                <code>/opt/lampp/etc/httpd.conf</code><br><br>
                 <code># Include etc/extra/httpd-vhosts.conf</code><br><br>
-                
+
                 <span class="gray">Добавление вирт. хоста в систему</span><br>
-                <span class="gray">/etc/hosts</span><br>
+                <code>/etc/hosts</code><br><br>
                 <code>127.0.0.1 some-site.loc</code><br><br>
-                
+
                 <span class="gray">Добавление вирт. хоста в XAMPP</span><br>
-                <span class="gray">/opt/lampp/etc/extra/httpd-vhosts.conf</span><br>
+                <code>/opt/lampp/etc/extra/httpd-vhosts.conf</code><br><br>
                 <code>&lt;VirtualHost *:80&gt;<br>
                     &nbsp;&nbsp;ServerAdmin admin@some-site.loc<br>
                     &nbsp;&nbsp;DocumentRoot "/opt/lampp/htdocs/some-site"<br>
@@ -193,7 +193,7 @@
 
             <tr>
               <td>
-                <b>3. Yii2</b>
+                <b>3-1. Установка Yii2 - I способ Composer </b>
               </td>
               <td>
                 <code>cd ~/../../opt/lampp/htdocs</code>
@@ -204,6 +204,20 @@
                 <br>
                 <code>sudo php init (0, yes)</code><br>
                 <code>http://localhost/yii2/frontend/web/</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>3-2. Установка Yii2 - II способ Архив</b>
+              </td>
+              <td>
+                <span class="gray">Скачать архив advanced c</span> <br>
+                <code><a href="https://www.yiiframework.com/download" target="_blank">https://www.yiiframework.com/download</a></code><br><br>
+                <span class="gray">Распаковать его в:</span><br>
+                <code>~/../../opt/lampp/htdocs/project-name</code><br><br>
+                <span class="gray">Инициализировать проект</span> <br>
+                <code>sudo php init</code> <br><br>
+                <span class="gray">Запустить сервер</span>
               </td>
             </tr>
           </table>
