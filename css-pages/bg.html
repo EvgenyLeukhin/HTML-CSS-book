@@ -10,7 +10,7 @@
     code {
       font-size: 1.4em;
     }
-    
+
     .discription-table td:nth-child(3) {
       width: 300px;
     }
@@ -90,6 +90,7 @@
           <th>Описание</th>
           <th colspan="2">Примеры</th>
         </tr>
+
         <tr>
           <td rowspan="3">background-color</td>
           <td rowspan="3">
@@ -188,7 +189,7 @@
             <code>background-<span class="red">position:</span> 50%;</code>
             <br>
           </td>
-          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: repeat-x; 
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: repeat-x;
 						   background-position: 50%;"></td>
         </tr>
         <tr>
@@ -308,23 +309,23 @@
 					<span class="red">background-repeat:</span><br> no-repeat, repeat-x, repeat-y;<hr>
 					<span class="red">background-position:</span><br> 0% 0%, 50% 50%, 100% 100%;<hr>
 					<span class="red">background-size:</span><br> 20px, 35px, 50px;
-										
-					
+
+
 					</code>
               </td>
               <td style="background-image: url(../pict/phone_blue.png),
-											 url(../pict/phone_green.png), 
+											 url(../pict/phone_green.png),
 											 url(../pict/phone_pink.png);
-						   background-repeat: no-repeat, 
-						   					  repeat-x, 
+						   background-repeat: no-repeat,
+						   					  repeat-x,
 										      repeat-y;
-						   background-position: 0% 0%, 
-						   						50% 50%, 
+						   background-position: 0% 0%,
+						   						50% 50%,
 						   						100% 100%;
-						   background-size: 20px, 
-						   					35px, 
+						   background-size: 20px,
+						   					35px,
 						   					50px;
-						   height: 200px; 
+						   height: 200px;
 						  ">
               </td>
             </tr>
@@ -389,7 +390,7 @@
 					background-<span class="red">size</span>: <mark>cover</mark>;
 					</code>
               </td>
-              <td style="background-image: url(../pict/phone_small.png); height: 80px; 
+              <td style="background-image: url(../pict/phone_small.png); height: 80px;
 						   background-repeat: no-repeat;
 						   background-size: cover;">
               </td>
@@ -506,7 +507,13 @@
 
       <span class="gray">Лучше всегда указывать преимущественный цвет у фона, если задаём <span class="red">background-image</span> <br>
       <span class="gray">Адаптивный фон (viewport - высота хэдера)</span> <code>height: -webkit-calc(100vh - 136px);</code>
-
+      <br><br>
+      <hr>
+      <h2 style="color: #000;">object-fit</h2>
+      <h3><code>object-fit: fill;</code> - Растягивается по контейнеру (пропорции игнорируются)</h3>
+      <h3><code>object-fit: contain;</code> - Растягивается по максимальной стороне в контейнере (пропорции соблюдаются)</h3>
+      <h3><code>object-fit: cover;</code> - Растягивается по максимальной стороне в контейнере, если осталось ещё свободное место по одной стороне, то изображение будет маштабироваться, чтобы заполнить всё пространство  (пропорции соблюдаются)</h3>
+      <h3><code>object-fit: none;</code> - Отключено по умолчанию</h3>
     </div>
   </div>
 
