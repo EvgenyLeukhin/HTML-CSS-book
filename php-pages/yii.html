@@ -19,7 +19,7 @@
 
     code {
       font-size: 14px;
-      color: darkred;
+      color: #337ab7;
     }
 
     table td:nth-child(2) {
@@ -120,6 +120,7 @@
     <div class="content clearfix">
 
       <h2>Мой Справочник | PHP | Yii</h2>
+      <p>MVC-framework on PHP</p>
 
       <a href="https://www.yiiframework.com/" target="_blank">Official Docs</a> &nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://nix-tips.ru/yii2-api-guides/" target="_blank">Руководство на русском</a> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -133,7 +134,7 @@
             </tr>
             <tr>
               <td>
-                <b>1. XAMMP</b>
+                <b>1-1. XAMMP</b>
                 <p>Скачать установочный файл с оф. сайта
                 <a href="https://www.apachefriends.org/download.html" target="_blank">link</a>
                 <br> Директория для разворачивания:
@@ -148,15 +149,28 @@
                 <code>cd ~/../../opt/lampp && ./manager-linux-x64.run</code>
               </td>
             </tr>
-            <!-- <tr>
-              <td><b>1. PHP</b></td>
+            <tr>
+              <td><b>1-1. XAMMP - Virtual Hosts</b></td>
               <td>
-                <span class="gray">// установка php7</span><br>
-                <code>sudo apt install php7.0-cli</code> <br><br>
-                <span class="gray">// установка расширения для php7</span><br>
-                <code>sudo apt-get install php7.0-mbstring</code>
+                <span class="gray">Включить поддержку вирт. хостов</span><br>
+                <code>/opt/lampp/etc/httpd.conf</code><br><br>
+                <code># Include etc/extra/httpd-vhosts.conf</code><br><br>
+
+                <span class="gray">Добавление вирт. хоста в систему</span><br>
+                <code>/etc/hosts</code><br><br>
+                <code>127.0.0.1 some-site.loc</code><br><br>
+
+                <span class="gray">Добавление вирт. хоста в XAMPP</span><br>
+                <code>/opt/lampp/etc/extra/httpd-vhosts.conf</code><br><br>
+                <code>&lt;VirtualHost *:80&gt;<br>
+                    &nbsp;&nbsp;ServerAdmin admin@some-site.loc<br>
+                    &nbsp;&nbsp;DocumentRoot "/opt/lampp/htdocs/some-site"<br>
+                    &nbsp;&nbsp;ServerName some-site.loc<br>
+                    &nbsp;&nbsp;ErrorLog "logs/some-site.example.com-error_log"<br>
+                    &nbsp;&nbsp;CustomLog "logs/some-site.example.com-access_log" common<br>
+                &lt;/VirtualHost&gt;</code>
               </td>
-            </tr> -->
+            </tr>
             <tr>
               <td><b>2-1. Composer</b></td>
               <td>
@@ -180,7 +194,7 @@
 
             <tr>
               <td>
-                <b>3. Yii2</b>
+                <b>3-1. Установка Yii2 - I способ Composer </b>
               </td>
               <td>
                 <code>cd ~/../../opt/lampp/htdocs</code>
@@ -193,10 +207,81 @@
                 <code>http://localhost/yii2/frontend/web/</code>
               </td>
             </tr>
+            <tr>
+              <td>
+                <b>3-2. Установка Yii2 - II способ Архив</b>
+              </td>
+              <td>
+                <span class="gray">Скачать архив advanced c</span> <br>
+                <code><a href="https://www.yiiframework.com/download" target="_blank">https://www.yiiframework.com/download</a></code><br><br>
+                <span class="gray">Распаковать его в:</span><br>
+                <code>~/../../opt/lampp/htdocs/project-name</code><br><br>
+                <span class="gray">Инициализировать проект</span> <br>
+                <code>sudo php init</code> <br><br>
+                <span class="gray">Запустить сервер</span>
+              </td>
+            </tr>
           </table>
           <table class="table table-bordered table-condensed">
             <tr>
-              <th class="lead  text-center  bg-primary" colspan="3">Разворачивание</th>
+              <th class="lead  text-center  bg-primary" colspan="3">Controllers (контроллеры, экшены)
+              </th>
+            </tr>
+            <tr>
+              <td><b>Роутинг</b></td>
+              <td></span>
+                <code>/index.php?r=<span class="red">site</span>%2F<span class="red">about</span></code> <br>
+<pre style="font-size: 1rem;"><code>&lt;?php
+  namespace frontend\controllers;
+  use yii\web\Controller;
+
+  class NewController extends Controller {
+    public function actionIndex() {
+      <small>// output some html</small>
+      <mark>return '&lt;h1>Some new page&lt;/h1>';</mark>
+      ...
+      <small>// output new view</small>
+      <mark>return $this->render('index');</mark>
+
+      ...
+      $text = 'Hello World!';
+      $names = ['Ivanov', 'Petrov', 'Sidorov'];
+      ...
+      <small>// output new view with parameters by $var</small>
+      <mark>return $this->render('index', [
+        'var_in_view'  => $text,
+        'var_in_view2' => $names,
+      ]);</mark>
+
+      <small>// output new view with parameters by compact</small>
+      <mark>return $this->render('index', compact('text', 'names'));</mark>
+    }
+  }</code></pre>
+              </td>
+              <td>
+                <span class="red">site</span> - название контроллера в <b>/frontend/controllers/<span class="red">Site</span>Controller.php</b> <br><br>
+                <span class="red">about</span> - название вида в директории <span class="red">site</span><br> <b>/frontend/views/site/<span class="red">about</span>.php</b> <br><br>
+                <p>Название Класса (КлассController.php в /frontend/controllers/) - название директории в папке /frontend/views/класс</p>
+                <p>Название экшена (actionНазвание) - название файла в директоии /frontend/views/класс/название</p>
+                <p>Если контроллер вложен в какую-либо директорию, например, /frontend/controllers/admin/UserController, то вложен должен быть и вид (/frontend/views/admin/user/название_экшена). Тогда url будет (/index.php?r=admin/user%2Fsome)</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">Views (виды)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <b>Шаблоны страниц</b>
+              </td>
+              <td>
+                <code>frontend/views/</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">Структура
+              </th>
             </tr>
             <tr>
               <td>
