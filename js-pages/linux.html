@@ -15,6 +15,7 @@
       margin-top: 25px;
       margin-bottom: 0;
     }
+    h4 {margin: 12px 0 0 0;}
   </style>
 </head>
 
@@ -87,8 +88,23 @@
           <td>
             <ul>
               <li>
-                <h3>Git</h3>
-                <code>sudo apt-get install git</code>
+                <h3>Git + Git Extensions</h3>
+                <h4>Git</h4>
+                <code>sudo apt install git</code> <br>
+                <code>git --version</code> 
+                <h4>Kdiff</h4>
+                <code>sudo apt install kdiff3</code> <br>
+                <code>kdiff3 --version</code> 
+                <h4>Mono</h4>
+                <code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys </code> <br>
+                <code>echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list</code> <br>
+                <code>sudo apt update</code> <br>
+                <code>sudo apt install mono-complete</code> <br>
+                <code>mono --version</code>
+                <h4>Download Git Extensions Mono (<a href="https://osdn.net/projects/sfnet_gitextensions/downloads/Git%20Extensions/GitExtensions-2.49-Mono.zip/" target="_blank">link</a>)</h4>
+                <code>Unzip to any folder</code>
+                <h4>Start Git Extensions</h4>
+                <code>mono GitExtensions.exe</code>
               </li>
               <li>
                 <h3>SSH</h3>
@@ -104,16 +120,13 @@
                 <code>sudo apt-get install -y nodejs</code>
               </li>
               <li>
-                <h3>LAMP</h3>
-                <code></code>
+                <h3>f.lux (<a href="https://justgetflux.com/" target="_blank">Tutorial</a>)</h3>
               </li>
               <li>
-                <h3>Docker</h3>
-                <code></code>
+                <h3>LAMP (<a href="/php-pages/yii.html">Tutorial</a>)</h3>
               </li>
               <li>
-                <h3>Git Extension</h3>
-                <code></code>
+                <h3>Docker (<a href="/php-pages/docker.html">Tutorial</a>)</h3>
               </li>
             </ul>
           </td>
@@ -124,36 +137,12 @@
 
       <table class="discription-table" border-spacing: 5px>
         <tr>
-          <th colspan="5" style="font-size: 2em; color: darkcyan;">Linux - установка программ</th>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">Дополнительно</th>
         </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            git
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;">
-            <code>sudo apt-get install <span class="red">git</span></code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            nodejs + npm
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;">
-            <code>curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - <hr>
-                  sudo apt-get install -y <span class="red">nodejs</span></code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            f.lux
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;">
-            Для снижения яркости дисплея
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;"><a href="https://justgetflux.com/" target="_blank">flux</a></td>
-        </tr>
+
+
+        
+
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
             Xneur — аналог Punto Switcher
@@ -185,22 +174,8 @@
           </td>
           <td rowspan="1" style="width: 200px; color: #555;">В PowerShell Windows</td>
         </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            Кракозябры в Linux
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;"></td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            SSH в Linux
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;">
-            <code>apt-get install openssh-server -y</code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
+
+
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
             Double Commander
@@ -219,27 +194,6 @@ Categories=Application;Utility;FileManager;
             </code></pre>
           </td>
           <td rowspan="1" style="width: 200px; color: #555;"></td>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            Midnight Commander
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;">
-            <code>sudo apt install mc</code>
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            Файловый менеджер, наподобие Volkov Commander
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            Git Extantion + Mono
-          </td>
-          <td rowspan="1" style="width: 700px; color: #555;"></td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            Git-client <br>
-            <a href="https://github.com/gitextensions/gitextensions/wiki/Git-Extensions-on-Linux-Mono" target="_blank">Инструкция по установке</a>
-          </td>
         </tr>
 
         <tr>
@@ -277,7 +231,7 @@ Name[ru]=xampp</code></pre>
         </tr>
 
 
-      </table> -->
+      </table>
 
 
     </div>
