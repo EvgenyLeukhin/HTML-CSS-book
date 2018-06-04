@@ -101,7 +101,7 @@
         </ul>
       </li>
 
-      
+
       <li><a href="modules.html">Модули</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
       <li><a href="../css3-pages/grunt.html">Grunt</a></li>
       <li><a href="../css3-pages/gulp.html">Gulp</a></li>
@@ -119,12 +119,25 @@
     </tr>
     <tr>
       <td>
-        <h2>I способ</h2>
-        Импорт стилей в <b>App.js</b>
+        <h2>I способ (old-school)</h2> <hr>
+        При билде вся стилизация в одном файле bundle.css в тег link
+      </td>
+      <td>
+        <code>&lt;link src="/bunble.css"&gt;</code>
+      </td>
+      <td>
+        Работу по импорту css-файлов в App.js осуществляет Webpack
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>II способ (most useage)</h2> <hr>
+        На каждый импорт будет создан отдельный тег style
       </td>
       <td>
         <code>
-          <span class="gray">// импортируем стили в App.js</span>
+          <span class="gray">// импортируем стили в компонент</span>
+          <span class="gray">// глобальные стили в index.js</span>
           import '<mark>./SomeComponent/SomeComponent.css'</mark>;
         </code>
       </td>
@@ -134,8 +147,8 @@
     </tr>
     <tr>
       <td>
-        <h2>II способ</h2>
-        Инлайн-стилитизация
+        <h2>III способ (JSS - hardcore)</h2> <hr>
+        Инлайн-стилитизация, CSS in JS
       </td>
       <td>
         <code>render() {
@@ -153,7 +166,8 @@
         </code>
       </td>
       <td>
-        css-свойства должны записываться в js-формате (в camelCase)
+        css-свойства должны записываться в js-формате (в camelCase). <br>
+        Можно подключать библиотеки для этого способа (такие как radium, glamor, styled-components)
       </td>
     </tr>
   </table>
