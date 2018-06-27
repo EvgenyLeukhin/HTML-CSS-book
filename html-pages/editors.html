@@ -16,9 +16,12 @@
     }
 
     kbd {
-      font-size: 140%;
+      font-size: 120%;
       font-weight: bold;
       color: darkred;
+      min-width: 200px;
+      display: inline-block;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -65,131 +68,178 @@
       <h2>Мой Справочник | Редакторы кода</h2>
 
       <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">Webstorm</th>
+        </tr>
 
-                <tr>
-                  <th class="css3-table-title" colspan="3">Visual Studio Code</th>
-                </tr>
-                <tr>
-                  <td class="col1">
-                    Официальный сайт
-                  </td>
+        <tr>
+          <td class="col1">
+            Официальный сайт <a href="https://www.jetbrains.com/webstorm/" target="_blank">www.jetbrains.com/webstorm</a>
+          </td>
 
-                  <td class="col3" style="min-width: 600px;">
-                    <a href="https://code.visualstudio.com/"
-                      target="_blank">https://code.visualstudio.com/</a> <br>
-                    <h3>Преимущества перед Sublime Text 3</h3>
-                    <ul>
-                      <li><b>Плагины:</b> описание, установка, кол-во скачиваний, прозрачность, их много</li>
-                      <li><b>Терминал:</b> из коробки</li>
-                      <li><b>Дебаггер:</b> из коробки</li>
-                      <li><b>Git:</b> из коробки</li>
-                      <li><b>Гибкость: </b> настроить можно всё</li>
-                      <li><b>Абсолютно бесплатный: </b> окно не вылазиет</li>
-                      <li><b>Автоподставление классов, переменных, функций</b></li>
-                      <li><b>Перемещение по ссылкам</b></li>
-                      <li>Поддержка <b>русского языка</b></li>
-                      <li>Уже чем-то начинает походить на <b>IDE</b></li>
-                    </ul>
-                    <h3>Недостатки перед Sublime Text 3</h3>
-                    <ul>
-                      <li><b>"Ест"</b> оперативной памяти в 2-3 раза больше </li>
-                    </ul>
-                  </td>
-                </tr>
+          <td class="col3" style="min-width: 600px;">
+            <h3>Преимущества:</h3>
+            <ul>
+              <li><b>Профессиональное IDE</b></li>
+              <li>
+                <b>В нём есть всё из коробки</b>
+                <ul>
+                  <li>Git</li>
+                  <li>Консоль</li>
+                  <li>Деббагер</li>
+                  <li>Сервер и куча всего...</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>Недостатки</h3>
+            <ul>
+              <li>Платный</li>
+              <li>Сложный</li>
+              <li>Немультиязычный</li>
+              <li>Забирает много оперативной памяти</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><h3>Hotkeys</h3></td>
+          <td>
+            <kbd>Ctrl + Alt + S</kbd> - Настройки <br>
+            <kbd>Ctrl + Alt + A</kbd> - Команды <br>
+            <kbd>Ctrl + Shift + L</kbd> - Автоформатирование <br>
+            <kbd>Ctrl + Shift + N</kbd> - Поиск по файлу <br>
+            <kbd>Alt + F12</kbd> - Терминал <br>
+            <kbd>Ctrl + E</kbd> - Недавние файлы <br>
+            <kbd>Ctrl + F4</kbd> - Закрыть вкладку <br>
+            <kbd>Ctrl + ~</kbd> - Меню настроек оформления <br>
+            <kbd>Shift + Shift</kbd> - Поиск везде <br>
 
-                <tr>
-                  <td class="col1">
-                    Плагины
-                  </td>
+          </td>
+        </tr>
+        <tr>
+          <th class="css3-table-title" colspan="3">Visual Studio Code</th>
+        </tr>
+        <tr>
+          <td class="col1">
+            Официальный сайт
+            <br>
+            <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+          </td>
 
-                  <td class="col3" style="min-width: 650px;">
-                    <ol>
-                      <li>Autofilename (быстрый ввод путей)</li>
-                      <li>EditorConfig for VS Code (форматирование)</li>
-                      <li>Bracket Pair Colorizer</li>
-                      <li>IntelliSense for CSS class names in HTML (css-классы)</li>
-                      <!-- <li>Beautify (автоформатирование)</li> -->
-                      <!-- <li>Bootstrap 4, Font awesome</li> -->
-                      <!-- <li>CSS Tree Validator (валидатор css)</li> -->
-                      <li>Docker (интеграция)</li>
-                      <li>ESLint (js-линтер)</li>
-                      <li>GitLens (история каждой строки)</li>
-                      <li>Git History (история файлов) - не работает в Linux</li>
-                      <li>JavaScript (ES6) code snippets (быстрый ввод)</li>
-                      <!-- <li>Mithril Emmet (быстрый код)</li> -->
-                      <li>npm (автозаполнение npm)</li>
-                      <li>npm intellisense (npm команды из строки)</li>
-                      <!-- <li>SASS (scss-синтаксис)</li> -->
-                      <!-- <li>Start Git Bash (Bash-консоль)</li> -->
-                      <li>Sublime Text Keymap (горячие клавиши как в Sublime)</li>
-                      <li>vscode-pdf (поддержка pdf)</li>
-                      <!-- <li>Terminal (консоль)</li> -->
+          <td class="col3" style="min-width: 600px;">
 
-                      <!-- <li>Stylelint (css-линтер)</li> -->
-                      <!-- <li>Minify (html,css,js-минификатор)</li> -->
-                      <!-- <li>JS-CSS-HTML Formatted (форматирование кода)</li> -->
-                    </ol> <hr>
-                    <h3>User Settings</h3>
-                    <pre><code style="font-size: 1em;">{
-    "sublimeTextKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true,
-    "workbench.colorTheme": "Monokai",
-    "workbench.statusBar.visible": true,
-    "editor.minimap.enabled": false,
-    "editor.fontSize": 18,
-    "editor.renderWhitespace": "all",
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "editor.fontFamily": "'Consolas'",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+            <h3>Преимущества перед Sublime Text 3</h3>
+            <ul>
+              <li><b>Плагины:</b> описание, установка, кол-во скачиваний, прозрачность, их много</li>
+              <li><b>Терминал:</b> из коробки</li>
+              <li><b>Дебаггер:</b> из коробки</li>
+              <li><b>Git:</b> из коробки</li>
+              <li><b>Гибкость: </b> настроить можно всё</li>
+              <li><b>Абсолютно бесплатный: </b> окно не вылазиет</li>
+              <li><b>Автоподставление классов, переменных, функций</b></li>
+              <li><b>Перемещение по ссылкам</b></li>
+              <li>Поддержка <b>русского языка</b></li>
+              <li>Уже чем-то начинает походить на <b>IDE</b></li>
+            </ul>
+            <h3>Недостатки перед Sublime Text 3</h3>
+            <ul>
+              <li><b>"Ест"</b> оперативной памяти в 2-3 раза больше </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="col1">
+            Плагины
+          </td>
+
+          <td class="col3" style="min-width: 650px;">
+            <ol>
+              <li>Autofilename (быстрый ввод путей)</li>
+              <li>EditorConfig for VS Code (форматирование)</li>
+              <li>Bracket Pair Colorizer</li>
+              <li>IntelliSense for CSS class names in HTML (css-классы)</li>
+              <!-- <li>Beautify (автоформатирование)</li> -->
+              <!-- <li>Bootstrap 4, Font awesome</li> -->
+              <!-- <li>CSS Tree Validator (валидатор css)</li> -->
+              <li>Docker (интеграция)</li>
+              <li>ESLint (js-линтер)</li>
+              <li>GitLens (история каждой строки)</li>
+              <li>Git History (история файлов) - не работает в Linux</li>
+              <li>JavaScript (ES6) code snippets (быстрый ввод)</li>
+              <!-- <li>Mithril Emmet (быстрый код)</li> -->
+              <li>npm (автозаполнение npm)</li>
+              <li>npm intellisense (npm команды из строки)</li>
+              <!-- <li>SASS (scss-синтаксис)</li> -->
+              <!-- <li>Start Git Bash (Bash-консоль)</li> -->
+              <li>Sublime Text Keymap (горячие клавиши как в Sublime)</li>
+              <li>vscode-pdf (поддержка pdf)</li>
+              <!-- <li>Terminal (консоль)</li> -->
+
+              <!-- <li>Stylelint (css-линтер)</li> -->
+              <!-- <li>Minify (html,css,js-минификатор)</li> -->
+              <!-- <li>JS-CSS-HTML Formatted (форматирование кода)</li> -->
+            </ol> <hr>
+            <h3>User Settings</h3>
+            <pre><code style="font-size: 1em;">{
+"sublimeTextKeymap.promptV3Features": true,
+"editor.multiCursorModifier": "ctrlCmd",
+"editor.snippetSuggestions": "top",
+"editor.formatOnPaste": true,
+"workbench.colorTheme": "Monokai",
+"workbench.statusBar.visible": true,
+"editor.minimap.enabled": false,
+"editor.fontSize": 18,
+"editor.renderWhitespace": "all",
+"editor.tabSize": 2,
+"editor.wordWrap": "on",
+"editor.fontFamily": "'Consolas'",
+"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }</code></pre><br><br>
 <code>Configure Language</code> в консоли - смена языка на англ (en)
-                  </td>
-                </tr>
-                <tr>
-                  <td class="col1">
-                    Горячие клавиши (можно сделать как в Sublime, установив плагин)
-                  </td>
-                  <td class="col3" style="min-width: 600px;">
-                    <table style="border-collapse: collapse">
-                      <tr>
-                        <td><kbd>Ctrl + `</kbd></td>
-                        <td>Открыть консоль</td>
-                      </tr>
-                      <tr>
-                        <td><kbd>Ctrl + Shift + P</kbd></td>
-                        <td>Командная строка</td>
-                      </tr>
-                      <tr>
-                        <td><kbd>Ctrl + P</kbd></td>
-                        <td>Перейти к файлу</td>
-                      </tr>
-                      <tr>
-                        <td><kbd>Ctrl + Shift + N</kbd></td>
-                        <td>Новое окно</td>
-                      </tr>
-                      <tr>
-                        <td><kbd>Ctrl + B</kbd></td>
-                        <td>Сайдбар</td>
-                      </tr>
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Горячие клавиши (можно сделать как в Sublime, установив плагин)
+          </td>
+          <td class="col3" style="min-width: 600px;">
+            <table style="border-collapse: collapse">
+              <tr>
+                <td><kbd>Ctrl + `</kbd></td>
+                <td>Открыть консоль</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + Shift + P</kbd></td>
+                <td>Командная строка</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + P</kbd></td>
+                <td>Перейти к файлу</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + Shift + N</kbd></td>
+                <td>Новое окно</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + B</kbd></td>
+                <td>Сайдбар</td>
+              </tr>
 
-                      <tr>
-                        <td><kbd>Alt + ↑↓</kbd></td>
-                        <td>Переместить строку</td>
-                      </tr>
-                      <tr>
-                        <td><kbd>F11</kbd></td>
-                        <td>Полноэкранный режим</td>
-                      </tr>
-                      <tr>
-                        <td><kbd>Ctrl + \</kbd></td>
-                        <td>Разделение окна</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
+              <tr>
+                <td><kbd>Alt + ↑↓</kbd></td>
+                <td>Переместить строку</td>
+              </tr>
+              <tr>
+                <td><kbd>F11</kbd></td>
+                <td>Полноэкранный режим</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + \</kbd></td>
+                <td>Разделение окна</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
         <tr>
           <th class="css3-table-title" colspan="3">Sublime text 3</th>
@@ -318,37 +368,37 @@
             <a href="https://github.com/adobe/brackets/wiki/Brackets-Shortcuts" target="_blank">Горячие клавиши</a>
           </td>
           <td class="col3" style="min-width: 600px;">
-            <kbd>Ctrl<span class="gray"> + </span>D</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- копировать текущую строку вниз
+            <kbd>Ctrl<span class="gray"> + </span>D</kbd> - копировать текущую строку вниз
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>G</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- перейти к строке
+            <kbd>Ctrl<span class="gray"> + </span>G</kbd> - перейти к строке
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>D</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - удалить сроку
+            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>D</kbd> - удалить сроку
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>L</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- выделить текущую строку
+            <kbd>Ctrl<span class="gray"> + </span>L</kbd> - выделить текущую строку
             <hr>
-            <kbd>Shift<span class="gray"> + </span>Alt<span class="gray"> + </span>↑↓</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- многокурсорность
+            <kbd>Shift<span class="gray"> + </span>Alt<span class="gray"> + </span>↑↓</kbd> - многокурсорность
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>E</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- быстрое редактирование
+            <kbd>Ctrl<span class="gray"> + </span>E</kbd> - быстрое редактирование
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>O</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - быстрое открытие
+            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>O</kbd> - быстрое открытие
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Alt<span class="gray"> + </span>H</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- сайдбар
+            <kbd>Ctrl<span class="gray"> + </span>Alt<span class="gray"> + </span>H</kbd> - сайдбар
             <hr>
-            <kbd>F5</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- перезагрузка редактора
+            <kbd>F5</kbd> - перезагрузка редактора
             <hr>
-            <kbd>Alt<span class="gray"> + </span>1</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- свернуть код
+            <kbd>Alt<span class="gray"> + </span>1</kbd> - свернуть код
             <hr>
-            <kbd>Alt<span class="gray"> + </span>Shift<span class="gray"> + </span>1</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - развернуть код
+            <kbd>Alt<span class="gray"> + </span>Shift<span class="gray"> + </span>1</kbd> - развернуть код
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>F</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - поиск по всем файлам
+            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>F</kbd> - поиск по всем файлам
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>H</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - замена во всех файлах
+            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>H</kbd> - замена во всех файлах
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Alt<span class="gray"> + </span>S</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - сохранить всё
+            <kbd>Ctrl<span class="gray"> + </span>Alt<span class="gray"> + </span>S</kbd> - сохранить всё
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>W</kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - закрыть всё
+            <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>W</kbd> - закрыть всё
             <hr>
-            <kbd>Ctrl<span class="gray"> + </span>/</kbd> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- комментарии
+            <kbd>Ctrl<span class="gray"> + </span>/</kbd> - комментарии
             <hr>
           </td>
         </tr>
