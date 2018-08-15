@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | flex и block</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
       <style>
@@ -26,7 +26,7 @@
         .flex-sample1 {
           width: 50px;
           height: 50px;
-        } 
+        }
         .flex-sample1-1 {
           margin-left: auto;
         }
@@ -75,7 +75,7 @@
           background-color: maroon;
           border: 3px solid yellow;
           margin: 10px;
-        } 
+        }
         .flex-sample5-1 {
           flex-grow: 1;
         }
@@ -122,7 +122,7 @@
             margin-top: 0;
             align-items: flex-end;
         }
-        
+
         .card-title span {
             background-color: #c8dcff;
             border: 1px solid #999999;
@@ -146,9 +146,9 @@
     <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -194,7 +194,7 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
@@ -215,15 +215,15 @@
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | flex и block</h2>
       <h3>Кратко:</h3>
       <p>Все свойства, которые рассмотрены здесь придумали для того, чтобы не задавать фиксированные размеры флекс-элементам, а чтобы они высчитывались автоматически, в зависимости от размеров флекс-контейнера</p>
     <code>
-        <span class="red">flex-grow</span>: 0* | 1 | 2 | 3 ...; <span class="gray">/* Это свойство определяет, какую часть от оставшегося свободного пространства во флекс-контейнере займёт флекс-элемент. Свободное пространство = Ширина контейнера - контент всех флекс элементов во флекс-контейнере(расчитывается пропорционально). 0&nbsp;-&nbsp;по&nbsp;ум*, ужимаются под контент*/</span><hr>
+        <span class="red">flex-grow</span>: 0* | 1 | 2 | 3 ...; <span class="gray">/* Это свойство определяет, какую часть от оставшегося свободного пространства во флекс-контейнере займёт флекс-элемент. Свободное пространство = Ширина контейнера - контент всех флекс элементов во флекс-контейнере(расчитывается пропорционально). 0&nbsp;-&nbsp;по&nbsp;ум*, ужимаются под контент. <b>AКТУАЛЬНО ПРИ flex-wrap: wrap, когда нужно чтобы переносимый на новую строчку элемент растягивался по ширине, которую можно задавать с помощью этого свойства </b> */</span><hr>
 
 
         <span class="red">flex-shrink</span>: 0 | 1* | 2 | ...; <span class="gray">/* "Ужимание" флекс-элементов (на сколько ужмётся флекс-элемент, если ширина флекс-контейнера будет меньше ширины флекс-элемента).  0&nbsp;-&nbsp;отмена ужимания, 1 - по ум* ужимаются. <span style="font-weight: bold;">РАБОТАЕТ ТОЛЬКО с flex-wrap: nowrap; Лучше оставлять по ум* 1, или делать 0 когда нужно</span>*/</span><hr>
@@ -252,7 +252,7 @@
     <p style="font-size: 120%;">Свойство <mark>flex-basis</mark> выступают в роли точек останова, определяющих, когда элементы переносятся на новые строки. Вы можете использовать значение свойства flex-basis для имитации точек останова. Например, если существует три элемента, которые вы хотите отобразить друг рядом с другом, а ширина страницы превышает 600 пикселов, можно присвоить свойству flex-basis каждого из них значение 200px. Если окно браузера станет уже 600 пикселов, то первый и второй элементы будут располагаться рядом друг с другом, а третий будет перенесен на новую строку. Если окно браузера станет уже 400 пикселов, то каждый из элементов будет находиться на отдельной строке, располагаясь друг над другом.</p>
 
 
-	
+
   <table class="css3-table">
     <tr>
       <th class="css3-table-title" colspan="3">flex &amp; block-model</th>
@@ -272,7 +272,7 @@
 }
         </code>
       </td>
-      <td class="col3 col3-flex-sample"> 
+      <td class="col3 col3-flex-sample">
         <div class="flex-sample">1</div>
         <div class="flex-sample">2</div>
         <div class="flex-sample">3</div>
@@ -447,19 +447,19 @@
       <td class="col2" rowspan="5">
         <code>
 <span class="red">.flex-sample1,<br> .flex-sample2</span> {<br>
-... <br> 
+... <br>
 &nbsp;&nbsp;<mark><b>flex-shrink: 0;</b></mark><br>
 }<hr>
-<span class="red">.flex-sample2</span> {<br>     
-... <br> 
+<span class="red">.flex-sample2</span> {<br>
+... <br>
 &nbsp;&nbsp;<mark><b>flex-shrink: 1;</b></mark><br>
 }<hr>
 <span class="red">.flex-sample1,<br> .flex-sample2</span> {<br>
-... <br> 
+... <br>
 &nbsp;&nbsp;<mark><b>flex-shrink: 1;</b></mark><br>
 }<hr>
 <span class="red">.flex-sample1,<br> .flex-sample2</span> {<br>
-... <br> 
+... <br>
 &nbsp;&nbsp;<mark><b>flex-shrink: 3;</b></mark><br>
 }<hr>
         </code>
@@ -469,26 +469,26 @@
         <p>Это блоки без overflow бы выпадали</p>
       </td>
     </tr>
-    <tr>    
+    <tr>
       <td class="col3 col3-flex-sample" style="overflow-x: scroll;">
         <div class="flex-sample flex-sample6-1">1</div>
         <div class="flex-sample flex-sample6-1">2</div>
 
       </td>
     </tr>
-    <tr>    
+    <tr>
       <td class="col3 col3-flex-sample">
         <div class="flex-sample flex-sample6-1">1</div>
         <div class="flex-sample flex-sample6-2">2</div>
       </td>
     </tr>
-    <tr>    
+    <tr>
       <td class="col3 col3-flex-sample">
         <div class="flex-sample flex-sample6-2">1</div>
         <div class="flex-sample flex-sample6-2">2</div>
       </td>
     </tr>
-    <tr>    
+    <tr>
       <td class="col3 col3-flex-sample">
         <div class="flex-sample flex-sample6-3">1</div>
         <div class="flex-sample flex-sample6-3">2</div>
@@ -596,15 +596,15 @@ flex: 1;       -&gt; flex: 1 1 0%;</pre></code>
             </h3>
       </td>
     </tr>
-    
+
   </table>
-	
+
 
   <img src="../img/flex-maket.jpg" alt="img/flex-maket.jpg" width="75%" height="auto">
 
-        
-        
-	
+
+
+
 	</div>
 </div>
 
@@ -612,7 +612,7 @@ flex: 1;       -&gt; flex: 1 1 0%;</pre></code>
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
