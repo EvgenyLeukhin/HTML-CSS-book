@@ -413,18 +413,22 @@
 <h3>.git/config (для GitLab)</h3>
   <pre><code>  url = <mark>git@gitlab.com:</mark>EvgenyLeukhin/frontend.git</code></pre>
 <hr>
-  <h3>.ssh/config (для GitHub)</h3>
-<pre><code>Host github.com
-  User git
-  Port 22
-  Hostname github.com
-  IdentityFile <mark>~/.ssh/id_rsa</mark>
-  TCPKeepAlive yes
-  IdentitiesOnly yes</code></pre>
-<h3>.ssh/config (для GitLab)</h3>
-<pre><code>Host gitlab.com
-  RSAAuthentication yes
-  IdentityFile <mark>~/.ssh/id_rsa</mark></code></pre>
+  <h3>.ssh/config</h3>
+  <pre><code># gitLab.com
+Host gitlab.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+# git.codenetix.com
+Host git.codenetix.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+# github.com
+Host github.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+  </code></pre>
 </td>
 
 
