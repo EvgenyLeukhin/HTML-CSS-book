@@ -244,6 +244,41 @@ Name[ru]=xampp</code></pre>
 
       </table>
 
+      <h2>Gatsby fix plugin sharp on Linux Ubuntu/Mint</h2>
+      <a href="https://github.com/nodejs/node-gyp/issues/233#issuecomment-280389583" target="_blank" rel="noopener noreferrer">https://github.com/nodejs/node-gyp/issues/233#issuecomment-280389583</a>
+      <pre><u>after hours of searching here and there i got install "node-gyp" and its other related modules
+i tried all possible soulation</u>
+
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n 4.4.5
+sudo npm install npm -g
+sudo npm uninstall node-gyp -g
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-4.8 g++-4.8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+
+sudo npm install -g n
+sudo n stable
+npm rebuild
+npm install
+
+sudo apt-get install mongodb make screen python-werkzeug python-jinja2 python-lxml python-iso8601 python-six python-setuptools
+
+sudo apt-get install gcc libssl-dev g++ make
+
+npm rebuild
+npm install
+
+<u>Now my node and npm version are:</u>
+npm -v
+4.0.5
+node -v
+v7.4.0<code>
+      </code></pre>
+
 
     </div>
   </div>
