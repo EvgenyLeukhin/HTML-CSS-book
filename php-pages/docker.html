@@ -15,6 +15,13 @@
       left: 0;
       bottom: 0;
     }
+    code {
+      font-size: 14px !important;
+    }
+    th {
+      color: #fff;
+      font-size: 20px;
+    }
   </style>
 </head>
 
@@ -111,30 +118,53 @@
 
       <div class="container-fluid">
         <div class="row">
-          <a href="https://docs.docker.com/" target="_blank">Docker-Docs</a>
           <table class="new-table">
             <tr>
-              <th colspan="3"><code>Docker-команды</code></th>
+              <th colspan="3">Docker-команды</th>
             </tr>
+
             <tr>
+              <td>Docker</td>
               <td>
-                Docker and Docker-compose
+                <p>Скрипт для установки на Linux: <a href="https://get.docker.com/" target="_blank" rel="noopener noreferrer">http://get.docker.com</a></p>
+                <p>Копируем <code>curl -fsSL get.docker.com -o get-docker.sh</code>, <br> запускаем-сохраняем-выполняем скрипт </p>
+                <code><mark>docker version</mark></code> || <code><mark>sudo docker version</mark></code>
               </td>
+              <td><a href="https://docs.docker.com/" target="_blank">Docker-Docs</a></td>
+            </tr>
+
+            <tr>
+              <td>Docker-machine</td>
               <td>
-                <code>sh install.sh</code>
+                <code>https://github.com/docker/machine/releases</code> <br>
+                ... выбрать последний релиз ... <br>
+                ... скопировать скрипт ... <br>
+                ... <code>sudo -i</code> и установить скрипт... <br>
+                <code><mark>docker-machine -v</mark></code>
               </td>
+              <td>Docs: https://docs.docker.com/machine/install-machine/</td>
+            </tr>
+
+            <tr>
+              <td>Docker-compose</td>
+              <td>
+                <code>https://github.com/docker/compose/releases</code> <br>
+                ... выбрать последний релиз ... <br>
+                ... скопировать скрипт ... <br>
+                ... <code>sudo -i</code> и установить скрипт... <br>
+                <code><mark>docker-compose -v</mark></code>
+              </td>
+              <td>Docs: https://docs.docker.com/compose/install/</td>
+            </tr>
+
+            <tr style="background: #ccc;">
+              <td>Другой вариант (c docker-compose)</td>
+              <td><code>sh install.sh</code></td>
               <td>
                 <a href="../files/install.sh" download>install.sh</a>
               </td>
             </tr>
-            <tr>
-              <td>Версия</td>
-              <td>
-                <code><mark>docker -v</mark></code> <br>
-                <code><mark>docker-compose -v</mark></code>
-              </td>
-              <td></td>
-            </tr>
+
             <tr>
               <td>Добавить группу и пользователя</td>
               <td>
