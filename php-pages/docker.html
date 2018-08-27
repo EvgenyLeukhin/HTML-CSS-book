@@ -170,15 +170,26 @@
             </tr>
 
             <tr>
-              <td>Контейнер (container)</td>
-              <td></td>
+              <td><h2>Контейнер</h2> (container)</td>
+              <td>
+                <h4>Список контейнеров:</h4>
+                <code>docker container ls -a</code><hr>
+                <h4>Запуск\остановка контейнера:</h4>
+                <code>docker container run\stop CONTAINER_ID</code><hr>
+                <h4>Удаление контейнера:</h4>
+                <p>Запущенный контейнер можно удалить только с <code>-f</code></p>
+                <code>docker container rm CONTAINER_ID</code><hr>
+                <h4>Скачать и запустить контейнер с docker-hub</h4>
+                <p>Нужно залогиниться</p>
+                <code>docker container run --publish 80:80 <mark>ngnix</mark></code><hr>
+              </td>
               <td></td>
             </tr>
 
             <tr>
-              <td>Образ (image)</td>
-              <td></td>
-              <td></td>
+              <td><h2>Образ</h2> (image)</td>
+              <td>Много контейнеров может лежать в образе</td>
+              <td><a href="http://hub.docker.com/" target="_blank" rel="noopener noreferrer">http://hub.docker.com/</a>  - репозитории для docker-образов</td>
             </tr>
 
             <tr>
