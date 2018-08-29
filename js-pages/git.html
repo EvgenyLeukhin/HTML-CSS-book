@@ -125,11 +125,16 @@
       <td><p>Перед тем как удалять исходную ветку лучше зайти в новую и попробовать с неё развернуть проект, если всё хорошо, то можно удалять, если нет - нужно разбираться</p></td>
     </tr>
     <tr>
-      <th class="css3-table-title" colspan="3">Cherry pick</th>
+      <th class="css3-table-title" colspan="3">Cherry pick + Apply</th>
     </tr>
     <tr>
       <td><code>git cherry-pick &lt;commit-hash&gt;</code></td>
       <td>Позволяет добавить комит в текущую ветку из другой ветки по коммит-хэшу</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>git apply &lt;path_to_diff_file&gt;</code></td>
+      <td>Позволяет применить diff-файл к проекту</td>
       <td></td>
     </tr>
     <tr>
