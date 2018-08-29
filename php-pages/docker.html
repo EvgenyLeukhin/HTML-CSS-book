@@ -279,6 +279,23 @@
               <td><code><mark>docker service docker restart</mark></code></td>
               <td></td>
             </tr>
+            <tr>
+              <td><h4>Real use on projects</h4></td>
+              <td>
+                <code>docker stop $(docker ps -q -a)</code><br>
+                <code>docker rm -f</code><br>
+                <code>docker-compose pull</code><br>
+                <code>docker-compose up -d</code><br>
+              </td>
+              <td>
+                <ol>
+                  <li>Остановить контейнеры внутри проекта</li>
+                  <li>Удалить</li>
+                  <li>Скачать</li>
+                  <li>Запустить</li>
+                </ol>
+              </td>
+            </tr>
           </table>
         </div>
       </div>
