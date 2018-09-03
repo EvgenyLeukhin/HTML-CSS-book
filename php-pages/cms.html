@@ -171,6 +171,23 @@
             </tr>
 
             <tr>
+              <td>Права записи\создания файлов</td>
+              <td>
+                  <p>Заходим в <code>cd ~/../../opt/lampp/htdocs/wordpress/</code></p>
+                  <p>Посмотреть запущенных пользователей:</p>
+                  <code>ps aux | grep httpd</code>
+                  <p>Посмотреть кем созданы файлы или каталоги:</p>
+                  <code>ll /path/</code>
+                  <p>Нужно выдать права deamon:</p>
+                  <code>chown -R deamon:deamon /wp-content/uploads/</code> <br>
+                  <code>... www-data:www-data ...</code> (ngnix)
+              </td>
+              <td>
+
+              </td>
+            </tr>
+
+            <tr>
               <td>Fix upload images</td>
               <td>
                 phpMyAdmin -> DB -> wp_options -> upload_path -> Edit -> option_value -> /opt/lampp/htdocs/wordpress/wp-content/uploads/ -> Вперёд
