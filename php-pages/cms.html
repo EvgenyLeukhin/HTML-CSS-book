@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | PHP | CMS </title>
+  <title>Мой Справочник | PHP | Wordpress </title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,7 +108,7 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | PHP | CMS</h2>
+      <h2>Мой Справочник | PHP | Wordpress</h2>
 
       <div class="container-fluid">
         <div class="row">
@@ -123,27 +123,25 @@
               </td>
               <td>
                 <ol>
-                  <li>Скачать установщик с оф. сайта</li>
-                  <li>Распаковать и провязать локальный домен</li>
-                  <li>В браузере нажимаем
-                    <b>Далее</b>
+                  <li>
+                    <h4>Скачивание и распаковка</h4>
+                    Скачать установщик с оф. сайта(en, ru)<br>
+                    Или скачать/распаковать в консоли: <br>
+                    <code>wget http://wordpress.org/latest.tar.gz</code> <br>
+                    <code>tar -xzvf latest.tar.gz </code> <br>
+                    Директория wordpress/
                   </li>
                   <li>
-                    Создаём БД
-                    <ol>
-                      <li>Заходим в
-                        <b>PHPMyAdmin</b> (root, '');</li>
-                      <li>Создать
-                        <b>БД</b> (utf_general_cli);</li>
-                    </ol>
+                    <h4>Создаём БД</h4>
+                      <b>PHPMyAdmin</b> (root (логин), пустой пароль) <br>
+                      кодировка(utf_general_cli)
                   </li>
-                  <li>Вводим название БД, имена, пароли</li>
-                  <li>Вводим название сайта, указываем имя и пароль от админки и e-mail</li>
-                  <li>Войти</li>
+                  <li>
+                    создаём <b>wp-config.php</b>
+                  </li>
+                  <li>Вводим название созданной БД, имена, пароли, 
+                  название сайта, указываем имя и пароль от админки и e-mail</li>
                 </ol>
-                <h4>Скачать с помощью консоли:</h4>
-                <code>wget http://wordpress.org/latest.tar.gz</code> <br>
-                <code>tar -xzvf latest.tar.gz </code> <br>
               </td>
               <td>
                 <a href="https://ru.wordpress.org/download/">Скачать Wordpress (ru)</a>
@@ -160,12 +158,23 @@
               <td>Требования к хостингу</td>
               <td>
                 <ul>
+                  <li>Apache, Ngnix</li>
                   <li>php 5.2.4 +</li>
                   <li>phpMyAdmin</li>
                   <li>mySQL 5.0.15 +</li>
-                  <li>FTP</li>
-                  <li>SSH</li>
+                  <li>FTP, SFTP, SSH</li>
                 </ul>
+              </td>
+              <td>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td>Fix upload images</td>
+              <td>
+                phpMyAdmin -> DB -> wp_options -> upload_path -> Edit -> option_value -> /opt/lampp/htdocs/wordpress/wp-content/uploads/ -> Вперёд
+
               </td>
               <td>
 
