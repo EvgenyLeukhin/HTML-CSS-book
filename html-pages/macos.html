@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <style>
-    .new-table code {
+    code {
       font-size: 1.11em;
     }
 
@@ -18,7 +18,8 @@
     }
 
     h4 {
-      margin: 12px 0 0 0;
+      color: maroon;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -66,25 +67,26 @@
     <div class="content clearfix">
 
       <h2>Мой Справочник | Mac OS</h2>
-      <table class="new-table">
-        <tr>
-          <th colspan="3">
-            <code>Основные Программы</code>
-          </th>
-        </tr>
-        <tr>
-          <td>
-            <h2>AppStore</h2>
-          </td>
-          <td>
-            <ul>
-              <li>Visual Studio Code (через браузер)</li>
-            </ul>
-          </td>
-          <td></td>
-        </tr>
-      </table>
+      <h4>Homebrew</h4>
+      <p>Нужно установить пакетный менеджер <b>Homebrew</b>. Это аналог apt-get на Linux.</p>
+      <p><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></p>
+      <p>How to install <a href="https://brew.sh/" target="_blank">link</a></p>
+      <hr>
+      <h4>Git</h4>
+      <code>brew install git</code>
+      <hr>
 
+      <h4>Wget</h4>
+      <code>brew install wget</code>
+      <hr>
+
+      <h4>nodejs</h4>
+      <code>brew install node</code>
+      <hr>
+
+      <h4>yarn</h4>
+      <code>brew install yarn</code>
+      <hr>
 
 
     </div>
