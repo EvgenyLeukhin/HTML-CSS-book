@@ -119,6 +119,17 @@
     <div class="content clearfix">
 
       <h2>Мой Справочник | Модули и классы</h2>
+      <p> Создание класса со свойствами:</p>
+      <pre><code>class <span class="red">Someclass</span> {
+  constructor() {
+    this.prop1 = 'Some text';
+    this.prop2 = 'Some another text';
+  }
+
+  <span class="gray">// копируем и используем этот класс</span>
+  const some = new Someclass();
+  console.log(some.prop1);
+}</code></pre>
 
       <table class="discription-table" border-spacing: 5px>
         <tr>
