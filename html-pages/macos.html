@@ -17,7 +17,13 @@
       margin-bottom: 0;
     }
 
-    h4 {
+    .contt {
+      padding: 0 5px;
+      border-bottom: 1px solid maroon;
+    }
+    .contt h4 {
+      min-width: 100px;
+      display: inline-block;
       color: maroon;
       text-decoration: underline;
     }
@@ -67,26 +73,56 @@
     <div class="content clearfix">
 
       <h2>Мой Справочник | Mac OS</h2>
-      <h4>Homebrew</h4>
+      <h3>Программы, скаченные через браузер</h3>
+      <ul>
+        <li>Google Chrome</li>
+        <li>Mozilla Firefox</li>
+        <li>Skype</li>
+        <li>Punto Switcher</li>
+        <li>Sublime text 3</li>
+        <li>VS Code</li>
+        <li>utorrent</li>
+      </ul>
+
+      <h3>Программы, скаченные через AppStore</h3>
+      <ul>
+        <li>Slack</li>
+        <li>Telegram</li>
+        <li>GarageBand</li>
+        <li>Spark - почтовый клиент</li>
+        <li>Skitch (быстрое редактирование скриншотов)</li>
+        <li>Trello - tusk-manager</li>
+        <li>CleanMyDrive 2 - чистилка </li>
+        <li>Pages - альтернатива Word</li>
+        <li>Numbers - альтернатива Exel </li>
+        <li>Alfred - улучненный spotlight </li>
+      </ul>
+
+      <h3>Установка программ через консоль Homebrew</h3>
+      <h4><a href="https://brew.sh/" target="_blank">Homebrew</a></h4>
       <p>Нужно установить пакетный менеджер <b>Homebrew</b>. Это аналог apt-get на Linux.</p>
-      <p><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></p>
-      <p>How to install <a href="https://brew.sh/" target="_blank">link</a></p>
-      <hr>
-      <h4>Git</h4>
-      <code>brew install git</code>
-      <hr>
+      <p><code style="font-size:75%;">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></p>
 
-      <h4>Wget</h4>
-      <code>brew install wget</code>
-      <hr>
+      <div class="contt">
+        <h4>Git</h4>
+        <code>brew install git</code>
+      </div>
 
-      <h4>nodejs</h4>
-      <code>brew install node</code>
-      <hr>
+      <div class="contt">
+        <h4>Wget</h4>
+        <code>brew install wget</code>
+      </div>
 
-      <h4>yarn</h4>
-      <code>brew install yarn</code>
-      <hr>
+      <div class="contt">
+        <h4>nodejs</h4>
+        <code>brew install node</code>
+      </div>
+
+      <div class="contt">
+        <h4>yarn</h4>
+        <code>brew install yarn</code>
+      </div>
+
 
 
     </div>
