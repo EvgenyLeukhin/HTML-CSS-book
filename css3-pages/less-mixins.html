@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | LESS</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
 </head>
@@ -22,9 +22,9 @@
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -70,14 +70,13 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -91,12 +90,12 @@
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | LESS</h2>
-	
+
 	<table class="css3-table">
 
     <tr>
@@ -104,30 +103,30 @@
     </tr>
     <tr>
       <td class="col1" style="width: 200px;">
-        <p>Ещё одна интересная возможность LESS\SASS — <b>примеси</b>. Мы можем «примешивать» содержимое одного CSS-правила в другое. Для этого нужно написать имя «примешиваемого» правила внутри другого правила. Рассмотрим пример:</p> 
+        <p>Ещё одна интересная возможность LESS\SASS — <b>примеси</b>. Мы можем «примешивать» содержимое одного CSS-правила в другое. Для этого нужно написать имя «примешиваемого» правила внутри другого правила. Рассмотрим пример:</p>
       </td>
       <td class="col2">
         <code><pre>
 <span class="gray">/* объявление примеси */</span>
-<span class="red">.white</span> { color: white; } 
+<span class="red">.white</span> { color: white; }
 <span class="gray">/* применение примеси */</span>
-<span class="red">.text</span> { .white; }      
-  
+<span class="red">.text</span> { .white; }
+
 <span class="gray">/* объявление невыводимой примеси */</span>
-<span class="red">.white()</span> { color: white; } 
+<span class="red">.white()</span> { color: white; }
 <span class="gray">/* применение примеси */</span>
-<span class="red">.text</span> { .white; }      
-       
-<span class="gray">/* Эти выражения дают один 
+<span class="red">.text</span> { .white; }
+
+<span class="gray">/* Эти выражения дают один
 и тот же результат: */</span>
 <span class="red">.mixin();
 .mixin;</span><hr>
-<span class="gray">/* <b>В SASS:</b> */</span>   
+<span class="gray">/* <b>В SASS:</b> */</span>
 <span class="gray">//объявление примеси:</span>
-<span class="red">@mixin</span> <mark>some_name</mark> { ... } 
+<span class="red">@mixin</span> <mark>some_name</mark> { ... }
 
 <span class="gray">//применение примеси:</span>
-<span class="red">.selector</span> { 
+<span class="red">.selector</span> {
    <span class="red">@include</span> <mark>some_name</mark>;
    ...
 }</pre></code>
@@ -246,7 +245,7 @@
 <span class="red">.set-font-size(@size)</span> {
     font-size: @size;
 }
-<span class="gray">/* Примесь-шаблон (smaller - 
+<span class="gray">/* Примесь-шаблон (smaller -
 название шаблона) */</span>
 <span class="red">.set-font-size(<mark>smaller</mark>; @size)</span> {
     font-size: @size / 2;
@@ -259,7 +258,7 @@
 <span class="red">.x-text</span> {.set-font-size(bigger; 100px);}
 
 <span class="gray">/* Результат: */</span>
-<span class="red">.text</span>   { font-size: 100px; } 
+<span class="red">.text</span>   { font-size: 100px; }
 <span class="red">.s-text</span> { font-size: <b>50px</b>; }
 <span class="red">.x-text</span> { font-size: <b>200px</b>; }
      </pre></code>
@@ -286,7 +285,7 @@
     color: #000;
     width: auto;
     min-height: 100px;
-} 
+}
 <hr>
 <span class="red">.content-bigger</span> {
     .font-size(bigger, 20px);
@@ -319,11 +318,11 @@
 
 
   </table>
-	
-	
-	
-	
-	
+
+
+
+
+
 	</div>
 </div>
 
@@ -331,7 +330,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

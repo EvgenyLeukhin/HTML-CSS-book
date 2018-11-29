@@ -1,14 +1,14 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Декор</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
-    
-<style>    
+
+<style>
 /*    Стилизация checkbox   */
 /*    1. Убираем системный чекбокс    */
 .modal-window input[type="checkbox"] {
@@ -38,7 +38,7 @@
 /*    5. Чекбокс появляется, если лейбл отмечен    */
 .modal-window input[type="checkbox"]:checked + label::before {
     background: url(../img/icon-checkbox.png) no-repeat 50%;
-} 
+}
     /*    Стилизация radio   */
 /*    1. Убираем системный радио    */
 .modal-window input[type="radio"] {
@@ -72,8 +72,8 @@
     /*    5. Радио появляется, если лейбл отмечен    */
 .modal-window input[type="radio"]:checked + label::before {
     background: url(../img/icon-checkbox.png) no-repeat 50%;
-} 
-    
+}
+
 </style>
 </head>
 
@@ -90,9 +90,9 @@
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -138,14 +138,13 @@
                 </li>
                 <li><a class="active" href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -159,12 +158,12 @@
                   </ul>
                 </li>
         </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | Декор</h2>
-	
+
         <h3>Стилизация чекбоксов и радио-кнопок</h3>
        <div class="left-column" style="float: left;">
         <code><pre>
@@ -201,7 +200,7 @@
 <span class="gray">/*    6. Крестик появляется, если лейбл отмечен    */</span>
 <span class="red">.modal-window input[type="checkbox"]:checked + label::before</span> {
     background: url(../img/icon-checkbox.png) no-repeat 50%;
-} 
+}
         </pre></code>
         </div>
         <div class="right-column" style="float: right;">
@@ -216,7 +215,7 @@
                 <input type="checkbox" name="remember-me" id="remember-me-id">
                 <label for="remember-me-id">Запомни меня</label>
             </div>
-            
+
             <h3 style="margin-top: 50px;">До стилизации</h3>
             <div class="modal_window">
                 <input type="radio" name="radio1" id="radio_id1">
@@ -232,32 +231,32 @@
                 <input type="radio" name="radio2" id="radio-id2">
                 <label for="radio-id2">Кнопка 2</label>
             </div>
-            
+
             <p>Этот метод имеет один недостаток - в старых браузерах не поддерживается псевдо-класс
-            <code>:checked</code>, поэтому стилизация там невозможна, но <code>dispay: none;</code> поддерживается, в результате 
+            <code>:checked</code>, поэтому стилизация там невозможна, но <code>dispay: none;</code> поддерживается, в результате
             на сайте пропадут все чекбоксы и радиобаттоны. Имеет смысл сделать так, чтобы в старых
             браузерах они отобразились в стандартном виде, для этого нужно сделать следущее:
             </p>
 
         <div class="left-column" style="float: left;">
             <code>
-            &lt;<span class="gray">!--1. Скрываем чекбоксы с умом, с использованием псевдо-классов :enabled и :disabled. 
+            &lt;<span class="gray">!--1. Скрываем чекбоксы с умом, с использованием псевдо-классов :enabled и :disabled.
             Эти псевдо-классы также не поддерживаются старыми браузерами, поэтому в старых браузерах они скрываться НЕ будут--</span>&gt;<br>
             <span class="red">input[type="checkbox"]:enabled, input[type="checkbox"]:disabled</span> {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;display: none;<br>
-            } 
+            }
             </code>
         </div>
-        
+
         <p>Также можно обойтись без псевдо-элементов слилизовать с помощью span (Базовый интенсив, 8 урок, 51:40)</p>
-    
+
         </div>
         <div style="clear: both;"></div>
-	
-	
-	
-	
-	
+
+
+
+
+
 	</div>
 </div>
 
@@ -265,7 +264,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | LESS</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
 </head>
@@ -67,14 +67,13 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -88,17 +87,17 @@
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | LESS</h2>
-	
+
 	<table class="css3-table">
     <tr>
       <th class="css3-table-title" colspan="3">Переменные</th>
     </tr>
-        
+
     <tr>
       <td class="col1" style="width: 200px;">
          <b>(@)</b> у LESS<br>
@@ -112,22 +111,22 @@
 } <hr>
 <span class="red">.rule-1</span> {
   @align: right;
-  text-align: @align; 
+  text-align: @align;
 <span class="gray">// text-align задаётся значение right</span>
 }
 <span class="red">.rule-2</span> {
-  text-align: @align; 
+  text-align: @align;
 <span class="gray">// в этом месте произойдёт ошибка</span>
 } <hr>
 @align: left;
 
 <span class="red">.rule-1</span> {
   @align: right;
-  text-align: @align; 
+  text-align: @align;
   <span class="gray">// text-align задаётся значение right</span>
 }
 <span class="red">.rule-2</span> {
-  text-align: @align; 
+  text-align: @align;
   <span class="gray">// text-align задаётся значение left</span>
 }
         </pre></code>
@@ -136,7 +135,7 @@
         Переменные можно объявлять как «снаружи» правил, так и «внутри». В случае «внутреннего» объявления переменная будет доступна только внутри правила, в котором она объявлена
       </td>
     </tr>
-    
+
     <tr>
       <th class="css3-table-title" colspan="3">Вложенность</th>
     </tr>
@@ -186,7 +185,7 @@
     <mark><b>&-red</b></mark>  { color: red; }
     <mark><b>&-blue</b></mark> { color: blue; }
 }
-        
+
         </pre></code>
       </td>
       <td class="col3" style="width: 400px;">
@@ -232,7 +231,7 @@ rgb(<span class="red">20, 20, 20</span>)
         Над любыми численными значениями в LESS\SASS-коде можно произвести математические операции сложения, вычитания, умножения или деления
       </td>
     </tr>
-    
+
     <tr>
       <th class="css3-table-title" colspan="3">Переменные-вставки</th>
     </tr>
@@ -328,7 +327,7 @@ rgb(<span class="red">20, 20, 20</span>)
         Можно использовать математические операции с цифровыми значениями с помощью функции <b>calc()</b>
       </td>
     </tr>
-    
+
   </table>
 
 	</div>
@@ -338,7 +337,7 @@ rgb(<span class="red">20, 20, 20</span>)
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Флекс</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
     <style>
@@ -68,42 +68,42 @@
             justify-content: space-between;
         }
         .col3-sample3-2-1 {
-            display: flex;  
+            display: flex;
             flex-wrap: wrap;
             height: 250px;
             flex-direction: row;
             align-content: stretch;
-        }  
+        }
         .col3-sample3-2-2 {
-            display: flex;  
+            display: flex;
             flex-wrap: wrap;
             height: 250px;
             flex-direction: row;
             align-content: flex-start;
         }
         .col3-sample3-2-3 {
-            display: flex;  
+            display: flex;
             flex-wrap: wrap;
             height: 250px;
             flex-direction: row;
             align-content: center;
         }
         .col3-sample3-2-4 {
-            display: flex;  
+            display: flex;
             flex-wrap: wrap;
             height: 250px;
             flex-direction: row;
             align-content: flex-end;
         }
         .col3-sample3-2-5 {
-            display: flex;  
+            display: flex;
             flex-wrap: wrap;
             height: 250px;
             flex-direction: row;
             align-content: space-around;
         }
         .col3-sample3-2-6 {
-            display: flex;  
+            display: flex;
             flex-wrap: wrap;
             height: 250px;
             flex-direction: row;
@@ -132,8 +132,8 @@
         .flex-sample1 {height: 50px;}
         .flex-sample2 {height: 75px;}
         .flex-sample3 {height: 100px;}
-        .col3-sample5  {           
-            display: flex;  
+        .col3-sample5  {
+            display: flex;
             justify-content: center;
             flex-direction: row;
             height: 400px;
@@ -151,21 +151,21 @@
             align-self: flex-end;
         }
         .col3-sample6-1 {
-            display: flex;  
+            display: flex;
             height: 100px;
             justify-content: flex-start;
             flex-direction: row;
             flex-wrap: nowrap;
         }
         .col3-sample6-2 {
-            display: flex;  
+            display: flex;
             height: 100px;
             justify-content: flex-start;
             flex-direction: row;
             flex-wrap: wrap;
         }
         .col3-sample6-3 {
-            display: flex;  
+            display: flex;
             height: 100px;
             justify-content: flex-start;
             flex-direction: row;
@@ -201,9 +201,9 @@
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -249,14 +249,13 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -270,10 +269,10 @@
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | flex&nbsp;&nbsp;&nbsp;<a href="http://html5.by/blog/flexbox/">(Статья)</a></h2>
     <h3>Кратко:</h3>
     <code>
@@ -296,7 +295,7 @@
             <tr>
                 <td class="col1" rowspan="2">
                     <b>Флекс-контейнер</b><br>
-                    Внутри контейнера образуются <b>флекс-элементы</b>, и если не задавать фикс. ВЫСОТУ, 
+                    Внутри контейнера образуются <b>флекс-элементы</b>, и если не задавать фикс. ВЫСОТУ,
                     то будет растягиваться по высоте контейнера, становяться в одну строку, равномерно распределяясь
                 </td>
                 <td class="col2" rowspan="2">
@@ -338,7 +337,7 @@
                      <div class="flex-sample">3</div>
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">flex-direction:</th>
             </tr>
@@ -346,8 +345,8 @@
                 <td class="col1" rowspan="4">Направление <b>ФЛЕКС ОСИ</b> &rarr; &darr; &larr; &uarr;)</td>
                 <td class="col2" rowspan="4">
                     <code>
-                        <pre><span class="red">.sample-count</span> {           
-    <b>display: flex;</b>  
+                        <pre><span class="red">.sample-count</span> {
+    <b>display: flex;</b>
     height: 100px;
     <span class="gray">/*Строчный (по ум*)*/</span>
     <b>flex-direction: <mark>row;</mark></b>
@@ -356,7 +355,7 @@
     <span class="gray">/*Колоночный*/</span>
     <b>flex-direction: <mark>column;</mark></b>
     <span class="gray">/*Колоночный-реверсивный*/</span>
-    <b>flex-direction: <mark>column-reverse;</mark></b>   
+    <b>flex-direction: <mark>column-reverse;</mark></b>
 }</pre>
                     </code>
                 </td>
@@ -397,24 +396,24 @@
                     <b>ПЕРЕНОС </b>флекс-элементов, если они не помещаются в контейнер<br>
                     Если элементы не помещаются, то они всё-равно будут в одну строку, у них будет уменьшаться ширина, даже если её размер был задан. Для <b>column</b> не имеет смысла.
                 </td>
-                
+
                 <td class="col2" rowspan="3">
                     <code>
                         <pre><span class="red">.flex-sample</span> {
     ...
     <mark>width: 42px</mark>;
 }
-<span class="red">.sample-count</span> {           
-    <b>display: flex;</b>  
+<span class="red">.sample-count</span> {
+    <b>display: flex;</b>
     height: 100px;
     <b>justify-content: flex-start;</b>
     <b>flex-direction: row;</b>
     <b>flex-wrap: <mark>nowrap</mark>;</b>
     <b>flex-wrap: <mark>wrap</mark>;</b>
     <b>flex-wrap: <mark>wrap-reverse</mark>;</b>
-}</pre></code>                 
+}</pre></code>
                 </td>
-                
+
                 <td class="col3 col3-sample6-1">
                     <div class="flex-sample">1</div>
                     <div class="flex-sample">2</div>
@@ -469,7 +468,7 @@
                 </td>
                 <td class="col3"></td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">justify-content:</th>
             </tr>
@@ -482,7 +481,7 @@
                 <td class="col2" rowspan="6">
                     <code>
                         <pre><span class="red">.sample-count</span> {
-    <b>display: flex;</b>  
+    <b>display: flex;</b>
     height: 100px;
     <b>flex-direction: row;</b>
     <b>justify-content: <mark>flex-start;</mark> (по ум*)</b>
@@ -540,15 +539,15 @@
                     <b>ВЫРАВНИВАНИЕ флекс-элементов по ПОПЕРЕЧНОЙ ЛИНИИ</b>.<br><br>
                     Актупльно, при наличии свободного пространства вдоль поперечной оси, либо когда высота флекс-элементов разная
                 </td>
-                
+
                 <td class="col2" rowspan="6">
                     <code>
                         <pre><span class="red">.sample1</span> {height: 50px;}
 <span class="red">.sample2</span> {height: 75px;}
-<span class="red">.sample3</span> {height: 100px;}   
-  
-<span class="red">.sample-count</span> {           
-    <b>display: flex;</b>  
+<span class="red">.sample3</span> {height: 100px;}
+
+<span class="red">.sample-count</span> {
+    <b>display: flex;</b>
     height: 100px;
     <b>flex-direction: row;</b>
     <b>justify-content: flex-start;</b>
@@ -595,7 +594,7 @@
                      <div class="flex-sample flex-sample3">3</div>
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">align-self:</th>
             </tr>
@@ -604,7 +603,7 @@
                     <b>ВЫРАВНИВАНИЕ</b> отдельного флекс-элемента. <br><br>
                     Переопределяет <b>align-items</b>
                 </td>
-                
+
                 <td class="col2" rowspan="2">
                     <code>
                         <pre><span class="red">.sample1</span> {
@@ -616,11 +615,11 @@
     <b>align-self: <mark>center</mark>;</b>
 }
 <span class="red">.sample3</span> {
-    height: 100px; 
+    height: 100px;
     <b>align-self: <mark>flex-end</mark>;</b>
-}   
-<span class="red">.sample-count</span> {           
-    <b>display: flex;</b>  
+}
+<span class="red">.sample-count</span> {
+    <b>display: flex;</b>
     height: 100px;
     <b>justify-content: <mark>center</mark>;</b>
     <b>flex-direction: row;</b>
@@ -736,13 +735,13 @@
             <tr>
                 <th class="css3-table-title" colspan="3">order:</th>
             </tr>
-            
+
             <tr>
                 <td class="col1">
                     <b>ПОРЯДКОВЫЙ НОМЕР</b> флекс-элементов<br><br>
                     Чем меньше значение order, тем "первее" элемент. Можно использовать для "перестронии" сетки страницы
                 </td>
-                
+
                 <td class="col2">
                     <code>
                         <pre><span class="red">.sample1</span> {<b>order:</b> 7;}
@@ -755,9 +754,9 @@
 <span class="red">.sample8</span> {<b>order:</b> 4;}
 <span class="red">.sample9</span> {<b>order:</b> 5;}
 <span class="red">.sample10</span> {<b>order:</b> 6;}</pre>
-                    </code>                 
+                    </code>
                 </td>
-                
+
                 <td class="col3 col3-sample7-1">
                     <div class="flex-sample flex-sample1order">1</div>
                     <div class="flex-sample flex-sample2order">2</div>
@@ -778,7 +777,7 @@
 
         <h3>Зависимость от других свойст</h3>
         <p>Свойства flexbox будут переопределяться при изменении свойств <b>direction</b>(ltr и rtr) и <b>writing-mode</b></p>
-	
+
 	</div>
 </div>
 
@@ -786,7 +785,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

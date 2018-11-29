@@ -1,14 +1,14 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Маска</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
     <style>
-.code {font-size: 1.4em;}   
+.code {font-size: 1.4em;}
 .cont {
     position: relative;
     width: 200px;
@@ -30,27 +30,27 @@
     width: 200px;
     height: 200px;
     background: rgba(123, 123, 123, 0.9);
-    
-} 
+
+}
 .hover-mask h3 {
     width: 90%;
-    background: rgb(70, 70, 70); 
+    background: rgb(70, 70, 70);
     border-radius: 10px;
-    margin: 15px auto; 
+    margin: 15px auto;
 }
 .hover-mask p {
     width: 90%;
-    background: rgb(80, 80, 80); 
+    background: rgb(80, 80, 80);
     border-radius: 10px;
     margin: 0 auto;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     font-size: 13px;
 }
 .hover-mask a {
     display: block;
     width: 90%;
     line-height: 35px;
-    background-image: linear-gradient(rgb(70, 70, 70), rgb(30, 30, 30)); 
+    background-image: linear-gradient(rgb(70, 70, 70), rgb(30, 30, 30));
     border-radius: 10px;
     text-decoration: none;
     color: inherit;
@@ -59,13 +59,13 @@
     font-weight: bold;
     cursor: pointer;
 }
-.hover-mask a:hover {background-image: 
+.hover-mask a:hover {background-image:
     linear-gradient(rgb(50, 50, 50), rgb(10, 10, 10));
     box-shadow: 0px 0px 2px 5px #ccc;
     transition-duration: 200ms;
 }
 .cont:hover .hover-mask {
-    display: block; 
+    display: block;
 }
     </style>
 
@@ -83,9 +83,9 @@
 		<li><a href="../css-page.html">CSS</a></li>
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li><li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -131,14 +131,13 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -152,12 +151,12 @@
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | Маска</h2>
-	
+
 	<div class="cont">
         <div class="hover-mask">
             <h3>Front-end</h3>
@@ -165,7 +164,7 @@
             <a href="#">Узнать подробнее</a>
         </div>
     </div>
-    
+
     <h3>HTML:</h3>
     <code class="code">
         &lt;div class="<span class="red">cont</span>"&gt;<br>
@@ -175,7 +174,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;<span class="gray">Узнать подробнее</span>&lt;/a&gt;<br>
 &lt;/div&gt;
     </code>
-    
+
     <h3>CSS:</h3>
     <code class="code"><pre>
 <span class="gray">/*1. Контейнер*/</span>
@@ -200,21 +199,21 @@
     width: 200px;
     height: 200px;
     background: rgba(123, 123, 123, 0.9);
-} 
+}
 <span class="gray">/*3. Заголовок маски*/</span>
 <span class="red">.hover-mask h3</span> {
     width: 90%;
-    background: rgb(70, 70, 70); 
+    background: rgb(70, 70, 70);
     border-radius: 10px;
-    margin: 15px auto; 
+    margin: 15px auto;
 }
 <span class="gray">/*4. Описание маски*/</span>
 <span class="red">.hover-mask p</span> {
     width: 90%;
-    background: rgb(80, 80, 80); 
+    background: rgb(80, 80, 80);
     border-radius: 10px;
     margin: 0 auto;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     font-size: 13px;
 }
 <span class="gray">/*5. Ссылка маски*/</span>
@@ -222,7 +221,7 @@
     display: block;
     width: 90%;
     line-height: 35px;
-    background-image: linear-gradient(rgb(70, 70, 70), rgb(30, 30, 30)); 
+    background-image: linear-gradient(rgb(70, 70, 70), rgb(30, 30, 30));
     border-radius: 10px;
     text-decoration: none;
     color: inherit;
@@ -233,14 +232,14 @@
 }
 <span class="gray">/*6. Наведение на ссылку маски*/</span>
 <span class="red">.hover-mask a:hover</span> {
-    background-image: 
+    background-image:
     linear-gradient(rgb(50, 50, 50), rgb(10, 10, 10));
     box-shadow: 0px 0px 2px 5px #ccc;
     transition-duration: 200ms;
 }
 <span class="gray">/*7. Отображение маски*/</span>
 <span class="red">.cont:hover .hover-mask</span> {
-    display: block; 
+    display: block;
 }</pre></code>
 
 	</div>
@@ -250,7 +249,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

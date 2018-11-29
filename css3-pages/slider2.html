@@ -1,28 +1,28 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Слайдер с прокруткой</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
-    
+
     <style>
 .gray {
-    font-weight: bold; 
+    font-weight: bold;
     background-color: darkorange;
     color: #fff;
     font-size: 1.2em;
     font-family: monospace;
-} 
+}
 .slider-count {
     width: 450px;
-    margin: 40px auto;   
+    margin: 40px auto;
     background: white;
     box-shadow: 0 0 3px #ccc;
     color: #333;
-    font-family: 'Open Sans', sans-serif;    
+    font-family: 'Open Sans', sans-serif;
     background: #f5f5f5;
     margin-bottom: 60px;
 }
@@ -49,7 +49,7 @@ section h1 {
 .slider-slides img {
     float: left;
     width: 450px;
-    height: 320px;    
+    height: 320px;
 }
 .slider-controls {
     position: absolute;
@@ -65,24 +65,24 @@ section h1 {
     height: 10px;
     margin: 0 3px;
     background: #ccc;
-    cursor: pointer;   
+    cursor: pointer;
     border: 4px solid white;
-    border-radius: 50%;    
-    box-shadow: 0px 0px 2px rgba(0,0,0,.8);     
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);
     transition: background-color .2s;
 }
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] { 
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
     background-color: #666;
 }
-#btn-1:checked ~ .slider-inner .slider-slides { 
+#btn-1:checked ~ .slider-inner .slider-slides {
     transform: translate(0);
 }
-#btn-2:checked ~ .slider-inner .slider-slides { 
+#btn-2:checked ~ .slider-inner .slider-slides {
     transform: translate(-450px);
 }
-#btn-3:checked ~ .slider-inner .slider-slides { 
+#btn-3:checked ~ .slider-inner .slider-slides {
     transform: translate(-900px);
 }
 .left-column {
@@ -113,9 +113,9 @@ section h1 {
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -161,14 +161,13 @@ section h1 {
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -182,13 +181,13 @@ section h1 {
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
-	
+
 	<div class="content clearfix">
-	
+
 	    <h2>Мой Справочник |  CSS3 | Слайдер с прокруткой</h2>
-	    
+
         <section class="slider-count">
             <h1>Арт-галерея</h1>
             <div class="slider">
@@ -199,17 +198,17 @@ section h1 {
                     <label for="btn-1"></label>
                     <label for="btn-2"></label>
                     <label for="btn-3"></label>
-                </div>                    
+                </div>
                 <div class="slider-inner">
                     <div class="slider-slides">
                         <img src="../pict/slider-1.png">
                         <img src="../pict/slider-2.png">
                         <img src="../pict/slider-3.png">
-                    </div>                        
+                    </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="clearfix">
             <div class="left-column">
                 <h3>HTML:</h3>
@@ -230,7 +229,7 @@ section h1 {
             &lt;label for="<span class="red">btn-1</span>"&gt;&lt;/label&gt;
             &lt;label for="<span class="red">btn-2</span>"&gt;&lt;/label&gt;
             &lt;label for="<span class="red">btn-3</span>"&gt;&lt;/label&gt;
-        &lt;/div&gt;                    
+        &lt;/div&gt;
         <span class="gray">&lt;!--КОНТЕЙНЕР ДЛЯ СЛАЙДОВ--&gt;</span>
         &lt;div class="<span class="red">slider-inner</span>"&gt;
             <span class="gray">&lt;!--КОНТЕЙНЕР ЛЕНТЫ СЛАЙДОВ--&gt;</span>
@@ -239,25 +238,25 @@ section h1 {
                 &lt;img src="../pict/slider-1.png"&gt;
                 &lt;img src="../pict/slider-2.png"&gt;
                 &lt;img src="../pict/slider-3.png"&gt;
-            &lt;/div&gt;                        
+            &lt;/div&gt;
         &lt;/div&gt;
-        
+
     &lt;/div&gt;
-    
+
 &lt;/section&gt;</pre></code>
-                
+
             </div>
 
             <div class="right-column">
-                <h3>CSS:</h3> 
+                <h3>CSS:</h3>
 <code><pre><span class="gray">/*Задаём ширину КОНТЕЙНЕРУ, центруем, стилизуем*/</span>
 <span class="red">.slider-count</span> {
     width: 450px;
-    margin: 40px auto;   
+    margin: 40px auto;
     background: white;
     box-shadow: 0 0 3px #ccc;
     color: #333;
-    font-family: 'Open Sans', sans-serif;    
+    font-family: 'Open Sans', sans-serif;
     background: #f5f5f5;
     margin-bottom: 60px;
 }
@@ -290,7 +289,7 @@ section h1 {
 <span class="red">.slider-slides img</span> {
     float: left;
     width: 450px;
-    height: 320px;    
+    height: 320px;
 }
 <span class="gray">/*Позиционируем БЛОК УПРАВЛЕНИЯ куда нужно*/</span>
 <span class="red">.slider-controls</span> {
@@ -308,34 +307,34 @@ section h1 {
     height: 10px;
     margin: 0 3px;
     background: #ccc;
-    cursor: pointer;   
+    cursor: pointer;
     border: 4px solid white;
-    border-radius: 50%;    
-    box-shadow: 0px 0px 2px rgba(0,0,0,.8);     
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);
     transition: background-color .2s;
 }
 <span class="gray">/*Активное состояние ЛЕЙБЛОВ*/</span>
 <span class="red">#btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"]</span> { 
+#btn-3:checked ~ .slider-controls label[for="btn-3"]</span> {
     background-color: #666;
 }
 <span class="gray">/*Связываем 1-й слайд с ЛЕЙБЛОМ <br>и делаем трансормацию*/</span>
-<span class="red">#btn-1:checked ~ .slider-inner .slider-slides</span> { 
+<span class="red">#btn-1:checked ~ .slider-inner .slider-slides</span> {
     transform: translate(0);
 }
 <span class="gray">/*Связываем 2-й слайд с ЛЕЙБЛОМ <br>и делаем трансормацию*/</span>
-<span class="red">#btn-2:checked ~ .slider-inner .slider-slides</span> { 
+<span class="red">#btn-2:checked ~ .slider-inner .slider-slides</span> {
     transform: translate(-450px);
 }
 <span class="gray">/*Связываем 3-й слайд с ЛЕЙБЛОМ <br>и делаем трансормацию*/</span>
-<span class="red">#btn-3:checked ~ .slider-inner .slider-slides</span> { 
+<span class="red">#btn-3:checked ~ .slider-inner .slider-slides</span> {
     transform: translate(-900px);
 }</pre></code>
             </div>
         </section>
-         
-        
+
+
 
 	</div>
 </div>
@@ -344,7 +343,7 @@ section h1 {
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

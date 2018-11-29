@@ -1,16 +1,16 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Анимации</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
     <style>
-        @keyframes stretching1 { 
-            0% {width: 100px;} 
-            100% {width: 200px;} 
+        @keyframes stretching1 {
+            0% {width: 100px;}
+            100% {width: 200px;}
         }
         @keyframes stretching2 {
             0% {width: 100px;}
@@ -35,14 +35,14 @@
         }
         @keyframes move2 {
             0% {
-                transform: translateX(-20px); 
+                transform: translateX(-20px);
                 background: red;
             }
             25% {transform: translateX(30px);}
             50% {transform: translateX(40px);}
             75% {transform: translateX(50px);}
             100% {
-                transform: translateX(60px); 
+                transform: translateX(60px);
                 background: yellow;
             }
         }
@@ -51,17 +51,17 @@
             100% {transform: translateX(100px);}
         }
         .sample1 {
-            animation-name: stretching1; 
+            animation-name: stretching1;
             animation-duration: 1s;
             animation-iteration-count: 10;
         }
          .sample2 {
-            animation-name: stretching2; 
+            animation-name: stretching2;
             animation-duration: 1s;
             animation-iteration-count: infinite;
         }
         .sample3 {
-            animation-name: stretching2, coloring; 
+            animation-name: stretching2, coloring;
             animation-duration: 1s, 2s;
             animation-iteration-count: 10, infinite;
         }
@@ -70,7 +70,7 @@
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-direction: normal;
-        } 
+        }
         .sample4-2 {
             animation-name: move;
             animation-duration: 5s;
@@ -174,12 +174,12 @@
 }
     .header .header-title a {
         position: relative;
-        -webkit-animation: logo 2.5s linear;	
+        -webkit-animation: logo 2.5s linear;
 	       -moz-animation: logo 2.5s linear;
 	         -o-animation: logo 2.5s linear;
 	            animation: logo 2.5s linear;
     }
-        
+
     </style>
 </head>
 
@@ -241,14 +241,13 @@
             </li>
             <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
             <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-            
+
             <li>
               <a href="#">Bootstrap</a>
               <ul class="sub-menu sub-menu-bs">
                 <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                 <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                 <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
               </ul>
             </li>
             <li>
@@ -263,9 +262,9 @@
             </li>
         </ul>
     </div>
-	
+
 	<div class="content clearfix">
-	
+
         <h2>Мой Справочник |  CSS3 | Анимации</h2>
 
         <table class="css3-table">
@@ -280,7 +279,7 @@
                 <td class="col2"><code>
 <b>@keyframes</b> <span class="red">stretching1</span> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;0% {width: 100px;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;100% {width: 200px;}<br>           
+&nbsp;&nbsp;&nbsp;&nbsp;100% {width: 200px;}<br>
 }
                </code></td>
                 <td class="col3">
@@ -288,7 +287,7 @@
                  0% - начало, 100% - конец
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">Раскадровка @keyframes</th>
             </tr>
@@ -300,43 +299,43 @@
 <b>@keyframes</b> <span class="red">stretching2</span> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;0% {width: 100px;}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;25% {width: 150px;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;50% {width: 200px;}<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;75% {width: 150px;}<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;100% {width: 200px;}<br>       
+&nbsp;&nbsp;&nbsp;&nbsp;50% {width: 200px;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;75% {width: 150px;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;100% {width: 200px;}<br>
 }
 <hr>
 <b>@keyframes</b> <span class="red">stretching2</span> {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;0%, 50% {width: 100px;}<br>    
-&nbsp;&nbsp;&nbsp;&nbsp;to {width: 200px;}<br>       
-}                     
+&nbsp;&nbsp;&nbsp;&nbsp;0%, 50% {width: 100px;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;to {width: 200px;}<br>
+}
                </code></td>
                 <td class="col3">
 Вместо 0% и 100% можно использовать ключевые слова <code>from</code> и <code>to</code><hr>
 0%, 50% - группировка кадров (элемент сразу изменяет свойства и не меняет их до 50%)
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-name:</th>
             </tr>
             <tr>
                 <td class="col1">
-Связываем элемент с анимацией 
+Связываем элемент с анимацией
                 </td>
                 <td class="col2"><code>
 <b>.some-class</b> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-name: <span class="red">stretching</span>;<br>
-} 
+}
                </code></td>
                 <td class="col3">
  Анимаций может быть несколько (через запятую)
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-duration:</th>
             </tr>
-            
+
             <tr>
                 <td class="col1">
 Продолжительность анимации в секундах (<b>1s, 1ms</b>)
@@ -346,18 +345,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;animation-name: stretching1;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-duration: 1s</mark>;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: 10;<br>
-} 
+}
                </code></td>
                 <td class="col3">
                      <div class="sample sample1"></div>
                      10 циклов
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-iteration-count:</th>
             </tr>
-            
+
             <tr>
                 <td class="col1">
 Кол-во циклов (бесконечно: <b>infinite</b>)
@@ -367,18 +366,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;animation-name: stretching2;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-duration: 1s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-iteration-count: <span class="red">infinite</span>;</mark><br>
-} 
+}
                </code></td>
                 <td class="col3">
                      <div class="sample sample2"></div>
                      Бесконечное кол-во циклов
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">Множественная анимация</th>
             </tr>
-            
+
             <tr>
                 <td class="col1">
 Параметры для различных анимаций перечисляются через запятую
@@ -396,17 +395,17 @@
 &nbsp;&nbsp;&nbsp;&nbsp;animation-name: stretching2, coloring;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-duration: 1s, 2s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: 10, infinite;<br>
-} 
+}
                </code></td>
                 <td class="col3">
                      <div class="sample sample3"></div>
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-direction:</th>
             </tr>
-            
+
             <tr>
                 <td class="col1">
 Направление анимации <br>(<b>normal</b> (0 - 100%) и <br><b>reverse</b> (100 - 0%))
@@ -425,14 +424,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;animation-duration: 5s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: infinite;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-direction: normal;</mark><br>
-} 
+}
 <hr>
 <b>.some-class2</b> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-name: move;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-duration: 5s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: infinite;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-direction: reverse;</mark><br>
-}               
+}
                </code></td>
                 <td class="col3">
                      <div class="sample sample4-1"></div>
@@ -440,7 +439,7 @@
                      <div class="sample sample4-2"></div>
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-delay:</th>
             </tr>
@@ -454,14 +453,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;animation-duration: 1s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: 10;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-delay: 5s;</mark><br>
-} 
+}
                </code></td>
                 <td class="col3">
                      <div class="sample sample5"></div>
                      Задержка анимации 5 секунд
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-fill-mode:</th>
             </tr>
@@ -499,19 +498,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: 3;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-delay: 3s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-fill-mode: <span class="red">forwards;</span></mark><br>
-} <hr>  
+} <hr>
 <b>.some-class3</b> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-name: move2;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-duration: 5s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-iteration-count: 3;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation-delay: 3s;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-fill-mode: <span class="red">both;</span></mark><br>
-} <br>                           
+} <br>
                </code></td>
                 <td class="col3">
                     <div class="sample sample6-1"></div>
                     <br>
-                    При <b>backwards</b> до начала анимации элемент находится на 0% кадре анимации, 
+                    При <b>backwards</b> до начала анимации элемент находится на 0% кадре анимации,
                     после анимации возвращается в исходное состояние (как он находится в коде без анимации)
                     <hr>
                      <div class="sample sample6-2"></div>
@@ -523,7 +522,7 @@
                      <b>both</b> объединяет оба свойства
                 </td>
             </tr>
-    
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-play-state:</th>
             </tr>
@@ -534,17 +533,17 @@
                 <td class="col2"><code>
 <b>.some-class</b> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<mark>animation-play-state: paused;</mark><br>
-} 
+}
                </code></td>
                 <td class="col3">
                 Без JavaScript не реализуется
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">animation-timing-function:</th>
             </tr>
-            
+
             <tr>
                 <td class="col1">
                     Временные функции анимации, принимают несколько значений:<br><br>
@@ -556,7 +555,7 @@
                     <b>ease-out</b> - выгнутая парабола; <br>
                     <b>ease-in-out</b> - S-обр. парабола; <br>
                     <b>cubic-bezier (1,1,1,1)</b> - Кривые Бизье; <br>
-                    <b>steps (число_шагов, направление)</b> - Кривые Бизье; 
+                    <b>steps (число_шагов, направление)</b> - Кривые Бизье;
                 </td>
                 <td class="col2"><code>
 @keyframes move3 {<br>
@@ -605,7 +604,7 @@
                     <div class="sample sample7-7">7</div>
                 </td>
             </tr>
-            
+
             <tr>
                 <th class="css3-table-title" colspan="3">Краткая запись в CSS-коде</th>
             </tr>
@@ -617,18 +616,18 @@ animation: <br>
 3 - |animation-timing-function| функция<br>
 4 - |animation-iteration-count| повторы
                 </td>
-                
+
                 <td class="col2"><code>
 <b>.some-class6</b> {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;animation: move 3s linear 10;<br>
 }
                </code></td>
-               
+
                 <td class="col3">
 <div class="sample sample8"></div>
                 </td>
             </tr>
-   
+
         </table>
         <img src="../pict/anim_tf.png" alt="anim_tf.png" align="left">
 	    <img src="../pict/anim_tf2.png" alt="anim_tf2.png" align="left" width="600">
@@ -638,7 +637,7 @@ animation: <br>
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

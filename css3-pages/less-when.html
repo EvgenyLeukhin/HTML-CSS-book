@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | LESS</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
 </head>
@@ -22,9 +22,9 @@
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -70,14 +70,13 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
                     <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
                     <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
-                    <li><a href="../css3-pages/bootstrap4-other.html">Bs-4 - Прочее</a></li>
                   </ul>
                 </li>
                 <li>
@@ -91,12 +90,12 @@
                   </ul>
                 </li>
             </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | CSS3 | LESS</h2>
-	
+
 	<table class="css3-table">
 
     <tr>
@@ -111,8 +110,8 @@
 <span class="red">.mixin(@variable) when (@variable = 1)</span> {
     <span class="gray">// сделать что-то</span>
 }
-<span class="gray">/*Такая примесь применится, если «вызвать» её 
-с параметром 1. В противном случае примесь не 
+<span class="gray">/*Такая примесь применится, если «вызвать» её
+с параметром 1. В противном случае примесь не
 применится.*/</span>
 <span class="red">.mixin(@color) when (lightness(@color) &gt; 50%)</span> {
 //сделать что-то, когда цвет светлее серого
@@ -136,18 +135,18 @@
       </td>
       <td class="col2">
         <code><pre>
-<span class="gray">/* если создать примесь с условием, 
+<span class="gray">/* если создать примесь с условием,
 но без параметров: */</span>
 <span class="red">.text-color() when (@theme = light)</span> {
   color: white;
 }
-<span class="gray">/* a потом создать внешнюю переменную 
+<span class="gray">/* a потом создать внешнюю переменную
 и вызвать где-то примесь: */</span>
-@theme: light; 
+@theme: light;
 .content {
     .text-color();
 }
-<span class="gray">/*То условие выполнится, созданная 
+<span class="gray">/*То условие выполнится, созданная
 примесь отработает:*/</span>
 .content {
     color: white;
@@ -167,7 +166,7 @@
         </pre></code>
       </td>
       <td class="col3" style="width: 400px;">
-      Условия в примесях могут работать не только с параметрами, с которыми «вызвана» примесь, но и с переменными, объявленными вне примесей. Например, 
+      Условия в примесях могут работать не только с параметрами, с которыми «вызвана» примесь, но и с переменными, объявленными вне примесей. Например,
       </td>
     </tr>
     <tr>
@@ -239,14 +238,14 @@
         Генерирования целых CSS-правил. Цикл исполняется три раза, в каждой итерации создастся правило с переменной-счётчиком @n в качестве суффикса селектора:
       </td>
     </tr>
-    
-    
+
+
   </table>
-	
-	
-	
-	
-	
+
+
+
+
+
 	</div>
 </div>
 
@@ -254,7 +253,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
