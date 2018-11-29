@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS3 | Таблицы на CSS3 | CSS-таблица</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
     <style>
@@ -16,7 +16,7 @@
     display: table-row;
 }
 .cell {
-    display: table-cell; 
+    display: table-cell;
     height: 50px;
     width: 100px;
     border: 1px solid black;
@@ -24,8 +24,8 @@
 .table-caption {
     display: table-caption;
     caption-side: bottom;
-} 
-.row1 {display: table-footer-group;}     
+}
+.row1 {display: table-footer-group;}
 .row3 {display: table-header-group; font-weight: bold;}
 .row2-1, .row2-2, .row2-3 {display: table-row-group; color: cornflowerblue;}
 .col1, .col2 {display: table-column;}
@@ -47,9 +47,9 @@
         <li><a class="active" href="../css3-page.html">CSS3</a></li>
 		<li><a href="../javascript-page.html">JS</a></li>
 		<li><a href="../php.html">PHP</a></li>
-		
-		
-		
+
+
+
 	</ul>
 	</div>
 </div>
@@ -95,7 +95,7 @@
                 </li>
                 <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
                 <li><a href="../css3-pages/bem.html">БЭМ</a></li>
-                
+
                 <li>
                   <a href="#">Bootstrap</a>
                   <ul class="sub-menu sub-menu-bs">
@@ -115,11 +115,14 @@
                     <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
                   </ul>
                 </li>
+                <li>
+                  <a href="../css3-pages/css-grids.html">CSS-Grids</a>
+                </li>
         </ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник |  CSS3 | Таблицы на CSS3 | CSS-таблица</h2>
 	<p>Из любого элемента можно сделать таблицу, а из вложенных - ряды, ячейки, хэдер таблицы, футер таблицы
 <span class="red">.sample-table</span> станет равнозначным тегу &lt;table&gt;</p>
@@ -168,7 +171,7 @@
     &lt;/div&gt;
 &lt;/article&gt;
 </pre></code>
-</section>	
+</section>
 
 <section style="float: right; font-size: 14px;">
     <h2>CSS:</h2>
@@ -184,7 +187,7 @@
 }
 <span class="gray">/*Ячейка, аналог тега &lt;td&gt;*/</span>
 <span class="red">.cell</span> {
-    <mark>display: table-cell</mark>; 
+    <mark>display: table-cell</mark>;
     height: 50px;
     width: 100px;
     border: 1px solid black;
@@ -193,35 +196,35 @@
 <span class="red">.table-caption</span> {
     <mark>display: table-caption</mark>;
     caption-side: bottom;
-} 
-<span class="gray">/*Можно менять порядок строк, 
+}
+<span class="gray">/*Можно менять порядок строк,
 у 3-ей строки позиция хэдера,
 хотя она ниже в коде*/</span>
 <span class="gray">/*Аналог тега &lt;tfoot&gt;*/</span>
-<span class="red">.row1</span> {<mark>display: table-footer-group</mark>;}  
-<span class="gray">/*Аналог тега &lt;thead&gt;*/</span>   
+<span class="red">.row1</span> {<mark>display: table-footer-group</mark>;}
+<span class="gray">/*Аналог тега &lt;thead&gt;*/</span>
 <span class="red">.row3</span> {
     <mark>display: table-header-group</mark>;
     font-weight: bold;
 }
-<span class="gray">/*Группировка строк контента, 
+<span class="gray">/*Группировка строк контента,
 аналог тега &lt;tbody&gt;*/</span>
-<span class="red">.row2-1, 
-.row2-2, 
+<span class="red">.row2-1,
+.row2-2,
 .row2-3</span> {
     <mark>display: table-row-group</mark>;
     color: cornflowerblue;
 }
-<span class="gray">/*Аналог тега &lt;col&gt;, 
-НУЖНО СОЗДАТЬ ПУСТЫЕ 
+<span class="gray">/*Аналог тега &lt;col&gt;,
+НУЖНО СОЗДАТЬ ПУСТЫЕ
 ТЕГИ ВНАЧАЛЕ ТАБЛИЦЫ*/</span>
 <span class="red">.col1, col2</span> {<mark>display: table-column</mark>;}
 <span class="red">.col1</span> {background: cyan; width: 200px;}
 <span class="red">.col2</span> {background: pink;}
 <span class="gray">/*Также колонки можно группировать,
-используя свойство:*/</span> 
+используя свойство:*/</span>
 <mark>display: table-column-group</mark>;
-<span class="gray">/*Аналог тега &lt;colgroup&gt;*/</span> 
+<span class="gray">/*Аналог тега &lt;colgroup&gt;*/</span>
 </pre></code>
 </section>
 
@@ -267,7 +270,7 @@
     </div>
 </article>
 </section>
-	
+
 	</div>
 </div>
 
@@ -275,7 +278,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <title>Мой Справочник | CSS3 | CSS-Grids</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="../css/layout.css">
+      <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+      <style>
+        .sample-cont {
+          width: 300px;
+        }
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          border: 1px solid #ccc;
+          border-top: none;
+          margin-bottom: 50px;
+        }
+        .code {
+          padding: 5px;
+        }
+        .code code {
+          font-size: .75em;
+          color: maroon;
+        }
+        .code code.css {
+          font-size: 1em;
+          color: blueviolet;
+        }
+        .css-grid-wrapper {
+         border: 1px solid red;
+        }
+        .css-grid-wrapper > div {
+          padding: 5px;
+        }
+        .css-grid-wrapper > div:nth-child(odd) {
+          background: pink;
+        }
+        .css-grid-wrapper > div:nth-child(even) {
+          background: lightblue;
+        }
+        h2 {
+          text-align: center;
+          margin-bottom: 0;
+          background: lawngreen;
+        }
+        h3 {
+          color: darkolivegreen;
+          text-align: center;
+          text-decoration: underline;
+        }
+      </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="layout-positioner clearfix">
+        <div class="header-title">
+          <strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong>
+        </div>
+
+        <ul class="header-menu">
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../design-page.html">WEB-DESIGN</a></li>
+          <li><a href="../html-page.html">HTML</a></li>
+          <li><a href="../css-page.html">CSS</a></li>
+          <li><a class="active" href="../css3-page.html">CSS3</a></li>
+          <li><a href="../javascript-page.html">JS</a></li>
+          <li><a href="../php.html">PHP</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="layout-positioner clearfix">
+
+      <div class="vert-menu-cont">
+        <ul class="vert-menu">
+          <li><a href="#">Градиент</a>
+            <ul class="sub-menu sub-menu4">
+              <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+              <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+            </ul>
+          </li>
+          <li><a href="../css3-pages/shadow.html">Тени</a></li>
+          <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+          <li><a href="#">Таблицы на CSS3</a>
+            <ul class="sub-menu sub-menu5">
+              <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+              <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+              <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+            </ul>
+          </li>
+          <li><a href="../css3-pages/animation.html">Анимации</a></li>
+          <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+          <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+          <li><a href="../css3-pages/centered.html">Центровка</a></li>
+          <li><a href="../css3-pages/mask.html">Маска</a></li>
+          <li><a href="#">Слайдер</a>
+            <ul class="sub-menu sub-menu3">
+              <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+              <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="../css3-pages/flex.html">Флекс</a>
+            <ul class="sub-menu sub-menu8">
+              <li><a href="../css3-pages/flex.html">flex</a></li>
+              <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+            </ul>
+          </li>
+          <li><a href="../css3-pages/decoration_css3.html">Декор</a></li>
+          <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+          <li>
+            <a href="#">Bootstrap</a>
+            <ul class="sub-menu sub-menu-bs">
+              <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
+              <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
+              <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">LESS\SASS</a>
+            <ul class="sub-menu sub-menu-less">
+              <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+              <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+              <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+              <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+              <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+            </ul>
+          </li>
+          <li><a class="active" href="../css3-pages/css-grids.html">CSS-Grids</a></li>
+        </ul>
+      </div>
+
+      <div class="content clearfix">
+
+        <h1>CSS-Grids</h1>
+        <p>Флексбокс имеет одновременно только <b>одно измерение</b> в разметке (или строки, или колонки).</p>
+        <p>CSS-гриды имеют одновременно <b>два измерения</b> (и строки, и колонки).</p>
+
+        <h2>Columns</h2>
+        <h3>Разметка количества колонок и ширины (px, %, fr) и </h3>
+        <div class="flex">
+          <div class="code">
+            <code>&lt;div class="grid-wrapper"><br>
+              &nbsp;&nbsp;&lt;div> ... &lt;/div><br>
+              &nbsp;&nbsp;... <br>
+              &nbsp;&nbsp;&lt;div> ... &lt;/div><br>
+            &lt;/div></code> <hr>
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;<mark>display: grid;</mark> <br>
+              &nbsp;&nbsp;<mark>grid-template-columns: 20% 80%;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 20% 80%;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>3 colums</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: <mark>20% 30% 50%;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 20% 30% 50%;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Auto break</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: <mark>20% 30% 50%;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 20% 30% 50%;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Rows</h2>
+        <h3>Задаём высоту рядов (1 и 2-му рядам)</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: 20% 20% 60%;;<br>
+              &nbsp;&nbsp;<mark>grid-template-rows: 150px 200px;<br></mark>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 20% 20% 60%; grid-template-rows: 150px 200px;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Высота по умолчанию</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: 20% 20% 60%;;<br>
+              &nbsp;&nbsp;grid-template-rows: 150px 200px;<br>
+              <br>
+              &nbsp;&nbsp;// fix <br>
+              &nbsp;&nbsp;<mark>grid-auto-rows: 100px;<br></mark>
+              <br>
+              &nbsp;&nbsp;// adaptive<br>
+              &nbsp;&nbsp;<mark>grid-auto-rows: minmax(100px, auto);<br></mark>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 20% 20% 60%; grid-template-rows: 150px 200px; grid-auto-rows: 100px;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Gaps</h2>
+        <h3>Columns-gap</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: 20% 30% 50%;<br>
+              &nbsp;&nbsp;<mark>grid-column-gap: 15px;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 20% 20% 30%; grid-column-gap: 10%;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Rows-gap</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: 30% 30% 40%;<br>
+              &nbsp;&nbsp;<mark>grid-row-gap: 15px;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 30% 30% 40%; grid-row-gap: 15px;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Multi-gap - shortcut</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: 30% 30% 30%;<br>
+              &nbsp;&nbsp;<mark>grid-gap: 15px 5px;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper" style="display: grid;
+            grid-template-columns: 30% 30% 30%; grid-gap: 15px 5px;">
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+              <div>Lorem ipsum dolor sit amet.</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Fractions - fr</h2>
+        <h3>Adaptive layout</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-gap: 5px;<br>
+              &nbsp;&nbsp;grid-template-columns: <mark>2fr 1fr 2fr 1fr;</mark><br><br>
+              &nbsp;&nbsp;// or with repeat<br>
+              &nbsp;&nbsp;grid-template-columns: <mark>repeat(2, 2fr 1fr);</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper"
+            style="display: grid;
+                   grid-template-columns: repeat(2, 2fr 1fr); grid-gap: 5px;
+                   grid-auto-flow:row;
+            ">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="layout-positioner">
+        <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
+        <p class="footer-copyright">© 2018 Все права защищены</p>
+      </div>
+    </footer>
+  </body>
+</html>
