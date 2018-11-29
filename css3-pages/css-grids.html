@@ -153,7 +153,9 @@
             <code class="css">
               <span style="color: crimson">.grid-wrapper { </span><br>
               &nbsp;&nbsp;<mark>display: grid;</mark> <br>
-              &nbsp;&nbsp;<mark>grid-template-columns: 20% 80%;</mark><br>
+              &nbsp;&nbsp;<mark>grid-template-columns: 20% 80%;</mark><br><br>
+              &nbsp;&nbsp;// shortcut <br>
+              &nbsp;&nbsp;<mark>grid-template</mark>: grid-template-columns / grid-template-rows;<br>
               <span style="color: crimson">}</span>
             </code>
           </div>
@@ -161,8 +163,8 @@
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
             grid-template-columns: 20% 80%;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+              <div>1</div>
+              <div>2</div>
             </div>
           </div>
         </div>
@@ -181,14 +183,14 @@
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
             grid-template-columns: 20% 30% 50%;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
             </div>
           </div>
         </div>
 
-        <h3>Auto break</h3>
+        <h3>Auto break - когда элементов много</h3>
         <div class="flex">
           <div class="code">
             <code class="css">
@@ -202,12 +204,12 @@
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
             grid-template-columns: 20% 30% 50%;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestiae?</div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
             </div>
           </div>
         </div>
@@ -220,26 +222,26 @@
               <span style="color: crimson">.grid-wrapper { </span><br>
               &nbsp;&nbsp;display: grid; <br>
               &nbsp;&nbsp;grid-template-columns: 20% 20% 60%;;<br>
-              &nbsp;&nbsp;<mark>grid-template-rows: 150px 200px;<br></mark>
+              &nbsp;&nbsp;<mark>grid-template-rows: 50px 100px;<br></mark>
               <span style="color: crimson">}</span>
             </code>
           </div>
 
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
-            grid-template-columns: 20% 20% 60%; grid-template-rows: 150px 200px;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
+            grid-template-columns: 20% 20% 60%; grid-template-rows: 50px 100px;">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
             </div>
           </div>
         </div>
@@ -251,32 +253,32 @@
               <span style="color: crimson">.grid-wrapper { </span><br>
               &nbsp;&nbsp;display: grid; <br>
               &nbsp;&nbsp;grid-template-columns: 20% 20% 60%;;<br>
-              &nbsp;&nbsp;grid-template-rows: 150px 200px;<br>
+              &nbsp;&nbsp;grid-template-rows: 50px 100px;<br>
               <br>
               &nbsp;&nbsp;// fix <br>
-              &nbsp;&nbsp;<mark>grid-auto-rows: 100px;<br></mark>
+              &nbsp;&nbsp;<mark>grid-auto-rows: 30px;<br></mark>
               <br>
-              &nbsp;&nbsp;// adaptive<br>
-              &nbsp;&nbsp;<mark>grid-auto-rows: minmax(100px, auto);<br></mark>
+              &nbsp;&nbsp;// adaptive (можно и колонкам)<br>
+              &nbsp;&nbsp;<mark>grid-auto-rows: minmax(50px, auto);<br></mark>
               <span style="color: crimson">}</span>
             </code>
           </div>
 
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
-            grid-template-columns: 20% 20% 60%; grid-template-rows: 150px 200px; grid-auto-rows: 100px;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
+            grid-template-columns: 20% 20% 60%; grid-template-rows: 50px 100px; grid-auto-rows: 30px;">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
             </div>
           </div>
         </div>
@@ -297,12 +299,12 @@
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
             grid-template-columns: 20% 20% 30%; grid-column-gap: 10%;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
             </div>
           </div>
         </div>
@@ -322,12 +324,12 @@
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
             grid-template-columns: 30% 30% 40%; grid-row-gap: 15px;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
             </div>
           </div>
         </div>
@@ -347,12 +349,12 @@
           <div class="sample-cont">
             <div class="css-grid-wrapper" style="display: grid;
             grid-template-columns: 30% 30% 30%; grid-gap: 15px 5px;">
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
-              <div>Lorem ipsum dolor sit amet.</div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
             </div>
           </div>
         </div>
@@ -387,6 +389,239 @@
             </div>
           </div>
         </div>
+
+        <h2>Flow</h2>
+        <h3>Change order - при переполнении появляется доб. колонка</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-template-columns: minmax(10px, 50px) 1fr 1fr;<br>
+              &nbsp;&nbsp;grid-template-rows: 25px 25px 25px;<br>
+              &nbsp;&nbsp;grid-auto-rows: minmax(50px, auto);<br>
+              &nbsp;&nbsp;grid-gap: 5px;<br>
+              &nbsp;&nbsp;<mark>grid-auto-flow: column;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper"
+            style="display: grid;
+                   grid-template-columns: minmax(10px, 50px) 1fr 1fr;
+                   grid-template-rows: 25px 25px 25px;
+                   grid-auto-rows: minmax(50px, auto);
+                   grid-gap: 5px;
+                   grid-auto-flow: column;
+            ">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Auto-fill и Auto-fit</h2>
+        <h3>Колонки будут перераспределяться при уменьшении размера окна</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-gap: 5px;<br>
+              &nbsp;&nbsp;<mark>grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper"
+            style="display: grid;
+                   grid-gap: 5px;
+                   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            ">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Позиционирование отдельных элементов</h2>
+        <h3>Колонки будут перераспределяться при уменьшении размера окна</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-gap: 5px;<br>
+              &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br>
+              <span style="color: crimson">}</span> <br><br>
+              <span style="color: crimson">.grid-wrapper > div:nth-child(1) { </span><br>
+                &nbsp;&nbsp;// -1 - full-column<br>
+                &nbsp;&nbsp;grid-column-start: 1<br>
+                &nbsp;&nbsp;grid-column-end: 3<br>
+                &nbsp;&nbsp;<mark>grid-column: 1 / 3;</mark><br>
+                &nbsp;&nbsp;grid-row-start: 1<br>
+                &nbsp;&nbsp;grid-row-end: 3<br>
+                &nbsp;&nbsp;<mark>grid-row: 1 / 3;</mark><br><br>
+                &nbsp;&nbsp;// shortcut<br>
+                &nbsp;&nbsp;<mark>grid-area: 1 / 1 / 3 / 3;</mark><br>
+                <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper"
+            style="display: grid;
+                   grid-gap: 5px;
+                   grid-template-columns: repeat(3, 1fr);
+                   justify-items: stretch;
+            ">
+              <div
+                style="grid-area: 1 / 1 / 3 / 3;
+              ">1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div
+                style="grid-column: 2 / 4;
+                       grid-row: 3 / 5;
+              ">10</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Template areas</h2>
+        <h3>Кастомная сетка</h3>
+        <div class="flex">
+          <div class="code"><code class="html">
+              &lt;div class="grid"> <br>
+              &nbsp;&nbsp;&lt;header>&lt;/header><br>
+              &nbsp;&nbsp;&lt;aside>&lt;/aside><br>
+              &nbsp;&nbsp;&lt;main>&lt;/main><br>
+              &nbsp;&nbsp;&lt;footer>&lt;/footer><br>
+              &lt;/div>
+          </code><hr>
+            <code class="css">
+              <span style="color: crimson">.grid { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-gap: 5px;<br>
+              &nbsp;&nbsp;grid-template-columns: 2fr, 4fr;<br>
+              &nbsp;&nbsp;<mark>grid-template-areas: <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;"header ." <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;"aside main" <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;"footer main"</mark> <br>
+              &nbsp;&nbsp;; <br>
+              <span style="color: crimson">}</span> <br><br>
+            </code>
+            <code class="css">
+              <span style="color: crimson">header { </span><br>
+              &nbsp;&nbsp;grid-area: header; <br>
+              <span style="color: crimson">}</span> <br><br>
+            </code>
+            <code class="css">
+              <span style="color: crimson">aside { </span><br>
+              &nbsp;&nbsp;grid-area: aside; <br>
+              <span style="color: crimson">}</span> <br><br>
+            </code>
+            <code class="css">
+              <span style="color: crimson">main { </span><br>
+              &nbsp;&nbsp;grid-area: main; <br>
+              <span style="color: crimson">}</span> <br><br>
+            </code>
+            <code class="css">
+              <span style="color: crimson">footer { </span><br>
+              &nbsp;&nbsp;grid-area: footer; <br>
+              <span style="color: crimson">}</span> <br><br>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper"
+            style="display: grid;
+                   grid-gap: 5px;
+                   grid-template-columns: repeat(3, 1fr);
+            ">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Растяжение отдельных блоков</h2>
+        <h3>Свойства как у flexbox</h3>
+        <div class="flex">
+          <div class="code">
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper { </span><br>
+              &nbsp;&nbsp;display: grid; <br>
+              &nbsp;&nbsp;grid-gap: 5px;<br>
+              &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br><br>
+              &nbsp;&nbsp;// выравнивание по горизонтали<br>
+              &nbsp;&nbsp;<mark>justify-items: stretch* | start | center | end;</mark><br>
+              <br><br>
+              &nbsp;&nbsp;// выравнивание по вертикали<br>
+              &nbsp;&nbsp;<mark>align-items: stretch* | start | center | end;</mark><br>
+              <span style="color: crimson">}</span>
+            </code><br><br>
+            <code class="css">
+              <span style="color: crimson">.grid-wrapper > div:nth-child(1){ </span><br>
+              &nbsp;&nbsp;<mark>align-self: stretch* | start | center | end;</mark><br>
+              &nbsp;&nbsp;<mark>justify-self: stretch* | start | center | end;</mark><br>
+              <span style="color: crimson">}</span>
+            </code>
+          </div>
+
+          <div class="sample-cont">
+            <div class="css-grid-wrapper"
+            style="display: grid;
+                   grid-gap: 5px;
+                   grid-template-columns: repeat(3, 1fr);
+                   justify-items: center;
+                   align-items: center;
+            ">
+              <div style="justify-self: start;">1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div style="justify-self: end;">10</div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </div>
