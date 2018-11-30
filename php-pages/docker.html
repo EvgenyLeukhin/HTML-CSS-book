@@ -121,13 +121,26 @@
             </tr>
 
             <tr>
-              <td>Docker</td>
+              <td>Установка на <b>Linux</b></td>
               <td>
                 <p>Скрипт для установки на Linux: <a href="https://get.docker.com/" target="_blank" rel="noopener noreferrer">http://get.docker.com</a></p>
                 <p>Копируем <code>curl -fsSL get.docker.com -o get-docker.sh</code>, <br> запускаем-сохраняем-выполняем скрипт </p>
-                <code><mark>docker version</mark></code> || <code><mark>sudo docker version</mark></code>
+                <h3>2 вариант:</h3>
+                <code><mark>curl -sSL https://get.docker.com/ | sh</mark></code><br><br>
+                <h3>Проверка установки:</h3>
+                <code><mark>docker version || sudo docker version</mark></code>
               </td>
               <td><a href="https://docs.docker.com/" target="_blank">Docker-Docs</a></td>
+            </tr>
+            <tr>
+              <td>Установка на <b>Windows</b></td>
+              <td>Устанавливаем Docker-Desktop CE для Windows <a target="_blank" href="https://www.docker.com/products/docker-desktop">Docker-desktop.</a>
+              <p>Параметры виртуализации настраиваются в программе <b>Hyper-V Manager</b></p>
+
+              <p>Устанавливаем <a href="https://docs.docker.com/toolbox/toolbox_install_windows/" target="_blank">Docker-toolbox</a></p>
+
+              </td>
+              <td>Для работы в Windows Docker требует поддержку виртуализации. Включается в настройках BIOS</td>
             </tr>
 
             <tr>
@@ -310,10 +323,5 @@
     </div>
   </div>
 
-
-
-
-
 </body>
-
 </html>
