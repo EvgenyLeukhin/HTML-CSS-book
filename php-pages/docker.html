@@ -117,20 +117,68 @@
         <div class="row">
           <table class="new-table">
             <tr>
-              <th colspan="3">Docker-установка</th>
+              <th colspan="3">Установка на Linux</th>
             </tr>
 
             <tr>
               <td>Установка на <b>Linux</b></td>
               <td>
+                <h2>Установка Docker</h2><hr>
+                <h3>1 вариант (Edge):</h3>
+                <code><mark>curl -sSL https://get.docker.com/ | sh</mark></code><br><br>
+                <h3>2 вариант:</h3>
                 <p>Скрипт для установки на Linux: <a href="https://get.docker.com/" target="_blank" rel="noopener noreferrer">http://get.docker.com</a></p>
                 <p>Копируем <code>curl -fsSL get.docker.com -o get-docker.sh</code>, <br> запускаем-сохраняем-выполняем скрипт </p>
-                <h3>2 вариант:</h3>
-                <code><mark>curl -sSL https://get.docker.com/ | sh</mark></code><br><br>
+                <code>sh get-docker.sh</code><br>
+                <h3>Добавить Docker в группу</h3>
+                <code>sudo usermod -aG docker effectiveuser</code> <br>
+                <code>whoami</code> <hr>
                 <h3>Проверка установки:</h3>
-                <code><mark>docker version || sudo docker version</mark></code>
+                <code><mark>docker version || sudo docker version</mark></code> <hr>
+                <h3>Нужно залогиниться:</h3>
+                <code>docker login</code>
+                <p>Ввести логин и пароль от Docker Hub</p>
               </td>
               <td><a href="https://docs.docker.com/" target="_blank">Docker-Docs</a></td>
+            </tr>
+
+            <tr style="background: #ccc;">
+              <td>3 вариант (c docker-compose)</td>
+              <td><code>sh install.sh</code></td>
+              <td>
+                <a href="../files/install.sh" download>install.sh</a>
+              </td>
+            </tr>
+
+            <tr>
+                <td>Docker-machine</td>
+                <td>
+                  <h2>Установка docker-machine</h2> <hr>
+                  <code>https://github.com/docker/machine/releases</code> <br>
+                  ... выбрать последний релиз ... <br>
+                  ... скопировать скрипт ... <br>
+                  ... <code>sudo -i</code> и установить скрипт... <br>
+                  <code><mark>docker-machine -v</mark></code>
+                </td>
+                <td>Docs: https://docs.docker.com/machine/install-machine/</td>
+              </tr>
+
+              <tr>
+                <td>Docker-compose</td>
+                <td>
+                  <h2>Установка docker-compose</h2> <hr>
+                  <code>https://github.com/docker/compose/releases</code> <br>
+                  ... выбрать последний релиз ... <br>
+                  ... скопировать скрипт ... <br>
+                  ... <code>sudo -i</code> и установить скрипт... <br>
+                  <code><mark>docker-compose -v</mark></code>
+                </td>
+                <td>Docs: https://docs.docker.com/compose/install/</td>
+              </tr>
+
+
+            <tr>
+              <th colspan="3">Установка на Windows</th>
             </tr>
             <tr>
               <td>Установка на <b>Windows</b></td>
@@ -138,47 +186,25 @@
               <p>Параметры виртуализации настраиваются в программе <b>Hyper-V Manager</b></p>
 
               <p>Устанавливаем <a href="https://docs.docker.com/toolbox/toolbox_install_windows/" target="_blank">Docker-toolbox</a></p>
-
+              <code>doc ker-machine start</code><br>
+              <code>docker-machine env default</code><br>
+              <code>docker-machine env default</code><br>
               </td>
               <td>Для работы в Windows Docker требует поддержку виртуализации. Включается в настройках BIOS</td>
             </tr>
 
             <tr>
-              <td>Docker-machine</td>
-              <td>
-                <code>https://github.com/docker/machine/releases</code> <br>
-                ... выбрать последний релиз ... <br>
-                ... скопировать скрипт ... <br>
-                ... <code>sudo -i</code> и установить скрипт... <br>
-                <code><mark>docker-machine -v</mark></code>
-              </td>
-              <td>Docs: https://docs.docker.com/machine/install-machine/</td>
+              <th colspan="3">Установка на Mac OS</th>
             </tr>
-
             <tr>
-              <td>Docker-compose</td>
-              <td>
-                <code>https://github.com/docker/compose/releases</code> <br>
-                ... выбрать последний релиз ... <br>
-                ... скопировать скрипт ... <br>
-                ... <code>sudo -i</code> и установить скрипт... <br>
-                <code><mark>docker-compose -v</mark></code>
+              <td>Установка на <b>Mac OS</b></td>
+              <td><a href="https://store.docker.com/editions/community/docker-ce-desktop-mac" target="_blank">Download desktop app</a> <br>
+              <h3>bash-completion</h3>
+              <code>brew install bash-completion</code> <hr>
+              <code style="font-size: 10px !important;">sudo curl -L https://raw.githubusercontent.com/docker/machine/v0.16.0/contrib/completion/bash/docker-machine.bash -o `brew --prefix`/etc/bash_completion.d/docker-machine</code> <hr>
+              <code>docker Tab x2</code>
               </td>
-              <td>Docs: https://docs.docker.com/compose/install/</td>
-            </tr>
-
-            <tr>
-              <td>Авторизация</td>
-              <td><code>docker login</code></td>
-              <td>Ввести логин и пароль от Docker Hub</td>
-            </tr>
-
-            <tr style="background: #ccc;">
-              <td>Другой вариант (c docker-compose)</td>
-              <td><code>sh install.sh</code></td>
-              <td>
-                <a href="../files/install.sh" download>install.sh</a>
-              </td>
+              <td></td>
             </tr>
 
             <tr>
