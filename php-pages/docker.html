@@ -214,23 +214,28 @@
             <tr>
               <td><h2>Контейнер</h2> (container)</td>
               <td>
-                <h4>Список запущенныъ контейнеров (всех):</h4>
+                <h4>Запуск контейнера-сервера:</h4>
+                <code>docker container run --publish <u>80</u>:80 <mark>ngnix</mark></code><br>
+                <code>http://<mark>localhost</mark>:<u>80</u></code> - будет запущен сервер
+                <p>Будет скачан опубликованный последниый образ <mark>ngnix</mark> c DockerHub, потом этот образ запустится в docker-контейнере на 80 порте localhost или 0.0.0.0:80</p>
+                <hr>
+                <h4>Запуск контейнера-сервера в фоновом режиме:</h4>
+                <p>Добавляем флаг <code>--detach</code></p>
+                <code>docker container run --publish <u>80</u>:80  <mark>--detach</mark> ngnix</code><br>
+                <p>Будет присвоен uniq id</p>
+
+                <h4>Список запущенных контейнеров (всех):</h4>
                 <code>docker container <mark>ls</mark> (-a)</code><hr>
                 <h4>Запуск\остановка контейнера:</h4>
                 <code>docker container <mark>run\stop</mark> CONTAINER_ID</code><hr>
                 <h4>Удаление контейнера:</h4>
                 <p>Запущенный контейнер можно удалить только с <code>-f</code></p>
                 <code>docker container <mark>rm</mark> CONTAINER_ID</code><hr>
-                <h4>Запуск образов:</h4>
-                <ol>
-                  <li>Скачать образ <mark>ngnix</mark> c Docker Hub</li>
-                  <li>Запустить новый контейнер из этого образа</li>
-                  <li>Открыть 80 порт на localhost</li>
-                </ol>
-                <code>docker container run --publish <u>80</u>:80 <mark>ngnix</mark></code><br>
-                <code>http://<mark>localhost</mark>:<u>80</u></code> - будет запущен сервер<hr>
-                <h4>Фоновый запуск образов:</h4>
-                <code>docker container run --publish 80:80 <mark>--detach</mark> ngnix --name test</code><hr>
+
+
+                <h4>Фоновый запуск контейнеров с присвоением имени:</h4>
+                <code>docker container run --publish 80:80 --detach (-d) ngnix <mark>--name test</mark></code>
+                <hr>
                 <h4>Логи:</h4>
                 <code>docker container <mark>logs</mark> cont_name</code>
                 <hr>
