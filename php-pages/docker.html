@@ -208,14 +208,19 @@
             </tr>
 
             <tr>
-              <th colspan="3">Запуск сервера в контейнере</th>
+              <th colspan="3">Запуск контейнеров</th>
             </tr>
 
             <tr>
-              <td><h2>Контейнер</h2> (container)</td>
+              <td><h2>Контейнер-сервер</h2></td>
               <td>
-                <h4>Запуск контейнера-сервера:</h4>
-                <code>docker container run --publish <u>80</u>:80 <mark>ngnix</mark></code><br>
+                <code>sudo docker run --name docker-nginx -p 80:80 nginx</code> <hr>
+                <b>docker run nginx</b> - какой контейнер создаем и запускаем (будет скачан с DockerHub) <br><br>
+                <b>--name docker-nginx</b> - кастомное имя, которое мы присваиваем контейнеру<br><br>
+                <b>-p 80:80</b> - порт (localhost или 0.0.0.0:80) <hr>
+                <h4>Запуск в фоне (флаг -d)</h4>
+                <code>sudo docker run --name docker-nginx -p 80:80 <mark>--detach (-d)</mark> nginx</code>
+                <!-- <code>docker container run --publish <u>80</u>:80 <mark>ngnix</mark></code><br>
                 <code>http://<mark>localhost</mark>:<u>80</u></code> - будет запущен сервер
                 <p>Будет скачан опубликованный последниый образ <mark>ngnix</mark> c DockerHub, потом этот образ запустится в docker-контейнере на 80 порте localhost или 0.0.0.0:80</p>
                 <hr>
@@ -232,17 +237,11 @@
                 <p>Запущенный контейнер можно удалить только с <code>-f</code></p>
                 <code>docker container <mark>rm</mark> CONTAINER_ID</code><hr>
 
-
-                <h4>Фоновый запуск контейнеров с присвоением имени:</h4>
-                <code>docker container run --publish 80:80 --detach (-d) ngnix <mark>--name test</mark></code>
-                <hr>
                 <h4>Логи:</h4>
                 <code>docker container <mark>logs</mark> cont_name</code>
-                <hr>
+                <hr> -->
               </td>
-              <td>
-                <code>--name somename</code> - кастомное имя контейнера
-              </td>
+              <td></td>
             </tr>
 
             <tr>
