@@ -139,7 +139,9 @@
                 <code>docker login</code>
                 <p>Ввести логин и пароль от Docker Hub</p>
               </td>
-              <td><a href="https://docs.docker.com/" target="_blank">Docker-Docs</a></td>
+              <td><a href="https://docs.docker.com/" target="_blank">Docker-Docs</a> <br>
+              Docker контейнер - это не ВМ, это процесс который запускается в фоне
+              </td>
             </tr>
 
             <tr style="background: #ccc;">
@@ -224,7 +226,8 @@
                 <code>sudo docker run --name docker-nginx -p 80:80 <mark>--detach (-d)</mark> nginx</code><hr>
 
                 <h4>Список запущенных контейнеров (всех):</h4>
-                <code>docker container <mark>ls</mark> (-a)</code><hr>
+                <code>docker container <mark>ls</mark> (-a)</code><br>
+                <code>docker <mark>ps</mark> (-a)</code><hr>
 
                 <h4>Запуск\остановка контейнера:</h4>
                 <code>docker container <mark>run\stop</mark> CONTAINER_ID</code><hr>
@@ -232,13 +235,37 @@
                 <h4>Удаление контейнера:</h4>
                 <p>Запущенный контейнер можно удалить только с <code>-f</code></p>
 
-                <code>docker container <mark>rm</mark> CONTAINER_ID</code><hr>
+                <code>docker container <mark>rm</mark> CONTAINER_ID</code> <br>
+                <code>docker container <mark>rm -f</mark> CONTAINER_ID</code><hr>
 
                 <h4>Логи:</h4>
                 <code>docker container <mark>logs</mark> cont_name</code>
                 <hr>
+                <h4>Набор контейнеров для веб-сервера</h4>
+                <ul>
+                  <li>Название | Порт</li>
+                  <li>nginx (80:80)</li>
+                  <li>httpd (8080:80 apache HTTP server)</li>
+                  <li>mysql (3306:3306) (install with -e flag)</li>
+                  <li><code>-d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes</code></li>
+                </ul> <hr>
+                <h4>Как зайти в запущенный контейнер через терминал</h4>
+                <code>docker container <mark>exec -it cont_name bash</mark></code>
               </td>
-              <td></td>
+              <td>
+                Когда запускаем команду <code>run container</code>
+                <ol>
+                  <li>Локальный поиск этого образа</li>
+                  <li>Удаленный поиск на DockerHub</li>
+                  <li>Скачивание последней версии с DockerHub</li>
+                  <li>Создаётся docker-контейнер</li>
+                  <li>Присваивается виртуальный IP</li>
+                  <li>Открывается порт на этом виртуальном IP</li>
+                  <li>Запускается контейнер</li>
+                </ol>
+
+                <code>ps aux</code> - список запущенных процессов
+              </td>
             </tr>
 
             <tr>
