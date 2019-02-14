@@ -15,6 +15,10 @@
       margin-top: 25px;
       margin-bottom: 0;
     }
+    .xampp code {
+      font-size: 1em;
+    }
+    .xampp h2 { color: #000; }
     h4 {margin: 12px 0 0 0;}
   </style>
 </head>
@@ -189,7 +193,7 @@
             Double Commander
           </td>
           <td rowspan="1" style="width: 700px; color: #555;">
-            <pre><code style="font-size: 1em;"><span class="gray">// root</span>
+            <pre><code><span class="gray">// root</span>
 [Desktop Entry]
 Name=DoubleCmd <b>Root</b>
 Comment=Double Commander is a cross platform open source file
@@ -205,36 +209,58 @@ Categories=Application;Utility;FileManager;
         </tr>
 
         <tr>
-          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
-            XAMPP (local server)
+          <td colspan="5">
+            <h1 style="color: black; text-align: center;">XAMPP</h1>
           </td>
-          <td rowspan="1" style="width: 700px; color: #555;">
-            <h3>Установка</h3>
-            <span class="gray">// запустить команду из директории куда скачалось</span> <br>
-            <code>sudo ./xampp-linux-*-installer.run</code>
-              <h3>Запуск из консоли</h3>
-              <code>sudo /opt/lampp/lampp start</code>
+        </tr>
 
-              <h3>Запуск из оболочки</h3>
-              <code>
-                cd /opt/lampp <br>
-                sudo ./manager-linux-x64.run</code>
-                <h3>rootinf xampp ()</h3>
-                <pre><code style="font-size: 1em;"><span class="gray">/usr/share/applications/xampp.desktop</span><hr>#!/usr/bin/env xdg-open
-[Desktop Entry]
-Version=1.0
-Type=Application
-Terminal=false
-Exec=gksudo /opt/lampp/manager-linux-x64.run
-Name=XAMPP
-Comment=Star XAMPP Control Panel
-Icon=/opt/lampp/htdocs/favicon.ico
-Name[ru]=xampp</code></pre>
+        <tr class="xampp">
+          <td colspan="5" rowspan="1" style="width: 700px; color: #555;">
+            <h2>Install</h2>
+            <h3>Dowload Xampp</h3>
+            <code>sudo -i</code> <br>
+            <code>wget https://www.apachefriends.org/xampp-files/5.6.33/xampp-linux-x64-5.6.33-0-installer.run</code>
+            <h3>Give permissions to download package</h3>
+            <code>chmod +x xampp-linux-x64-5.6.33-0-installer.run</code>
+            <h3>Lunch</h3>
+            <code>./xampp-linux-x64-5.6.33-0-installer.run</code>
+            <hr>
+            <h2>Create Desktop Icon</h2>
+            <h3>Install Gedit editor</h3>
+            <code>sudo apt install gedit</code>
+            <h3>Create desktop icon</h3>
+            <code>gedit ~/Desktop/xampp-control-panel.desktop</code>
+            <code>[Desktop Entry] <br>
+                  Encoding=UTF-8<br>
+                  Name=XAMPP Control Panel<br>
+                  Comment=Start and Stop XAMPP<br>
+                  Exec=gksudo /opt/lampp/manager-linux-x64.run<br>
+                  Icon=/opt/lampp/htdocs/favicon.ico<br>
+                  Categories=Application<br>
+                  Type=Application</code><br>
+            <h3>Create application icon</h3>
+            <code>sudo gedit /usr/share/applications/xampp-control-panel.desktop</code><br>
+            <code>[Desktop Entry]<br>
+                  Encoding=UTF-8<br>
+                  Name=XAMPP Control Panel<br>
+                  Comment=Start and Stop XAMPP<br>
+                  Exec=gksudo /opt/lampp/manager-linux-x64.run<br>
+                  Icon=/opt/lampp/htdocs/favicon.ico<br>
+                  Categories=Application<br>
+                  Type=Application</code><hr>
 
-          </td>
-          <td rowspan="1" style="width: 200px; color: #555;">
-            <a target="_blank" href="https://www.apachefriends.org/download.html">download</a> <br>
-            <a href="https://www.apachefriends.org/ru/faq_linux.html" target="_blank" >FAQ</a>
+            <h2>Work with projects</h2>
+            <h3>Create project folder</h3>
+            <code>mkdir ~/Desktop/website</code>
+
+            <h3>Create link to xampp</h3>
+            <code>sudo ln -s ~/Desktop/website/ /opt/lampp/htdocs/website</code>
+
+            <h3>Create test php-file</h3>
+            <code>echo "<?php phpinfo(); ?>" > ~/Desktop/website/index.php</code>
+
+            <h3>Test in browser</h3>
+            <code>http://localhost/website/</code>
           </td>
         </tr>
 
