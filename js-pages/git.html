@@ -378,6 +378,24 @@
     </tr>
     <tr>
       <td colspan="3">
+        <p>
+          <h2>Несколько ключей</h2>
+          <pre><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa.home
+ssh-keygen -t rsa -f ~/.ssh/id_rsa.work
+
+
+~/.ssh/config
+Host home
+Hostname home.example.com
+IdentityFile ~/.ssh/id_rsa.home
+User *your home acct*
+
+Host work
+Hostname work.example.com
+IdentityFile ~/.ssh/id_rsa.work
+User *your work acct*
+          </code></pre>
+        </p>
         <ol>
           <li>Во время установки <b>Git</b> устанавливаем <b>OpenSSH-клиент</b></li>
           <li>В директории пользователя ОС создаём папку <b>.ssh</b></li>
