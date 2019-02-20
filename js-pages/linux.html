@@ -167,8 +167,6 @@
         </tr>
 
 
-
-
         <tr>
           <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
             Xneur — аналог Punto Switcher
@@ -281,6 +279,35 @@ Categories=Application;Utility;FileManager;
 
             <h3>Test in browser</h3>
             <code>http://localhost/website/</code>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td colspan="5">
+            <h1 style="color: black; text-align: center;">XAMPP - Virtual Hosts<h1>
+          </td>
+        </tr>
+        <tr class="xampp">
+          <td colspan="5" rowspan="1" style="width: 700px; color: #555;">
+            1. <b>/opt/lampp/etc/httpd.conf</b> <br>
+            Раскомментировать <code>Include etc/extra/httpd-vhosts.conf</code>
+            <hr>
+            2. <b>/opt/lampp/etc/extra/httpd-vhosts.conf</b> <br>
+            Добавить
+<code><pre>&lt;VirtualHost *:80&gt;
+  DocumentRoot "/opt/lampp/htdocs/"
+  ServerName localhost
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:80&gt;
+  DocumentRoot "/opt/lampp/htdocs/mysite/"
+  ServerName mysite.loc
+&lt;/VirtualHost&gt;</pre></code>
+            <hr>
+            1. <b>/etc/hosts</b> <br><br>
+            Добавить <br>
+            <code>127.0.0.1 mysite.loc</code>
           </td>
         </tr>
 
