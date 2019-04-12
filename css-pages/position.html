@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Позиционирование</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 		.cont {
@@ -17,7 +17,7 @@
 		padding: 10px;
 		color: white;
 		font-size: 1.5em;}
-		
+
 		.box {
 		float: left;
 		height: 100px;
@@ -25,29 +25,29 @@
 		width: 100px;
 		border: 2px dotted #999;
 		background-color: white;}
-		
+
 		.relative {position: relative;
 		background-color: lightblue;}
-		
+
 		.relative1 {position: relative;
 		background-color: lightblue;
 		top: 20px;
 		left:10px;}
-		
+
 		.relative2 {position: relative;
 		background-color: lightblue;
 		top: 25px;
 		left:15px;}
-		
+
 		.relative3 {position: relative;
 		background-color: lightblue;
 		top: 30px;
 		left: 20px;}
-		
+
 		.absolute {position: absolute;
 		background-color: maroon;
 		}
-		
+
 		.absolute1 {position: absolute;
 		background-color: maroon;
 		top: 1850px;
@@ -60,14 +60,14 @@
 		background-color: maroon;
 		top: 1750px;
 		left: 0px;}
-		
+
 		.inline-block {display: inline-block;
 		vertical-align: middle;
 		margin-left: 15px;}
-		
+
 		h4 {text-align: center;}
 		.rel {
-			height: 200px; 
+			height: 200px;
 			border: 3px solid #000;
 			position: relative;
 		}
@@ -137,14 +137,14 @@
 		</li>
 		<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 		<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-		<li><a href="../css-pages/decoration.html">Декор</a></li>
+		<li><a href="../css-pages/decoration.html">Фигуры</a></li>
 	</ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | CSS | Позиционирование</h2>
-	
+
 	<table class="discription-table">
 		<caption><mark>Позиционирование</mark></caption>
 			<tr>
@@ -161,8 +161,8 @@
 				<td><code>position:&nbsp;relative;</code></td>
 				<td><b>Относительное позиционирование</b></td>
 				<td style="color: black; width: 600px; font-weight: normal; text-align: justify;">
-					Относительное позиционирование. Положение элемента устанавливается относительно его исходного места. 
-					Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону 
+					Относительное позиционирование. Положение элемента устанавливается относительно его исходного места.
+					Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону
 					от первоначального расположения, при этом другие элементы думают, что элемент стоит всё на том же месте, а сам
 					спозиционированный элемент выходит из потока
 				</td>
@@ -178,7 +178,7 @@
 				<td><code>position:&nbsp;fixed;</code></td>
 				<td><b>Фиксированное позиционирование</b></td>
 				<td style="color: black; font-weight: normal; text-align: justify;">
-					Фиксированное позиционирование. По своему действию это значение близко к absolute, но в отличие от него привязывается 
+					Фиксированное позиционирование. По своему действию это значение близко к absolute, но в отличие от него привязывается
 					к указанной свойствами left, top, right и bottom точке на экране и не меняет своего положения при прокрутке веб-страницы.
 				</td>
 			</tr>
@@ -187,14 +187,14 @@
 				<td><b>Относительно-фиксированное позиционирование</b></td>
 				<td style="color: black; font-weight: normal; text-align: justify;">
 					Это сочетание относительного и фиксированного позиционирования. Элемент рассматривается как позиционированный относительно,
-					пока он не пересекает определённый порог, после чего рассматривается как фиксированный. Обычно применяется для фиксации 
+					пока он не пересекает определённый порог, после чего рассматривается как фиксированный. Обычно применяется для фиксации
 					заголовка на одном месте, пока содержимое, к которому относится заголовок, прокручивается на странице.
 				</td>
 			</tr>
 			<tr>
 				<td><code>top, right, bottom, left</code></td>
 				<td><b>Координаты для позиционирования</b></td>
-				<td style="color: black; font-weight: normal; text-align: justify;">Значения <span class="red">auto</span> - 
+				<td style="color: black; font-weight: normal; text-align: justify;">Значения <span class="red">auto</span> -
 				неявные точки привязки, значения по ум, точка привязки по ум* - точка, где был бы элемент без абс. позиционирования,
 				эту точку можно также изменять посредствам <span class="red">margin</span>
 				</td>
@@ -206,52 +206,52 @@
 					Чем больше это значение, тем выше отображается элемент по условной оси z</td>
 			</tr>
 	</table>
-	
+
 	<main>
 	<h3 class="inline-block">Обычные элементы<div class="box inline-block"></div></h3>
 	<h3 class="inline-block">Относительные элементы<div class="box relative inline-block"></div></h3>
 	<h3 class="inline-block">Абсолютные элементы<div class="box absolute inline-block"></div></h3>
-	 
+
 	<h4>Обычные блоки</h4>
 		<div class="cont">
 			<div class="box"></div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box"></div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box"></div><span>Текст Текст Текст Текст Текст Текст</span>
 		</div>
-		
-	<h4>Относительные блоки без смещения ведут себя как обычные</h4>	
+
+	<h4>Относительные блоки без смещения ведут себя как обычные</h4>
 		<div class="cont">
 			<div class="box relative">1</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box relative">2</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box relative">3</div><span>Текст Текст Текст Текст Текст Текст</span>
 		</div>
-	
+
 	<h4>Относительные блоки со смещением, смещенные элементы вышли из потока и не влияют на другие элементы,<br> но текст по прежнему думает, что
-эти элементы стоят на своих местах как в примере выше</h4>	
+эти элементы стоят на своих местах как в примере выше</h4>
 		<div class="cont">
 			<div class="box relative1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box relative2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box relative3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
 		</div>
-		
-	<h4>Абсолютные элементы без смещения уже вышли из потока</h4>	
+
+	<h4>Абсолютные элементы без смещения уже вышли из потока</h4>
 		<div class="cont">
 			<div class="box absolute">1</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box absolute">2</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box absolute">3</div><span>Текст Текст Текст Текст Текст Текст</span>
-		</div>	
-	
-	<h4>Абсолютным элементам задано смещение, они вышли из потока, улетев влево, и текст уже забыл о их существовании</h4>	
+		</div>
+
+	<h4>Абсолютным элементам задано смещение, они вышли из потока, улетев влево, и текст уже забыл о их существовании</h4>
 		<div class="cont">
 			<div class="box absolute1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box absolute2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box absolute3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
 		</div>
-		
 
-		
+
+
 	</main>
-	
+
 	<h2>Центровка абсолютно-спозиционированного элемента в родителе:</h2>
 	<code>
 		position: absolute;<br>
@@ -265,7 +265,7 @@
 	<div class="rel">
 		<div class="abs"></div>
 	</div>
-	
+
 	</div>
 </div>
 
@@ -273,7 +273,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

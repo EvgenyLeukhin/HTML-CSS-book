@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Селекторы</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 code {
@@ -19,7 +19,7 @@ code {
 }
 .some-link2:active {
     outline: 2px solid red;
-} 
+}
 .some-link3:link {
     color: violet;
 }
@@ -28,10 +28,10 @@ code {
 }
 input[type="text"]:focus {border: 4px solid pink;}
 
-input[type="password"] {border: 4px dotted red;} 
+input[type="password"] {border: 4px dotted red;}
 
 option:disabled {text-decoration: line-through;}
-option:enabled {text-decoration: underline;} 
+option:enabled {text-decoration: underline;}
 #text-form:focus {border: 1px solid pink;}
 #text-form:read-only {background-color: yellowgreen;}
 input[type="checkbox"]:checked {border-color: red;}
@@ -93,14 +93,14 @@ input[type="checkbox"]:checked {border-color: red;}
 		</li>
 		<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 		<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-		<li><a href="../css-pages/decoration.html">Декор</a></li>
+		<li><a href="../css-pages/decoration.html">Фигуры</a></li>
 	</ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | CSS | Селекторы (select - выбирать, "выборщики")</h2>
-	
+
 	<table class="discription-table">
 			<caption><mark>Приоритетность (Варианты стилизации)</mark></caption>
 			<tr>
@@ -129,7 +129,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					<span class="gray">&lt;/style&gt;</span>
 					</code>
 				</td>
-			</tr> 
+			</tr>
 			<tr>
 				<td>3. Через id</td>
 				<td>3 место</td>
@@ -235,7 +235,7 @@ input[type="checkbox"]:checked {border-color: red;}
 			<li><code>unset</code> - если наследуется, то как у родителя, если нет - то <code>initial</code></li>
 			<li><code>inherit</code> - принудительно наследовать у родителя</li>
 		</ul>
-	
+
 	<h3><b>Ненаследуемые</b> свойства (родитель-потомок):</h3>
 		<ul>
 			<li><code>background;</code></li>
@@ -366,7 +366,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					</code>
 				</td>
 				<td>
-					Сработает для всех перечисленных классов <span class="red">class1</span>, 
+					Сработает для всех перечисленных классов <span class="red">class1</span>,
 					<span class="red">class2</span>, <span class="red">class3</span>
 				</td>
 			</tr>
@@ -384,7 +384,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					</code>
 				</td>
 				<td>
-					Сработает для всех тегов и классов 
+					Сработает для всех тегов и классов
 				</td>
 			</tr>
 
@@ -403,7 +403,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					Сработает для всех тегов и классов внутри класса <span class="red">class1</span>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td>
 					.class1 *:псевдо-класс{color: red;}<br>
@@ -419,7 +419,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					Сработает для всех дочерних первых элементов класса <span class="red">left-column</span>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td colspan="4" style="text-align: center;">
 					<b style="color: black;"><mark>ИЗБИРАТЕЛЬНЫЕ селекторы</mark></b>
@@ -457,7 +457,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					<code>
 				&lt;div class=<span class="red">"column-1"</span>&gt; &lt;/div&gt;<br>
 				&lt;div class=<span class="red">"column-right"</span>&gt; &lt;/div&gt;
-					</code>	
+					</code>
 				</td>
 				<td>
 					Выберет все теги div, у которых название класса начинается с подстроки <span class="red">"column-"</span>
@@ -473,7 +473,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					<code>
 				&lt;a href=<span class="red">"doc1.pdf"</span>&gt; &lt;/a&gt;<br>
 				&lt;a href=<span class="red">"doc2.pdf"</span>&gt; &lt;/a&gt;
-					</code>	
+					</code>
 				</td>
 				<td>
 					Выберет все ссылки, адреса кот. заканчиваются на <span class="red">".pdf"</span>
@@ -491,7 +491,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				&lt;div class=<span class="red">"right-column"</span>&gt; &lt;/div&gt;<br>
 				&lt;div class=<span class="red">"column2"</span>&gt; &lt;/div&gt;<br>
 				&lt;div class=<span class="red">"_column"</span>&gt; &lt;/div&gt;
-					</code>	
+					</code>
 				</td>
 				<td>
 					Выберет все теги div, у которых в названии класса есть слово <span class="red">"column"</span> в любом месте
@@ -507,7 +507,7 @@ input[type="checkbox"]:checked {border-color: red;}
 					<code>
 				&lt;div class=<span class="red">"column"</span>&gt; &lt;/div&gt;<br>
 				&lt;div class=<span class="red">"right column"</span>&gt; &lt;/div&gt;
-					</code>	
+					</code>
 				</td>
 				<td>
 					Выберет все теги div, у которых один из классов <span class="red">"column"</span>
@@ -523,14 +523,14 @@ input[type="checkbox"]:checked {border-color: red;}
 					<code>
 				&lt;div class=<span class="red">"column"</span>&gt; &lt;/div&gt;<br>
 				&lt;div class=<span class="red">"column-right"</span>&gt; &lt;/div&gt;
-					</code>	
+					</code>
 				</td>
 				<td>
 					Выберет все теги div, у которых название одного из классов <span class="red">"column"</span> или начинается с  <span class="red">"column-"</span>
 				</td>
 			</tr>
 	</table>
-	
+
 	<table class="discription-table">
 			<caption><mark>Псевдоклассы (через ":")</mark></caption>
 			<tr>
@@ -544,7 +544,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				<td>
 					<code>
 						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
-						<span class="red">span::before </span>{<br> 
+						<span class="red">span::before </span>{<br>
 						&nbsp;&nbsp;content:'before';<br>
 						&nbsp;&nbsp;color: red;<br>
 						}
@@ -558,7 +558,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				<td>
 					<code>
 						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
-						<span class="red">span::after </span>{<br> 
+						<span class="red">span::after </span>{<br>
 						&nbsp;&nbsp;content:'after';<br>
 						&nbsp;&nbsp;color: red;<br>
 						}
@@ -570,18 +570,18 @@ input[type="checkbox"]:checked {border-color: red;}
 				<td>::selection</td>
 				<td>
 					<b>ВЫДЕЛЯЮЩИЙ селектор</b><br>
-					Выделение текста курсором мыши 
+					Выделение текста курсором мыши
 					(работает не везде, выручают префиксы)
 				</td>
 				<td>
 					<code>
 						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
-						<span class="red">span::selection </span>{<br> 
+						<span class="red">span::selection </span>{<br>
 						&nbsp;&nbsp;background-color: red;<br>
 						&nbsp;&nbsp;color: red;<br>
 						}<br>
 						&lt;span&gt;<span class="gray">Some text</span>&lt;span&gt;<hr>
-						<span class="red">span::-moz-selection </span>{<br> 
+						<span class="red">span::-moz-selection </span>{<br>
 						&nbsp;&nbsp;background-color: red;<br>
 						&nbsp;&nbsp;color: red;<br>
 						}
@@ -600,7 +600,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
 						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:first-child</span><br> 
+						<span class="red">ul li:first-child</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -617,7 +617,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
 						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:last-child</span><br> 
+						<span class="red">ul li:last-child</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -634,7 +634,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
 						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:nth-child(3)</span><br> 
+						<span class="red">ul li:nth-child(3)</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -659,7 +659,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;<span class="red">&lt;li&gt;...&lt;/li&gt;</span><br>
 						&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:not(:last-child)</span><br> 
+						<span class="red">ul li:not(:last-child)</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -679,7 +679,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
 						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:empty</span><br> 
+						<span class="red">ul li:empty</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -695,7 +695,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						Some text Some text Some text <br>
 						Some text Some text Some text <br>
 						&lt;/p&gt;<hr>
-						<span class="red">p::first-line</span><br> 
+						<span class="red">p::first-line</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -707,7 +707,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				<td>
 					<code>
 						&lt;span&gt;<span class="red">S</span>ome text &lt;/span&gt;<hr>
-						<span class="red">span::first-letter</span><br> 
+						<span class="red">span::first-letter</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -724,7 +724,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&lt;ul&gt;<br>
 						&nbsp;&nbsp;<span class="red">&lt;li&gt;&lt;/li&gt;</span><br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:only-child</span><br> 
+						<span class="red">ul li:only-child</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -745,7 +745,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;<span class="red">&lt;li&gt;5&lt;/li&gt;</span><br>
 						&nbsp;&nbsp;&lt;li&gt;6&lt;/li&gt;<br>
 						&lt;/ul&gt;<hr>
-						<span class="red">ul li:nth-last-child(2)</span><br> 
+						<span class="red">ul li:nth-last-child(2)</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -765,7 +765,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;2&lt;/li&gt;<br>
 						&lt;/ul&gt;<br>
 						<hr>
-						<span class="red">ul:first-of-type</span><br> 
+						<span class="red">ul:first-of-type</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -788,7 +788,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;3&lt;/li&gt;<br>
 						&lt;/ul&gt;</span>
 						<hr>
-						<span class="red">ul:last-of-type</span><br> 
+						<span class="red">ul:last-of-type</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -814,7 +814,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
 						&lt;/ul&gt;
 						<hr>
-						<span class="red">ul:nth-of-type(3)</span><br> 
+						<span class="red">ul:nth-of-type(3)</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -840,7 +840,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						&nbsp;&nbsp;&lt;li&gt;4&lt;/li&gt;<br>
 						&lt;/ul&gt;
 						<hr>
-						<span class="red">ul:nth-last-of-type(2)</span><br> 
+						<span class="red">ul:nth-last-of-type(2)</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -856,7 +856,7 @@ input[type="checkbox"]:checked {border-color: red;}
 						<span class="red">&lt;ul&gt;<br>
 						&nbsp;&nbsp;&lt;li&gt;1&lt;/li&gt;<br>
 						&lt;/ul&gt;</span><hr>
-						<span class="red">ul:only-of-type</span><br> 
+						<span class="red">ul:only-of-type</span><br>
 						&nbsp;&nbsp;{color: red;}
 					</code>
 				</td>
@@ -1016,7 +1016,7 @@ input[type="checkbox"]:checked {border-color: red;}
 							<option> 2006 </option>
 							<option> 2007 </option>
 							<option> 2008 </option>
-						</select> 
+						</select>
 				</td>
 			</tr>
 			<tr>
@@ -1079,7 +1079,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				</td>
 				<td rowspan="2">
 					<label for="first-name-id">Введите код: </label>
-					<input type="text" name="first-name" id="first-name-id" pattern="[0-9]{3}\s[0-9]{3}" placeholder="XXX_XXX"><br><br>	
+					<input type="text" name="first-name" id="first-name-id" pattern="[0-9]{3}\s[0-9]{3}" placeholder="XXX_XXX"><br><br>
 					Корректность ввдённых данных должна быть указана в атрибуте <span class="red">pattern</span></td>
 			</tr>
 			<tr>
@@ -1096,7 +1096,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				<td><b>Выбирает элементы, значение кот. <span class="red">ПОПАДАЕТ</span> в указанный диапозон</b></td>
 				<td>
 					<code>
-						
+
 					</code>
 				</td>
 				<td rowspan="2">Работает с <span class="red">type="mumber" min="..." max="..."</span></td>
@@ -1106,7 +1106,7 @@ input[type="checkbox"]:checked {border-color: red;}
 				<td><b>Выбирает элементы, значение кот. <span class="red">НЕ ПОПАДАЕТ</span> в указанный диапозон</b></td>
 				<td>
 					<code>
-						
+
 					</code>
 				</td>
 			</tr>
@@ -1127,10 +1127,10 @@ input[type="checkbox"]:checked {border-color: red;}
 					$(".inputTel").mask("+7 (999)-999-99-99",{placeholder:"_"});
 				</td>
 			</tr>
-			
+
 	</table>
-	
-	
+
+
 	</div>
 </div>
 
@@ -1138,7 +1138,7 @@ input[type="checkbox"]:checked {border-color: red;}
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
