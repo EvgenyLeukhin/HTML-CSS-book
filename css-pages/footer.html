@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Блочная вёрстка | Футер</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 		.discription {
@@ -85,7 +85,7 @@
 			</li>
 			<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 			<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-			<li><a href="../css-pages/decoration.html">Декор</a></li>
+			<li><a href="../css-pages/decoration.html">Фигуры</a></li>
 		</ul>
 	</div>
 
@@ -103,7 +103,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
 				}
-			</code>	
+			</code>
 		</li>
 		<li>
 			Создаём обёртку wrapper, обварачиваем ей все содержимое body кроме footer и задаём отрицательный margin-bottom равный высоте футера<br>
@@ -112,7 +112,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;min-height: 100%;<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: -100px;<br>
 				}
-			</code>	
+			</code>
 		</li>
 		<li>
 			Создаём empty-block в конце контентной части, равный высоте футера, чтобы последний не перекрывал видимый контент<br>
@@ -120,11 +120,11 @@
 				<span class="red">.empty-block</span> {<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br>
 				}
-			</code>	
+			</code>
 		</li>
 		<li>Если нужно подстроить, то регулируем margin-bottom у wrapper и height у empty-block</li>
 	</ol>
-	
+
 	<h2>Второй способ</h2>
 	<code>
 <span class="red">footer</span> {<br>
@@ -135,16 +135,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
 }
 	</code>
-	
+
 	</div>
-	
+
 </div>
 
 <div class="footer">
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Блочная вёрстка | Распорки</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 		.container {
@@ -12,25 +12,25 @@
 		background-color: lightblue;
 		outline: 2px dotted red;
 		padding: 10px;}
-		
+
 		.column1 {
 		float: left;
 		color: blue;
 		background-color: yellow;
 		width: 50%;
 		outline: 2px dotted blue;}
-		
+
 		.column2 {
 		float: right;
 		color: yellow;
 		background-color: blue;
 		width: 50%;
 		outline: 2px dotted blue;}
-		
+
 		.clearfix1 {					/*РАСПОРКА*/
 		clear: both;
 		}
-		
+
 		.clearfix2:after{			/*ПСЕВДО-РАСПОРКА*/
 		content:'';
 		display:table;
@@ -91,7 +91,7 @@
 			</li>
 			<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 			<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-			<li><a href="../css-pages/decoration.html">Декор</a></li>
+			<li><a href="../css-pages/decoration.html">Фигуры</a></li>
 		</ul>
 	</div>
 
@@ -129,42 +129,42 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;clear: both;<br>
 		}
 	</code>
-	
+
 <h2>Без распорки<span class="gray"> (выпадает из родителя)</span></h2><!--Даже залезает на следующий h2, всвязи с выходом из потока через флоат-->
 	<div class="container">
 		<div class="column1">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>
-		<div class="column2">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>	
-	</div>	
+		<div class="column2">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>
+	</div>
 <br><br><br>
 	<h2>C распоркой</h2><!--Распорка в виде 3-го дива-->
 	<div class="container">
 		<div class="column1">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>
 		<div class="column2">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>
-		<div class="clearfix1"></div>		
-	</div>	
-	
+		<div class="clearfix1"></div>
+	</div>
+
 	<h2>C псевдо-распоркой<span class="gray"> (эффект тот же)</span></h2><!--Не нужен дополнительный див-->
 	<div class="container clearfix2">
 		<div class="column1">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>
 		<div class="column2">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </div>
-	</div>	
-
-
-
-
-
-
-	
-	
 	</div>
-	
+
+
+
+
+
+
+
+
+	</div>
+
 </div>
 
 <div class="footer">
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

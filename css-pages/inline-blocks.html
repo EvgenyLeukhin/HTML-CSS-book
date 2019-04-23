@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Инлайн-блоки</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <style>
     .display {
@@ -17,7 +17,7 @@
       padding: 10px;
       color: white;
       text-align: center;
-      vertical-align: middle; 
+      vertical-align: middle;
       background-color: maroon;
       border: 3px solid deeppink;
     }
@@ -79,17 +79,17 @@
     </li>
     <li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
     <li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-    <li><a href="../css-pages/decoration.html">Декор</a></li>
+    <li><a href="../css-pages/decoration.html">Фигуры</a></li>
   </ul>
-  
+
   </div>
   <div class="content clearfix">
-  
+
   <h2>Мой Справочник | CSS | Инлайн-блоки</h2>
 
-  <p>Если инлайн-блок один, то он вертикально выравнивается по своей <b>height</b> относительно <b>line-height</b> родительского контейнера, причём <b>line-height</b> родителя должно быть больше чем <b>height</b> инлайн-блока.</p> 
+  <p>Если инлайн-блок один, то он вертикально выравнивается по своей <b>height</b> относительно <b>line-height</b> родительского контейнера, причём <b>line-height</b> родителя должно быть больше чем <b>height</b> инлайн-блока.</p>
   <p>Если их несколько, то они выравниваются относительно большей <b>height</b> отдельного инлайн-блока.</p>
-  
+
   <div class="directory-item clearfix">
     <div class="html">
       <h4 class="small-header">HTML:</h4>
@@ -112,7 +112,7 @@
     &nbsp;&nbsp;padding: 10px;<br>
     &nbsp;&nbsp;color: white;<br>
     &nbsp;&nbsp;text-align: center;<br>
-    &nbsp;&nbsp;vertical-align: middle;<br> 
+    &nbsp;&nbsp;vertical-align: middle;<br>
     &nbsp;&nbsp;background-color: maroon;<br>
     &nbsp;&nbsp;border: 3px solid deeppink;<br>
     }<br>
@@ -131,7 +131,7 @@
         <u><b>ОТ СТРОЧНЫХ:</b></u>
         <ul>
           <li>располагаются в одну строку;</li>
-          <li>реагируют на гор. и верт. выравнивание;</li> 
+          <li>реагируют на гор. и верт. выравнивание;</li>
           <li>ужимаются под содержимое;</li>
         </ul>
       </li>
@@ -153,9 +153,9 @@
     </ul>
     <span class="red">vertical-align</span> указывать ВСЕГДА!!!
   </div>
-  
+
   <p>
-    <u>Выравнивание inline-блоков без margin-right(3n)</u>:<br>   
+    <u>Выравнивание inline-блоков без margin-right(3n)</u>:<br>
     Обернуть в блок и задать ему маргин-слева -20px, а у каждого инлайн-блок поставить маргин-слева 20px</p>
     <p><code>vertical-align</code> выравнивает не только по высоте контейнера. Это свойство выравнивает инлайн-блоки между собой, относительно самого высокого элемента СТРОЧНО</p>
   </div>

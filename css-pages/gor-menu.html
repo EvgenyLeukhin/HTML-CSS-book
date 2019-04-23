@@ -1,10 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Горизонтальное меню</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 .main-menu { /*Убираем отступы, маркеры*/
@@ -28,27 +28,27 @@
     border-left: 1px solid #E5E5E5;
     margin-left: -1px;
 	text-decoration: none;
-}	   
+}
 
 .main-menu a:hover {
     background: #EEEEEE;
-}  
+}
 /*****************ПОДМЕНЮ*****************/
 /*ОФОРМЛЯЕМ МЕНЮ, УБИРАЕМ ОТСТУПЫ, МАРКЕРЫ*/
-.main-menu2 { 
+.main-menu2 {
     margin: 0;
     padding: 0;
     list-style: none;
     border: 1px solid #E5E5E5;
 }
 /*ДЕЛАЕМ ЭЛ. СПИСКА СТРОЧНЫМИ, ТОЛЬКО 1-ГО УРОВНЯ, Т.К. ПОДМЕНЮ БУДЕТ ВЕРТИКАЛЬНОЕ*/
-.main-menu2 > li { 
+.main-menu2 > li {
     display: inline-block;
     margin: 0px;
     position: relative; /*ЗАВАДАЁМ ОТН. ПОЗИЦИОНИРОВАНИЕ ЭЛЕМЕНТАМ СПИСКА МЕНЮ*/
 }
 /*ССЫЛКИ-БЛОЧНЫЕ, ОФОРМЛЯЕМ ИХ*/
-.main-menu2 a { 
+.main-menu2 a {
     display: block;
     text-decoration: none;
     margin-right: -5px;
@@ -57,11 +57,11 @@
     border-right: 1px solid #E5E5E5;
 }
 /*ССЫЛКИ ПРИ НАВЕДЕНИИ*/
-.main-menu2 a:hover { 
+.main-menu2 a:hover {
     background: #f5f5f5;
 }
 /*ОФОРМЛЯЕМ ПОДМЕНЮ*/
-.main-menu2 .sub-menu { 
+.main-menu2 .sub-menu {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -72,12 +72,12 @@
     display: none;/*ПРЯЧЕМ ПОДМЕНЮ*/
 }
 /*ОФРМЛЯЕМ ССЫЛКИ ПОДМЕНЮ*/
-.main-menu2 .sub-menu a { 
+.main-menu2 .sub-menu a {
 	border: 1px solid #E5E5E5;
 	margin: -1px;
 }
 /*ПОКАЗЫВАЕМ ПОДМЕНЮ при наведении*/
-.main-menu2 > li:hover .sub-menu { 
+.main-menu2 > li:hover .sub-menu {
 	display: block;
 }
 
@@ -139,14 +139,14 @@
 		</li>
         <li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 		<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-		<li><a href="../css-pages/decoration.html">Декор</a></li>
+		<li><a href="../css-pages/decoration.html">Фигуры</a></li>
 	</ul>
-	
+
 	</div>
 	<div class="content clearfix">
-	
+
 	<h2>Мой Справочник | CSS | Горизонтальное меню</h2>
-	
+
 	<div class="directory-item clearfix">
 		<h2><mark>Горизонтальное меню</mark></h2>
 		<div class="html">
@@ -166,7 +166,7 @@
 			<code>
 				<pre>
 <span class="gray">/*Убираем отступы, маркеры*/</span>
-<span class="red">.main-menu</span> { 
+<span class="red">.main-menu</span> {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -179,7 +179,7 @@
     white-space: nowrap;   <span class="gray">/*ЧТОБЫ НЕ ПЕРЕНОСИЛОСЬ ВТОРОЕ СЛОВО на новую строку*/</span>
 }
 <span class="gray">/*Cсылки делаем блочными, благодаря чему управляем размерами и оформляем*/</span>
-<span class="red">.main-menu a</span> {  
+<span class="red">.main-menu a</span> {
     color: #0088CC;
     display: block;
     padding: 8px 10px;
@@ -187,15 +187,15 @@
     border-left: 1px solid #E5E5E5;
     margin-left: -1px;
     text-decoration: none;
-}	   
+}
 <span class="gray">/*Cсылки при наведении*/</span>
 <span class="red">.main-menu a:hover</span> {
     background: #EEEEEE;
-}  
+}
 				</pre>
 			</code>
 		</div>
-	
+
 	<h3 style="clear: both;">Результат</h3>
 
 	<ul class="main-menu">
@@ -232,20 +232,20 @@
 			<code>
 				<pre>
 <span class="gray">/*ОФОРМЛЯЕМ МЕНЮ, УБИРАЕМ ОТСТУПЫ, МАРКЕРЫ*/</span>
-<span class="red">.main-menu2</span> { 
+<span class="red">.main-menu2</span> {
     margin: 0;
     padding: 0;
     list-style: none;
     border: 1px solid #E5E5E5;
 }
 <span class="gray">/*ДЕЛАЕМ ЭЛ. СПИСКА СТРОЧНЫМИ, ТОЛЬКО 1-ГО УРОВНЯ, Т.К. ПОДМЕНЮ БУДЕТ ВЕРТИКАЛЬНОЕ*/</span>
-<span class="red">.main-menu2 > li</span> { 
+<span class="red">.main-menu2 > li</span> {
     display: inline-block;
     margin: 0px;
     position: relative; <span class="gray">/*ЗАВАДАЁМ ОТН. ПОЗИЦИОНИРОВАНИЕ ЭЛЕМЕНТАМ СПИСКА МЕНЮ*/</span>
 }
 <span class="gray">/*ССЫЛКИ-БЛОЧНЫЕ, ОФОРМЛЯЕМ ИХ*/</span>
-<span class="red">.main-menu2 a</span> { 
+<span class="red">.main-menu2 a</span> {
     display: block;
     text-decoration: none;
     margin-right: -5px;
@@ -254,11 +254,11 @@
     border-right: 1px solid #E5E5E5;
 }
 <span class="gray">/*ССЫЛКИ ПРИ НАВЕДЕНИИ*/</span>
-<span class="red">.main-menu2 a:hover</span> { 
+<span class="red">.main-menu2 a:hover</span> {
     background: #f5f5f5;
 }
 <span class="gray">/*ОФОРМЛЯЕМ ПОДМЕНЮ*/</span>
-<span class="red">.main-menu2 .sub-menu</span> { 
+<span class="red">.main-menu2 .sub-menu</span> {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -269,19 +269,19 @@
     display: none;<span class="gray">/*ПРЯЧЕМ ПОДМЕНЮ*/</span>
 }
 <span class="gray">/*ОФРМЛЯЕМ ССЫЛКИ ПОДМЕНЮ*/</span>
-<span class="red">.main-menu2 .sub-menu a</span> { 
+<span class="red">.main-menu2 .sub-menu a</span> {
     border: 1px solid #E5E5E5;
     margin: -1px;
 }
 <span class="gray">/*ПОКАЗЫВАЕМ ПОДМЕНЮ при наведении*/</span>
-<span class="red">.main-menu2 > li:hover .sub-menu</span> { 
+<span class="red">.main-menu2 > li:hover .sub-menu</span> {
     display: block;
 }
-  
+
 				</pre>
 			</code>
 		</div>
-	
+
 	<h3 style="clear: both;">Результат</h3>
 
 	<ul class="main-menu2">
@@ -296,11 +296,11 @@
     	</li>
     	<li><a href="#team">Сотрудники</a></li>
 		<li><a href="#team">Контакты</a></li>
-	</ul> 
+	</ul>
 	<div style="clear: both; height: 100px;"></div>
 
 
-</div>	
+</div>
 	</div>
 	</div>
 </div>
@@ -309,7 +309,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
