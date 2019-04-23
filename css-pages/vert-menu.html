@@ -1,37 +1,37 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 
-<head> 
+<head>
     <title>Мой Справочник | CSS | Вертикальное меню</title>
-    <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 /*Оформляем главное меню, задаём ШИРИНУ, убираем отступы и маркеры пунктов*/
-.main-menu {            
+.main-menu {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	width: 150px;              
+	width: 150px;
 }
 .main-menu a {            /*Оформляем ccылки главного меню, задаём БЛОЧНЫЙ ВИД, чтобы было удобно нажимать и красиво оформлять */
 	color: #0088CC;           /*задаём цвет, внутренние отступы и убираем подчёркивание у ссылок*/
     display: block;
     padding: 8px 14px;
-    text-decoration: none;                  
+    text-decoration: none;
 }
 /*ГРАНИЦЫ элементов списков ГЛАВНОГО МЕНЮ*/
-.main-menu > li {                    
+.main-menu > li {
 	margin-bottom: -1px;
     border: 1px solid #E5E5E5;
 }
-/*Оформляем поведение ccылок главного меню*/ 
-.main-menu a:hover{        
+/*Оформляем поведение ccылок главного меню*/
+.main-menu a:hover{
     color: white;
-    background: #0088CC;          
+    background: #0088CC;
 }
-/*ОФОРМЛЯЕМ МЕНЮ, ЗАДАЁМ ШИРИНУ, УБИРАЕМ МАРКЕРЫ И ОТСТУПЫ*/			
-.main-menu2 {    		
+/*ОФОРМЛЯЕМ МЕНЮ, ЗАДАЁМ ШИРИНУ, УБИРАЕМ МАРКЕРЫ И ОТСТУПЫ*/
+.main-menu2 {
     width: 180px;
     margin: 0;
     padding: 0;
@@ -39,7 +39,7 @@
 }
 
 /*ОФОРМЛЯЕМ ССЫЛКИ МЕНЮ, ЗАДАЁМ ОТСТУПЫ, ЦВЕТ, ГРАНИЦЫ, УБИРАЕМ ПОДЧЁРКИВАНИЕ ССЫЛОК*/
-.main-menu2 a {			
+.main-menu2 a {
     display: block;
     margin-bottom: -1px;
     padding: 8px 14px;
@@ -49,20 +49,20 @@
 }
 
 /*ОФОРМЛЕНИЕ ПРИ НАВЕДЕНИИ*/
-.main-menu2 a:hover {		
+.main-menu2 a:hover {
     background: #F5F5F5;
 }
 /*ЭЛЕМЕНТАМ СПИСКА ГЛАВНОГО МЕНЮ ЗАЗАЁМ ОТНОСИТЕЛЬНОЕ ПОЗИЦИОНИРОВАНИЕ*/
 .main-menu2 > li {
-    position: relative;		
+    position: relative;
 }
 /*ПОД-МЕНЮ УБИРАЕМ ОТСТУПЫ, МАРКЕРЫ У СПИСКА, ЗАДАЁМ ФОН*/
-.main-menu2 .sub-menu {  
+.main-menu2 .sub-menu {
     margin: 0;
     padding: 0;
     list-style: none;
     background: #FCF8E3;
-    position: absolute; /*ВСЕМУ ПОДМЕНЮ ЗАЗАЁМ АБСОЛЮТНОЕ ПОЗИЦИОНИРОВАНИЕ*/			
+    position: absolute; /*ВСЕМУ ПОДМЕНЮ ЗАЗАЁМ АБСОЛЮТНОЕ ПОЗИЦИОНИРОВАНИЕ*/
     top: 5px;           /*ПОЗИЦИОНИРУЕМ ПОДМЕНЮ КООРДИНАТАМИ*/
     left: 169px;
     z-index: 10;        /*ЗАДАЁМ КОЭФ. ПЕРЕКЫТИЯ, ЧТОБЫ ПОДМЕНЮ ПЕРЕКРЫВАЛО МЕНЮ ПРИ ПОЯВЛЕНИИ*/
@@ -127,13 +127,13 @@
 		  </li>
           <li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 		  <li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-		  <li><a href="../css-pages/decoration.html">Декор</a></li>
+		  <li><a href="../css-pages/decoration.html">Фигуры</a></li>
 		</ul>
-	
+
 	</div>
 
 	<div class="content clearfix">
-	
+
 		<h2>Мой Справочник | CSS | Вертикальное меню</h2>
 
 		<p>Меню обычно верстается списками в контейнере <span class="red">&lt;nav&gt;</span> или <span class="red">&lt;aside&gt;</span></p>
@@ -157,31 +157,31 @@
 				<code>
 					<pre>
 <span class="gray">/*Оформляем главное меню, задаём ШИРИНУ, убираем отступы и маркеры пунктов*/</span>
-<span class="red">.main-menu</span> {            
+<span class="red">.main-menu</span> {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 150px;              
+    width: 150px;
 }
 <span class="gray">/*Оформляем ccылки гл. меню, задаём БЛОЧНЫЙ ВИД, чтобы было удобно нажимать и оформлять*/</span>
 <span class="gray">/*задаём цвет, внутренние отступы и убираем подчёркивание у ссылок*/</span>
-<span class="red">.main-menu a</span> {      
-    color: #0088CC; 
+<span class="red">.main-menu a</span> {
+    color: #0088CC;
     display: block;
     padding: 8px 14px;
-    text-decoration: none;                  
+    text-decoration: none;
 }
 <span class="gray">/*ГРАНИЦЫ элементов списков ГЛАВНОГО МЕНЮ*/</span>
-<span class="red">.main-menu > li</span> {                    
+<span class="red">.main-menu > li</span> {
     margin-bottom: -1px;
     border: 1px solid #E5E5E5;
 }
-<span class="gray">/*Оформляем поведение ccылок главного меню при наведении*/</span> 
-<span class="red">.main-menu a:hover</span> {        
+<span class="gray">/*Оформляем поведение ccылок главного меню при наведении*/</span>
+<span class="red">.main-menu a:hover</span> {
     color: white;
-    background: #0088CC;          
+    background: #0088CC;
 }
-<span class="gray">/*При необходимости можно добавлять активным ссылкам класс <span class="red">active</span>*/</span> 
+<span class="gray">/*При необходимости можно добавлять активным ссылкам класс <span class="red">active</span>*/</span>
 					</pre>
 				</code>
 			</div>
@@ -217,15 +217,15 @@
         &lt;/ul&gt;
 					</pre>
 				</code>
-		</div>	
+		</div>
 	</div>
 
 	<div class="css" style="clear: left; float: left; margin-top: 15px;">
 		<h4 class="small-header">CSS:</h4>
 		<code>
 			<pre>
-<span class="gray">/*ОФОРМЛЯЕМ МЕНЮ, ЗАДАЁМ ШИРИНУ, УБИРАЕМ МАРКЕРЫ И ОТСТУПЫ*/</span>			
-<span class="red">.main-menu2</span> {    		
+<span class="gray">/*ОФОРМЛЯЕМ МЕНЮ, ЗАДАЁМ ШИРИНУ, УБИРАЕМ МАРКЕРЫ И ОТСТУПЫ*/</span>
+<span class="red">.main-menu2</span> {
     width: 180px;
     margin: 0;
     padding: 0;
@@ -233,7 +233,7 @@
 }
 
 <span class="gray">/*ОФОРМЛЯЕМ ССЫЛКИ МЕНЮ, ЗАДАЁМ ОТСТУПЫ, ЦВЕТ, ГРАНИЦЫ, УБИРАЕМ ПОДЧЁРКИВАНИЕ ССЫЛОК*/</span>
-<span class="red">.main-menu2 a</span> {			
+<span class="red">.main-menu2 a</span> {
     display: block;
     margin-bottom: -1px;
     padding: 8px 14px;
@@ -243,20 +243,20 @@
 }
 
 <span class="gray">/*ОФОРМЛЕНИЕ ПРИ НАВЕДЕНИИ*/</span>
-<span class="red">.main-menu2 a:hover</span> {		
+<span class="red">.main-menu2 a:hover</span> {
     background: #F5F5F5;
 }
 <span class="gray">/*ЭЛЕМЕНТАМ СПИСКА ГЛАВНОГО МЕНЮ ЗАЗАЁМ ОТНОСИТЕЛЬНОЕ ПОЗИЦИОНИРОВАНИЕ*/</span>
 <span class="red">.main-menu2 > li</span> {
-    position: relative;		
+    position: relative;
 }
 <span class="gray">/*ПОД-МЕНЮ УБИРАЕМ ОТСТУПЫ, МАРКЕРЫ У СПИСКА, ЗАДАЁМ ФОН*/</span>
-<span class="red">.main-menu2 .sub-menu</span> {  
+<span class="red">.main-menu2 .sub-menu</span> {
     margin: 0;
     padding: 0;
     list-style: none;
     background: #FCF8E3;
-    position: absolute; <span class="gray">/*ВСЕМУ ПОДМЕНЮ ЗАЗАЁМ АБСОЛЮТНОЕ ПОЗИЦИОНИРОВАНИЕ*/</span>			
+    position: absolute; <span class="gray">/*ВСЕМУ ПОДМЕНЮ ЗАЗАЁМ АБСОЛЮТНОЕ ПОЗИЦИОНИРОВАНИЕ*/</span>
     top: 5px; <span class="gray">          /*ПОЗИЦИОНИРУЕМ ПОДМЕНЮ КООРДИНАТАМИ*/</span>
     left: 169px;
     z-index: 10; <span class="gray">       /*ЗАДАЁМ КОЭФ. ПЕРЕКЫТИЯ, ЧТОБЫ ПОДМЕНЮ ПЕРЕКРЫВАЛО МЕНЮ ПРИ ПОЯВЛЕНИИ*/</span>
@@ -267,7 +267,7 @@
     display: block; <span class="gray">    /*ОТКРЫВАЕМ ПОДМЕНЮ при НАВЕДЕНИИ*/</span>
 }
 			</pre>
-		</code>	
+		</code>
 
 <h3 style="clear: both;">Результат</h3>
 		<ul class="main-menu2">
@@ -282,9 +282,9 @@
             <li><a href="#team">Сотрудники</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
-	
-	
-	
+
+
+
 	</div>
 
 	</div>
@@ -295,7 +295,7 @@
 	<div class="layout-positioner">
 		<p class="footer-text">Разработчик: Евгений Леухин<br>
 							   EvgenyLeukhin@yandex.ru</p>
-		
+
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>

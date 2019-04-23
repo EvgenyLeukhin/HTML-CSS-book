@@ -71,6 +71,13 @@
     img.font-weight {
       max-width: 200px;
     }
+    p.clip {
+      white-space: nowrap; /* Запрещаем перенос строк */
+      overflow: hidden; /* Обрезаем все, что не помещается в область */
+      background: #fc0; /* Цвет фона */
+      padding: 5px; /* Поля вокруг текста */
+      text-overflow: ellipsis; /* Добавляем многоточие */
+    }
 	</style>
 </head>
 
@@ -126,7 +133,7 @@
 		</li>
 		<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
 		<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-		<li><a href="../css-pages/decoration.html">Декор</a></li>
+		<li><a href="../css-pages/decoration.html">Фигуры</a></li>
 	</ul>
 
 	</div>
@@ -909,14 +916,15 @@
 	</table>
 
 
-	<h3>text-overflow</h3>
-<pre><code><span class="red">p.clip</span> {
-  white-space: nowrap; <span class="gray">/* Запрещаем перенос строк */</span>
-  overflow: hidden; <span class="gray">/* Обрезаем все, что не помещается в область */</span>
-  background: #fc0; <span class="gray">/* Цвет фона */</span>
-  padding: 5px; <span class="gray">/* Поля вокруг текста */</span>
-  text-overflow: ellipsis; <span class="gray">/* Добавляем многоточие */</span>
-}</code></pre>
+  <h3>text-overflow: ellipsis;</h3>
+  <p class="clip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit incidunt accusantium laudantium dolorem corporis accusamus suscipit deleniti architecto soluta esse natus nam quisquam est facilis inventore perferendis, et illo id quidem ad consequatur nemo sit laborum? Aspernatur placeat nam fuga dolores tempore nulla eum et debitis libero eligendi quidem odio, quod, adipisci nemo provident, eaque atque! Vero, similique, possimus esse voluptatem libero nulla ipsam reiciendis omnis quo, ratione eligendi autem sit facere nemo vel. Dolor debitis corporis perferendis quae cumque modi itaque praesentium similique totam dignissimos blanditiis consectetur repudiandae sint animi architecto ipsa quibusdam, distinctio numquam, nesciunt sequi possimus perspiciatis.</p>
+  <pre><code><span class="red">p.clip</span> {
+    white-space: nowrap; <span class="gray">/* Запрещаем перенос строк */</span>
+    overflow: hidden; <span class="gray">/* Обрезаем все, что не помещается в область */</span>
+    background: #fc0; <span class="gray">/* Цвет фона */</span>
+    padding: 5px; <span class="gray">/* Поля вокруг текста */</span>
+    text-overflow: ellipsis; <span class="gray">/* Добавляем многоточие */</span>
+  }</code></pre>
 
 	<p>Шрифты <b>Verdana, Georgia и Tahoma</b> могут придать вашим Web-страницам более современный облик</p>
 	<a href="http://hellohappy.org/beautiful-web-type/" target="_blank" rel="nofollow">Красивые шрифты</a>
@@ -957,10 +965,6 @@
 		<p class="footer-copyright">© 2018 Все права защищены</p>
 	</div>
 </div>
-
-
-
-
 
 </body>
 </html>

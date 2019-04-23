@@ -61,7 +61,7 @@
         </li>
         <li><a class="active" href="../css-pages/adaptive.html">Адаптивность</a></li>
         <li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
-        <li><a href="../css-pages/decoration.html">Декор</a></li>
+        <li><a href="../css-pages/decoration.html">Фигуры</a></li>
       </ul>
     </div>
 
@@ -102,25 +102,25 @@
 }<br>
 			</code>
       </div>
-      
+
       <span class="gray">Адаптивный режим в браузере: <kbd style="font-size: 1.5em; color: black;">Ctrl + Shift + M</kbd></span><br><br>
-      
+
       <span class="gray">Для срабатывания медиа-запросов на маленьких дисплеей без маштабирования, необходимо вставлять мета-тег <b>viewport</b> в разделе head:</span><br>
       <code>&lt;meta <span class="red"><b>name</b>="viewport" <b>content</b>="width=device-width, initial-scale=1"</span>&gt;</code><br>
       <code>&lt;meta <span class="red"><b>name</b>="format-detection" <b>content</b>="telephone=no"</span>&gt;<br>
       <span class="gray">// Запрет на маштабирование страницы: </span><br>
-        <span class="red"> <b>content</b></span>="minimum-scale=1, maximum-scale=1, user-scalable=0" <br> 
+        <span class="red"> <b>content</b></span>="minimum-scale=1, maximum-scale=1, user-scalable=0" <br>
       </code>
       <br><br>
 
-      
-      
+
+
       <p style="font-family: Verdana, sans-serif; font-size: 1.5em;">
         <span class="red">(min-width: 1200px)</span> - DESKTOP;<br>
         <span class="red">(max-width: 600px)</span> - TABLET;<br>
         <span class="red">(max-width: 350px)</span> - MOBILE;
       </p>
-      
+
       <p>Почему пропадает часть бэкграунда при уменьшении экрана?
 Не задана минимальная ширина для резинового блока (1) с фоном.
 Такое возникает, если блок (2), внутри него, больше ширины окна браузера, в этом случае заполняется фоном только видимая часть внешнего блока (1). Т.к. его размер расчитывается от границ окна браузера. <br>
@@ -128,13 +128,13 @@
 Нужно добавить:
 <code>
   <pre>.block_1{
-  min-width: 1170px; 
+  min-width: 1170px;
 }</pre>
 </code>
 Значение, естественно, нужно указать ваше.</p>
- 
+
  <h2>Адаптивность с помощью тега &lt;link&gt;</h2>
- <code>&lt;link href="css/<mark>desktop</mark>.css" rel="stylesheet" media="(<span class="red">min-width:768px</span>)"&gt;<br> 
+ <code>&lt;link href="css/<mark>desktop</mark>.css" rel="stylesheet" media="(<span class="red">min-width:768px</span>)"&gt;<br>
        &lt;link href="css/<mark>tablet</mark>.css" rel="stylesheet" media="(<span class="red">min-width:481px</span>) and (<span class="red">max-width:767px</span>)"&gt;<br>
        &lt;link href="css/<mark>mobile</mark>.css" rel="stylesheet" media="(<span class="red">max-width:480px</span>)"&gt;</code>
 
