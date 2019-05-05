@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | Git</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <link rel="stylesheet" type="text/css" href="../css/git.css">
+    <style>
+        .git-list code {line-height: 1em;}
+        .intensive-version {list-style-position: inside !important;}
+        .intensive-version > li {color: #000;}
+        .ferma code {
+          font-size: 1.2em;
+          background-color: #ddd;
+          color: deeppink;
+        }
+        .text-container {
+          font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+<div class="_header">
+  <div class="layout-positioner clearfix">
+  <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+  <div class="header-logo"></div>
+    <ul class="header-menu">
+    <li><a class="active" href="../index.html">Главная</a></li>
+    <li><a href="../design-page.html">WEB-DESIGN</a></li>
+    <li><a href="../html-page.html">HTML</a></li>
+    <li><a href="../css-page.html">CSS</a></li>
+    <li><a href="../css3-page.html">CSS3</a></li>
+    <li><a href="../javascript-page.html">JS</a></li>
+    <li><a href="../php.html">PHP</a></li>
+
+  </ul>
+  </div>
+</div>
+<div class="layout-positioner clearfix">
+  <div class="vert-menu-cont">
+    <ul class="vert-menu">
+      <li><a href="../html-pages/internet.html">Интернет</a></li>
+      <li><a href="../design-pages/management.html">Создание сайта</a></li>
+      <li><a href="../html-pages/editors.html">Редакторы кода</a></li>
+      <li><a class="active" href="../js-pages/git.html">Git</a></li>
+      <li>
+        <a href="../html-pages/vim.html">SSH + VIM</a>
+      </li>
+      <li><a href="../js-pages/linux.html">Linux</a></li>
+      <li><a href="../html-pages/macos.html">Mac OS</a></li>
+      <li>
+        <a href="../html-pages/console.html">Консоль</a>
+      </li>
+      <li><a href="../design-pages/programs.html">Программы</a></li>
+      <li><a href="../html-pages/seo.html">SEO</a></li>
+      <li><a href="../html-pages/optimization.html">Оптимизация</a></li>
+    </ul>
+
+  </div>
+  <div class="content clearfix">
+
+  <h2>Мой Справочник | Git</h2>
+  <a href="https://git-scm.com/book/ru/v1/Введение-Установка-Git" target="_blank">Документация на русском</a>&nbsp;&nbsp;&nbsp;
+  <a href="https://githowto.com/ru" target="_blank">Ещё один ресурс</a>
+
+
+  <table class="css3-table">
+    <tr>
+      <th class="css3-table-title" colspan="3">Алиасы</th>
+    </tr>
+    <tr>
+      <td colspan="3"><code>git config alias.<b style="color: red;">q</b> '!(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m "quick commit" &amp;&amp; git push origin master &amp;&amp; ssh provisov <b style="color: red;">"</b>cd ~/sites/some_site &amp;&amp; git merge master --ff-only<b style="color: red;">"</b>)'<br>
+      <span class="gray">// или написать в файле .git/<b>config</b><br></span>
+      [alias] <br>
+      &nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit -m \"quick commit\" &amp;&amp; git push origin master) <br>
+      &nbsp;&nbsp;q = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master) <br>
+      &nbsp;&nbsp;q-ssh = !(git pull origin master &amp;&amp; git add . &amp;&amp; git commit &amp;&amp; git push origin master &amp;&amp; ssh provisov \"cd ~/sites/ulybka-new &amp;&amp; git merge master --ff-only\") <br>
+
+
+
+      </code></td>
+    </tr>
+
+    <tr>
+      <th class="css3-table-title" colspan="3">SSH-протокол</th>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <p>
+          <h2>Несколько ключей</h2>
+          <pre><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa.home
+ssh-keygen -t rsa -f ~/.ssh/id_rsa.work
+
+
+~/.ssh/config
+Host home
+Hostname home.example.com
+IdentityFile ~/.ssh/id_rsa.home
+User *your home acct*
+
+Host work
+Hostname work.example.com
+IdentityFile ~/.ssh/id_rsa.work
+User *your work acct*
+          </code></pre>
+        </p>
+        <ol>
+          <li>Во время установки <b>Git</b> устанавливаем <b>OpenSSH-клиент</b></li>
+          <li>В директории пользователя ОС создаём папку <b>.ssh</b></li>
+          <li>
+            В этой директоии создаём файл <b>config</b> без разрешения, в котором будет находиться список хостов. Пример:<br>
+            <code>
+              Host some_server <br>
+              &nbsp;&nbsp;Hostname 192.168.12.12 <br>
+              &nbsp;&nbsp;User Some_name
+            </code>
+          </li>
+          <li>Пишем команду в этой директории <b>ssh-keygen</b>, будут сгенерированы ключи пользователя (публичный и приватный)</li>
+          <li>Добавляем комментарий в конец шифра ключа <b>ssh-keygen -C "Jenya@FERMA21"</b></li>
+          <li>Добавляем содержимое сгенерированого публичного ключа <b>id_rsa.pub</b > в конец строки файла <b>.ssh/autorized_keys</b> на сервере</li>
+           <li>Можно заходить на сервер командой <b>ssh some_server</b></li>
+        </ol>
+        <hr>
+        <h4>Добавление своего публичного ключа на сервер (доступ по SSH на нём должен быть установлен)</h4>
+        <ol>
+          <li>Заходим с паролем по SSH или по FTP на сервер</li>
+          <li>Ищем в корневой директории папку <b>.ssh/</b> командой <b>ls -a</b>, скорее всего эта папка будет здесь <b>cd ~/.ssh/authorized_keys</b></li>
+          <li>открываем через встроенный текстовый редактор SSH + VIM этот файл <b>SSH + VIM</b> ~/.ssh/authorized_keys</li>
+          <li>добавляем в конец свой публичный ключ и сохраняем</li>
+          <li>выходим <b>Ctrl + D</b> или командой <b>exit || logout</b></li>
+        </ol><hr>
+        <h3>.git/config (для GitHub)</h3>
+        <pre><code>[core]
+  repositoryformatversion = 0
+  filemode = false
+  bare = false
+  logallrefupdates = true
+[remote "origin"]
+  url = <mark>git@github.com:</mark>EvgenyLeukhin/IT-book.git
+  fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master</code></pre>
+<h3>.git/config (для GitLab)</h3>
+  <pre><code>  url = <mark>git@gitlab.com:</mark>EvgenyLeukhin/frontend.git</code></pre>
+<hr>
+  <h3>.ssh/config</h3>
+  <pre><code># gitLab.com
+Host gitlab.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+# git.codenetix.com
+Host git.codenetix.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+# github.com
+Host github.com
+RSAAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+  </code></pre>
+</td>
+
+
+    </tr>
+  </table>
+
+
+  <h2>Git на ферме:</h2>
+  <ol class="ferma">
+    <li>Перейти в директорию <b>//FERMA02/git</b> и запустить <b>git bash</b>, все удалённые репозитории храняться здесь;</li>
+    <li>Создать директорию репозитория с окончанием <b>.git</b> (<code>mkdir &lt;name dir&gt;</code>);</li>
+    <li>Встаём в эту директорию <code>cd &lt;name dir&gt;</code> и создаём репозиторий (только для истории) <code>git init --bare</code>;</li>
+    <li>Создаём локальный репозиторий, создаём рабочую директорию у себя на жёстком диске <code>git init</code>;</li>
+    <li>Связываем локальный репозиторий с удалённым, делается в директории локального репозитория <code>git remote add igor //FERMA02/git/dir_name.git</code>;</li>
+    <li>
+      Коммит в локальный репозиторий: <code>git commit -m "comment"</code><br>
+      Сохранение в удалённый репозиторий: <code>git push igor master</code><br>
+      Принять изменения с удалённого репозитория: <code>git pull igor master</code><br>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h2>Копировать и править проекты уже залитые на хостинг</h2>
+
+  <ol class="ferma">
+    <li>
+      Узнать адрес репозитория на хостинге <b>provisov</b><br>
+      <code>ssh provisov</code> (cd sites), встать в нужную директорию и получить полный путь командой <b>pwd</b>
+    </li>
+    <li>
+      Склонировать себе на локальный сервер (disk:/OpenServer/domains)<br>
+      <code>git clone ssh://provisov/sites/...</code>
+    </li>
+    <li>Добавить локальный домен для данной директории <code>somesite.loc =&gt; some_dir/<mark>frontend/web</mark></code></li>
+    <li>
+      Скачать базу данных <b>sql</b> либо с админки хостинга (<b>cPanel</b> (https://ru.reserver.ru:2083/) <b>- PhpMyAdmin - БД - Экспорт</b>), либо найти её в склонированном репозитории<br>
+      <mark>Или скачать сайт полностью</mark> <b>(Дисп. файлов</b> - <b>sites</b> - <b>ПКМ</b> - <b>Compress</b> - <b>Перезагрузка)</b> (не забыть удалить архив на хостинге после копирования) <br>
+      после этого поменять настройки в <code>web/index.php <b>(env -> dev)</b> и <b>(false -> true)</code></b><br>
+      Также посмотреть файлы <mark>dbconn.php</mark> и <mark>.settings.php</mark>, если они есть, то поменять настройки (database('some_name'), login('root'), password(''), host('localhost')) <br>
+      Удалить БД в PhpMyAdmin <b>Операции - Удалить БД</b> (если потребуется)
+    </li>
+    <li>Подключить данную БД к админке локального сервера <b>(OpenServer - PhpMyAdmin - БД - Создать БД - Импорт)</b></li>
+    <li>
+      Установить эту БД в качестве основной в настройках разработки
+      <b>(www/common/config/main-local.php)</b> <code>'db' => 'dns' => ...; dbname=... ,</code><br>
+      нужно указать имя БД такое же как и в PhpMyAdmin Локального сервера
+    </li>
+    <li>Инициализация проекта в корневой директории, либо где лежит файл <b>init</b> <code>php init</code>
+    </li>
+    <li>
+      Запуск сайта в браузере
+      <code>somesite.loc</code>
+    </li>
+    <li>
+      Внесение изменений в локальный репозиторий <code>git add .&nbsp;&nbsp;&nbsp;git commit -m "..."&nbsp;&nbsp;&nbsp;git push origin master</code>, можно через <b>Git Extansion</b>
+    </li>
+    <li>
+      Сохранение изменений на удалённом репозитории на хостинге:<br>
+      Нужно встать в нужную директорию на хостинге <code>ssh provisov (cd sites, ls и т.д.)</code><br>
+      и выполнить команду: <code>git merge master --ff-only</code> вливание ветки из локального репозитория в хостинг
+    </li>
+    <li>
+      <h4>Создавать новые страницы на сущ. проектах.</h4>
+      <b>config/main.php</b> Участок кода (rules => '...' => '...')<br>
+      <b>MainController.php</b> Участок кода (public function ..., return ...)
+    </li>
+  </ol>
+
+  <hr>
+
+  <h2>Заливать проекты на хостинг</h2>
+  <h2>Provisov</h2>
+  <ol class="ferma">
+    <li>
+      Заходим в админку хостинга: <b>https://ru.reserver.ru:2083/</b><br>
+      Имя: <b>fermas</b> &nbsp;&nbsp;-&nbsp;&nbsp; Пароль: <b>v7JXFVGgYE</b> &nbsp;&nbsp;-&nbsp;&nbsp;
+      <b>Поддомены</b> &nbsp;&nbsp;-&nbsp;&nbsp; Поддомен: пишем название (<b>somesite</b>) &nbsp;&nbsp;-&nbsp;&nbsp; Домен: <b>fermastudio.ru</b> &nbsp;&nbsp;-&nbsp;&nbsp;
+      Корень документа: <b>sites/somesite</b> &nbsp;&nbsp;-&nbsp;&nbsp; Создать
+    </li>
+    <li>
+      Заходим через консоль на хостинг в созданную директорию <code>ssh provisov</code> &nbsp;&nbsp;-&nbsp;&nbsp; <code>cd sites/somesite</code><br>
+      Создаём в ней git-репозиторий <code>git init</code><br>
+      Копируем полный путь <code>pwd</code>
+    </li>
+    <li>
+      Заходим через консоль в корневую локальную директорию с разработкой (git должен там быть установлен) <br>
+      Связываем локальный git-репозиторий с удалённым на хостинге <code>git remote add hosting ssh://...</code> (вставляем скопированный путь) <br>
+      Пушим на хостинг в ветку production <code>git push hosting master:production</code> <mark>(НЕЛЬЗЯ ПУШИТЬ В ТЕКУЩУЮ ВЕТКУ НА ХОСТИНГ, только в неактивную)</mark>
+    </li>
+    <li>
+      Заходим через консоль на хостинг и переключаем текущую ветку в <b>production</b>
+      <code>git checkout production</code>
+    </li>
+    <li>Запускаем в браузере адрес: <code>somesite.fermastudio.ru</code></li>
+  </ol>
+
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="layout-positioner">
+    <p class="footer-text">Разработчик: Евгений Леухин<br>
+                 EvgenyLeukhin@yandex.ru</p>
+
+    <p class="footer-copyright">© 2018 Все права защищены</p>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

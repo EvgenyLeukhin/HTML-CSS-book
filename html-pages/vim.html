@@ -2,12 +2,18 @@
 <html lang="ru">
 
 <head>
-  <title>Мой Справочник | VIM</title>
+  <title>Мой Справочник | SSH + VIM</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <style>
+    li {
+      margin-bottom: 10px;
+    }
+    code {
+      font-size: 1rem;
+    }
     .footer {
       position: fixed;
       width: 100%;
@@ -65,10 +71,10 @@
           <a href="../html-pages/editors.html">Редакторы кода</a>
         </li>
         <li>
-          <a href="../js-pages/git.html">git + SSH</a>
+          <a href="../js-pages/git.html">Git</a>
         </li>
         <li>
-          <a class="active" href="../html-pages/vim.html">VIM</a>
+          <a class="active" href="../html-pages/vim.html">SSH + VIM</a>
         </li>
         <li>
           <a href="../js-pages/linux.html">Linux</a>
@@ -92,17 +98,48 @@
     </div>
     <div class="content clearfix">
 
-      <h2>Мой Справочник | VIM</h2>
+      <h2>Мой Справочник | SSH + VIM</h2>
+      <h2>SSH</h2>
+      <ol>
+        <li>Во время установки Git устанавливаем <b>OpenSSH-клиент</b></li>
+        <li>В директории пользователя ОС создаём папку <b>.ssh</b></li>
+        <li>В этой директоии создаём файл <b>config</b> без разрешения, в котором будет находиться список хостов. <br>
+          <code>
+            # Some site<br>
+            Host some_server <br>
+            Hostname 192.168.12.12 <br>
+
+            # gitLab.com<br>
+            Host gitlab.com<br>
+            RSAAuthentication yes<br>
+            IdentityFile ~/.ssh/id_rsa<br><br>
+
+            # git.codenetix.com<br>
+            Host git.codenetix.com<br>
+            RSAAuthentication yes<br>
+            IdentityFile ~/.ssh/id_rsa<br><br>
+
+            # github.com<br>
+            Host github.com<br>
+            RSAAuthentication yes<br>
+            IdentityFile ~/.ssh/id_rsa
+          </code>
+        </li>
+        <li>Пишем команду в этой директории для гинерации ключей <b>ssh-keygen -C "Jenya@FERMA21"</b></li>
+        <li>Добавляем содержимое сгенерированого публичного ключа id_rsa.pub в конец строки файла <b>.ssh/autorized_keys</b> на сервере</li>
+        <li>Можно заходить на сервер командой <b>ssh some_server</b> и пользоваться гитом</li>
+      </ol>
+
       <table class="new-table">
         <tr>
           <th colspan="3">
-            <code>Основные операции</code>
+            <code>vim - edit files</code>
           </th>
         </tr>
         <tr>
           <td><h2>Редактирование файла</h2></td>
           <td>
-            <span class="gray">// открыть файл в VIM</span>
+            <span class="gray">// открыть файл в SSH + VIM</span>
             <code>vi filename</code>
             <span class="gray">// выбрать режим</span>
             <code>O</code> - open read only <br>
