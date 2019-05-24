@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "browser-sync start --server --files \"**/*\" --port 8000 --ui-port 8001 --startPath \"./index.html\"",
-    "deploy": "gh-pages -d"
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
