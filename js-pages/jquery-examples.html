@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | JS | jQuery-примеры</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+
+    <style>
+      tr > td:first-child {
+        font-size: 1.5em;
+      }
+      .code {
+        border: 1px solid #000;
+      }
+      .code code {
+        font-size: 18px;
+        font-family: monospace;
+        line-height: 1.3em;
+      }
+      .code code span {
+        color: #aaa;
+      }
+      .code code b {
+        color: red;
+      }
+      .stars-cont {
+        display: inline;
+        padding-left: 20px;
+        font-size: 0;
+      }
+      .stars-cont .star {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: 25px;
+        height: 25px;
+        background-image: url(../img/stars_25.png);
+        background-repeat: no-repeat;
+        background-position: -5px -5px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .overlay {
+      display: none;
+      background: rgba(0,0,0,.7);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1001;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      background: white;
+      padding: 15px;
+      width: 300px;
+      top: 100px;
+      left: 50%;
+      margin-left: -150px;
+      z-index: 1002;
+    }
+    .modal-close {
+      cursor: pointer;
+      color: maroon;
+      font-weight: bold;
+    }
+    body.open-modal {
+      overflow-y: hidden;
+      padding-right: 16px;
+    }
+    .scroll {
+      font-size: 2em;
+    }
+    .popup {
+      color: #fff;
+      background: red;
+    }
+    .js-drop-down-text {display: none;}
+    </style>
+</head>
+
+<body>
+<div class="header">
+  <div class="layout-positioner clearfix">
+  <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+  <div class="header-logo"></div>
+    <ul class="header-menu">
+    <li><a href="../index.html">Главная</a></li>
+    <li><a href="../design-page.html">WEB-DESIGN</a></li>
+    <li><a href="../html-page.html">HTML</a></li>
+    <li><a href="../css-page.html">CSS</a></li>
+    <li><a href="../css3-page.html">CSS3</a></li>
+    <li><a class="active" href="../javascript-page.html">JS</a></li>
+    <li><a href="../php.html">PHP</a></li>
+
+
+  </ul>
+  </div>
+</div>
+
+<div class="layout-positioner clearfix">
+  <div class="vert-menu-cont">
+    <ul class="vert-menu">
+            <li>
+                <a href="#">Основы</a>
+                <ul class="sub-menu sub-menu9">
+                  <li><a href="js-lang.html">Язык JS</a></li>
+                  <li><a href="load.html">Загрузка</a></li>
+                  <li><a href="types.html">Типы данных</a></li>
+                  <li><a href="var.html">Переменные</a></li>
+                  <li><a href="operators.html">Операторы</a></li>
+                  <li><a href="algorythm.html">Алгоритмы</a></li>
+                  <li><a href="if-else.html">Условия</a></li>
+                  <li><a href="cycle.html">Циклы</a></li>
+                  <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+      <li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS &amp; HTML</a>
+                <ul class="sub-menu sub-menu6">
+                  <li><a href="complete.html">Вывод данных</a></li>
+                  <li><a href="dom.html">DOM</a></li>
+                  <li><a href="html-methods.html">DOM-методы</a></li>
+                  <li><a href="actions.html">События</a></li>
+                  <li><a href="modal-window.html">Мод. окно</a></li>
+                  <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+
+            <li>
+              <a href="react.html"><span class="react">React</span></a>
+              <ul class="sub-menu sub-menu-react">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="nodejs.html"><span class="react">node.js</span></a>
+              <ul class="sub-menu sub-menu-nodejs">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+
+
+      <li>
+        <a class="active" href="#">jQuery</a>
+        <ul class="sub-menu sub-menu7">
+            <li><a href="jquery-html.html">JQuery basics</a></li>
+            <li><a href="jquery-func.html">jQuery-функции</a></li>
+            <li><a href="jquery-actions.html">jQuery-события</a></li>
+            <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+            <li><a href="jquery-forms.html">jQuery-формы</a></li>
+            <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+            <li><a href="jquery-examples.html">Примеры</a></li>
+        </ul>
+       </li>
+        <li><a href="ajax.html">Ajax</a></li>
+       <li>
+   <a href="canvas.html">Canvas</a>
+   <ul class="sub-menu sub-menu9">
+       <a href="canvas.html">Настройка</a>
+       <a href="canvas-figures.html">Фигуры</a>
+       <a href="canvas-text.html">Текст</a>
+       <a href="canvas-animation.html">Примеры</a>
+   </ul>
+</li>
+
+
+       <li><a href="modules.html">Классы</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+       <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+       <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+
+    </ul>
+
+
+  </div>
+  <div class="content clearfix">
+
+  <h2>Мой Справочник | JavaScript | jQuery-примеры</h2>
+
+  <h2>1. Плавный скроллинг до блока (.block-class) при нажатии на ссылку\кнопку (.link-class) +</h2>
+    <pre class="code"><code>&lt;button class="<b>js-scroll</b>"&gt;<span>1. Scroll to footer</span>&lt;/button&gt;
+<hr><span>// До одного блока</span>
+$(function() {
+  $("<b>.link-class</b>").on("<b>click</b>", function(event) { <span>// анонимная функция</span>
+    <span>// сброс настроек</span>
+    event.preventDefault();
+
+    <span>// сохраняем расстояние до h1 в переменную</span>
+    var <mark>scrollToBlock</mark> = $("<b>.block-class</b>").offset().top;
+
+    <span>// скролим тело документа (html и body для кроссбраузерности) на расстояние scrollHight 500млс</span>
+    $("<b>html, body</b>").animate({ scrollTop: <mark>scrollToBlock</mark> }, 500);
+  });
+});
+<hr><span>// Если нужны разные скролы по нескольким ссылкам</span>
+$(function() {
+  <span>// вставляем общий селектор для всех ссылок меню</span>
+  $("<b>ul.menu a</b>").on("<b>click</b>", function(event) {
+    <span>// сброс настроек</span>
+    event.preventDefault();
+
+    <span>// сохраняем id блока, это будет значение атрибута href кликнутой ссылки,
+    // ссылки должны быть связаны с блоками по id</span>
+    var <mark>currentBlock</mark> = $(this).attr('href');
+
+
+    <span>// делаем выборку элемента по сохранённому id, и вычисляем до него расстояние </span>
+    var <mark>topHeight</mark> = $(<mark>currentBlock</mark>).offset().top;
+
+    <span>// скролим при клике до нужного блока</span>
+    $("<b>html, body</b>").animate({ scrollTop: <mark>topHeight</mark> + 20}, 500);
+  });
+});</code></pre>
+
+<button class="scroll  js-scroll">1. Scroll to footer</button>
+
+  <br><br><br>
+  <h2>2. Фиксированное меню при скролле +</h2>
+  <span class="gray">// Fixed header when scroll</span>
+  <pre class="code"><code>$(function() {
+  <span>// сохранем значение высоты хэдера в var</span>
+  var <mark>headerHeight</mark> = $("<b>.page-header</b>").innerHeight(); <span>// или height()</span>
+
+  <span>// улавливаем событие скрола</span>
+  $(document).on("<b>scroll</b>", function() {
+    <span>// текущее значение высоты скрола от верха окна при скроле</span>
+    var <mark>documentScroll</mark> = $(this).scrollTop();
+
+    <span>// Если высота скрола > высоты хэдера</span>
+    if(<mark>documentScroll</mark> > <mark>headerHeight</mark>) {
+      <span>// добавляем класс хедеру</span>
+      $("<b>.page-header</b>").addClass("fixed");
+
+      <span>// и padding для body на высоту хэдера (т.к. фикс. хэдер выходит из потока)</span>
+      $("<b>body</b>").css("paddingTop", headerHeight);
+    } else {
+      $("<b>.page-header</b>").removeClass("fixed");
+      $("<b>body</b>").css({"paddingTop": 0});
+    }
+  });
+});</code></pre>
+
+
+
+
+
+<br><br><br>
+<h2>3. Звёзды рейтинга +</h2>
+
+<pre class="code"><code>$(document).ready(function() {
+  $("<b>.star-input</b>").on("click", function() {
+    <span>// выводим зачение поля в консоль</span>
+    console.log($(<b>this</b>).val());
+  });
+
+  $("<b>.star</b>").on("click", function() {
+    $(<b>this</b>).<mark>css</mark>('background-position', '-40px -5px');
+    $(<b>this</b>).<mark>nextAll</mark>().css('background-position', '-5px  -5px');
+    $(<b>this</b>).<mark>prevAll</mark>().css('background-position', '-40px -5px');
+  });
+});
+</code></pre>
+
+<div class="stars-cont">
+  <form action="#">
+    <label class="star" id="label1" for="star-1"></label>
+    <label class="star" id="label2" for="star-2"></label>
+    <label class="star" id="label3" for="star-3"></label>
+    <label class="star" id="label4" for="star-4"></label>
+    <label class="star" id="label5" for="star-5"></label>
+  </form>
+</div>
+
+<br><br><br>
+<h2>4. Отслеживание элементов в DOM через .get() +</h2>
+
+<pre class="code"><code>$(document).ready(function() {
+  var firstBtn  = $('<b>#btn-1</b>'),
+    secondBtn   = $('<b>#btn-2</b>'),
+    firstTitle  = $('<b>.js-title-1</b>'),
+    secondTitle = $('<b>.js-title-2</b>');
+
+  firstTitle.on('click', function() {
+    secondBtn.<b>get(0)</b>.<b>checked</b> = false;
+    firstBtn.<b>get(0)</b>.<b>checked</b> = true;
+    firstTitle.css('color', 'orange');
+    secondTitle.css('color', 'black');
+  });
+
+  secondTitle.on('click', function() {
+    firstBtn.<b>get(0)</b>.<b>checked</b> = false;
+    secondBtn.<b>get(0)</b>.<b>checked</b> = true;
+    secondTitle.css('color', 'orange');
+    firstTitle.css('color', 'black');
+  });
+});
+</code></pre>
+
+
+
+<br><br><br>
+<h2>5. Аккордион (НЕсамозакрывающийся) +</h2>
+<pre class="code"><code><span>// нужно предварительно средствами css спрятать параграфы</span>
+&lt;ul class="<b>accordion</b>"&gt;
+  &lt;li&gt;
+    &lt;h3&gt;<span>Lorem ipsum dolor sit amet.</span>&lt;/h3&gt;
+    &lt;p&gt;<span>Lorem ipsum dolor sit amet, consectetur</span>&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3&gt;<span>Lorem ipsum dolor sit amet.</span>&lt;/h3&gt;
+    &lt;p&gt;<span>Lorem ipsum dolor sit amet, consectetur</span>&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<pre class="code"><code>
+$('<b>.accordion h3</b>').on('click', function() {
+  <span>// по клику на заголовок показываем следующий за ним параграф</span>
+  $(this).next().slideToggle();
+});
+</code></pre>
+
+<ul class="accordion">
+  <li>
+    <h3 style="cursor: pointer;">Lorem ipsum dolor sit amet.</h3>
+    <p style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sit assumenda ipsum natus eius debitis veritatis laudantium modi! Minima debitis ipsa atque similique, ipsum adipisci ducimus minus cupiditate odit voluptatibus?</p>
+  </li>
+  <li>
+    <h3 style="cursor: pointer;">Lorem ipsum dolor sit amet.</h3>
+    <p style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus expedita dolores fugiat quo facere molestias sapiente delectus nihil laudantium et animi quod veniam nemo modi, quis ea repudiandae aliquam rerum.</p>
+  </li>
+</ul>
+
+<br><br><br>
+<h2>6. Аккордион (Cамозакрывающийся) +</h2>
+<pre class="code"><code> &lt;div class="<b>faq</b>"&gt;
+  &lt;div class="<b>faq-item</b>"&gt;
+    &lt;a href="#" class="<b>faq-title</b>"&gt;&lt;/a&gt;
+    &lt;p class="<b>faq-content</b>"&gt;<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Magnam aliquid, repudiandae inventore laboriosam fuga omnis temporibus maxime voluptas quas.
+    Nihil ex, nesciunt molestiae. Magni quas facilis doloremque, aperiam culpa nobis!</span>&lt;/p&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+<pre class="code"><code>$('<b>.faq p</b>').hide()  <span>// прячем все параграфы средствами css и jq</span>
+           .prev() <span>// обращаемся к предыдущему элементу (заголовку)</span>
+           .on('click', function(<b>e</b>) { <span>// отслеживаем его по клику</span>
+  <b>e</b>.preventDefault();
+  $('<b>.faq p</b>').not(<b>this</b>).slideUp();   <span>// прячем все параграфы, кроме текущего</span>
+  $(<b>this</b>).next().not('<b>:visible</b>').slideDown();  <span>// обращаемся к следующему за заголовком
+  // элементу, за this (заголовок), это параграф и если он неотображенный, то будет показан</span>
+});
+</code></pre>
+
+<div class="faq">
+  <div class="faq-item">
+    <a href="" class="faq-title">Вопрос №1</a>
+    <p class="faq-content" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem libero nam eos iusto, vitae, impedit. Et temporibus, saepe, fugit sint asperiores id, vel qui debitis explicabo, labore aliquid eum perferendis!</p>
+  </div>
+  <div class="faq-item">
+    <a href="" class="faq-title">Вопрос №2</a>
+    <p class="faq-content" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem obcaecati assumenda a atque maxime ipsa ipsam magni dolores! Delectus natus voluptatum qui consequatur placeat ab vitae eius tempore illo sapiente.</p>
+  </div>
+  <div class="faq-item">
+    <a href="" class="faq-title">Вопрос №3</a>
+    <p class="faq-content" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque rem quam inventore alias eaque nisi asperiores, qui tempore veritatis tenetur ut eum corporis, ducimus perspiciatis omnis, consectetur enim mollitia molestias!</p>
+  </div>
+</div>
+
+<br><br><br>
+<h2>7. Модальное окно +</h2>
+
+<pre class="code"><code>&lt;button class="<b>show-modal</b>">Show modal&lt;/button&gt;
+<span>// должен стоять перед модальным окном</span>
+&lt;div class="<b>overlay</b>"&gt;&lt;/div&gt;
+
+<span>// должен стоять перед /body</span>
+&lt;div class="<b>modal</b>"&gt;
+  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio cum dolores</span>
+  &lt;button class="<b>modal-close</b>"&gt;<span>X Закрыть мод. окно</span>&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+<pre class="code" style="float: left;"><code><span>// слой-маска для body</span>
+<b>.overlay</b> {
+  display: none;
+  background: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}</code></pre>
+
+<pre class="code" style="float: left;"><code><span>// мод. окно</span>
+<b>.modal</b> {
+  display: none;
+  position: fixed;
+  background: white;
+  width: 300px;
+  top: 100px;
+  left: 50%;
+  margin-left: -150px;
+  z-index: 1100;
+}
+<b>body.open-modal</b> {
+  overflow-y: hidden;
+  padding-right: 16px;
+}</code></pre>
+
+
+<pre class="code" style="float: left;"><code><span>// показываем при клике на кнопку</span>
+<span>// делаем обратное при клике на close</span>
+$('<b>.show-modal</b>').on('click', function(e) {
+  e.preventDefault();
+  <span>// планое появление мод. окна и маски</span>
+  $('<b>.modal, .overlay</b>').fadeIn();
+  <span>// убираем скролл у боди</span>
+  $('<b>body</b>').addClass('open-modal');
+});
+
+<span>// делаем обратное при клике на close</span>
+$('<b>.modal-close</b>').on('click', function(e) {
+  e.preventDefault();
+  $('<b>.modal, .overlay</b>').fadeOut();
+  $('<b>body</b>').removeClass('open-modal');
+});
+
+
+<span>// если мод. окон несколько с одним классом</span>
+<span>// тогда нужно привязать им разный id</span>
+
+$('<b>.show-modal</b>').on('click', function(e) {
+  e.preventDefault();
+  <span>// сохраняем значение атрибута в переменную</span>
+  var currentModal = $(this).attr('href');
+
+  $(<b>currentModal +  ', .overlay</b>').fadeIn();
+  $('<b>body</b>').addClass('open-modal');
+});
+
+$('<b>.modal-close, .overlay</b>').on('click', function(e) {
+  e.preventDefault();
+  $(<b>currentModal +  ', .overlay</b>').fadeOut();
+  $('<b>body</b>').removeClass('open-modal');
+});
+</code></pre>
+<div class="clearfix"></div>
+<button class="show-modal" style="font-size: 2em;">Show modal</button>
+
+
+
+<h2 style="clear: both;"><br><br><br>8. Всплывающие подсказки при наведении (pop-up)+</h2>
+
+<pre class="code"><code>
+<span>// у ссылки href это id поп-апа</span>
+&lt;p&gt;<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+  &lt;a class="<b>link</b>" href="<mark>popup-1</mark>"&gt;<span>Eos, veniam.</span>
+    &lt;span class="<b>popup</b>" id="<mark>popup-1</mark>"&gt;<span>Some pop-up-text</span>&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/p&gt;</code></pre>
+
+<pre class="code"><code><span>// наведение на .link</span>
+$('<b>.link</b>').hover(function() {
+  <span>// сохраняем this в пер. $this</span>
+  var $this = $(this),
+      <span>// сохраняем значение атрибута href</span>
+      popUpId = $this.attr('href');
+  $(popUpId).fadeIn();  <span>// появление при наведении</span>
+  }, function() {
+    $('<b>.popup</b>').fadeOut();  <span>// исчезовение при отведении</span>
+});</code></pre>
+
+
+<p style="font-size: 1.2em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <a class="link" href="#popup-1">Наведи на меня!
+    <span class="popup" id="popup-1" style="display: none;">Some pop-up-text!</span>
+  </a>
+</p>
+
+
+<br><br><br>
+<h2 style="clear: both;">9. Выпадающий текст +</h2>
+<pre class="code"><code>&lt;ul class="<b>list</b>"&gt;
+  &lt;li class="<b>list-item</b>"&gt;
+    &lt;a href="#" class="<b>js-details</b>"&gt;<span>Нажми на меня</span>&lt;/a&gt;
+    &lt;p class="<b>js-drop-down-text</b>"&gt;<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur id saepe explicabo asperiores in sint similique dolore ratione quo tempora ipsam
+    illum, porro unde blanditiis ipsum enim, soluta iure possimus.</span>&lt;/p&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</code></pre>
+<pre class="code"><code><span>// Обрабатываем все элементы списка методом .each()</span>
+$('.list-item').<b>each</b>(function() {
+  <span>// сохраняем выпадающий текст внутри текущего элемента списка в пер. text</span>
+  var <mark>text</mark> = $('<b>.js-drop-down-text</b>', this);
+
+  <span>// Улавливаем клик по ссылке внутри текущего элемента</span>
+  $('<b>.js-details</b>', this).on('click', function(e) {
+    e.preventDefault();
+    <span>// меняем стилизацию кнопки</span>
+    $(this).toggleClass('active');
+
+    <span>// показываем-скрываем текст при клике</span>
+    <mark>text</mark>.slideToggle();
+  });
+});
+</code></pre>
+
+<ul class="list">
+  <li class="list-item">
+    <a href="#" class="js-details">Нажми на меня</a>
+    <p class="js-drop-down-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur id saepe explicabo asperiores in sint similique dolore ratione quo tempora ipsam
+    illum, porro unde blanditiis ipsum enim, soluta iure possimus.</p>
+  </li>
+  <li class="list-item">
+    <a href="#" class="js-details">Нажми на меня</a>
+    <p class="js-drop-down-text">Выпадающий текст Выпадающий текст Выпадающий текст Выпадающий текст </p>
+  </li>
+  <li class="list-item">
+    <a href="#" class="js-details">Нажми на меня</a>
+    <p class="js-drop-down-text">Выпадающий текст</p>
+  </li>
+</ul>
+
+
+
+<br><br><br>
+<h3>ПОДСВЕТКА ТАБЛИЦЫ</h3>
+
+<code><pre class="code">
+  // сохраняем колонки в переменную
+  var cols = $('.products-table col');
+
+  // перебираем все строки
+  $('.products-table tr').each(function() {
+
+    // выбираем все ячейки (th и td) внутри выбранной строки и сохраняем её номер в DOM-е в переменную i
+    $('th, td', this).each(function(i) {
+
+      // при наведении на i-тую ячейку, окрашиваем(#c4eff6) i-тую колонку при на наведении, при отведении (#fff)
+      $(this).hover(
+        // при наведении
+        function() {
+          cols.eq(i).css('background-color', '#c4eff6');
+        },
+
+        // при отведении
+        function() {
+          cols.eq(i).css('background-color', '#fff');
+      });
+    });
+
+  });
+</code></pre>
+
+
+<br><br><br>
+<h3><a href="http://dimox.name/universal-jquery-tabs-script/" target="_blank">ТАБЫ</a></h3>
+
+<code><pre class="code">$('ul.products__menu') <span class="gray">// меню</span>
+  .on('click', 'li:not(.active)', function() { <span class="gray">// кликаем по li без класса .active</span>
+    $(this)
+      .<b>addClass</b>('active')         <span>// добавляем li класс .active</span>
+      .<b>siblings</b>()                 <span>// у родственников</span>
+      .<b>removeClass</b>('active')      <span>// удаляем класс .active</span>
+      .<b>closest</b>('div.tabs')        <span>// находит первый в DOM div.tabs</span>
+      .<b>find</b>('div.tabs__content')  <span>// находит div.tabs__content</span>
+      .<b>removeClass</b>('active')      <span>// удаляем у него класс .active</span>
+      .<b>eq</b>($(this)                 <span>// </span>
+      .<b>index</b>())                   <span>//</span>
+      .<b>addClass</b>('active');        <span>//</span>
+    }
+  );
+
+&lt;ul class="products__menu"&gt;
+  &lt;li class="<b>active</b>"&gt;<span>ТАБ-1</span>&lt;/li&gt;
+  &lt;li&gt;<span>ТАБ-2</span>&lt;/li&gt;
+  &lt;li&gt;<span>ТАБ-3</span>&lt;/li&gt;
+  &lt;li&gt;<span>ТАБ-4</span>&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabs__content  active"&gt; <span>ТАБ-1 контент</span> &lt;/div&gt;
+&lt;div class="tabs__content"&gt; <span>ТАБ-2 контент</span> &lt;/div&gt;
+&lt;div class="tabs__content"&gt; <span>ТАБ-3 контент</span> &lt;/div&gt;
+&lt;div class="tabs__content"&gt; <span>ТАБ-4 контент</span> &lt;/div&gt;
+
+
+</code></pre>
+
+<br><br><br>
+<h3>Checked</h3>
+
+<code><pre class="code"><span>// при checked делать что-нибудь</span>
+$('#add-complect-item-6').click(function() {
+  if($(this).is(':checked')) {
+    $('#add-complect-other-id').addClass('active');
+  } else {
+    $('#add-complect-other-id').removeClass('active');
+  }
+});
+</pre></code>
+
+
+<br><br><br>
+<h3>Фиксируем блок при скроле</h3>
+
+<code><pre class="code"><span class="gray">// фиксируем .progress-cont</span>
+  $(window).scroll(function() {
+    var pageScroll = $(document).scrollTop(),
+        bodyHeight = $('body').height();
+
+    if ((pageScroll > 175) &amp;&amp; (pageScroll < bodyHeight - 700)) {
+      $('.progress-cont').css('top', pageScroll - 150);
+    } else {
+      $('.progress-cont').css('top', 26);
+    }
+  });
+</pre></code>
+
+<p>Для простого переключения чего-либо классом, можно сначала удалить этот класс у всех элементов, в затем добавить класс только для $(this)</p>
+<pre><code>var test = $('.test');
+test.on('click', function() {
+  test.addClass('active').not(this).removeClass('active');
+});
+</code></pre>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+  <div class="layout-positioner">
+    <p class="footer-text">Разработчик: Евгений Леухин<br>
+                 EvgenyLeukhin@yandex.ru</p>
+
+    <p class="footer-copyright">© 2016 - 2019</p>
+  </div>
+</div>
+
+<div class="overlay"></div>
+
+<div class="modal">
+  <h4>Мод. окно</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ab distinctio quo dolores expedita ea assumenda, nisi quisquam necessitatibus ad nostrum enim quibusdam omnis maiores deserunt maxime et sunt, doloribus optio a impedit vel ut! Fugiat obcaecati facilis autem repellat culpa quo praesentium quas ex, quaerat est consequatur inventore esse sunt repudiandae totam dicta illum, eius, quia maiores architecto velit nemo recusandae ducimus sequi! Hic rerum cumque consequuntur sit! Blanditiis explicabo, minus harum! Nesciunt modi fugiat architecto eum laboriosam doloribus dolorem adipisci alias, maiores expedita necessitatibus eos soluta officia hic corrupti reprehenderit accusamus nihil cumque iure facilis labore, mollitia delectus!</p>
+
+  <a class="modal-close">X Закрыть</a>
+</div>
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+    // =========================================================================== 1. SCROLL TO FOOTER
+    $(".js-scroll").on("click", function(event) { // анонимная функция
+    // сброс настроек
+    event.preventDefault();
+
+    // сохраняем расстояние до h1 в переменную
+    var scrollToBlock = $(".footer").offset().top;
+
+    // скролим тело документа (html и body для кроссбраузерности) на расстояние scrollHight 500млс
+    $("html, body").animate({ scrollTop: scrollToBlock }, 1000);
+    });
+
+
+
+
+    // =========================================================================== 3. RATING STARS
+    $(".star").on("click", function() {
+      $(this).css('background-position', '-40px -5px');
+      $(this).nextAll().css('background-position', '-5px  -5px');
+      $(this).prevAll().css('background-position', '-40px -5px');
+    });
+
+
+
+
+  // =========================================================================== 7. SHOW modal
+  // показываем при клике на кнопку
+  $('.show-modal').on('click', function(e) {
+    e.preventDefault();
+    // планое появление мод. окна и маски
+    $('.modal, .overlay').fadeIn();
+    // убираем скролл у боди
+    $('body').addClass('open-modal');
+  });
+
+// делаем обратное при клике на close
+  $('.modal-close').on('click', function(e) {
+    e.preventDefault();
+    $('.modal, .overlay').fadeOut();
+    $('body').removeClass('open-modal');
+  });
+
+
+
+  // =========================================================================== 5. Аккордион (НЕсамозакрывающийся)
+  $('.accordion h3').on('click', function() {
+    // по клику на заголовок показываем следующий за ним параграф
+    $(this).next().slideToggle();
+  });
+
+
+  // =========================================================================== 6. Аккордион (самозакрывающийся)
+  $('.faq p').hide()  // прячем все параграфы средствами css и jq
+             .prev() // обращаемся к предыдущему элементу (заголовку)
+             .on('click', function(e) { // отслеживаем его по клику
+    e.preventDefault();
+    $('.faq p').not(this).slideUp();   // прячем все параграфы, кроме текущего
+    $(this).next().not(':visible').slideDown();  // обращаемся к следующему за заголовком
+  // элементу, за this (заголовок), это параграф и если он неотображенный, то будет показан
+});
+
+
+
+
+
+  // =========================================================================== 8. Всплываюющие подсказки
+  $('.link').hover(function() {
+    var $this = $(this),
+        popUpId = $this.attr('href');
+    $(popUpId).fadeIn();  // появление при наведении
+    }, function() {
+      $('.popup').fadeOut();  // исчезовение при отведении
+  });
+
+
+
+
+
+   // =========================================================================== 9. Выпадающий текст
+  $('.list-item').each(function() {
+  // сохраняем выпадающий текст внутри текущего элемента списка в пер. text
+  var text = $('.js-drop-down-text', this);
+
+  // Улавливаем клик по ссылке внутри текущего элемента
+  $('.js-details', this).on('click', function(e) {
+    e.preventDefault();
+    // меняем стилизацию кнопки
+    $(this).toggleClass('active');
+
+    // показываем-скрываем текст при клике
+    text.slideToggle('slow');
+  });
+});
+
+
+
+
+});
+</script>
+
+</body>
+</html>

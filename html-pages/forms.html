@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | HTML | Формы</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    code label,
+    code i {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a class="active" href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+        <li><a href="../html-pages/head.html">Внутри head</a></li>
+        <li><a href="../html-pages/conts.html">Контейнеры</a></li>
+        <li><a href="../html-pages/headers.html">Заголовки</a></li>
+        <li><a href="../html-pages/lists.html">Списки</a></li>
+        <li><a href="../html-pages/tables.html">Таблицы</a></li>
+        <li><a href="../html-pages/text.html">Текст</a></li>
+        <li><a href="../html-pages/links.html">Ссылки</a></li>
+        <li><a href="../html-pages/images.html">Изображения</a></li>
+        <li><a href="../html-pages/forms.html" class="active">Формы</a></li>
+        <li><a href="../html-pages/simbols.html">Символы</a></li>
+        <li><a href="../html-pages/svg.html">SVG</a></li>
+        <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+        <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+        <li><a href="../html-pages/blank.html">Семантика</a></li>
+
+
+
+
+      </ul>
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | HTML | Формы</h2>
+
+      <table class="discription-table">
+        <caption>Формы</caption>
+        <tr>
+          <th>Теги</th>
+          <th>Описание</th>
+          <th>Атрибуты</th>
+          <th>Описание</th>
+        </tr>
+        <tr>
+          <td rowspan="4">&lt;form&gt;</td>
+          <td rowspan="4">Форма, контейнер формы</td>
+          <td>method</td>
+          <td>
+            метод отправки формы:
+            <br>
+            <span class="red">post</span> - на отправку информации;
+            <br>
+            <span class="red">get</span> - на получение информации;
+          </td>
+        </tr>
+        <tr>
+          <td>action="http://echo.html.ru"</td>
+          <td>
+            имя файла обработки формы на сервере
+          </td>
+        </tr>
+        <tr>
+          <td>enctype</td>
+          <td>
+            Определяет способ кодирования данных формы при их отправке на сервер. Обычно устанавливать значение атрибута enctype не требуется, данные вполне правильно понимаются на стороне сервера. Однако если используется поле для отправки файла (input type="file"), следует определить атрибут enctype как multipart/form-data
+          </td>
+        </tr>
+        <tr>
+          <td>oninput</td>
+          <td>Работает с output</td>
+        </tr>
+        <tr>
+          <td rowspan="34">&lt;input&gt;</td>
+          <td rowspan="34">
+            <span class="red">input</span> является одним из разносторонних элементов формы и позволяет создавать разные части интерфейса и обеспечивать взаимодействие с пользователем. Главным образом <span class="red">input</span> предназначен для создания текстовых полей, различных кнопок, переключателей и флажков. Хотя элемент input не требуется помещать внутрь контейнера <span class="red">form</span>, определяющего форму, но если введенные пользователем данные должны быть отправлены на сервер, где их обрабатывает серверная программа, то указывать <span class="red">form</span> обязательно. То же самое обстоит и в случае обработки данных с помощью клиентских приложений, например, скриптов на языке JavaScript. Основной атрибут <span class="red">input</span>, определяющий вид элемента — <span class="red">type</span>. Он позволяет задавать следующие элементы формы: текстовое поле (text), поле с паролем (password), переключатель (radio), флажок (checkbox), скрытое поле (hidden), кнопка (button), кнопка для отправки формы (submit), кнопка для очистки формы (reset), поле для отправки файла (file), кнопка с изображением (image) и др. Для каждого элемента существует свой список атрибутов, которые определяют его вид и характеристики. Кроме того, в HTML5 добавлено еще более десятка новых элементов.
+          </td>
+          <td>type="text"</td>
+          <td>Поле ввода текста</td>
+        </tr>
+        <tr>
+          <td>type="password"</td>
+          <td>Поле ввода пароля</td>
+        </tr>
+        <tr>
+          <td>type="email"</td>
+          <td>Поле ввода эл. почты</td>
+        </tr>
+        <tr>
+          <td>type="file"</td>
+          <td>Загрузка файла</td>
+        </tr>
+        <tr>
+          <td>type="date"</td>
+          <td>Поле ввода даты</td>
+        </tr>
+        <tr>
+          <td>type="radio"</td>
+          <td>
+            Переключатели
+            <br> Обязателен атрибут <span class="red">value</span>,
+            <br> работает в паре с <span class="red">&lt;label&gt;</span>
+          </td>
+        </tr>
+        <tr>
+          <td>type="button"</td>
+          <td>Кнопка обычная</td>
+        </tr>
+        <tr>
+          <td>type="search"</td>
+          <td>Поле поиска</td>
+        </tr>
+        <tr>
+          <td>type="submit"</td>
+          <td>Кнопка отправки формы</td>
+        </tr>
+        <tr>
+          <td>
+            type="number"
+          </td>
+          <td>Поле ввода числа
+            <br> min="...", max="...", step="..."</td>
+        </tr>
+        <tr>
+          <td>type="datetime-local"</td>
+          <td>Поле ввода даты и времени (местное)</td>
+        </tr>
+        <tr>
+          <td>type="week"</td>
+          <td>Поле ввода недели</td>
+        </tr>
+        <tr>
+          <td>type="datetime"</td>
+          <td>Поле ввода даты и времени</td>
+        </tr>
+        <tr>
+          <td>type="month"</td>
+          <td>Поле ввода месяца</td>
+        </tr>
+        <tr>
+          <td>type="range"</td>
+          <td>Бегунок
+            <br> min="...", max="...", step="..."
+          </td>
+        </tr>
+        <tr>
+          <td>type="image"</td>
+          <td>Кнопка-картинка</td>
+        </tr>
+        <tr>
+          <td>type="checkbox"</td>
+          <td>
+            Флажки. Позволяют выбрать более одного варианта из предложенных. Работает в паре с <span class="red">&lt;label&gt;</span>
+            <br>
+            <span class="red">checked</span> - атрибут "отмеченности"
+          </td>
+        </tr>
+        <tr>
+          <td>type="reset"</td>
+          <td>Кнопка сброса полей формы</td>
+        </tr>
+        <tr>
+          <td>type="color"</td>
+          <td>Выбор цвета</td>
+        </tr>
+        <tr>
+          <td>type="tel"</td>
+          <td>Поле ввода номера телефона</td>
+        </tr>
+        <tr>
+          <td>type="url"</td>
+          <td>Поле ввода адресов сайтов</td>
+        </tr>
+        <tr>
+          <td>name="..."</td>
+          <td>Имя поля <span class="red"><big>(ОБЯЗАТЕЛЬНЫЙ АТРИБУТ)</big></span></td>
+        </tr>
+        <tr>
+          <td>id="..."</td>
+          <td>
+            Идентификатор поля,
+            <br>должен отличаться от <span class="red">name</span> и <span class="red">type</span>
+            <br> Используется в основном для <span class="red">&lt;label&gt;</span>
+          </td>
+        </tr>
+        <tr>
+          <td>required</td>
+          <td>Поле обязательного заполнения</td>
+        </tr>
+        <tr>
+          <td>autofocus</td>
+          <td>Автофокусировка курсора</td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td>Надпись внутри поля</td>
+        </tr>
+        <tr>
+          <td>tabindex</td>
+          <td>Переключение между полями Tab-ом, присваивают положительные значения</td>
+        </tr>
+        <tr>
+          <td>checked</td>
+          <td>Предварительно активированный переключатель или флажок</td>
+        </tr>
+        <tr>
+          <td>maxlength</td>
+          <td>Максимальное количество символов разрешённых в тексте</td>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>Значение элемента</td>
+        </tr>
+        <tr>
+          <td>pattern</td>
+          <td>Указывает регулярное выражение, согласно которому требуется вводить и проверять данные в поле формы. Если присутствует атрибут pattern, то форма не будет отправляться, пока поле не будет заполнено правильно</td>
+        </tr>
+        <tr>
+          <td>autocomplete</td>
+          <td>Автозаполнение полей принимает два значения "on" и "off"</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>Пользователь не может вводить данные</td>
+        </tr>
+        <tr>
+          <td>readonly</td>
+          <td>Можно только копировать</td>
+        </tr>
+        <tr>
+          <td>&lt;fieldset&gt;</td>
+          <td>Поле формы</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;legend&gt;</td>
+          <td>Название поля ФОРМЫ</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&lt;label&gt;</td>
+          <td>Связывает текст с формой, при щелчке мыши на тексте курсор становиться на форму</td>
+          <td>for="id-name"</td>
+          <td>связь через id</td>
+        </tr>
+        <tr>
+          <td>&lt;button&gt;</td>
+          <td>Предлагает расширенные возможности по созданию кнопок. Например, на подобной кнопке можно размещать любые элементы HTML, в том числе изображения. Используя стили можно определить вид кнопки путём изменения шрифта, цвета фона, размеров и других параметров.</td>
+          <td></td>
+          <td>Часто встречается:
+            <br>
+            <span class="red">&lt;button&gt;&lt;img&gt;&lt;/button&gt;</span>
+            <br>
+            <span class="gray">Можно задавать тип: <code>type="submit"</code></span>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;datalist&gt;</td>
+          <td>Список возможных значений для текстового поля</td>
+          <td colspan="2">У input list="" такой же как id у datalist</td>
+
+        </tr>
+        <tr>
+          <td rowspan="5">&lt;select&gt;</td>
+          <td rowspan="5">Выпадающий список</td>
+        </tr>
+        <tr>
+          <td>name и id</td>
+          <td>Обязательные атрибуты</td>
+        </tr>
+        <tr>
+          <td>multiple size="10"</td>
+          <td>Раскрытый, кол-во строк</td>
+        </tr>
+        <tr>
+          <td>&lt;optgroup&gt; </td>
+          <td>Для группировки списка &lt;option&gt</td>
+        </tr>
+        <tr>
+          <td>label="group1"</td>
+          <td>Атрибут &lt;optgroup&gt; Название подгруппы</td>
+        </tr>
+        <tr>
+          <td rowspan="3">&lt;option&gt;</td>
+          <td rowspan="3">Элемент списка</td>
+          <td>value="..."</td>
+          <td>Значение для сервера
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>отменённый</td>
+        </tr>
+        <tr>
+          <td>selected</td>
+          <td>выбранный по ум.</td>
+        </tr>
+        <tr>
+          <td>&lt;output&gt;</td>
+          <td>Поле вывода</td>
+          <td></td>
+          <td>Работает с атрибутом формы <span class="red">oninput</span></td>
+        </tr>
+        <tr>
+          <td>&lt;textarea&gt;</td>
+          <td>Многострочное текстовое поле</td>
+          <td>
+            rows="10"
+            <br> cols="20"
+            <br>
+            <span class="gray">Тянется по вертикали:</span>
+            <br>
+            <mark>resize: vertical;</mark><br><br>
+            <span class="gray">Убрать растягивание:</span>
+            style="resize: none; border: none;"
+          </td>
+          <td>
+            Кол-во сток
+            <br> Ширина в символах
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;progress&gt;</td>
+          <td>Полоса прогресса,<br> используется совместно с JS</td>
+          <td>
+            min="0"<br>
+            min="100"<br>
+            value="33"
+          </td>
+          <td>
+            мин. значение<br>
+            макс. значение<br>
+            текущее значение
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;time&gt;</td>
+          <td>Время</td>
+          <td>
+            datetime="1986-04-01"
+            puddate <br>
+          </td>
+          <td>
+            Атрибут даты<br>
+            Дата публикации
+          </td>
+        </tr>
+      </table>
+
+      <h3>Пример формы</h3>
+      <code style="font-size: 16px">
+&lt;form <span class="red">action="page.php" method="post"</span>&gt;<br>
+  &nbsp;&nbsp;&lt;fieldset&gt;<br>
+    <hr>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="first-name-id"</span>&gt;<span class="gray">Ваше имя:</span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="text" id="first-name-id" name="first-name" placeholder="Имя" patern="[А-Яа-яЁё]" required</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label for="first-name-id">Ваше имя:</label>
+    <input type="text" id="first-name-id" name="first-name" placeholder="Имя" patern="[А-Яа-яЁё]" required>
+    <hr>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="password-id"</span>&gt;<span class="gray">Пароль:</span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="password" id="password-id" name="password" placeholder="Пароль" required</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label for="password-id">Пароль:</label>
+    <input type="password" id="password-id" name="password" placeholder="Пароль" required>
+    <hr>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="email-id"</span>&gt;<span class="gray">Почта:</span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="email" id="email-id" name="email" placeholder="Пароль" required</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label for="email-id">Почта:</label>
+    <input type="email" id="email-id" name="email-id" placeholder="Эл. почта">
+    <hr>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="phone-id"</span>&gt;<span class="gray">Телефон:</span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="tel" id="phone-id" name="phone" placeholder="+7-XXX-XXX-XXXX" patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4} required</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label for="phone-id">Телефон:</label>
+    <input type="tel" id="phone-id" name="phone" placeholder="+7-XXX-XXX-XXXX" patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <hr>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="checkbox" name="moscow" id="moscow-id" value="1"</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="moscow-id"</span>&gt;<span class="gray">Я являюсь жителем Москвы</span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="moscow" id="moscow-id">
+    <label for="moscow-id">Я являюсь жителем Москвы</label>
+    <hr>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;Ваш возраст:&lt;/i&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="radio" name="age" value="0-17" disabled</span>&gt;<span class="gray">0-17</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="radio" name="age" value="18-35"</span>&gt;<span class="gray">18-35</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="radio" name="age" value="35-60"</span>&gt;<span class="gray">35-60</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="radio" name="age" value="over60"</span>&gt;<span class="gray">более 60</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<i>Ваш возраст:</i>
+    <label>
+        <input type="radio" name="age" value="0-17" disabled>0-17
+    </label>
+    <label>
+        <input type="radio" name="age" value="18-35">18-35
+    </label>
+    <label>
+        <input type="radio" name="age" value="35-60">35-60
+    </label>
+    <label>
+        <input type="radio" name="age" value="over60">более 60
+    </label>
+    <hr>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="education-input"&gt;<span class="gray">Ваше образование</span></span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="text" list="education" name="education" id="education-input"</span>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;datalist <span class="red">id="education"&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Среднее неполное"</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Среднее"</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Средне-специальное"</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее неполное"</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее(бакалавр)"</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее"</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option <span class="red">value="Высшее(магистр)"</span>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/datalist&gt;<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;<label for="education-input">Ваше образование</label>
+    <input type="text" list="education" name="education" id="education-input">
+        <datalist id="education">
+            <option value="Среднее неполное">
+            <option value="Среднее">
+            <option value="Средне-специальное">
+            <option value="Высшее неполное">
+            <option value="Высшее(бакалавр)">
+            <option value="Высшее">
+            <option value="Высшее(магистр)">
+        </datalist>
+   <hr>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label <span class="red">for="year-id"&gt;</span><span class="gray">Год рождения:</span>&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;select <span class="red">name="year" id="year-id"</span>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<span class="gray">1970 год</span>&lt;/option&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;<span class="gray">2008 год</span>&lt;/option&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label for="year-id">Год рождения:</label>
+    <select name="year" id="year-id">
+        <option>1970 год</option>
+        <option>1971 год</option>
+        <option>1972 год</option>
+        <option>1973 год</option>
+        <option>1974 год</option>
+        <option>1975 год</option>
+        <option>1976 год</option>
+        <option>1977 год</option>
+        <option>1978 год</option>
+        <option>1979 год</option>
+        <option>1980 год</option>
+        <option>1981 год</option>
+        <option>1982 год</option>
+        <option>1983 год</option>
+        <option>1984 год</option>
+        <option>1985 год</option>
+        <option>1986 год</option>
+        <option>1987 год</option>
+        <option>1988 год</option>
+        <option>1989 год</option>
+        <option>1990 год</option>
+        <option>1991 год</option>
+        <option>1992 год</option>
+        <option>1993 год</option>
+        <option>1994 год</option>
+        <option>1995 год</option>
+        <option>1996 год</option>
+        <option>1997 год</option>
+        <option>1998 год</option>
+        <option>1999 год</option>
+        <option>2000 год</option>
+        <option>2001 год</option>
+        <option>2002 год</option>
+        <option>2003 год</option>
+        <option>2004 год</option>
+        <option>2005 год</option>
+        <option>2006 год</option>
+        <option>2007 год</option>
+        <option>2008 год</option>
+    </select>
+    <hr>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="reset" value="Сбросить"</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">type="submit" value="Отправить"</span>&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button <span class="red">type="submit"&gt;</span>&lt;img <span class="red">src="../pict/phone.png" width="35" alt="button-img"&gt;</span>&lt;/button&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Сбросить">
+    <input type="submit" value="Отправить">
+    <button type="submit"><img src="../pict/phone.png" width="35" alt="button-img"></button>
+    <hr>
+
+
+
+
+  &nbsp;&nbsp;&lt;/fieldset&gt;<br>
+
+&lt;/form&gt;
+    </code>
+      <br>
+      <br>
+      <form action="page.php" method="post">
+        <fieldset>
+
+          <label for="first-name-id">Ваше имя:</label>
+          <input type="text" id="first-name-id" name="first-name" placeholder="Имя" patern="[А-Яа-яЁё]" required>
+          <br>
+          <br>
+
+          <label for="password-id">Пароль:</label>
+          <input type="password" id="password-id" name="password" placeholder="Пароль" required>
+          <br>
+          <br>
+
+          <label for="email-id">Почта:</label>
+          <input type="email" id="email-id" name="email" placeholder="Эл. почта">
+          <br>
+          <br>
+
+          <label for="phone-id">Телефон:</label>
+          <input type="tel" id="phone-id" name="phone" placeholder="+7-XXX-XXX-XXXX" patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <br>
+          <br>
+
+          <input type="checkbox" name="moscow+" id="moscow+-id">
+          <label for="moscow+-id">Я являюсь жителем Москвы</label>
+          <br>
+          <br>
+
+          <i>Ваш возраст:</i>
+          <!--У всех радио-инпутов должно быть name="age"-->
+          <label>
+            <input type="radio" name="age" value="0-17" disabled>0-17
+          </label>
+          <label>
+            <input type="radio" name="age" value="18-35">18-35
+          </label>
+          <label>
+            <input type="radio" name="age" value="35-60">35-60
+          </label>
+          <label>
+            <input type="radio" name="age" value="over60">более 60
+          </label>
+          <br>
+          <br>
+
+          <label for="education-input+-id">Ваше образование</label>
+          <input type="text" list="education+" name="education+" id="education-input+-id">
+          <datalist id="education+">
+            <option value="Среднее неполное">
+              <option value="Среднее">
+                <option value="Средне-специальное">
+                  <option value="Высшее неполное">
+                    <option value="Высшее(бакалавр)">
+                      <option value="Высшее">
+                        <option value="Высшее(магистр)">
+          </datalist>
+          <br>
+          <br>
+
+
+          <label for="year-id">Год рождения:</label>
+          <select name="year">
+            <option>1970 год</option>
+            <option>1971 год</option>
+            <option>1972 год</option>
+            <option>1973 год</option>
+            <option>1974 год</option>
+            <option>1975 год</option>
+            <option>1976 год</option>
+            <option>1977 год</option>
+            <option>1978 год</option>
+            <option>1979 год</option>
+            <option>1980 год</option>
+            <option>1981 год</option>
+            <option>1982 год</option>
+            <option>1983 год</option>
+            <option>1984 год</option>
+            <option>1985 год</option>
+            <option>1986 год</option>
+            <option>1987 год</option>
+            <option>1988 год</option>
+            <option>1989 год</option>
+            <option>1990 год</option>
+            <option>1991 год</option>
+            <option>1992 год</option>
+            <option>1993 год</option>
+            <option>1994 год</option>
+            <option>1995 год</option>
+            <option>1996 год</option>
+            <option>1997 год</option>
+            <option>1998 год</option>
+            <option>1999 год</option>
+            <option>2000 год</option>
+            <option>2001 год</option>
+            <option>2002 год</option>
+            <option>2003 год</option>
+            <option>2004 год</option>
+            <option>2005 год</option>
+            <option>2006 год</option>
+            <option>2007 год</option>
+            <option>2008 год</option>
+          </select>
+          <br>
+          <br>
+
+          <label for="number-range-id">Введите номер от 0 до 100:</label>
+          <input type="range" id="number-range-id" name="number-range" min="0" max="100" step="1">
+          <br>
+          <br>
+
+
+          <input type="reset" value="Сбросить">
+          <input type="submit" value="Отправить">
+          <button type="submit"><img src="../pict/phone.png" width="35" alt="button-img"></button>
+
+        </fieldset>
+      </form>
+      <br>
+      <br>
+      <h3>Атрибут правильности заполнения форм pattern</h3>
+      <img src="../pict/pattern.png" alt="img">
+      <br>
+      <br>
+      <img src="../pict/pattern2.png" alt="img">
+
+      <h3>Код для <code>output</code></h3>
+
+      <code>
+            &lt;form <span class="red">oninput="result.value=(range_id.value)" action="#"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=<span class="red">"range_id"</span>&gt;<span class="gray">Тип RANGE</span>&lt;/label&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input <span class="red">id="range_id" type="range" value="10" step="0.1"</span>&gt;&lt;br&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">Значение RANGE: </span>&lt;output <span class="red">name="result" for="range_id"</span>&gt;<span class="gray">0</span>&lt;/output&gt;<br>
+            &lt;/form&gt;
+        </code>
+
+      <form oninput="result.value=(range_id.value)" action="#">
+        <label for="range_id">Тип RANGE</label>
+        <input id="range_id" type="range" value="10" step="0.1">
+        <br> Значение RANGE:
+        <output name="result" for="range_id">0</output>
+      </form>
+  <br>
+     <h4>Убирает прозрачность у placeholders</h4>
+      <code><pre>
+<span class="gray">/*placeholder*/</span>
+::-webkit-input-placeholder {
+  color:#fff;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color:#fff;
+  opacity: 1;
+}
+<span class="gray">/* Firefox 19+ */</span>
+:-moz-placeholder {
+  color:#fff;
+  opacity: 1;
+}
+<span class="gray">/* Firefox 18- */</span>
+:-ms-input-placeholder {
+  color:#fff;
+  opacity: 1;
+}
+<span class="gray">/* Время */</span>
+&lt;time <span class="red">datetime</span>="1986-04-01" <span class="red">pubdate</span>&gt;
+  <span style="color: #000;">April 1, 1986 </span>
+&lt;/time&gt;
+      </pre></code>
+
+<code>input:placeholder {color: gray;}</code> - инпут не в фокусе (ОТОБРАЖАЕТСЯ ЗНАЧЕНИЕ АТРИБУТА placeholder)<br>
+<code>input:focus {color: red;}</code> - инпут в фокусе (ПРОЦЕСС набирания текста)<br>
+<code>input[placeholder] {color: blue;}</code> - инпут вне фокуса (С НАБРАННЫМ ТЕКСТОМ)<br>
+
+<h3>Префиксы для placeholder</h3>
+<pre><code>input::-webkit-input-placeholder {color: #989daa;}
+input::-moz-placeholder          {color: #989daa;}
+input:-moz-placeholder           {color: #989daa;}
+input:-ms-input-placeholder      {color: #989daa;}
+input:placeholder                {color: #989daa;}
+<hr>
+::-webkit-input-placeholder { color: #A0A0A0; }
+::-moz-placeholder          { color: #A0A0A0; }
+/* Firefox 19+ */
+:-moz-placeholder           { color: #A0A0A0; }
+/* Firefox 18- */
+:-ms-input-placeholder      { color: #A0A0A0; }</code></pre>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

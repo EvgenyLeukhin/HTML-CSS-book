@@ -1,0 +1,50 @@
+.css3-table {
+    border-collapse: collapse;  
+}
+.css3-table-title {
+    border-collapse: collapse; 
+    font-size: 22px;
+    background-color: #07c;
+    color: white;
+    line-height: 26px;
+}
+.css3-table td {
+    border: 1px solid black; 
+    padding: 5px;
+}
+.css3-table .col1 {
+    width: 300px;
+    font-size: 16px;
+    line-height: 20px;
+    color: darkblue;
+}
+.css3-table .col2 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    color: darkgreen;
+    font-family: 'Courier', 'Monaco', monospace;
+}
+.css3-table .col2 code {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+.css3-table .col3 {
+    width: 300px;
+}
+.sample {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto;
+    border: 4px solid #f1e301;
+    background-color: maroon;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+    color: red;
+    color: rgb(45,45,45);
+    
+}

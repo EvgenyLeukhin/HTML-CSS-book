@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | CSS3 | LESS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../php.html">PHP</a></li>
+
+
+
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+            <ul class="vert-menu">
+                <li>
+                    <a href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+				    </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                <a href="#">Слайдер</a>
+				<ul class="sub-menu sub-menu3">
+				    <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				    <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				</ul>
+		    </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Чекбоксы</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+
+               <li>
+                  <a href="#">Bootstrap</a>
+                  <ul class="sub-menu sub-menu-bs">
+                    <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
+                    <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
+                    <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="active">LESS\SASS</a>
+                  <ul class="sub-menu sub-menu-less">
+                    <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../css3-pages/css-grids.html">CSS-Grids</a>
+                </li>
+            </ul>
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник | CSS3 | LESS</h2>
+
+	<table class="css3-table">
+
+    <tr>
+      <th class="css3-table-title" colspan="3">Условия</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Примеси с условием</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.mixin(@variable) when (@variable = 1)</span> {
+    <span class="gray">// сделать что-то</span>
+}
+<span class="gray">/*Такая примесь применится, если «вызвать» её
+с параметром 1. В противном случае примесь не
+применится.*/</span>
+<span class="red">.mixin(@color) when (lightness(@color) &gt; 50%)</span> {
+//сделать что-то, когда цвет светлее серого
+}
+<span class="red">.mixin(@color) when (lightness(@color) = 100%)</span> {
+//сделать что-то, когда цвет полностью белый
+}
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        В примесях можно использовать полноценные условия, которые могут изменять поведение примеси в зависимости от значений входных параметров.
+        Чтобы создать условие, нужно после названия примеси поставить ключевое слово <b>when</b>, за которым в скобках написать условную конструкцию. <br>
+В условной конструкции допускаются следующие операторы: <b>&gt;, &gt;=, =, =&lt;, &lt;</b>. Также допустимо использовать встроенные функции LESS, которые возвращают конкретные значения.
+
+К примеру, в LESS есть встроенная функция lightness, которая принимает в качестве параметра значение цвета и возвращает степень его светлоты. Чёрный цвет обладает 0% светлоты, а белый — 100%. Вот пример её использования:
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Условия и внешние переменные</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="gray">/* если создать примесь с условием,
+но без параметров: */</span>
+<span class="red">.text-color() when (@theme = light)</span> {
+  color: white;
+}
+<span class="gray">/* a потом создать внешнюю переменную
+и вызвать где-то примесь: */</span>
+@theme: light;
+.content {
+    .text-color();
+}
+<span class="gray">/*То условие выполнится, созданная
+примесь отработает:*/</span>
+.content {
+    color: white;
+}
+<hr>
+@type: good; <span class="gray">/*bad*/</span>
+
+<span class="red">.paint() when (@type = good)</span> {
+  background-color: #7fdbff;
+}
+<span class="red">.paint() when (@type = bad)</span> {
+  background-color: #ff4136;
+}
+<span class="red">.monster-happy</span> {
+  .paint();
+}
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+      Условия в примесях могут работать не только с параметрами, с которыми «вызвана» примесь, но и с переменными, объявленными вне примесей. Например,
+      </td>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Условия и типы параметров</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+@red: #ff4136;
+<span class="red">.magic(@parameter) when (iscolor(@parameter))</span> {
+  background-color: @parameter;
+}
+<span class="red">.magic(@parameter) when (isnumber(@parameter))</span> {
+  width: @parameter;
+  height: @parameter;
+}
+<span class="red">.monster-happy</span> {
+  .magic(@red);
+}
+<span class="red">.monster-foolish</span> {
+  .magic(150px);
+}
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+Все эти функции возвращают true, если переданный в них параметр соответствует проверяемому типу.
+
+Таким образом можно создать универсальную примесь, которая в зависимости от типа переданных параметров будет работать по-разному.
+      </td>
+    </tr>
+    <tr>
+      <th class="css3-table-title" colspan="3">Циклы</th>
+    </tr>
+    <tr>
+      <td class="col1" style="width: 200px;">
+        <b>Циклы</b>
+      </td>
+      <td class="col2">
+        <code><pre>
+<span class="red">.mixin(@n) when (@n &gt; 0)</span> {
+  .text-@{n} { }
+  .mixin(@n - 1);
+}
+.mixin(3);
+<hr>
+.text-3 {}
+.text-2 {}
+.text-1 {}
+<hr>
+<span class="gray">/* ПРИМЕР */</span>
+&lt;div class="<span class="red">stair-1</span>"&gt;&lt;/div&gt;
+  ...
+&lt;div class="<span class="red">stair-10</span>"&gt;&lt;/div&gt;
+<hr>
+@base-color: #ff4136;
+@base-width: 10px;
+
+<span class="red">.generate-stairs(@n) when (@n &gt; 0</span>) {
+  <span class="red">.stair-@{n}</span> {
+    background-color: spin(@base-color, @n * -25);
+    width: (@base-width * @n * 4.1);
+  }
+  <span class="red">.generate-stairs(@n - 1);</span>
+}
+<span class="red">.generate-stairs(10);</span>
+        </pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Генерирования целых CSS-правил. Цикл исполняется три раза, в каждой итерации создастся правило с переменной-счётчиком @n в качестве суффикса селектора:
+      </td>
+    </tr>
+
+
+  </table>
+
+
+
+
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

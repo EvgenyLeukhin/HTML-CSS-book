@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | Linux</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    .new-table code {
+      font-size: 1.11em;
+    }
+
+    .new-table h3 {
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+    .xampp code {
+      font-size: 1em;
+    }
+    .xampp h2 { color: #000; }
+    h4 {margin: 12px 0 0 0;}
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a class="active" href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../html-pages/internet.html">Интернет</a></li>
+        <li><a href="../design-pages/management.html">Создание сайта</a></li>
+        <li><a href="../html-pages/editors.html">Редакторы кода</a></li>
+        <li><a href="../js-pages/git.html">Git</a></li>
+        <li>
+          <a href="../html-pages/vim.html">SSH + VIM</a>
+        </li>
+        <li><a class="active" href="../js-pages/linux.html">Linux</a></li>
+        <li><a href="../html-pages/macos.html">Mac OS</a></li>
+        <li>
+          <a href="../html-pages/console.html">Консоль</a>
+        </li>
+        <li><a href="../design-pages/programs.html">Программы</a></li>
+        <li><a href="../html-pages/seo.html">SEO</a></li>
+        <li><a href="../html-pages/optimization.html">Оптимизация</a></li>
+      </ul>
+
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | Linux</h2>
+      <table class="new-table">
+        <tr>
+          <th colspan="3">
+            <code>Основные Программы</code>
+          </th>
+        </tr>
+        <tr>
+          <td><h2>Программы из менеджера или браузера</h2></td>
+          <td>
+            <ul>
+              <li>Sublime Text 3</li>
+              <li>Chromium</li>
+              <li>Opera</li>
+              <li>Mozilla Firefox</li>
+              <li>Mozilla Thunderbird</li>
+              <li>Filezilla</li>
+              <li>Double Commander</li>
+              <li>Skype</li>
+              <li>Slack</li>
+              <li>Gparted</li>
+              <li>Deluge</li>
+              <li>Steam</li>
+              <li>Visual Studio Code (через браузер!!!)</li>
+              <li>Google Chrome (через браузер)</li>
+              <li>Mattermost (через браузер)</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><h2>Установки с консоли</h2></td>
+          <td>
+            <ul>
+              <li>
+                <h3>Git + Git Extensions</h3>
+                <h4>Git</h4>
+                <code>sudo apt install git</code> <br>
+                <code>git --version</code>
+                <h4>Kdiff</h4>
+                <code>sudo apt install kdiff3</code> <br>
+                <code>kdiff3 --version</code>
+                <h4>Mono</h4>
+                <code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys </code> <br>
+                <code>echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list</code> <br>
+                <code>sudo apt update</code> <br>
+                <code>sudo apt install mono-complete</code> <br>
+                <code>mono --version</code>
+                <h4>Download Git Extensions Mono (<a href="https://osdn.net/projects/sfnet_gitextensions/downloads/Git%20Extensions/GitExtensions-2.49-Mono.zip/" target="_blank">link</a>)</h4>
+                <code>Unzip to any folder</code>
+                <h4>Start Git Extensions</h4>
+                <code>mono GitExtensions.exe</code>
+              </li>
+              <li>
+                <h3>SSH</h3>
+                <code>sudo apt-get install openssh-server -y</code>
+              </li>
+              <li>
+                <h3>Midnight Commander</h3>
+                <code>sudo apt install mc</code>
+              </li>
+              <li>
+                <h3>Node.js</h3>
+                <code>curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -</code> <br>
+                <code>sudo apt-get install -y nodejs</code>
+              </li>
+              <li>
+                <h3>nvm</h3>
+                <code>curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash</code>
+
+                <h4>Посмотреть версии какие есть</h4>
+                <code>nvm ls-remote</code>
+
+                <h4>Установить версию</h4>
+                <code>nvm install v10.15.1</code>
+              </li>
+              <li>
+                <h3>RedShift (<a href="https://itsfoss.com/install-redshift-linux-mint/" target="_blank">Tutorial</a>)</h3>
+              </li>
+              <li>
+                <h3><a href="https://app.prntscr.com/en/wine-lightshot.html" target="_blank">Lightshot</a></h3>
+                <h3>Запуск: <code>wine ./setup-lightshot.exe</code></h3>
+              </li>
+              <li>
+                <h3>LAMP (<a href="/php-pages/yii.html">Tutorial</a>)</h3>
+              </li>
+              <li>
+                <h3>Кракозябры в Linux</h3>
+                <code>sudo apt-get install dconf-editor</code> <br>
+                <code>dconf -> org -> x -> editor -> plugins -> preferences -> encoding -> auto-detected -> add WINDOWS-1251 (вторым параметром)</code>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+
+
+      <table class="discription-table" border-spacing: 5px>
+        <tr>
+          <th colspan="5" style="font-size: 2em; color: darkcyan;">Дополнительно</th>
+        </tr>
+
+
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Xneur — аналог Punto Switcher
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;">
+            <code>sudo apt-get install gxneur</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;"><a href="http://help.ubuntu.ru/wiki/xneur" target="_blank">xneur</a></td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Consolas fonts
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;">
+            Скачать шрифты Consolas
+            <code>sh consolas.sh</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">
+            <a href="../files/consolas.sh" download>consolas.sh</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Чтобы не сбивалось время в Windows поcле Linux
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;"><code>reg add HKLM\System\CurrentControlSet\Control\TimeZoneInformation
+/v RealTimeIsUniversal /t reg_dword /d 1</code>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;">В PowerShell Windows</td>
+        </tr>
+
+
+        <tr>
+          <td colspan="3" style="color: black; font-weight: bold; width: 150px;">
+            Double Commander
+          </td>
+          <td rowspan="1" style="width: 700px; color: #555;">
+            <pre><code><span class="gray">// root</span>
+[Desktop Entry]
+Name=DoubleCmd <b>Root</b>
+Comment=Double Commander is a cross platform open source file
+manager with two panels side by side.
+Terminal=false
+Icon=doublecmd
+Exec=<b>gksudo doublecmd</b>
+Type=Application
+Categories=Application;Utility;FileManager;
+            </code></pre>
+          </td>
+          <td rowspan="1" style="width: 200px; color: #555;"></td>
+        </tr>
+
+        <tr>
+          <td colspan="5">
+            <h1 style="color: black; text-align: center;">XAMPP</h1>
+          </td>
+        </tr>
+
+        <tr class="xampp">
+          <td colspan="5" rowspan="1" style="width: 700px; color: #555;">
+            <h2>Install</h2>
+            <h3>Dowload Xampp</h3>
+            <code>sudo -i</code> <br>
+            <code>wget https://www.apachefriends.org/xampp-files/5.6.33/xampp-linux-x64-5.6.33-0-installer.run</code>
+            <h3>Give permissions to download package</h3>
+            <code>chmod +x xampp-linux-x64-5.6.33-0-installer.run</code>
+            <h3>Lunch</h3>
+            <code>./xampp-linux-x64-5.6.33-0-installer.run</code>
+            <hr>
+            <h2>Create Desktop Icon</h2>
+            <h3>Install Gedit editor</h3>
+            <code>sudo apt install gedit</code>
+            <h3>Create desktop icon</h3>
+            <code>gedit ~/Desktop/xampp-control-panel.desktop</code> <br><br>
+            <code>[Desktop Entry] <br>
+                  Encoding=UTF-8<br>
+                  Name=XAMPP Control Panel<br>
+                  Comment=Start and Stop XAMPP<br>
+                  Exec=gksudo /opt/lampp/manager-linux-x64.run<br>
+                  Icon=/opt/lampp/htdocs/favicon.ico<br>
+                  Categories=Application<br>
+                  Type=Application</code><br>
+            <h3>Create application icon</h3>
+            <code>sudo gedit /usr/share/applications/xampp-control-panel.desktop</code><br><br>
+            <code>[Desktop Entry]<br>
+                  Encoding=UTF-8<br>
+                  Name=XAMPP Control Panel<br>
+                  Comment=Start and Stop XAMPP<br>
+                  Exec=gksudo /opt/lampp/manager-linux-x64.run<br>
+                  Icon=/opt/lampp/htdocs/favicon.ico<br>
+                  Categories=Application<br>
+                  Type=Application</code><hr>
+
+            <h2>Give sudo rights to xampp</h2>
+            <code>sudo chown -R user /opt/lampp/htdocs</code><hr>
+
+            <h2>Work with projects</h2>
+            <h3>Create project folder</h3>
+            <code>mkdir ~/Desktop/website</code>
+
+            <h3>Create link to xampp</h3>
+            <code>sudo ln -s ~/Desktop/website/ /opt/lampp/htdocs/website</code>
+
+            <h2>Give sudo rights to project</h2>
+            <code>sudo chmod -R 777 /opt/lampp/htdocs/website</code>
+
+            <h3>Create test php-file</h3>
+            <code>echo "&lt;?php phpinfo(); ?&gt;" > ~/Desktop/website/index.php</code>
+
+            <h3>Test in browser</h3>
+            <code>http://localhost/website/</code>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td colspan="5">
+            <h1 style="color: black; text-align: center;">XAMPP - Virtual Hosts<h1>
+          </td>
+        </tr>
+        <tr class="xampp">
+          <td colspan="5" rowspan="1" style="width: 700px; color: #555;">
+            1. <b>/opt/lampp/etc/httpd.conf</b> <br>
+            Раскомментировать <code>Include etc/extra/httpd-vhosts.conf</code>
+            <hr>
+            2. <b>/opt/lampp/etc/extra/httpd-vhosts.conf</b> <br>
+            Добавить
+<code><pre>&lt;VirtualHost *:80&gt;
+  DocumentRoot "/opt/lampp/htdocs/"
+  ServerName localhost
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:80&gt;
+  DocumentRoot "/opt/lampp/htdocs/mysite/"
+  ServerName mysite.loc
+&lt;/VirtualHost&gt;</pre></code>
+            <hr>
+            1. <b>/etc/hosts</b> <br><br>
+            Добавить <br>
+            <code>127.0.0.1 mysite.loc</code>
+          </td>
+        </tr>
+
+
+      </table>
+
+      <h2>Gatsby fix plugin sharp on Linux Ubuntu/Mint</h2>
+      <a href="https://github.com/nodejs/node-gyp/issues/233#issuecomment-280389583" target="_blank" rel="noopener noreferrer">https://github.com/nodejs/node-gyp/issues/233#issuecomment-280389583</a>
+      <pre><u>after hours of searching here and there i got install "node-gyp" and its other related modules
+i tried all possible soulation</u>
+
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n 4.4.5
+sudo npm install npm -g
+sudo npm uninstall node-gyp -g
+
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-4.8 g++-4.8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+
+sudo npm install -g n
+sudo n stable
+npm rebuild
+npm install
+
+sudo apt-get install mongodb make screen python-werkzeug python-jinja2 python-lxml python-iso8601 python-six python-setuptools
+
+sudo apt-get install gcc libssl-dev g++ make
+
+npm rebuild
+npm install
+
+<u>Now my node and npm version are:</u>
+npm -v
+4.0.5
+node -v
+v7.4.0<code>
+      </code></pre>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин<br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

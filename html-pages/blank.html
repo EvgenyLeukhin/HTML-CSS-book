@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | HTML | Семантика</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+    .semantic-link {
+      list-style: none;
+      padding-left: 0;
+      padding-bottom: 30px;
+    }
+    .semantic-link h2,
+    .semantic-link p {
+      margin: 0;
+    }
+    .semantic-link p {
+      margin-bottom: 15px;
+    }
+    .semantic-link h2 {
+      color: rebeccapurple;
+      font-size: 1.25em;
+    }
+    .semantic-link li:nth-child(even) {
+      background: #edd;
+    }
+    span.grey {
+      color: #000;
+      opacity: .75;
+    }
+    .schemes > li {
+      margin-bottom: 15px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a class="active" href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../html-pages/base.html">Основная <br>разметка</a></li>
+        <li><a href="../html-pages/head.html">Внутри head</a></li>
+        <li><a href="../html-pages/conts.html">Контейнеры</a></li>
+        <li><a href="../html-pages/headers.html">Заголовки</a></li>
+        <li><a href="../html-pages/lists.html">Списки</a></li>
+        <li><a href="../html-pages/tables.html">Таблицы</a></li>
+        <li><a href="../html-pages/text.html">Текст</a></li>
+        <li><a href="../html-pages/links.html">Ссылки</a></li>
+        <li><a href="../html-pages/images.html">Изображения</a></li>
+        <li><a href="../html-pages/forms.html">Формы</a></li>
+        <li><a href="../html-pages/simbols.html">Символы</a></li>
+        <li><a href="../html-pages/svg.html">SVG</a></li>
+        <li><a href="../html-pages/media.html">Аудио-Видео</a></li>
+        <li><a href="../html-pages/frame.html">Фреймы и flash</a></li>
+        <li><a href="../html-pages/blank.html" class="active">Семантика</a></li>
+
+
+
+      </ul>
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | HTML | Семантика</h2>
+
+      <ul class="semantic-link">
+        <li>
+          <h2>&lt;header&gt;...&lt;/header&gt;</h2>
+          <p>"Шапка" сайта. Контейнер. Может использоваться несколько раз. Может быть "шапкой" для section.</p>
+        </li>
+        <li>
+          <h2>&lt;footer&gt;...&lt;/footer&gt;</h2>
+          <p>"Подвал" сайта. Контейнер. Может использоваться несколько раз.  Может быть "подвалом" для section.</p>
+        </li>
+        <li>
+          <h2>&lt;main&gt;...&lt;/main&gt;</h2>
+          <p>Основной контент. Контейнер. </p>
+        </li>
+        <li>
+          <h2>&lt;aside&gt;...&lt;/aside&gt;</h2>
+          <p>Сайдбар. Контейнер. Второстепенный контентный контейнер. Вспомогательный контент. Меньший приоритет у контента. </p>
+        </li>
+        <li>
+          <h2>&lt;nav&gt;...&lt;/nav&gt;</h2>
+          <p>Контейнер для навигационных элементов. Группы ссылок, ключевых навигационных элементов на сайте. </p>
+        </li>
+        <li>
+          <h2>&lt;section&gt;...&lt;/section&gt;</h2>
+          <p>Секция (часть) основного контента. Должен использоваться вместе с заголовком. Если заголовка нет, нужно его прятать (позиционированием или visibility). Не должен быть только обёрткой. </p>
+        </li>
+        <li>
+          <h2>&lt;article&gt;...&lt;/article&gt;</h2>
+          <p>Отдельный контент, не связанный с основным, может быть "оторван" от страницы и не потерять смысл. Должен использоваться вместе с заголовком. Котейнер. </p>
+        </li>
+        <li>
+          <h2>&lt;figure&gt;...&lt;/figure&gt;</h2>
+          <p>Контейнер для вставки какого-либо медиа-контента (изображение, флеш, видео и т.д.). </p>
+        </li>
+        <li>
+          <h2>&lt;strong&gt;...&lt;/strong&gt;</h2>
+          <p>Строчный элемент для смыслового выделения текста. Жирный текст. </p>
+        </li>
+        <li>
+          <h2>&lt;em&gt;...&lt;/em&gt;</h2>
+          <p>Строчный элемент для смыслового выделения текста. Курсив. </p>
+        </li>
+        <li>
+          <h2>&lt;details&gt;...&lt;/details&gt;</h2>
+          <p>Интерактивный разворачивающейся список</p>
+        </li>
+        <li>
+          <h2>&lt;summary&gt;...&lt;/summary&gt;</h2>
+          <p>Первый пункит этого списка, который всегда виден, второстепенный контент</p>
+        </li>
+        <li>
+          <h2>&lt;mark&gt;...&lt;/mark&gt;</h2>
+          <p>Выделение</p>
+        </li>
+        <li>
+          <h2>&lt;time&gt;...&lt;/time&gt;</h2>
+          <p>Дата и время</p>
+        </li>
+        <li>
+          <h2>&lt;h1&gt;...&lt;/h1&gt;</h2>
+          <p>Самый сильный сео-контейнер для текста заголовка. Лучше использовать 1 раз на странце. </p>
+          <br>
+        </li>
+      </ul>
+
+      <h2>Микроданные. Более глубокая семантика</h2>
+      <p>Нужно для лучшей обработки результата поисковых запросов</p>
+
+          <p><b><mark>itemscope</mark></b> - указывает границы блока по микроданным в открывающем теге</p>
+          <p><b><mark>itemtype</mark></b> - тип схемы для микроданных с сайта <a href="http://schema.org/" target="_blank">http://schema.org/</a> (всегда URL-тип)</p>
+          <p><b><mark>itemprop="name"</mark></b> - свойство этой схемы со значением (полный список значений на сайте <a href="http://ruschema.org" target="_blank">http://ruschema.org/</a>)</p>
+          <pre><code>&lt;div <span class="red"><b>itemscope</b> <b>itemtype="http://schema.org/Person"</b></span>&gt;
+  &lt;div <span class="red">itemprop="<b>name</b>"</span>&gt;<span class="grey">Евгений Леухин</span>&lt;/div&gt;
+  &lt;img <span class="red">itemprop="<b>image</b>"</span> <span class="grey">src="http://server/photo.jpg"</span>&gt;
+  &lt;div <span class="red">itemprop="<b>gender</b>"</span>&gt;<span class="grey">Мужской</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>url</b>"</span>&gt;<span class="grey">http://mysite.ru</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>birthDate</b>"</span>&gt;<span class="grey">01-04-1986</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>nationality</b>"</span>&gt;<span class="grey">Русский</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>homeLocation</b>"</span>&gt;<span class="grey">Россия, Омск</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>telephone</b>"</span>&gt;<span class="grey">+79043270421</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>email</b>"</span>&gt;<span class="grey">evgenyleukhin@ya.ru</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>jobTitle</b>"</span>&gt;<span class="grey">Web-разработчик</span>&lt;/div&gt;
+  &lt;div <span class="red">itemprop="<b>spouse</b>"</span>&gt;<span class="grey">Бегунова Инна</span>&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+<h3>Виды схем:</h3>
+<ul class="schemes">
+  <li>Творческие работы: <br>
+    &nbsp;<a href="http://ruschema.org/CreativeWork">CreativeWork (Творчество)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Book">Book (Книга)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Movie">Movie (Фильм)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/MusicRecording">MusicRecording (Музыкальная запись)</a>, <br>
+    &nbsp;<a href="/Recipe">Recipe (Рецепт)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/TVSeries">TVSeries (Телесериал)</a>
+  </li>
+
+  <li>Встроенные нетекстовые объекты: <br>
+    &nbsp;<a href="http://ruschema.org/AudioObject">AudioObject (Аудио)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/ImageObject">ImageObject (Изображение)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/VideoObject">VideoObject (Видео)</a>
+  </li>
+
+  <li>&nbsp;<a href="http://ruschema.org/Event">Event (Событие)</a></li>
+  <li>&nbsp;<a href="http://ruschema.org/Organization">Organization (Организация)</a></li>
+  <li>&nbsp;<a href="http://ruschema.org/Person">Person (Человек)</a></li>
+  <li>
+    &nbsp;<a href="http://ruschema.org/Place">Place (Место)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/LocalBusiness">LocalBusiness (Местный Бизнес)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Restaurant">Restaurant (Ресторан)</a>
+  </li>
+  <li>
+    &nbsp;<a href="http://ruschema.org/Product">Product (Продукт)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/Offer">Offer (Предложение)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/AggregateOffer">AggregateOffer (Совокупное Предложение)</a>
+  </li>
+  <li>
+    &nbsp;<a href="http://ruschema.org/Review">Review (Отзыв)</a>, <br>
+    &nbsp;<a href="http://ruschema.org/AggregateRating">AggregateRating (Cовокупный Рейтинг)</a><br>
+  </li>
+</ul>
+
+
+
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | PHP | Функции</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html             ">Главная</a></li>
+		<li><a href="../design-page.html       ">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html         ">HTML</a></li>
+		<li><a href="../css-page.html          ">CSS</a></li>
+    <li><a href="../css3-page.html         ">CSS3</a></li>
+		<li><a href="../javascript-page.html   ">JS</a></li>
+		<li><a class="active" href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="php-lang.html               ">Язык PHP</a></li>
+			<li><a href="echo.html                   ">Вывод данных</a></li>
+			<li><a href="vars.html                   ">Переменные</a></li>
+			<li><a href="if-else.html                ">Условные<br>операторы</a></li>
+			<li><a href="cicles.html                 ">Циклы</a></li>
+			<li><a href="arrayd.html                 ">Массивы</a></li>
+			<li><a class="active" href="functionss.html">Функции</a></li>
+			<li><a href="forms.html                  ">Формы</a></li>
+			<li><a href="post.html                   ">Почта</a></li>
+      <li><a href="yii.html                    ">Yii2</a></li>
+			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="sql.html                    ">SQL</a></li>
+      <li><a href="docker.html                 ">Docker</a></li>
+			<li><a href="console.html                ">Консоль</a></li>
+		</ul>
+
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник | PHP | Функции</h2>
+
+	<div class="container-fluid">
+		<div class="row">
+				<table class="table table-bordered table-condensed">
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">function</th>
+					</tr>
+					<tr>
+						<td><b>Объявление <br>функции</b></td>
+						<td><pre><code><span class="red">function</span> <b class="text-success">sum</b>($x, $y) {
+  $sum = $x + $y;
+  <span class="red">return</span> $sum;
+}
+echo <b class="text-success">sum</b>(5, 25)."<span class="gray">&lt;br&gt;</span>";    <span class="gray">// 30</span>
+echo <b class="text-success">sum</b>(1, 2)."<span class="gray">&lt;br&gt;</span>";     <span class="gray">// 3</span>
+echo <b class="text-success">sum</b>("1", "2")."<span class="gray">&lt;br&gt;</span>"; <span class="gray">// 3</span>
+
+<span class="gray">// или через переменные:</span>
+$some_var = <span class="text-success">sum</span>(1,2);
+echo $some_var;<span class="gray">            // 3</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							<span class="red">return</span> возращает что-либо из функции, также как в JS. Также можно вкладывать функции в функции. Результаты выполнения функций можно сохранять в переменные
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>Функции в<br> переменных</b></td>
+						<td><pre><code>$sum = <span class="red">function</span>($x, $y) {
+  <span class="red">return</span> $x + $y;
+};
+
+echo $sum(1, 2);<span class="gray">            // 3</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							В этом случае название функции будет выполнять переменная
+						</td>
+					</tr>
+
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Функции для работы с типами переменных</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<ul style="list-style: none; padding: 0;">
+								<li><b class="lead">isset()</b> - проверка на наличие переменой
+<pre><code><span class="red">if</span> (<span class="red">isset</span>($x1)) { <span class="red">echo</span> "<span class="gray">Переменная существует</span>"; }
+  <span class="red">else</span> { <span class="red">echo</span> "<span class="gray">Переменная НЕ существует</span>"; }
+</code></pre></li>
+								<li><b class="lead">unset()</b> - удаляет переменную
+<pre><code><span class="red">unset</span>($x1);</code></pre></li>
+								<li><b class="lead">is_numeric()</b> - проверка на числовой тип данных, даже если записан строкой
+<pre><code><span class="red">is_numeric</span>($x1);</code></pre></li>
+								<li><b class="lead">is_integer()</b> - проверка строго на число
+<pre><code><span class="red">is_integer</span>($x1);</code></pre></li>
+								<li><b class="lead">is_double()</b> - проверка на число с точкой
+<pre><code><span class="red">is_double</span>($x1);</code></pre></li>
+								<li><b class="lead">is_string()</b> - проверка на строку
+<pre><code><span class="red">is_string</span>($x1);</code></pre></li>
+								<li><b class="lead">is_bool()</b> - проверка на булевский тип
+<pre><code><span class="red">is_bool</span>($x1);</code></pre></li>
+								<li><b class="lead">is_scalar()</b> - проверка на простую переменную (не массив, не объект)
+<pre><code><span class="red">is_scalar</span>($x1);</code></pre></li>
+								<li><b class="lead">is_null()</b> - проверка на пустую переменную (без значния)
+<pre><code><span class="red">is_null</span>($x1);</code></pre></li>
+								<li><b class="lead">is_array()</b> - проверка на массив
+<pre><code><span class="red">is_array</span>($x1);</code></pre></li>
+								<li><b class="lead red">gettype()</b> - узнать тип данных переменной
+<pre><code><span class="red">gettype</span>($x1);</code></pre></li>
+							</ul>
+						</td>
+						<td style="width: 33.3%;">Возвращают <b>true</b> || <b>false</b></td>
+					</tr>
+
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Математические функции</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<ul style="list-style: none; padding: 0;">
+								<li><b class="lead">M_PI</b> - число Пи
+<pre><code><span class="red">echo </span>M_PI;</code></pre></li>
+								<li><b class="lead">M_E</b> - экспонента
+<pre><code><span class="red">echo </span>M_E;</code></pre></li>
+								<li><b class="lead">abs()</b> - модуль
+<pre><code><span class="red">abs</span>($x1);</code></pre></li>
+								<li><b class="lead">round()</b> - округление
+<pre><code><span class="red">round</span>(9.4999); <span class="gray">// 9</span>
+<span class="red">round</span>(9.5001); <span class="gray">// 10</span>
+<span class="gray">// можно добавить число вторым параметром round($x1, 3) - 3 знака после запятой, по ум* стоит 0</span></code></pre></li>
+								<li><b class="lead">ceil()</b> - округление в большую сторону
+<pre><code><span class="red">ceil</span>(9.0001); <span class="gray">// 10</span>
+<span class="gray">// всегда один аргумент</span></code></pre></li>
+								<li><b class="lead">floor()</b> - округление в меньшую сторону
+<pre><code><span class="red">floor</span>(9.9999); <span class="gray">// 9</span>
+<span class="gray">// всегда один аргумент</span></code></pre></li></code></pre></li>
+								<li><b class="lead">mt_rand()</b> - рандомное значение
+<pre><code><span class="red">mt_rand</span>(1, 6); <span class="gray">// от 1 до 6</span>
+<span class="gray">// после перезагрузки страницы будут новые значения</span></code></pre></li></code></pre></li>
+								<li><b class="lead">min()</b> - вычисление минимального значения
+<pre><code><span class="red">min</span>(1, 6, 4, -1, -10); <span class="gray">// -10</span></code></pre></li></code></pre></li>
+								<li><b class="lead">max()</b> - вычисление максимального значения
+<pre><code><span class="red">max</span>(1, 6, 4, -1, -10); <span class="gray">// 6</span></code></pre></li></code></pre></li>
+							</ul>
+						</td>
+						<td style="width: 33.3%;"></td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Тригонометрические функции</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<ul style="list-style: none; padding: 0;">
+								<li><b class="lead">sin()</b> - синус
+<pre><code>echo <span class="red">sin</span>($x1);</code></pre></li>
+								<li><b class="lead">asin()</b> - арсинус
+<pre><code>echo <span class="red">asin</span>($x1);</code></pre></li>
+								<li><b class="lead">cos()</b> - косинус
+<pre><code>echo <span class="red">cos</span>($x1);</code></pre></li>
+								<li><b class="lead">acos()</b> - аркосинус
+<pre><code>echo <span class="red">acos</span>($x1);</code></pre></li>
+								<li><b class="lead">tan()</b> - тангенс
+<pre><code>echo <span class="red">tan</span>($x1);
+<span class="gray">// 1/tan - котангенс</span></code></pre></li>
+								<li><b class="lead">atan()</b> - артангенс
+<pre><code>echo <span class="red">atan</span>($x1);</code></pre></li>
+						</ul>
+					</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Строковые функции</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<ul style="list-style: none; padding: 0;">
+								<li><b class="lead">strlen()</b> - длина строки в символах
+<pre><code>echo <span class="red">strlen</span>($x1);</code></pre></li>
+								<li><b class="lead">strpos()</b> - поиск точных совпадений
+<pre><code>echo <span class="red">strpos</span>($x1, "Hello", 5);
+<span class="gray">// поиск фразы "Hello" в переменной $x1, начиная с 5-го символа</span>
+<span class="gray">// все пробелы считаются, результатом будет индекс символа, с котого начинается совпадение, если совпадений нет, вернёт false</span>
+</code></pre></li>
+								<li><b class="lead">substr()</b> - обрезка строки
+<pre><code>echo <span class="red">substr</span>($x1, 3, -2);
+<span class="gray">// будет обрезано 3 первых символа и 2 символа с конца</span></code></pre></li>
+								<li><b class="lead">str_replace()</b> - замена строк на другое значение
+<pre><code><span class="gray">// замена "Hello" на "Привет" в $x1</span>
+echo <span class="red">str_replace</span>("Hello", "Привет", $x1);
+
+<span class="gray">// замена нескольких фраз</span>
+echo <span class="red">str_replace</span>(array("Hello", "Goodbye"), array("Привет", "Пока"), $x1);</code></pre></li>
+								<li><b class="lead">htmlspecialchars()</b> - использовать html-теги как символы
+<pre><code>echo <span class="red">htmlspecialchars</span>("&lt;br&gt;");
+<span class="gray">// выведется буквально &lt;br&gt; и переноса строки не будет</span></code></pre></li>
+								<li><b class="lead">strtolower()</b> - конвертировать в нижний регистр</li>
+								<li><b class="lead">strtoupper()</b> - конвертировать в ВЕРХНИЙ регистр</li>
+								<li><b class="lead">md5()</b> - шифрование паролей
+<pre><code>echo <span class="red">md5</span>("Пароль");</code></pre></li>
+								<li><b class="lead">trim()</b> - удаление многочисленных пробелов до одного
+<pre><code>echo <span class="red">trim</span>("   Hello,     World!      "); <span class="gray">// Hello, World!</span></code></pre></li>
+						</ul>
+					</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+				<tr>
+					<th class="lead  text-center  bg-primary" colspan="3">Дата и время</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<ul style="list-style: none; padding: 0;">
+							<li><b class="lead">time()</b> - кол-во секунд с 01.01.1970
+<pre><code>echo <span class="red">time</span>();</code></pre></li>
+							<li><b class="lead">microtime()</b> - с милисекундами
+<pre><code><span class="gray">// секундомер работы php-скриптов</span>
+$start = <span class="red">microtime</span>(true);
+echo "<span class="gray">Время работы скрипта: </span>".(<span class="red">microtime</span>(true) - $start)." <span class="gray">секунд</span>";</code></pre></li>
+							<li><b class="lead">date()</b> - дата (много вариаций, <a href="http://www.php.su/date" target="_blank">документация</a>)
+<pre><code>echo <span class="red">date</span>("Y-m-d H:i:s");
+
+<span class="gray">// Указать фиксированную дату (час, мин, сек, мес, день, год):</span>
+echo <span class="red">date</span>("Y-m-d H:i:s", <span class="red">mktime</span>(12, 35, 23, 12, 25, 2005));
+<span class="gray">// Указать фиксированную дату в массиве:</span>
+$time = <span class="red">mktime</span>(12, 35, 23, 12, 25, 2005);
+$arr = <span class="red">getdate</span>($time);
+<span class="red">print_r</span>($arr);
+</code></pre></li>
+						</ul>
+					</td>
+					<td style="width: 33.3%;"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+													 EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | JS | jQuery-примеры</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+      .plugins-list h2 {display: inline; font-size: 16px;line-height: 20px; background: yellow;}
+      .plugins-list a {display: block; float: left; width: 250px; color: darkcyan; text-decoration: none; font-weight: bold;}
+      .plugins-list p {line-height: 1em; margin: 0;}
+      .plugins-list li {height: 20px; border-bottom: 1px solid #000;}
+      .plugins-list li:nth-child(odd) {
+        background: #eee;
+      }
+    </style>
+</head>
+
+<body>
+<div class="header">
+  <div class="layout-positioner clearfix">
+    <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+    <div class="header-logo"></div>
+    <ul class="header-menu">
+      <li><a href="../index.html">Главная</a></li>
+      <li><a href="../design-page.html">WEB-DESIGN</a></li>
+      <li><a href="../html-page.html">HTML</a></li>
+      <li><a href="../css-page.html">CSS</a></li>
+      <li><a href="../css3-page.html">CSS3</a></li>
+      <li><a class="active" href="../javascript-page.html">JS</a></li>
+      <li><a href="../php.html">PHP</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="layout-positioner clearfix">
+  <div class="vert-menu-cont">
+    <ul class="vert-menu">
+      <li>
+        <a href="#">Основы</a>
+        <ul class="sub-menu sub-menu9">
+          <li><a href="js-lang.html">Язык JS</a></li>
+          <li><a href="load.html">Загрузка</a></li>
+          <li><a href="types.html">Типы данных</a></li>
+          <li><a href="var.html">Переменные</a></li>
+          <li><a href="operators.html">Операторы</a></li>
+          <li><a href="algorythm.html">Алгоритмы</a></li>
+          <li><a href="if-else.html">Условия</a></li>
+          <li><a href="cycle.html">Циклы</a></li>
+          <li><a href="math.html">Math</a></li>
+        </ul>
+      </li>
+      <li><a href="array.html">Массивы</a></li>
+      <li><a href="function.html">Функции</a></li>
+      <li><a href="object.html">Объекты</a></li>
+      <li>
+        <a href="#">JS &amp; HTML</a>
+        <ul class="sub-menu sub-menu6">
+          <li><a href="complete.html">Вывод данных</a></li>
+          <li><a href="dom.html">DOM</a></li>
+          <li><a href="html-methods.html">DOM-методы</a></li>
+          <li><a href="actions.html">События</a></li>
+          <li><a href="modal-window.html">Мод. окно</a></li>
+          <li><a href="forms.html">Формы</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="react.html"><span class="react">React</span></a>
+        <ul class="sub-menu sub-menu-react">
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="nodejs.html"><span class="react">node.js</span></a>
+        <ul class="sub-menu sub-menu-nodejs">
+          <li><a href="#"></a></li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a class="active" href="#">jQuery</a>
+        <ul class="sub-menu sub-menu7">
+          <li><a href="jquery-html.html">JQuery basics</a></li>
+          <li><a href="jquery-func.html">jQuery-функции</a></li>
+          <li><a href="jquery-actions.html">jQuery-события</a></li>
+          <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+          <li><a href="jquery-forms.html">jQuery-формы</a></li>
+          <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+          <li><a href="jquery-examples.html">Примеры</a></li>
+        </ul>
+       </li>
+        <li><a href="ajax.html">Ajax</a></li>
+       <li>
+   <a href="canvas.html">Canvas</a>
+   <ul class="sub-menu sub-menu9">
+       <a href="canvas.html">Настройка</a>
+       <a href="canvas-figures.html">Фигуры</a>
+       <a href="canvas-text.html">Текст</a>
+       <a href="canvas-animation.html">Примеры</a>
+   </ul>
+</li>
+
+
+       <li><a href="modules.html">Классы</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+       <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+       <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+
+    </ul>
+
+  </div>
+
+  <div class="content clearfix">
+
+  <h2>Мой Справочник | JavaScript |
+    <a href="http://plugins.jquery.com/" target="_blank">jQuery-плагины</a>
+    (<small><a href="https://github.com/sorrycc/awesome-javascript" target="_blank">Подборка плагинов</a></small>)
+  </h2>
+
+  <ol class="plugins-list">
+    <h2>Слайдеры</h2>
+    <li>
+      <p><a href="http://idangero.us/swiper/" target="_blank"><h2>Swiper +</h2></a> Cлайдер c 3D-эффектами</p>
+    </li>
+    <li>
+      <p><a href="http://bxslider.com/" target="_blank"><h2>Bxslider +</h2></a> Адаптивный слайдер c touch</p>
+    </li>
+    <li>
+      <p><a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank"><h2>Owl Carousel 2 +</h2></a> Слайдер с подержкой touch и responsive</p>
+    </li>
+
+    <h2>Поп-апы</h2>
+    <li>
+      <p><a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">
+      <h2>Magnific Popup</h2></a> Адаптивные модальные окна, фотогалерея</p>
+    </li>
+    <li>
+      <p><a href="http://izimodal.marcelodolce.com/" target="_blank">
+      <h2>IZIMODAL +</h2></a> Адаптивные модальные окна (красивые)</p>
+    </li>
+
+
+    <h2>Фотогалереи</h2>
+    <li>
+      <p><a href="https://sachinchoolur.github.io/lightgallery.js/" target="_blank"><h2>lightgallery.js</h2></a> Красивая адаптивная галерея</p>
+    </li>
+    <li>
+      <p><a href="http://photoswipe.com/" target="_blank"><h2>Photoswipe</h2></a> Фотогалерея</p>
+    </li>
+    <li>
+      <p><a href="http://www.frescojs.com/" target="_blank"><h2>Fresco</h2></a> Фотогалерея (всплывает баннер)</p>
+    </li>
+    <li>
+      <p><a href="http://brutaldesign.github.io/swipebox/" target="_blank"><h2>Swipebox</h2></a> Фотогалерея</p>
+    </li>
+    <li>
+      <p><a href="https://feimosi.github.io/baguetteBox.js/" target="_blank"><h2>baguetteBox.js</h2></a> Простая галерея</p>
+    </li>
+
+    <h2>Формы</h2>
+    <li>
+      <p><a href="http://plugins.jquery.com/maskedinput/" target="_blank"><h2>MaskedInput</h2></a> Оформление placeholder</p>
+    </li>
+    <li>
+      <p><a href="https://github.com/IonDen/ion.rangeSlider" target="_blank"><h2>Range.slider.js</h2></a> Диапозон значений (input type="range")</p>
+    </li>
+    <li>
+      <p><a href="http://materializecss.com/" target="_blank"><h2>MaterializeCss</h2></a> Стилизация форм</p>
+    </li>
+    <li>
+      <p><a href="https://jqueryvalidation.org/" target="_blank"><h2>Validation</h2></a> Валидация форм</p>
+    </li>
+    <li>
+      <p><a href="http://amsul.ca/pickadate.js/" target="_blank"><h2>Pickadate</h2></a> Выбор даты</p>
+    </li>
+    <li>
+      <p><a href="http://felicegattuso.com/projects/datedropper/" target="_blank"><h2>datedropper</h2></a> Выбор даты (красивый)</p>
+    </li>
+    <li>
+      <p><a href="https://demo.tutorialzine.com/2011/12/countdown-jquery/" target="_blank"><h2>Countdown</h2></a> Отсчёт времени</p>
+    </li>
+    <li>
+      <p><a href="https://kevinchappell.github.io/formBuilder/" target="_blank"><h2>FormBuilder</h2></a> Drag &amp; Drop в форме</p>
+    </li>
+
+    <h2>Медиа</h2>
+    <li>
+      <p><a href="http://vodkabears.github.io/vide/" target="_blank"><h2>VIDE</h2></a> Видеофон</p>
+    </li>
+    <li>
+      <p><a href="http://stefanerickson.github.io/covervid/" target="_blank"><h2>Covervid</h2></a> Видеофон</p>
+    </li>
+    <li>
+      <p><a href="https://rishabhp.github.io/bideo.js/" target="_blank"><h2>Bideo.js</h2></a> Видеофон</p>
+    </li>
+    <li>
+      <p><a href="#" target="_blank"><h2>???</h2></a> Видео/аудио-плеер</p>
+    </li>
+    <li>
+      <p><a href="http://www.chartjs.org/" target="_blank"><h2>Сhartjs</h2></a> Графики</p>
+    </li>
+
+    <h2>Анимации</h2>
+    <li>
+      <p><a href="https://wowjs.uk/" target="_blank"><h2>Wow.js</h2></a> Анимации при скроле</p>
+    </li>
+    <li>
+      <p><a href="https://scrollrevealjs.org/" target="_blank"><h2>Scrollrevealjs</h2></a> Анимация при скролле</p>
+    </li>
+    <li>
+      <p><a href="https://daneden.github.io/animate.css/" target="_blank"><h2>Animate.css</h2></a> css-анимации</p>
+    </li>
+    <li>
+      <p><a href="http://www.sequencejs.com/" target="_blank"><h2>Sequencejs</h2></a> Фреймворк для анимаций</p>
+    </li>
+    <li>
+      <p><a href="http://polarnotion.github.io/turntable/" target="_blank"><h2>turntable</h2></a> Создать 3D-объект из нескольких изображений</p>
+    </li>
+    <li>
+      <p><a href="http://animejs.com/" target="_blank"><h2>animejs</h2></a> Canvas-библиотека анимаций</p>
+    </li>
+    <li>
+      <p><a href="https://pushjs.org" target="_blank"><h2>pushjs.org</h2></a> Всплывающие браузерные сообщения</p>
+    </li>
+
+    <h2>Меню</h2>
+    <li>
+      <p><a href="https://www.smartmenus.org/" target="_blank"><h2>SmartMenus</h2></a> Адаптивное меню</p>
+    </li>
+    <li>
+      <p><a href="http://jpanelmenu.com/" target="_blank"><h2>jPanelMenu</h2></a> Адаптивное меню</p>
+    </li>
+
+    <h2>Эффекты</h2>
+    <li>
+      <p><a href="https://github.com/inuyaksa/jquery.nicescroll" target="_blank"><h2>Nicescroll</h2></a> Стилиация скрол-бара</p>
+    </li>
+    <li>
+      <p><a href="https://alvarotrigo.com/fullPage/#4thpage" target="_blank"><h2>fullPage</h2></a> Слайд-скролл page</p>
+    </li>
+    <li>
+      <p><a href="https://www.smartmenus.org/" target="_blank"><h2>WOW.js</h2></a> Подвижные блоки</p>
+    </li>
+    <li>
+      <p><a href="http://jpanelmenu.com/" target="_blank"><h2>animate.css</h2></a> Набор css-анимаций</p>
+    </li>
+
+    <li>
+      <p><a href="https://snazzymaps.com/" target="_blank"><h2>Counter Up</h2></a> "Живой" счётчик (нужно подключить ещё waypoints.js)</p>
+    </li>
+    <li>
+      <p><a href="http://www.mattboldt.com/demos/typed-js/" target="_blank"><h2>Tiped.js</h2></a> Автонабор текста</p>
+    </li>
+    <li>
+      <p><a href="https://github.com/john-terenzio/jQuery-Hover-Delay" target="_blank"><h2>Hover delay</h2></a> Задержка для hover</p>
+    </li>
+    <li>
+      <p><a href="http://tablesorter.com/docs/" target="_blank"><h2>Tablesorter</h2></a> Сортировка в таблицах</p>
+    </li>
+    <li>
+      <p><a href="https://www.datatables.net/" target="_blank"><h2>Datatables</h2></a> Таблицы</p>
+    </li>
+
+    <h2>Карты</h2>
+    <li>
+      <p><a href="https://snazzymaps.com/" target="_blank"><h2>SnazzyMaps</h2></a> Стилизация google-карт</p>
+    </li>
+    <li>
+      <p><a href="http://imagemap-generator.dariodomi.de/" target="_blank"><h2>Imagemap-generator</h2></a> Стилизация карт</p>
+    </li>
+
+
+    <h2>Плитка</h2>
+    <li>
+      <p><a href="http://callmecavs.com/bricks.js/" target="_blank"><h2>bricks.js</h2></a> Адаптивная плитка</p>
+    </li>
+
+
+  </ol>
+
+  <h2>Перестраховка от ошибок в консоли</h2>
+  <p>Если код прописан в <b>main.js</b>, а скрипт не подключен на текущей странице</p>
+  <code>if ($('.some-class').<span class="red">lenght</span> > 0) {<br>
+&nbsp;&nbsp;$('.some-class').pluginFunc();<br>
+  }</code>
+
+<ul>
+  <li>rangeSlider</li>
+  <li>jqueryUIselectmenu</li>
+  <li>FileUploader</li>
+  <li>lightbox</li>
+  <li>salvattore</li>
+  <li>validation</li>
+  <li>retinaJS</li>
+  <li>flipclock</li>
+  <li>sharejs</li>
+  <li>selectbox</li>
+  <li>FormSlider</li>
+  <li>imageDropdown</li>
+  <li>spacejs</li>
+  <li>elevator</li>
+  <li>vivus</li>
+  <li>mockupSlideShow</li>
+</ul>
+
+<pre style="font-size: 1.5em">
+
+<b>Flickity</b> - слайдер (https://flickity.metafizzy.co/)
+<b>Cute Slider</b> - слайдер (с красивой анимацией) (https://codecanyon.net/item/cute-slider-3d-2d-html5-image-slider/3046001)
+<b>FitText</b> - FitText простой JQuery-плагин, который автоматически делает текст по ширине родительского
+элемента. Идеально подходит для необычных заголовков! (http://fittextjs.com/)
+<b>Lettering.js</b> - Несмотря на то, что CSS3 и @font-face директива определенно улучшились для веб-типографики,
+это не дает полного контроля. Вот почему был создан Lettering.js. Если вы ищете простое решение, чтобы получить
+полный контроль написания каждого отдельного элемента заголовка, то этот плагин для вас (http://letteringjs.com/)
+<b>approach</b> - Смена размера и цвета текста при наведении (http://srobbin.com/jquery-plugins/approach/)
+<b>ARCTEXT.JS</b> - Текст изгибами (https://tympanus.net/Development/Arctext/)
+<b>Masonry pkgd</b> - сетка для фотографий (https://masonry.desandro.com/)
+<b>jQuery UI Sortable</b> - drag&amp;drop сортировка (https://jqueryui.com/sortable/)
+<b>PhotoSwipe</b> - галерея (http://photoswipe.com/)
+<b>jQuery Form Validation</b> - валидация (http://www.formvalidator.net/)
+<b>Select2</b>- селекты (https://select2.org/)
+<b>Progress.js</b> - прогресс-бар загрузки (http://usablica.github.io/progress.js/)
+<b>Tooltipster</b> - всплывающие подсказки (http://iamceege.github.io/tooltipster/)
+<b>Typehead</b> - поле поиска со всплывающими ответами (https://twitter.github.io/typeahead.js/)
+<b>PrettyEmbed</b>
+<b>Fitvids</b> - адаптивный видео-плейер (http://fitvidsjs.com/)
+<b>fullPage.js</b> - блоки во всю ширину экрана (https://alvarotrigo.com/fullPage/#firstPage)
+<b>Tree.js</b>
+<b>MatchHeight</b>
+<b>Slideout.js</b> - бокое меню для мобильного телефона (https://slideout.js.org/)
+<b>FocusPoint</b>
+<b>Liquid Images</b>
+<b>Swipe</b>
+<b>AutocompleteJS</b>
+<b>Template7</b>
+<b>JsBarcode</b>
+<b>InputMask</b>
+<b>Remodal</b>
+<b>gIDatePicker</b>
+<b>ChartJS</b> - Графики
+<b>EasyTabs</b>
+<b>geo.js</b>- Геолокация
+
+</pre>
+
+
+
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="layout-positioner">
+    <p class="footer-text">Разработчик: Евгений Леухин<br>
+    EvgenyLeukhin@yandex.ru</p>
+    <p class="footer-copyright">© 2016 - 2019</p>
+  </div>
+</div>
+
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | CSS | Позиционирование</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+		.cont {
+		min-height: 330px;
+		width: 340px;
+		margin: 0 auto;
+		border: 2px dotted #999;
+		background-color: pink;
+		margin-top: 10px;
+		padding: 10px;
+		color: white;
+		font-size: 1.5em;}
+
+		.box {
+		float: left;
+		height: 100px;
+		margin-bottom: 10px;
+		width: 100px;
+		border: 2px dotted #999;
+		background-color: white;}
+
+		.relative {position: relative;
+		background-color: lightblue;}
+
+		.relative1 {position: relative;
+		background-color: lightblue;
+		top: 20px;
+		left:10px;}
+
+		.relative2 {position: relative;
+		background-color: lightblue;
+		top: 25px;
+		left:15px;}
+
+		.relative3 {position: relative;
+		background-color: lightblue;
+		top: 30px;
+		left: 20px;}
+
+		.absolute {position: absolute;
+		background-color: maroon;
+		}
+
+		.absolute1 {position: absolute;
+		background-color: maroon;
+		top: 1850px;
+		left: 100px;}
+		.absolute2 {position: absolute;
+		background-color: maroon;
+		top: 1950px;
+		left: 200px;}
+		.absolute3 {position: absolute;
+		background-color: maroon;
+		top: 1750px;
+		left: 0px;}
+
+		.inline-block {display: inline-block;
+		vertical-align: middle;
+		margin-left: 15px;}
+
+		h4 {text-align: center;}
+		.rel {
+			height: 200px;
+			border: 3px solid #000;
+			position: relative;
+		}
+		.abs {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 100px; /*Размеры должны быть фиксированными*/
+			width: 100px;
+			margin-top: -50px;/*Половина от высоты*/
+			margin-left: -50px;/*Половина от ширины*/
+			background-color: maroon;
+			border: 3px solid black;
+		}
+	</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+    <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	<ul class="vert-menu" style="z-index: 10;">
+		<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+		<li><a href="../css-pages/values.html">Величины</a></li>
+		<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+		<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+		<li><a href="../css-pages/color.html">Цвет</a></li>
+		<li><a href="../css-pages/bg.html">Фон</a></li>
+		<li><a href="../css-pages/text.html">Шрифт и текст</a></li>
+		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+		<li><a href="../css-pages/display.html">Отображение</a></li>
+		<li><a href="../css-pages/position.html" class="active">Позиционирование</a></li>
+		<li>
+			<a href="#">Меню</a>
+				<ul class="sub-menu sub-menu1">
+					<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+					<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+				</ul>
+		</li>
+		<li>
+			<a href="#">Блочная вёрстка</a>
+				<ul class="sub-menu sub-menu2">
+					<li><a href="../css-pages/float.html">float</a></li>
+					<li><a href="../css-pages/centered.html">Центровщик</a></li>
+					<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+					<li><a href="../css-pages/footer.html">Футер</a></li>
+					<li><a href="../css-pages/layout.html">Сетка</a></li>
+					<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+				</ul>
+		</li>
+		<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+		<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
+		<li><a href="../css-pages/decoration.html">Фигуры</a></li>
+	</ul>
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник | CSS | Позиционирование</h2>
+
+	<table class="discription-table">
+		<caption><mark>Позиционирование</mark></caption>
+			<tr>
+				<th>Код</th>
+				<th>Название</th>
+				<th>Описание</th>
+			</tr>
+			<tr>
+				<td><code>position:&nbsp;static;</code></td>
+				<td><b>Статичное положение (по ум*)</b></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>position:&nbsp;relative;</code></td>
+				<td><b>Относительное позиционирование</b></td>
+				<td style="color: black; width: 600px; font-weight: normal; text-align: justify;">
+					Относительное позиционирование. Положение элемента устанавливается относительно его исходного места.
+					Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону
+					от первоначального расположения, при этом другие элементы думают, что элемент стоит всё на том же месте, а сам
+					спозиционированный элемент выходит из потока
+				</td>
+			</tr>
+			<tr>
+				<td><code>position:&nbsp;absolute;</code></td>
+				<td><b>Абсолютное позиционирование</b></td>
+				<td style="color: black; font-weight: normal; text-align: justify;">
+					Абсолютное позиционирование. Указывает, что элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента и нет. Положение элемента задаётся свойствами left, top, right и bottom, также на положение влияет значение свойства position родительского элемента. Так, если у родителя значение position установлено как static или родителя нет, то отсчёт координат ведётся от края окна браузера. Если у родителя значение position задано как relative, то отсчёт координат ведётся от края родительского элемента.
+				</td>
+			</tr>
+			<tr>
+				<td><code>position:&nbsp;fixed;</code></td>
+				<td><b>Фиксированное позиционирование</b></td>
+				<td style="color: black; font-weight: normal; text-align: justify;">
+					Фиксированное позиционирование. По своему действию это значение близко к absolute, но в отличие от него привязывается
+					к указанной свойствами left, top, right и bottom точке на экране и не меняет своего положения при прокрутке веб-страницы.
+				</td>
+			</tr>
+			<tr>
+				<td><code>position:&nbsp;sticky;</code></td>
+				<td><b>Относительно-фиксированное позиционирование</b></td>
+				<td style="color: black; font-weight: normal; text-align: justify;">
+					Это сочетание относительного и фиксированного позиционирования. Элемент рассматривается как позиционированный относительно,
+					пока он не пересекает определённый порог, после чего рассматривается как фиксированный. Обычно применяется для фиксации
+					заголовка на одном месте, пока содержимое, к которому относится заголовок, прокручивается на странице.
+				</td>
+			</tr>
+			<tr>
+				<td><code>top, right, bottom, left</code></td>
+				<td><b>Координаты для позиционирования</b></td>
+				<td style="color: black; font-weight: normal; text-align: justify;">Значения <span class="red">auto</span> -
+				неявные точки привязки, значения по ум, точка привязки по ум* - точка, где был бы элемент без абс. позиционирования,
+				эту точку можно также изменять посредствам <span class="red">margin</span>
+				</td>
+			</tr>
+			<tr>
+				<td><code>z-index</code></td>
+				<td><b>Ось z</b></td>
+				<td style="color: black; font-weight: normal; text-align: justify;">
+					Чем больше это значение, тем выше отображается элемент по условной оси z</td>
+			</tr>
+	</table>
+
+	<main>
+	<h3 class="inline-block">Обычные элементы<div class="box inline-block"></div></h3>
+	<h3 class="inline-block">Относительные элементы<div class="box relative inline-block"></div></h3>
+	<h3 class="inline-block">Абсолютные элементы<div class="box absolute inline-block"></div></h3>
+
+	<h4>Обычные блоки</h4>
+		<div class="cont">
+			<div class="box"></div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box"></div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box"></div><span>Текст Текст Текст Текст Текст Текст</span>
+		</div>
+
+	<h4>Относительные блоки без смещения ведут себя как обычные</h4>
+		<div class="cont">
+			<div class="box relative">1</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative">2</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative">3</div><span>Текст Текст Текст Текст Текст Текст</span>
+		</div>
+
+	<h4>Относительные блоки со смещением, смещенные элементы вышли из потока и не влияют на другие элементы,<br> но текст по прежнему думает, что
+эти элементы стоят на своих местах как в примере выше</h4>
+		<div class="cont">
+			<div class="box relative1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
+		</div>
+
+	<h4>Абсолютные элементы без смещения уже вышли из потока</h4>
+		<div class="cont">
+			<div class="box absolute">1</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box absolute">2</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box absolute">3</div><span>Текст Текст Текст Текст Текст Текст</span>
+		</div>
+
+	<h4>Абсолютным элементам задано смещение, они вышли из потока, улетев влево, и текст уже забыл о их существовании</h4>
+		<div class="cont">
+			<div class="box absolute1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box absolute2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box absolute3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
+		</div>
+
+
+
+	</main>
+
+	<h2>Центровка абсолютно-спозиционированного элемента в родителе:</h2>
+	<code>
+		position: absolute;<br>
+		top: 50%;<br>
+		left: 50%;<br>
+		height: 100px; <span class="gray">/*Размеры должны быть фиксированными*/</span><br>
+		width: 100px;<br>
+		margin-top: -50px;<span class="gray">/*Половина от высоты*/</span><br>
+		margin-left: -50px;<span class="gray">/*Половина от ширины*/</span><br>
+	</code>
+	<div class="rel">
+		<div class="abs"></div>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

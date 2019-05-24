@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | Frontend</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    code {
+      font-size: 1.5em;
+    }
+    hr {
+      color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a class="active" href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">Основы</a>
+          <ul class="sub-menu sub-menu9">
+            <li><a href="js-lang.html">Язык JS</a></li>
+            <li><a href="load.html">Загрузка</a></li>
+            <li><a href="types.html">Типы данных</a></li>
+            <li><a href="var.html">Переменные</a></li>
+            <li><a href="operators.html">Операторы</a></li>
+            <li><a href="algorythm.html">Алгоритмы</a></li>
+            <li><a href="if-else.html">Условия</a></li>
+            <li><a href="cycle.html">Циклы</a></li>
+            <li><a href="math.html">Math</a></li>
+          </ul>
+        </li>
+        <li><a href="array.html">Массивы</a></li>
+        <li><a href="function.html">Функции</a></li>
+        <li><a href="object.html">Объекты</a></li>
+        <li>
+          <a href="#">JS &amp; HTML</a>
+          <ul class="sub-menu sub-menu6">
+            <li><a href="complete.html">Вывод данных</a></li>
+            <li><a href="dom.html">DOM</a></li>
+            <li><a href="html-methods.html">DOM-методы</a></li>
+            <li><a href="actions.html">События</a></li>
+            <li><a href="modal-window.html">Мод. окно</a></li>
+            <li><a href="forms.html">Формы</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="react.html"><span class="react">React</span></a>
+          <ul class="sub-menu sub-menu-react">
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="active" href="nodejs.html"><span class="react">node.js</span></a>
+          <ul class="sub-menu sub-menu-nodejs">
+            <li><a href="node-main.html">Начало работы</a></li>
+            <li><a href="node-frontend.html">Frontend</a></li>
+            <li><a href="node-backend.html">Backend</a></li>
+            <li><a href="node-sql.html">SQL</a></li>
+          </ul>
+        </li>
+
+
+        <li>
+          <a href="#">jQuery</a>
+          <ul class="sub-menu sub-menu7">
+            <li><a href="jquery-html.html">JQuery basics</a></li>
+            <li><a href="jquery-func.html">jQuery-функции</a></li>
+            <li><a href="jquery-actions.html">jQuery-события</a></li>
+            <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+            <li><a href="jquery-forms.html">jQuery-формы</a></li>
+            <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+            <li><a href="jquery-examples.html">Примеры</a></li>
+          </ul>
+        </li>
+        <li><a href="ajax.html">Ajax</a></li>
+        <li>
+          <a href="canvas.html">Canvas</a>
+          <ul class="sub-menu sub-menu9">
+            <a href="canvas.html">Настройка</a>
+            <a href="canvas-figures.html">Фигуры</a>
+            <a href="canvas-text.html">Текст</a>
+            <a href="canvas-animation.html">Примеры</a>
+          </ul>
+        </li>
+
+
+        <li><a href="modules.html">Классы</a></li>
+        <li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+        <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+        <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+      </ul>
+
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | Frontend</h2>
+
+      <table class="new-table">
+      <tr>
+        <th colspan="3"><code>Frontend</code></th>
+      </tr>
+      <tr>
+        <td>
+          <h2>ESLint</h2>
+          <code>.eslintrc.js</code>
+        </td>
+        <td>
+          <p>ЧТОБЫ РАБОТАЛО С КОНСОЛИ НУЖНО СТАВИТЬ ГЛОБАЛЬНО! (eslint, babel-eslint )</p>
+          <code>npm i -g eslint</code> <br>
+          <code>npm i --save-dev eslint</code> <br><br>
+          Если нужно создать конфиг (.eslintrc.js) с нуля: <br>
+          ---------------------------------------------------- <br>
+          <code>eslint --init</code><br><br>
+Или взять готовый(.eslintrc.js): <br>
+          ---------------------------------------------------- <br>
+<pre><code style="font-size: 1.25em;">module.exports = {
+  "env": { "browser": true },
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent":          [ "error", 2        ],
+    "linebreak-style": [ "error", "unix"   ],
+    "quotes":          [ "error", "single" ],
+    "semi":            [ "error", "always" ]
+  }
+};</code></pre><br>
+Запуск в консоли: <br>
+---------------------------------------------------- <br>
+<code>eslint some-file.js</code> <br>
+<code>eslint some-file.js --fix</code> <br>
+        </td>
+        <td>Чтобы ESlint работал в горячем режиме в редакторе кода, для редактора нужно установить плагин ESLint. <br><br>
+B Sublime нужно установить два плагина (<b>SublimeLinter, <a target="_blank" href="https://github.com/SublimeLinter/SublimeLinter-eslint">SublimeLinter-eslint</a></b>). <br><br>
+Если установлен плагин для ESLint, то в конфиге пишем <code>"extends":"plugin-name"</code>
+
+        </td>
+      </tr>
+      <tr>
+        <td><h2>browser-sync</h2></td>
+        <td>
+          <code>npm i -g browser-sync</code> <br>
+          <code>npm i --save-dev browser-sync</code> <br><br>
+          Запуск в консоли в директории с проектом: <br>
+          ---------------------------------------------------- <br>
+          <code>browser-sync start --server --directory --files "**/*"</code>
+        </td>
+        <td>Будет выполнен запуск файла index.html в браузере, который лежит в текущей директории. И браузер будет перезагружаться при изменении всех файлов в директории</td>
+      </tr>
+      <tr>
+        <td>
+          <h2>gulp</h2>
+          <code>gulpfile.js</code>
+        </td>
+        <td>
+          <code>npm i -g gulp-cli</code> <br>
+          <code>npm i -g gulp</code> <br>
+          <code>npm i --save-dev gulp</code> <br><br>
+        </td>
+        <td>Глобальная установка выполняется только один раз</td>
+      </tr>
+      <tr>
+        <td>
+          <h2>WebPack</h2>
+          <code>webpack.config.js</code>
+        </td>
+        <td>
+          <code>npm i -g webpack-cli</code> <br>
+          <code>npm i -g webpack</code> <br>
+          <code>npm i -D webpack</code> <br>
+          <code>npm i --save-dev webpack</code> <br><br>
+        </td>
+        <td>Глобальная установка выполняется только один раз</td>
+      </tr>
+    </table>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

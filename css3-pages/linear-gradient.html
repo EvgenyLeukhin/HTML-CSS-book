@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | CSS3 | Линейный градиент</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+    <style>
+        body {
+            background-image:
+        -webkit-linear-gradient(top left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -webkit-linear-gradient(top right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -webkit-linear-gradient(bottom left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -webkit-linear-gradient(bottom right, rgba(101,109,120, 0.1) 25%, transparent 25%);
+            background-image:
+        -o-linear-gradient(top left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -o-linear-gradient(top right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -o-linear-gradient(bottom left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        -o-linear-gradient(bottom right, rgba(101,109,120, 0.1) 25%, transparent 25%);
+            background-image:
+        linear-gradient(to bottom right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        linear-gradient(to bottom left, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        linear-gradient(to top right, rgba(101,109,120, 0.1) 25%, transparent 25%),
+        linear-gradient(to top left, rgba(101,109,120, 0.1) 25%, transparent 25%);;
+            background-position:
+                0px 0px,
+                0px 0px,
+                0px 0px,
+                0px 0px;
+            background-size: 100px 100px;
+            background-repeat: repeat;
+            background-color: rgba(255,255,224, 0.1);
+            /* background-attachment: fixed; */
+        }
+
+        .sample {
+            border: none;
+            background-color: none;
+            width: auto;
+        }
+        .sample1 {background-image: linear-gradient(to right, darkgreen, yellow);}
+
+        .sample2-1 {background-image: linear-gradient(to top, yellow, black);}
+        .sample2-2 {background-image: linear-gradient(to right, yellow, black);}
+        .sample2-3 {background-image: linear-gradient(to bottom, yellow, black);}
+        .sample2-4 {background-image: linear-gradient(to left, yellow, black);}
+        .sample2-5 {background-image: linear-gradient(to left top, yellow, black);}
+        .sample2-6 {background-image: linear-gradient(to right bottom, yellow, black);}
+
+        .sample3-1 {background-image: linear-gradient(0deg, darkred, pink);}
+        .sample3-2 {background-image: linear-gradient(180deg, darkred, pink);}
+        .sample3-3 {background-image: linear-gradient(-235deg, darkred, pink);}
+        .sample3-4 {background-image: linear-gradient(270deg, darkred, pink);}
+
+        .sample4-1 {
+            background-image: linear-gradient(
+                                  to right,
+                                      black,
+                                      brown,
+                                      blue,
+                                      green,
+                                      red,
+                                      yellow,
+                                      white
+                               );
+        }
+
+        .sample5-1 {background-image: linear-gradient(45deg, green, yellow);}
+        .sample5-2 {background-image: linear-gradient(45deg, green 0%, yellow 100%);}
+        .sample5-3 {background-image: linear-gradient(45deg, green 30%, yellow 70%);}
+
+
+
+        .sample6-1 {
+            background-image: linear-gradient(
+                                  to right,
+                                      black 0%, black 15%,
+                                      brown 15%, brown 30%,
+                                      blue 30%, blue 45%,
+                                      green 45%, green 60%,
+                                      red 60%, red 75%,
+                                      yellow 75%, yellow 90%,
+                                      white 90%, white 100%
+                               );
+        }
+        .sample7-1 {
+            background-image: linear-gradient(
+                                  to right,
+                                      black 0px, black 15px,
+                                      brown 15px, brown 30px,
+                                      blue 30px, blue 45px,
+                                      green 45px, green 60px,
+                                      red 60px, red 75px,
+                                      yellow 75px, yellow 90px,
+                                      white 90px, white 100px
+                               );
+        }
+        .sample8-1 {
+            background-image: repeating-linear-gradient(
+                                  to right,
+                                      black 0px, black 15px,
+                                      brown 15px, brown 30px,
+                                      blue 30px, blue 45px,
+                                      green 45px, green 60px,
+                                      red 60px, red 75px,
+                                      yellow 75px, yellow 90px,
+                                      white 90px, white 100px
+                               );
+        }
+        .sample9-1 {
+            background-image:
+                linear-gradient(135deg, deeppink 25%, transparent 25%),
+                linear-gradient(225deg, deeppink 25%, transparent 25%),
+                linear-gradient(45deg, deeppink 25%, transparent 25%),
+                linear-gradient(315deg, deeppink 25%, transparent 25%);
+        }
+        .sample10-1 {
+width: 80px;
+background-image:
+linear-gradient(135deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px),
+linear-gradient(225deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px),
+linear-gradient(45deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px),
+linear-gradient(315deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px);
+}
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+		<li><a href="../php.html">PHP</a></li>
+
+
+
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+	        <ul class="vert-menu">
+                <li>
+                    <a class="active" href="#">Градиент</a>
+				        <ul class="sub-menu sub-menu4">
+				            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+				            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+                        </ul>
+		        </li>
+                <li><a href="../css3-pages/shadow.html">Тени</a></li>
+                <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+                <li>
+                    <a href="#">Таблицы на CSS3</a>
+                    <ul class="sub-menu sub-menu5">
+                        <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+		                <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+		                <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/animation.html">Анимации</a></li>
+                <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+                <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+                <li><a href="../css3-pages/centered.html">Центровка</a></li>
+                <li><a href="../css3-pages/mask.html">Маска</a></li>
+                <li>
+                    <a href="#">Слайдер</a>
+				    <ul class="sub-menu sub-menu3">
+				        <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+				        <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+				    </ul>
+		        </li>
+                <li>
+                    <a href="../css3-pages/flex.html">Флекс</a>
+                    <ul class="sub-menu sub-menu8">
+                        <li><a href="../css3-pages/flex.html">flex</a></li>
+                        <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+                    </ul>
+                </li>
+                <li><a href="../css3-pages/decoration_css3.html">Чекбоксы</a></li>
+                <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+
+                <li>
+                  <a href="#">Bootstrap</a>
+                  <ul class="sub-menu sub-menu-bs">
+                    <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
+                    <li><a href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
+                    <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">LESS\SASS</a>
+                  <ul class="sub-menu sub-menu-less">
+                    <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+                    <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+                    <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+                    <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+                    <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../css3-pages/css-grids.html">CSS-Grids</a>
+                </li>
+            </ul>
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник |  CSS3 | Линейный градиент</h2>
+
+	   <table class="css3-table">
+            <tr>
+                <th class="css3-table-title" colspan="3">linear-gradient()</th>
+            </tr>
+            <tr>
+                <td class="col1">
+        <b>Линейный градиент</b><br>
+        Синтаксис: background-image: linear-gradient(направление, цвет);
+                </td>
+                <td class="col2"><code>
+                <b>background-image:</b> <span class="red"><br>
+                linear-gradient</span>(to right, darkgreen, yellow);
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample1"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col1">
+                    <b>Различные направления</b>, <br>описание направления ключевыми словами:<br>
+                    <b>to top,<br> to right,<br> to left,<br> to bottom (по ум*)</b><br> или связками  слов: <br>
+                    <b>to left top,<br> to left bottom,<br> to right top,<br> to right bottom</b>
+                </td>
+                <td class="col2"><code>
+1 <span class="red">linear-gradient</span>(to top, yellow, black);<hr>
+2 <span class="red">linear-gradient</span>(to right, yellow, black);<hr>
+3 <span class="red">linear-gradient</span>(to bottom, yellow, black);<hr>
+4 <span class="red">linear-gradient</span>(to left, yellow, black);<hr>
+5 <span class="red">linear-gradient</span>(to left top, yellow, black);<hr>
+6 <span class="red">linear-gradient</span>(to right bottom, yellow, black);
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample2-1">1</div><hr>
+                    <div class="sample sample2-2">2</div><hr>
+                    <div class="sample sample2-3">3</div><hr>
+                    <div class="sample sample2-4">4</div><hr>
+                    <div class="sample sample2-5">5</div><hr>
+                    <div class="sample sample2-6">6</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col1">
+                    <b>Направления в градусах</b>
+                </td>
+                <td class="col2"><code>
+1 <span class="red">linear-gradient</span>(0deg, darkred, pink);<hr>
+2 <span class="red">linear-gradient</span>(180deg, darkred, pink);<hr>
+3 <span class="red">linear-gradient</span>(-235deg, darkred, pink);<hr>
+4 <span class="red">linear-gradient</span>(270deg, darkred, pink);<hr>
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample3-1">1</div><hr>
+                    <div class="sample sample3-2">2</div><hr>
+                    <div class="sample sample3-3">3</div><hr>
+                    <div class="sample sample3-4">4</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col1">
+                    <b>Многоцветный градиент</b><br>
+                    Цвета перечисляются через запятую после направления
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">linear-gradient</span>(
+    to right,
+        black,
+        brown,
+        blue,
+        green,
+        red,
+        yellow,
+        white
+);</pre>
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample4-1"></div>
+                    По умолчанию все цвета равномерно распределяются по ширине, но этим можно управлять с помощью пропорций цвета
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col1">
+                <b>Пропорции цветов</b><br>,
+                    % после цвета
+
+                </td>
+                <td class="col2"><code>
+                <b>background-image:</b> <br>
+                <span class="red">linear-gradient</span>(45deg, green, yellow); <hr>
+                <span class="red">linear-gradient</span>(45deg, green 0%, yellow 100%); <hr>
+                <span class="red">linear-gradient</span>(45deg, green 30%, yellow 70%);
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample5-1">1</div>
+                    По умолчанию пропорции распределены равномерно, если будут два цвета, то
+                    у первого будет 0%, у второго 100%, чтобы получился неразрывный градиент<hr>
+                    <div class="sample sample5-2">2</div>
+                    Подтверждение верхнего примера<hr>
+                    <div class="sample sample5-3">3</div>
+                    Здесь на шаге 0-30% ширины займёт зелёный цвет без искажений, а на 70-100%
+                    жёлтый, градиент будет на шаге 30-70% под углом 45 градусов.
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col1">
+                    <b>Колорстопы</b>
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">linear-gradient</span>(
+    to right,
+        black 0%, black 15%,
+        brown 15%, brown 30%,
+        blue 30%, blue 45%,
+        green 45%, green 60%,
+        red 60%, red 75%,
+        yellow 75%, yellow 90%,
+        white 90%, white 100%
+);</pre>
+               </code></td>
+                <td class="col3" style="background-color: pink;">
+                    <div class="sample sample6-1"></div>
+                    Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,
+                    то самого градиента не будет, будут только эти цвета в чистом виде
+                </td>
+            </tr>
+
+                        <tr>
+                <td class="col1">
+                    <b>Колорстопы в px</b>
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">linear-gradient</span>(
+    to right,
+        black 0px, black 15px,
+        brown 15px, brown 30px,
+        blue 30px, blue 45px,
+        green 45px, green 60px,
+        red 60px, red 75px,
+        yellow 75px, yellow 90px,
+        white 90px, white 100px
+);</pre>
+               </code></td>
+                <td class="col3" style="background-color: pink;">
+                    <div class="sample sample7-1"></div>
+                    Можно записывать в пикселях, при этом будет фиксированное значение цвета и не будет зависимости
+                    от ширины блока, когда стоят. <br> Цвет, который был указан последним занимает всё остальное свободное пространство
+                </td>
+            </tr>
+
+             <tr>
+                <th class="css3-table-title" colspan="3">repeating-linear-gradient()</th>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <b>Повторяющийся инейный градиент</b><br>
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">repeating-linear-gradient</span>(
+    to right,
+        black 0px, black 15px,
+        brown 15px, brown 30px,
+        blue 30px, blue 45px,
+        green 45px, green 60px,
+        red 60px, red 75px,
+        yellow 75px, yellow 90px,
+        white 90px, white 100px
+);</pre>
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample8-1"></div>
+                    При повторении градиента обычно задают пиксели для колор-стопов и одинаковые крайние
+                    цвета, чтобы не было резких переходов
+                 </td>
+            </tr>
+
+            <tr>
+                <td class="col1" rowspan="2">
+                    <b>Множественный градиент</b><br>
+                </td>
+                <td class="col2"><code><pre>
+<b>background-image: </b>
+    linear-gradient(135deg, deeppink 25%, transparent 25%),
+    linear-gradient(225deg, deeppink 25%, transparent 25%),
+    linear-gradient(45deg, deeppink 25%, transparent 25%),
+    linear-gradient(315deg, deeppink 25%, transparent 25%);</pre>
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample9-1"></div>
+                    Если вместо transparent указать цвет хотя бы в одном градиенте, то он перекроет весь фон, и остальные не будут видны
+                 </td>
+            </tr>
+
+            <tr>
+                <td class="col2"><code>
+<b>background-image: </b><br>
+linear-gradient(135deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px),<br>
+linear-gradient(225deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px),<br>
+linear-gradient(45deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px),<br>
+linear-gradient(315deg, black 0px, black 5px, brown 5px, brown 10px, blue 10px, blue 15px, green 15px, green 20px, red 20px, red 25px, yellow 25px, yellow 30px, transparent 30px);
+               </code></td>
+                <td class="col3">
+                    <div class="sample sample10-1"></div>
+                 </td>
+            </tr>
+
+            <tr>
+                <td class="col1">
+                    <b>Фон на градиентах</b>
+                    (пример указан в body)<br>
+                </td>
+                <td class="col2"><code><pre>
+<span class="red">body</span> {
+<b>background-image:</b>
+    <b>linear-gradient</b>(
+        to bottom right,
+        rgba(101,109,120, 0.1) 25%,
+        transparent 25%),
+    <b>linear-gradient</b>(
+        to bottom left,
+        rgba(101,109,120, 0.1) 25%,
+        transparent 25%),
+    <b>linear-gradient</b>(
+        to top right,
+        rgba(101,109,120, 0.1) 25%,
+        transparent 25%),
+    <b>linear-gradient</b>(
+        to top left,
+        rgba(101,109,120, 0.1) 25%,
+        transparent 25%);
+<b>background-position:</b>
+    0px 0px,
+    0px 0px,
+    0px 0px,
+    0px 0px;
+<b>background-size:</b> 100px 100px;
+<b>background-repeat:</b> repeat;
+<b>background-color:</b> rgba(255,255,224, 0.1);
+/* background-attachment: fixed; */
+}
+
+</pre>
+               </code></td>
+                <td class="col3">
+
+                 </td>
+            </tr>
+
+
+        </table>
+
+
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

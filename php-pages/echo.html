@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | PHP | Вывод данных</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html             ">Главная</a></li>
+		<li><a href="../design-page.html       ">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html         ">HTML</a></li>
+		<li><a href="../css-page.html          ">CSS</a></li>
+    <li><a href="../css3-page.html         ">CSS3</a></li>
+		<li><a href="../javascript-page.html   ">JS</a></li>
+		<li><a class="active" href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="php-lang.html               ">Язык PHP</a></li>
+			<li><a class="active" href="echo.html    ">Вывод данных</a></li>
+			<li><a href="vars.html                   ">Переменные</a></li>
+			<li><a href="if-else.html                ">Условные<br>операторы</a></li>
+			<li><a href="cicles.html                 ">Циклы</a></li>
+			<li><a href="arrayd.html                 ">Массивы</a></li>
+			<li><a href="functionss.html             ">Функции</a></li>
+			<li><a href="forms.html                  ">Формы</a></li>
+			<li><a href="post.html                   ">Почта</a></li>
+      <li><a href="yii.html                    ">Yii2</a></li>
+			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="sql.html                    ">SQL</a></li>
+      <li><a href="docker.html                 ">Docker</a></li>
+			<li><a href="console.html                ">Консоль</a></li>
+		</ul>
+
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник | PHP | Вывод данных</h2>
+
+	<div class="container-fluid">
+		<div class="row">
+				<table class="table table-bordered table-condensed">
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Вывод данных на экран</th>
+					</tr>
+					<tr>
+						<td>
+							<b>echo <br>
+							&lt;?=$_some_var;</b>
+						</td>
+						<td>
+							<pre><code>echo "<span class="text-success">Hello, World!</span>";</code></pre>
+							<pre><code>echo "<span class="text-success">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>";</code></pre>
+							<pre><code>echo <b class="text-success">$some_var</b>; <span class="gray">// вывод значения переменной</span></code></pre>
+							<pre><code>echo <b class="text-success">PHP_VERSION</b>; <span class="gray">// вывод версии PHP</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">Кавычки могут быть как одинарными, так и двойными, но когда выводим html-теги, то кавычки должны быть только двойными. Одинарные занимают в 2 раза меньше памяти. <br>Точка с запятой заканчивает инструкцию, как и в любом другом языке
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<b>print_r()</b> <br>
+							<b>print()</b>
+						</td>
+						<td>
+							<pre><code>print_r ("<span class="text-success">Hello, World!</span>");</code></pre>
+							<pre><code>print_r ("<span class="text-success">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>");</code></pre>
+							<pre><code>print_r (<b class="text-success">$some_var</b>); <span class="gray">// вывод значения переменной</span></code></pre>
+							<pre><code>print_r (<b class="text-success">PHP_VERSION</b>."&lt;hr&gt;"); <span class="gray">// вывод версии PHP</span></code></pre>
+						</td>
+						<td style="width: 33.3%;"><b>print_r()</b> функция исключительно для разработчиков, для вывода информации на экран, анолог <b>console.log</b> в JavaScript
+					</tr>
+
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Подключение файлов</th>
+					</tr>
+					<tr>
+						<td><b>require</b></td>
+						<td>
+							<pre><code>require "<span class="text-success">blocks/block1.php</span>";</code></pre>
+							Если файл <b>blocks/block1.php</b> не загрузился, то интерпретатор выдаст ошибку, и страница НЕ ОТОБРАЗИТСЯ!!!
+						</td>
+						<td style="width: 33.3%;">
+							Блок <b>block1.php</b> содержит только html-код (без &lt;?php ?&gt;). <br>
+							Удобно применять при нахождении одинакого html-кода на нескольких страницах (добавлять и редактировать), только расширение файлов должно быть .php
+						</td>
+					</tr>
+					<tr>
+						<td><b>include</b></td>
+						<td>
+							<pre><code>include "<span class="text-success">blocks/block1.php</span>";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Если файл <b>blocks/block1.php</b> не загрузился, то интерпретатор НЕ выдаст ошибку, и страница отобразится, кроме данного блока</td>
+					</tr>
+					<tr>
+						<td><b>require_once,<br>include_once</b></td>
+						<td>
+							<pre><code>include_once "<span class="text-success">blocks/block1.php</span>";
+require_once "<span class="text-success">blocks/block2.php</span>";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Используются для загрузки на страницу единожды</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+<pre><code>include_once <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Указывать ссылку от корня документа</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+<pre><code>include_once <span class="red">__DIR__</span> . "/blocks/block1.php";</code></pre>
+						</td>
+						<td style="width: 33.3%;">Указывать ссылку от текущей документа, где располагается текущий открытый файл</td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Создание файлов</th>
+					</tr>
+					<tr>
+						<td>
+							<b>fopen()</b><br>
+							<b>fwrite()</b><br>
+							<b>fclose()</b>
+						</td>
+						<td>
+							<pre><code>$file = <span class="red">fopen</span>("1.txt", "a+t");                    <span class="gray">// Открываем файл</span>
+<span class="red">fwrite</span>($file, "<span class="gray">Hello from php!<span class="red">\n</span>This is cool!</span>");  <span class="gray">// Записываем в него текст</span>
+<span class="red">fclose</span>($file);                                    <span class="gray">// Закрываем файл</span>
+							</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Будет создан файл 1.txt с текстом "Hello from php!\nThis is cool!"<br>
+							"<span class="red">r</span>" - файл только для чтения, открывает и помещает указатель в начало файла<br>
+							"<span class="red">r+</span>" - ... можно редактировать, заменяя предыдущие символы;<br>
+							"<span class="red">w</span>" - файл только для записи (создаёт файл, если его нет), обрезает файл до нулевой длины (удаляет все символы);<br>
+							"<span class="red">w+</span>" - ... для записи и чтения;<br>
+							"<span class="red">a</span>" - открыывает файл только для записи и помещает указатель в конец файла, не удаляет предшествующие символы;<br>
+							"<span class="red">a+</span>" - ... для записи и чтения;<br>
+							"<span class="red">+t</span>" - добавляет поддержку спецсимволов \n \t;<br>
+							"<span class="red">+b</span>" - убирает поддержку спецсимволов \n \t;<br>
+							Много параметров, <a href="http://www.php.su/fopen" target="_blank">документация</a>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>file_put_contents()</b>
+						</td>
+						<td>
+							<span class="gray">// Упрощенная запись: </span>
+							<pre><code><span class="red">file_put_contents</span>("1.txt", "Some text");</code></pre>
+						</td>
+						<td style="width: 33.3%;"></td>
+					</tr>
+					<tr>
+						<td>
+							<b>file_exist()</b>
+						</td>
+						<td>
+							<pre><code><span class="red">echo file_exist</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Проверка на существование файла</td>
+					</tr>
+					<tr>
+						<td><b>filesize()</b></td>
+						<td>
+							<pre><code><span class="red">echo filesize</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Размер файла</td>
+					</tr>
+					<tr>
+						<td><b>unlink()</b></td>
+						<td>
+							<pre><code><span class="red">unlink</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Удаление файла</td>
+					</tr>
+					<tr>
+						<td><b>rename()</b></td>
+						<td>
+							<pre><code><span class="red">rename</span>("1.txt", "2.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Переименовать файл с сохранением старого</td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Права доступа к файлам</th>
+					</tr>
+					<tr>
+						<td><b>__FILE__</b></td>
+						<td>
+							<pre><code>echo <span class="red">__FILE__</span>;</code></pre>
+						</td>
+						<td style="width: 33.3%;">Путь к данному открытому php-файлу</td>
+					</tr>
+					<tr>
+						<td><b>fileperms()</b></td>
+						<td>
+							<pre><code>echo <span class="red">fileperms</span>(__FILE__); <span class="gray">// 33206</span></code></pre>
+						</td>
+						<td style="width: 33.3%;">Узнать код прав доступа, необходимо для unix-систем</td>
+					</tr>
+					<tr>
+						<td><b>chmod()</b></td>
+						<td>
+							<pre><code>echo <span class="red">chmod</span>(__FILE__, 0777);</code></pre>
+						</td>
+						<td style="width: 33.3%;">Изменить права доступа</td>
+					</tr>
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Вывод символов из текстового файла</th>
+					</tr>
+					<tr>
+						<td><b>fread</b></td>
+						<td>
+							<pre><code>$file = <span class="red">fopen</span>("1.txt", "r+t");
+while (!<span class="red">feof</span>($file)) {
+  <span class="red">echo fread</span>($file, 1)."<span class="gray">&lt;br&gt;</span>";
+}
+<span class="red">fclose</span>($file);</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Выводится посимвольно
+						</td>
+					</tr>
+					<tr>
+						<td><b>fseek()</b></td>
+						<td>
+							<pre><code><span class="red">fseek</span>($file, 0);</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Переводит курсор у считываемого файла на выбранный символ
+						</td>
+					</tr>
+					<tr>
+						<td><b>file_get_contents()</b></td>
+						<td>
+							<span class="gray">// Упрощенная запись: </span>
+							<pre><code><span class="red">echo file_get_contents</span>("1.txt");</code></pre>
+						</td>
+						<td style="width: 33.3%;">Выведет текст файла 1.txt на php-страницу
+						</td>
+					</tr>
+
+				</table>
+			</div>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+													 EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

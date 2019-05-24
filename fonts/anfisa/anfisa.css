@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Anfisa Grotesk';
+    src: local('Anfisa Grotesk'), url('anfisagrotesk.woff2') format('woff2'), url('anfisagrotesk.woff') format('woff'), url('anfisagrotesk.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

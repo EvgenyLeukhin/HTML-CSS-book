@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | CSS3 | Bootstrap4</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+  <style>
+  code {
+      font-size: 1em;
+    }
+    .col-1 {width: 20%;}
+    .col-2 {width: 50%;}
+    .col-3 {width: 30%;}
+    .sass {color: #dc3545; outline: 1px solid; font-weight: bold;}
+    .black {color: #000;}
+    h4 {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a class="active" href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="#">Градиент</a>
+          <ul class="sub-menu sub-menu4">
+            <li><a href="../css3-pages/linear-gradient.html">Линейный</a></li>
+            <li><a href="../css3-pages/radial-gradient.html">Радиальный</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/shadow.html">Тени</a></li>
+        <li><a href="../css3-pages/filter.html">Фото-фильтры</a></li>
+        <li>
+          <a href="#">Таблицы на CSS3</a>
+          <ul class="sub-menu sub-menu5">
+            <li><a href="../css3-pages/table-css.html">CSS-таблица</a></li>
+            <li><a href="../css3-pages/table-inline.html">INLINE-таблица</a></li>
+            <li><a href="../css3-pages/table-layout.html">Адаптивная сетка</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/animation.html">Анимации</a></li>
+        <li><a href="../css3-pages/transform.html">Трансформации</a></li>
+        <li><a href="../css3-pages/transition.html">Плавные переходы</a></li>
+        <li><a href="../css3-pages/centered.html">Центровка</a></li>
+        <li><a href="../css3-pages/mask.html">Маска</a></li>
+        <li>
+          <a href="#">Слайдер</a>
+          <ul class="sub-menu sub-menu3">
+            <li><a href="../css3-pages/slider_nerds.html">Слайдер nёrds</a></li>
+            <li><a href="../css3-pages/slider2.html">Слайдер с прокруткой</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../css3-pages/flex.html">Флекс</a>
+          <ul class="sub-menu sub-menu8">
+            <li><a href="../css3-pages/flex.html">flex</a></li>
+            <li><a href="../css3-pages/flex&block.html">flex и block</a></li>
+          </ul>
+        </li>
+        <li><a href="../css3-pages/decoration_css3.html">Чекбоксы</a></li>
+        <li><a href="../css3-pages/bem.html">БЭМ</a></li>
+
+          <li>
+            <a href="#" class="active">Bootstrap</a>
+            <ul class="sub-menu sub-menu-bs">
+              <li><a href="../css3-pages/bootstrap3-grid.html">Bs-3 - Сетка</a></li>
+              <li><a class="active" href="../css3-pages/bootstrap4-grid.html">Bs-4 - Сетка</a></li>
+              <li><a href="../css3-pages/bootstrap3-other.html">Bs-3 - Прочее</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="#">LESS\SASS</a>
+          <ul class="sub-menu sub-menu-less">
+            <li><a href="../css3-pages/less-preproc.html">Общее</a></li>
+            <li><a href="../css3-pages/less-vars.html">Переменные</a></li>
+            <li><a href="../css3-pages/less-color-func.html">Цветовые функции</a></li>
+            <li><a href="../css3-pages/less-mixins.html">Примеси</a></li>
+            <li><a href="../css3-pages/less-when.html">Условия и циклы</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../css3-pages/css-grids.html">CSS-Grids</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="content clearfix">
+
+      <h2>Мой Справочник |  CSS3 | Bootstrap4-сетка</h2>
+      <a href="http://getbootstrap.com/" target="_blank">Bootstrap4 - official docs</a>&nbsp;|&nbsp;
+      <a href="https://hackerthemes.com/bootstrap-cheatsheet/" target="_blank">Bootstrap4-cheatsheet</a>&nbsp;|&nbsp;
+      <a href="https://startbootstrap.com/" target="_blank">Bootstrap-темы</a>
+
+
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">Bootstrap-4</th>
+        </tr>
+
+        <tr>
+          <td class="col-1"><b>breakpoints</b></td>
+          <td class="col-2">
+            <h4>Примеси для <b>min-width:</b></h4>
+            <code><span class="sass">@include media-breakpoint-up(xs)</span> { ... } <span class="gray">// min-width: <b>0</b> (default)</span><br>
+<span class="sass">@include media-breakpoint-up(sm)</span> { ... }  <span class="gray">// min-width: <b>576px</b></span><br>
+<span class="sass">@include media-breakpoint-up(md)</span> { ... }  <span class="gray">// min-width: <b>768px</b></span><br>
+<span class="sass">@include media-breakpoint-up(lg)</span> { ... }  <span class="gray">// min-width: <b>992px</b></span><br>
+<span class="sass">@include media-breakpoint-up(xl)</span> { ... }  <span class="gray">// min-width: <b>1200px</b></span><br><br>
+<span class="gray">// Example usage:</span> <br>
+<span class="sass">@include media-breakpoint-up(sm)</span> { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+} <br>
+<span class="red">@media</span> (min-width:576px) { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+}
+</code> <hr>
+<h4>Примеси для <b>max-width:</b></h4>
+<code><span class="sass">@include media-breakpoint-down(xs)</span> { ... } <span class="gray">// max-width: <b>575.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(sm)</span> { ... } <span class="gray">// max-width: <b>797.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(md)</span> { ... } <span class="gray">// max-width: <b>991.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(lg)</span> { ... } <span class="gray">// max-width: <b>1199.98px</b></span><br>
+<span class="sass">@include media-breakpoint-down(xl)</span> { ... } <span class="gray">// min-width: <b>1200px + </b></span><br> <br>
+<span class="gray">// Example usage:</span> <br>
+<span class="sass">@include media-breakpoint-down(lg)</span> { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+} <br>
+<span class="red">@media</span> (max-width:1199.98px) { <br>
+&nbsp;&nbsp;<span class="red">.some-class</span> { display: block; } <br>
+}</code> <hr>
+<h4>Примеси для <b>min-width:</b> и <b>max-width:</b></h4>
+<code><span class="sass">@include media-breakpoint-only(xs)</span> { ... }
+<span class="gray">// (0 - 575.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(sm)</span> { ... }
+<span class="gray">// (576px - 797.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(md)</span> { ... }
+<span class="gray">// (798px - 991.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(lg)</span> { ... }
+<span class="gray">// (992px - 1199.98px)</span><br>
+
+<span class="sass">@include media-breakpoint-only(xl)</span> { ... }
+<span class="gray">// (1200px -&gt; +)</span><br>
+</code><hr>
+
+<h4>Примеси для <b>min-width:</b> и <b>max-width:</b> (заданная примесь)</h4>
+<code><span class="sass">@include media-breakpoint-between(md, xl)</span> { ... }
+<span class="gray">// (720px -&gt; +)</span><br>
+</code></td>
+<td class="col-3"><code><span class="sass">$grid-breakpoints:</span> ( <br>
+&nbsp;&nbsp;xs: 0,<br>
+&nbsp;&nbsp;sm: 576px,<br>
+&nbsp;&nbsp;md: 768px,<br>
+&nbsp;&nbsp;lg: 992px,<br>
+&nbsp;&nbsp;xl: 1200px<br>
+) !default;</td>
+        </tr>
+
+        <tr>
+          <td class="col-1">
+            <b>.container</b> <br>
+            <b>.container-fluid</b>
+          </td>
+          <td class="col-2"><code><span class="red">.container</span> {<br>
+&nbsp;&nbsp;max-width: 1140px; (<mark>xl</mark>)<br>
+&nbsp;&nbsp;max-width: 960px;&nbsp; (<mark>lg</mark>)<br>
+&nbsp;&nbsp;max-width: 720px;&nbsp; (<mark>md</mark>)<br>
+&nbsp;&nbsp;max-width: 540px;&nbsp; (<mark>sm</mark>)<br>
+<hr>
+&nbsp;&nbsp;padding-left: 15px;<br>
+&nbsp;&nbsp;padding-right: 15px;<br>
+&nbsp;&nbsp;margin-left: auto;<br>
+&nbsp;&nbsp;margin-right: auto;<br>
+}
+<br>
+<span class="red">.container-fluid</span> { <br>
+&nbsp;&nbsp;max-width: 100%; <br>
+}</code>
+
+
+
+</td>
+          <td class="col-3"><code><span class="sass">$container-max-widths:</span> ( <br>
+&nbsp;&nbsp;sm: 540px,<br>
+&nbsp;&nbsp;md: 720px,<br>
+&nbsp;&nbsp;lg: 960px,<br>
+&nbsp;&nbsp;xl: 1140px<br>
+) !default;</code>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="col-1"><b>.row</b></td>
+          <td class="col-2">
+<h4>Распределение по флекс-оси</h4>
+<code><span class="red">.justify-content-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-start</span> { justify-content: flex-start; }</code> <br>
+<code><span class="red">.justify-content-end</span> { justify-content: flex-end; }</code> <br>
+<code><span class="red">.justify-content-around</span> { justify-content: space-around; }</code> <br>
+<code><span class="red">.justify-content-between</span> { justify-content: space-between; }</code> <hr>
+
+<h4>Распределение по флекс-оси на ЗАДАННЫХ bp</h4>
+<code><span class="red">.justify-content-sm-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-md-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-lg-center</span> { justify-content: center; }</code> <br>
+<code><span class="red">.justify-content-xl-center</span> { justify-content: center; }</code> <hr>
+
+<h4>Выравнивание по поперечной оси</h4>
+<code><span class="red">.align-items-start</span> { align-items: flex-start; }</code> <br>
+<code><span class="red">.align-items-end</span> { align-items: flex-end; }</code> <br>
+<code><span class="red">.align-items-center</span> { align-items: center; }</code> <hr>
+
+<h4>Убрать padding у .col-</h4>
+<code><span class="red">.no-gutters</span> -&gt; <span class="red">.col-s </span>{ padding: 0; }</code>
+
+          </td>
+          <td class="col-3"></td>
+        </tr>
+
+        <tr>
+          <td class="col-1"><b>.col</b></td>
+          <td class="col-2">
+            <code>
+<span class="black"><b>Деление на РАВНЫЕ колонки на ВСЕХ bp (равномерное, зависит от кол-ва)</b></span> <br>
+              <span class="red">.col</span> { flex-grow: 1; flex-basis: 0; } <hr>
+
+<span class="black"><b>Деление на РАВНЫЕ колонки на ЗАДАННЫХ bp (равномерное, зависит от кол-ва)</b></span> <br>
+              <span class="red">.col-md</span> { flex-grow: 1; flex-basis: 0; } <span class="black"><b>(НАСЛЕДУЮТСЯ от меньших к большим)</b></span><hr>
+
+<span class="black"><b>Деление на ЗАДАННЫЕ колонки на ЗАДАННЫХ bp (НАСЛЕДУЮТСЯ от меньших к большим)</b></span> <br>
+              <span class="red">.col-4</span> &nbsp;&nbsp;&nbsp;{ flex: 0 0 33.33333%; } <span class="gray">- xs</span><br>
+              <span class="red">.col-sm-4</span> { flex: 0 0 33.33333%; } <br>
+              <span class="red">.col-md-4</span> { flex: 0 0 33.33333%; } <br>
+              <span class="red">.col-lg-4</span> { flex: 0 0 33.33333%; } <br>
+              <span class="red">.col-xl-4</span> { flex: 0 0 33.33333%; } <hr>
+            </code>
+            <h4>Классы</h4>
+<code><span class="red">.align-self-start</span> { align-self: flex-start; }</code><br>
+<code><span class="red">.align-self-center</span> { align-self: center; }</code><br>
+<code><span class="red">.align-self-end</span> { align-self: flex-end; }</code><hr>
+
+<span class="black"><b>ОТОБРАЖЕНИЕ (НАСЛЕДУЮТСЯ от меньших к большим)</b></span> <br>
+<code><span class="red">.d-block</span> { display: block; }</code><br>
+<code><span class="red">.d-none</span> { display: block; }</code><br>
+<code><span class="red">.d-sm-block</span> { display: block; }</code><br>
+<code><span class="red">.d-sm-none</span> { display: block; }</code><hr>
+
+<span class="black"><b>Порядок</b></span> <br>
+<code><span class="red">.order-1</span> &nbsp;{ order: 1; }</code><br>
+<code><span class="red">.order-10</span> { order: 10; }</code><hr>
+
+<span class="black"><b>Сдвиг</b></span> <br>
+<code><span class="red">.ml-auto</span> &nbsp;{ margin-left: auto; }</code><br>
+<code><span class="red">.mr-auto</span> { margin-right: auto; }</code><hr>
+<code><span class="red">.ml-md-auto</span> { margin-left: auto; }</code><hr>
+<code><span class="red">.offser-md-3</span> { margin-left: ...%; }</code><hr>
+          </td>
+
+
+
+
+          <td class="col-3"><code><span class="sass">$grid-columns:</span> 12 !default;<br>
+          <span class="sass">$grid-gutter-width:</span> 30px !default;</code>
+        </td>
+        </tr>
+
+      </table>
+
+
+    </div>
+
+
+
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/jquery-3.1.0.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

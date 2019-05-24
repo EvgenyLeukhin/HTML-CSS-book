@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | PHP | Условные операторы</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+    </style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html             ">Главная</a></li>
+		<li><a href="../design-page.html       ">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html         ">HTML</a></li>
+		<li><a href="../css-page.html          ">CSS</a></li>
+    <li><a href="../css3-page.html         ">CSS3</a></li>
+		<li><a href="../javascript-page.html   ">JS</a></li>
+		<li><a class="active" href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="php-lang.html               ">Язык PHP</a></li>
+			<li><a href="echo.html                   ">Вывод данных</a></li>
+			<li><a href="vars.html                   ">Переменные</a></li>
+			<li><a class="active" href="if-else.html ">Условные<br>операторы</a></li>
+			<li><a href="cicles.html                 ">Циклы</a></li>
+			<li><a href="arrayd.html                 ">Массивы</a></li>
+			<li><a href="functionss.html             ">Функции</a></li>
+			<li><a href="forms.html                  ">Формы</a></li>
+			<li><a href="post.html                   ">Почта</a></li>
+      <li><a href="yii.html                    ">Yii2</a></li>
+			<li><a href="cms.html                    ">CMS</a></li>
+			<li><a href="sql.html                    ">SQL</a></li>
+      <li><a href="docker.html                 ">Docker</a></li>
+			<li><a href="console.html                ">Консоль</a></li>
+		</ul>
+
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник | PHP | Условные операторы</h2>
+
+	<div class="container-fluid">
+		<div class="row">
+				<table class="table table-bordered table-condensed">
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Условные операторы</th>
+					</tr>
+					<tr>
+						<td><b>if else</b></td>
+						<td><pre><code>$name = "Евгений";
+<span class="red"><b>if</b></span> (($name <span class="red"><b>==</b></span> "Евгений") <span class="red"><b>||</b></span> ($name <span class="red"><b>==</b></span> "Evgeny")) {
+  echo "<span class="gray">&lt;h1 style=\"color: lightgreen;\"&gt;Hello, $name!&lt;/h1&gt;</span>";
+} <span class="red"><b>else if</b></span> (($name <span class="red"><b>==</b></span> "Степан") <span class="red"><b>||</b></span> ($name <span class="red"><b>==</b></span> "Stephan")) {
+  echo "<span class="gray">&lt;h1 style=\"color: orange;\"&gt;Hello, $name&lt;/h1&gt;</span>";
+} <span class="red"><b>else</b></span> { echo "<span class="gray">&lt;h1 style=\"color: red;\"&gt;Hello, unknown_name!&lt;/h1&gt;</span>"; }</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Так же как и в JS
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>switch-case</b></td>
+						<td><pre><code><span class="red">switch</span> ($a) {
+  <span class="red">case</span> $a == 0 : echo "<span class="gray">a = 0"</span>; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+  <span class="red">case</span> $a == 1 : echo "<span class="gray">a = 1</span>"; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+  <span class="red">case</span> $a == 2 : echo "<span class="gray">a = 2</span>"; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+  <span class="red">case</span> $a == 3 : echo "<span class="gray">a = 3</span>"; <span class="red">break</span>; <span class="gray">// break прекращает выборку</span>
+
+  <span class="red">default:</span> echo "<span class="gray">значение переменной не входит в case</span>";
+}</code></pre></td>
+						<td style="width: 33.3%;">
+							Так же как и в JS
+						</td>
+					</tr>
+
+
+					<tr>
+						<th class="lead  text-center  bg-primary" colspan="3">Тернарный оператор</th>
+					</tr>
+					<tr>
+						<td><b>? :</b></td>
+						<td>
+							<pre><code>$a = 13;
+$b = 2;
+$a == $b <span class="red"><b>?</b></span> $string = "<span class="gray">a = b</span>" <span class="red"><b>:</b></span> $string = "<span class="gray">a != b</span>";
+echo $string;</code></pre>
+						</td>
+						<td style="width: 33.3%;">
+							Так же как и в JS
+						</td>
+					</tr>
+
+				</table>
+			</div>
+	</div>
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+													 EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

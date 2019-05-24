@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | CSS | Блочная вёрстка | Центровщик</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<style>
+.discription {
+		position: relative;
+		font-family: Verdana, serif;
+		font-size: 1.5em;
+		color: blue;
+		padding: 10px;
+		padding-left: 30px;
+		border-left: 30px solid blue;
+		font-style: italic;
+		z-index: -100;
+	}
+	.discription::after {
+		position: absolute;
+		content:"";
+		top: 0%;
+		left: 0px;
+		height: 0px;
+		width: 0px;
+		border-width: 26px;
+		border-style: solid;
+		border-color: transparent;
+		border-left-color: blue;
+	}
+.main-header2, .main-footer2 {
+	min-height: 75px;
+	padding: 10px;
+	background-color: lightyellow;
+	border: 1px solid orange;
+}
+.main-content2 {
+	min-height: 350px;
+	padding: 10px;
+	background-color: lightblue;
+}
+.layout-positioner2 {
+	max-width: 750px;
+	outline: 3px dashed orange;
+	padding: 10px;
+	margin: 10px auto;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+	<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a class="active" href="../css-page.html">CSS</a></li>
+    <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a href="../javascript-page.html">JS</a></li>
+    <li><a href="../php.html">PHP</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+			<li><a href="../css-pages/selectors.html">Селекторы</a></li>
+			<li><a href="../css-pages/values.html">Величины</a></li>
+			<li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+			<li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+			<li><a href="../css-pages/color.html">Цвет</a></li>
+			<li><a href="../css-pages/bg.html">Фон</a></li>
+			<li><a href="../css-pages/text.html">Шрифт и текст</a></li>
+			<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+			<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+			<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+			<li><a href="../css-pages/display.html">Отображение</a></li>
+			<li><a href="../css-pages/position.html">Позиционирование</a></li>
+			<li>
+				<a href="#">Меню</a>
+					<ul class="sub-menu sub-menu1">
+						<li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+						<li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+					</ul>
+			</li>
+			<li>
+				<a  class="active" href="#">Блочная вёрстка</a>
+					<ul class="sub-menu sub-menu2">
+						<li><a href="../css-pages/float.html">float</a></li>
+						<li><a href="../css-pages/centered.html">Центровщик</a></li>
+						<li><a href="../css-pages/clearfix.html">Распорки</a></li>
+						<li><a href="../css-pages/footer.html">Футер</a></li>
+						<li><a href="../css-pages/layout.html">Сетка</a></li>
+						<li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+					</ul>
+			</li>
+			<li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+			<li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
+			<li><a href="../css-pages/decoration.html">Фигуры</a></li>
+		</ul>
+	</div>
+
+	<div class="content clearfix">
+	<h2>Мой Справочник | CSS | Блочная вёрстка | Центровщик</h2>
+
+	<div class="directory-item clearfix">
+
+		<div class="html">
+			<h4 class="small-header">HTML:</h4>
+			<code>
+				&lt;header <span class="red">class="main-header"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="layout-positioner"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...HEADER...</span><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+				&lt;/header&gt;<br>
+				&lt;section <span class="red">class="main-content"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="layout-positioner"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...MAIN-CONTENT...</span><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+				&lt;/section&gt;<br>
+				&lt;footer <span class="red">class="main-footer"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="red">class="layout-positioner"</span>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">...FOOTER...</span><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+				&lt;/footer&gt;
+			</code>
+		</div>
+
+		<div class="css">
+			<h4 class="small-header">CSS:</h4>
+			<code>
+	<span class="red">.main-header, .main-footer</span> {<br>
+		min-height: 75px;<br>
+		padding: 10px;<br>
+		background-color: lightyellow;<br>
+		border: 1px solid orange;<br>
+	}<br>
+	<span class="red">.main-content</span> {<br>
+		min-height: 350px;<br>
+		padding: 10px;<br>
+		background-color: lightblue;<br>
+	}<br>
+	<span class="red">.layout-positioner</span> {<br>
+		<mark>max-width: 750px;</mark><br>
+		<mark>margin: 10px auto;</mark><br>
+		padding: 10px;<br>
+		outline: 3px dashed orange;<br>
+	}
+			</code>
+		</div>
+
+		<div class="display">
+
+			<header class="main-header2">
+				<div class="layout-positioner2">
+					...HEADER...
+				</div>
+			</header>
+			<section class="main-content2">
+				<div class="layout-positioner2">
+					...MAIN-CONTENT...
+				</div>
+			</section>
+			<footer class="main-footer2">
+				<div class="layout-positioner2">
+					...FOOTER...
+				</div>
+			</footer>
+
+		</div>
+		<p class="discription">2 основных параметра ЦЕНТРОВЩИКА выделены</p>
+
+	</div>
+
+	</div>
+
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

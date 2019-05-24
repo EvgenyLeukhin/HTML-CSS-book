@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | CSS | Блочная вёрстка | Адаптивность</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../css-pages/selectors.html">Селекторы</a></li>
+        <li><a href="../css-pages/values.html">Величины</a></li>
+        <li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+        <li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+        <li><a href="../css-pages/color.html">Цвет</a></li>
+        <li><a href="../css-pages/bg.html">Фон</a></li>
+        <li><a href="../css-pages/text.html">Шрифт и текст</a></li>
+        <li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+        <li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+        <li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+        <li><a href="../css-pages/display.html">Отображение</a></li>
+        <li><a href="../css-pages/position.html">Позиционирование</a></li>
+        <li>
+          <a href="#">Меню</a>
+          <ul class="sub-menu sub-menu1">
+            <li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+            <li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+          </ul>
+
+        </li>
+        <li>
+          <a href="#">Блочная вёрстка</a>
+          <ul class="sub-menu sub-menu2">
+            <li><a href="../css-pages/float.html">float</a></li>
+            <li><a href="../css-pages/centered.html">Центровщик</a></li>
+            <li><a href="../css-pages/clearfix.html">Распорки</a></li>
+            <li><a href="../css-pages/footer.html">Футер</a></li>
+            <li><a href="../css-pages/layout.html">Сетка</a></li>
+            <li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+          </ul>
+        </li>
+        <li><a class="active" href="../css-pages/adaptive.html">Адаптивность</a></li>
+        <li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
+        <li><a href="../css-pages/decoration.html">Фигуры</a></li>
+      </ul>
+    </div>
+
+    <div class="content clearfix">
+      <h2>Мой Справочник | CSS | Блочная вёрстка | Адаптивность</h2>
+
+      <h2>Медиа-запросы</h2>
+
+      <div class="css">
+        <h4 class="small-header">CSS:</h4>
+        <code>
+<span class="gray">/*Изменения в настройке сетки при ширине экрана более от 480 до 800 пикселей <span style="color: black;">(ПЛАНШЕТЫ)*/</span></span><br>
+<span class="red">@media</span> <span style="color: black;">screen and (min-width: 480px) and (max-width: 800px)</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector1 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector2 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector3 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+}<br>
+<span class="gray">/*Изменения в настройке сетки при ширине экрана менее 480 пикселей <span style="color: black;">(СМАРТФОНЫ)*/</span></span><br>
+<span class="red">@media</span> <span style="color: black;">screen and (max-width: 479px)</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector1 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector2 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector3 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+}<br>
+<span class="gray">/*Настройки сайта при печати на принтере*/</span><br>
+<span class="red">@media</span> <span style="color: black;">print</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector1 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector2 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;selector3 {...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+}<br>
+<span class="gray">/*Настройки фонов для ретинового экрана*/</span><br>
+<span class="red">@media</span> <span style="color: black;">(min-resolution: 144dpi),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(min-resolution: 1.5dppx)
+</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+}<br>
+			</code>
+      </div>
+
+      <span class="gray">Адаптивный режим в браузере: <kbd style="font-size: 1.5em; color: black;">Ctrl + Shift + M</kbd></span><br><br>
+
+      <span class="gray">Для срабатывания медиа-запросов на маленьких дисплеей без маштабирования, необходимо вставлять мета-тег <b>viewport</b> в разделе head:</span><br>
+      <code>&lt;meta <span class="red"><b>name</b>="viewport" <b>content</b>="width=device-width, initial-scale=1"</span>&gt;</code><br>
+      <code>&lt;meta <span class="red"><b>name</b>="format-detection" <b>content</b>="telephone=no"</span>&gt;<br>
+      <span class="gray">// Запрет на маштабирование страницы: </span><br>
+        <span class="red"> <b>content</b></span>="minimum-scale=1, maximum-scale=1, user-scalable=0" <br>
+      </code>
+      <br><br>
+
+
+
+      <p style="font-family: Verdana, sans-serif; font-size: 1.5em;">
+        <span class="red">(min-width: 1200px)</span> - DESKTOP;<br>
+        <span class="red">(max-width: 600px)</span> - TABLET;<br>
+        <span class="red">(max-width: 350px)</span> - MOBILE;
+      </p>
+
+      <p>Почему пропадает часть бэкграунда при уменьшении экрана?
+Не задана минимальная ширина для резинового блока (1) с фоном.
+Такое возникает, если блок (2), внутри него, больше ширины окна браузера, в этом случае заполняется фоном только видимая часть внешнего блока (1). Т.к. его размер расчитывается от границ окна браузера. <br>
+
+Нужно добавить:
+<code>
+  <pre>.block_1{
+  min-width: 1170px;
+}</pre>
+</code>
+Значение, естественно, нужно указать ваше.</p>
+
+ <h2>Адаптивность с помощью тега &lt;link&gt;</h2>
+ <code>&lt;link href="css/<mark>desktop</mark>.css" rel="stylesheet" media="(<span class="red">min-width:768px</span>)"&gt;<br>
+       &lt;link href="css/<mark>tablet</mark>.css" rel="stylesheet" media="(<span class="red">min-width:481px</span>) and (<span class="red">max-width:767px</span>)"&gt;<br>
+       &lt;link href="css/<mark>mobile</mark>.css" rel="stylesheet" media="(<span class="red">max-width:480px</span>)"&gt;</code>
+
+        <h2>Адаптивность с помощью @import</h2>
+ <code>@import url(css/base.css); <span class="gray">/* без медиазапроса, для всех */</span> <br>
+       @import url(css/medium.css) <span class="red">(min-width:481px) and (max-width:768px)</span>;<br>
+       @import url(css/small.css) <span class="red">(max-width: 480px)</span>;</code>
+
+<h2>Mobile first (адаптивная вёрстка, адаптивный дизайн)</h2>
+<ul>
+  <li>Усложнять простое проще, чем упрощать сложное</li>
+  <li>Добовлять новое лучше, чем изменять старое</li>
+  <li>Под mobile лучше делать резиновую вёрстку, так как ширина у мобильных устройств может отличаться</li>
+</ul>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

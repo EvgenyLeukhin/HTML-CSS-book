@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | PHP | Yii</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../js/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    .footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+
+    code {
+      font-size: 14px;
+      color: #337ab7;
+    }
+
+    table td:nth-child(2) {
+      font-weight: bold;
+      color: darkgreen;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title">
+        <strong>
+          <a href="../index.html">Справочник HTML/CSS/JavaScript</a>
+        </strong>
+      </div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li>
+          <a href="../index.html             ">Главная</a>
+        </li>
+        <li>
+          <a href="../design-page.html       ">WEB-DESIGN</a>
+        </li>
+        <li>
+          <a href="../html-page.html         ">HTML</a>
+        </li>
+        <li>
+          <a href="../css-page.html          ">CSS</a>
+        </li>
+        <li>
+          <a href="../css3-page.html         ">CSS3</a>
+        </li>
+        <li>
+          <a href="../javascript-page.html   ">JS</a>
+        </li>
+        <li>
+          <a class="active" href="../php.html">PHP</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li>
+          <a href="php-lang.html               ">Язык PHP</a>
+        </li>
+        <li>
+          <a href="echo.html                   ">Вывод данных</a>
+        </li>
+        <li>
+          <a href="vars.html                   ">Переменные</a>
+        </li>
+        <li>
+          <a href="if-else.html                ">Условные<br>операторы</a>
+        </li>
+        <li>
+          <a href="cicles.html                 ">Циклы</a>
+        </li>
+        <li>
+          <a href="arrayd.html                 ">Массивы</a>
+        </li>
+        <li>
+          <a href="functionss.html             ">Функции</a>
+        </li>
+        <li>
+          <a href="forms.html                  ">Формы</a>
+        </li>
+        <li>
+          <a href="post.html                   ">Почта</a>
+        </li>
+        <li>
+          <a class="active" href="yii.html     ">Yii2</a>
+        </li>
+        <li>
+          <a href="cms.html                    ">CMS</a>
+        </li>
+        <li>
+          <a href="sql.html                    ">SQL</a>
+        </li>
+        <li>
+          <a href="docker.html                 ">Docker</a>
+        </li>
+        <li>
+          <a href="console.html                ">Консоль</a>
+        </li>
+      </ul>
+
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | PHP | Yii</h2>
+      <p>MVC-framework on PHP</p>
+
+      <a href="https://www.yiiframework.com/" target="_blank">Official Docs</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://nix-tips.ru/yii2-api-guides/" target="_blank">Руководство на русском</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://demos.krajee.com/" target="_blank">krajee.com</a>
+
+      <div class="container-fluid">
+        <div class="row">
+          <table class="table table-bordered table-condensed">
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="2">Установка</th>
+            </tr>
+            <tr>
+              <td>
+                <b>1-1. XAMMP</b>
+                <p>Скачать установочный файл с оф. сайта
+                <a href="https://www.apachefriends.org/download.html" target="_blank">link</a>
+                <br> Директория для разворачивания:
+                <code>~/../../opt/lampp/htdocs</code></p>
+              </td>
+              <td>
+                <code>sudo su</code> <br>
+                <span class="gray">// установка от рута</span> <br>
+                <code>./xampp-linux-x64-7.2.5-0-installer.run</code> <br><br>
+                <span class="gray">// запуск менеджера</span> <br>
+                <code>sudo su</code> <br>
+                <code>cd ~/../../opt/lampp && ./manager-linux-x64.run</code>
+              </td>
+            </tr>
+            <tr>
+              <td><b>1-1. XAMMP - Virtual Hosts</b></td>
+              <td>
+                <span class="gray">Включить поддержку вирт. хостов</span><br>
+                <code>/opt/lampp/etc/httpd.conf</code><br><br>
+                <code># Include etc/extra/httpd-vhosts.conf</code><br><br>
+
+                <span class="gray">Добавление вирт. хоста в систему</span><br>
+                <code>/etc/hosts</code><br><br>
+                <code>127.0.0.1 some-site.loc</code><br><br>
+
+                <span class="gray">Добавление вирт. хоста в XAMPP</span><br>
+                <code>/opt/lampp/etc/extra/httpd-vhosts.conf</code><br><br>
+                <code>&lt;VirtualHost *:80&gt;<br>
+                    &nbsp;&nbsp;ServerAdmin admin@some-site.loc<br>
+                    &nbsp;&nbsp;DocumentRoot "/opt/lampp/htdocs/some-site"<br>
+                    &nbsp;&nbsp;ServerName some-site.loc<br>
+                    &nbsp;&nbsp;ErrorLog "logs/some-site.example.com-error_log"<br>
+                    &nbsp;&nbsp;CustomLog "logs/some-site.example.com-access_log" common<br>
+                &lt;/VirtualHost&gt;</code>
+              </td>
+            </tr>
+            <tr>
+              <td><b>2-1. Composer</b></td>
+              <td>
+                <code>curl -s http://getcomposer.org/installer | php</code> <br>
+                <code>sudo mv composer.phar /usr/local/bin/composer</code> <br>
+                <code>sudo composer global require "fxp/composer-asset-plugin:~1.3"</code> <br><br>
+              </td>
+            </tr>
+            <tr>
+              <td><b>2-2. Composer - Удаление</b></td>
+              <td>
+                delete <code>~/home/user/.composer</code> <br>
+                delete <code>~/home/user/.config/composer</code> <br>
+                delete <code>~/usr/bin/composer</code> <br>
+                <code>sudo apt-get remove composer</code> <br>
+                <code>sudo apt-get remove --auto-remove composer</code> <br>
+                <code>sudo apt-get purge composer</code> <br>
+                <code>sudo apt-get purge --auto-remove composer</code> <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <b>3-1. Установка Yii2 - I способ Composer </b>
+              </td>
+              <td>
+                <code>cd ~/../../opt/lampp/htdocs</code>
+                <br>
+                <code>sudo composer create-project yiisoft/yii2-app-advanced yii2</code>
+                <br>
+                <code>cd yii2</code>
+                <br>
+                <code>sudo php init (0, yes)</code><br>
+                <code>http://localhost/yii2/frontend/web/</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>3-2. Установка Yii2 - II способ Архив</b>
+              </td>
+              <td>
+                <span class="gray">Скачать архив advanced c</span> <br>
+                <code><a href="https://www.yiiframework.com/download" target="_blank">https://www.yiiframework.com/download</a></code><br><br>
+                <span class="gray">Распаковать его в:</span><br>
+                <code>~/../../opt/lampp/htdocs/project-name</code><br><br>
+                <span class="gray">Инициализировать проект</span> <br>
+                <code>sudo php init</code> <br><br>
+                <span class="gray">Запустить сервер</span>
+              </td>
+            </tr>
+          </table>
+          <table class="table table-bordered table-condensed">
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">Controllers (контроллеры, экшены)
+              </th>
+            </tr>
+            <tr>
+              <td><b>Роутинг</b></td>
+              <td></span>
+                <code>/index.php?r=<span class="red">site</span>%2F<span class="red">about</span></code> <br>
+<pre style="font-size: 1rem;"><code>&lt;?php
+  namespace frontend\controllers;
+  use yii\web\Controller;
+
+  class NewController extends Controller {
+    public function actionIndex() {
+      <small>// output some html</small>
+      <mark>return '&lt;h1>Some new page&lt;/h1>';</mark>
+      ...
+      <small>// output new view</small>
+      <mark>return $this->render('index');</mark>
+
+      ...
+      $text = 'Hello World!';
+      $names = ['Ivanov', 'Petrov', 'Sidorov'];
+      ...
+      <small>// output new view with parameters by $var</small>
+      <mark>return $this->render('index', [
+        'var_in_view'  => $text,
+        'var_in_view2' => $names,
+      ]);</mark>
+
+      <small>// output new view with parameters by compact</small>
+      <mark>return $this->render('index', compact('text', 'names'));</mark>
+    }
+  }</code></pre>
+              </td>
+              <td>
+                <span class="red">site</span> - название контроллера в <b>/frontend/controllers/<span class="red">Site</span>Controller.php</b> <br><br>
+                <span class="red">about</span> - название вида в директории <span class="red">site</span><br> <b>/frontend/views/site/<span class="red">about</span>.php</b> <br><br>
+                <p>Название Класса (КлассController.php в /frontend/controllers/) - название директории в папке /frontend/views/класс</p>
+                <p>Название экшена (actionНазвание) - название файла в директоии /frontend/views/класс/название</p>
+                <p>Если контроллер вложен в какую-либо директорию, например, /frontend/controllers/admin/UserController, то вложен должен быть и вид (/frontend/views/admin/user/название_экшена). Тогда url будет (/index.php?r=admin/user%2Fsome)</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">Views (виды)
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <b>Шаблоны страниц</b>
+              </td>
+              <td>
+                <code>frontend/views/</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="lead  text-center  bg-primary" colspan="3">Структура
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <b>Подключение БД</b>
+              </td>
+              <td>common/config/main-local.php</td>
+              <td style="width: 33.3%;">
+                <code>dbname="..."</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Минификация скриптов</b>
+              </td>
+              <td>frontend/config/main.php</td>
+              <td style="width: 33.3%;">
+                <code>'enableMinify' => false || !YII_DEBUG</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Директория запуска</b>
+              </td>
+              <td>frontend/web</td>
+              <td style="width: 33.3%;"></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Мета-данные в head</b>
+              </td>
+              <td>frontend/config/params.php</td>
+              <td style="width: 33.3%;"></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Всё, что загрузили с админки</b>
+              </td>
+              <td>frontend/web/upload</td>
+              <td style="width: 33.3%;">В основном изображения</td>
+            </tr>
+            <tr>
+              <td>
+                <b>Главный файл запуска</b>
+              </td>
+              <td>frontend/web/index.php</td>
+              <td style="width: 33.3%;">Его не трогать, в нём настроки и подключения</td>
+            </tr>
+            <tr>
+              <td>
+                <b>Вставить дату</b>
+              </td>
+              <td>Если нужно динамически менять год</td>
+              <td style="width: 33.3%;">
+                <code>&lt;?= date('Y') ?&gt;</code>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <b>Страницы</b>
+              </td>
+              <td>frontend/views/</td>
+              <td style="width: 33.3%;"></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Виджеты, попапы, инклуды</b>
+              </td>
+              <td>frontend/components/</td>
+              <td style="width: 33.3%;"></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Скелет всех страниц (header, footer, pop-ups)</b>
+              </td>
+              <td>frontend/views/layouts/main.php</td>
+              <td style="width: 33.3%;"></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Скрипты</b>
+              </td>
+              <td>frontend/assets/AppAsset.php</td>
+              <td style="width: 33.3%;"></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Debug-режим</b>
+              </td>
+              <td>frontend/web/index.php</td>
+              <td style="width: 33.3%;">
+                Для отключения нужно поменять true => false,
+                <br> dev => env
+                <br>
+                <code>defined('YII_DEBUG') or define('YII_DEBUG',
+                  <span class="red">true</span>); defined('YII_ENV') or define('YII_ENV', '
+                  <span class="red">dev</span>');</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Настройки</b>
+              </td>
+              <td>frontend/config/main.php</td>
+              <td style="width: 33.3%;">
+                <code>'assetManager'</code> Компилятор scss</td>
+            </tr>
+
+            <tr>
+              <td>
+                <b>Путь в корневую директорию</b>
+              </td>
+              <td>frontend/web/</td>
+              <td style="width: 33.3%;">
+                <code>include_once
+                  <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Путь в корневую директорию</b>
+              </td>
+              <td>frontend/web/</td>
+              <td style="width: 33.3%;">
+                <code>include_once
+                  <span class="red">$_SERVER['DOCUMENT_ROOT']</span> . "blocks/block1.php";</code>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <b>Контроллеры для запуска страниц</b>
+              </td>
+              <td>frontend/web/FormController.php</td>
+              <td style="width: 33.3%;">
+                <pre><code><?php
+  namespace frontend\controllers;
+  class FormController extends \app\components\SeoController {
+    // страница /form
+    public function actionIndex() { return $this->render("index"); }
+    // страница /form/step2
+    public function actionStep2() { return $this->render("step2"); }
+    // страница /form/step3
+    public function actionStep3() { return $this->render("step3"); }
+    // страница /form/step4
+    public function actionStep4() { return $this->render("step4"); }
+    // страница /form/step5
+    public function actionStep5() { return $this->render("step5"); }
+    // страница /form/step6
+    public function actionStep6() { return $this->render("step6"); }
+            }</code></pre>
+              </td>
+            </tr>
+
+          </table>
+          <p>Если проект на Yii2 скачен через
+            <b>git</b>, то нужно проект инициализировать из корневой директории, выполнив команду в php-консоли
+            <code>init</code> и выбрать
+            <b>[0]</b> Development режим, потом нажать
+            <b>yes</b> для генерации файлов</p>
+          <hr>
+          <h3>Подключить скрипт только на текущую страницу</h3>
+          <code>$this->registerJsFile("js/jquery.some-plugin.min.js", ['depends' => 'yii\web\YiiAsset']);</code>
+          <br>
+          <br>
+          <code>$this->registerCssFile("css/come-styles.min.css", ['depends' => 'yii\web\YiiAsset']);</code>
+
+          <hr>
+          <h3>Подключение новых страниц</h3>
+          <p>1. Создаём новую страницу
+            <b>somepage.php</b> с заголовком в директорию
+            <b>frontend/views/</b>
+            <br>
+            <code>&lt;? $this-&gt;title="Some page" ?&gt;</code>
+          </p>
+          <br>
+
+          <p>2. Создаём контроллер для новой страницы
+            <b>SomepageController.php</b> в директории
+            <b>frontend/controllers/</b>, название в camel-case как название новой страницы</p>
+
+          <pre><code>&lt;?php
+namespace frontend\controllers;
+
+use common\models\Coach;
+use common\models\Travel;
+use common\models\TravelReview;
+use Yii;
+use common\models\LoginForm;
+use frontend\models\PasswordResetRequestForm;
+use frontend\models\ResetPasswordForm;
+use frontend\models\SignupForm;
+use frontend\models\ContactForm;
+use yii\base\InvalidParamException;
+use yii\web\BadRequestHttpException;
+use yii\web\Controller;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+
+/**
+ * Site controller
+ */
+class <mark>Somepage</mark>Controller extends \app\components\SeoController
+{
+    public function actionIndex(){
+        return $this->render('/<mark>somepage</mark>');
+    }
+}
+  </pre>
+          </code>
+
+          <p>3. После этого можно заходить на данную страницу
+            <b>site.loc/somepage</b>
+          </p>
+
+
+          <h4>Картинки какие-то</h4>
+          <img src="../img/yii1.jpg" alt="yii1.jpg" width="433" height="242">
+          <img src="../img/yii2.jpg" alt="yii2.jpg" width="571" height="154">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br>EvgenyLeukhin@yandex.ru</p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

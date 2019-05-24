@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | JavaScript | React | React-styles</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+  <div class="layout-positioner clearfix">
+  <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+  <div class="header-logo"></div>
+    <ul class="header-menu">
+    <li><a href="../index.html">Главная</a></li>
+    <li><a href="../design-page.html">WEB-DESIGN</a></li>
+    <li><a href="../html-page.html">HTML</a></li>
+    <li><a href="../css-page.html">CSS</a></li>
+    <li><a href="../css3-page.html">CSS3</a></li>
+    <li><a class="active" href="../javascript-page.html">JS</a></li>
+    <li><a href="../php.html">PHP</a></li>
+  </ul>
+  </div>
+</div>
+
+<div class="layout-positioner clearfix">
+  <div class="vert-menu-cont">
+    <ul class="vert-menu">
+      <li>
+        <a href="#">Основы</a>
+        <ul class="sub-menu sub-menu9">
+          <li><a href="js-lang.html">Язык JS</a></li>
+          <li><a href="load.html">Загрузка</a></li>
+          <li><a href="types.html">Типы данных</a></li>
+          <li><a href="var.html">Переменные</a></li>
+          <li><a href="operators.html">Операторы</a></li>
+          <li><a href="algorythm.html">Алгоритмы</a></li>
+          <li><a href="if-else.html">Условия</a></li>
+          <li><a href="cycle.html">Циклы</a></li>
+          <li><a href="math.html">Math</a></li>
+        </ul>
+      </li>
+      <li><a href="array.html">Массивы</a></li>
+      <li><a href="function.html">Функции</a></li>
+      <li><a href="object.html">Объекты</a></li>
+      <li>
+        <a href="#">JS &amp; HTML</a>
+          <ul class="sub-menu sub-menu6">
+            <li><a href="complete.html">Вывод данных</a></li>
+            <li><a href="dom.html">DOM</a></li>
+            <li><a href="html-methods.html">DOM-методы</a></li>
+            <li><a href="actions.html">События</a></li>
+            <li><a href="modal-window.html">Мод. окно</a></li>
+            <li><a href="forms.html">Формы</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="active" href="js-pages/react.html"><span class="react">React</span></a>
+          <ul class="sub-menu sub-menu-react">
+            <li><a href="react-start.html">Старт проекта</a></li>
+            <li><a href="react-funcs.html">Основные функции</a></li>
+            <li><a href="react-component.html">React-компонент</a></li>
+            <li><a href="react-events.html">React-события</a></li>
+            <li><a href="react-styling.html">React-styles</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="nodejs.html"><span class="react">node.js</span></a>
+          <ul class="sub-menu sub-menu-nodejs">
+            <li><a href="node-main.html">Начало работы</a></li>
+            <li><a href="node-frontend.html">Frontend</a></li>
+            <li><a href="node-backend.html">Backend</a></li>
+            <li><a href="node-sql.html">SQL</a></li>
+          </ul>
+        </li>
+
+      <li>
+        <a href="#">jQuery</a>
+        <ul class="sub-menu sub-menu7">
+          <li><a href="jquery-html.html">JQuery basics</a></li>
+          <li><a href="jquery-func.html">jQuery-функции</a></li>
+          <li><a href="jquery-actions.html">jQuery-события</a></li>
+          <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+          <li><a href="jquery-forms.html">jQuery-формы</a></li>
+          <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+          <li><a href="jquery-examples.html">Примеры</a></li>
+         </ul>
+       </li>
+
+       <li><a href="ajax.html">Ajax</a></li>
+       <li>
+         <a href="canvas.html">Canvas</a>
+         <ul class="sub-menu sub-menu9">
+           <li><a href="canvas.html">Настройка</a></li>
+           <li><a href="canvas-figures.html">Фигуры</a></li>
+           <li><a href="canvas-text.html">Текст</a></li>
+           <li><a href="canvas-animation.html">Примеры</a></li>
+        </ul>
+      </li>
+
+
+      <li><a href="modules.html">Классы</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+      <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+      <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+    </ul>
+
+
+  </div>
+  <div class="content clearfix">
+
+  <h2>Мой Справочник | JavaScript | React | React-styles</h2>
+
+  <table class="new-table">
+    <tr>
+      <th colspan="3"><code>Стилизация</code></th>
+    </tr>
+    <tr>
+      <td>
+        <h2>I способ (old-school)</h2> <hr>
+        При билде вся стилизация в одном файле bundle.css в тег link
+      </td>
+      <td>
+        <code>&lt;link src="/bunble.css"&gt;</code>
+      </td>
+      <td>
+        Работу по импорту css-файлов в App.js осуществляет Webpack
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>II способ (most useage)</h2> <hr>
+        На каждый импорт будет создан отдельный тег style
+      </td>
+      <td>
+        <code>
+          <span class="gray">// импортируем стили в компонент</span>
+          <span class="gray">// глобальные стили в index.js</span>
+          import '<mark>./SomeComponent/SomeComponent.css'</mark>;
+        </code>
+      </td>
+      <td>
+        Работу по импорту css-файлов в App.js осуществляет Webpack
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>III способ (JSS - hardcore)</h2> <hr>
+        Инлайн-стилитизация, CSS in JS
+      </td>
+      <td>
+        <code>render() {
+<span class="gray">&nbsp;&nbsp;// после рендера создаём объект style</span>
+&nbsp;&nbsp;const <mark>style</mark> = { <br>
+&nbsp;&nbsp;&nbsp;&nbsp; color: 'white',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; fontSize: '20px',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; border: '1px solid #ccc',<br>
+&nbsp;&nbsp;&nbsp;&nbsp; backgroundColor: 'blue'<br>
+&nbsp;&nbsp;}; <br><br>
+&nbsp;&nbsp;... <br>
+} <br>
+<span class="gray">// а замем нужно присвоить этот объект атрибуту style</span>
+&lt;button <mark>style={style}</mark>&gt;
+        </code>
+      </td>
+      <td>
+        css-свойства должны записываться в js-формате (в camelCase). <br>
+        Можно подключать библиотеки для этого способа (такие как radium, glamor, styled-components)
+      </td>
+    </tr>
+  </table>
+
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="layout-positioner">
+    <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
+    <p class="footer-copyright">© 2016 - 2019</p>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

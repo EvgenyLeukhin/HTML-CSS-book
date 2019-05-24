@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой Справочник | JS | Math</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+</head>
+
+<body>
+<div class="header">
+	<div class="layout-positioner clearfix">
+	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+	<div class="header-logo"></div>
+		<ul class="header-menu">
+		<li><a href="../index.html">Главная</a></li>
+		<li><a href="../design-page.html">WEB-DESIGN</a></li>
+		<li><a href="../html-page.html">HTML</a></li>
+		<li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+		<li><a class="active" href="../javascript-page.html">JS</a></li>
+		<li><a href="../php.html">PHP</a></li>
+
+
+	</ul>
+	</div>
+</div>
+
+<div class="layout-positioner clearfix">
+	<div class="vert-menu-cont">
+		<ul class="vert-menu">
+            <li>
+                <a class="active" href="#">Основы</a>
+                <ul class="sub-menu sub-menu9">
+                    <li><a href="js-lang.html">Язык JS</a></li>
+                    <li><a href="load.html">Загрузка</a></li>
+			        <li><a href="types.html">Типы данных</a></li>
+			        <li><a href="var.html">Переменные</a></li>
+			        <li><a href="operators.html">Операторы</a></li>
+
+			        <li><a href="algorythm.html">Алгоритмы</a></li>
+			        <li><a href="if-else.html">Условия</a></li>
+			        <li><a href="cycle.html">Циклы</a></li>
+                    <li><a href="math.html">Math</a></li>
+                </ul>
+            </li>
+            <li><a href="array.html">Массивы</a></li>
+            <li><a href="function.html">Функции</a></li>
+			<li><a href="object.html">Объекты</a></li>
+            <li>
+                <a href="#">JS &amp; HTML</a>
+                <ul class="sub-menu sub-menu6">
+                    <li><a href="complete.html">Вывод данных</a></li>
+			        <li><a href="dom.html">DOM</a></li>
+			        <li><a href="html-methods.html">DOM-методы</a></li>
+			        <li><a href="actions.html">События</a></li>
+			        <li><a href="modal-window.html">Мод. окно</a></li>
+			        <li><a href="forms.html">Формы</a></li>
+                </ul>
+            </li>
+
+            <li>
+              <a href="react.html"><span class="react">React</span></a>
+              <ul class="sub-menu sub-menu-react">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="nodejs.html"><span class="react">node.js</span></a>
+              <ul class="sub-menu sub-menu-nodejs">
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+
+			<li>
+			    <a href="#">jQuery</a>
+			    <ul class="sub-menu sub-menu7">
+			        <li><a href="jquery-html.html">JQuery basics</a></li>
+			        <li><a href="jquery-func.html">jQuery-функции</a></li>
+                    <li><a href="jquery-actions.html">jQuery-события</a></li>
+			        <li><a href="jquery-effects.html">jQuery-эффекты</a></li>
+                    <li><a href="jquery-forms.html">jQuery-формы</a></li>
+                    <li><a href="jquery-plugins.html">jQuery-плагины</a></li>
+                    <li><a href="jquery-examples.html">Примеры</a></li>
+                </ul>
+			 </li>
+			  <li><a href="ajax.html">Ajax</a></li>
+			 <li>
+   <a href="canvas.html">Canvas</a>
+   <ul class="sub-menu sub-menu9">
+       <a href="canvas.html">Настройка</a>
+       <a href="canvas-figures.html">Фигуры</a>
+       <a href="canvas-text.html">Текст</a>
+       <a href="canvas-animation.html">Примеры</a>
+   </ul>
+</li>
+
+
+			 <li><a href="modules.html">Классы</a></li><li><a href="webpack.html"><span class="react">Webpack</span></a></li>
+       <li><a href="../css3-pages/grunt.html">Grunt</a></li>
+       <li><a href="../css3-pages/gulp.html">Gulp</a></li>
+
+		</ul>
+
+
+	</div>
+	<div class="content clearfix">
+
+	<h2>Мой Справочник | JavaScript | Math</h2>
+
+        <table class="discription-table" border-spacing: 5px;>
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.random</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Рандомный оператор, генерирующий значения от 0 до 1 в дробном значении<br>
+                    Например(0.6532569943)
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       var a, i;<br>
+                       for (i=1; i<=100; i++) {<br>
+                       &nbsp;&nbsp;a = <span class="red">Math.random</span>(a);<br>
+                       &nbsp;&nbsp;console.log(i + ' цикл: ', a);<br>
+                       }
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.pow</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Возведение в квадрат
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.pow</span>(3, 5)); <span class="gray">//243</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+                    3 возводим в 5-ую степень
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.sqrt</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Квадратный корень
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.sqrt</span>(256)); <span class="gray">//16</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.abs</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Модуль значения
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.abs</span>(-123)); <span class="gray">//123</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.min</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                   Минимальное значение
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.min</span>(5, 8, 10, 2)); <span class="gray">//2</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+             <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.max</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                   Максимальное значение
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.max</span>(5, 8, 10, 2)); <span class="gray">//10</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.exp()</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                   Возводит число e в указанную степень
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.exp</span>(5)); <span class="gray">//148.41</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.log()</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                   Натуральный логарифм ln числа
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.log</span>(5)); <span class="gray">//1.6</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.floor</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Принудительное округляет число в МЕНЬШУЮ сторону, отбрасывая дробную часть и возвращая целое число.
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.floor</span>(123.999)); <span class="gray">//  123</span><br>
+                       console.log(<span class="red">Math.floor</span>(-123.999)); <span class="gray">//  -124</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.ceil</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Принудительное округляет число в БОЛЬШУЮ сторону, отбрасывая дробную часть и возвращая целое число.
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.ceil</span>(123.111)); <span class="gray">//  124</span><br>
+                       console.log(<span class="red">Math.ceil</span>(-123.999)); <span class="gray">//  -123</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Math.round</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Округление значения
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       console.log(<span class="red">Math.round</span>(-123.527)); <span class="gray">// - 124</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;"></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Тригонометрия</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Тригонометрические функции, значения в радианах
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       Math.sin(1);<br>
+                       Math.cos(1);<br>
+                       Math.tan(1);<br>
+                       Math.atan(1);<br>
+                       Math.asin(1);<br>
+                       Math.acos(1);<br>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+                    Синус<br>
+                    Косинус<br>
+                    Тангенс<br>
+                    Арктангенс<br>
+                    Арксинус<br>
+                    Арккосинус
+                </td>
+            </tr>
+
+
+
+             <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">Константы</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Число ПИ, ЭКСПОНЕНТА, логарифм
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+                       Math.PI; <span class="gray">//3.14</span><br>
+                       Math.E; <span class="gray">//2.7</span><br>
+                       Math.LOG10E; <span class="gray">// 0.434</span><br>
+                       Math.LN10;<br>
+                       Math.LN2;<br>
+                       Math.SQRT2;<br>
+                       Math.SQRT1_2;<br>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+                    Их много, можно поискать в спавочниках
+                </td>
+            </tr>
+
+             <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">.toFixed()</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Количество знаков после точки
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+var n;<br>
+n = 5000;<br>
+console.log(n<span class="red">.toFixed(2)</span>); <span class="gray">//5000.00</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+Создаёт объект-обёртку для применения данной функции
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">.toExponential()</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+                    Перевод в экспонентальную форму (10 в степени) с кол-вом знаков после запятой в ()
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+var n;<br>
+n = 5000;<br>
+console.log(n<span class="red">.toExponential(2)</span>); <span class="gray">//5.00e+3</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+
+                </td>
+            </tr>
+
+                        <tr>
+                <th colspan="4" style="font-size: 2em; color: darkcyan;">.toPrecision()</th>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="color: black; font-weight: bold; width: 300px;">
+         Количество цифр с округлением
+                </td>
+
+                <td style="width: 400px;">
+                   <code>
+var n;<br>
+n = 5000/6;<br>
+console.log(n<span class="red">.toPrecision(5)</span>); <span class="gray">//833.33</span>
+                   </code>
+                </td>
+                <td rowspan="1" style="width: 300px; color: #555;">
+
+                </td>
+            </tr>
+        </table>
+
+
+	</div>
+</div>
+
+<div class="footer">
+	<div class="layout-positioner">
+		<p class="footer-text">Разработчик: Евгений Леухин<br>
+							   EvgenyLeukhin@yandex.ru</p>
+
+		<p class="footer-copyright">© 2016 - 2019</p>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

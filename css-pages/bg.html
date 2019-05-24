@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | CSS | Фон</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <style>
+    code {
+      font-size: 1.4em;
+    }
+
+    .discription-table td:nth-child(3) {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body style="
+		background-image: url(../pict/testimonials-bg.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	">
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JavaScript</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a href="../html-page.html">HTML</a></li>
+        <li><a class="active" href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">JS</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="../css-pages/selectors.html">Селекторы</a></li>
+        <li><a href="../css-pages/values.html">Величины</a></li>
+        <li><a href="../css-pages/size.html">Размеры и<br> отступы</a></li>
+        <li><a href="../css-pages/borders.html">Рамки и границы</a></li>
+        <li><a href="../css-pages/color.html">Цвет</a></li>
+        <li><a href="../css-pages/bg.html" class="active">Фон</a></li>
+        <li><a href="../css-pages/text.html">Шрифт и текст</a></li>
+        <li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
+        <li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
+        <li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
+        <li><a href="../css-pages/display.html">Отображение</a></li>
+        <li><a href="../css-pages/position.html">Позиционирование</a></li>
+        <li>
+          <a href="#">Меню</a>
+          <ul class="sub-menu sub-menu1">
+            <li><a href="../css-pages/vert-menu.html">Верт. меню</a></li>
+            <li><a href="../css-pages/gor-menu.html">Гор. меню</a></li>
+          </ul>
+
+        </li>
+        <li>
+          <a href="#">Блочная вёрстка</a>
+          <ul class="sub-menu sub-menu2">
+            <li><a href="../css-pages/float.html">float</a></li>
+            <li><a href="../css-pages/centered.html">Центровщик</a></li>
+            <li><a href="../css-pages/clearfix.html">Распорки</a></li>
+            <li><a href="../css-pages/footer.html">Футер</a></li>
+            <li><a href="../css-pages/layout.html">Сетка</a></li>
+            <li><a href="../css-pages/content-box.html">Контент-боксы</a></li>
+          </ul>
+
+        </li>
+        <li><a href="../css-pages/adaptive.html">Адаптивность</a></li>
+        <li><a href="../css-pages/fluid-layout.html">Резиновая вёрстка</a></li>
+        <li><a href="../css-pages/decoration.html">Фигуры</a></li>
+      </ul>
+
+    </div>
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | CSS | Фон</h2>
+
+      <table class="discription-table" style="border-collapse: separate; border-spacing: 5px;">
+        <caption>background</caption>
+        <tr>
+          <th>Свойство</th>
+          <th>Описание</th>
+          <th colspan="2">Примеры</th>
+        </tr>
+
+        <tr>
+          <td rowspan="3">background-color</td>
+          <td rowspan="3">
+            <b>Цвет фона</b>
+            <br>
+          </td>
+          <td><code>background-<span class="red">color</span>: red;</code></td>
+          <td style="background-color: red; min-width: 250px;"></td>
+        </tr>
+        <tr>
+          <td><code>background-<span class="red">color</span>: #3498db;</code></td>
+          <td style="background-color: #3498db;"></td>
+        </tr>
+        <tr>
+          <td><code>background-<span class="red">color</span>: rgb(50,100,150);</code></td>
+          <td style="background-color: rgb(50,100,150);"></td>
+        </tr>
+        <tr>
+          <td>background-image</td>
+          <td>
+            <b>Фоновое изображение</b>
+            <hr> на <b>padding</b> контейнера НЕ РЕАГИРУЕТ!!!
+          </td>
+          <td>
+            <code>
+						background-<span class="red">image:</span> url(../pict/phone.png);<br>
+						background-<span class="red">repeat:</span> repeat;
+					</code>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px;"></td>
+        </tr>
+        <tr>
+          <td rowspan="3">background-repeat</td>
+          <td rowspan="3">
+            <b>Повтор фонового изображения</b>
+            <hr>
+            <b>repeat</b> - повтор по всем осям (по ум*)
+            <br>
+            <b>repeat-x</b> - повтор по оси x
+            <br>
+            <b>repeat-y</b> - повтор по оси y
+            <br>
+            <b>no-repeat</b> - без повтора
+            <hr>
+            <b>round</b> - повтор по всей ширине и высоте блока
+            <br>
+            <b>space</b> - фон повторяясь занимает все пространство
+            <br>
+          </td>
+          <td>
+            <code>background-<span class="red">image:</span> url(../pict/phone.png);</code>
+            <br>
+            <code>background-<span class="red">repeat</span>: repeat-x;</code>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: repeat-x;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">image:</span> url(../pict/phone.png);</code>
+            <br>
+            <code>background-<span class="red">repeat</span>: repeat-y;</code>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: repeat-y;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">image:</span> url(../pict/phone.png);</code>
+            <br>
+            <code>background-<span class="red">repeat</span>: no-repeat;</code>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="6">background-position</td>
+          <td rowspan="6">
+            <b>Позиция фонового изображения</b>
+            <hr> По оси x, по оси y
+            <br>
+            <b>0% = 0% 0% | left top</b> - верх. лев. угол
+            <br>
+            <b>50% = 50% 50% | center center</b> - центр
+            <br>
+            <b>100% = 100% 100% | right bottom</b> - ниж. прав. угол
+            <br>
+            <b>50px = 50px 50px</b> - на 50px по обеим осям от лев. верх.
+            <br>
+            <b>50px = 50px 150px</b> - на 50px по x, на 150px по y от лев. верх.
+            <hr> По ум* отчёт ведётся от лев. верх. угла, но можно изменить добавив перед значением top, right, bottom или left
+            <br>
+            <b>top 50px right 20px</b>
+            <p>Если указывается в <b>%-тах</b>, то высчитывается проценты от ширины и высоты контейнера</p>
+          </td>
+          <td>
+            <code>background-<span class="red">repeat</span>: repeat-x;</code>
+            <code>background-<span class="red">position:</span> 50%;</code>
+            <br>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: repeat-x;
+						   background-position: 50%;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">repeat</span>: repeat-y;</code>
+            <code>background-<span class="red">position:</span> center;</code>
+            <br>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: repeat-y;
+						   background-position: center;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">repeat</span>: no-repeat;</code>
+            <code>background-<span class="red">position:</span> 50px;</code>
+            <br>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-position: 50px;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">repeat</span>: no-repeat;</code>
+            <code>background-<span class="red">position:</span> right bottom;</code>
+            <br>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-position: right bottom;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">repeat</span>: no-repeat;</code>
+            <code>background-<span class="red">position:</span> right 30px bottom 10px;</code>
+            <br>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-position: right 30px bottom 10px;"></td>
+        </tr>
+        <tr>
+          <td>
+            <code>background-<span class="red">repeat</span>: no-repeat;</code>
+            <code>background-<span class="red">position:</span> left 30px top 15px;</code>
+            <br>
+          </td>
+          <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-position: left 30px top 15px;"></td>
+        </tr>
+
+
+
+        <tr>
+          <td colspan="4"><span class="gray">
+				Если фоновое изображение не помещается в контейнер, оно будет обрезано, двигать его можно также с помощью</span> <b>background-position</b>
+            <br>
+            <span style="vertical-align: middle;">СПРАЙТЫ!!!</span><img src="../pict/social.png" alt="спрайт">
+          </td>
+          <tr>
+
+            <tr>
+              <td rowspan="2">background-attachment</td>
+              <td rowspan="2">
+                <b>Прокрутка фонового изображения</b>
+                <hr>
+                <b>scroll</b> - фон прокручивается вместе с содержимым (по ум*)
+                <br>
+                <b>fixed</b> - фон не прокручивается, зафиксирован
+                <br>
+              </td>
+              <td>
+                <code>background-<span class="red">attachment</span>: scroll;</code>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <code>
+						background-image: url(bg.jpg);<br>
+						background-<span class="red">attachment</span>: fixed;
+					</code>
+              </td>
+              <td>Как здесь</td>
+            </tr>
+
+            <tr>
+              <td>background
+                <br><span class="gray">(общая запись)</span></td>
+              <td><b>background: [bc] [bi] [br] [bp] [ba];</b>
+                <br>
+                <b>[bc]</b> — background-color
+                <br>
+                <b>[bi]</b> — background-image
+                <br>
+                <b>[br]</b> — background-repeat
+                <br>
+                <b>[bp]</b> — background-position
+                <br>
+                <b>[ba]</b> — background-attachment
+
+              </td>
+              <td>
+                <code><span class="red">background:</span> url(img\pict.png) no-repeat 50% 50% fixed;</code>
+              </td>
+              <td>Если какое-либо значение пропущено,
+                <br> то будет стоять по ум*</td>
+            </tr>
+
+            <tr>
+              <td>background <span class="gray">(несколько)</span></td>
+              <td>
+                <b>Множественный фон</b>
+                <hr> Можно создавать фон из нескольких картинок, перечисляя их и другие свойства <span class="red">background</span> через запятую
+              </td>
+              <td><code>
+					<span class="red">background-image:</span><br>url(../pict/phone_blue.png),<br>
+									  						   url(../pict/phone_green.png),<br>
+									  						   url(../pict/phone_pink.png);<hr>
+					<span class="red">background-repeat:</span><br> no-repeat, repeat-x, repeat-y;<hr>
+					<span class="red">background-position:</span><br> 0% 0%, 50% 50%, 100% 100%;<hr>
+					<span class="red">background-size:</span><br> 20px, 35px, 50px;
+
+
+					</code>
+              </td>
+              <td style="background-image: url(../pict/phone_blue.png),
+											 url(../pict/phone_green.png),
+											 url(../pict/phone_pink.png);
+						   background-repeat: no-repeat,
+						   					  repeat-x,
+										      repeat-y;
+						   background-position: 0% 0%,
+						   						50% 50%,
+						   						100% 100%;
+						   background-size: 20px,
+						   					35px,
+						   					50px;
+						   height: 200px;
+						  ">
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="5">background-size</td>
+              <td rowspan="5">
+                <b>Размер фонового изображения</b>
+                <hr>
+                <b>10px(ширина) 50px(высота)</b>;
+                <br> Если указана только ширина, то высота будет пропорциональна;
+                <br>
+                <b>auto</b> - по ум*;
+                <br>
+                <b>contain</b> - отображается в контейнере макс. полностью, сохраняя пропорции;
+                <br>
+                <b>cover</b> - растягивается по ширине блока, сохраняя пропорции;
+                <br>
+              </td>
+              <td><code>
+					background-image: url(../pict/phone.png);<br>
+					background-<span class="red">size</span>: 100px;
+					</code>
+              </td>
+              <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-size: 100px;">
+              </td>
+            </tr>
+            <tr>
+              <td><code>
+					background-image: url(../pict/phone.png);<br>
+					background-<span class="red">size</span>: 100px 50px;
+					</code>
+              </td>
+              <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-size: 100px 50px;">
+              </td>
+            </tr>
+            <tr>
+              <td><code>
+					background-image: url(../pict/phone.png);<br>
+					background-<span class="red">size</span>: 100% 100%;
+					</code>
+              </td>
+              <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-size: 100% 100%;">
+              </td>
+            </tr>
+            <tr>
+              <td><code>
+					background-image: url(../pict/phone.png);<br>
+					background-<span class="red">size</span>: <mark>contain</mark>;
+					</code>
+              </td>
+              <td style="background-image: url(../pict/phone_small.png); height: 80px; background-repeat: no-repeat;
+						   background-size: contain;">
+              </td>
+            </tr>
+            <tr>
+              <td><code>
+					background-image: url(../pict/phone.png);<br>
+					background-<span class="red">size</span>: <mark>cover</mark>;
+					</code>
+              </td>
+              <td style="background-image: url(../pict/phone_small.png); height: 80px;
+						   background-repeat: no-repeat;
+						   background-size: cover;">
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="3">background-origin</td>
+              <td rowspan="3">
+                <b>Область отображения фонового изображения</b>
+                <br>(Взаимодействие <b>padding</b>, <b>border</b> и <b>background-image</b>)
+                <hr>
+                <b>padding-box</b> - по ум* (рамка "отодвигает" фон), на <b>padding</b> не реагирует;
+                <hr>
+                <b>content-box</b> - если задан <b>padding</b>, то фон реагирует на него и будет двигаться не от границы блока, а от внутренней границы <b>border</b>;
+                <hr>
+                <b>border-box</b> - фон "залезает" под <b>border</b>, на <b>padding</b> не реагирует;
+              </td>
+              <td><code>
+					background-image: url(../pict/kitty_small.jpg);<br>
+					background-origin: <span class="red">padding-box;</span>
+					</code>
+              </td>
+              <td style="height: 200px;
+						   padding: 50px;
+						   border: 20px solid rgba(130,200,10,0.5);
+						   background-image: url(../pict/kitty_small.jpg);
+						   background-repeat: no-repeat;
+						   background-origin: padding-box;
+						  ">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>
+					background-image: url(../pict/kitty_small.jpg);<br>
+					background-origin: <span class="red">content-box;</span>
+					</code>
+              </td>
+              <td style="height: 250px;
+						   padding: 30px;
+						   border: 20px solid rgba(130,200,10,0.5);
+						   background-image: url(../pict/kitty_small.jpg);
+						   background-repeat: no-repeat;
+						   background-origin: content-box;
+						  ">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>
+					background-image: url(../pict/kitty_small.jpg);<br>
+					background-origin: <span class="red">border-box;</span>
+					</code>
+              </td>
+              <td style="height: 200px;
+						   padding: 20px;
+						   border: 20px solid rgba(130,200,10,0.5);
+						   background-image: url(../pict/kitty_small.jpg);
+						   background-repeat: no-repeat;
+						   background-origin: border-box;
+						  ">
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="2">background-clip</td>
+              <td rowspan="2">
+                <b>Обрезка фонового изображения</b>
+                <br>(Взаимодействие <b>padding</b>, <b>border</b> и <b>background-image</b>)
+                <hr>
+                <b>border-box</b> - по ум* (без обрезания);
+                <hr>
+                <b>cotent-box</b> - обрезает фон по краю содержимого (весь фон, который "не влез" в контейнер будет обрезан);
+                <hr>
+                <b>padding-box</b> - обрезает фон по внутреннему краю <b>border</b> (если фон "влез" в border как при background-origin: border-box, то край фона будет обрезан по рамке);
+              </td>
+              <td>
+                <code>
+					background-image: url(../pict/kitty_small.jpg);<br>
+					background-origin: <span class="red">content-box;</span><br>
+					background-clip: <span class="red">content-box;</span>
+					</code>
+              </td>
+              <td style="height: 200px;
+						   border: 20px solid rgba(130,200,10,0.5);
+						   background-image: url(../pict/kitty_small.jpg);
+						   background-size: 250px;
+						   background-repeat: no-repeat;
+						   background-origin: content-box;
+						   background-clip: content-box;
+						  ">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>
+					background-image: url(../pict/kitty_small.jpg);<br>
+					background-origin: <span class="red">border-box;</span><br>
+					background-clip: <span class="red">padding-box;</span>
+					</code>
+              </td>
+              <td style="height: 200px;
+						   padding: 20px;
+						   border: 20px solid rgba(130,200,10,0.5);
+						   background-image: url(../pict/kitty_small.jpg);
+						   background-size: 250px;
+						   background-repeat: no-repeat;
+						   background-origin: border-box;
+						   background-clip: padding-box;
+						  ">
+              </td>
+            </tr>
+      </table>
+
+      <span class="gray">Лучше всегда указывать преимущественный цвет у фона, если задаём <span class="red">background-image</span> <br>
+      <span class="gray">Адаптивный фон (viewport - высота хэдера)</span> <code>height: -webkit-calc(100vh - 136px);</code>
+      <br><br>
+      <hr>
+      <h2 style="color: #000;">object-fit</h2>
+      <h3><code>object-fit: fill;</code> - Растягивается по контейнеру (пропорции игнорируются)</h3>
+      <h3><code>object-fit: contain;</code> - Растягивается по максимальной стороне в контейнере (пропорции соблюдаются)</h3>
+      <h3><code>object-fit: cover;</code> - Растягивается по максимальной стороне в контейнере, если осталось ещё свободное место по одной стороне, то изображение будет маштабироваться, чтобы заполнить всё пространство  (пропорции соблюдаются)</h3>
+      <h3><code>object-fit: none;</code> - Отключено по умолчанию</h3>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин
+        <br> EvgenyLeukhin@yandex.ru
+      </p>
+
+      <p class="footer-copyright">© 2016 - 2019</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>
