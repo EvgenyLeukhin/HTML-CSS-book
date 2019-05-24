@@ -4,7 +4,7 @@ My IT-book
 <br>
 Author: Evgeny Leukhin
 <br>
-Mail: EvgenyLeukhin@ya.ru
+Mail: e.leukhin@gmail.com
 <br>
 VK: [https://vk.com/leukhin_ei]
 <br>
