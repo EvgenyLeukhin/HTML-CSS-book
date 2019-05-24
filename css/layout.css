@@ -286,10 +286,10 @@ body {
 }
 
 .footer .footer-copyright {
-  float: right;
-  text-align: right;
+  float: none;
+  text-align: left;
   margin-top: 11px;
-  padding-right: 3px;
+  padding-left: 15px;
 }
 
 /*оформление*/
@@ -556,4 +556,21 @@ code span {
 
 .new-table code>span {
   color: #aaa;
+}
+
+@media (max-width: 400px) {
+  .header .header-menu {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+  }
+  .header .header-menu li a {
+    font-size: 0.8em;
+    margin: 0;
+    border-left-color: #000;
+    border-radius: 12px;
+  }
 }
