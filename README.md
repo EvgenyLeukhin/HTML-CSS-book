@@ -1,4 +1,4 @@
-# HTML/CSS-book
+# HTML-CSS-book
 **GutHub hosting**: [https://evgenyleukhin.github.io/IT-book/]
 
 Author: *Evgeny Leukhin*
