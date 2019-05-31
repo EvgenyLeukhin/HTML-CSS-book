@@ -273,6 +273,10 @@ body {
   font-size: 0.9em;
   border-top: 1px solid black;
 }
+.footer .layout-positioner {
+  justify-content: space-between;
+  display: flex;
+}
 
 .footer p {
   padding: 0;
