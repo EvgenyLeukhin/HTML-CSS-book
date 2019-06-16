@@ -399,11 +399,11 @@ do_install() {
 				fi
 			fi
 
-			# TODO: August 31, 2018 delete from here,
+			# TODO: August 31, 2019 delete from here,
 			if [ "$lsb_dist" =  "ubuntu" ] && [ "$dist_version" = "artful" ]; then
-				deprecation_notice "$lsb_dist $dist_version" "August 31, 2018"
+				deprecation_notice "$lsb_dist $dist_version" "August 31, 2019"
 			fi
-			# TODO: August 31, 2018 delete to here,
+			# TODO: August 31, 2019 delete to here,
 
 			if ! command -v gpg > /dev/null; then
 				pre_reqs="$pre_reqs gnupg"

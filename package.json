@@ -1,10 +1,11 @@
 {
   "name": "it-book",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Web-design/HTML/CSS/JS/PHP handmade directory",
   "main": "index.html",
   "scripts": {
-    "start": "browser-sync start --server --files \"**/*\" --port 8000 --ui-port 8001 --startPath \"./index.html\""
+    "start": "browser-sync start --server --files \"**/*\" --port 8000 --ui-port 8001 --startPath \"./index.html\"",
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
@@ -14,14 +15,15 @@
     "ITbook",
     "my IT-book"
   ],
-  "author": "Evgeny Leukhin <EvgenyLeukhin@ya.ru>",
-  "license": "ISC",
+  "author": "Evgeny Leukhin <e.leukhin@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EvgenyLeukhin/IT-book/issues"
   },
   "homepage": "https://github.com/EvgenyLeukhin/IT-book#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
-    "eslint": "^5.4.0"
+    "eslint": "^5.4.0",
+    "gh-pages": "^2.0.1"
   }
 }

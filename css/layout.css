@@ -1,11 +1,10 @@
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-
-/*центровщик*/
 
 .layout-positioner {
   outline: 0px dashed orange;
@@ -274,6 +273,10 @@ body {
   font-size: 0.9em;
   border-top: 1px solid black;
 }
+.footer .layout-positioner {
+  justify-content: space-between;
+  display: flex;
+}
 
 .footer p {
   padding: 0;
@@ -287,10 +290,10 @@ body {
 }
 
 .footer .footer-copyright {
-  float: right;
-  text-align: right;
+  float: none;
+  text-align: left;
   margin-top: 11px;
-  padding-right: 3px;
+  padding-left: 15px;
 }
 
 /*оформление*/
@@ -557,4 +560,21 @@ code span {
 
 .new-table code>span {
   color: #aaa;
+}
+
+@media (max-width: 400px) {
+  .header .header-menu {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+  }
+  .header .header-menu li a {
+    font-size: 0.8em;
+    margin: 0;
+    border-left-color: #000;
+    border-radius: 12px;
+  }
 }
