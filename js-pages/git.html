@@ -153,8 +153,12 @@
         <p>Добавить указанные (все) измененные файлы к коммиту</p>
       </div>
       <div class="item">
-        <code>git rm &lt;filename&gt; &lt;filename2&gt; (.)</code>
-        <p>Убрать указанные измененные файлы из коммиту</p>
+        <code>git checkout &lt;filename&gt; &lt;filename2&gt;</code>
+        <p>Убрать указанные измененные файлы из коммита</p>
+      </div>
+      <div class="item">
+        <code>git checkout &lt;filename&gt; &lt;commit_hash&gt;</code>
+        <p>Вернуть состояние файла, какое оно было в указанном коммите</p>
       </div>
       <div class="item">
         <code>git checkout -- .</code>
@@ -165,12 +169,24 @@
         <p>Создать коммит</p>
       </div>
       <div class="item">
-        <code>git commit --amend "&lt;commit_message&gt;"</code>
+        <code>git commit --amend -m "&lt;commit_message&gt;"</code>
         <p>Измнить коммит-сообщение</p>
+      </div>
+      <div class="item">
+        <code>git diff &lt;filename&gt;</code>
+        <p>Посмотреть непроиндексированные изменения (до git add)</p>
+      </div>
+      <div class="item">
+        <code>git diff --staged &lt;filename&gt;</code>
+        <p>Посмотреть проиндексированные изменения (после git add)</p>
       </div>
       <div class="item">
         <code>git log (-3)</code>
         <p>Получить список коммитов (последних трёх)</p>
+      </div>
+      <div class="item">
+        <code>git show &lt;commit_hash&gt;</code>
+        <p>Посмотреть какие были ищменения в этом коммите</p>
       </div>
       <div class="item">
         <code>git checkout &lt;commit_hash&gt;</code>
@@ -178,7 +194,7 @@
       </div>
       <div class="item">
         <code>git checkout &lt;branch_name&gt;</code>
-        <p>Переключиться в последний коммит текущей ветки</p>
+        <p>Переключиться в последний коммит указанной ветки</p>
       </div>
       <div class="item">
         <code>git reset &lt;commit_hash&gt; (--hard)</code>
