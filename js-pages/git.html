@@ -135,6 +135,10 @@
         <p>Создать новую ветку (и сразу переключиться в неё)</p>
       </div>
       <div class="item">
+          <code>git checkout -b &lt;branch_name&gt; &lt;commit_hash&gt;</code>
+          <p>Создать новую ветку (и сразу переключиться в неё) от указанного коммита</p>
+        </div>
+      <div class="item">
         <code>git branch -d (-D) &lt;branch_name&gt;</code>
         <p>Удалить указанную ветку (принудительно)</p>
       </div>
@@ -169,16 +173,20 @@
         <p>Если случайно добавили файл, а потом решили, что нужно его убрать из коммита, но при этом не удалять в нём изменения</p>
       </div>
       <div class="item">
+        <code>git rm (--cached) &lt;filename&gt;</code>
+        <p>Удалить файл из коммита и с диска (не удалять с диска), если случайно добавили ненужный файл в коммит и закоммитили его, далее выполнить команду ниже</p>
+      </div>
+      <div class="item">
+        <code>git commit --amend --no-edit</code>
+        <p>Измнить последний коммит, без изменения сообщения, если удалялись или изменялись файлы в коммите</p>
+        </div>
+      <div class="item">
         <code>git commit -m "&lt;commit_message&gt;"</code>
         <p>Создать коммит</p>
       </div>
       <div class="item">
         <code>git commit --amend -m "&lt;commit_message&gt;"</code>
         <p>Измнить коммит-сообщение</p>
-      </div>
-      <div class="item">
-        <code>git commit --amend --no-edit</code>
-        <p>Измнить последний коммит, без изменения сообщения, если удалялись или изменялись файлы в коммите</p>
       </div>
       <div class="item">
         <code>git diff &lt;filename&gt;</code>
@@ -190,12 +198,28 @@
       </div>
       <div class="item">
         <code>git log (-3)</code>
-        <p>Получить список коммитов (последних трёх)</p>
+        <p>Получить список коммитов до текущего (последних трёх)</p>
+      </div>
+      <div class="item">
+        <code>git log --oneline</code>
+        <p>Получить список коммитов до текущего в одну строку</p>
+      </div>
+      <div class="item">
+        <code>git log --all</code>
+        <p>Получить всю историю (не только до текущего)</p>
+      </div>
+      <div class="item">
+        <code>git log --oneline --all --graph</code>
+        <p>Получить всю историю (с графиком)</p>
       </div>
       <div class="item">
         <code>git show &lt;commit_hash&gt;</code>
         <p>Посмотреть какие были ищменения в этом коммите</p>
       </div>
+      <div class="item">
+          <code>git cat-file -p &lt;commit_hash&gt;</code>
+          <p>Посмотреть информацию о коммите</p>
+        </div>
       <div class="item">
         <code>git checkout &lt;commit_hash&gt;</code>
         <p>Переключиться в указанный коммит</p>

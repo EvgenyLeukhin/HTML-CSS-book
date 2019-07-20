@@ -139,17 +139,17 @@
         <tr>
           <td><h2>Редактирование файла</h2></td>
           <td>
-            <span class="gray">// открыть файл в SSH + VIM</span>
-            <code>vi filename</code>
-            <span class="gray">// выбрать режим</span>
-            <code>O</code> - open read only <br>
-            <code>E</code> - edit <br>
-            <code>Q</code> - quit <br>
-            <span class="gray">// режим редактирования (Insert)</span>
+            <span class="gray">// открыть файл в редакторе VIM</span>
+            <code>vim &lt;filename&gt;</code>
+
+            <span class="gray">// режим редактирования (i или Insert)</span>
             <code>:w</code> - save<br>
             <code>:w!</code> - save readonly file<br>
             <code>:q</code> - quit<br>
-            <code>:wq</code> - save and quit
+            <code>:wq</code> - save and quit<br>
+
+            <span class="gray">// посмотреть содержимое файла</span>
+            <code>cat &lt;filename&gt;</code>
           </td>
           <td></td>
         </tr>
