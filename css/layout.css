@@ -127,14 +127,12 @@ body {
 /*вертикальное меню*/
 
 .vert-menu-cont {
-  position: relative;
   float: left;
-  background-color: #e6e9ed;
-  width: 125px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .vert-menu-cont .vert-menu {
+  width: 125px;
   position: fixed;
   margin: 0;
   padding: 0;
@@ -154,6 +152,8 @@ body {
   text-decoration: none;
   border: 1px solid #2980b9;
   padding: 5px;
+  max-width: 150px;
+  word-wrap: break-word;
 }
 
 .vert-menu-cont .vert-menu .active {
@@ -183,52 +183,52 @@ body {
 /**********sub-menus************/
 
 .vert-menu .sub-menu1 {
-  left: 135px;
+  left: 125px;
   top: -10px;
 }
 
 .vert-menu .sub-menu2 {
-  left: 135px;
-  top: -90px;
+  left: 125px;
+  top: -45px;
 }
 
 .vert-menu .sub-menu3 {
-  left: 135px;
+  left: 125px;
   top: -20px;
 }
 
 .vert-menu .sub-menu4 {
-  left: 135px;
+  left: 125px;
   top: -10px;
 }
 
 .vert-menu .sub-menu5 {
-  left: 135px;
+  left: 125px;
   top: -30px;
 }
 
 .vert-menu .sub-menu6 {
-  left: 78px;
+  left: 125px;
   top: 0px;
 }
 
 .vert-menu .sub-menu7 {
-  left: 78px;
+  left: 125px;
   top: 0px;
 }
 
 .vert-menu .sub-menu8 {
-  left: 135px;
+  left: 125px;
   top: -10px;
 }
 
 .vert-menu .sub-menu9 {
-  left: 78px;
+  left: 125px;
   top: -10px;
 }
 
 .vert-menu .sub-menu-less {
-  left: 135px;
+  left: 125px;
   top: -10px;
 }
 
@@ -239,7 +239,7 @@ body {
 
 .vert-menu .sub-menu-nodejs,
 .vert-menu .sub-menu-react {
-  left: 75px;
+  left: 125px;
   top: 0;
 }
 
@@ -564,8 +564,8 @@ code span {
 
 @media (max-width: 400px) {
   .header .header-menu {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     float: none;
     display: flex;
     justify-content: space-between;
@@ -576,5 +576,10 @@ code span {
     margin: 0;
     border-left-color: #000;
     border-radius: 12px;
+  }
+  .vert-menu-cont .vert-menu a {
+    padding: 0;
+    font-size: 12px;
+    line-height: 22px;
   }
 }
