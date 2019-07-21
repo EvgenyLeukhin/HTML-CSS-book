@@ -8,79 +8,41 @@
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
 	<style>
 		.cont {
-		min-height: 330px;
-		width: 340px;
-		margin: 0 auto;
-		border: 2px dotted #999;
-		background-color: pink;
-		margin-top: 10px;
-		padding: 10px;
-		color: white;
-		font-size: 1.5em;}
+      min-height: 330px;
+      width: 340px;
+      margin: 0 auto;
+      border: 2px dotted #999;
+      background-color: pink;
+      margin-top: 10px;
+      padding: 10px;
+      color: white;
+      font-size: 1.5em;
+    }
 
 		.box {
-		float: left;
-		height: 100px;
-		margin-bottom: 10px;
-		width: 100px;
-		border: 2px dotted #999;
-		background-color: white;}
+      float: left;
+      height: 100px;
+      margin-bottom: 10px;
+      width: 100px;
+      border: 2px dotted #999;
+      background-color: white;
+    }
 
-		.relative {position: relative;
-		background-color: lightblue;}
+		.relative {
+      position: relative;
+		  background-color: lightblue;
+    }
 
-		.relative1 {position: relative;
-		background-color: lightblue;
-		top: 20px;
-		left:10px;}
+		.relative1,
+    .relative2,
+    .relative3 {
+		  top: 30px;
+		  left: 20px;
+    }
 
-		.relative2 {position: relative;
-		background-color: lightblue;
-		top: 25px;
-		left:15px;}
-
-		.relative3 {position: relative;
-		background-color: lightblue;
-		top: 30px;
-		left: 20px;}
-
-		.absolute {position: absolute;
-		background-color: maroon;
-		}
-
-		.absolute1 {position: absolute;
-		background-color: maroon;
-		top: 1850px;
-		left: 100px;}
-		.absolute2 {position: absolute;
-		background-color: maroon;
-		top: 1950px;
-		left: 200px;}
-		.absolute3 {position: absolute;
-		background-color: maroon;
-		top: 1750px;
-		left: 0px;}
-
-		.inline-block {display: inline-block;
-		vertical-align: middle;
-		margin-left: 15px;}
-
-		h4 {text-align: center;}
-		.rel {
-			height: 200px;
-			border: 3px solid #000;
-			position: relative;
-		}
-		.abs {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			height: 100px; /*Размеры должны быть фиксированными*/
-			width: 100px;
-			margin-top: -50px;/*Половина от высоты*/
-			margin-left: -50px;/*Половина от ширины*/
-			background-color: maroon;
-			border: 3px solid black;
+		.absolute {
+      position: absolute;
+		  background-color: maroon;
 		}
 	</style>
 </head>
@@ -88,7 +50,7 @@
 <body>
 <div class="header">
 	<div class="layout-positioner clearfix">
-	<div class="header-title"><strong><a href="../index.html">Справочник HTML/CSS/JS</a></strong></div>
+	<div class="header-title"><strong><a href="../index.html">Справочник DESIGN/HTML/CSS</a></strong></div>
 	<div class="header-logo"></div>
 	<ul class="header-menu">
 		<li><a href="../index.html">Главная</a></li>
@@ -112,12 +74,12 @@
 		<li><a href="../css-pages/color.html">Цвет</a></li>
 		<li><a href="../css-pages/bg.html">Фон</a></li>
 		<li><a href="../css-pages/text.html">Текст</a></li>
-<li><a href="../css-pages/font.html">Шрифт</a></li>
+    <li><a href="../css-pages/font.html">Шрифт</a></li>
 		<li><a href="../css-pages/blocks.html">Блочные<br> элементы</a></li>
 		<li><a href="../css-pages/lines.html">Строчные<br> элементы</a></li>
 		<li><a href="../css-pages/inline-blocks.html">Инлайн-блоки</a></li>
 		<li><a href="../css-pages/display.html">Отображение</a></li>
-		<li><a href="../css-pages/position.html" class="active">Позиционирование</a></li>
+		<li><a href="../css-pages/position.html" class="active">Позиц-ние</a></li>
 		<li>
 			<a href="#">Меню</a>
 				<ul class="sub-menu sub-menu1">
@@ -129,7 +91,7 @@
 			<a href="#">Float вёрстка</a>
 				<ul class="sub-menu sub-menu2">
 					<li><a href="../css-pages/float.html">float</a></li>
-					<li><a href="../css-pages/centered.html">Центровщик</a></li>
+
 					<li><a href="../css-pages/clearfix.html">Распорки</a></li>
 					<li><a href="../css-pages/footer.html">Футер</a></li>
 					<li><a href="../css-pages/layout.html">Сетка</a></li>
@@ -230,58 +192,29 @@
 	<h4>Относительные блоки со смещением, смещенные элементы вышли из потока и не влияют на другие элементы,<br> но текст по прежнему думает, что
 эти элементы стоят на своих местах как в примере выше</h4>
 		<div class="cont">
-			<div class="box relative1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
-			<div class="box relative2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
-			<div class="box relative3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative relative1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative relative2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
+			<div class="box relative relative3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
 		</div>
 
-	<h4>Абсолютные элементы без смещения уже вышли из потока</h4>
+	<h4>Абсолютные элементы выходят из потока смещения уже вышли из потока, и текст уже не знает о их существовании, если контейнеру не задавать относительное позиционирование, то абсолютные элементы позиционируются от body.</h4>
 		<div class="cont">
 			<div class="box absolute">1</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box absolute">2</div><span>Текст Текст Текст Текст Текст Текст</span>
 			<div class="box absolute">3</div><span>Текст Текст Текст Текст Текст Текст</span>
 		</div>
-
-	<h4>Абсолютным элементам задано смещение, они вышли из потока, улетев влево, и текст уже забыл о их существовании</h4>
-		<div class="cont">
-			<div class="box absolute1">1</div><span>Текст Текст Текст Текст Текст Текст</span>
-			<div class="box absolute2">2</div><span>Текст Текст Текст Текст Текст Текст</span>
-			<div class="box absolute3">3</div><span>Текст Текст Текст Текст Текст Текст</span>
-		</div>
-
-
-
 	</main>
-
-	<h2>Центровка абсолютно-спозиционированного элемента в родителе:</h2>
-	<code>
-		position: absolute;<br>
-		top: 50%;<br>
-		left: 50%;<br>
-		height: 100px; <span class="gray">/*Размеры должны быть фиксированными*/</span><br>
-		width: 100px;<br>
-		margin-top: -50px;<span class="gray">/*Половина от высоты*/</span><br>
-		margin-left: -50px;<span class="gray">/*Половина от ширины*/</span><br>
-	</code>
-	<div class="rel">
-		<div class="abs"></div>
-	</div>
 
 	</div>
 </div>
 
 <div class="footer">
 	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
+		<p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
 
 		<p class="footer-copyright">© 2016 - 2019</p>
 	</div>
 </div>
-
-
-
-
 
 </body>
 </html>
