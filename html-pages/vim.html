@@ -105,6 +105,14 @@
         <li>В директории пользователя ОС создаём папку <b>.ssh</b></li>
         <li>В этой директоии создаём файл <b>config</b> без разрешения, в котором будет находиться список хостов. <br>
           <code>
+            # github.com<br>
+            HostName github.com<br>
+            User git<br>
+            AddKeysToAgent yes<br>
+            PubkeyAuthentication yes<br>
+            IdentityFile ~/.ssh/id_rsa<br>
+            PreferredAuthentications publickey<br><br>
+            
             # Some site<br>
             Host some_server <br>
             Hostname 192.168.12.12 <br>
