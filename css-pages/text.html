@@ -771,6 +771,7 @@
   <h3>Ellipsis</h3>
   <p class="clip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit incidunt accusantium laudantium dolorem corporis accusamus suscipit deleniti architecto soluta esse natus nam quisquam est facilis inventore perferendis, et illo id quidem ad consequatur nemo sit laborum? Aspernatur placeat nam fuga dolores tempore nulla eum et debitis libero eligendi quidem odio, quod, adipisci nemo provident, eaque atque! Vero, similique, possimus esse voluptatem libero nulla ipsam reiciendis omnis quo, ratione eligendi autem sit facere nemo vel. Dolor debitis corporis perferendis quae cumque modi itaque praesentium similique totam dignissimos blanditiis consectetur repudiandae sint animi architecto ipsa quibusdam, distinctio numquam, nesciunt sequi possimus perspiciatis.</p>
   <pre><code><span class="red">p</span> {
+    display: block; <span class="gray">/* Не работает с flex и другими */</span>
     text-overflow: ellipsis; <span class="gray">/* Добавляем многоточие */</span>
     white-space: nowrap; <span class="gray">/* Запрещаем перенос строк */</span>
     overflow: hidden; <span class="gray">/* Обрезаем все, что не помещается в область */</span>
