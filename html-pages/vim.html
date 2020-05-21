@@ -106,6 +106,17 @@
         <li>В этой директоии создаём файл <b>config</b> без разрешения, в котором будет находиться список хостов. <br>
           <code>
             # github.com<br>
+            Host github.com<br>
+            PreferredAuthentications publickey<br>
+            IdentityFile ~/.ssh/id_rsa<br><br>
+
+            # gitlab.com<br>
+            Host gitlab.com<br>
+            Preferredauthentications publickey<br>
+            IdentityFile ~/.ssh/id_rsa<br><br>
+
+            // old <br>
+            # github.com<br>
             HostName github.com<br>
             User git<br>
             AddKeysToAgent yes<br>
