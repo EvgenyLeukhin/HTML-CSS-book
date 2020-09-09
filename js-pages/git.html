@@ -175,7 +175,7 @@
       </div>
       <div class="item">
         <code>git checkout -- .</code>
-        <p>Убрать измененния во всез файлах</p>
+        <p>Убрать измененния во всех файлах</p>
       </div>
       <div class="item">
         <code>git reset HEAD &lt;filename&gt;</code>
@@ -223,7 +223,7 @@
       </div>
       <div class="item">
         <code>git show &lt;commit_hash&gt;</code>
-        <p>Посмотреть какие были ищменения в этом коммите</p>
+        <p>Посмотреть какие были изменения в этом коммите</p>
       </div>
       <div class="item">
           <code>git cat-file -p &lt;commit_hash&gt;</code>
@@ -252,13 +252,76 @@
         <p>Отправить изменения (принудительно)</p>
       </div>
 
+      <h3><mark>Rebase:</mark></h3>
+      <p>Перебазирование ветки, сдвигаем первый коммит дочерней ветки в состояние последнего коммита родительской.</p>
+      <p>Актуально, когда родительская ветка наполниласть новыми коммитами после создания дочерней ветки и при этом перебазировании можно заблаговременно исправить все конфликты, находясь в дочерней ветке.</p>
+      <div class="item">
+        <code>git checkout &lt;parent_brunch_name&gt;</code>
+        <p>1. Переключаемся в родительскую ветку</p>
+      </div>
+
+      <div class="item">
+        <code>git pull origin &lt;parent_brunch_name&gt;</code>
+        <p>2. Забираем все новые коммиты</p>
+      </div>
+
+      <div class="item">
+        <code>git checkout &lt;child_brunch_name&gt;</code>
+        <p>3. Переключаемся в дочернюю ветку</p>
+      </div>
+
+      <div class="item">
+        <code>git rebase &lt;parent_brunch_name&gt;</code>
+        <p>4. Перебазируемся в родительскую ветку. При этом могут возникать конфликты, которые нужно разрешать</p>
+      </div>
+
+      <div class="item">
+        <code>git add &lt;conflict_file_name&gt;</code>
+        <p>5. Разрешаем конфликты, сохраняем, добавляем разрешенные файлы в отслеживание</p>
+      </div>
+
+      <div class="item">
+        <code>git rebase --continue</code>
+        <p>6. Продолжаем перебазирование (5 и 6 пункты могут повторяться несколько раз)</p>
+      </div>
+
+      <div class="item">
+        <code>git push origin -f</code>
+        <p>7. Если все конфликты решены и перебазирование закончено, то можно форсированно пушить изменения дочерней ветки</p>
+      </div>
+
+      <h3><mark>Squash commits:</mark></h3>
+      <p>Схлопывание нескольких коммитов в один.</p>
+      <p>Актуально, когда мы имеем много непонятных коммитов в процессе разработки и хотим оставить один понятный, когда работа по созданию нового функционала уже закончена, и при этом в истории останется один понятый коммит.</p>
+      <div class="item">
+        <code>git rebase -i &lt;parent_brunch_name&gt;</code>
+        <p>1. Делаем ребейз ветки (интелектуальный), возможны моменты, описанные выше.</p>
+      </div>
+      <div class="item">
+        <code>
+          1. pick<br>
+          2. pick -> s<br>
+          3. pick -> s<br>
+          ...<br>
+          10. pick -> s
+        </code>
+        <p>2. Меняем в vim pick -> s (или squash), кроме первого коммита</p>
+      </div>
+      <div class="item">
+        <code>"Add new feature"</code>
+        <p>3. Пишем финальный commit-message</p>
+      </div>
+      <div class="item">
+        <code>git push origin -f</code>
+        <p>4. Форсированно пушим эти изменения</p>
+      </div>
     </div>
   </main>
 
   <footer class="footer">
     <div class="layout-positioner">
       <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
-      <p class="footer-copyright">© 2016 - 2019</p>
+      <p class="footer-copyright">© 2016 - 2020</p>
     </div>
   </footer>
 
