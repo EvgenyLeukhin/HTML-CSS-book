@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Мой Справочник | CSS3 | PUG/JADE</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="layout-positioner clearfix">
+      <div class="header-title"><strong><a href="../index.html">Справочник DESIGN/HTML/CSS</a></strong></div>
+      <div class="header-logo"></div>
+      <ul class="header-menu">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../design-page.html">WEB-DESIGN</a></li>
+        <li><a class="active" href="../html-page.html">HTML</a></li>
+        <li><a href="../css-page.html">CSS</a></li>
+        <li><a href="../css3-page.html">CSS3</a></li>
+        <li><a href="../javascript-page.html">jQ</a></li>
+        <li><a href="../php.html">PHP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layout-positioner clearfix">
+    <div class="vert-menu-cont">
+      <ul class="vert-menu">
+        <li><a href="base.html">Основная<br> разметка</a></li>
+        <li><a href="head.html">Внутри head</a></li>
+        <li><a href="conts.html">Контейнеры</a></li>
+        <li><a href="headers.html">Заголовки</a></li>
+        <li><a href="lists.html">Списки</a></li>
+        <li><a href="tables.html">Таблицы</a></li>
+        <li><a href="text.html">Текст</a></li>
+        <li><a href="links.html">Ссылки</a></li>
+        <li><a href="images.html">Изображения</a></li>
+        <li><a href="forms.html">Формы</a></li>
+        <li><a href="simbols.html">Символы</a></li>
+        <li><a href="svg.html">SVG</a></li>
+        <li><a href="media.html">Аудио-Видео</a></li>
+        <li><a href="frame.html">Фреймы и flash</a></li>
+        <li><a href="pug.html" class="active">PUG/JADE</a></li>
+      </ul>
+    </div>
+
+    <div class="content clearfix">
+
+      <h2>Мой Справочник | HTML | PUG/JADE</h2>
+
+      <table class="css3-table">
+        <tr>
+          <th class="css3-table-title" colspan="3">PUG/JADE</th>
+        </tr>
+
+        <tr>
+          <td class="col1">
+            <b>Блок</b> — независимый элемент страницы с собственным смыслом. <br>
+            <b>Элемент</b> — составная часть блока, имеющая смысл только внутри блока. <br>
+            <b>Модификатор</b> — модификация внешнего вида или поведения блока (или элемента).
+          </td>
+          <td class="col2">
+            <h3 style="color: #000;"><u>НАЗВАНИЕ для css-селекторов:</u></h3>
+            <code><b>.block</b></code> <span class="gray">//БЛОК</span> <br>
+            <code><b>.block__element</b></code> <span class="gray">//ЭЛЕМЕНТ внутри блока</span> <br>
+            <code><b>.block--modif</b></code> <span class="gray">//МОДИФИКАТОР блока</span>
+          </td>
+          <td class="col3" style="width: 400px;">
+            <h3>Основные принципы БЭМ:</h3>
+            <ol>
+              <li>Минимум тегов без классов</li>
+              <li>Каскадность свести к минимуму</li>
+              <li>Блок независим от окружения (может быть размещён в любой части страницы и не сломается при этом).</li>
+              <li>У разных блоков не должно быть общих классов (и в CSS — не группируем общие правила, а копируем их).
+              </li>
+              <li>У одного блока (элемента) может быть несколько модификаторов.</li>
+              <li>Осторожно используем дочерний селектор ( >), последовательность ( +), псевдоклассы ( :nth-child).</li>
+            </ol>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="layout-positioner">
+      <p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
+      <p class="footer-copyright">© 2016 - 2020</p>
+    </div>
+  </div>
+</body>
+</html>
