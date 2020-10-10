@@ -4,12 +4,13 @@
 <head>
   <title>Мой Справочник | Редакторы кода</title>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/layout.css">
   <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
   <style>
-    .col3 > ul,
-    .col3 > ol {
+    .col3>ul,
+    .col3>ol {
       margin: 0;
       padding: 0;
       list-style-position: inside;
@@ -50,16 +51,12 @@
         <li><a href="../design-pages/management.html">Создание сайта</a></li>
         <li><a class="active" href="../html-pages/editors.html">Редакторы кода</a></li>
         <li><a href="../js-pages/git.html">Git</a></li>
-        <li>
-          <a href="../html-pages/vim.html">SSH + VIM</a>
-        </li>
+        <li><a href="../html-pages/vim.html">SSH + VIM</a></li>
         <li><a href="../js-pages/linux.html">Linux</a></li>
         <li><a href="../html-pages/macos.html">Mac OS</a></li>
-        <li>
-          <a href="../html-pages/console.html">Консоль</a>
-        </li>
+        <li><a href="../html-pages/console.html">Консоль</a></li>
         <li><a href="../design-pages/programs.html">Программы</a></li>
-        <li><a href="../html-pages/seo.html">SEO</a></li>
+        <li><a href="../html-pages/seo.html">SEO & Sharing</a></li>
         <li><a href="../html-pages/optimization.html">Оптимизация</a></li>
         <li><a href="../design-pages/photo.html">Фотография</a></li>
         <li><a href="../html-pages/logic.html">Logic Pro X</a></li>
@@ -104,43 +101,48 @@
         </tr>
 
         <tr>
-          <td class="col1">
-            Плагины
-          </td>
+          <td class="col1">Плагины</td>
 
           <td class="col3" style="min-width: 650px;">
             <ol>
+              <h4>MUST HAVE: </h4>
+              <li><b>Terminal</b> (стоит по умолчанию)</li>
+              <li><b>Sublime Text Keymap</b> (горячие клавиши как в Sublime)</li>
               <li><b>Auto Close Tag</b> (подстановка закрывающего тега)</li>
               <li><b>Autofilename</b> (быстрый ввод путей)</li>
-              <li><b>Auto-Open Markdown Preview</b> (превью md-файлов)</li>
               <li><b>Auto Rename Tag</b> (авто-переименование)</li>
-              <li><b>Beautify</b> (авто-форматирование кода)</li>
-              <li><b>Bookmarks</b> <kbd>Ctrl + Alt + K, J</kbd></li>
               <li><b>Bracket Pair Colorizer</b> (подсветка парных тегов, скобок и т.д.)</li>
               <li><b>EditorConfig for VS Code</b> (стайл-гайд)</li>
               <li><b>ESLint</b> (js-линтер)</li>
+              <li><b>IntelliSense for CSS class names in HTML</b> (автокомплит css-классов)</li>
               <li><b>GitLens</b> (история каждой строки)</li>
-              <li><b>Git History</b> (история файлов) - не работает в Linux</li>
-              <li><b>GraphQL for VSCode</b> (поддержка синтаксиса)</li>
-              <li><b>IntelliSense for CSS class names in HTML</b> (css-классы)</li>
-              <li><b>Mithril Emmet</b> (Emmet)</li>
-              <li><b>npm</b> (npm-debugger)</li>
-              <li><b>npm intellisense</b> (npm команды из строки)</li>
+              <li><b>npm</b> (npm-debugger, будет подсвечивать неустановленные пакеты из package.json)</li>
+              <li><b>npm intellisense</b> (при импортах пути будут видеть пакеты из package.json)</li>
               <li><b>NPM-Scripts</b> (запуск npm-скриптов из package.json)</li>
-              <li><b>Prettier - Code formatter<b> (code format)</li>
-              <li><b>Sass</b> (подсветка синтаксиса)</li>
-              <li><b>Sublime Text Keymap</b> (горячие клавиши как в Sublime)</li>
-              <li><b>Terminal</b> (стоит по умолчанию)</li>
-              <li><b>VS Code Live Share</b> (презентация кода)</li>
-              <li><b>vscode-pdf</b> (поддержка pdf)</li>
               <li><b>ES7 React/Redux/GraphQL/React-Native snippets</b> (быстрый ввод)</li>
+              <li><b>Svg Preview</b> (превью svg изображений)</li>
+
+              <h4>OPTIONAL: </h4>
+              <li><b>Git History</b> (git editor) - не работает в Linux</li>
+              <li><b>Auto-Open Markdown Preview</b> (превью md-файлов)</li>
+              <li><b>Bookmarks</b> <span>(Ctrl + Alt + K, J)</span></li>
+              <li><b>GraphQL for VSCode</b> (поддержка синтаксиса)</li>
+              <li><b>Prettier - Code formatter<b> (code format)</li>
+              <li><b>vscode-pdf</b> (поддержка pdf)</li>
+              <li><b>VS Code Live Share</b> (презентация кода)</li>
+              <li><b>Beautify</b> (авто-форматирование кода, можно пользоваться встроенным Format Document)</li>
+              <li><b>Sass</b> (подсветка синтаксиса - уже встроено в VS Code)</li>
+              <li><b>Mithril Emmet</b> (Emmet - уже встроено в VS Code)</li>
               <li><b>Docker</b> (интеграция)</li>
+              <li><b>Bookmarks</b> (закладки)</li>
+              <li><b>Live server</b> (запуск html-файлов из редактора)</li>
+              <li><b>Live share</b> (шаринг)</li>
 
 
 
-               <!-- Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets -->
-               <!-- node-readme -->
-               <!-- Simple React Snippets -->
+              <!-- Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets -->
+              <!-- node-readme -->
+              <!-- Simple React Snippets -->
 
               <!-- <li>Bootstrap 4, Font awesome</li> -->
               <!-- <li>CSS Tree Validator (валидатор css)</li> -->
@@ -157,9 +159,9 @@
         <tr>
           <td class="col1">Настройки (мои)</td>
           <td class="col3" style="min-width: 600px;">
-<h3>User Settings</h3>
-<pre><code style="font-size: 1em;">{
-  "breadcrumbs.enabled": true,
+            <h3>User Settings</h3>
+            <pre><code style="font-size: 1em;">{
+  "breadcrumbs.enabled": true, (default)
 
   "gitlens.advanced.messages": {
     "suppressResultsExplorerNotice": true,
@@ -169,18 +171,21 @@
   "git.enableSmartCommit": true,
   "gitlens.keymap": "alternate",
 
-  "editor.fontFamily": "'Consolas'",
+  "editor.fontFamily": "Consolas",
   "editor.fontSize": 18,
+  "editor.letterSpacing": 0, (default)
+  "editor.lineHeight": 25, (23 default)
   "editor.formatOnPaste": true,
   "editor.minimap.enabled": false,
+  "editor.minimap.scale": 2, (0 default)
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    100
-  ],
+  "editor.rulers": [100],
   "editor.tabSize": 2,
+  "editor.padding.top": 10,
+  "editor.padding.bottom": 10,
   "editor.wordWrap": "on",
 
   "emmet.includeLanguages": {
@@ -207,7 +212,7 @@
   "workbench.colorTheme": "Monokai",
   "workbench.statusBar.visible": true
 }</code></pre><br><br>
-<code>Configure Language</code> в консоли - смена языка на англ (en)
+            <code>Configure Language</code> в консоли - смена языка на англ (en)
           </td>
         </tr>
 
@@ -272,7 +277,8 @@
           </td>
 
           <td class="col3" style="min-width: 600px;">
-            <a href="https://code.visualstudio.com/c?utm_expid=101350005-35.Eg8306GUR6SersZwpBjURQ.2&utm_referrer=https%3A%2F%2Fcode.visualstudio.com%2Fc" target="_blank">http://www.sublimetext.com/</a>
+            <a href="https://code.visualstudio.com/c?utm_expid=101350005-35.Eg8306GUR6SersZwpBjURQ.2&utm_referrer=https%3A%2F%2Fcode.visualstudio.com%2Fc"
+              target="_blank">http://www.sublimetext.com/</a>
           </td>
         </tr>
 
@@ -282,38 +288,60 @@
           </td>
 
           <td class="col3" style="min-width: 600px;">
-<pre>1. Открыть консоль в Sublime text 3 (View - Show console)
+            <pre>1. Открыть консоль в Sublime text 3 (View - Show console)
 2. (Ctrl + Shift + P) Install Package control
 </pre>
           </td>
         </tr>
         <tr>
-         <td class="col1">
+          <td class="col1">
             Плагины:
           </td>
           <td class="col3" style="min-width: 600px;">
             <ol>
-              <li><b>Emmet</b></li><hr>
-              <li><b>AutoFileName</b> - пути к файлам</li><hr>
-              <li><b>BracketHighlighter</b> - подсветка скобок и парных тегов</li><hr>
-              <li><b>A File Icon</b> - иконки для файлов в сайдбаре</li><hr>
-              <li><b>ColorHighliter</b> - подсветка цветов в CSS</li><hr>
-              <li><b>Terminal</b> - открывать терминал командой</li><hr>
-              <li><b>LESS</b> - поддержка синтаксиса</li><hr>
-              <li><b>SASS</b> - поддержка синтаксиса</li><hr>
-              <li><b>Babel</b> - поддержка синтаксиса</li><hr>
-              <li><b>SideBarEnhancements</b> - расширение функций сайдбара</li><hr>
-              <li><b>Bootstrap 3 Snippets</b></li><hr>
-              <li><b>Bootstrap 4 Snippets</b></li><hr>
-              <li><b>JavaScript Snippets</b> - автозаполнение</li><hr>
-              <li><b>JavaScript Completions</b> - автозаполнение хорошее</li><hr>
-              <li><b>jQuery Snippets</b></li><hr>
-              <li><b>CodeFormatter</b> - форматирование</li><hr>
-              <li><b>HTML Minifier</b> - минификатор HTML, CSS, JS</li><hr>
-              <li><b>BufferScroll</b> - запоминает сворачивание блоков</li><hr>
-              <li><b>EditorConfig</b> - запоминает форматирование кода (<a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">download</a>)</li><hr>
-              <li><b>SublimeLinter</b> - Линтер</li><hr>
-              <li><b>SublimeLinter - eslint</b> - JS-линтер</li><hr>
+              <li><b>Emmet</b></li>
+              <hr>
+              <li><b>AutoFileName</b> - пути к файлам</li>
+              <hr>
+              <li><b>BracketHighlighter</b> - подсветка скобок и парных тегов</li>
+              <hr>
+              <li><b>A File Icon</b> - иконки для файлов в сайдбаре</li>
+              <hr>
+              <li><b>ColorHighliter</b> - подсветка цветов в CSS</li>
+              <hr>
+              <li><b>Terminal</b> - открывать терминал командой</li>
+              <hr>
+              <li><b>LESS</b> - поддержка синтаксиса</li>
+              <hr>
+              <li><b>SASS</b> - поддержка синтаксиса</li>
+              <hr>
+              <li><b>Babel</b> - поддержка синтаксиса</li>
+              <hr>
+              <li><b>SideBarEnhancements</b> - расширение функций сайдбара</li>
+              <hr>
+              <li><b>Bootstrap 3 Snippets</b></li>
+              <hr>
+              <li><b>Bootstrap 4 Snippets</b></li>
+              <hr>
+              <li><b>JavaScript Snippets</b> - автозаполнение</li>
+              <hr>
+              <li><b>JavaScript Completions</b> - автозаполнение хорошее</li>
+              <hr>
+              <li><b>jQuery Snippets</b></li>
+              <hr>
+              <li><b>CodeFormatter</b> - форматирование</li>
+              <hr>
+              <li><b>HTML Minifier</b> - минификатор HTML, CSS, JS</li>
+              <hr>
+              <li><b>BufferScroll</b> - запоминает сворачивание блоков</li>
+              <hr>
+              <li><b>EditorConfig</b> - запоминает форматирование кода (<a
+                  href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank">download</a>)</li>
+              <hr>
+              <li><b>SublimeLinter</b> - Линтер</li>
+              <hr>
+              <li><b>SublimeLinter - eslint</b> - JS-линтер</li>
+              <hr>
               <!-- <li><b>FakeImg</b> - "рыбные" картинки</li><hr> -->
               <!-- <li><b>Tag</b> - форматирование</li><hr> -->
             </ol>
@@ -323,26 +351,75 @@
 
         <tr>
           <td class="col1">
-            <a href="http://nicothin.github.io/sublime-text/sublime-text-3-hotkeys.html" target="_blank">Горячие клавиши</a>
+            <a href="http://nicothin.github.io/sublime-text/sublime-text-3-hotkeys.html" target="_blank">Горячие
+              клавиши</a>
           </td>
           <td class="col3" style="min-width: 600px;">
             <table style="border-collapse: collapse">
-              <tr><td><kbd>Ctrl + K + B      </kbd></td>  <td>открыть\закрыть сайдбар</td></tr>
-              <tr><td><kbd>Ctrl + P          </kbd></td>  <td>поиск файла в директории по названию</td></tr>
-              <tr><td><kbd>F11               </kbd></td>  <td>полноэкранный режим</td></tr>
-              <tr><td><kbd>Shift + F11       </kbd></td>  <td>экста-полноэкранный режим (убирает все элементы интерфейса)</td></tr>
-              <tr><td><kbd>Alt + Shift + 2(3)</kbd></td>  <td>разбить окно на 2(3) колонны (View - Layout более подробно)</td></tr>
-              <tr><td><kbd>Alt + Shift + 1   </kbd></td>  <td>вернуть по умолчанию 1 колонну</td></tr>
-              <tr><td><kbd>Ctrl + Shift + P  </kbd></td>  <td>список команд Sublime</td></tr>
-              <tr><td><kbd>Ctrl + /          </kbd></td>  <td>закомментировать</td></tr>
-              <tr><td><kbd>Tab               </kbd></td>  <td>табуляция</td></tr>
-              <tr><td><kbd>Shift + Tab       </kbd></td>  <td>реверсивная табуляция</td></tr>
-              <tr><td><kbd>Ctrl + Shift + V  </kbd></td>  <td>"умная" вставка (с табами)</td></tr>
-              <tr><td><kbd>Ctrl + D          </kbd></td>  <td>выделение и редактирование одинаковых фраз</td></tr>
-              <tr><td><kbd>Ctrl + MMB        </kbd></td>  <td>добавить курсоры</td></tr>
-              <tr><td><kbd>Shift + Ctrl + D  </kbd></td>  <td>дублирование строк</td></tr>
-              <tr><td><kbd>Ctrl + Alt + Enter</kbd></td>  <td>Emmet в реальном времени</td></tr>
-              <tr><td><kbd>Alt</kbd></td>  <td>Показать меню (если скрыто)</td></tr>
+              <tr>
+                <td><kbd>Ctrl + K + B </kbd></td>
+                <td>открыть\закрыть сайдбар</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + P </kbd></td>
+                <td>поиск файла в директории по названию</td>
+              </tr>
+              <tr>
+                <td><kbd>F11 </kbd></td>
+                <td>полноэкранный режим</td>
+              </tr>
+              <tr>
+                <td><kbd>Shift + F11 </kbd></td>
+                <td>экста-полноэкранный режим (убирает все элементы интерфейса)</td>
+              </tr>
+              <tr>
+                <td><kbd>Alt + Shift + 2(3)</kbd></td>
+                <td>разбить окно на 2(3) колонны (View - Layout более подробно)</td>
+              </tr>
+              <tr>
+                <td><kbd>Alt + Shift + 1 </kbd></td>
+                <td>вернуть по умолчанию 1 колонну</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + Shift + P </kbd></td>
+                <td>список команд Sublime</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + / </kbd></td>
+                <td>закомментировать</td>
+              </tr>
+              <tr>
+                <td><kbd>Tab </kbd></td>
+                <td>табуляция</td>
+              </tr>
+              <tr>
+                <td><kbd>Shift + Tab </kbd></td>
+                <td>реверсивная табуляция</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + Shift + V </kbd></td>
+                <td>"умная" вставка (с табами)</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + D </kbd></td>
+                <td>выделение и редактирование одинаковых фраз</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + MMB </kbd></td>
+                <td>добавить курсоры</td>
+              </tr>
+              <tr>
+                <td><kbd>Shift + Ctrl + D </kbd></td>
+                <td>дублирование строк</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + Alt + Enter</kbd></td>
+                <td>Emmet в реальном времени</td>
+              </tr>
+              <tr>
+                <td><kbd>Alt</kbd></td>
+                <td>Показать меню (если скрыто)</td>
+              </tr>
             </table>
           </td>
         </tr>
@@ -353,7 +430,8 @@
 
         <tr>
           <td class="col1">
-            Официальный сайт <a href="https://www.jetbrains.com/webstorm/" target="_blank">www.jetbrains.com/webstorm</a>
+            Официальный сайт <a href="https://www.jetbrains.com/webstorm/"
+              target="_blank">www.jetbrains.com/webstorm</a>
           </td>
 
           <td class="col3" style="min-width: 600px;">
@@ -380,7 +458,9 @@
           </td>
         </tr>
         <tr>
-          <td><h3>Hotkeys</h3></td>
+          <td>
+            <h3>Hotkeys</h3>
+          </td>
           <td>
             <kbd>Ctrl + Alt + S</kbd> - Настройки <br>
             <kbd>Ctrl + Alt + A</kbd> - Команды <br>
@@ -423,7 +503,8 @@
 
           <td class="col3" style="min-width: 600px;">
             <ol>
-              <li>Beautify (форматор html,css,js-кода) <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> + </span>L</kbd></li>
+              <li>Beautify (форматор html,css,js-кода) <kbd>Ctrl<span class="gray"> + </span>Shift<span class="gray"> +
+                  </span>L</kbd></li>
               <li>Emmet</li>
               <li>Extract for Brackets (PSD-файлы)</li>
               <li>Interactive Linter (html,css линтер)</li>
@@ -474,9 +555,9 @@
         </tr>
 
       </table><br>
-<hr>
-<h2>Пользовательские настройки в Sublime</h2>
-<pre><code>{
+      <hr>
+      <h2>Пользовательские настройки в Sublime</h2>
+      <pre><code>{
   "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
   "default_line_ending": "unix",
   "draw_white_space": "all",
@@ -492,7 +573,7 @@
 }</code></pre>
 
 
-  <h3>.eslintrc.js</h3>
+      <h3>.eslintrc.js</h3>
       <pre><code style="font-size: 1.25em;">module.exports = {
   "env": { "browser": true },
   "extends": "eslint:recommended",
@@ -504,7 +585,7 @@
   }
 };</code></pre>
 
-  <h3>.editorconfig</h3>
+      <h3>.editorconfig</h3>
       <pre><code style="font-size: 1.25em;">root = true
 
 [*]
