@@ -30,17 +30,15 @@
     <ul class="vert-menu">
       <li><a href="stages.html">Этапы</a></li>
       <li><a href="conversation.html">Сбор данных</a></li>
-      <li><a href="prototype.html">Прототип</a></li>
+      <li><a href="prototype.html">Прототип (UX)</a></li>
       <li><a href="color.html">Цвет</a></li>
       <li><a class="active" href="images.html">Изображения</a></li>
       <li><a href="typograph.html">Типографика</a></li>
+      <li><a href="icons.html">Иконки (UI)</a></li>
       <li><a href="moodboard.html">Moodboard</a></li>
       <li><a href="composition.html">Композиция</a></li>
       <li><a href="geometry.html">Геометрия</a></li>
-      <li><a href="backgrounds.html">Фоны</a></li>
       <li><a href="maket.html">Макет</a></li>
-      <li><a href="forms.html">Формы</a></li>
-      <li><a href="icons.html">Иконки</a></li>
       <li><a href="adobe.html">Adobe</a></li>
       <li><a href="editors.html">Редакторы</a></li>
     </ul>
@@ -144,11 +142,25 @@
       <b>Не должно быть строгой сетки для изображений - должны быть <mark>АКЦЕНТЫ</mark> (как вариант изображение товара, который чаще покупают, должно быть больше)</b></li>
   </ul>
 
+  <br><hr>
+  <h3>Фоны</h3>
 
+  <p>Для фона лучше всего использовать светлый цвет (белый, светло-серый и светло-бежевый), это не позволит глазам
+    пользователя быстро устать.</p>
 
+  <ul>
+    <li><a href="http://www.grsites.com/textures" target="blank">Фоны, текстуры</a></li>
+    <li><a href="https://www.toptal.com/designers/subtlepatterns/" target="blank">Фоны, текстуры 2</a></li>
+    <li><a href="http://lea.verou.me/css3patterns" target="blank">Градиентные фоны</a></li>
+    <li><a href="http://www.colorzilla.com/gradient-editor" target="blank">Градиенты - Ultimate CSS Gradient Generator</a>
+    </li>
+    <li><a href="https://uigradients.com" target="blank">UI Gradients</a></li>
+  </ul>
 
+  <br>
+  <hr>
+  <h3>Форматы изображений</h3>
   <table class="discription-table">
-    <caption>Форматы изображений</caption>
     <tr>
       <th>Формат</th>
       <th>Описания</th>
@@ -156,7 +168,7 @@
       <th>Недостатки</th>
     </tr>
     <tr>
-      <td style="font-size: 2.5em;">JPEG</td>
+      <td style="font-size: 1.5em;">JPEG</td>
       <td>1991 г. Самый распространнённый формат, подходящий для ФОТОГРАФИЙ, различных изображений, которым нужна
         полноцветность, но не нужна прозрачность.</td>
       <td>
@@ -177,7 +189,7 @@
     </tr>
     <tr><td colspan="4" style="color: black; text-align: center; font-weight: normal;">Можно иммитировать прозрачность делая цвет фона у JPEG такой же как в контейнере</td></tr>
     <tr>
-      <td style="font-size: 2.5em;">GIF</td>
+      <td style="font-size: 1.5em;">GIF</td>
       <td>1986 г. Формат для анимаций и мелкой графики, не требующих высокого качества</td>
       <td>
         <ol>
@@ -196,7 +208,7 @@
       </td>
     </tr>
     <tr>
-      <td style="font-size: 2.5em;">PNG-8</td>
+      <td style="font-size: 1.5em;">PNG-8</td>
       <td>1996 г. Напоминает GIF. Используется для мелкой неполноцветной графики как альтернатива GIF</td>
       <td>
         <ol>
@@ -215,7 +227,7 @@
       </td>
     </tr>
     <tr>
-      <td style="font-size: 2.5em;">PNG-24</td>
+      <td style="font-size: 1.5em;">PNG-24</td>
       <td>Самый лучший и современный формат изображений. Используется для всех полноцветных изображений, которым нужна
         прозрачность или полупрозрачность, отсутствие изображений, для спрайтов</td>
       <td>
@@ -234,7 +246,7 @@
       </td>
     </tr>
     <tr>
-      <td style="font-size: 2.5em;">SVG</td>
+      <td style="font-size: 1.5em;">SVG</td>
       <td>
         <b>Векторное изображение</b><br>
         <i>(Рисунки создаются математическими уравнениями, а не точками как в растровой графике)</i>
@@ -257,24 +269,29 @@
     </tr>
   </table>
 
-  <div style="background-color: #d1d1d1;">
-    <h3>GIF-анимация (6556 KB)</h3>
-    <img src="../pict/Lev-peredayot-privet_33.gif" alt="gif-animation" width="650">
-    <h3>GIF (51 KB)</h3>
-    <img src="../pict/guitar.gif" alt="gif" width="650">
-    <hr>
-    <h3>JPEG (68 KB)</h3>
-    <img src="../pict/guitar.jpg" alt="jpg" width="650">
-    <hr>
-    <h3>PNG (207 KB)</h3>
-    <img src="../pict/guitar.png" alt="jpg" width="650">
-    <hr>
-    <h3>SVG (96 KB)</h3>
-    <picture>
-      <source srcset="../pict/shoes.svg">
-      <img src="../pict/shoes.png" alt="img" height="200">
-    </picture>
-
+  <div style="background-color: whitesmoke">
+    <ul style="display: flex; list-style: none; flex-wrap: wrap; justify-content: space-between;">
+      <li style="flex-basis: 33%;">
+        <h3>GIF-анимация (6,5 MB)</h3>
+        <img src="../pict/Lev-peredayot-privet_33.gif" alt="gif-animation" width="150">
+      </li>
+      <li style="flex-basis: 33%;">
+        <h3>GIF (51 KB)</h3>
+        <img src="../pict/guitar.gif" alt="gif" width="150">
+      </li>
+      <li style="flex-basis: 33%;">
+        <h3>JPEG (68 KB)</h3>
+        <img src="../pict/guitar.jpg" alt="jpg" width="150">
+      </li>
+      <li style="flex-basis: 33%;">
+        <h3>PNG (207 KB)</h3>
+        <img src="../pict/guitar.png" alt="jpg" width="150">
+      </li>
+      <li style="flex-basis: 33%;">
+        <h3>SVG (96 KB)</h3>
+        <img src="../pict/shoes.svg" alt="shoes.svg" width="150">
+      </li>
+    </ul>
   </div>
 
 
