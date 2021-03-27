@@ -7,6 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <style>
+      .content-container h2 {
+        color: maroon;
+      }
+      table {
+        border-spacing: 0;
+        padding: 0;
+        font-size: 16px;
+        border-color: rgba(0,0,0, .15);
+      }
+      table kbd {
+        font-size: 18px;
+      }
+
+      table td[colspan] {
+        font-weight: bold;
+        text-align: center;
+        background: cornsilk;
+      }
+    </style>
 </head>
 
 <body>
@@ -48,8 +68,101 @@
     <div class="content clearfix  programs-page">
       <h2>Мой Справочник | Logic Pro X</h2>
 
+      <div class="content-container">
+        <h2>Настойки программы (Ctrl + ,) - Preferences:</h2>
+        <p>
+          <b>Настройка аудио-устройства:</b> <br>
+          General -> Audio (Input/Output device)
+        </p>
+        <p>
+          <b>Изменение цифровой задержки:</b> <br>
+          I/O Buffer size (64, 128, 256)
+        </p>
+        <p>
+          <b>Recording (Формат файла записи):</b> <br>
+          .AIFF или .WAV
+        </p>
+        <p>
+          <b>My info:</b> <br>
+          Редактирование пользователя
+        </p>
+        <hr>
 
+        <h2>Библиотека (Sound Library) (Y)</h2>
+        <p>
+          <b>Logic Pro X -> Sound Library -> Open Sound Library Manager</b>
+        </p>
+        <hr>
+        
+        <h2>Создание проекта</h2>
+        <p>
+          <b>File -> New from Template</b><br>
+          Hip-hop, 
+          Electronic, 
+          <b>Songwriter</b>, 
+          Orchestral, 
+          Multi-track, 
+          Music for picture
+        </p>
+        <hr>
 
+        <h2>Области редактора</h2>
+        <ol>
+          <li>Tracks area</li>
+          <li>Sound library</li>
+          <li>Display LCD</li>
+          <li>Inspector</li>
+          <li>Mixer</li>
+          <li>Editor</li>
+          <li>Toolbar</li>
+        </ol>
+        <hr>
+        
+        <h2>Горячие клавиши</h2>
+        <table border="1px solid black">
+          <col width="200px"></col>
+          <col width="400px"></col>
+          
+          <tr><td colspan="2"><kbd>ACTIONS (Действия)</kbd></td></tr>
+          <tr><td><kbd>SPACE</kbd></td>     <td>Play, stop (Play from last locate position)</td></tr>
+          <tr><td><kbd>R</kbd></td>         <td>Record</td></tr>
+          <tr><td><kbd>K</kbd></td>         <td>Метроном вкл/выкл</td></tr>
+          
+          
+          <tr><td colspan="2"><kbd>TRACK (Дорожка)</kbd></td></tr>
+          <tr><td><kbd>S</kbd></td>         <td>Solo</td></tr>
+          <tr><td><kbd>M</kbd></td>         <td>Mute</td></tr>
+          <tr><td><kbd>ENTER</kbd></td>     <td>To start track, к началу трека</td></tr>
+          <tr><td><kbd>E</kbd></td>         <td>Editor, Редактирование</td></tr>
+          <tr><td><kbd>Backspace</kbd></td> <td>Удалить</td></tr>
+          <tr><td><kbd>Alt + ЛКМ</kbd></td> <td>Перетаскивание копии трека на другую дорожку</td></tr>
+          <tr><td><kbd>H</kbd></td>         <td>Hide, Hidden track, спрятать дорожку</td></tr>
+          <tr><td><kbd>L</kbd></td>         <td>Loop copy, вставить копии до конца трека</td></tr>
+          
+          
+          <tr><td colspan="2"><kbd>SCALE (Масштабирование)</kbd></td></tr>
+          <tr><td><kbd>Z</kbd></td>                                 <td>Увеличить трек</td></tr>
+          <tr><td><kbd>Cmd + Up, Dowm, Left, Right</kbd></td>       <td>Масштабировать вручную</td></tr>
+          <tr><td><kbd>Zoom touchpad</kbd></td>                     <td>Масштабировать вручную</td></tr>
+          
+          <tr><td colspan="2"><kbd>ОКНА (Windows)</kbd></td></tr>
+          <tr><td><kbd>X</kbd></td>             <td>Mixer</td></tr>
+          <tr><td><kbd>I</kbd></td>             <td>Inspector</td></tr>
+          <tr><td><kbd>cmd + 1</kbd></td>       <td>Main screen</td></tr>
+          <tr><td><kbd>cmd + 2</kbd></td>       <td>Mixer</td></tr>
+          <tr><td><kbd>cmd + 3</kbd></td>       <td>Instrument controls</td></tr>
+          <tr><td><kbd>cmd + 4</kbd></td>       <td>MIDI edit screen</td></tr>
+          <tr><td><kbd>cmd + 5</kbd></td>       <td>Notes edit screen</td></tr>
+          <tr><td><kbd>cmd + 6</kbd></td>       <td>Wave graph screen</td></tr>
+          <tr><td><kbd>cmd + 7</kbd></td>       <td>Event list</td></tr>
+          <tr><td><kbd>cmd + 8</kbd></td>       <td>Project info</td></tr>
+          <tr><td><kbd>cmd + K</kbd></td>       <td>Inspector</td></tr>
+
+          <tr><td colspan="2"><kbd>ИНСТРУМЕНТЫ (Tools)</kbd></td></tr>
+          <tr><td><kbd>Q</kbd></td>         <td>Quantize (выравнивание нот в режиме редактировании миди - нужно выбрать длительность)</td></tr>
+        </table>
+
+      </div>      
     </div>
   </div>
 
