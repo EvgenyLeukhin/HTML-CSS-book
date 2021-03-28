@@ -11,17 +11,25 @@
       .content-container h2 {
         color: maroon;
       }
-      table {
+      .content-container ul, 
+      .content-container ol {
+        margin-bottom: 15px;
+      }
+      .content-container ul li, 
+      .content-container ol li {
+        padding-bottom: 5px;
+      }
+      .content-container table {
         border-spacing: 0;
         padding: 0;
         font-size: 16px;
         border-color: rgba(0,0,0, .15);
       }
-      table kbd {
+      .content-container table kbd {
         font-size: 18px;
       }
 
-      table td[colspan] {
+      .content-container table td[colspan] {
         font-weight: bold;
         text-align: center;
         background: cornsilk;
@@ -65,7 +73,7 @@
       </ul>
     </div>
 
-    <div class="content clearfix  programs-page">
+    <div class="content clearfix">
       <h2>Мой Справочник | Logic Pro X</h2>
 
       <div class="content-container">
@@ -86,15 +94,13 @@
           <b>My info:</b> <br>
           Редактирование пользователя
         </p>
-        <hr>
-
-        <h2>Библиотека (Sound Library) (Y)</h2>
         <p>
-          <b>Logic Pro X -> Sound Library -> Open Sound Library Manager</b>
+          <b>Расширенные настройки</b> <br>
+          Cmd + , -> Advanced -> Show advanced tools -> Audio
         </p>
         <hr>
         
-        <h2>Создание проекта</h2>
+        <h2>Создание проекта (Cmd + N)</h2>
         <p>
           <b>File -> New from Template</b><br>
           Hip-hop, 
@@ -102,20 +108,136 @@
           <b>Songwriter</b>, 
           Orchestral, 
           Multi-track, 
-          Music for picture
+          Music for picture or from scratch
         </p>
         <hr>
 
-        <h2>Области редактора</h2>
-        <ol>
-          <li>Tracks area</li>
-          <li>Sound library</li>
-          <li>Display LCD</li>
-          <li>Inspector</li>
-          <li>Mixer</li>
-          <li>Editor</li>
-          <li>Toolbar</li>
-        </ol>
+        <h2>Создание дорожки (Cmd + Alt + N)</h2>
+        <p>
+          <b>Audio</b> - Choose I/O - Хорошо подходит для записи голоса или инструмента микрофоном <br>
+          Ascending - ??? <br>
+          Load default patch - ??? <br>
+        </p>
+        <p>
+          <b>Drummer</b> - Genre - Выбираем жанр и создаём виртуального барабанщика
+        </p>
+        <p>
+          <b>Guitar or Bass</b> - Choose I/O - Пресет для гитары или баса <br>
+          Ascending - ??? <br>
+          Load default patch - ??? <br>
+        </p>
+        <p>
+          <b>Software instrument</b> - Виртуальный инструмент из библиотеки, управление с помощью компьютера или MIDI-клавиатуры <br>
+        </p>
+        <p>
+          <b>External MIDI - ???</b>
+        </p>
+        <hr>
+
+        <h2>Верхняя панель управления (Topbar)</h2>
+        <ul>
+          <li>Кнопки отрытия окон слева
+            <ul>
+              <li>БИБЛИОТЕКА, Library (Y)</li>
+              <li>ИНСПЕКТОР, Inspector (I)</li>
+              <li>ПОМОЩЬ, Help button (Shift + /)</li>
+              <li>СУБ-ПАНЕЛЬ, Toolbar button, открытие суб-панели сверху</li>
+              <li>УМНЫЕ НАСТРОЙКИ, Smart Controls (B)</li>
+              <li>МИКШЕР, Mixer (X)</li>
+              <li>РЕДАКТОР, Editor (E)</li>
+            </ul>
+          </li>
+          <li>ТРАНСПОРТ, Кнопки плейера, Transport buttons <br>
+            (Play - имеет настройки, stop, record, rewind, forward, cycle)</li>
+          <li>LCD (Дисплей) <br>
+            Можно кастомизировать -> Customize Control Bar and Display</li>
+          <li>РЕЖИМЫ И ФУНКЦИИ (Modes and functions). <br>
+            Low-latancy mode, tuner, Metronom (Count click, Click), Master Volume<br><br></li>
+          <li>Кнопки отрытия окон справа:
+            <ul>
+              <li>ИСТОРИЯ, List Editors (D)</li>
+              <li>БЛОКНОТ (Alt + Cmd + P)</li>
+              <li>ПРОВОДНИК ЛУПОВ, LOOPS Browser (O)</li>
+              <li>ПРОВОДНИК ФАЙЛОВ в ОС (F)</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+
+        <h2>Верхняя суб-панель управления (Toolbar)</h2>
+        <ul>
+          <li>Track zoom - можно увеличить отдельную дорожку</li>
+          <li>Zoom - увеличить все дорожки, растянуться по верникали</li>
+          <li>Colors - поменять цвета дорожек</li>
+          <li>Остальные пока ???</li>
+        </ul>
+        <hr>
+
+        <h2>Заголовки дорожек (Tracks headers)</h2>
+        <ul>
+          <li>+ Добавить дорожку (Alt + Cmd + N)</li>
+          <li>[+] Создать такую же дорожку как выделенную, Dublicate (Cmd + D)</li>
+          <li>
+            [^] Открытие доп. панели, Global track button (G), ПКМ для открытия списка<br>
+            <ul>
+              <li>Arrangement - Структура композиции (Intro, Verse, Chorus, Bridge, Outro)</li>
+              <li>Tempo - Темп (можно изменять темп во времени)</li>
+              <li>Transposition - Транспонирование</li>
+              <li>Marker - ???</li>
+              <li>Signature - ???</li>
+              <li>Movie - ???</li>
+            </ul>
+          </li>
+          <li>Name и Стрелочка раскрытия субтреков</li>
+          <li>Mute, Solo, Record (Enable, Disable)</li>
+          <li>Input monitoring (Hear or don't hear input signal)</li>
+          <li>Volume range</li>
+          <li>Balance pan</li>
+        </ul>
+        <hr>
+
+        <h2>Рабочая область, где записываются дорожки (Workspace)</h2>
+        <ul>
+          <li>+++</li>
+        </ul>
+        <hr>
+
+        <h2>Библиотека (Sound Library) (Y)</h2>
+        <p>
+          <b>Logic Pro X -> Sound Library -> Open Sound Library Manager</b>
+        </p>
+        <hr>
+
+        <h2>Инспектор (I)</h2>
+        <hr>
+
+        <h2>Эффекты, Audio FX</h2>
+        <hr>
+
+        <h2>Флекс</h2>
+        <hr>
+
+        <h2>Автоматизация (A)</h2>
+        <hr>
+
+        <h2>Библиотека лупов (O)</h2>
+        <hr>
+
+        <h2>Определение темпа</h2>
+        <p>Audio FX -> Metring -> BTM Counter</p>
+        <hr>
+
+        <h2>Запись аудио с ОС</h2>
+        <p>Focusrite Control -> Loopback 1-2 -> Playback 1-2 (Stereo) -> Unmute <br>
+        Logic Pro -> New audio track -> Input 5-6 -> No input monitoring -> Mute track <br> 
+        Play system audio signal -> You can hear it from System playback on your output device</p>
+        <hr>
+
+        <h2>Миксдаун проекта, сведение (Bounce)</h2>
+        <p>
+          Ctrl + A -> File -> Bounce -> Project or Section <br>
+          PCM (.AIFF or .WAV), MP3 -> OK
+        </p>
         <hr>
         
         <h2>Горячие клавиши</h2>
