@@ -715,6 +715,38 @@
 					<code>word-wrap: <span class="red">break-word;</span></code>
 				</td>
 			</tr>
+
+			<tr>
+				<td rowspan="2">word-break</td>
+				<td rowspan="2">
+					<b><u><mark>Перенос символов</mark> (подобное word-wrap)</u></b><br>
+					<b>normal</b> - переносится по пробелам;<br>
+					<b>break-word</b> - переноситс по словам, если не помещается в контейнер;<br>
+					<b>break-all</b> - переносится, если не помещается в контейнер;<br>
+					<b>keep-all</b> - ???<br>
+				</td>
+				<td>
+					<div style="word-break: normal; height: 100px; width: 270px; color: black; font-weight: normal; font-size: 2em; outline: 1px dotted deeppink;">
+						<br><br>
+					Some_text_Some_text_Some_text_
+					</div>
+				</td>
+				<td>
+					<code>word-break: <span class="red">normal;</span></code>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div style="word-break: break-word; height: 100px; width: 270px; color: black; font-weight: normal; font-size: 2em; outline: 1px dotted deeppink;">
+					Some_text_Some_text_Some_text_
+					</div>
+				</td>
+				<td>
+					<code>word-break: <span class="red">break-word;</span></code>
+				</td>
+			</tr>
+
+
 			<tr>
 				<td rowspan="3">writing-mode</td>
 				<td rowspan="3">
