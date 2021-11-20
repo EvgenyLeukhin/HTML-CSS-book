@@ -2,11 +2,11 @@
 <html lang="ru">
 
 <head>
-    <title>Мой Справочник | CSS3 | LESS\SASS\Custom\Custom\Custom\Custom</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
+  <title>Мой Справочник | CSS3 | SCSS - Общее</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  <link rel="stylesheet" type="text/css" href="../css/css3_page.css">
 </head>
 
 <body>
@@ -76,7 +76,7 @@
         </ul>
       </li>
       <li>
-        <a href="#" class="active">LESS\SASS</a>
+        <a href="#" class="active">SCSS</a>
         <ul class="sub-menu sub-menu-less">
           <li><a href="less-preproc.html">Общее</a></li>
           <li><a href="less-vars.html">Переменные</a></li>
@@ -91,40 +91,31 @@
 	</div>
 	<div class="content clearfix">
 
-	<h2>Мой Справочник |  CSS3 | LESS\SASS\Custom\Custom\Custom\Custom</h2>
+	<h2>Мой Справочник |  CSS3 | SCSS - Общее</h2>
 
 	<table class="css3-table">
-
-<!--     <tr>
-      <td class="col1" style="width: 200px;">
-        <a href="https://wearekiss.com/simpless" title="SimpLESS">SimpLESS</a>
-      </td>
-      <td class="col2">
-      </td>
-      <td class="col3" style="width: 400px;">
-        Приложение под Windows. Не требует консольных команд, всё очень просто и понятно
-      </td>
-    </tr> -->
 
     <tr>
       <th class="css3-table-title" colspan="3">Подключение файлов</th>
     </tr>
+
     <tr>
       <td class="col1" style="width: 200px;">
-        Подключение(импорт) файлов<br><br>
-        <span style="color: #000">У LESS и SASS одинаково (<b>@</b>)</span>
+        Импорт файлов<br>
+        <b>@import "...";</b>
       </td>
       <td class="col2">
-
         <code><pre>
-<b>@import</b> "vars";<span class="gray">   // файл с переменными</span>
-<b>@import</b> "mixins";<span class="gray"> // файл с примесями</span>
+<b><span class="red">@import</span></b> "scss/vars";<span class="gray">   // файл с переменными</span>
+<b><span class="red">@import</span></b> "scss/mixins";<span class="gray"> // файл с примесями</span>
 
-<span class="gray"> // и далее можно уже писать less-код</span>
+<b><span class="red">$base-color</span></b>: #000;<span class="gray"> // определяем переменную</span>
 
-<span class="red">.content-box</span> {
-  .width(100px, 50px);
-  color: @base-color;
+<span class="gray"> // и далее можно уже писать scss-код</span>
+
+.content-box</span> {
+  <span class="red">@include</span> some-mixin(100px, 50px);
+  color: <span class="red">$base-color;</span>
   ...
 }
         </pre></code>
@@ -137,69 +128,40 @@
       </td>
     </tr>
     <tr>
-      <th class="css3-table-title" colspan="3">Расширения (лучше не использовать)</th>
+      <th class="css3-table-title" colspan="3">Расширения @extend</th>
     </tr>
     <tr>
       <td class="col1" style="width: 200px;">
         <b>Расширения</b>
+        <b>@extend</b>
       </td>
       <td class="col2">
         <code><pre>
-<span class="red">.some-class</span> {
+.some-class {
   clear: left
   float: left;
 }
-<span class="red">.content-box</span> {
-  color: @base-color;
-  <b>&amp;:extend</b>(.some-class);
-  border: 1px solid red;
-}<hr><span class="gray"> // Результат:</span>
-<span class="red">.some-class</span>,
-<span class="red">.content-box</span>, {
-  clear: left
-  float: left;
-}
-<span class="red">.content-box</span> {
-  color: #000;
-  border: 1px solid red;
-}</pre></code>
-      </td>
-      <td class="col3" style="width: 400px;">
-        Стили не дублируются, а наоборот редактируемый селектор добавляется через "," к расширяемому,<br>
-        но лучше особо их <u>НЕ ИСПОЛЬЗОВАТЬ</u>
-      </td>
-    </tr>
-    <tr>
-      <td class="col1" style="width: 200px;">
-        <b>Расширения</b>
-      </td>
-      <td class="col2">
-        <code><pre>
-<span class="red">.some-class</span> {
-  clear: left
-  float: left;
-}
-<span class="red">.content-box</span> {
-  color: @base-color;
-  <b>&amp;:extend</b>(.some-class);
-  border: 1px solid red;
-}<hr><span class="gray"> // Результат:</span>
-<span class="red">.some-class</span>,
-<span class="red">.content-box</span>, {
-  clear: left
-  float: left;
-}
-<span class="red">.content-box</span> {
-  color: #000;
-  border: 1px solid red;
-}</pre></code>
-      </td>
-      <td class="col3" style="width: 400px;">
-        Стили не дублируются, а наоборот редактируемый селектор добавляется через "," к расширяемому,<br>
-        но лучше особо их <u>НЕ ИСПОЛЬЗОВАТЬ</u>
-      </td>
-    </tr>
 
+.content-box {
+  <b><span class="red">@extend</span></b> .some-class;
+  color: $base-color;
+  border: 1px solid red;
+}<hr><span class="gray"> // Результат:</span>
+<span class="red">.some-class</span>,
+<span class="red">.content-box</span>, {
+  clear: left
+  float: left;
+}
+<span class="red">.content-box</span> {
+  color: #000;
+  border: 1px solid red;
+}</pre></code>
+      </td>
+      <td class="col3" style="width: 400px;">
+        Стили не дублируются, а наоборот редактируемый селектор добавляется через "," к расширяемому,<br>
+        но лучше особо их <u>НЕ ИСПОЛЬЗОВАТЬ</u>
+      </td>
+    </tr>
   </table>
   <br>
   <b>Функция calc в LESS: </b> <code>height: ~"calc(100vh - 136px)";</code>
@@ -211,9 +173,7 @@
 
 <div class="footer">
 	<div class="layout-positioner">
-		<p class="footer-text">Разработчик: Евгений Леухин<br>
-							   EvgenyLeukhin@yandex.ru</p>
-
+		<p class="footer-text">Разработчик: Евгений Леухин<br>EvgenyLeukhin@yandex.ru</p>
 		<p class="footer-copyright">© 2016 - 2021</p>
 	</div>
 </div>
